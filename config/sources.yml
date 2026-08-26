@@ -1,0 +1,52 @@
+# Endpoints and crawl policy for each source.
+#
+# NOTE ON POLITENESS: Wikimedia's User-Agent policy requires a descriptive
+# agent with contact information for automated requests; `govtn.config.USER_AGENT`
+# supplies one. Rate limits below are deliberately conservative - this dataset
+# is a few thousand requests in total, there is no reason to hurry.
+
+wikidata:
+  sparql_endpoint: "https://query.wikidata.org/sparql"
+  entity_api: "https://www.wikidata.org/w/api.php"
+  country_qid: "Q948"        # Tunisia
+  human_qid: "Q5"
+  rate_limit_seconds: 1.5
+  timeout_seconds: 180
+  # The public endpoint enforces a 60s query timeout; harvests are chunked.
+  chunk_size: 200
+
+wikipedia:
+  # Ordered by expected coverage for Tunisian cabinets. French is by far the
+  # richest for the 1956-2011 period; Arabic adds native-script name variants
+  # and occasionally fills post-2011 gaps.
+  editions:
+    - lang: fr
+      api: "https://fr.wikipedia.org/w/api.php"
+      priority: 1
+    - lang: ar
+      api: "https://ar.wikipedia.org/w/api.php"
+      priority: 2
+    - lang: en
+      api: "https://en.wikipedia.org/w/api.php"
+      priority: 3
+  index_template: "Modèle:Palette Gouvernements de la Tunisie"
+  index_category: "Catégorie:Gouvernement de la Tunisie"
+  rate_limit_seconds: 1.0
+  timeout_seconds: 60
+
+leaders:
+  base_url: "https://www.leaders.com.tn"
+  # Biographical sections of the outlet. `who-s-who` carries long-form profiles;
+  # `annuaire-personnalite` is a structured directory of officeholders.
+  sections:
+    - path: "/categorie/who-s-who"
+      kind: profile
+    - path: "/annuaire-personnalite"
+      kind: directory
+  rate_limit_seconds: 2.0
+  timeout_seconds: 45
+  # Leaders is a commercial outlet. We store only the extracted structured
+  # fields plus a short quoted excerpt for verification, never full article
+  # text, and we record the URL for every claim.
+  store_full_text: false
+  excerpt_chars: 400

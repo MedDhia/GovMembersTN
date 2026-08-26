@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d25" for="edge" attr.name="tie_type" attr.type="string"/>
+<key id="d24" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d23" for="edge" attr.name="era" attr.type="string"/>
+<key id="d22" for="edge" attr.name="predecessor_tenure_days" attr.type="long"/>
+<key id="d21" for="edge" attr.name="handover_date" attr.type="string"/>
+<key id="d20" for="edge" attr.name="portfolio" attr.type="string"/>
+<key id="d19" for="node" attr.name="eigenvector" attr.type="double"/>
+<key id="d18" for="node" attr.name="closeness" attr.type="double"/>
+<key id="d17" for="node" attr.name="betweenness" attr.type="double"/>
+<key id="d16" for="node" attr.name="weighted_degree" attr.type="long"/>
+<key id="d15" for="node" attr.name="degree" attr.type="long"/>
+<key id="d14" for="node" attr.name="wikidata_qid" attr.type="string"/>
+<key id="d13" for="node" attr.name="eras_served" attr.type="string"/>
+<key id="d12" for="node" attr.name="ever_head_of_government" attr.type="boolean"/>
+<key id="d11" for="node" attr.name="ever_sovereign_portfolio" attr.type="boolean"/>
+<key id="d10" for="node" attr.name="total_tenure_days" attr.type="long"/>
+<key id="d9" for="node" attr.name="n_cabinets" attr.type="long"/>
+<key id="d8" for="node" attr.name="n_appointments" attr.type="long"/>
+<key id="d7" for="node" attr.name="profession_domains" attr.type="string"/>
+<key id="d6" for="node" attr.name="parties" attr.type="string"/>
+<key id="d5" for="node" attr.name="education" attr.type="string"/>
+<key id="d4" for="node" attr.name="birth_region" attr.type="string"/>
+<key id="d3" for="node" attr.name="birth_place" attr.type="string"/>
+<key id="d2" for="node" attr.name="birth_year" attr.type="long"/>
+<key id="d1" for="node" attr.name="gender" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="Q495676">
+  <data key="d0">Tahar Ben Ammar</data>
+  <data key="d1"></data>
+  <data key="d2">1889</data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">613</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">protectorate_end</data>
+  <data key="d14">Q495676</data>
+  <data key="d15">1</data>
+  <data key="d16">1</data>
+  <data key="d17">0.0</data>
+  <data key="d18">0.09090909090909091</data>
+  <data key="d19">0.04016465691609065</data>
+</node>
+<node id="Q643348">
+  <data key="d0">Habib Bourguiba</data>
+  <data key="d1">male</data>
+  <data key="d2">1903</data>
+  <data key="d3">Monastir</data>
+  <data key="d4"></data>
+  <data key="d5">Lycée Carnot de Tunis|Université de Paris</data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">2</data>
+  <data key="d9">2</data>
+  <data key="d10">4950</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba|monarchy</data>
+  <data key="d14">Q643348</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.09523809523809525</data>
+  <data key="d18">0.0995260663507109</data>
+  <data key="d19">0.07957946131645763</data>
+</node>
+<node id="TN-bahi-ladgham">
+  <data key="d0">Bahi Ladgham</data>
+  <data key="d1">male</data>
+  <data key="d2">1913</data>
+  <data key="d3">Tunis</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">360</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.18095238095238098</data>
+  <data key="d18">0.10880829015544041</data>
+  <data key="d19">0.11750880403510593</data>
+</node>
+<node id="TN-hedi-nouira">
+  <data key="d0">Hédi Nouira</data>
+  <data key="d1">male</data>
+  <data key="d2">1911</data>
+  <data key="d3">Monastir</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">3460</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.2571428571428572</data>
+  <data key="d18">0.11864406779661017</data>
+  <data key="d19">0.1532452517423607</data>
+</node>
+<node id="TN-mohamed-mzali">
+  <data key="d0">Mohamed Mzali</data>
+  <data key="d1">male</data>
+  <data key="d2">1925</data>
+  <data key="d3">Monastir</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">2267</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.3238095238095238</data>
+  <data key="d18">0.12883435582822086</data>
+  <data key="d19">0.18612287103579966</data>
+</node>
+<node id="TN-rachid-sfar">
+  <data key="d0">Rachid Sfar</data>
+  <data key="d1">male</data>
+  <data key="d2">1933</data>
+  <data key="d3">Mahdia</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">451</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.380952380952381</data>
+  <data key="d18">0.1390728476821192</data>
+  <data key="d19">0.21552967176748236</data>
+</node>
+<node id="TN-zine-el-abidine-ben-ali">
+  <data key="d0">Zine El Abidine Ben Ali</data>
+  <data key="d1">male</data>
+  <data key="d2">1936</data>
+  <data key="d3">Hammam Sousse</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">security</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">36</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">bourguiba</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.4285714285714286</data>
+  <data key="d18">0.14893617021276595</data>
+  <data key="d19">0.24091893147885876</data>
+</node>
+<node id="Q1363916">
+  <data key="d0">Hédi Baccouche</data>
+  <data key="d1">male</data>
+  <data key="d2">1930</data>
+  <data key="d3">Hammam Sousse</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">690</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">ben_ali</data>
+  <data key="d14">Q1363916</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.46666666666666673</data>
+  <data key="d18">0.15789473684210525</data>
+  <data key="d19">0.2618192025386433</data>
+</node>
+<node id="Q1381809">
+  <data key="d0">Hamed Karoui</data>
+  <data key="d1">male</data>
+  <data key="d2">1927</data>
+  <data key="d3">Sousse</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">medicine</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">3703</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">ben_ali</data>
+  <data key="d14">Q1381809</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.49523809523809526</data>
+  <data key="d18">0.16535433070866143</data>
+  <data key="d19">0.27784284492105427</data>
+</node>
+<node id="Q431515">
+  <data key="d0">Mohamed Ghannouchi</data>
+  <data key="d1">male</data>
+  <data key="d2">1941</data>
+  <data key="d3">Sousse</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">economics</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">4120</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">ben_ali</data>
+  <data key="d14">Q431515</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.5142857142857143</data>
+  <data key="d18">0.17073170731707318</data>
+  <data key="d19">0.28869296696976954</data>
+</node>
+<node id="TN-beji-caid-essebsi">
+  <data key="d0">Béji Caïd Essebsi</data>
+  <data key="d1">male</data>
+  <data key="d2">1926</data>
+  <data key="d3">Sidi Bou Saïd</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">300</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">transition</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.5238095238095238</data>
+  <data key="d18">0.17355371900826447</data>
+  <data key="d19">0.2941686912550814</data>
+</node>
+<node id="Q57699">
+  <data key="d0">Hamadi Jebali</data>
+  <data key="d1">male</data>
+  <data key="d2">1949</data>
+  <data key="d3">Sousse</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">445</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">transition</data>
+  <data key="d14">Q57699</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.5238095238095238</data>
+  <data key="d18">0.17355371900826447</data>
+  <data key="d19">0.29416869125508144</data>
+</node>
+<node id="TN-ali-larayedh">
+  <data key="d0">Ali Larayedh</data>
+  <data key="d1">male</data>
+  <data key="d2">1955</data>
+  <data key="d3">Médenine</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">322</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">transition</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.5142857142857143</data>
+  <data key="d18">0.17073170731707318</data>
+  <data key="d19">0.28869296696976954</data>
+</node>
+<node id="Q15304780">
+  <data key="d0">Mehdi Jomaa</data>
+  <data key="d1">male</data>
+  <data key="d2">1962</data>
+  <data key="d3">Mahdia</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">373</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">transition</data>
+  <data key="d14">Q15304780</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.49523809523809526</data>
+  <data key="d18">0.16535433070866143</data>
+  <data key="d19">0.27784284492105427</data>
+</node>
+<node id="Q3125311">
+  <data key="d0">Habib Essid</data>
+  <data key="d1">male</data>
+  <data key="d2">1949</data>
+  <data key="d3">Sousse</data>
+  <data key="d4"></data>
+  <data key="d5">Université de Tunis|University of Minnesota</data>
+  <data key="d6"></data>
+  <data key="d7">economics</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">568</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">second_republic</data>
+  <data key="d14">Q3125311</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.46666666666666673</data>
+  <data key="d18">0.15789473684210525</data>
+  <data key="d19">0.2618192025386434</data>
+</node>
+<node id="TN-youssef-chahed">
+  <data key="d0">Youssef Chahed</data>
+  <data key="d1">male</data>
+  <data key="d2">1975</data>
+  <data key="d3">Tunis</data>
+  <data key="d4"></data>
+  <data key="d5">Institut national agronomique de Tunisie</data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">1279</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">second_republic</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.4285714285714286</data>
+  <data key="d18">0.14893617021276595</data>
+  <data key="d19">0.24091893147885884</data>
+</node>
+<node id="TN-elyes-fakhfakh">
+  <data key="d0">Elyès Fakhfakh</data>
+  <data key="d1">male</data>
+  <data key="d2">1972</data>
+  <data key="d3">Tunis</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">188</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">second_republic</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.380952380952381</data>
+  <data key="d18">0.1390728476821192</data>
+  <data key="d19">0.21552967176748242</data>
+</node>
+<node id="TN-hichem-mechichi">
+  <data key="d0">Hichem Mechichi</data>
+  <data key="d1">male</data>
+  <data key="d2">1974</data>
+  <data key="d3">Tunis</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">404</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">second_republic</data>
+  <data key="d14"></data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.3238095238095238</data>
+  <data key="d18">0.12883435582822086</data>
+  <data key="d19">0.18612287103579966</data>
+</node>
+<node id="Q108741355">
+  <data key="d0">Najla Bouden</data>
+  <data key="d1">female</data>
+  <data key="d2">1958</data>
+  <data key="d3">Kairouan</data>
+  <data key="d4"></data>
+  <data key="d5">ESTP Paris|Mines ParisTech</data>
+  <data key="d6"></data>
+  <data key="d7">engineering|academia</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">659</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">saied_exception</data>
+  <data key="d14">Q108741355</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.2571428571428572</data>
+  <data key="d18">0.11864406779661017</data>
+  <data key="d19">0.15324525174236067</data>
+</node>
+<node id="Q121088468">
+  <data key="d0">Ahmed Hachani</data>
+  <data key="d1">male</data>
+  <data key="d2">1956</data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5">Université de Tunis</data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">372</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">saied_exception</data>
+  <data key="d14">Q121088468</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.18095238095238098</data>
+  <data key="d18">0.10880829015544041</data>
+  <data key="d19">0.11750880403510591</data>
+</node>
+<node id="Q128723414">
+  <data key="d0">Kamel Maddouri</data>
+  <data key="d1">male</data>
+  <data key="d2">1974</data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5">Université de Tunis</data>
+  <data key="d6"></data>
+  <data key="d7">law</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">226</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">saied_exception</data>
+  <data key="d14">Q128723414</data>
+  <data key="d15">2</data>
+  <data key="d16">2</data>
+  <data key="d17">0.09523809523809525</data>
+  <data key="d18">0.0995260663507109</data>
+  <data key="d19">0.0795794613164576</data>
+</node>
+<node id="TN-sara-zaafarani">
+  <data key="d0">Sara Zaafarani</data>
+  <data key="d1">female</data>
+  <data key="d2">1963</data>
+  <data key="d3">Tunis</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7">engineering</data>
+  <data key="d8">1</data>
+  <data key="d9">1</data>
+  <data key="d10">523</data>
+  <data key="d11">True</data>
+  <data key="d12">True</data>
+  <data key="d13">saied_exception</data>
+  <data key="d14"></data>
+  <data key="d15">1</data>
+  <data key="d16">1</data>
+  <data key="d17">0.0</data>
+  <data key="d18">0.09090909090909091</data>
+  <data key="d19">0.040164656916090634</data>
+</node>
+<edge source="Q495676" target="Q643348">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1956-04-15</data>
+  <data key="d22">613</data>
+  <data key="d23">monarchy</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q643348" target="TN-bahi-ladgham">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1969-11-07</data>
+  <data key="d22">466</data>
+  <data key="d23">bourguiba</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-bahi-ladgham" target="TN-hedi-nouira">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1970-11-02</data>
+  <data key="d22">360</data>
+  <data key="d23">bourguiba</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-hedi-nouira" target="TN-mohamed-mzali">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1980-04-23</data>
+  <data key="d22">3460</data>
+  <data key="d23">bourguiba</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-mohamed-mzali" target="TN-rachid-sfar">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1986-07-08</data>
+  <data key="d22">2267</data>
+  <data key="d23">bourguiba</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-rachid-sfar" target="TN-zine-el-abidine-ben-ali">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1987-10-02</data>
+  <data key="d22">451</data>
+  <data key="d23">bourguiba</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-zine-el-abidine-ben-ali" target="Q1363916">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1987-11-07</data>
+  <data key="d22">36</data>
+  <data key="d23">ben_ali</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q1363916" target="Q1381809">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1989-09-27</data>
+  <data key="d22">690</data>
+  <data key="d23">ben_ali</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q1381809" target="Q431515">
+  <data key="d20">head_of_government</data>
+  <data key="d21">1999-11-17</data>
+  <data key="d22">3703</data>
+  <data key="d23">ben_ali</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q431515" target="TN-beji-caid-essebsi">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2011-02-27</data>
+  <data key="d22">4120</data>
+  <data key="d23">transition</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-beji-caid-essebsi" target="Q57699">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2011-12-24</data>
+  <data key="d22">300</data>
+  <data key="d23">transition</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q57699" target="TN-ali-larayedh">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2013-03-13</data>
+  <data key="d22">445</data>
+  <data key="d23">transition</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-ali-larayedh" target="Q15304780">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2014-01-29</data>
+  <data key="d22">322</data>
+  <data key="d23">transition</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q15304780" target="Q3125311">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2015-02-06</data>
+  <data key="d22">373</data>
+  <data key="d23">second_republic</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q3125311" target="TN-youssef-chahed">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2016-08-27</data>
+  <data key="d22">568</data>
+  <data key="d23">second_republic</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-youssef-chahed" target="TN-elyes-fakhfakh">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2020-02-27</data>
+  <data key="d22">1279</data>
+  <data key="d23">second_republic</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-elyes-fakhfakh" target="TN-hichem-mechichi">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2020-09-02</data>
+  <data key="d22">188</data>
+  <data key="d23">second_republic</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="TN-hichem-mechichi" target="Q108741355">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2021-10-11</data>
+  <data key="d22">404</data>
+  <data key="d23">saied_exception</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q108741355" target="Q121088468">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2023-08-01</data>
+  <data key="d22">659</data>
+  <data key="d23">saied_exception</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q121088468" target="Q128723414">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2024-08-07</data>
+  <data key="d22">372</data>
+  <data key="d23">saied_exception</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+<edge source="Q128723414" target="TN-sara-zaafarani">
+  <data key="d20">head_of_government</data>
+  <data key="d21">2025-03-21</data>
+  <data key="d22">226</data>
+  <data key="d23">saied_exception</data>
+  <data key="d24">1</data>
+  <data key="d25">succession</data>
+</edge>
+</graph></graphml>

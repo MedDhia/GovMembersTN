@@ -1,0 +1,212 @@
+# ---------------------------------------------------------------------------
+# Verified biographical seed for the heads of government.
+#
+# WHY THIS EXISTS
+# The person-level columns (birth, birthplace, profession, QID) are normally
+# filled by the Wikidata and Leaders harvests. This file seeds them for the
+# 23 heads of government so that the dataset ships with a populated,
+# demonstrable person frame even before a harvest has run, and so that the
+# best-attested series in the dataset does not depend on the network.
+#
+# PROVENANCE AND PRECEDENCE
+# Every value here was checked against at least one source (English/French
+# Wikipedia, Wikidata item pages, or Tunisian press) at the date recorded in
+# `verified`. Where a check did not produce a value, the field is OMITTED
+# rather than guessed - an absent field is honest, an invented one is not.
+#
+# The harvest OVERRIDES this file: in `govtn.build.build_persons` the
+# precedence is Wikidata > this seed > Leaders. The seed exists to fill gaps
+# and to anchor QIDs, not to compete with structured data.
+#
+# `profession` uses the same controlled vocabulary as
+# `persons.profession_domains` (see docs/CODEBOOK.md).
+# ---------------------------------------------------------------------------
+
+meta:
+  verified: "2026-08-26"
+  method: >-
+    Each record cross-checked against Wikipedia/Wikidata and, for the
+    post-2011 figures, Tunisian press reporting of the appointment. Fields
+    that could not be confirmed were left out.
+  precedence: "wikidata > seed > leaders"
+
+people:
+
+  - spell: TN-00
+    name: "Tahar Ben Ammar"
+    qid: Q495676
+    birth_date: "1889-11-25"
+    death_date: "1985-05-10"
+
+  - spell: TN-01
+    name: "Habib Bourguiba"
+    qid: Q643348
+    birth_date: "1903-08-03"
+    birth_place: "Monastir"
+    death_date: "2000-04-06"
+    gender: male
+    profession: [law]
+    education: ["Lycée Carnot de Tunis", "Université de Paris"]
+
+  - spell: TN-03
+    name: "Bahi Ladgham"
+    birth_date: "1913-01-10"
+    birth_place: "Tunis"
+    death_date: "1998-04-13"
+    gender: male
+
+  - spell: TN-04
+    name: "Hédi Nouira"
+    name_variants: ["Hédi Amara Nouira"]
+    birth_date: "1911-04-05"
+    birth_place: "Monastir"
+    death_date: "1993-01-25"
+    gender: male
+    profession: [law]
+
+  - spell: TN-05
+    name: "Mohamed Mzali"
+    name_variants: ["Mohammed Mzali"]
+    birth_date: "1925-12-23"
+    birth_place: "Monastir"
+    death_date: "2010-06-23"
+    gender: male
+
+  - spell: TN-06
+    name: "Rachid Sfar"
+    birth_date: "1933-09-11"
+    birth_place: "Mahdia"
+    death_date: "2023-07-20"
+    gender: male
+
+  - spell: TN-07
+    name: "Zine El Abidine Ben Ali"
+    birth_date: "1936-09-03"
+    birth_place: "Hammam Sousse"
+    gender: male
+    profession: [security]
+
+  - spell: TN-08
+    name: "Hédi Baccouche"
+    qid: Q1363916
+    birth_date: "1930-01-15"
+    birth_place: "Hammam Sousse"
+    death_date: "2020-01-21"
+    gender: male
+
+  - spell: TN-09
+    name: "Hamed Karoui"
+    qid: Q1381809
+    birth_date: "1927-12-30"
+    birth_place: "Sousse"
+    death_date: "2020-03-27"
+    gender: male
+    profession: [medicine]
+
+  - spell: TN-10
+    name: "Mohamed Ghannouchi"
+    qid: Q431515
+    birth_date: "1941-08-18"
+    birth_place: "Sousse"
+    gender: male
+    profession: [economics]
+
+  - spell: TN-11
+    name: "Béji Caïd Essebsi"
+    name_variants: ["Beji Caid Essebsi", "Béji Caïd Es-Sebsi"]
+    birth_date: "1926-11-29"
+    birth_place: "Sidi Bou Saïd"
+    death_date: "2019-07-25"
+    gender: male
+    profession: [law]
+
+  - spell: TN-12
+    name: "Hamadi Jebali"
+    qid: Q57699
+    birth_date: "1949-01-12"
+    birth_place: "Sousse"
+    gender: male
+    profession: [engineering]
+
+  - spell: TN-13
+    name: "Ali Larayedh"
+    name_variants: ["Ali Laarayedh", "Ali Laârayedh"]
+    birth_date: "1955-08-15"
+    birth_place: "Médenine"
+    gender: male
+    profession: [engineering]
+
+  - spell: TN-14
+    name: "Mehdi Jomaa"
+    qid: Q15304780
+    birth_date: "1962-04-21"
+    birth_place: "Mahdia"
+    gender: male
+    profession: [engineering]
+
+  - spell: TN-15
+    name: "Habib Essid"
+    qid: Q3125311
+    birth_date: "1949-06-01"
+    birth_place: "Sousse"
+    gender: male
+    profession: [economics]
+    education: ["Université de Tunis", "University of Minnesota"]
+
+  - spell: TN-16
+    name: "Youssef Chahed"
+    birth_date: "1975-09-18"
+    birth_place: "Tunis"
+    gender: male
+    profession: [engineering]
+    education: ["Institut national agronomique de Tunisie"]
+
+  - spell: TN-17
+    name: "Elyès Fakhfakh"
+    name_variants: ["Elyes Fakhfakh"]
+    birth_date: "1972"          # year precision only - no source gave a day
+    birth_place: "Tunis"
+    gender: male
+    profession: [engineering]
+
+  - spell: TN-18
+    name: "Hichem Mechichi"
+    birth_date: "1974-01"       # month precision only
+    birth_place: "Tunis"
+    gender: male
+    profession: [law]
+
+  - spell: TN-19
+    name: "Najla Bouden"
+    qid: Q108741355
+    name_variants: ["Najla Bouden Romdhane"]
+    birth_date: "1958-06-29"
+    birth_place: "Kairouan"
+    gender: female
+    profession: [engineering, academia]
+    education: ["ESTP Paris", "Mines ParisTech"]
+
+  - spell: TN-20
+    name: "Ahmed Hachani"
+    qid: Q121088468
+    birth_date: "1956-10-04"
+    gender: male
+    profession: [law]
+    education: ["Université de Tunis"]
+
+  - spell: TN-21
+    name: "Kamel Maddouri"
+    qid: Q128723414
+    name_variants: ["Kamel Madouri"]
+    birth_date: "1974-01-25"
+    gender: male
+    profession: [law]
+    education: ["Université de Tunis"]
+
+  - spell: TN-22
+    name: "Sara Zaafarani"
+    name_variants: ["Sara Zaafarani Zenzri", "Sara Zaafarani Zenzari"]
+    birth_date: "1963-01-26"
+    birth_place: "Tunis"
+    gender: female
+    profession: [engineering]

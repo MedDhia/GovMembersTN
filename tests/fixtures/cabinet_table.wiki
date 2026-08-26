@@ -1,0 +1,43 @@
+{{Infobox Gouvernement
+| nom = Gouvernement Najla Bouden
+| chef du gouvernement = [[Najla Bouden]]
+| président = [[Kaïs Saïed]]
+| formation = 11 octobre 2021
+| fin = 1{{er}} août 2023
+}}
+Le '''gouvernement Najla Bouden''' est le gouvernement de la [[Tunisie]] du 11 octobre 2021 au 1{{er}} août 2023.
+
+== Composition ==
+{| class="wikitable"
+|-
+! scope="col" | Portefeuille
+! scope="col" | Titulaire
+! scope="col" | Parti
+|-
+| Cheffe du gouvernement
+| [[Najla Bouden]]
+| [[Indépendant (politique)|Indépendant]]
+|-
+| Ministre de l'Intérieur
+| [[Taoufik Charfeddine]]
+| Indépendant
+|-
+| Ministre des Affaires étrangères, de la Migration et des Tunisiens à l'étranger
+| [[Othman Jerandi]]
+| Indépendant
+|-
+| Ministre de la Justice
+| [[Leïla Jaffel]]
+| Indépendant
+|-
+| Ministre des Finances
+| [[Sihem Boughdiri Nemsia]]
+| Indépendant
+|-
+| Ministre de l'Enseignement supérieur et de la Recherche scientifique
+| [[Moncef Boukthir]]
+| Indépendant
+|}
+
+== Références ==
+{{Références}}

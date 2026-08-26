@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-08-26">
+    <creator>NetworkX 3.6.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="name" type="string" />
+      <attribute id="1" title="gender" type="string" />
+      <attribute id="2" title="birth_year" type="long" />
+      <attribute id="3" title="birth_place" type="string" />
+      <attribute id="4" title="birth_region" type="string" />
+      <attribute id="5" title="education" type="string" />
+      <attribute id="6" title="parties" type="string" />
+      <attribute id="7" title="profession_domains" type="string" />
+      <attribute id="8" title="n_appointments" type="long" />
+      <attribute id="9" title="n_cabinets" type="long" />
+      <attribute id="10" title="total_tenure_days" type="long" />
+      <attribute id="11" title="ever_sovereign_portfolio" type="boolean" />
+      <attribute id="12" title="ever_head_of_government" type="boolean" />
+      <attribute id="13" title="eras_served" type="string" />
+      <attribute id="14" title="wikidata_qid" type="string" />
+      <attribute id="15" title="degree" type="long" />
+      <attribute id="16" title="weighted_degree" type="long" />
+      <attribute id="17" title="betweenness" type="double" />
+      <attribute id="18" title="closeness" type="double" />
+      <attribute id="19" title="eigenvector" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Q495676" label="Q495676">
+        <attvalues>
+          <attvalue for="0" value="Tahar Ben Ammar" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="1889" />
+          <attvalue for="3" value="" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="613" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="protectorate_end" />
+          <attvalue for="14" value="Q495676" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q643348" label="Q643348">
+        <attvalues>
+          <attvalue for="0" value="Habib Bourguiba" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1903" />
+          <attvalue for="3" value="Monastir" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="Lycée Carnot de Tunis|Université de Paris" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="2" />
+          <attvalue for="9" value="2" />
+          <attvalue for="10" value="4950" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba|monarchy" />
+          <attvalue for="14" value="Q643348" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-bahi-ladgham" label="TN-bahi-ladgham">
+        <attvalues>
+          <attvalue for="0" value="Bahi Ladgham" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1913" />
+          <attvalue for="3" value="Tunis" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="360" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-hedi-nouira" label="TN-hedi-nouira">
+        <attvalues>
+          <attvalue for="0" value="Hédi Nouira" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1911" />
+          <attvalue for="3" value="Monastir" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="3460" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-mohamed-mzali" label="TN-mohamed-mzali">
+        <attvalues>
+          <attvalue for="0" value="Mohamed Mzali" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1925" />
+          <attvalue for="3" value="Monastir" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="2267" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-rachid-sfar" label="TN-rachid-sfar">
+        <attvalues>
+          <attvalue for="0" value="Rachid Sfar" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1933" />
+          <attvalue for="3" value="Mahdia" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="451" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-zine-el-abidine-ben-ali" label="TN-zine-el-abidine-ben-ali">
+        <attvalues>
+          <attvalue for="0" value="Zine El Abidine Ben Ali" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1936" />
+          <attvalue for="3" value="Hammam Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="security" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="36" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="bourguiba" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q1363916" label="Q1363916">
+        <attvalues>
+          <attvalue for="0" value="Hédi Baccouche" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1930" />
+          <attvalue for="3" value="Hammam Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="690" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="ben_ali" />
+          <attvalue for="14" value="Q1363916" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q1381809" label="Q1381809">
+        <attvalues>
+          <attvalue for="0" value="Hamed Karoui" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1927" />
+          <attvalue for="3" value="Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="medicine" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="3703" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="ben_ali" />
+          <attvalue for="14" value="Q1381809" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q431515" label="Q431515">
+        <attvalues>
+          <attvalue for="0" value="Mohamed Ghannouchi" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1941" />
+          <attvalue for="3" value="Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="economics" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="4120" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="ben_ali" />
+          <attvalue for="14" value="Q431515" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-beji-caid-essebsi" label="TN-beji-caid-essebsi">
+        <attvalues>
+          <attvalue for="0" value="Béji Caïd Essebsi" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1926" />
+          <attvalue for="3" value="Sidi Bou Saïd" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="300" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="transition" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q57699" label="Q57699">
+        <attvalues>
+          <attvalue for="0" value="Hamadi Jebali" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1949" />
+          <attvalue for="3" value="Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="445" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="transition" />
+          <attvalue for="14" value="Q57699" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-ali-larayedh" label="TN-ali-larayedh">
+        <attvalues>
+          <attvalue for="0" value="Ali Larayedh" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1955" />
+          <attvalue for="3" value="Médenine" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="322" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="transition" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q15304780" label="Q15304780">
+        <attvalues>
+          <attvalue for="0" value="Mehdi Jomaa" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1962" />
+          <attvalue for="3" value="Mahdia" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="373" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="transition" />
+          <attvalue for="14" value="Q15304780" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q3125311" label="Q3125311">
+        <attvalues>
+          <attvalue for="0" value="Habib Essid" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1949" />
+          <attvalue for="3" value="Sousse" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="Université de Tunis|University of Minnesota" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="economics" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="568" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="second_republic" />
+          <attvalue for="14" value="Q3125311" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-youssef-chahed" label="TN-youssef-chahed">
+        <attvalues>
+          <attvalue for="0" value="Youssef Chahed" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1975" />
+          <attvalue for="3" value="Tunis" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="Institut national agronomique de Tunisie" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="1279" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="second_republic" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-elyes-fakhfakh" label="TN-elyes-fakhfakh">
+        <attvalues>
+          <attvalue for="0" value="Elyès Fakhfakh" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1972" />
+          <attvalue for="3" value="Tunis" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="188" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="second_republic" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-hichem-mechichi" label="TN-hichem-mechichi">
+        <attvalues>
+          <attvalue for="0" value="Hichem Mechichi" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1974" />
+          <attvalue for="3" value="Tunis" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="404" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="second_republic" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q108741355" label="Q108741355">
+        <attvalues>
+          <attvalue for="0" value="Najla Bouden" />
+          <attvalue for="1" value="female" />
+          <attvalue for="2" value="1958" />
+          <attvalue for="3" value="Kairouan" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="ESTP Paris|Mines ParisTech" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering|academia" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="659" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="saied_exception" />
+          <attvalue for="14" value="Q108741355" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q121088468" label="Q121088468">
+        <attvalues>
+          <attvalue for="0" value="Ahmed Hachani" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1956" />
+          <attvalue for="3" value="" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="Université de Tunis" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="372" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="saied_exception" />
+          <attvalue for="14" value="Q121088468" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="Q128723414" label="Q128723414">
+        <attvalues>
+          <attvalue for="0" value="Kamel Maddouri" />
+          <attvalue for="1" value="male" />
+          <attvalue for="2" value="1974" />
+          <attvalue for="3" value="" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="Université de Tunis" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="law" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="226" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="saied_exception" />
+          <attvalue for="14" value="Q128723414" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+      <node id="TN-sara-zaafarani" label="TN-sara-zaafarani">
+        <attvalues>
+          <attvalue for="0" value="Sara Zaafarani" />
+          <attvalue for="1" value="female" />
+          <attvalue for="2" value="1963" />
+          <attvalue for="3" value="Tunis" />
+          <attvalue for="4" value="" />
+          <attvalue for="5" value="" />
+          <attvalue for="6" value="" />
+          <attvalue for="7" value="engineering" />
+          <attvalue for="8" value="1" />
+          <attvalue for="9" value="1" />
+          <attvalue for="10" value="523" />
+          <attvalue for="11" value="true" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="saied_exception" />
+          <attvalue for="14" value="" />
+          <attvalue for="15" value="0" />
+          <attvalue for="16" value="0" />
+          <attvalue for="17" value="0.0" />
+          <attvalue for="18" value="0.0" />
+          <attvalue for="19" value="0.21320071635561044" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges />
+  </graph>
+</gexf>
