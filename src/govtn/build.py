@@ -33,7 +33,8 @@ from typing import Any
 import pandas as pd
 
 from . import config
-from .normalize import clean_name, excluded_reason, looks_like_office, parse_date, parse_title
+from .normalize import (clean_name, excluded_reason, looks_like_office,
+                        name_similarity, parse_date, parse_title)
 from .reconcile import Reconciler, SourceRecord
 
 log = logging.getLogger(__name__)
@@ -832,6 +833,90 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
     return frame
 
 
+def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
+    """Attach Journal Officiel citations to the appointments they record.
+
+    The gazette is the authoritative record: a ministerial appointment takes
+    legal effect through a published decree. Matching those decrees back onto
+    the harvested appointments gives each one a citation a reader can look up,
+    and an authoritative date to set against the encyclopaedic one.
+
+    The citation is attached ALONGSIDE the existing dates, never over them.
+    Where the two disagree the disagreement is recorded in `jort_date_delta`
+    rather than silently resolved - a discrepancy between the gazette and
+    Wikipedia is a finding, not an error to paper over.
+    """
+    payload = _load_interim("jort_decrees.json")
+    if not payload:
+        return appointments
+    decrees = payload.get("decrees", payload) if isinstance(payload, dict) else payload
+    usable = [d for d in decrees if d.get("holder") and d.get("published")]
+    if not usable or appointments.empty:
+        return appointments
+
+    for column in ("jort_citation", "jort_date", "jort_url", "jort_kind"):
+        appointments[column] = pd.NA
+    appointments["jort_date_delta"] = pd.NA
+
+    # Index decrees by a blocking token so each appointment is compared with a
+    # handful of candidates rather than all of them.
+    from .normalize import name_tokens_strong
+    index: dict[str, list[dict]] = {}
+    for decree in usable:
+        for token in name_tokens_strong(decree["holder"]):
+            index.setdefault(token, []).append(decree)
+
+    matched = 0
+    for position, row in appointments.iterrows():
+        name = row.get("person_name")
+        if not isinstance(name, str) or not name:
+            continue
+        start = _as_date_safe(row.get("start_date"))
+        candidates = {
+            id(d): d
+            for token in name_tokens_strong(name)
+            for d in index.get(token, [])
+        }
+        best, best_gap = None, None
+        for decree in candidates.values():
+            if name_similarity(name, decree["holder"]) < 0.75:
+                continue
+            published = _as_date_safe(decree["published"])
+            if published is None:
+                continue
+            gap = abs((published - start).days) if start else 10**6
+            # A decree more than a year from the recorded start is describing
+            # some other episode in the person's career.
+            if gap > 365:
+                continue
+            if best_gap is None or gap < best_gap:
+                best, best_gap = decree, gap
+        if best is None:
+            continue
+        appointments.at[position, "jort_citation"] = best["citation"]
+        appointments.at[position, "jort_date"] = best["published"]
+        appointments.at[position, "jort_url"] = best["url"]
+        appointments.at[position, "jort_kind"] = best["kind"]
+        appointments.at[position, "jort_date_delta"] = best_gap if start else pd.NA
+        matched += 1
+
+    if matched:
+        log.info(
+            "matched %d appointments to a Journal Officiel decree "
+            "(%d usable decrees harvested)", matched, len(usable),
+        )
+    return appointments
+
+
+def _as_date_safe(value):
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+    try:
+        return date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return None
+
+
 def build_cabinets(
     appointments: pd.DataFrame, persons: pd.DataFrame, spine: Spine
 ) -> pd.DataFrame:
@@ -888,6 +973,7 @@ def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
     reconciler.write_audit()
 
     appointments = build_appointments(mapping, raw_appointments, spine)
+    appointments = attach_jort_citations(appointments)
     persons = build_persons(mapping, records, appointments, spine)
     cabinets = build_cabinets(appointments, persons, spine)
 
@@ -939,7 +1025,8 @@ def _write_manifest(out_dir, tables, spine: Spine) -> None:
         name: _contributed(name)
         for name in ("wikidata_persons", "wikidata_officeholders",
                      "wikipedia_cabinets", "biographies_fr",
-                     "leaders_biographies", "govtn_portal_members")
+                     "leaders_biographies", "govtn_portal_members",
+                     "jort_decrees")
     }
     manifest = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),

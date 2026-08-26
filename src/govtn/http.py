@@ -141,6 +141,15 @@ class Fetcher:
                 continue
 
             response.raise_for_status()
+            # requests falls back to ISO-8859-1 whenever a response declares no
+            # charset, which silently mojibakes UTF-8 content: jort.tn came
+            # back with "NÂ°032" and "nommÃ©", and every regex against it
+            # failed for reasons that looked like a parsing bug. Trust the
+            # declared charset when there is one, otherwise sniff, and treat
+            # requests' bare ISO-8859-1 default as "not declared".
+            declared = (response.encoding or "").lower()
+            if not declared or declared == "iso-8859-1":
+                response.encoding = response.apparent_encoding or "utf-8"
             text = response.text
             path.write_text(text, encoding="utf-8")
             self._record(key, url, params, response, text)

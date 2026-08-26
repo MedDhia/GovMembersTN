@@ -183,9 +183,9 @@ python -m govtn.pipeline --snapshot 2026-08-26
   belonged to a party, not when.
 - **Education strings are not reconciled to identifiers.** Normalise before
   using as a homophily key.
-- **Wikipedia and Leaders are tertiary sources.** For claims that carry
-  argumentative weight, verify against the *Journal Officiel de la République
-  Tunisienne*, which publishes appointment decrees. See
+- **Wikipedia and Leaders are tertiary sources.** Where an appointment carries
+  a `jort_citation` it is corroborated by the official gazette; where it does
+  not, it rests on encyclopaedic sources alone. See
   [docs/SOURCES.md](docs/SOURCES.md).
 
 ## Licence

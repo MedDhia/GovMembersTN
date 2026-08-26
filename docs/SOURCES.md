@@ -96,6 +96,49 @@ The same request resolves each article to its Wikidata QID via `pageprops`,
 which gives a stable identifier to ministers who appear only in a roster
 table and have no officeholding statement of their own.
 
+## Journal Officiel (jort.tn)
+
+- **Base:** `https://jort.tn`
+- **Coverage:** the gazette from **1957 to the present**, French and Arabic —
+  the whole span of this dataset — with OCR'd full-text search.
+- **What it contributes:** the authoritative record. A ministerial appointment
+  takes legal effect through a decree published in the JORT, so this is the
+  only source here that can establish an appointment officially rather than
+  encyclopaedically.
+
+An earlier version of this file said the JORT was not harvested because it is
+distributed as scanned PDFs with no machine-readable index. That was true of
+the government's own portals (`jort.gov.tn`, `iort.gov.tn`), which refuse
+connections in any case. `jort.tn` indexes the same gazette and is searchable.
+
+**What is used, and what deliberately is not.** Full documents sit behind a
+login. This harvester uses only what the site serves publicly: the search
+index, result snippets, and each issue's metadata page, which carries the
+publication date and the summary of decrees. It never requests the gated PDFs
+and never attempts to authenticate.
+
+**Search by decree language, not by person.** Searching per person was the
+obvious approach and the wrong one: it surfaces every gazette mention of a
+name — a committee presidency, a board seat, a namesake in a promotion list —
+and cabinet appointments are a small minority. Searching for the appointment
+language itself (`"est nommé chef du gouvernement"`,
+`"sont nommés membres du gouvernement"`, `"تسمية أعضاء الحكومة"`,
+`"il est mis fin aux fonctions"`) returns the decrees themselves, and the
+officeholder's name can be read off the snippet. It is also two orders of
+magnitude cheaper: a dozen queries rather than one per person.
+
+**Publication is not appointment.** `jort_date` is when the decree appeared in
+the gazette, which trails the appointment by a few days — a median of 8 in
+this data. It is an authoritative upper bound on the start date, not a
+replacement for it, and the difference is recorded in `jort_date_delta` rather
+than silently resolved. A large gap between the harvested date and the
+official record is a finding worth inspecting.
+
+Two traps are handled: `"ministre plénipotentiaire"` is a diplomatic rank
+rather than a seat in cabinet and dominates the `"est nommé ministre"`
+results; and issues are dated in both calendars
+(`26 chaâbane 1442 – 8 avril 2021`), so only the Gregorian half is taken.
+
 ## Official government portal (tunisie.gov.tn)
 
 - **Base:** `https://www.tunisie.gov.tn`
@@ -146,13 +189,6 @@ a parser change costs no requests at all.
 
 ## Sources deliberately not used
 
-- **Journal Officiel de la République Tunisienne (JORT).** The authoritative
-  source: appointment decrees are published there, with exact dates. It is not
-  harvested because the archive is distributed as scanned PDFs with no stable
-  machine-readable index, and OCR of Arabic administrative text is a project
-  in itself. **For any claim carrying argumentative weight, verify against
-  JORT.** The `appointments.confidence` column exists partly to mark which
-  rows most need it.
 - **Government press releases / `pm.gov.tn`.** Good for the current cabinet,
   no historical depth, and the site has been restructured repeatedly.
 - **Secondary academic datasets** on Arab ministerial elites. Useful for
