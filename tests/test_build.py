@@ -178,3 +178,41 @@ def test_empty_harvest_file_does_not_count_as_a_present_source(tmp_path):
     assert contributed("empty") is False, "an empty harvest is not a contribution"
     assert contributed("broken") is False
     assert contributed("absent") is False
+
+
+def test_build_refuses_to_replace_a_more_complete_dataset(tmp_path):
+    """A clone ships data/processed/ but not the harvested payloads.
+
+    Running `make build` there rebuilds from the curated spine alone, and
+    before this guard it silently replaced a 3151-row dataset with 23 rows -
+    which made the published data look fabricated.
+    """
+    import json
+    import pytest
+    from govtn.build import _would_regress
+
+    (tmp_path / "MANIFEST.json").write_text(json.dumps({
+        "sources_present": {"wikidata_persons": True, "wikipedia_cabinets": True,
+                            "jort_decrees": False}
+    }), encoding="utf-8")
+
+    # A build with none of those sources would lose two of them.
+    lost = _would_regress(tmp_path, {"wikidata_persons": False,
+                                     "wikipedia_cabinets": False,
+                                     "jort_decrees": False})
+    assert lost == ["wikidata_persons", "wikipedia_cabinets"]
+
+    # A build with the same sources loses nothing and must be allowed.
+    assert _would_regress(tmp_path, {"wikidata_persons": True,
+                                     "wikipedia_cabinets": True,
+                                     "jort_decrees": False}) == []
+
+    # Gaining a source is not a regression either.
+    assert _would_regress(tmp_path, {"wikidata_persons": True,
+                                     "wikipedia_cabinets": True,
+                                     "jort_decrees": True}) == []
+
+
+def test_regression_guard_is_silent_on_a_first_build(tmp_path):
+    from govtn.build import _would_regress
+    assert _would_regress(tmp_path, {"wikidata_persons": False}) == []

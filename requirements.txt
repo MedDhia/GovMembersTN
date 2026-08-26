@@ -5,4 +5,5 @@ networkx>=3.1
 mwparserfromhell>=0.6     # robust MediaWiki wikitext parsing
 beautifulsoup4>=4.12      # Leaders.com.tn HTML
 lxml>=5.0
+tabulate>=0.9          # pandas .to_markdown(), used by govtn.validate
 pytest>=7.4

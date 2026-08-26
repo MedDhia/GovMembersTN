@@ -27,6 +27,7 @@ import argparse
 import functools
 import json
 import logging
+import pathlib
 from datetime import date, datetime, timezone
 from typing import Any
 
@@ -983,7 +984,31 @@ def build_cabinets(
 
 # ---------------------------------------------------------------------------
 
-def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
+def _would_regress(out_dir, sources_present: dict[str, bool]) -> list[str]:
+    """Sources the shipped dataset has that this build does not.
+
+    A fresh clone ships `data/processed/` but not `data/raw/` or
+    `data/interim/`, which are too large to track. Someone who clones the
+    repository and runs `make build` therefore rebuilds from the curated spine
+    alone - and, before this guard existed, silently overwrote a 3151-row
+    dataset with 23 rows. The result looked like the published data had been
+    fabricated.
+    """
+    manifest_path = pathlib.Path(out_dir) / "MANIFEST.json"
+    if not manifest_path.exists():
+        return []
+    try:
+        with manifest_path.open(encoding="utf-8") as fh:
+            previous = json.load(fh).get("sources_present", {})
+    except (json.JSONDecodeError, OSError):
+        return []
+    return sorted(
+        name for name, had in previous.items()
+        if had and not sources_present.get(name, False)
+    )
+
+
+def run(*, out_dir=None, force: bool = False) -> dict[str, pd.DataFrame]:
     paths = config.paths().ensure()
     out_dir = out_dir or paths.processed
     spine = Spine()
@@ -1009,6 +1034,22 @@ def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
         "spells": spells,
         "portfolios": portfolios,
     }
+    sources_present = _source_status()
+    lost = _would_regress(out_dir, sources_present)
+    if lost and not force:
+        raise SystemExit(
+            "REFUSING TO OVERWRITE a more complete dataset.\n\n"
+            f"  data/processed/ was built with: {', '.join(lost)}\n"
+            "  this build has none of those.\n\n"
+            "A clone of this repository ships data/processed/ but not the\n"
+            "harvested payloads under data/raw/ and data/interim/, which are\n"
+            "too large to track. Rebuilding without them would replace the\n"
+            "published dataset with the curated spine alone.\n\n"
+            "  To harvest the sources and rebuild:  make all\n"
+            "  To rebuild from payloads you already have:  make offline\n"
+            "  To overwrite anyway:  python -m govtn.build --force\n"
+        )
+
     for name, frame in tables.items():
         path = out_dir / f"{name}.csv"
         frame.to_csv(path, index=False)
@@ -1039,6 +1080,18 @@ def _contributed_factory(interim_dir):
             return False
 
     return _contributed
+
+
+SOURCE_FILES = (
+    "wikidata_persons", "wikidata_officeholders", "wikipedia_cabinets",
+    "biographies_fr", "leaders_biographies", "govtn_portal_members",
+    "jort_decrees",
+)
+
+
+def _source_status() -> dict[str, bool]:
+    contributed = _contributed_factory(config.paths().interim)
+    return {name: contributed(name) for name in SOURCE_FILES}
 
 
 def _write_manifest(out_dir, tables, spine: Spine) -> None:
@@ -1074,9 +1127,11 @@ def _write_manifest(out_dir, tables, spine: Spine) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", default=None)
+    parser.add_argument("--force", action="store_true",
+                        help="overwrite even a more complete dataset")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-    run(out_dir=args.out)
+    run(out_dir=args.out, force=args.force)
     return 0
 
 

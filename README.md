@@ -6,31 +6,33 @@ built for both **individual-level analysis** (who gets into government, from
 where, with what background, for how long) and **network analysis**
 (who served alongside whom, who succeeded whom, who shares a background).
 
-Built from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn,
-with every extracted value traceable to a source URL and a retrieval
-timestamp.
+Every extracted value is traceable to a source URL and a retrieval timestamp,
+and 162 appointments carry a citation to the *Journal Officiel*, the gazette
+in which a Tunisian ministerial appointment legally takes effect.
 
 ---
 
 ## What's in it
 
-Harvested from Wikidata, the French and Arabic Wikipedias, minister biography
-articles, Leaders.com.tn, and the official government portal tunisie.gov.tn:
+Harvested from Wikidata; the French and Arabic Wikipedias, both cabinet
+rosters and minister biographies; Leaders.com.tn; the official government
+portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 
-| | |
-|---|---|
-| **902** people who held a post in a Tunisian government | |
-| **2,979** appointments | one row per person × cabinet × portfolio |
-| **53** cabinets | 1943–2026, spanning 23 government spells |
-| **40,892** co-membership ties | weighted by days of overlapping service |
-| **1,880** succession ties | directed, within portfolio |
-| **7,799** homophily ties | shared university, party or birth region |
+| Rows | What |
+|---:|---|
+| **884** | people who held a post in a Tunisian government |
+| **3,151** | appointments — one row per person × cabinet × portfolio |
+| **57** | cabinets, 1943–2026, across 23 government spells |
+| **36,978** | co-membership ties, weighted by days of overlapping service |
+| **1,995** | succession ties, directed, within portfolio |
+| **6,513** | homophily ties — shared university, party or birth region |
+| **162** | appointments carrying a *Journal Officiel* citation |
 
-Person-level attribute coverage: Wikidata QID 68%, gender 67%, Arabic name
-65%, birth date 63%, birthplace 56%, education 37%, party 37%, career flags
-38%.
-54% of appointments carry a date describing the person rather than the cabinet
-(see `date_basis`), and 65% of people have a strictly-dated tenure.
+Person-level attribute coverage: Wikidata QID 68%, occupation 66%, gender 67%,
+Arabic name 65%, birth date 63%, birthplace 55%, education 37%, party 37%,
+career flags 38%.
+51% of appointments carry a date describing the person rather than the
+cabinet (see `date_basis`), and 63% of people have a strictly-dated tenure.
 `VALIDATION.md` breaks this down by decade and variable — **read it before
 computing any long-run trend**; coverage is markedly better after 1987 than
 before.
@@ -45,6 +47,13 @@ make all          # harvest -> build -> networks -> validate
 
 Re-running after a parser change costs zero requests: every payload is cached
 under `data/raw/`, and `make offline` rebuilds from that cache alone.
+
+**A clone ships `data/processed/` but not `data/raw/` or `data/interim/`** —
+the payloads are too large to track. So `make offline` works only after you
+have harvested at least once, and `make build` on a fresh clone would rebuild
+from the curated spine alone. It refuses to do so rather than replacing the
+published dataset with a 23-row one; pass `--force` if that is genuinely what
+you want.
 
 ## What you get
 
