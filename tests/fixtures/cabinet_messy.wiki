@@ -1,0 +1,23 @@
+{{Infobox Gouvernement
+| nom = Gouvernement Hédi Nouira
+| formation = 2 novembre 1970
+| fin = 23 avril 1980
+}}
+== Composition initiale ==
+{| class="wikitable sortable"
+! Fonction !! Ministre !! Entrée en fonction
+|-
+! colspan="3" | Ministres
+|-
+| Premier ministre || {{drapeau|Tunisie}} [[Hédi Nouira]] || 2 novembre 1970
+|-
+| Ministre des Affaires étrangères || [[Mohamed Masmoudi]] || 6 novembre 1970
+|-
+| Ministre de l'Intérieur || [[Ahmed Mestiri]] || 6 novembre 1970
+|-
+! colspan="3" | Secrétaires d'État
+|-
+| Secrétaire d'État à la Défense nationale || [[Abdallah Farhat]] || 1970
+|-
+| Secrétaire d'État aux Affaires culturelles || [[Chedli Klibi]]<ref>Note de bas de page.</ref> || 1970
+|}
