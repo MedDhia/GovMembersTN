@@ -91,6 +91,13 @@ class SourceRecord:
     record_id: str
     source: str                       # "wikidata" | "wikipedia" | "leaders"
     name: str
+    # Other names for the SAME person, most importantly the Arabic label.
+    # Arabic and Latin spellings of one name share no tokens, so a roster row
+    # harvested from the Arabic Wikipedia can never match its French
+    # counterpart by name alone - the person is simply duplicated. Carrying
+    # Wikidata's Arabic label as an alias on the Wikidata record bridges the
+    # two scripts through the QID.
+    aliases: tuple[str, ...] = ()
     qid: str | None = None
     wikilink: str | None = None
     birth_year: int | None = None
@@ -100,7 +107,15 @@ class SourceRecord:
 
     @property
     def tokens(self) -> frozenset[str]:
-        return name_tokens_strong(self.name)
+        """Blocking tokens from the primary name and every alias."""
+        tokens = set(name_tokens_strong(self.name))
+        for alias in self.aliases:
+            tokens |= name_tokens_strong(alias)
+        return frozenset(tokens)
+
+    @property
+    def all_names(self) -> tuple[str, ...]:
+        return (self.name, *self.aliases)
 
 
 @dataclass
@@ -120,12 +135,24 @@ class Reconciler:
         self.records: dict[str, SourceRecord] = {}
         self.decisions: list[Decision] = []
         self.rejections: list[Decision] = []
+        # Per-cluster attribute sets, keyed by union-find root. The
+        # disqualifiers have to be evaluated against these rather than against
+        # the two records being linked: merges are TRANSITIVE, so a pairwise
+        # check passes for A-B and B-C while the resulting cluster fuses A's
+        # QID with C's - two different people in one row, with two careers
+        # merged into one. Pairwise checking alone let four of those through.
+        self.cluster_qids: dict[str, set[str]] = {}
+        self.cluster_births: dict[str, set[int]] = {}
 
     # -- ingestion ---------------------------------------------------------
 
     def add(self, record: SourceRecord) -> None:
         self.records[record.record_id] = record
         self.uf.add(record.record_id)
+        self.cluster_qids[record.record_id] = {record.qid} if record.qid else set()
+        self.cluster_births[record.record_id] = (
+            {record.birth_year} if record.birth_year else set()
+        )
 
     def add_all(self, records: Iterable[SourceRecord]) -> None:
         for record in records:
@@ -167,13 +194,36 @@ class Reconciler:
 
     # -- linking -----------------------------------------------------------
 
+    def _cluster_blocked(self, a_id: str, b_id: str) -> str | None:
+        """Would merging these two CLUSTERS create a contradiction?"""
+        root_a, root_b = self.uf.find(a_id), self.uf.find(b_id)
+        if root_a == root_b:
+            return None
+        qids = self.cluster_qids.get(root_a, set()) | self.cluster_qids.get(root_b, set())
+        if len(qids) > 1:
+            return "cluster_spans_multiple_qids"
+        births = self.cluster_births.get(root_a, set()) | self.cluster_births.get(root_b, set())
+        if births and max(births) - min(births) > 1:
+            return "cluster_birth_year_conflict"
+        return None
+
     def _link(self, a_id: str, b_id: str, rule: str, score: float | None = None) -> bool:
         a, b = self.records[a_id], self.records[b_id]
-        reason = self._blocked(a, b)
+        reason = self._blocked(a, b) or self._cluster_blocked(a_id, b_id)
         if reason:
             self.rejections.append(Decision(a_id, b_id, reason, score))
             return False
+
+        root_a, root_b = self.uf.find(a_id), self.uf.find(b_id)
+        merged_qids = self.cluster_qids.get(root_a, set()) | self.cluster_qids.get(root_b, set())
+        merged_births = (
+            self.cluster_births.get(root_a, set()) | self.cluster_births.get(root_b, set())
+        )
         self.uf.union(a_id, b_id)
+        new_root = self.uf.find(a_id)
+        self.cluster_qids[new_root] = merged_qids
+        self.cluster_births[new_root] = merged_births
+
         self.decisions.append(Decision(a_id, b_id, rule, score))
         return True
 
@@ -214,7 +264,15 @@ class Reconciler:
                     compared.add(pair)
                     if self.uf.find(left) == self.uf.find(right):
                         continue
-                    score = name_similarity(self.records[left].name, self.records[right].name)
+                    # Best match over every name/alias pair: a French roster
+                    # row must be allowed to match a Wikidata record through
+                    # its Latin label while an Arabic row matches the same
+                    # record through its Arabic one.
+                    score = max(
+                        name_similarity(a, b)
+                        for a in self.records[left].all_names
+                        for b in self.records[right].all_names
+                    )
                     if score >= self.threshold:
                         self._link(left, right, "name_similarity", round(score, 3))
 

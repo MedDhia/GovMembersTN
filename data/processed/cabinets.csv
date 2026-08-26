@@ -1,24 +1,54 @@
 cabinet_id,n_members,n_appointments,n_women,n_sovereign_posts,start_date,end_date,spell_id,era,president,share_women,head_of_government,head_role,confidence
-TN-00,1,1,0,1,1954-08-07,1956-04-11,TN-00,protectorate_end,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
-TN-01,1,1,0,1,1956-04-15,1957-07-25,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
-TN-02,1,1,0,1,1957-07-29,1969-11-07,TN-02,bourguiba,Habib Bourguiba,0.0,Habib Bourguiba,president_as_head,medium
-TN-03,1,1,0,1,1969-11-07,1970-11-02,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
-TN-04,1,1,0,1,1970-11-02,1980-04-23,TN-04,bourguiba,Habib Bourguiba,0.0,Hédi Nouira,prime_minister,high
-TN-05,1,1,0,1,1980-04-23,1986-07-08,TN-05,bourguiba,Habib Bourguiba,0.0,Mohamed Mzali,prime_minister,high
-TN-06,1,1,0,1,1986-07-08,1987-10-02,TN-06,bourguiba,Habib Bourguiba,0.0,Rachid Sfar,prime_minister,high
-TN-07,1,1,0,1,1987-10-02,1987-11-07,TN-07,bourguiba,Habib Bourguiba,0.0,Zine El Abidine Ben Ali,prime_minister,high
-TN-08,1,1,0,1,1987-11-07,1989-09-27,TN-08,ben_ali,Zine El Abidine Ben Ali,0.0,Hédi Baccouche,prime_minister,high
-TN-09,1,1,0,1,1989-09-27,1999-11-17,TN-09,ben_ali,Zine El Abidine Ben Ali,0.0,Hamed Karoui,prime_minister,high
-TN-10,1,1,0,1,1999-11-17,2011-02-27,TN-10,ben_ali,Zine El Abidine Ben Ali,0.0,Mohamed Ghannouchi,prime_minister,high
-TN-11,1,1,0,1,2011-02-27,2011-12-24,TN-11,transition,Fouad Mebazaa,0.0,Béji Caïd Essebsi,prime_minister,high
-TN-12,1,1,0,1,2011-12-24,2013-03-13,TN-12,transition,Moncef Marzouki,0.0,Hamadi Jebali,head_of_government,high
-TN-13,1,1,0,1,2013-03-13,2014-01-29,TN-13,transition,Moncef Marzouki,0.0,Ali Larayedh,head_of_government,high
-TN-14,1,1,0,1,2014-01-29,2015-02-06,TN-14,transition,Moncef Marzouki,0.0,Mehdi Jomaa,head_of_government,high
-TN-15,1,1,0,1,2015-02-06,2016-08-27,TN-15,second_republic,Béji Caïd Essebsi,0.0,Habib Essid,head_of_government,high
-TN-16,1,1,0,1,2016-08-27,2020-02-27,TN-16,second_republic,Béji Caïd Essebsi,0.0,Youssef Chahed,head_of_government,high
-TN-17,1,1,0,1,2020-02-27,2020-09-02,TN-17,second_republic,Kaïs Saïed,0.0,Elyès Fakhfakh,head_of_government,high
-TN-18,1,1,0,1,2020-09-02,2021-10-11,TN-18,second_republic,Kaïs Saïed,0.0,Hichem Mechichi,head_of_government,high
-TN-19,1,1,1,1,2021-10-11,2023-08-01,TN-19,saied_exception,Kaïs Saïed,1.0,Najla Bouden,head_of_government,high
-TN-20,1,1,0,1,2023-08-01,2024-08-07,TN-20,saied_exception,Kaïs Saïed,0.0,Ahmed Hachani,head_of_government,high
-TN-21,1,1,0,1,2024-08-07,2025-03-21,TN-21,saied_exception,Kaïs Saïed,0.0,Kamel Maddouri,head_of_government,high
-TN-22,1,1,1,1,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,1.0,Sara Zaafarani,head_of_government,high
+Gouvernement Ben Ali,20,31,2,10,1987-01-01,1987-01-01,,bourguiba,Habib Bourguiba,0.1,,,
+Gouvernement Ben Ammar,24,43,0,12,1954-01-01,1956-04-11,TN-00,protectorate,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
+Gouvernement Bouden/Hachani/Madouri/Zaafrani,63,65,15,15,2021-01-01,2024-08-07,TN-20,second_republic,Kaïs Saïed,0.238,Ahmed Hachani,head_of_government,high
+Gouvernement Bourguiba I,23,34,0,7,1956-01-01,1957-07-25,TN-01,protectorate_end,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
+Gouvernement Bourguiba II,27,63,0,24,1956-04-15,1969-01-01,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
+Gouvernement Caïd Essebsi,49,72,2,13,2011-01-01,2011-12-24,TN-11,ben_ali,Zine El Abidine Ben Ali,0.041,Béji Caïd Essebsi,prime_minister,high
+Gouvernement Chahed,84,177,9,32,2016-01-01,2020-02-27,TN-16,second_republic,Béji Caïd Essebsi,0.107,Youssef Chahed,head_of_government,high
+Gouvernement Chenik I,4,8,0,5,1943-01-01,1943-01-01,,protectorate,,0.0,,,
+Gouvernement Chenik II,22,27,0,8,1950-01-01,1952-01-01,,protectorate,Lamine Bey,0.0,,,
+Gouvernement Essid,60,115,8,22,2015-01-01,2016-08-27,TN-15,second_republic,Béji Caïd Essebsi,0.133,Habib Essid,head_of_government,high
+Gouvernement Fakhfakh,38,69,5,14,2020-01-01,2020-09-02,TN-17,second_republic,Kaïs Saïed,0.132,Elyès Fakhfakh,head_of_government,high
+Gouvernement Ghannouchi I,187,409,7,78,1999-01-01,2011-02-27,TN-10,ben_ali,Zine El Abidine Ben Ali,0.037,Mohamed Ghannouchi,prime_minister,high
+Gouvernement Ghannouchi II,54,60,3,11,1999-11-17,2011-02-27,TN-10,ben_ali,Zine El Abidine Ben Ali,0.056,Mohamed Ghannouchi,prime_minister,high
+Gouvernement Hédi Baccouche I,37,41,1,11,1987-01-01,1988-01-01,TN-08,bourguiba,Habib Bourguiba,0.027,Hédi Baccouche,prime_minister,high
+Gouvernement Hédi Baccouche II,33,34,1,9,1988-01-01,1989-01-01,TN-08,ben_ali,Zine El Abidine Ben Ali,0.03,Hédi Baccouche,prime_minister,high
+Gouvernement Hédi Baccouche III,32,32,0,8,1989-01-01,1989-01-01,TN-08,ben_ali,Zine El Abidine Ben Ali,0.0,Hédi Baccouche,prime_minister,high
+Gouvernement Jebali,55,84,3,15,2011-01-01,2013-03-13,TN-12,transition,Moncef Marzouki,0.055,Hamadi Jebali,head_of_government,high
+Gouvernement Jomaa,34,55,2,15,2014-01-01,2015-02-06,TN-14,transition,Moncef Marzouki,0.059,Mehdi Jomaa,head_of_government,high
+Gouvernement Kaak,20,24,0,8,1947-01-01,1950-01-01,,protectorate,Lamine Bey,0.0,,,
+Gouvernement Karoui,113,297,3,82,1989-01-01,1999-11-17,TN-09,ben_ali,Zine El Abidine Ben Ali,0.027,Hamed Karoui,prime_minister,high
+Gouvernement Ladgham,34,70,0,20,1969-01-01,1970-11-02,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
+Gouvernement Larayedh,50,76,2,15,2013-01-01,2014-01-29,TN-13,transition,Moncef Marzouki,0.04,Ali Larayedh,head_of_government,high
+Gouvernement Mechichi,63,89,8,22,2020-01-01,2021-10-11,TN-18,second_republic,Kaïs Saïed,0.127,Hichem Mechichi,head_of_government,high
+Gouvernement Mohamed Mzali,49,84,2,24,1980-01-01,1986-07-08,TN-05,bourguiba,Habib Bourguiba,0.041,Mohamed Mzali,prime_minister,high
+Gouvernement Mohamed Salah Mzali,22,24,0,6,1954-01-01,1986-07-08,TN-05,protectorate,Lamine Bey,0.0,Mohamed Mzali,prime_minister,high
+Gouvernement Nouira,76,131,0,34,1970-01-01,1980-04-23,TN-04,bourguiba,Habib Bourguiba,0.0,Hédi Nouira,prime_minister,high
+Gouvernement Sfar,13,24,1,10,1986-01-01,1987-10-02,TN-06,bourguiba,Habib Bourguiba,0.077,Rachid Sfar,prime_minister,high
+Gouvernement Slaheddine Baccouche I,5,8,0,4,1943-01-01,1989-09-27,TN-08,protectorate,Zine El Abidine Ben Ali,0.0,Hédi Baccouche,prime_minister,high
+Gouvernement Slaheddine Baccouche II,25,26,0,6,1952-01-01,1989-09-27,TN-08,protectorate,Lamine Bey,0.0,Hédi Baccouche,prime_minister,high
+Gouvernement de la Tunisie,3,3,0,1,,,,,,0.0,,,
+TN-00,7,9,0,5,1954-08-07,1958-09-30,TN-00,protectorate_end,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
+TN-01,7,8,0,4,1956-04-15,1965-06-29,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
+TN-02,29,51,0,19,1957-07-29,1990-08-19,TN-02,bourguiba,Habib Bourguiba,0.0,Habib Bourguiba,president_as_head,medium
+TN-03,12,15,0,7,1969-11-07,1974-01-14,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
+TN-04,37,66,0,22,1970-11-02,1988-07-27,TN-04,bourguiba,Habib Bourguiba,0.0,Hédi Nouira,prime_minister,high
+TN-05,29,35,2,12,1980-04-23,1988-07-27,TN-05,bourguiba,Habib Bourguiba,0.069,Mohamed Mzali,prime_minister,high
+TN-06,8,13,0,4,1986-07-08,1987-11-07,TN-06,bourguiba,Habib Bourguiba,0.0,Rachid Sfar,prime_minister,high
+TN-07,6,7,0,3,1987-10-02,1990-03-02,TN-07,bourguiba,Habib Bourguiba,0.0,Zine El Abidine Ben Ali,prime_minister,high
+TN-08,25,28,0,9,1987-11-07,1995-01-25,TN-08,ben_ali,Zine El Abidine Ben Ali,0.0,Hédi Baccouche,prime_minister,high
+TN-09,52,74,4,26,1989-09-27,2010-01-14,TN-09,ben_ali,Zine El Abidine Ben Ali,0.077,Hamed Karoui,prime_minister,high
+TN-10,91,116,13,26,1999-11-17,2013-03-13,TN-10,ben_ali,Zine El Abidine Ben Ali,0.143,Mohamed Ghannouchi,prime_minister,high
+TN-11,10,11,0,4,2011-02-27,2013-03-14,TN-11,transition,Fouad Mebazaa,0.0,Béji Caïd Essebsi,prime_minister,high
+TN-12,27,30,3,7,2011-12-24,2018-02-16,TN-12,transition,Moncef Marzouki,0.111,Hamadi Jebali,head_of_government,high
+TN-13,14,15,1,7,2013-03-13,2016-01-01,TN-13,transition,Moncef Marzouki,0.071,Ali Larayedh,head_of_government,high
+TN-14,20,23,2,6,2014-01-29,2016-01-12,TN-14,transition,Moncef Marzouki,0.1,Mehdi Jomaa,head_of_government,high
+TN-15,35,39,5,10,2015-02-06,2019-10-29,TN-15,second_republic,Béji Caïd Essebsi,0.143,Habib Essid,head_of_government,high
+TN-16,45,64,8,13,2016-08-27,2024-02-15,TN-16,second_republic,Béji Caïd Essebsi,0.178,Youssef Chahed,head_of_government,high
+TN-17,29,36,5,8,2020-02-27,2021-08-02,TN-17,second_republic,Kaïs Saïed,0.172,Elyès Fakhfakh,head_of_government,high
+TN-18,31,42,8,12,2020-09-02,2025-02-05,TN-18,second_republic,Kaïs Saïed,0.258,Hichem Mechichi,head_of_government,high
+TN-19,23,26,10,5,2021-10-11,2025-03-21,TN-19,saied_exception,Kaïs Saïed,0.435,Najla Bouden,head_of_government,high
+TN-20,9,10,5,3,2023-08-01,2026-04-27,TN-20,saied_exception,Kaïs Saïed,0.556,Ahmed Hachani,head_of_government,high
+TN-21,11,12,3,4,2024-08-07,2025-03-21,TN-21,saied_exception,Kaïs Saïed,0.273,Kamel Maddouri,head_of_government,high
+TN-22,5,5,2,2,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,0.4,Sara Zaafarani,head_of_government,high

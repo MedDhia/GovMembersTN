@@ -88,3 +88,47 @@ def test_members_are_deduplicated():
     doubled = load("cabinet_table") + "\n" + load("cabinet_table")
     record = parse_cabinet_article("t", doubled)
     assert len(record["members"]) == 6
+
+
+def test_table_caption_is_not_parsed_as_a_header_cell():
+    """Regression: a `|+` caption became phantom column 0 of the header row.
+
+    That shifted every column index by one against the data rows, so the
+    portfolio and person columns pointed at the wrong cells and the rows were
+    dropped for being too short. Whole cabinets parsed to zero members -
+    "Gouvernement Hamed Karoui" yielded 0 instead of 153.
+    """
+    rows = parse_tables(load("cabinet_caption"))
+    assert len(rows) == 3, "caption row must not shift the column mapping"
+    by_title = {r["raw_title"]: r for r in rows}
+    assert by_title["Premier ministre"]["person_name"] == "Hamed Karoui"
+    assert by_title["Ministre de l'Intérieur"]["person_name"] == "Chédli Neffati"
+    # The party column must land on the party, not on the colour-swatch cell.
+    assert by_title["Ministre de la Justice"]["party"] == "RCD"
+    # And the caption itself must never surface as an officeholder.
+    assert not any("Composition" in r["raw_title"] for r in rows)
+
+
+def test_bold_and_image_cells_do_not_corrupt_values():
+    rows = {r["raw_title"]: r for r in parse_tables(load("cabinet_caption"))}
+    # Bold markup around a piped wikilink must yield the display text.
+    assert rows["Premier ministre"]["person_wikilink"] == "Hamed Karoui"
+    # An image cell must not be mistaken for the portfolio.
+    assert not any(r["raw_title"].startswith("Fichier") for r in rows.values())
+
+
+def test_image_size_is_not_read_as_a_portfolio():
+    """Regression: `[[Fichier:x.jpg|60px]]` strips to "60px".
+
+    When an image column was picked as the portfolio column, every row in the
+    cabinet became a minister of "60px".
+    """
+    wikitext = """{| class="wikitable"
+|-
+| [[Fichier:Sin foto.svg|60px]]
+| Ministre de l'Intérieur
+| [[Taïeb Mehiri]]
+|}"""
+    rows = parse_tables(wikitext)
+    assert not any(r["raw_title"].strip() == "60px" for r in rows)
+    assert not any(r["person_name"].strip() == "60px" for r in rows)

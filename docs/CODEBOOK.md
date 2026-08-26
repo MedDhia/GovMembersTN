@@ -37,7 +37,7 @@ One row per person.
 
 | Column | Type | Description |
 |---|---|---|
-| `gender` | string | Wikidata `P21` label. Sparse for the pre-1987 period. |
+| `gender` | string | Controlled vocabulary: `male`, `female`, or empty. Wikidata returns this label in the request language (French first), so the raw values are `masculin`/`féminin`; they are mapped here. Sparse for the pre-1987 period. |
 | `birth_date`, `birth_year` | date, int | Birth. `birth_year` is provided because year-precision is often all that is available. |
 | `death_date`, `death_year` | date, int | Death. Empty for the living **and** for the undocumented — do not read an empty cell as "alive". |
 | `birth_date_precision` | string | `day`, `month` or `year` — what the source actually gave. `1972-01-01` with precision `year` means "born in 1972", not "born on 1 January". |
@@ -81,7 +81,9 @@ All computed from `appointments.csv`; recomputed on every build.
 | `n_portfolios` | int | Distinct harmonised portfolios held. |
 | `first_appointment` | date | Entry into government. |
 | `last_appointment_end` | date | End of the last recorded office; censored at the snapshot for incumbents. |
-| `total_tenure_days` | int | Summed tenure. **Double-counts concurrent posts** — a minister holding two portfolios at once accrues two days per day. Use `career_span_years` for elapsed time. |
+| `total_tenure_days` | int | Days in government, computed as the **union** of the person's appointment intervals, so concurrent posts count once. Treat as an **upper bound**: most rows inherit their dates from the cabinet (see `appointments.date_basis`), and a cabinet's span is longer than any individual's tenure in it. Summing per-appointment tenure instead produced careers of 180+ years. |
+| `total_appointment_days` | int | The naive **sum** over appointments, retained only for transparency. It double-counts concurrent posts and reshuffle re-listings. Do not use it as a tenure measure. |
+| `tenure_days_dated` | int | The same union, restricted to appointments whose dates describe the person rather than the cabinet (`date_basis` in `statement`, `row`, `spine`). Much sparser, and the **only one of the three suitable for duration or survival analysis**. |
 | `max_rank_level` | int | Highest rank attained, as the **minimum** level value (0 = head of government, 6 = secretary-general). Lower is higher. |
 | `ever_sovereign_portfolio` | bool | Ever held interior, foreign affairs, justice, defence or finance. |
 | `ever_head_of_government` | bool | Ever headed a government. |
@@ -116,7 +118,8 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `is_interim` | bool | Title marked *par intérim* / بالنيابة. |
 | `start_date`, `end_date` | date | Tenure bounds. `end_date` empty = still in office at the snapshot. |
 | `date_precision` | string | `day`, `month`, `year`, or `unknown` — the precision of `start_date` as given by the source. **Filter on this before computing durations.** |
-| `tenure_days` | int | Days in office; open tenures censored at the snapshot. |
+| `tenure_days` | int | Days in office; open tenures censored at the snapshot. Read together with `date_basis` — where that is `cabinet`, this is the cabinet's span, not the person's tenure. |
+| `date_basis` | string | Where this row's dates came from: `statement` (a Wikidata P580/P582 qualifier — the person's own tenure), `row` (a date cell in the Wikipedia roster table), `spine` (the curated government spine), `cabinet` (**inherited from the cabinet**, because the source gave no individual dates), `unknown`. About three quarters of rows are `cabinet`. **Filter to `statement`/`row`/`spine` before computing any duration.** |
 | `is_incumbent` | bool | `end_date` is empty. |
 | `era` | string | Regime era at the start of the tenure (→ `spells.era`). Boundaries are half-open, so a government formed on a transition date is coded to the incoming regime. |
 | `president` | string | Head of state at the start of the tenure. |
@@ -124,6 +127,9 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `start_year` | int | Convenience column for grouping. |
 | `appointment_seq` | int | 1-based position in this person's career sequence, ordered by start date. |
 | `is_first_appointment` | bool | `appointment_seq == 1`. |
+| `replaces` | string | Wikidata `P1365`: the person this appointment's holder succeeded in the post. Populated only for Wikidata rows. Independent of `edges_succession.csv`, which is derived from observed date ordering — where both exist they are a useful cross-check on each other. |
+| `replaced_by` | string | Wikidata `P1366`: who succeeded this holder. Same caveats as `replaces`. |
+| `party_raw` | string | Party as printed in the Wikipedia roster table, verbatim and unharmonised (`RCD`, `Ennahdha`, `Indépendant`). Populated only for Wikipedia rows. Unlike `persons.parties`, which is career-level, this is attached to a specific appointment and so is the better source for **time-varying** party affiliation — at the cost of being an uncontrolled vocabulary. Normalise before use. |
 | `source` | string | `spine`, `wikidata`, `wikipedia:fr`, `wikipedia:ar`, `leaders`. |
 | `source_ref` | url/string | The specific URL, Wikidata statement or config file the row came from. |
 | `confidence` | string | `high` / `medium` / `low`. `low` marks a Wikidata statement with no tenure qualifiers, i.e. an office known to have been held but not when. |

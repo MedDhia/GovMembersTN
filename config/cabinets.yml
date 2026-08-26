@@ -30,6 +30,26 @@ meta:
 # Regime eras. Used as a categorical covariate for individual-level analysis
 # and as a natural blocking variable for network comparisons.
 eras:
+  # The harvest reaches back past independence: French Wikipedia documents the
+  # protectorate-era governments (Chenik 1943, Kaak 1950, Baccouche 1952) and
+  # they are linked from the same navigation template. Those rows are OUT OF
+  # THE ANALYSIS FRAME for this dataset, but they are real and useful for
+  # tracing elite continuity into independence, so they get an explicit era
+  # rather than a null one. Filter with `era != "protectorate"` to drop them.
+  # Wikidata's Tunisian "government position" items include historic beylical
+  # offices (grand vizier and the like) held centuries before independence, so
+  # the officeholder harvest reaches back to the 1700s. Those rows are far
+  # outside this dataset's frame, but labelling them beats leaving their era
+  # null and beats deleting real data. Filter with `start_year >= 1956` for the
+  # post-independence frame.
+  - id: beylical
+    label: "Beylical / pre-protectorate"
+    start: "1600-01-01"
+    end: "1881-05-12"
+  - id: protectorate
+    label: "French protectorate"
+    start: "1881-05-12"
+    end: "1954-08-07"
   - id: protectorate_end
     label: "End of the protectorate"
     start: "1954-08-07"

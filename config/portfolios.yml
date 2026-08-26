@@ -35,6 +35,9 @@ ranks:
     aliases:
       - "^(premier ministre|chef du gouvernement|president du conseil)"
       - "^(prime minister|head of government)"
+      # Title of the head of government under the protectorate and the
+      # monarchy, before the office was renamed.
+      - "^grand vizir"
       - "رئيس (الحكومة|الوزراء)"
   - canonical: deputy_head_of_government
     level: 1
@@ -80,8 +83,10 @@ portfolios:
     label_fr: "Chef du gouvernement"
     power_rank: sovereign
     aliases:
-      - "^(premier ministre|chef du gouvernement)$"
-      - "^prime minister$"
+      - "^(premier ministre|chef du gouvernement)\\b"
+      - "^prime minister\\b"
+      - "^(grand vizir|vizir|wazir akbar)\\b"
+      - "^(الوزير الاول|الوزير الاكبر|رئيس الحكومه)"
 
   - canonical: interior
     label_en: "Interior"
@@ -392,6 +397,80 @@ portfolios:
       - "sans portefeuille"
       - "without portfolio"
       - "بدون حقيبة"
+
+# ---------------------------------------------------------------------------
+# OUT OF SCOPE
+# ---------------------------------------------------------------------------
+# Wikidata's set of "Tunisian government positions" is far broader than
+# membership of a government. Discovery strategy (c) in the SPARQL harvester
+# matches any position with `applies to jurisdiction = Tunisia`, which sweeps
+# in parliamentarians, FOREIGN ambassadors accredited TO Tunis, religious
+# offices, mayors and the beys themselves. Left in, they inflate every count,
+# manufacture co-membership ties between people who were never in a cabinet
+# together, and make the portfolio taxonomy look 28% unclassified.
+#
+# Rows matching these patterns are removed from `appointments.csv` and written
+# to `data/interim/excluded_appointments.csv` with the pattern that caught
+# them, so the exclusion is auditable and reversible rather than silent.
+#
+# Note the asymmetry on ambassadors: an ambassador is not a member of a
+# government, whether they are Tunisia's envoy abroad or another state's envoy
+# to Tunis. Both are excluded. The *diplomacy* profession domain in
+# persons.csv still records that background.
+exclude:
+  - id: parliamentarian
+    label: "Member of a legislature"
+    patterns:
+      - "membre de l'?assemblee"
+      - "membre de la chambre"
+      - "depute\\b|deputee\\b"
+      - "member of (the )?(assembly|parliament|chamber)"
+      - "عضو (مجلس|بالمجلس)"
+  - id: assembly_officer
+    label: "Presiding officer of a legislature"
+    patterns:
+      - "president[e]? de l'?assemblee"
+      - "president[e]? de la chambre"
+      - "رئيس (مجلس النواب|المجلس)"
+  - id: diplomat
+    label: "Ambassador or envoy"
+    patterns:
+      - "ambassadeur|ambassadrice|ambassador"
+      - "nonce apostolique|consul general"
+      - "سفير"
+  - id: head_of_state
+    label: "Head of state"
+    patterns:
+      - "president[e]? de la republique"
+      - "^bey de|bey de tunis"
+      - "president of tunisia"
+      - "رئيس الجمهوريه|باي تونس"
+  - id: consort
+    label: "Spouse of a head of state"
+    patterns:
+      - "premiere dame|first lady"
+      - "السيده الاولى"
+  - id: religious_office
+    label: "Religious office"
+    patterns:
+      - "grand[- ]rabbin|mufti|archeveque|eveque|nonce"
+      - "المفتي|الحبر"
+  - id: local_government
+    label: "Municipal or regional office"
+    patterns:
+      - "^maire de|^maire\\b|mayor of"
+      - "^gouverneur de (?!la banque)"
+      - "^والي|^عمده"
+  - id: judiciary
+    label: "Court office"
+    patterns:
+      - "premier president de la cour|procureur general"
+      - "membre du conseil superieur de la magistrature"
+  - id: party_office
+    label: "Party office, not a government post"
+    patterns:
+      - "^(secretaire general|president) du (parti|rassemblement|mouvement)"
+      - "^(حركه النهضه|نداء تونس|مستقلين|الحزب)$"
 
 # Fallback when nothing matches. These rows are written to
 # data/interim/unmatched_titles.csv so the taxonomy can be extended rather than

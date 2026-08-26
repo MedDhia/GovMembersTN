@@ -1,4 +1,1102 @@
 source,target,tie_type,weight,shared_values
+Q100261455,Q19956120,shared_birth_region,1,le kef
+Q100261455,Q980071,shared_birth_region,1,le kef
+Q1043040,Q1363916,shared_birth_region,1,delegation de hammam sousse
+Q1043040,Q204487,shared_birth_region,1,delegation de hammam sousse
+Q1043040,Q3318622,shared_birth_region,1,delegation de hammam sousse
+Q1043040,Q88467296,shared_birth_region,1,delegation de hammam sousse
+Q10514449,Q134414603,shared_birth_region,1,bizerte
+Q10514449,Q22210502,shared_birth_region,1,bizerte
+Q10514449,Q23017371,shared_birth_region,1,bizerte
+Q10514449,Q30729169,shared_birth_region,1,bizerte
+Q10514449,Q3328917,shared_birth_region,1,bizerte
+Q10591389,Q132560774,shared_birth_region,1,delegation de siliana nord
+Q10591389,Q86734094,shared_birth_region,1,delegation de siliana nord
+Q108163613,Q3469530,shared_birth_region,1,delegation de la manouba
+Q108741355,Q111701635,shared_birth_region,1,kairouan
+Q108741355,Q121360095,shared_birth_region,1,kairouan
+Q108741355,Q16180628,shared_birth_region,1,kairouan
+Q108741355,Q16588807,shared_birth_region,1,kairouan
+Q108741355,Q20991574,shared_birth_region,1,kairouan
+Q108741355,Q2388455,shared_birth_region,1,kairouan
+Q108741355,Q27756741,shared_birth_region,1,kairouan
+Q108741355,Q2827482,shared_birth_region,1,kairouan
+Q108741355,Q3196140,shared_birth_region,1,kairouan
+Q108741355,Q3318545,shared_birth_region,1,kairouan
+Q108741355,Q3334747,shared_birth_region,1,kairouan
+Q108741355,Q3357601,shared_birth_region,1,kairouan
+Q108741355,Q3486507,shared_birth_region,1,kairouan
+Q108892344,Q15304780,shared_birth_region,1,delegation de mahdia
+Q108892344,Q16263000,shared_birth_region,1,delegation de mahdia
+Q108892344,Q1951854,shared_birth_region,1,delegation de mahdia
+Q108892344,Q2374730,shared_birth_region,1,delegation de mahdia
+Q108892344,Q26505513,shared_birth_region,1,delegation de mahdia
+Q108892344,Q2821127,shared_birth_region,1,delegation de mahdia
+Q108892344,Q3571955,shared_birth_region,1,delegation de mahdia
+Q108892344,Q60572709,shared_birth_region,1,delegation de mahdia
+Q108892344,Q653162,shared_birth_region,1,delegation de mahdia
+Q108892347,Q108892377,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q16123702,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q30104283,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q3125307,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q3220051,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q108892347,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q108892355,Q3160736,shared_birth_region,1,delegation d'el hamma
+Q108892377,Q16123702,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q30104283,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q3125307,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q3220051,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q108892377,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q109544397,Q12214730,shared_birth_region,1,sfax
+Q109544397,Q12246948,shared_birth_region,1,sfax
+Q109544397,Q132633142,shared_birth_region,1,sfax
+Q109544397,Q136456985,shared_birth_region,1,sfax
+Q109544397,Q16855080,shared_birth_region,1,sfax
+Q109544397,Q16855250,shared_birth_region,1,sfax
+Q109544397,Q18610883,shared_birth_region,1,sfax
+Q109544397,Q19951841,shared_birth_region,1,sfax
+Q109544397,Q20047058,shared_birth_region,1,sfax
+Q109544397,Q24690603,shared_birth_region,1,sfax
+Q109544397,Q27758476,shared_birth_region,1,sfax
+Q109544397,Q2820931,shared_birth_region,1,sfax
+Q109544397,Q2821212,shared_birth_region,1,sfax
+Q109544397,Q2821280,shared_birth_region,1,sfax
+Q109544397,Q28653580,shared_birth_region,1,sfax
+Q109544397,Q3318475,shared_birth_region,1,sfax
+Q109544397,Q3331012,shared_birth_region,1,sfax
+Q109544397,Q3344886,shared_birth_region,1,sfax
+Q109544397,Q3461169,shared_birth_region,1,sfax
+Q109544397,Q3469690,shared_birth_region,1,sfax
+Q109544397,Q3473691,shared_birth_region,1,sfax
+Q109544397,Q3486512,shared_birth_region,1,sfax
+Q109544397,Q3486677,shared_birth_region,1,sfax
+Q109544397,Q3490439,shared_birth_region,1,sfax
+Q109544397,Q42311056,shared_birth_region,1,sfax
+Q109544397,Q43654658,shared_birth_region,1,sfax
+Q109544397,Q744499,shared_birth_region,1,sfax
+Q109544397,Q92316785,shared_birth_region,1,sfax
+Q109544397,Q99539200,shared_birth_region,1,sfax
+Q111701635,Q121360095,shared_birth_region,1,kairouan
+Q111701635,Q16180628,shared_birth_region,1,kairouan
+Q111701635,Q16588807,shared_birth_region,1,kairouan
+Q111701635,Q20991574,shared_birth_region,1,kairouan
+Q111701635,Q2388455,shared_birth_region,1,kairouan
+Q111701635,Q27756741,shared_birth_region,1,kairouan
+Q111701635,Q2827482,shared_birth_region,1,kairouan
+Q111701635,Q3196140,shared_birth_region,1,kairouan
+Q111701635,Q3318545,shared_birth_region,1,kairouan
+Q111701635,Q3334747,shared_birth_region,1,kairouan
+Q111701635,Q3357601,shared_birth_region,1,kairouan
+Q111701635,Q3486507,shared_birth_region,1,kairouan
+Q11775942,Q136257453,shared_birth_region,1,delegation de zarzis
+Q11775942,Q16642407,shared_birth_region,1,delegation de zarzis
+Q11775942,Q19956395,shared_birth_region,1,delegation de zarzis
+Q11775942,Q2827529,shared_birth_region,1,delegation de zarzis
+Q11775942,Q2827554,shared_birth_region,1,delegation de zarzis
+Q11775942,Q3470859,shared_birth_region,1,delegation de zarzis
 Q121088468,Q128723414,shared_education,1,universite de tunis
 Q121088468,Q3125311,shared_education,1,universite de tunis
+Q121360095,Q16180628,shared_birth_region,1,kairouan
+Q121360095,Q16588807,shared_birth_region,1,kairouan
+Q121360095,Q20991574,shared_birth_region,1,kairouan
+Q121360095,Q2388455,shared_birth_region,1,kairouan
+Q121360095,Q27756741,shared_birth_region,1,kairouan
+Q121360095,Q2827482,shared_birth_region,1,kairouan
+Q121360095,Q3196140,shared_birth_region,1,kairouan
+Q121360095,Q3318545,shared_birth_region,1,kairouan
+Q121360095,Q3334747,shared_birth_region,1,kairouan
+Q121360095,Q3357601,shared_birth_region,1,kairouan
+Q121360095,Q3486507,shared_birth_region,1,kairouan
+Q12184481,Q19060301,shared_birth_region,1,delegation du bardo
+Q12184481,Q21511555,shared_birth_region,1,delegation du bardo
+Q12184481,Q2821259,shared_birth_region,1,delegation du bardo
+Q12184481,Q55999324,shared_birth_region,1,delegation du bardo
+Q12184481,Q666665,shared_birth_region,1,delegation du bardo
+Q12194585,Q1642894,shared_birth_region,1,monastir
+Q12194585,Q16679067,shared_birth_region,1,monastir
+Q12194585,Q22211169,shared_birth_region,1,monastir
+Q12194585,Q26834002,shared_birth_region,1,monastir
+Q12194585,Q2947600,shared_birth_region,1,monastir
+Q12194585,Q29580479,shared_birth_region,1,monastir
+Q12194585,Q308017,shared_birth_region,1,monastir
+Q12194585,Q3144591,shared_birth_region,1,monastir
+Q12194585,Q3286574,shared_birth_region,1,monastir
+Q12194585,Q3318797,shared_birth_region,1,monastir
+Q12194585,Q3331032,shared_birth_region,1,monastir
+Q12194585,Q377921,shared_birth_region,1,monastir
+Q12194585,Q643348,shared_birth_region,1,monastir
+Q12214730,Q12246948,shared_birth_region,1,sfax
+Q12214730,Q132633142,shared_birth_region,1,sfax
+Q12214730,Q136456985,shared_birth_region,1,sfax
+Q12214730,Q16855080,shared_birth_region,1,sfax
+Q12214730,Q16855250,shared_birth_region,1,sfax
+Q12214730,Q18610883,shared_birth_region,1,sfax
+Q12214730,Q19951841,shared_birth_region,1,sfax
+Q12214730,Q20047058,shared_birth_region,1,sfax
+Q12214730,Q24690603,shared_birth_region,1,sfax
+Q12214730,Q27758476,shared_birth_region,1,sfax
+Q12214730,Q2820931,shared_birth_region,1,sfax
+Q12214730,Q2821212,shared_birth_region,1,sfax
+Q12214730,Q2821280,shared_birth_region,1,sfax
+Q12214730,Q28653580,shared_birth_region,1,sfax
+Q12214730,Q3318475,shared_birth_region,1,sfax
+Q12214730,Q3331012,shared_birth_region,1,sfax
+Q12214730,Q3344886,shared_birth_region,1,sfax
+Q12214730,Q3461169,shared_birth_region,1,sfax
+Q12214730,Q3469690,shared_birth_region,1,sfax
+Q12214730,Q3473691,shared_birth_region,1,sfax
+Q12214730,Q3486512,shared_birth_region,1,sfax
+Q12214730,Q3486677,shared_birth_region,1,sfax
+Q12214730,Q3490439,shared_birth_region,1,sfax
+Q12214730,Q42311056,shared_birth_region,1,sfax
+Q12214730,Q43654658,shared_birth_region,1,sfax
+Q12214730,Q744499,shared_birth_region,1,sfax
+Q12214730,Q92316785,shared_birth_region,1,sfax
+Q12214730,Q99539200,shared_birth_region,1,sfax
+Q12239816,Q2912277,shared_birth_region,1,delegation de sayada-lamta-bou hajar
+Q12240251,Q1530765,shared_birth_region,1,delegation de m'saken
+Q12240251,Q50285534,shared_birth_region,1,delegation de m'saken
+Q12240636,Q89996191,shared_birth_region,1,delegation de makthar
+Q12246948,Q132633142,shared_birth_region,1,sfax
+Q12246948,Q136456985,shared_birth_region,1,sfax
+Q12246948,Q16855080,shared_birth_region,1,sfax
+Q12246948,Q16855250,shared_birth_region,1,sfax
+Q12246948,Q18610883,shared_birth_region,1,sfax
+Q12246948,Q19951841,shared_birth_region,1,sfax
+Q12246948,Q20047058,shared_birth_region,1,sfax
+Q12246948,Q24690603,shared_birth_region,1,sfax
+Q12246948,Q27758476,shared_birth_region,1,sfax
+Q12246948,Q2820931,shared_birth_region,1,sfax
+Q12246948,Q2821212,shared_birth_region,1,sfax
+Q12246948,Q2821280,shared_birth_region,1,sfax
+Q12246948,Q28653580,shared_birth_region,1,sfax
+Q12246948,Q3318475,shared_birth_region,1,sfax
+Q12246948,Q3331012,shared_birth_region,1,sfax
+Q12246948,Q3344886,shared_birth_region,1,sfax
+Q12246948,Q3461169,shared_birth_region,1,sfax
+Q12246948,Q3469690,shared_birth_region,1,sfax
+Q12246948,Q3473691,shared_birth_region,1,sfax
+Q12246948,Q3486512,shared_birth_region,1,sfax
+Q12246948,Q3486677,shared_birth_region,1,sfax
+Q12246948,Q3490439,shared_birth_region,1,sfax
+Q12246948,Q42311056,shared_birth_region,1,sfax
+Q12246948,Q43654658,shared_birth_region,1,sfax
+Q12246948,Q744499,shared_birth_region,1,sfax
+Q12246948,Q92316785,shared_birth_region,1,sfax
+Q12246948,Q99539200,shared_birth_region,1,sfax
+Q12270270,Q29580435,shared_birth_region,1,delegation de hammam lif
+Q12270270,Q99542892,shared_birth_region,1,delegation de hammam lif
+Q12352837,Q3318731,shared_birth_region,1,delegation de dar chaabane el fehri
+Q12352837,Q3318774,shared_birth_region,1,delegation de dar chaabane el fehri
 Q128723414,Q3125311,shared_education,1,universite de tunis
+Q128723414,Q3144577,shared_birth_region,1,delegation de teboursouk
+Q130344076,Q1381809,shared_birth_region,1,sousse
+Q130344076,Q14182276,shared_birth_region,1,sousse
+Q130344076,Q16321385,shared_birth_region,1,sousse
+Q130344076,Q16666837,shared_birth_region,1,sousse
+Q130344076,Q19544932,shared_birth_region,1,sousse
+Q130344076,Q2821297,shared_birth_region,1,sousse
+Q130344076,Q2827627,shared_birth_region,1,sousse
+Q130344076,Q28465669,shared_birth_region,1,sousse
+Q130344076,Q28502176,shared_birth_region,1,sousse
+Q130344076,Q30118294,shared_birth_region,1,sousse
+Q130344076,Q3125288,shared_birth_region,1,sousse
+Q130344076,Q3125311,shared_birth_region,1,sousse
+Q130344076,Q3431743,shared_birth_region,1,sousse
+Q130344076,Q431515,shared_birth_region,1,sousse
+Q130344076,Q50099224,shared_birth_region,1,sousse
+Q130344076,Q57699,shared_birth_region,1,sousse
+Q132560774,Q86734094,shared_birth_region,1,delegation de siliana nord
+Q132633142,Q136456985,shared_birth_region,1,sfax
+Q132633142,Q16855080,shared_birth_region,1,sfax
+Q132633142,Q16855250,shared_birth_region,1,sfax
+Q132633142,Q18610883,shared_birth_region,1,sfax
+Q132633142,Q19951841,shared_birth_region,1,sfax
+Q132633142,Q20047058,shared_birth_region,1,sfax
+Q132633142,Q24690603,shared_birth_region,1,sfax
+Q132633142,Q27758476,shared_birth_region,1,sfax
+Q132633142,Q2820931,shared_birth_region,1,sfax
+Q132633142,Q2821212,shared_birth_region,1,sfax
+Q132633142,Q2821280,shared_birth_region,1,sfax
+Q132633142,Q28653580,shared_birth_region,1,sfax
+Q132633142,Q3318475,shared_birth_region,1,sfax
+Q132633142,Q3331012,shared_birth_region,1,sfax
+Q132633142,Q3344886,shared_birth_region,1,sfax
+Q132633142,Q3461169,shared_birth_region,1,sfax
+Q132633142,Q3469690,shared_birth_region,1,sfax
+Q132633142,Q3473691,shared_birth_region,1,sfax
+Q132633142,Q3486512,shared_birth_region,1,sfax
+Q132633142,Q3486677,shared_birth_region,1,sfax
+Q132633142,Q3490439,shared_birth_region,1,sfax
+Q132633142,Q42311056,shared_birth_region,1,sfax
+Q132633142,Q43654658,shared_birth_region,1,sfax
+Q132633142,Q744499,shared_birth_region,1,sfax
+Q132633142,Q92316785,shared_birth_region,1,sfax
+Q132633142,Q99539200,shared_birth_region,1,sfax
+Q134414603,Q22210502,shared_birth_region,1,bizerte
+Q134414603,Q23017371,shared_birth_region,1,bizerte
+Q134414603,Q30729169,shared_birth_region,1,bizerte
+Q134414603,Q3328917,shared_birth_region,1,bizerte
+Q136257453,Q16642407,shared_birth_region,1,delegation de zarzis
+Q136257453,Q19956395,shared_birth_region,1,delegation de zarzis
+Q136257453,Q2827529,shared_birth_region,1,delegation de zarzis
+Q136257453,Q2827554,shared_birth_region,1,delegation de zarzis
+Q136257453,Q3470859,shared_birth_region,1,delegation de zarzis
+Q1363916,Q204487,shared_birth_region,1,delegation de hammam sousse
+Q1363916,Q3318622,shared_birth_region,1,delegation de hammam sousse
+Q1363916,Q88467296,shared_birth_region,1,delegation de hammam sousse
+Q136456985,Q16855080,shared_birth_region,1,sfax
+Q136456985,Q16855250,shared_birth_region,1,sfax
+Q136456985,Q18610883,shared_birth_region,1,sfax
+Q136456985,Q19951841,shared_birth_region,1,sfax
+Q136456985,Q20047058,shared_birth_region,1,sfax
+Q136456985,Q24690603,shared_birth_region,1,sfax
+Q136456985,Q27758476,shared_birth_region,1,sfax
+Q136456985,Q2820931,shared_birth_region,1,sfax
+Q136456985,Q2821212,shared_birth_region,1,sfax
+Q136456985,Q2821280,shared_birth_region,1,sfax
+Q136456985,Q28653580,shared_birth_region,1,sfax
+Q136456985,Q3318475,shared_birth_region,1,sfax
+Q136456985,Q3331012,shared_birth_region,1,sfax
+Q136456985,Q3344886,shared_birth_region,1,sfax
+Q136456985,Q3461169,shared_birth_region,1,sfax
+Q136456985,Q3469690,shared_birth_region,1,sfax
+Q136456985,Q3473691,shared_birth_region,1,sfax
+Q136456985,Q3486512,shared_birth_region,1,sfax
+Q136456985,Q3486677,shared_birth_region,1,sfax
+Q136456985,Q3490439,shared_birth_region,1,sfax
+Q136456985,Q42311056,shared_birth_region,1,sfax
+Q136456985,Q43654658,shared_birth_region,1,sfax
+Q136456985,Q744499,shared_birth_region,1,sfax
+Q136456985,Q92316785,shared_birth_region,1,sfax
+Q136456985,Q99539200,shared_birth_region,1,sfax
+Q1381809,Q14182276,shared_birth_region,1,sousse
+Q1381809,Q16321385,shared_birth_region,1,sousse
+Q1381809,Q16666837,shared_birth_region,1,sousse
+Q1381809,Q19544932,shared_birth_region,1,sousse
+Q1381809,Q2821297,shared_birth_region,1,sousse
+Q1381809,Q2827627,shared_birth_region,1,sousse
+Q1381809,Q28465669,shared_birth_region,1,sousse
+Q1381809,Q28502176,shared_birth_region,1,sousse
+Q1381809,Q30118294,shared_birth_region,1,sousse
+Q1381809,Q3125288,shared_birth_region,1,sousse
+Q1381809,Q3125311,shared_birth_region,1,sousse
+Q1381809,Q3431743,shared_birth_region,1,sousse
+Q1381809,Q431515,shared_birth_region,1,sousse
+Q1381809,Q50099224,shared_birth_region,1,sousse
+Q1381809,Q57699,shared_birth_region,1,sousse
+Q139583145,Q3128202,shared_birth_region,1,delegation de ras jebel
+Q139583145,Q60573013,shared_birth_region,1,delegation de ras jebel
+Q14182276,Q16321385,shared_birth_region,1,sousse
+Q14182276,Q16666837,shared_birth_region,1,sousse
+Q14182276,Q19544932,shared_birth_region,1,sousse
+Q14182276,Q2821297,shared_birth_region,1,sousse
+Q14182276,Q2827627,shared_birth_region,1,sousse
+Q14182276,Q28465669,shared_birth_region,1,sousse
+Q14182276,Q28502176,shared_birth_region,1,sousse
+Q14182276,Q30118294,shared_birth_region,1,sousse
+Q14182276,Q3125288,shared_birth_region,1,sousse
+Q14182276,Q3125311,shared_birth_region,1,sousse
+Q14182276,Q3431743,shared_birth_region,1,sousse
+Q14182276,Q431515,shared_birth_region,1,sousse
+Q14182276,Q50099224,shared_birth_region,1,sousse
+Q14182276,Q57699,shared_birth_region,1,sousse
+Q152369,Q15829893,shared_birth_region,1,delegation de sidi bouzid ouest
+Q152369,Q2929698,shared_birth_region,1,delegation de sidi bouzid ouest
+Q152369,Q29580351,shared_birth_region,1,delegation de sidi bouzid ouest
+Q152369,Q55392087,shared_birth_region,1,delegation de sidi bouzid ouest
+Q15304780,Q16263000,shared_birth_region,1,delegation de mahdia
+Q15304780,Q1951854,shared_birth_region,1,delegation de mahdia
+Q15304780,Q2374730,shared_birth_region,1,delegation de mahdia
+Q15304780,Q26505513,shared_birth_region,1,delegation de mahdia
+Q15304780,Q2821127,shared_birth_region,1,delegation de mahdia
+Q15304780,Q3571955,shared_birth_region,1,delegation de mahdia
+Q15304780,Q60572709,shared_birth_region,1,delegation de mahdia
+Q15304780,Q653162,shared_birth_region,1,delegation de mahdia
+Q1530765,Q50285534,shared_birth_region,1,delegation de m'saken
+Q15829893,Q2929698,shared_birth_region,1,delegation de sidi bouzid ouest
+Q15829893,Q29580351,shared_birth_region,1,delegation de sidi bouzid ouest
+Q15829893,Q55392087,shared_birth_region,1,delegation de sidi bouzid ouest
+Q16027763,Q282026,shared_birth_region,1,delegation de moknine
+Q16027763,Q2827512,shared_birth_region,1,delegation de moknine
+Q16027809,Q19543880,shared_birth_region,1,gabes
+Q16027809,Q2972023,shared_birth_region,1,gabes
+Q16027809,Q3216753,shared_birth_region,1,gabes
+Q16027809,Q3318356,shared_birth_region,1,gabes
+Q16027809,Q3431745,shared_birth_region,1,gabes
+Q16027809,Q54875069,shared_birth_region,1,gabes
+Q16123702,Q30104283,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q3125307,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q3220051,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q16123702,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q16180628,Q16588807,shared_birth_region,1,kairouan
+Q16180628,Q20991574,shared_birth_region,1,kairouan
+Q16180628,Q2388455,shared_birth_region,1,kairouan
+Q16180628,Q27756741,shared_birth_region,1,kairouan
+Q16180628,Q2827482,shared_birth_region,1,kairouan
+Q16180628,Q3196140,shared_birth_region,1,kairouan
+Q16180628,Q3318545,shared_birth_region,1,kairouan
+Q16180628,Q3334747,shared_birth_region,1,kairouan
+Q16180628,Q3357601,shared_birth_region,1,kairouan
+Q16180628,Q3486507,shared_birth_region,1,kairouan
+Q16262805,Q2821154,shared_birth_region,1,delegation d'el ksour
+Q16263000,Q1951854,shared_birth_region,1,delegation de mahdia
+Q16263000,Q2374730,shared_birth_region,1,delegation de mahdia
+Q16263000,Q26505513,shared_birth_region,1,delegation de mahdia
+Q16263000,Q2821127,shared_birth_region,1,delegation de mahdia
+Q16263000,Q3571955,shared_birth_region,1,delegation de mahdia
+Q16263000,Q60572709,shared_birth_region,1,delegation de mahdia
+Q16263000,Q653162,shared_birth_region,1,delegation de mahdia
+Q16267906,Q19956346,shared_birth_region,1,delegation de monastir
+Q16269694,Q19060293,shared_birth_region,1,delegation de jemmal
+Q16269694,Q3125835,shared_birth_region,1,delegation de jemmal
+Q16269694,Q3318702,shared_birth_region,1,delegation de jemmal
+Q16269694,Q3347261,shared_birth_region,1,delegation de jemmal
+Q16269694,Q98828346,shared_birth_region,1,delegation de jemmal
+Q16321385,Q16666837,shared_birth_region,1,sousse
+Q16321385,Q19544932,shared_birth_region,1,sousse
+Q16321385,Q2821297,shared_birth_region,1,sousse
+Q16321385,Q2827627,shared_birth_region,1,sousse
+Q16321385,Q28465669,shared_birth_region,1,sousse
+Q16321385,Q28502176,shared_birth_region,1,sousse
+Q16321385,Q30118294,shared_birth_region,1,sousse
+Q16321385,Q3125288,shared_birth_region,1,sousse
+Q16321385,Q3125311,shared_birth_region,1,sousse
+Q16321385,Q3431743,shared_birth_region,1,sousse
+Q16321385,Q431515,shared_birth_region,1,sousse
+Q16321385,Q50099224,shared_birth_region,1,sousse
+Q16321385,Q57699,shared_birth_region,1,sousse
+Q1642894,Q16679067,shared_birth_region,1,monastir
+Q1642894,Q22211169,shared_birth_region,1,monastir
+Q1642894,Q26834002,shared_birth_region,1,monastir
+Q1642894,Q2947600,shared_birth_region,1,monastir
+Q1642894,Q29580479,shared_birth_region,1,monastir
+Q1642894,Q308017,shared_birth_region,1,monastir
+Q1642894,Q3144591,shared_birth_region,1,monastir
+Q1642894,Q3286574,shared_birth_region,1,monastir
+Q1642894,Q3318797,shared_birth_region,1,monastir
+Q1642894,Q3331032,shared_birth_region,1,monastir
+Q1642894,Q377921,shared_birth_region,1,monastir
+Q1642894,Q643348,shared_birth_region,1,monastir
+Q16588807,Q20991574,shared_birth_region,1,kairouan
+Q16588807,Q2388455,shared_birth_region,1,kairouan
+Q16588807,Q27756741,shared_birth_region,1,kairouan
+Q16588807,Q2827482,shared_birth_region,1,kairouan
+Q16588807,Q3196140,shared_birth_region,1,kairouan
+Q16588807,Q3318545,shared_birth_region,1,kairouan
+Q16588807,Q3334747,shared_birth_region,1,kairouan
+Q16588807,Q3357601,shared_birth_region,1,kairouan
+Q16588807,Q3486507,shared_birth_region,1,kairouan
+Q16642407,Q19956395,shared_birth_region,1,delegation de zarzis
+Q16642407,Q2827529,shared_birth_region,1,delegation de zarzis
+Q16642407,Q2827554,shared_birth_region,1,delegation de zarzis
+Q16642407,Q3470859,shared_birth_region,1,delegation de zarzis
+Q16664915,Q3320644,shared_birth_region,1,delegation de kelibia
+Q16664925,Q16855223,shared_birth_region,1,delegation de ben gardane
+Q16664925,Q2827587,shared_birth_region,1,delegation de ben gardane
+Q16665400,Q19848008,shared_birth_region,1,tunisie
+Q16666837,Q19544932,shared_birth_region,1,sousse
+Q16666837,Q2821297,shared_birth_region,1,sousse
+Q16666837,Q2827627,shared_birth_region,1,sousse
+Q16666837,Q28465669,shared_birth_region,1,sousse
+Q16666837,Q28502176,shared_birth_region,1,sousse
+Q16666837,Q30118294,shared_birth_region,1,sousse
+Q16666837,Q3125288,shared_birth_region,1,sousse
+Q16666837,Q3125311,shared_birth_region,1,sousse
+Q16666837,Q3431743,shared_birth_region,1,sousse
+Q16666837,Q431515,shared_birth_region,1,sousse
+Q16666837,Q50099224,shared_birth_region,1,sousse
+Q16666837,Q57699,shared_birth_region,1,sousse
+Q16679067,Q22211169,shared_birth_region,1,monastir
+Q16679067,Q26834002,shared_birth_region,1,monastir
+Q16679067,Q2947600,shared_birth_region,1,monastir
+Q16679067,Q29580479,shared_birth_region,1,monastir
+Q16679067,Q308017,shared_birth_region,1,monastir
+Q16679067,Q3144591,shared_birth_region,1,monastir
+Q16679067,Q3286574,shared_birth_region,1,monastir
+Q16679067,Q3318797,shared_birth_region,1,monastir
+Q16679067,Q3331032,shared_birth_region,1,monastir
+Q16679067,Q377921,shared_birth_region,1,monastir
+Q16679067,Q643348,shared_birth_region,1,monastir
+Q16802173,Q29577522,shared_birth_region,1,delegation de tozeur
+Q16802173,Q30728289,shared_birth_region,1,delegation de tozeur
+Q16802173,Q517946,shared_birth_region,1,delegation de tozeur
+Q16855080,Q16855250,shared_birth_region,1,sfax
+Q16855080,Q18610883,shared_birth_region,1,sfax
+Q16855080,Q19951841,shared_birth_region,1,sfax
+Q16855080,Q20047058,shared_birth_region,1,sfax
+Q16855080,Q24690603,shared_birth_region,1,sfax
+Q16855080,Q27758476,shared_birth_region,1,sfax
+Q16855080,Q2820931,shared_birth_region,1,sfax
+Q16855080,Q2821212,shared_birth_region,1,sfax
+Q16855080,Q2821280,shared_birth_region,1,sfax
+Q16855080,Q28653580,shared_birth_region,1,sfax
+Q16855080,Q3318475,shared_birth_region,1,sfax
+Q16855080,Q3331012,shared_birth_region,1,sfax
+Q16855080,Q3344886,shared_birth_region,1,sfax
+Q16855080,Q3461169,shared_birth_region,1,sfax
+Q16855080,Q3469690,shared_birth_region,1,sfax
+Q16855080,Q3473691,shared_birth_region,1,sfax
+Q16855080,Q3486512,shared_birth_region,1,sfax
+Q16855080,Q3486677,shared_birth_region,1,sfax
+Q16855080,Q3490439,shared_birth_region,1,sfax
+Q16855080,Q42311056,shared_birth_region,1,sfax
+Q16855080,Q43654658,shared_birth_region,1,sfax
+Q16855080,Q744499,shared_birth_region,1,sfax
+Q16855080,Q92316785,shared_birth_region,1,sfax
+Q16855080,Q99539200,shared_birth_region,1,sfax
+Q16855223,Q2827587,shared_birth_region,1,delegation de ben gardane
+Q16855250,Q18610883,shared_birth_region,1,sfax
+Q16855250,Q19951841,shared_birth_region,1,sfax
+Q16855250,Q20047058,shared_birth_region,1,sfax
+Q16855250,Q24690603,shared_birth_region,1,sfax
+Q16855250,Q27758476,shared_birth_region,1,sfax
+Q16855250,Q2820931,shared_birth_region,1,sfax
+Q16855250,Q2821212,shared_birth_region,1,sfax
+Q16855250,Q2821280,shared_birth_region,1,sfax
+Q16855250,Q28653580,shared_birth_region,1,sfax
+Q16855250,Q3318475,shared_birth_region,1,sfax
+Q16855250,Q3331012,shared_birth_region,1,sfax
+Q16855250,Q3344886,shared_birth_region,1,sfax
+Q16855250,Q3461169,shared_birth_region,1,sfax
+Q16855250,Q3469690,shared_birth_region,1,sfax
+Q16855250,Q3473691,shared_birth_region,1,sfax
+Q16855250,Q3486512,shared_birth_region,1,sfax
+Q16855250,Q3486677,shared_birth_region,1,sfax
+Q16855250,Q3490439,shared_birth_region,1,sfax
+Q16855250,Q42311056,shared_birth_region,1,sfax
+Q16855250,Q43654658,shared_birth_region,1,sfax
+Q16855250,Q744499,shared_birth_region,1,sfax
+Q16855250,Q92316785,shared_birth_region,1,sfax
+Q16855250,Q99539200,shared_birth_region,1,sfax
+Q17425841,Q30728498,shared_birth_region,1,delegation de beja nord
+Q17425841,Q3417419,shared_birth_region,1,delegation de beja nord
+Q17425841,Q62601798,shared_birth_region,1,delegation de beja nord
+Q18610883,Q19951841,shared_birth_region,1,sfax
+Q18610883,Q20047058,shared_birth_region,1,sfax
+Q18610883,Q24690603,shared_birth_region,1,sfax
+Q18610883,Q27758476,shared_birth_region,1,sfax
+Q18610883,Q2820931,shared_birth_region,1,sfax
+Q18610883,Q2821212,shared_birth_region,1,sfax
+Q18610883,Q2821280,shared_birth_region,1,sfax
+Q18610883,Q28653580,shared_birth_region,1,sfax
+Q18610883,Q3318475,shared_birth_region,1,sfax
+Q18610883,Q3331012,shared_birth_region,1,sfax
+Q18610883,Q3344886,shared_birth_region,1,sfax
+Q18610883,Q3461169,shared_birth_region,1,sfax
+Q18610883,Q3469690,shared_birth_region,1,sfax
+Q18610883,Q3473691,shared_birth_region,1,sfax
+Q18610883,Q3486512,shared_birth_region,1,sfax
+Q18610883,Q3486677,shared_birth_region,1,sfax
+Q18610883,Q3490439,shared_birth_region,1,sfax
+Q18610883,Q42311056,shared_birth_region,1,sfax
+Q18610883,Q43654658,shared_birth_region,1,sfax
+Q18610883,Q744499,shared_birth_region,1,sfax
+Q18610883,Q92316785,shared_birth_region,1,sfax
+Q18610883,Q99539200,shared_birth_region,1,sfax
+Q19060293,Q3125835,shared_birth_region,1,delegation de jemmal
+Q19060293,Q3318702,shared_birth_region,1,delegation de jemmal
+Q19060293,Q3347261,shared_birth_region,1,delegation de jemmal
+Q19060293,Q98828346,shared_birth_region,1,delegation de jemmal
+Q19060301,Q21511555,shared_birth_region,1,delegation du bardo
+Q19060301,Q2821259,shared_birth_region,1,delegation du bardo
+Q19060301,Q55999324,shared_birth_region,1,delegation du bardo
+Q19060301,Q666665,shared_birth_region,1,delegation du bardo
+Q19060320,Q20643083,shared_birth_region,1,jendouba
+Q19060320,Q3160876,shared_birth_region,1,jendouba
+Q19060346,Q20417790,shared_birth_region,1,medenine
+Q19060346,Q281184,shared_birth_region,1,medenine
+Q19060346,Q30729047,shared_birth_region,1,medenine
+Q19060346,Q3461164,shared_birth_region,1,medenine
+Q19060346,Q3469772,shared_birth_region,1,medenine
+Q19060346,Q54875067,shared_birth_region,1,medenine
+Q19060346,Q61598250,shared_birth_region,1,medenine
+Q1951854,Q2374730,shared_birth_region,1,delegation de mahdia
+Q1951854,Q26505513,shared_birth_region,1,delegation de mahdia
+Q1951854,Q2821127,shared_birth_region,1,delegation de mahdia
+Q1951854,Q3571955,shared_birth_region,1,delegation de mahdia
+Q1951854,Q60572709,shared_birth_region,1,delegation de mahdia
+Q1951854,Q653162,shared_birth_region,1,delegation de mahdia
+Q19543880,Q2972023,shared_birth_region,1,gabes
+Q19543880,Q3216753,shared_birth_region,1,gabes
+Q19543880,Q3318356,shared_birth_region,1,gabes
+Q19543880,Q3431745,shared_birth_region,1,gabes
+Q19543880,Q54875069,shared_birth_region,1,gabes
+Q19544932,Q2821297,shared_birth_region,1,sousse
+Q19544932,Q2827627,shared_birth_region,1,sousse
+Q19544932,Q28465669,shared_birth_region,1,sousse
+Q19544932,Q28502176,shared_birth_region,1,sousse
+Q19544932,Q30118294,shared_birth_region,1,sousse
+Q19544932,Q3125288,shared_birth_region,1,sousse
+Q19544932,Q3125311,shared_birth_region,1,sousse
+Q19544932,Q3431743,shared_birth_region,1,sousse
+Q19544932,Q431515,shared_birth_region,1,sousse
+Q19544932,Q50099224,shared_birth_region,1,sousse
+Q19544932,Q57699,shared_birth_region,1,sousse
+Q19629356,Q26710667,shared_birth_region,1,delegation de metouia
+Q19951841,Q20047058,shared_birth_region,1,sfax
+Q19951841,Q24690603,shared_birth_region,1,sfax
+Q19951841,Q27758476,shared_birth_region,1,sfax
+Q19951841,Q2820931,shared_birth_region,1,sfax
+Q19951841,Q2821212,shared_birth_region,1,sfax
+Q19951841,Q2821280,shared_birth_region,1,sfax
+Q19951841,Q28653580,shared_birth_region,1,sfax
+Q19951841,Q3318475,shared_birth_region,1,sfax
+Q19951841,Q3331012,shared_birth_region,1,sfax
+Q19951841,Q3344886,shared_birth_region,1,sfax
+Q19951841,Q3461169,shared_birth_region,1,sfax
+Q19951841,Q3469690,shared_birth_region,1,sfax
+Q19951841,Q3473691,shared_birth_region,1,sfax
+Q19951841,Q3486512,shared_birth_region,1,sfax
+Q19951841,Q3486677,shared_birth_region,1,sfax
+Q19951841,Q3490439,shared_birth_region,1,sfax
+Q19951841,Q42311056,shared_birth_region,1,sfax
+Q19951841,Q43654658,shared_birth_region,1,sfax
+Q19951841,Q744499,shared_birth_region,1,sfax
+Q19951841,Q92316785,shared_birth_region,1,sfax
+Q19951841,Q99539200,shared_birth_region,1,sfax
+Q19956120,Q980071,shared_birth_region,1,le kef
+Q19956395,Q2827529,shared_birth_region,1,delegation de zarzis
+Q19956395,Q2827554,shared_birth_region,1,delegation de zarzis
+Q19956395,Q3470859,shared_birth_region,1,delegation de zarzis
+Q20047058,Q24690603,shared_birth_region,1,sfax
+Q20047058,Q27758476,shared_birth_region,1,sfax
+Q20047058,Q2820931,shared_birth_region,1,sfax
+Q20047058,Q2821212,shared_birth_region,1,sfax
+Q20047058,Q2821280,shared_birth_region,1,sfax
+Q20047058,Q28653580,shared_birth_region,1,sfax
+Q20047058,Q3318475,shared_birth_region,1,sfax
+Q20047058,Q3331012,shared_birth_region,1,sfax
+Q20047058,Q3344886,shared_birth_region,1,sfax
+Q20047058,Q3461169,shared_birth_region,1,sfax
+Q20047058,Q3469690,shared_birth_region,1,sfax
+Q20047058,Q3473691,shared_birth_region,1,sfax
+Q20047058,Q3486512,shared_birth_region,1,sfax
+Q20047058,Q3486677,shared_birth_region,1,sfax
+Q20047058,Q3490439,shared_birth_region,1,sfax
+Q20047058,Q42311056,shared_birth_region,1,sfax
+Q20047058,Q43654658,shared_birth_region,1,sfax
+Q20047058,Q744499,shared_birth_region,1,sfax
+Q20047058,Q92316785,shared_birth_region,1,sfax
+Q20047058,Q99539200,shared_birth_region,1,sfax
+Q20412385,Q3141381,shared_birth_region,1,delegation de ksar hellal
+Q20412385,Q3320650,shared_birth_region,1,delegation de ksar hellal
+Q20412385,Q48757077,shared_birth_region,1,delegation de ksar hellal
+Q20417790,Q281184,shared_birth_region,1,medenine
+Q20417790,Q30729047,shared_birth_region,1,medenine
+Q20417790,Q3461164,shared_birth_region,1,medenine
+Q20417790,Q3469772,shared_birth_region,1,medenine
+Q20417790,Q54875067,shared_birth_region,1,medenine
+Q20417790,Q61598250,shared_birth_region,1,medenine
+Q204487,Q3318622,shared_birth_region,1,delegation de hammam sousse
+Q204487,Q88467296,shared_birth_region,1,delegation de hammam sousse
+Q20643083,Q3160876,shared_birth_region,1,jendouba
+Q20991574,Q2388455,shared_birth_region,1,kairouan
+Q20991574,Q27756741,shared_birth_region,1,kairouan
+Q20991574,Q2827482,shared_birth_region,1,kairouan
+Q20991574,Q3196140,shared_birth_region,1,kairouan
+Q20991574,Q3318545,shared_birth_region,1,kairouan
+Q20991574,Q3334747,shared_birth_region,1,kairouan
+Q20991574,Q3357601,shared_birth_region,1,kairouan
+Q20991574,Q3486507,shared_birth_region,1,kairouan
+Q21511555,Q2821259,shared_birth_region,1,delegation du bardo
+Q21511555,Q55999324,shared_birth_region,1,delegation du bardo
+Q21511555,Q666665,shared_birth_region,1,delegation du bardo
+Q21996842,Q28654181,shared_birth_region,1,nabeul
+Q21996842,Q29440996,shared_birth_region,1,nabeul
+Q21996842,Q3012366,shared_birth_region,1,nabeul
+Q21996842,Q3079840,shared_birth_region,1,nabeul
+Q21996842,Q3318311,shared_birth_region,1,nabeul
+Q21996842,Q3318800,shared_birth_region,1,nabeul
+Q21996842,Q54875074,shared_birth_region,1,nabeul
+Q21996842,Q92332624,shared_birth_region,1,nabeul
+Q22210502,Q23017371,shared_birth_region,1,bizerte
+Q22210502,Q30729169,shared_birth_region,1,bizerte
+Q22210502,Q3328917,shared_birth_region,1,bizerte
+Q22211169,Q26834002,shared_birth_region,1,monastir
+Q22211169,Q2947600,shared_birth_region,1,monastir
+Q22211169,Q29580479,shared_birth_region,1,monastir
+Q22211169,Q308017,shared_birth_region,1,monastir
+Q22211169,Q3144591,shared_birth_region,1,monastir
+Q22211169,Q3286574,shared_birth_region,1,monastir
+Q22211169,Q3318797,shared_birth_region,1,monastir
+Q22211169,Q3331032,shared_birth_region,1,monastir
+Q22211169,Q377921,shared_birth_region,1,monastir
+Q22211169,Q643348,shared_birth_region,1,monastir
+Q22344522,Q2821146,shared_birth_region,1,delegation de korba
+Q22344522,Q496165,shared_birth_region,1,delegation de korba
+Q23017371,Q30729169,shared_birth_region,1,bizerte
+Q23017371,Q3328917,shared_birth_region,1,bizerte
+Q2374730,Q26505513,shared_birth_region,1,delegation de mahdia
+Q2374730,Q2821127,shared_birth_region,1,delegation de mahdia
+Q2374730,Q3571955,shared_birth_region,1,delegation de mahdia
+Q2374730,Q60572709,shared_birth_region,1,delegation de mahdia
+Q2374730,Q653162,shared_birth_region,1,delegation de mahdia
+Q2388455,Q27756741,shared_birth_region,1,kairouan
+Q2388455,Q2827482,shared_birth_region,1,kairouan
+Q2388455,Q3196140,shared_birth_region,1,kairouan
+Q2388455,Q3318545,shared_birth_region,1,kairouan
+Q2388455,Q3334747,shared_birth_region,1,kairouan
+Q2388455,Q3357601,shared_birth_region,1,kairouan
+Q2388455,Q3486507,shared_birth_region,1,kairouan
+Q24690603,Q27758476,shared_birth_region,1,sfax
+Q24690603,Q2820931,shared_birth_region,1,sfax
+Q24690603,Q2821212,shared_birth_region,1,sfax
+Q24690603,Q2821280,shared_birth_region,1,sfax
+Q24690603,Q28653580,shared_birth_region,1,sfax
+Q24690603,Q3318475,shared_birth_region,1,sfax
+Q24690603,Q3331012,shared_birth_region,1,sfax
+Q24690603,Q3344886,shared_birth_region,1,sfax
+Q24690603,Q3461169,shared_birth_region,1,sfax
+Q24690603,Q3469690,shared_birth_region,1,sfax
+Q24690603,Q3473691,shared_birth_region,1,sfax
+Q24690603,Q3486512,shared_birth_region,1,sfax
+Q24690603,Q3486677,shared_birth_region,1,sfax
+Q24690603,Q3490439,shared_birth_region,1,sfax
+Q24690603,Q42311056,shared_birth_region,1,sfax
+Q24690603,Q43654658,shared_birth_region,1,sfax
+Q24690603,Q744499,shared_birth_region,1,sfax
+Q24690603,Q92316785,shared_birth_region,1,sfax
+Q24690603,Q99539200,shared_birth_region,1,sfax
+Q26505513,Q2821127,shared_birth_region,1,delegation de mahdia
+Q26505513,Q3571955,shared_birth_region,1,delegation de mahdia
+Q26505513,Q60572709,shared_birth_region,1,delegation de mahdia
+Q26505513,Q653162,shared_birth_region,1,delegation de mahdia
+Q2655671,Q2821308,shared_birth_region,1,delegation d'akouda
+Q26834002,Q2947600,shared_birth_region,1,monastir
+Q26834002,Q29580479,shared_birth_region,1,monastir
+Q26834002,Q308017,shared_birth_region,1,monastir
+Q26834002,Q3144591,shared_birth_region,1,monastir
+Q26834002,Q3286574,shared_birth_region,1,monastir
+Q26834002,Q3318797,shared_birth_region,1,monastir
+Q26834002,Q3331032,shared_birth_region,1,monastir
+Q26834002,Q377921,shared_birth_region,1,monastir
+Q26834002,Q643348,shared_birth_region,1,monastir
+Q27756741,Q2827482,shared_birth_region,1,kairouan
+Q27756741,Q3196140,shared_birth_region,1,kairouan
+Q27756741,Q3318545,shared_birth_region,1,kairouan
+Q27756741,Q3334747,shared_birth_region,1,kairouan
+Q27756741,Q3357601,shared_birth_region,1,kairouan
+Q27756741,Q3486507,shared_birth_region,1,kairouan
+Q27758476,Q2820931,shared_birth_region,1,sfax
+Q27758476,Q2821212,shared_birth_region,1,sfax
+Q27758476,Q2821280,shared_birth_region,1,sfax
+Q27758476,Q28653580,shared_birth_region,1,sfax
+Q27758476,Q3318475,shared_birth_region,1,sfax
+Q27758476,Q3331012,shared_birth_region,1,sfax
+Q27758476,Q3344886,shared_birth_region,1,sfax
+Q27758476,Q3461169,shared_birth_region,1,sfax
+Q27758476,Q3469690,shared_birth_region,1,sfax
+Q27758476,Q3473691,shared_birth_region,1,sfax
+Q27758476,Q3486512,shared_birth_region,1,sfax
+Q27758476,Q3486677,shared_birth_region,1,sfax
+Q27758476,Q3490439,shared_birth_region,1,sfax
+Q27758476,Q42311056,shared_birth_region,1,sfax
+Q27758476,Q43654658,shared_birth_region,1,sfax
+Q27758476,Q744499,shared_birth_region,1,sfax
+Q27758476,Q92316785,shared_birth_region,1,sfax
+Q27758476,Q99539200,shared_birth_region,1,sfax
+Q28018980,Q2821119,shared_birth_region,1,delegation de la marsa
+Q28018980,Q2827624,shared_birth_region,1,delegation de la marsa
+Q28018980,Q3318509,shared_birth_region,1,delegation de la marsa
+Q28018980,Q54875178,shared_birth_region,1,delegation de la marsa
+Q28018980,Q60573008,shared_birth_region,1,delegation de la marsa
+Q281184,Q30729047,shared_birth_region,1,medenine
+Q281184,Q3461164,shared_birth_region,1,medenine
+Q281184,Q3469772,shared_birth_region,1,medenine
+Q281184,Q54875067,shared_birth_region,1,medenine
+Q281184,Q61598250,shared_birth_region,1,medenine
+Q282026,Q2827512,shared_birth_region,1,delegation de moknine
+Q2820931,Q2821212,shared_birth_region,1,sfax
+Q2820931,Q2821280,shared_birth_region,1,sfax
+Q2820931,Q28653580,shared_birth_region,1,sfax
+Q2820931,Q3318475,shared_birth_region,1,sfax
+Q2820931,Q3331012,shared_birth_region,1,sfax
+Q2820931,Q3344886,shared_birth_region,1,sfax
+Q2820931,Q3461169,shared_birth_region,1,sfax
+Q2820931,Q3469690,shared_birth_region,1,sfax
+Q2820931,Q3473691,shared_birth_region,1,sfax
+Q2820931,Q3486512,shared_birth_region,1,sfax
+Q2820931,Q3486677,shared_birth_region,1,sfax
+Q2820931,Q3490439,shared_birth_region,1,sfax
+Q2820931,Q42311056,shared_birth_region,1,sfax
+Q2820931,Q43654658,shared_birth_region,1,sfax
+Q2820931,Q744499,shared_birth_region,1,sfax
+Q2820931,Q92316785,shared_birth_region,1,sfax
+Q2820931,Q99539200,shared_birth_region,1,sfax
+Q2821055,Q2929705,shared_birth_region,1,delegation de ksibet el-mediouni
+Q2821119,Q2827624,shared_birth_region,1,delegation de la marsa
+Q2821119,Q3318509,shared_birth_region,1,delegation de la marsa
+Q2821119,Q54875178,shared_birth_region,1,delegation de la marsa
+Q2821119,Q60573008,shared_birth_region,1,delegation de la marsa
+Q2821127,Q3571955,shared_birth_region,1,delegation de mahdia
+Q2821127,Q60572709,shared_birth_region,1,delegation de mahdia
+Q2821127,Q653162,shared_birth_region,1,delegation de mahdia
+Q2821146,Q496165,shared_birth_region,1,delegation de korba
+Q2821212,Q2821280,shared_birth_region,1,sfax
+Q2821212,Q28653580,shared_birth_region,1,sfax
+Q2821212,Q3318475,shared_birth_region,1,sfax
+Q2821212,Q3331012,shared_birth_region,1,sfax
+Q2821212,Q3344886,shared_birth_region,1,sfax
+Q2821212,Q3461169,shared_birth_region,1,sfax
+Q2821212,Q3469690,shared_birth_region,1,sfax
+Q2821212,Q3473691,shared_birth_region,1,sfax
+Q2821212,Q3486512,shared_birth_region,1,sfax
+Q2821212,Q3486677,shared_birth_region,1,sfax
+Q2821212,Q3490439,shared_birth_region,1,sfax
+Q2821212,Q42311056,shared_birth_region,1,sfax
+Q2821212,Q43654658,shared_birth_region,1,sfax
+Q2821212,Q744499,shared_birth_region,1,sfax
+Q2821212,Q92316785,shared_birth_region,1,sfax
+Q2821212,Q99539200,shared_birth_region,1,sfax
+Q2821259,Q55999324,shared_birth_region,1,delegation du bardo
+Q2821259,Q666665,shared_birth_region,1,delegation du bardo
+Q2821280,Q28653580,shared_birth_region,1,sfax
+Q2821280,Q3318475,shared_birth_region,1,sfax
+Q2821280,Q3331012,shared_birth_region,1,sfax
+Q2821280,Q3344886,shared_birth_region,1,sfax
+Q2821280,Q3461169,shared_birth_region,1,sfax
+Q2821280,Q3469690,shared_birth_region,1,sfax
+Q2821280,Q3473691,shared_birth_region,1,sfax
+Q2821280,Q3486512,shared_birth_region,1,sfax
+Q2821280,Q3486677,shared_birth_region,1,sfax
+Q2821280,Q3490439,shared_birth_region,1,sfax
+Q2821280,Q42311056,shared_birth_region,1,sfax
+Q2821280,Q43654658,shared_birth_region,1,sfax
+Q2821280,Q744499,shared_birth_region,1,sfax
+Q2821280,Q92316785,shared_birth_region,1,sfax
+Q2821280,Q99539200,shared_birth_region,1,sfax
+Q2821297,Q2827627,shared_birth_region,1,sousse
+Q2821297,Q28465669,shared_birth_region,1,sousse
+Q2821297,Q28502176,shared_birth_region,1,sousse
+Q2821297,Q30118294,shared_birth_region,1,sousse
+Q2821297,Q3125288,shared_birth_region,1,sousse
+Q2821297,Q3125311,shared_birth_region,1,sousse
+Q2821297,Q3431743,shared_birth_region,1,sousse
+Q2821297,Q431515,shared_birth_region,1,sousse
+Q2821297,Q50099224,shared_birth_region,1,sousse
+Q2821297,Q57699,shared_birth_region,1,sousse
+Q2827482,Q3196140,shared_birth_region,1,kairouan
+Q2827482,Q3318545,shared_birth_region,1,kairouan
+Q2827482,Q3334747,shared_birth_region,1,kairouan
+Q2827482,Q3357601,shared_birth_region,1,kairouan
+Q2827482,Q3486507,shared_birth_region,1,kairouan
+Q2827529,Q2827554,shared_birth_region,1,delegation de zarzis
+Q2827529,Q3470859,shared_birth_region,1,delegation de zarzis
+Q2827554,Q3470859,shared_birth_region,1,delegation de zarzis
+Q2827624,Q3318509,shared_birth_region,1,delegation de la marsa
+Q2827624,Q54875178,shared_birth_region,1,delegation de la marsa
+Q2827624,Q60573008,shared_birth_region,1,delegation de la marsa
+Q2827627,Q28465669,shared_birth_region,1,sousse
+Q2827627,Q28502176,shared_birth_region,1,sousse
+Q2827627,Q30118294,shared_birth_region,1,sousse
+Q2827627,Q3125288,shared_birth_region,1,sousse
+Q2827627,Q3125311,shared_birth_region,1,sousse
+Q2827627,Q3431743,shared_birth_region,1,sousse
+Q2827627,Q431515,shared_birth_region,1,sousse
+Q2827627,Q50099224,shared_birth_region,1,sousse
+Q2827627,Q57699,shared_birth_region,1,sousse
+Q28465669,Q28502176,shared_birth_region,1,sousse
+Q28465669,Q30118294,shared_birth_region,1,sousse
+Q28465669,Q3125288,shared_birth_region,1,sousse
+Q28465669,Q3125311,shared_birth_region,1,sousse
+Q28465669,Q3431743,shared_birth_region,1,sousse
+Q28465669,Q431515,shared_birth_region,1,sousse
+Q28465669,Q50099224,shared_birth_region,1,sousse
+Q28465669,Q57699,shared_birth_region,1,sousse
+Q28502176,Q30118294,shared_birth_region,1,sousse
+Q28502176,Q3125288,shared_birth_region,1,sousse
+Q28502176,Q3125311,shared_birth_region,1,sousse
+Q28502176,Q3431743,shared_birth_region,1,sousse
+Q28502176,Q431515,shared_birth_region,1,sousse
+Q28502176,Q50099224,shared_birth_region,1,sousse
+Q28502176,Q57699,shared_birth_region,1,sousse
+Q28653580,Q3318475,shared_birth_region,1,sfax
+Q28653580,Q3331012,shared_birth_region,1,sfax
+Q28653580,Q3344886,shared_birth_region,1,sfax
+Q28653580,Q3461169,shared_birth_region,1,sfax
+Q28653580,Q3469690,shared_birth_region,1,sfax
+Q28653580,Q3473691,shared_birth_region,1,sfax
+Q28653580,Q3486512,shared_birth_region,1,sfax
+Q28653580,Q3486677,shared_birth_region,1,sfax
+Q28653580,Q3490439,shared_birth_region,1,sfax
+Q28653580,Q42311056,shared_birth_region,1,sfax
+Q28653580,Q43654658,shared_birth_region,1,sfax
+Q28653580,Q744499,shared_birth_region,1,sfax
+Q28653580,Q92316785,shared_birth_region,1,sfax
+Q28653580,Q99539200,shared_birth_region,1,sfax
+Q28654181,Q29440996,shared_birth_region,1,nabeul
+Q28654181,Q3012366,shared_birth_region,1,nabeul
+Q28654181,Q3079840,shared_birth_region,1,nabeul
+Q28654181,Q3318311,shared_birth_region,1,nabeul
+Q28654181,Q3318800,shared_birth_region,1,nabeul
+Q28654181,Q54875074,shared_birth_region,1,nabeul
+Q28654181,Q92332624,shared_birth_region,1,nabeul
+Q2929698,Q29580351,shared_birth_region,1,delegation de sidi bouzid ouest
+Q2929698,Q55392087,shared_birth_region,1,delegation de sidi bouzid ouest
+Q29440996,Q3012366,shared_birth_region,1,nabeul
+Q29440996,Q3079840,shared_birth_region,1,nabeul
+Q29440996,Q3318311,shared_birth_region,1,nabeul
+Q29440996,Q3318800,shared_birth_region,1,nabeul
+Q29440996,Q54875074,shared_birth_region,1,nabeul
+Q29440996,Q92332624,shared_birth_region,1,nabeul
+Q2947600,Q29580479,shared_birth_region,1,monastir
+Q2947600,Q308017,shared_birth_region,1,monastir
+Q2947600,Q3144591,shared_birth_region,1,monastir
+Q2947600,Q3286574,shared_birth_region,1,monastir
+Q2947600,Q3318797,shared_birth_region,1,monastir
+Q2947600,Q3331032,shared_birth_region,1,monastir
+Q2947600,Q377921,shared_birth_region,1,monastir
+Q2947600,Q643348,shared_birth_region,1,monastir
+Q29577522,Q30728289,shared_birth_region,1,delegation de tozeur
+Q29577522,Q517946,shared_birth_region,1,delegation de tozeur
+Q29580351,Q55392087,shared_birth_region,1,delegation de sidi bouzid ouest
+Q29580435,Q99542892,shared_birth_region,1,delegation de hammam lif
+Q29580479,Q308017,shared_birth_region,1,monastir
+Q29580479,Q3144591,shared_birth_region,1,monastir
+Q29580479,Q3286574,shared_birth_region,1,monastir
+Q29580479,Q3318797,shared_birth_region,1,monastir
+Q29580479,Q3331032,shared_birth_region,1,monastir
+Q29580479,Q377921,shared_birth_region,1,monastir
+Q29580479,Q643348,shared_birth_region,1,monastir
+Q2972023,Q3216753,shared_birth_region,1,gabes
+Q2972023,Q3318356,shared_birth_region,1,gabes
+Q2972023,Q3431745,shared_birth_region,1,gabes
+Q2972023,Q54875069,shared_birth_region,1,gabes
+Q30104283,Q3125307,shared_birth_region,1,delegation de gafsa sud
+Q30104283,Q3220051,shared_birth_region,1,delegation de gafsa sud
+Q30104283,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q30104283,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q30104283,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q30104283,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q30118294,Q3125288,shared_birth_region,1,sousse
+Q30118294,Q3125311,shared_birth_region,1,sousse
+Q30118294,Q3431743,shared_birth_region,1,sousse
+Q30118294,Q431515,shared_birth_region,1,sousse
+Q30118294,Q50099224,shared_birth_region,1,sousse
+Q30118294,Q57699,shared_birth_region,1,sousse
+Q3012366,Q3079840,shared_birth_region,1,nabeul
+Q3012366,Q3318311,shared_birth_region,1,nabeul
+Q3012366,Q3318800,shared_birth_region,1,nabeul
+Q3012366,Q54875074,shared_birth_region,1,nabeul
+Q3012366,Q92332624,shared_birth_region,1,nabeul
+Q30728289,Q517946,shared_birth_region,1,delegation de tozeur
+Q30728498,Q3417419,shared_birth_region,1,delegation de beja nord
+Q30728498,Q62601798,shared_birth_region,1,delegation de beja nord
+Q30729047,Q3461164,shared_birth_region,1,medenine
+Q30729047,Q3469772,shared_birth_region,1,medenine
+Q30729047,Q54875067,shared_birth_region,1,medenine
+Q30729047,Q61598250,shared_birth_region,1,medenine
+Q30729169,Q3328917,shared_birth_region,1,bizerte
+Q3079840,Q3318311,shared_birth_region,1,nabeul
+Q3079840,Q3318800,shared_birth_region,1,nabeul
+Q3079840,Q54875074,shared_birth_region,1,nabeul
+Q3079840,Q92332624,shared_birth_region,1,nabeul
+Q308017,Q3144591,shared_birth_region,1,monastir
+Q308017,Q3286574,shared_birth_region,1,monastir
+Q308017,Q3318797,shared_birth_region,1,monastir
+Q308017,Q3331032,shared_birth_region,1,monastir
+Q308017,Q377921,shared_birth_region,1,monastir
+Q308017,Q643348,shared_birth_region,1,monastir
+Q3125288,Q3125311,shared_birth_region,1,sousse
+Q3125288,Q3431743,shared_birth_region,1,sousse
+Q3125288,Q431515,shared_birth_region,1,sousse
+Q3125288,Q50099224,shared_birth_region,1,sousse
+Q3125288,Q57699,shared_birth_region,1,sousse
+Q3125307,Q3220051,shared_birth_region,1,delegation de gafsa sud
+Q3125307,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q3125307,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q3125307,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q3125307,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q3125311,Q3431743,shared_birth_region,1,sousse
+Q3125311,Q431515,shared_birth_region,1,sousse
+Q3125311,Q50099224,shared_birth_region,1,sousse
+Q3125311,Q57699,shared_birth_region,1,sousse
+Q3125835,Q3318702,shared_birth_region,1,delegation de jemmal
+Q3125835,Q3347261,shared_birth_region,1,delegation de jemmal
+Q3125835,Q98828346,shared_birth_region,1,delegation de jemmal
+Q3128202,Q60573013,shared_birth_region,1,delegation de ras jebel
+Q313539,Q431848,shared_birth_region,1,delegation de carthage
+Q313539,Q4845531,shared_birth_region,1,delegation de carthage
+Q3141381,Q3320650,shared_birth_region,1,delegation de ksar hellal
+Q3141381,Q48757077,shared_birth_region,1,delegation de ksar hellal
+Q3144591,Q3286574,shared_birth_region,1,monastir
+Q3144591,Q3318797,shared_birth_region,1,monastir
+Q3144591,Q3331032,shared_birth_region,1,monastir
+Q3144591,Q377921,shared_birth_region,1,monastir
+Q3144591,Q643348,shared_birth_region,1,monastir
+Q3196140,Q3318545,shared_birth_region,1,kairouan
+Q3196140,Q3334747,shared_birth_region,1,kairouan
+Q3196140,Q3357601,shared_birth_region,1,kairouan
+Q3196140,Q3486507,shared_birth_region,1,kairouan
+Q3216753,Q3318356,shared_birth_region,1,gabes
+Q3216753,Q3431745,shared_birth_region,1,gabes
+Q3216753,Q54875069,shared_birth_region,1,gabes
+Q3220051,Q3431740,shared_birth_region,1,delegation de gafsa sud
+Q3220051,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q3220051,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q3220051,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q3240795,Q3423310,shared_birth_region,1,delegation de rades
+Q3240795,Q98828570,shared_birth_region,1,delegation de rades
+Q3286574,Q3318797,shared_birth_region,1,monastir
+Q3286574,Q3331032,shared_birth_region,1,monastir
+Q3286574,Q377921,shared_birth_region,1,monastir
+Q3286574,Q643348,shared_birth_region,1,monastir
+Q3304511,Q3318530,shared_birth_region,1,delegation d'el jem
+Q3318311,Q3318800,shared_birth_region,1,nabeul
+Q3318311,Q54875074,shared_birth_region,1,nabeul
+Q3318311,Q92332624,shared_birth_region,1,nabeul
+Q3318356,Q3431745,shared_birth_region,1,gabes
+Q3318356,Q54875069,shared_birth_region,1,gabes
+Q3318475,Q3331012,shared_birth_region,1,sfax
+Q3318475,Q3344886,shared_birth_region,1,sfax
+Q3318475,Q3461169,shared_birth_region,1,sfax
+Q3318475,Q3469690,shared_birth_region,1,sfax
+Q3318475,Q3473691,shared_birth_region,1,sfax
+Q3318475,Q3486512,shared_birth_region,1,sfax
+Q3318475,Q3486677,shared_birth_region,1,sfax
+Q3318475,Q3490439,shared_birth_region,1,sfax
+Q3318475,Q42311056,shared_birth_region,1,sfax
+Q3318475,Q43654658,shared_birth_region,1,sfax
+Q3318475,Q744499,shared_birth_region,1,sfax
+Q3318475,Q92316785,shared_birth_region,1,sfax
+Q3318475,Q99539200,shared_birth_region,1,sfax
+Q3318509,Q54875178,shared_birth_region,1,delegation de la marsa
+Q3318509,Q60573008,shared_birth_region,1,delegation de la marsa
+Q3318545,Q3334747,shared_birth_region,1,kairouan
+Q3318545,Q3357601,shared_birth_region,1,kairouan
+Q3318545,Q3486507,shared_birth_region,1,kairouan
+Q3318622,Q88467296,shared_birth_region,1,delegation de hammam sousse
+Q3318702,Q3347261,shared_birth_region,1,delegation de jemmal
+Q3318702,Q98828346,shared_birth_region,1,delegation de jemmal
+Q3318731,Q3318774,shared_birth_region,1,delegation de dar chaabane el fehri
+Q3318797,Q3331032,shared_birth_region,1,monastir
+Q3318797,Q377921,shared_birth_region,1,monastir
+Q3318797,Q643348,shared_birth_region,1,monastir
+Q3318800,Q54875074,shared_birth_region,1,nabeul
+Q3318800,Q92332624,shared_birth_region,1,nabeul
+Q3320454,Q3483754,shared_birth_region,1,delegation de degache
+Q3320650,Q48757077,shared_birth_region,1,delegation de ksar hellal
+Q3331012,Q3344886,shared_birth_region,1,sfax
+Q3331012,Q3461169,shared_birth_region,1,sfax
+Q3331012,Q3469690,shared_birth_region,1,sfax
+Q3331012,Q3473691,shared_birth_region,1,sfax
+Q3331012,Q3486512,shared_birth_region,1,sfax
+Q3331012,Q3486677,shared_birth_region,1,sfax
+Q3331012,Q3490439,shared_birth_region,1,sfax
+Q3331012,Q42311056,shared_birth_region,1,sfax
+Q3331012,Q43654658,shared_birth_region,1,sfax
+Q3331012,Q744499,shared_birth_region,1,sfax
+Q3331012,Q92316785,shared_birth_region,1,sfax
+Q3331012,Q99539200,shared_birth_region,1,sfax
+Q3331032,Q377921,shared_birth_region,1,monastir
+Q3331032,Q643348,shared_birth_region,1,monastir
+Q3334747,Q3357601,shared_birth_region,1,kairouan
+Q3334747,Q3486507,shared_birth_region,1,kairouan
+Q3344886,Q3461169,shared_birth_region,1,sfax
+Q3344886,Q3469690,shared_birth_region,1,sfax
+Q3344886,Q3473691,shared_birth_region,1,sfax
+Q3344886,Q3486512,shared_birth_region,1,sfax
+Q3344886,Q3486677,shared_birth_region,1,sfax
+Q3344886,Q3490439,shared_birth_region,1,sfax
+Q3344886,Q42311056,shared_birth_region,1,sfax
+Q3344886,Q43654658,shared_birth_region,1,sfax
+Q3344886,Q744499,shared_birth_region,1,sfax
+Q3344886,Q92316785,shared_birth_region,1,sfax
+Q3344886,Q99539200,shared_birth_region,1,sfax
+Q3347261,Q98828346,shared_birth_region,1,delegation de jemmal
+Q3357601,Q3486507,shared_birth_region,1,kairouan
+Q3417419,Q62601798,shared_birth_region,1,delegation de beja nord
+Q3423310,Q98828570,shared_birth_region,1,delegation de rades
+Q3431740,Q3470845,shared_birth_region,1,delegation de gafsa sud
+Q3431740,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q3431740,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q3431743,Q431515,shared_birth_region,1,sousse
+Q3431743,Q50099224,shared_birth_region,1,sousse
+Q3431743,Q57699,shared_birth_region,1,sousse
+Q3431745,Q54875069,shared_birth_region,1,gabes
+Q3461164,Q3469772,shared_birth_region,1,medenine
+Q3461164,Q54875067,shared_birth_region,1,medenine
+Q3461164,Q61598250,shared_birth_region,1,medenine
+Q3461169,Q3469690,shared_birth_region,1,sfax
+Q3461169,Q3473691,shared_birth_region,1,sfax
+Q3461169,Q3486512,shared_birth_region,1,sfax
+Q3461169,Q3486677,shared_birth_region,1,sfax
+Q3461169,Q3490439,shared_birth_region,1,sfax
+Q3461169,Q42311056,shared_birth_region,1,sfax
+Q3461169,Q43654658,shared_birth_region,1,sfax
+Q3461169,Q744499,shared_birth_region,1,sfax
+Q3461169,Q92316785,shared_birth_region,1,sfax
+Q3461169,Q99539200,shared_birth_region,1,sfax
+Q3469690,Q3473691,shared_birth_region,1,sfax
+Q3469690,Q3486512,shared_birth_region,1,sfax
+Q3469690,Q3486677,shared_birth_region,1,sfax
+Q3469690,Q3490439,shared_birth_region,1,sfax
+Q3469690,Q42311056,shared_birth_region,1,sfax
+Q3469690,Q43654658,shared_birth_region,1,sfax
+Q3469690,Q744499,shared_birth_region,1,sfax
+Q3469690,Q92316785,shared_birth_region,1,sfax
+Q3469690,Q99539200,shared_birth_region,1,sfax
+Q3469772,Q54875067,shared_birth_region,1,medenine
+Q3469772,Q61598250,shared_birth_region,1,medenine
+Q3470845,Q3951110,shared_birth_region,1,delegation de gafsa sud
+Q3470845,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q3473691,Q3486512,shared_birth_region,1,sfax
+Q3473691,Q3486677,shared_birth_region,1,sfax
+Q3473691,Q3490439,shared_birth_region,1,sfax
+Q3473691,Q42311056,shared_birth_region,1,sfax
+Q3473691,Q43654658,shared_birth_region,1,sfax
+Q3473691,Q744499,shared_birth_region,1,sfax
+Q3473691,Q92316785,shared_birth_region,1,sfax
+Q3473691,Q99539200,shared_birth_region,1,sfax
+Q3474776,Q64747816,shared_birth_region,1,metropole du grand paris
+Q3486512,Q3486677,shared_birth_region,1,sfax
+Q3486512,Q3490439,shared_birth_region,1,sfax
+Q3486512,Q42311056,shared_birth_region,1,sfax
+Q3486512,Q43654658,shared_birth_region,1,sfax
+Q3486512,Q744499,shared_birth_region,1,sfax
+Q3486512,Q92316785,shared_birth_region,1,sfax
+Q3486512,Q99539200,shared_birth_region,1,sfax
+Q3486677,Q3490439,shared_birth_region,1,sfax
+Q3486677,Q42311056,shared_birth_region,1,sfax
+Q3486677,Q43654658,shared_birth_region,1,sfax
+Q3486677,Q744499,shared_birth_region,1,sfax
+Q3486677,Q92316785,shared_birth_region,1,sfax
+Q3486677,Q99539200,shared_birth_region,1,sfax
+Q3490439,Q42311056,shared_birth_region,1,sfax
+Q3490439,Q43654658,shared_birth_region,1,sfax
+Q3490439,Q744499,shared_birth_region,1,sfax
+Q3490439,Q92316785,shared_birth_region,1,sfax
+Q3490439,Q99539200,shared_birth_region,1,sfax
+Q3571955,Q60572709,shared_birth_region,1,delegation de mahdia
+Q3571955,Q653162,shared_birth_region,1,delegation de mahdia
+Q377921,Q643348,shared_birth_region,1,monastir
+Q3951110,Q51460814,shared_birth_region,1,delegation de gafsa sud
+Q42311056,Q43654658,shared_birth_region,1,sfax
+Q42311056,Q744499,shared_birth_region,1,sfax
+Q42311056,Q92316785,shared_birth_region,1,sfax
+Q42311056,Q99539200,shared_birth_region,1,sfax
+Q431515,Q50099224,shared_birth_region,1,sousse
+Q431515,Q57699,shared_birth_region,1,sousse
+Q431848,Q4845531,shared_birth_region,1,delegation de carthage
+Q43654658,Q744499,shared_birth_region,1,sfax
+Q43654658,Q92316785,shared_birth_region,1,sfax
+Q43654658,Q99539200,shared_birth_region,1,sfax
+Q50099224,Q57699,shared_birth_region,1,sousse
+Q54875067,Q61598250,shared_birth_region,1,medenine
+Q54875074,Q92332624,shared_birth_region,1,nabeul
+Q54875178,Q60573008,shared_birth_region,1,delegation de la marsa
+Q55999324,Q666665,shared_birth_region,1,delegation du bardo
+Q60572709,Q653162,shared_birth_region,1,delegation de mahdia
+Q744499,Q92316785,shared_birth_region,1,sfax
+Q744499,Q99539200,shared_birth_region,1,sfax
+Q92316785,Q99539200,shared_birth_region,1,sfax

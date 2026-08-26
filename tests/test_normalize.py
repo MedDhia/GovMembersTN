@@ -144,3 +144,20 @@ def test_truncated_iso_dates_report_month_precision():
     parsed = parse_date("1974-01")
     assert parsed.value is not None and parsed.value.isoformat() == "1974-01-01"
     assert parsed.precision == "month"
+
+
+@pytest.mark.parametrize("raw", [
+    "1903-08-03T00:00:00Z",     # the exact shape Wikidata's SPARQL returns
+    "1903-08-03",
+    "1903-08-03 00:00",
+])
+def test_iso_timestamps_keep_day_precision(raw):
+    """Regression: a trailing time component silently destroyed the date.
+
+    `\\b` does not match between the final digit of the date and the "T" of
+    the timestamp, so full ISO datetimes fell through to the year-only branch
+    and became 1 January. It affected almost every date Wikidata returns.
+    """
+    parsed = parse_date(raw)
+    assert parsed.value is not None and parsed.value.isoformat() == "1903-08-03"
+    assert parsed.precision == "day"

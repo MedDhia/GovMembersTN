@@ -31,7 +31,8 @@ wikipedia:
       priority: 3
   index_template: "Modèle:Palette Gouvernements de la Tunisie"
   index_category: "Catégorie:Gouvernement de la Tunisie"
-  rate_limit_seconds: 1.0
+  # 1.0s drew repeated HTTP 429s from the MediaWiki API on a full run.
+  rate_limit_seconds: 1.6
   timeout_seconds: 60
 
 leaders:

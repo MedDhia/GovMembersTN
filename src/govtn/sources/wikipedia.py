@@ -47,6 +47,22 @@ PERSON_HEADERS = (
 )
 PARTY_HEADERS = ("parti", "appartenance", "etiquette", "party", "الحزب", "الانتماء")
 DATE_HEADERS = ("date", "periode", "depuis", "entree", "sortie", "التاريخ", "الفترة")
+IMAGE_HEADERS = ("image", "photo", "portrait", "صورة")
+
+# Header keywords are compared against text that has been through
+# `normalize_text`, which folds Arabic orthography (ة -> ه, أ -> ا). The
+# constants above are written in natural orthography, so they must be folded
+# too - otherwise no Arabic header ever matches, header detection silently
+# falls back to guessing columns, and image or party columns get read as the
+# portfolio ("60px", "نداء تونس").
+PORTFOLIO_HEADERS = tuple(normalize_text(h) for h in PORTFOLIO_HEADERS)
+PERSON_HEADERS = tuple(normalize_text(h) for h in PERSON_HEADERS)
+PARTY_HEADERS = tuple(normalize_text(h) for h in PARTY_HEADERS)
+DATE_HEADERS = tuple(normalize_text(h) for h in DATE_HEADERS)
+IMAGE_HEADERS = tuple(normalize_text(h) for h in IMAGE_HEADERS)
+
+# Values that are never an officeholder or an office.
+_NOT_A_VALUE = re.compile(r"^(\d+\s*px|\d+|-|—|n/?a)$", re.IGNORECASE)
 
 # Rows that are section separators rather than officeholders.
 _SKIP_ROW = re.compile(
@@ -114,6 +130,37 @@ def list_category_members(category: str, fetcher: Fetcher, lang: str = "fr") -> 
     return titles
 
 
+def langlinked_titles(
+    titles: list[str], fetcher: Fetcher, target_lang: str, source_lang: str = "fr"
+) -> dict[str, str]:
+    """Titles of the same articles in another language edition.
+
+    Discovery for non-French editions goes through langlinks rather than that
+    edition's own navigation template. Guessing at the Arabic template and
+    category names would be brittle and, when wrong, silently yields zero
+    articles - which is exactly what happened before this existed.
+    """
+    # target title -> source-language title. The mapping, not just the list,
+    # is what lets the two editions' versions of one cabinet share a single
+    # cabinet_id. Without it "Gouvernement Karoui" and "حكومة حامد القروي"
+    # become two separate cabinets and every minister in them is counted twice.
+    found: dict[str, str] = {}
+    for title in titles:
+        try:
+            payload = fetcher.get_json(_api(source_lang), {
+                "action": "query", "format": "json", "formatversion": "2",
+                "titles": title, "prop": "langlinks",
+                "lllang": target_lang, "lllimit": "max", "redirects": "1",
+            })
+        except Exception as exc:
+            log.warning("langlinks failed for %s: %s", title, exc)
+            continue
+        for page in payload.get("query", {}).get("pages", []):
+            for link in page.get("langlinks", []) or []:
+                found[link["title"]] = page.get("title", title)
+    return found
+
+
 def discover_cabinet_articles(fetcher: Fetcher, lang: str = "fr") -> list[str]:
     """Union of the navigation-template and category channels.
 
@@ -146,8 +193,17 @@ def discover_cabinet_articles(fetcher: Fetcher, lang: str = "fr") -> list[str]:
     return out
 
 
-def fetch_wikitext(title: str, fetcher: Fetcher, lang: str = "fr") -> str | None:
-    """Raw wikitext of an article, or None if it does not exist."""
+def fetch_wikitext(
+    title: str, fetcher: Fetcher, lang: str = "fr"
+) -> tuple[str, str] | tuple[None, None]:
+    """Raw wikitext of an article, with the title MediaWiki resolved it to.
+
+    The resolved title matters: "Gouvernement Jebali" and "Gouvernement Hamadi
+    Jebali" are the same article behind a redirect, and harvesting both records
+    every one of that cabinet's ministers twice - inflating cabinet size and
+    manufacturing duplicate co-membership ties. Callers must de-duplicate on
+    the resolved title, not on the title they asked for.
+    """
     payload = fetcher.get_json(_api(lang), {
         "action": "query", "format": "json", "formatversion": "2",
         "titles": title, "prop": "revisions", "rvprop": "content",
@@ -155,11 +211,11 @@ def fetch_wikitext(title: str, fetcher: Fetcher, lang: str = "fr") -> str | None
     })
     for page in payload.get("query", {}).get("pages", []):
         if page.get("missing"):
-            return None
+            return None, None
         revisions = page.get("revisions") or []
         if revisions:
-            return revisions[0]["slots"]["main"]["content"]
-    return None
+            return revisions[0]["slots"]["main"]["content"], page.get("title", title)
+    return None, None
 
 
 # ---------------------------------------------------------------------------
@@ -212,6 +268,12 @@ def _split_row(row: str) -> list[str]:
         line = line.strip()
         if not line or line.startswith("|-") or line.startswith("{|") or line.startswith("|}"):
             continue
+        if line.startswith("|+"):
+            # Table CAPTION, not a cell. Treated as one it becomes phantom
+            # column 0 of the header row, shifting every column index by one
+            # against the data rows - which silently emptied whole cabinets
+            # ("Gouvernement Hamed Karoui" parsed to zero members).
+            continue
         if line.startswith("!"):
             parts = re.split(r"!!", line.lstrip("!"))
         elif line.startswith("|"):
@@ -235,6 +297,8 @@ def _classify_headers(cells: list[str]) -> dict[str, int]:
         text = normalize_text(cell)
         if not text:
             continue
+        if any(k in text for k in IMAGE_HEADERS):
+            continue                       # picture column, never a roster field
         if "portfolio" not in roles and any(k in text for k in PORTFOLIO_HEADERS):
             roles["portfolio"] = index
         elif "person" not in roles and any(k in text for k in PERSON_HEADERS):
@@ -277,6 +341,10 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
                 continue
             if _SKIP_ROW.match(normalize_text(portfolio)):
                 continue
+            # Image sizes ("60px") and bare seat counts come from picture and
+            # summary columns, not from roster columns.
+            if _NOT_A_VALUE.match(portfolio.strip()) or _NOT_A_VALUE.match(person.strip()):
+                continue
             links = _cell_links(cells_raw[roles["person"]])
             rows.append({
                 "raw_title": portfolio,
@@ -289,7 +357,13 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
     return rows
 
 
-_LIST_ROW = re.compile(r"^\*+\s*(?P<title>[^:：]{4,120}?)\s*[:：]\s*(?P<person>.+)$")
+_LIST_ROW = re.compile(r"^\*+\s*(?P<left>[^:：]{3,120}?)\s*[:：]\s*(?P<right>.+)$")
+
+# Office keywords, used to work out which side of the colon is the portfolio.
+_OFFICE_WORD = re.compile(
+    r"ministre|secretaire|chef\b|president|grand vizir|vizir|directeur|"
+    r"gouverneur|وزير|كاتب|رئيس"
+)
 
 
 def parse_lists(wikitext: str) -> list[dict[str, Any]]:
@@ -302,15 +376,27 @@ def parse_lists(wikitext: str) -> list[dict[str, Any]]:
         match = _LIST_ROW.match(line)
         if not match:
             continue
-        raw_title = _cell_text(match.group("title"))
-        person_cell = match.group("person")
-        person = _cell_text(person_cell)
-        if not raw_title or not person:
+        left_cell, right_cell = match.group("left"), match.group("right")
+        left, right = _cell_text(left_cell), _cell_text(right_cell)
+        if not left or not right:
             continue
-        # A portfolio line must look like an office, not prose.
-        if not re.search(r"ministre|secretaire|chef|president|وزير|كاتب|رئيس",
-                         normalize_text(raw_title)):
+
+        # BOTH orders occur. Post-1956 articles write "Ministre de X : Person";
+        # the protectorate-era ones write "Person : grand vizir". Decide by
+        # which side names an office rather than assuming a fixed order -
+        # assuming one silently drops every article using the other.
+        left_is_office = bool(_OFFICE_WORD.search(normalize_text(left)))
+        right_is_office = bool(_OFFICE_WORD.search(normalize_text(right)))
+        if left_is_office and not right_is_office:
+            raw_title, person, person_cell = left, right, right_cell
+        elif right_is_office and not left_is_office:
+            raw_title, person, person_cell = right, left, left_cell
+        else:
+            # Neither side, or both, look like an office: not a roster line.
             continue
+        # List items carry the sentence punctuation of the surrounding prose
+        # ("grand vizir ;"); it is not part of the office name.
+        raw_title = re.sub(r"[\s;,.]+$", "", raw_title)
         links = _cell_links(person_cell)
         rows.append({
             "raw_title": raw_title,
@@ -390,8 +476,20 @@ def harvest(*, offline: bool = False, langs: Iterable[str] = ("fr",)) -> list[di
     interim = config.paths().ensure().interim
     cabinets: list[dict[str, Any]] = []
 
+    french_titles: list[str] = []
     for lang in langs:
-        titles = discover_cabinet_articles(fetcher, lang)
+        canonical: dict[str, str] = {}
+        if lang == "fr":
+            titles = discover_cabinet_articles(fetcher, lang)
+            french_titles = list(titles)
+        else:
+            mapping = langlinked_titles(french_titles, fetcher, lang)
+            log.info("[%s] %d titles resolved via langlinks", lang, len(mapping))
+            if not mapping:                      # fall back to this edition's own index
+                titles = discover_cabinet_articles(fetcher, lang)
+            else:
+                titles = list(mapping)
+                canonical = mapping
         # Seeds from the curated spine catch anything discovery missed.
         seeds = [s.get(f"wikipedia_{lang}") for s in config.cabinets()["spells"]]
         for seed in seeds:
@@ -399,17 +497,28 @@ def harvest(*, offline: bool = False, langs: Iterable[str] = ("fr",)) -> list[di
                 titles.append(seed)
         log.info("[%s] %d cabinet articles to parse", lang, len(titles))
 
+        seen_articles: set[str] = set()
         for title in titles:
             try:
-                wikitext = fetch_wikitext(title, fetcher, lang)
+                wikitext, resolved = fetch_wikitext(title, fetcher, lang)
             except Exception as exc:
                 log.warning("fetch failed for %s: %s", title, exc)
                 continue
             if not wikitext:
                 log.info("no article: %s", title)
                 continue
-            record = parse_cabinet_article(title, wikitext, lang)
-            log.info("%-55s %3d members", title[:55], len(record["members"]))
+            if resolved in seen_articles:
+                log.debug("%s redirects to %s, already harvested", title, resolved)
+                continue
+            seen_articles.add(resolved)
+            record = parse_cabinet_article(resolved, wikitext, lang)
+            record["requested_as"] = sorted({title, resolved})
+            # The French title is the canonical identity of the cabinet, so
+            # the same government harvested in two languages stays one cabinet.
+            record["canonical_article"] = canonical.get(title, resolved)
+            for member in record["members"]:
+                member["canonical_article"] = record["canonical_article"]
+            log.info("%-55s %3d members", resolved[:55], len(record["members"]))
             cabinets.append(record)
 
     path = interim / "wikipedia_cabinets.json"

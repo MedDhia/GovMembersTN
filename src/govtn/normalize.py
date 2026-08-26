@@ -269,6 +269,9 @@ def normalize_title(title: str) -> str:
     """Normalised form used for portfolio/rank regex matching."""
     text = normalize_text(title)
     text = re.sub(r"\[\[|\]\]", " ", text)          # stray wiki markup
+    # Parenthetical glosses annotate the holder, not the office
+    # ("ministre d'État (destourien)"), and block exact rank matching.
+    text = re.sub(r"\([^)]*\)", " ", text)
     # French articles are deliberately KEPT. Rank patterns are anchored phrases
     # ("chef du gouvernement", "ministre delegue") and stripping "du"/"de la"
     # out from under them makes every anchored rank alias fail to match.
@@ -298,6 +301,33 @@ def _compiled_taxonomy() -> tuple[list, list, str]:
         for item in cfg["portfolios"]
     ]
     return ranks, portfolios, cfg["unmatched"]["canonical"]
+
+
+@functools.lru_cache(maxsize=1)
+def _compiled_exclusions() -> list[tuple[str, list]]:
+    cfg = config.portfolios()
+    return [
+        (block["id"],
+         [re.compile(strip_latin_diacritics(normalize_arabic(p)).lower())
+          for p in block["patterns"]])
+        for block in cfg.get("exclude", [])
+    ]
+
+
+def excluded_reason(raw: str) -> str | None:
+    """Why this title is not membership of a government, or None if it is.
+
+    Wikidata's "Tunisian government positions" include parliamentarians,
+    foreign ambassadors to Tunis, religious offices and mayors. They are not
+    members of a government and must not sit in the appointments table.
+    """
+    text = normalize_title(raw)
+    if not text:
+        return None
+    for block_id, patterns in _compiled_exclusions():
+        if any(p.search(text) for p in patterns):
+            return block_id
+    return None
 
 
 def parse_title(raw: str) -> ParsedTitle:
@@ -380,7 +410,12 @@ _ALL_MONTHS = {
     for name, number in {**_FR_MONTHS, **_EN_MONTHS, **_AR_MONTHS}.items()
 }
 
-_ISO = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
+# The trailing boundary is a negative lookahead, not `\b`. Wikidata returns
+# timestamps as "1903-08-03T00:00:00Z", and `\b` does not match between the
+# final digit and the "T" - so the date failed here, fell through to the
+# year-only branch, and every Wikidata date silently became 1 January of its
+# year. That degraded 1304 of 1354 harvested tenure dates before it was caught.
+_ISO = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})(?![\d-])")
 _DMY_NUM = re.compile(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{4})\b")
 _YEAR_MONTH = re.compile(r"\b(1[89]\d{2}|20\d{2})-(0[1-9]|1[0-2])\b")
 _YEAR_ONLY = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")

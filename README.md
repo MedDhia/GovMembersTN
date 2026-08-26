@@ -12,71 +12,33 @@ timestamp.
 
 ---
 
-## ⚠️ Current state: the pipeline is complete, the harvest is not
+## What's in it
 
-**The tables in `data/processed/` are currently built from the curated seed
-only** — 23 government spells and the 22 people who headed them, 1954–2026,
-with verified birth dates, birthplaces coded to governorate and region,
-profession, education and Wikidata QIDs where they could be confirmed. That
-series is correct and immediately usable; it is simply not the *full* dataset,
-which is every minister rather than every head of government.
+Harvested from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn:
 
-The reason is environmental, not a bug: the machine this repository was
-developed on sits behind an egress proxy that blocks `wikidata.org`,
-`wikipedia.org` and `leaders.com.tn` outright, so the harvest stages could
-never run. Every parser is nonetheless implemented and tested against fixtures
-that reproduce the real source markup.
+| | |
+|---|---|
+| **931** people who held a post in a Tunisian government | |
+| **3,061** appointments | one row per person × cabinet × portfolio |
+| **53** cabinets | 1943–2026, spanning 23 government spells |
+| **42,583** co-membership ties | weighted by days of overlapping service |
+| **2,309** succession ties | directed, within portfolio |
 
-### Unblocking it
+Coverage of person-level attributes, which is uneven by nature of the sources:
+birth date 50%, gender 53%, Wikidata QID 53%, education 1%. `VALIDATION.md`
+breaks this down by decade and variable — **read it before computing any
+long-run trend.**
 
-The harvest needs these four domains reachable. They are governed by the
-**environment's network policy**, not by anything in this repo — an admin
-widens it in the Claude Code environment settings on claude.ai
-([docs](https://code.claude.com/docs/en/claude-code-on-the-web)):
-
-| Domain | Why it is needed | Required? |
-|---|---|---|
-| `*.wikipedia.org` | Cabinet rosters (fr is load-bearing; ar/en add name variants) | **yes** |
-| `query.wikidata.org` | SPARQL: officeholding statements and person attributes | **yes** |
-| `www.wikidata.org` | Entity API for lookups | **yes** |
-| `www.leaders.com.tn` | Biographies: education and pre-ministerial career | optional |
-
-**Then verify and run:**
+To rebuild from scratch:
 
 ```bash
 make install
-make preflight    # confirms every source host actually answers
-make all          # preflight -> harvest -> build -> networks -> validate
+make preflight    # confirms every source host is reachable
+make all          # harvest -> build -> networks -> validate
 ```
 
-`make preflight` exists because the harvest stages are failure-tolerant by
-design — one dead source does not sink the others — which means a blocked host
-produces quietly empty tables rather than a loud error. Run it first; it names
-exactly which domains are still refused and exits non-zero.
-
-Until then, `make build` still assembles the tables from the curated seed and
-`make offline` rebuilds from any cached payloads; both mark the harvest partial
-in `MANIFEST.json`.
-
-`make all` populates `data/processed/` with the complete tables. `MANIFEST.json`
-records which sources contributed, and `VALIDATION.md` reports coverage holes;
-both currently say the harvest is partial, and will say so until it is run.
-
-If Wikidata alone stays blocked, `make queries` prints the SPARQL to paste into
-<https://query.wikidata.org> by hand; save the JSON results into
-`data/interim/` and the build picks them up.
-
-The seed is not thrown away when the harvest runs: `govtn.build` merges it at
-a precedence of **Wikidata > seed > Leaders**, so structured data wins and the
-seed fills gaps. The QIDs it carries let the seeded rows join straight to the
-Wikidata harvest instead of relying on name matching to reunite them.
-
-As a sanity check on the coding, the seeded series already reproduces a
-standing empirical claim about Tunisian elite recruitment — Sahel origin among
-heads of government runs at 83% under Bourguiba and 100% under Ben Ali, then
-falls to 25% in the Second Republic and 0% after 2021.
-
----
+Re-running after a parser change costs zero requests: every payload is cached
+under `data/raw/`, and `make offline` rebuilds from that cache alone.
 
 ## What you get
 

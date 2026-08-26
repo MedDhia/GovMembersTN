@@ -1,24 +1,1882 @@
 person_id,cabinet_id,n_posts,portfolios,tenure_days,era
-Q108741355,TN-19,1,head_of_government,659,saied_exception
-Q121088468,TN-20,1,head_of_government,372,saied_exception
-Q128723414,TN-21,1,head_of_government,226,saied_exception
-Q1363916,TN-08,1,head_of_government,690,ben_ali
-Q1381809,TN-09,1,head_of_government,3703,ben_ali
-Q15304780,TN-14,1,head_of_government,373,transition
-Q3125311,TN-15,1,head_of_government,568,second_republic
-Q431515,TN-10,1,head_of_government,4120,ben_ali
-Q495676,TN-00,1,head_of_government,613,protectorate_end
-Q57699,TN-12,1,head_of_government,445,transition
-Q643348,TN-01,1,head_of_government,466,monarchy
-Q643348,TN-02,1,head_of_government,4484,bourguiba
-TN-ali-larayedh,TN-13,1,head_of_government,322,transition
-TN-bahi-ladgham,TN-03,1,head_of_government,360,bourguiba
-TN-beji-caid-essebsi,TN-11,1,head_of_government,300,transition
-TN-elyes-fakhfakh,TN-17,1,head_of_government,188,second_republic
-TN-hedi-nouira,TN-04,1,head_of_government,3460,bourguiba
-TN-hichem-mechichi,TN-18,1,head_of_government,404,second_republic
-TN-mohamed-mzali,TN-05,1,head_of_government,2267,bourguiba
-TN-rachid-sfar,TN-06,1,head_of_government,451,bourguiba
-TN-sara-zaafarani,TN-22,1,head_of_government,523,saied_exception
-TN-youssef-chahed,TN-16,1,head_of_government,1279,second_republic
-TN-zine-el-abidine-ben-ali,TN-07,1,head_of_government,36,bourguiba
+Q100261455,Gouvernement Mechichi,2,culture|other,770.0,second_republic
+Q100261455,TN-18,1,culture,33.0,second_republic
+Q1043040,Gouvernement Chahed,2,public_service_governance,2740.0,second_republic
+Q1043040,Gouvernement Ghannouchi I,4,defence|foreign_affairs,17006.0,ben_ali
+Q1043040,Gouvernement Ghannouchi II,1,foreign_affairs,0.0,ben_ali
+Q1043040,TN-10,2,defence|foreign_affairs,1989.0,ben_ali
+Q104821906,TN-18,2,culture|tourism_handicrafts,775.0,second_republic
+Q104828106,Gouvernement Mechichi,1,public_service_governance,404.0,second_republic
+Q104828106,TN-18,2,justice|other,301.0,second_republic
+Q10514449,Gouvernement Chahed,2,relations_parliament,2740.0,second_republic
+Q10591389,Gouvernement Chahed,3,human_rights|relations_parliament,4019.0,second_republic
+Q10591389,TN-16,1,other,367.0,second_republic
+Q106548958,TN-16,2,other,1373.0,second_republic
+Q107707866,TN-18,1,interior,74.0,saied_exception
+Q108159069,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,finance,1314.0,second_republic
+Q108159069,TN-18,1,finance,1283.0,saied_exception
+Q108159069,TN-20,1,economy_planning,99.0,saied_exception
+Q108163613,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,ict,1314.0,second_republic
+Q108163613,TN-18,1,ict,1119.0,saied_exception
+Q108741355,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,head_of_government,1314.0,second_republic
+Q108741355,TN-19,2,head_of_government,1318.0,saied_exception
+Q108750786,TN-18,1,interior,3.0,saied_exception
+Q108865358,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,economy_planning,1314.0,second_republic
+Q108865358,TN-19,1,economy_planning,736.0,saied_exception
+Q108883556,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,defence,1314.0,second_republic
+Q108883556,TN-19,1,defence,1049.0,saied_exception
+Q108892344,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,agriculture,1314.0,second_republic
+Q108892344,TN-19,1,agriculture,476.0,saied_exception
+Q108892347,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,social_affairs,1314.0,second_republic
+Q108892347,TN-19,1,social_affairs,957.0,saied_exception
+Q108892351,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,transport,1314.0,second_republic
+Q108892351,TN-19,1,transport,1780.0,saied_exception
+Q108892355,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,religious_affairs,1314.0,second_republic
+Q108892355,TN-19,1,religious_affairs,984.0,saied_exception
+Q108892359,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,trade,1314.0,second_republic
+Q108892359,TN-19,1,trade,452.0,saied_exception
+Q108892363,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,industry_energy,1314.0,second_republic
+Q108892363,TN-19,2,industry_energy,1140.0,saied_exception
+Q108892366,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,tourism_handicrafts,1314.0,second_republic
+Q108892366,TN-19,1,tourism_handicrafts,1049.0,saied_exception
+Q108892374,Gouvernement Bouden/Hachani/Madouri/Zaafrani,2,equipment_housing|head_of_government,2628.0,second_republic
+Q108892374,TN-19,1,equipment_housing,1257.0,saied_exception
+Q108892374,TN-22,1,head_of_government,523.0,saied_exception
+Q108892375,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,employment_training,1314.0,second_republic
+Q108892375,TN-19,2,employment_training|other,963.0,saied_exception
+Q108892377,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,higher_education,1314.0,second_republic
+Q108892377,TN-19,1,higher_education,1049.0,saied_exception
+Q108892383,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,environment,1314.0,second_republic
+Q108892383,TN-19,1,environment,1049.0,saied_exception
+Q108892387,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,culture,1314.0,second_republic
+Q108892387,TN-19,1,culture,1780.0,saied_exception
+Q109041047,Gouvernement Mechichi,3,equipment_housing,1136.0,second_republic
+Q109041047,TN-18,3,environment|equipment_housing|local_affairs,994.0,second_republic
+Q109045290,Gouvernement Mechichi,3,trade,1136.0,second_republic
+Q109045290,TN-18,3,industry_energy|trade,880.0,second_republic
+Q109544397,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,state_property,1314.0,second_republic
+Q109544397,TN-19,1,state_property,1049.0,saied_exception
+Q110014103,TN-19,1,other,1.0,saied_exception
+Q111701635,Gouvernement Hédi Baccouche II,1,social_affairs,366.0,ben_ali
+Q116206588,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,trade,1314.0,second_republic
+Q116206588,TN-19,1,trade,591.0,saied_exception
+Q11775942,Gouvernement Larayedh,2,education,687.0,transition
+Q11775942,TN-13,1,education,322.0,transition
+Q118382993,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,health,1314.0,second_republic
+Q118382993,TN-21,1,health,731.0,saied_exception
+Q121088468,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,head_of_government,1314.0,second_republic
+Q121088468,TN-20,2,head_of_government,745.0,saied_exception
+Q121360095,Gouvernement Ben Ali,1,transport,0.0,bourguiba
+Q121360095,Gouvernement Hédi Baccouche I,1,tourism_handicrafts,365.0,bourguiba
+Q121360095,Gouvernement Mohamed Mzali,1,information_media,2192.0,bourguiba
+Q121360095,TN-05,1,information_media,1546.0,bourguiba
+Q121360095,TN-07,1,transport,299.0,bourguiba
+Q121360095,TN-08,1,tourism_handicrafts,263.0,ben_ali
+Q12184481,Gouvernement Mohamed Mzali,1,culture,2192.0,bourguiba
+Q12184481,TN-05,1,culture,1956.0,bourguiba
+Q12194585,Gouvernement Ben Ali,1,foreign_affairs,0.0,
+Q12194585,TN-06,1,foreign_affairs,418.0,bourguiba
+Q12214730,Gouvernement Ghannouchi I,5,public_service_governance|state_property,21126.0,ben_ali
+Q12214730,TN-10,1,state_property,271.0,ben_ali
+Q12217102,Gouvernement Mechichi,1,youth_sports,404.0,second_republic
+Q12217102,TN-18,1,youth_sports,210.0,second_republic
+Q12220165,Gouvernement Ben Ali,2,defence,0.0,bourguiba
+Q12220165,Gouvernement Hédi Baccouche I,2,defence|justice,730.0,bourguiba
+Q12220165,Gouvernement Mohamed Mzali,2,defence,4459.0,bourguiba
+Q12220165,Gouvernement Nouira,1,justice,3652.0,bourguiba
+Q12220165,Gouvernement Sfar,2,defence,816.0,bourguiba
+Q12220165,TN-04,1,justice,2516.0,bourguiba
+Q12220165,TN-05,1,defence,2909.0,bourguiba
+Q12220165,TN-08,1,justice,106.0,ben_ali
+Q12230326,Gouvernement Mohamed Mzali,1,women_family,2192.0,bourguiba
+Q12230326,TN-05,1,women_family,965.0,bourguiba
+Q12237240,Gouvernement Fakhfakh,2,local_affairs,188.0,second_republic
+Q12237240,TN-17,1,local_affairs,139.0,second_republic
+Q12239668,Gouvernement Fakhfakh,1,education,188.0,second_republic
+Q12239668,TN-17,1,education,188.0,second_republic
+Q12239709,TN-10,1,other,1085.0,ben_ali
+Q12239765,Gouvernement Bourguiba II,2,justice,4849.0,monarchy
+Q12239765,Gouvernement Ladgham,2,justice,725.0,bourguiba
+Q12239765,TN-02,1,justice,279.0,bourguiba
+Q12239816,Gouvernement Ben Ali,2,education,0.0,bourguiba
+Q12239816,Gouvernement Ladgham,1,other,360.0,bourguiba
+Q12239816,Gouvernement Mohamed Mzali,3,equipment_housing,6651.0,bourguiba
+Q12239816,Gouvernement Nouira,3,equipment_housing|presidency_affairs|youth_sports,10956.0,bourguiba
+Q12239816,Gouvernement Sfar,2,equipment_housing,816.0,bourguiba
+Q12239816,TN-04,3,equipment_housing|youth_sports,2082.0,bourguiba
+Q12239816,TN-05,1,equipment_housing,994.0,bourguiba
+Q12239816,TN-06,2,education|higher_education,350.0,bourguiba
+Q12240251,Gouvernement Nouira,1,justice,3652.0,bourguiba
+Q12240251,TN-04,1,justice,585.0,bourguiba
+Q12240636,Gouvernement Ben Ali,2,justice,0.0,bourguiba
+Q12240636,Gouvernement Hédi Baccouche I,1,justice,365.0,bourguiba
+Q12240636,Gouvernement Mohamed Mzali,1,justice,2192.0,bourguiba
+Q12240636,TN-05,1,justice,790.0,bourguiba
+Q12246948,Gouvernement Mohamed Mzali,2,justice,4459.0,bourguiba
+Q12246948,Gouvernement Nouira,1,public_service_governance,3652.0,bourguiba
+Q12246948,TN-05,1,justice,1648.0,bourguiba
+Q12270270,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,foreign_affairs,1314.0,second_republic
+Q12270270,Gouvernement Larayedh,2,foreign_affairs,687.0,transition
+Q12270270,Gouvernement Mechichi,2,foreign_affairs,770.0,second_republic
+Q12270270,TN-13,1,foreign_affairs,320.0,transition
+Q12270270,TN-18,1,foreign_affairs,888.0,second_republic
+Q12352837,Gouvernement Larayedh,2,justice,687.0,transition
+Q12352837,TN-13,1,justice,322.0,transition
+Q124353858,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,economy_planning,1314.0,second_republic
+Q124353858,TN-20,1,economy_planning,214.0,saied_exception
+Q124679,TN-09,1,other,1096.0,ben_ali
+Q125330973,TN-20,1,education,146.0,saied_exception
+Q125337883,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,industry_energy,1314.0,second_republic
+Q125337883,TN-20,1,industry_energy,824.0,saied_exception
+Q128723414,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,head_of_government,1314.0,second_republic
+Q128723414,TN-20,1,social_affairs,92.0,saied_exception
+Q128723414,TN-21,2,head_of_government,451.0,saied_exception
+Q129810051,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,defence,1314.0,second_republic
+Q129810051,TN-21,1,defence,731.0,saied_exception
+Q130344076,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,interior,1314.0,second_republic
+Q130344076,TN-20,1,interior,823.0,saied_exception
+Q130530616,TN-17,1,transport,2211.0,second_republic
+Q132560656,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,finance,1314.0,second_republic
+Q132560656,TN-21,1,finance,567.0,saied_exception
+Q132560774,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,women_family,1314.0,second_republic
+Q132560774,TN-21,1,women_family,731.0,saied_exception
+Q132633117,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,religious_affairs,1314.0,second_republic
+Q132633117,TN-21,1,religious_affairs,731.0,saied_exception
+Q132633142,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,environment,1314.0,second_republic
+Q132633142,TN-21,1,environment,731.0,saied_exception
+Q134414603,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,tourism_handicrafts,1314.0,second_republic
+Q134414603,TN-22,1,tourism_handicrafts,366.0,saied_exception
+Q136083590,TN-20,1,other,946.0,saied_exception
+Q136257453,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,economy_planning,1314.0,second_republic
+Q136257453,TN-21,1,economy_planning,731.0,saied_exception
+Q1363916,Gouvernement Hédi Baccouche I,1,head_of_government,365.0,bourguiba
+Q1363916,Gouvernement Hédi Baccouche II,1,head_of_government,366.0,ben_ali
+Q1363916,Gouvernement Hédi Baccouche III,1,head_of_government,0.0,ben_ali
+Q1363916,Gouvernement Mohamed Mzali,1,presidency_affairs,2192.0,bourguiba
+Q1363916,TN-06,1,social_affairs,217.0,bourguiba
+Q1363916,TN-08,2,head_of_government,1380.0,ben_ali
+Q136456985,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,equipment_housing,1314.0,second_republic
+Q136456985,TN-21,1,equipment_housing,524.0,saied_exception
+Q136456985,TN-22,1,industry_energy,121.0,saied_exception
+Q136769587,TN-13,1,women_family,791.0,transition
+Q1381809,Gouvernement Ben Ali,3,other|youth_sports,0.0,bourguiba
+Q1381809,Gouvernement Hédi Baccouche I,1,presidency_affairs,365.0,bourguiba
+Q1381809,Gouvernement Hédi Baccouche II,1,justice,366.0,ben_ali
+Q1381809,Gouvernement Hédi Baccouche III,1,justice,0.0,ben_ali
+Q1381809,Gouvernement Karoui,2,head_of_government,7355.0,ben_ali
+Q1381809,Gouvernement Mohamed Mzali,2,youth_sports,4459.0,bourguiba
+Q1381809,Gouvernement Sfar,2,youth_sports,816.0,bourguiba
+Q1381809,TN-05,1,youth_sports,568.0,bourguiba
+Q1381809,TN-08,1,justice,427.0,ben_ali
+Q1381809,TN-09,2,head_of_government,7406.0,ben_ali
+Q138863507,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,education,1314.0,second_republic
+Q138863507,TN-21,1,education,731.0,saied_exception
+Q138913276,TN-20,1,other,923.0,saied_exception
+Q139583145,TN-09,1,other,3978.0,ben_ali
+Q139820983,TN-22,1,other,494.0,saied_exception
+Q140077197,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,agriculture,1314.0,second_republic
+Q140077197,TN-19,1,agriculture,574.0,saied_exception
+Q14182276,Gouvernement Essid,1,other,365.0,second_republic
+Q14182276,Gouvernement Jebali,1,other,445.0,transition
+Q15055101,Gouvernement Karoui,4,justice|state_property,14710.0,ben_ali
+Q15055101,TN-09,2,justice|state_property,3494.0,ben_ali
+Q152369,Gouvernement Ben Ali,2,youth_sports,0.0,bourguiba
+Q152369,Gouvernement Hédi Baccouche I,1,youth_sports,365.0,bourguiba
+Q152369,Gouvernement Mohamed Mzali,3,culture|information_media,6651.0,bourguiba
+Q152369,Gouvernement Nouira,3,culture|health|youth_sports,10956.0,bourguiba
+Q152369,TN-04,3,culture|health|youth_sports,2590.0,bourguiba
+Q152369,TN-07,1,youth_sports,168.0,bourguiba
+Q15304780,Gouvernement Jomaa,2,head_of_government,738.0,transition
+Q15304780,Gouvernement Larayedh,2,industry_energy,687.0,transition
+Q15304780,TN-13,1,industry_energy,322.0,transition
+Q15304780,TN-14,2,head_of_government,746.0,transition
+Q1530765,Gouvernement Nouira,1,foreign_affairs,3652.0,bourguiba
+Q1530765,TN-04,1,foreign_affairs,1440.0,bourguiba
+Q15703367,Gouvernement Jomaa,2,tourism_handicrafts,738.0,transition
+Q15703367,TN-14,1,tourism_handicrafts,373.0,transition
+Q15829893,Gouvernement Jomaa,2,foreign_affairs,738.0,transition
+Q15829893,TN-13,1,foreign_affairs,373.0,transition
+Q16027761,Gouvernement Mohamed Mzali,1,justice,2192.0,bourguiba
+Q16027761,TN-05,1,justice,471.0,bourguiba
+Q16027763,Gouvernement Jomaa,2,justice,738.0,transition
+Q16027763,TN-14,1,justice,373.0,transition
+Q16027809,Gouvernement Ghannouchi I,4,education|youth_sports,17006.0,ben_ali
+Q16027809,Gouvernement Karoui,2,youth_sports,7355.0,ben_ali
+Q16027809,TN-09,1,youth_sports,2052.0,ben_ali
+Q16027809,TN-10,1,education,723.0,ben_ali
+Q16117997,Gouvernement Bourguiba II,6,finance|other|trade,14547.0,monarchy
+Q16117997,Gouvernement Ladgham,2,finance,725.0,bourguiba
+Q16117997,Gouvernement Nouira,2,finance,7112.0,bourguiba
+Q16117997,TN-02,2,finance|industry_energy,1130.0,bourguiba
+Q16120212,Gouvernement Jomaa,1,health,365.0,transition
+Q16120212,TN-14,1,health,373.0,transition
+Q16123702,Gouvernement Jomaa,2,industry_energy,738.0,transition
+Q16123702,TN-14,1,industry_energy,373.0,transition
+Q16127215,Gouvernement Ben Ali,2,culture,0.0,bourguiba
+Q16127215,Gouvernement Hédi Baccouche I,1,culture,365.0,bourguiba
+Q16127215,Gouvernement Mohamed Mzali,1,culture,2192.0,bourguiba
+Q16127215,Gouvernement Sfar,2,culture,816.0,bourguiba
+Q16127215,TN-05,1,culture,505.0,bourguiba
+Q16127215,TN-07,1,culture,193.0,bourguiba
+Q16171996,Gouvernement Larayedh,1,investment_cooperation,365.0,transition
+Q16171996,TN-13,1,investment_cooperation,322.0,transition
+Q16180628,Gouvernement Ghannouchi I,5,government_secretariat|interior|youth_sports,21389.0,ben_ali
+Q16180628,TN-10,2,interior|youth_sports,1847.0,ben_ali
+Q16262803,Gouvernement Nouira,3,agriculture|health|interior,10956.0,bourguiba
+Q16262803,TN-04,3,agriculture|health|interior,1913.0,bourguiba
+Q16262805,Gouvernement Bourguiba II,2,agriculture|other,4849.0,monarchy
+Q16262805,TN-02,1,agriculture,986.0,bourguiba
+Q16263000,Gouvernement Hédi Baccouche I,1,information_media,365.0,bourguiba
+Q16263000,Gouvernement Hédi Baccouche II,1,information_media,366.0,ben_ali
+Q16263000,Gouvernement Mohamed Mzali,4,information_media|other|transport,8843.0,bourguiba
+Q16263000,Gouvernement Nouira,1,transport,3652.0,bourguiba
+Q16263000,TN-05,1,transport,698.0,bourguiba
+Q16267511,Gouvernement Ghannouchi I,4,economy_planning|employment_training|environment,17006.0,ben_ali
+Q16267511,Gouvernement Karoui,1,environment,3652.0,ben_ali
+Q16267511,TN-09,1,environment,642.0,ben_ali
+Q16267511,TN-10,1,employment_training,256.0,ben_ali
+Q16267906,Gouvernement Caïd Essebsi,2,finance,300.0,ben_ali
+Q16267906,Gouvernement Ghannouchi II,1,finance,0.0,ben_ali
+Q16267906,TN-10,1,finance,331.0,transition
+Q16268984,Gouvernement Ghannouchi I,2,ict,8503.0,ben_ali
+Q16268984,TN-10,1,ict,864.0,ben_ali
+Q16269694,Gouvernement Larayedh,2,tourism_handicrafts,687.0,transition
+Q16269694,TN-13,1,tourism_handicrafts,322.0,transition
+Q16321385,Gouvernement Ghannouchi I,5,finance|relations_parliament,21389.0,ben_ali
+Q16321385,TN-10,1,finance,70.0,ben_ali
+Q16325226,Gouvernement Ghannouchi I,2,religious_affairs,8503.0,ben_ali
+Q16325226,TN-10,1,religious_affairs,2242.0,ben_ali
+Q16325262,Gouvernement Ben Ammar,2,equipment_housing,1343.0,protectorate
+Q16325262,Gouvernement Bourguiba I,2,equipment_housing|other,832.0,protectorate_end
+Q16325262,TN-00,1,equipment_housing,691.0,protectorate_end
+Q16325262,TN-02,3,industry_energy|transport,4074.0,bourguiba
+Q1642894,Gouvernement Ben Ammar,4,finance|trade,2686.0,protectorate
+Q1642894,Gouvernement Bourguiba I,2,finance|other,832.0,protectorate_end
+Q1642894,Gouvernement Bourguiba II,2,finance,4849.0,monarchy
+Q1642894,Gouvernement Ladgham,2,economy_planning,725.0,bourguiba
+Q1642894,Gouvernement Nouira,3,head_of_government|interior,10764.0,bourguiba
+Q1642894,TN-00,1,finance,1119.0,protectorate_end
+Q1642894,TN-02,1,other,4423.0,bourguiba
+Q1642894,TN-03,1,industry_energy,147.0,bourguiba
+Q1642894,TN-04,3,head_of_government|interior,6975.0,bourguiba
+Q16588807,Gouvernement Mohamed Mzali,2,education,4459.0,bourguiba
+Q16588807,TN-05,1,education,2201.0,bourguiba
+Q16639035,Gouvernement Chahed,2,justice,2740.0,second_republic
+Q16639035,Gouvernement Jomaa,2,defence,738.0,transition
+Q16639035,TN-14,1,defence,373.0,transition
+Q16639035,TN-16,3,interior|justice|religious_affairs,999.0,second_republic
+Q16642407,Gouvernement Jebali,1,diaspora,445.0,transition
+Q16642407,Gouvernement Larayedh,1,diaspora,322.0,transition
+Q16664915,Gouvernement Karoui,4,agriculture|interior,14710.0,ben_ali
+Q16664915,TN-09,2,agriculture|interior,1577.0,ben_ali
+Q16664925,Gouvernement Hédi Baccouche II,1,other,366.0,ben_ali
+Q16664925,Gouvernement Hédi Baccouche III,1,other,0.0,ben_ali
+Q16664925,Gouvernement Karoui,8,finance|other|presidency_affairs,29420.0,ben_ali
+Q16664925,TN-09,1,finance,820.0,ben_ali
+Q16665400,Gouvernement Jomaa,2,religious_affairs,738.0,transition
+Q16665400,TN-14,1,religious_affairs,373.0,transition
+Q16666126,Gouvernement Larayedh,1,employment_training,365.0,transition
+Q16666126,TN-13,1,employment_training,322.0,transition
+Q16666273,Gouvernement Jomaa,2,trade,738.0,transition
+Q16666273,TN-14,1,trade,373.0,transition
+Q16666543,Gouvernement Jomaa,1,economy_planning,373.0,transition
+Q16666543,Gouvernement Larayedh,1,industry_energy,322.0,transition
+Q16666543,TN-14,1,other,338.0,transition
+Q16666837,Gouvernement Ben Ali,1,finance,0.0,
+Q16666837,Gouvernement Hédi Baccouche I,1,finance,365.0,bourguiba
+Q16666837,Gouvernement Hédi Baccouche II,1,finance,366.0,ben_ali
+Q16666837,Gouvernement Hédi Baccouche III,1,agriculture,0.0,ben_ali
+Q16666837,Gouvernement Karoui,4,agriculture|finance,14710.0,ben_ali
+Q16666837,TN-07,1,finance,532.0,bourguiba
+Q16666837,TN-08,1,agriculture,680.0,ben_ali
+Q16666837,TN-09,1,finance,1688.0,ben_ali
+Q16679067,Gouvernement Jomaa,2,higher_education,738.0,transition
+Q16679067,TN-14,2,higher_education|ict,746.0,transition
+Q16802173,Gouvernement Essid,2,social_affairs,933.0,second_republic
+Q16802173,Gouvernement Jomaa,2,social_affairs,738.0,transition
+Q16802173,TN-14,1,social_affairs,713.0,transition
+Q16855080,Gouvernement Jomaa,2,transport,738.0,transition
+Q16855080,Gouvernement Mechichi,1,environment,366.0,second_republic
+Q16855080,TN-14,1,transport,373.0,transition
+Q16855104,Gouvernement Jomaa,2,youth_sports,738.0,transition
+Q16855104,TN-14,2,women_family|youth_sports,746.0,transition
+Q16855223,Gouvernement Jomaa,2,education,738.0,transition
+Q16855223,TN-14,1,education,373.0,transition
+Q16855250,Gouvernement Jomaa,2,employment_training,738.0,transition
+Q16855250,TN-14,1,employment_training,373.0,transition
+Q16855252,Gouvernement Jomaa,2,agriculture,738.0,transition
+Q16855252,TN-14,1,agriculture,373.0,transition
+Q16855255,Gouvernement Jomaa,2,equipment_housing,738.0,transition
+Q16855255,TN-14,1,equipment_housing,373.0,transition
+Q16889653,Gouvernement Jomaa,2,culture,738.0,transition
+Q16889653,TN-14,1,culture,373.0,transition
+Q17425841,Gouvernement Ben Ali,3,economy_planning|trade,0.0,bourguiba
+Q17425841,Gouvernement Hédi Baccouche I,1,economy_planning,365.0,bourguiba
+Q17425841,Gouvernement Hédi Baccouche II,1,agriculture,366.0,ben_ali
+Q17425841,Gouvernement Karoui,2,trade,7355.0,ben_ali
+Q17425841,Gouvernement Mohamed Mzali,1,trade,2192.0,bourguiba
+Q17425841,Gouvernement Nouira,1,trade,3652.0,bourguiba
+Q17425841,TN-04,1,industry_energy,850.0,bourguiba
+Q17425841,TN-05,2,industry_energy,1642.0,bourguiba
+Q17425841,TN-08,1,agriculture,258.0,ben_ali
+Q17425841,TN-09,1,industry_energy,461.0,ben_ali
+Q17580016,Gouvernement Karoui,2,agriculture,7355.0,ben_ali
+Q17580016,TN-09,1,agriculture,260.0,ben_ali
+Q18398343,Gouvernement Chahed,2,justice,2740.0,second_republic
+Q18398343,Gouvernement Fakhfakh,1,ict,188.0,second_republic
+Q18398343,Gouvernement Jomaa,1,state_property,373.0,transition
+Q18398343,Gouvernement Mechichi,1,other,404.0,second_republic
+Q18398343,Gouvernement Sfar,1,transport,451.0,bourguiba
+Q18398343,TN-16,2,defence|justice,591.0,second_republic
+Q18399544,Gouvernement Hédi Baccouche I,1,health,365.0,bourguiba
+Q18399544,Gouvernement Hédi Baccouche II,1,youth_sports,366.0,ben_ali
+Q18399544,Gouvernement Hédi Baccouche III,1,youth_sports,0.0,ben_ali
+Q18399544,Gouvernement Karoui,1,youth_sports,3652.0,ben_ali
+Q18399544,TN-08,1,youth_sports,938.0,ben_ali
+Q18610883,Gouvernement Mohamed Mzali,2,youth_sports,4459.0,bourguiba
+Q18610883,TN-05,1,youth_sports,166.0,bourguiba
+Q18880483,Gouvernement Essid,2,interior,933.0,second_republic
+Q18880483,TN-15,1,interior,340.0,second_republic
+Q1890995,TN-10,1,health,10.0,transition
+Q19060284,Gouvernement Ghannouchi I,1,transport,4383.0,ben_ali
+Q19060284,Gouvernement Karoui,1,transport,3652.0,ben_ali
+Q19060284,TN-09,1,transport,1792.0,ben_ali
+Q19060286,Gouvernement Ghannouchi I,2,industry_energy,8503.0,ben_ali
+Q19060286,TN-09,1,industry_energy,2144.0,ben_ali
+Q19060293,Gouvernement Ghannouchi I,2,equipment_housing,8503.0,ben_ali
+Q19060293,TN-09,1,equipment_housing,2589.0,ben_ali
+Q19060301,TN-09,1,education,494.0,ben_ali
+Q19060320,Gouvernement Ghannouchi I,4,foreign_affairs|industry_energy|investment_cooperation,17006.0,ben_ali
+Q19060320,Gouvernement Karoui,2,health,7355.0,ben_ali
+Q19060320,TN-10,1,industry_energy,443.0,ben_ali
+Q19060337,Gouvernement Ghannouchi I,3,equipment_housing,12886.0,ben_ali
+Q19060337,TN-10,1,equipment_housing,1388.0,ben_ali
+Q19060346,Gouvernement Ghannouchi I,3,employment_training,12886.0,ben_ali
+Q19060346,Gouvernement Karoui,4,agriculture,14710.0,ben_ali
+Q19060346,TN-10,1,employment_training,2185.0,ben_ali
+Q19248970,Gouvernement Chahed,2,defence,2740.0,second_republic
+Q19248970,Gouvernement Essid,2,defence,933.0,second_republic
+Q19248970,TN-15,2,defence|justice,1027.0,second_republic
+Q19345818,Gouvernement Chahed,2,tourism_handicrafts,2740.0,second_republic
+Q19345818,Gouvernement Essid,3,tourism_handicrafts,1501.0,second_republic
+Q19345818,TN-15,1,tourism_handicrafts,1377.0,second_republic
+Q1951854,Gouvernement Ben Ammar,4,economy_planning|other|without_portfolio,2686.0,protectorate
+Q1951854,Gouvernement Bourguiba I,2,without_portfolio,832.0,protectorate_end
+Q1951854,Gouvernement Ladgham,2,foreign_affairs,725.0,bourguiba
+Q1951854,Gouvernement Nouira,2,foreign_affairs,7112.0,bourguiba
+Q1951854,TN-02,1,tourism_handicrafts,280.0,bourguiba
+Q1951854,TN-03,1,foreign_affairs,1312.0,bourguiba
+Q19543880,Gouvernement Essid,2,investment_cooperation,933.0,second_republic
+Q19544121,Gouvernement Chahed,2,youth_sports,2740.0,second_republic
+Q19544121,Gouvernement Essid,2,other,933.0,second_republic
+Q19544121,TN-16,1,youth_sports,809.0,second_republic
+Q19544932,Gouvernement Chahed,4,investment_cooperation|trade,5480.0,second_republic
+Q19544932,Gouvernement Essid,2,employment_training,933.0,second_republic
+Q19544932,TN-15,1,employment_training,568.0,second_republic
+Q19544932,TN-16,3,industry_energy|investment_cooperation|trade,1543.0,second_republic
+Q19629356,Gouvernement Ghannouchi I,4,agriculture|transport,17006.0,ben_ali
+Q19629356,Gouvernement Hédi Baccouche II,1,industry_energy,366.0,ben_ali
+Q19629356,Gouvernement Hédi Baccouche III,1,information_media,0.0,ben_ali
+Q19629356,Gouvernement Karoui,10,agriculture|economy_planning|information_media|other|social_affairs|transport,36775.0,ben_ali
+Q19629356,TN-08,1,industry_energy,258.0,ben_ali
+Q19629356,TN-09,4,agriculture|industry_energy|transport,5180.0,ben_ali
+Q19629356,TN-10,2,ict|transport,1594.0,ben_ali
+Q19631455,TN-09,1,women_family,2526.0,ben_ali
+Q19848008,Gouvernement Mechichi,2,transport,770.0,second_republic
+Q19848008,TN-18,1,transport,404.0,second_republic
+Q19951841,Gouvernement Essid,2,youth_sports,933.0,second_republic
+Q19951841,TN-15,1,youth_sports,568.0,second_republic
+Q19955807,Gouvernement Essid,2,ict,933.0,second_republic
+Q19955807,TN-15,1,ict,568.0,second_republic
+Q19956120,Gouvernement Essid,4,industry_energy,1866.0,second_republic
+Q19956120,TN-15,1,industry_energy,568.0,second_republic
+Q19956225,Gouvernement Chahed,2,education,2740.0,second_republic
+Q19956225,Gouvernement Essid,2,education,933.0,second_republic
+Q19956225,TN-15,1,education,814.0,second_republic
+Q19956346,Gouvernement Ghannouchi I,6,education|higher_education,25509.0,ben_ali
+Q19956346,TN-10,1,education,1108.0,ben_ali
+Q19956395,Gouvernement Essid,2,culture,933.0,second_republic
+Q19956395,TN-15,1,culture,340.0,second_republic
+Q20047058,Gouvernement Nouira,1,youth_sports,3652.0,bourguiba
+Q20047058,TN-04,1,youth_sports,585.0,bourguiba
+Q20412385,Gouvernement Essid,2,trade,933.0,second_republic
+Q20412385,TN-15,1,trade,340.0,second_republic
+Q20417790,Gouvernement Chahed,2,tourism_handicrafts,2740.0,second_republic
+Q20417790,TN-16,2,tourism_handicrafts|transport,581.0,second_republic
+Q20423358,Gouvernement Essid,4,social_affairs|transport,1866.0,second_republic
+Q20423358,TN-15,2,social_affairs|transport,568.0,second_republic
+Q204487,Gouvernement Ben Ali,2,head_of_government,0.0,bourguiba
+Q204487,Gouvernement Mohamed Mzali,3,interior|other,6576.0,bourguiba
+Q204487,Gouvernement Sfar,2,interior,816.0,bourguiba
+Q204487,TN-05,1,interior,558.0,bourguiba
+Q204487,TN-07,2,head_of_government,72.0,bourguiba
+Q20643083,Gouvernement Nouira,1,culture,3652.0,bourguiba
+Q20643083,TN-04,1,culture,413.0,bourguiba
+Q20991574,Gouvernement Essid,2,higher_education,933.0,second_republic
+Q20991574,TN-15,1,higher_education,568.0,second_republic
+Q21084499,Gouvernement Essid,2,finance|other,933.0,second_republic
+Q21511555,Gouvernement Fakhfakh,3,equipment_housing|state_property,188.0,second_republic
+Q21511555,TN-17,2,equipment_housing|state_property,237.0,second_republic
+Q21996842,Gouvernement Chahed,2,interior,2740.0,second_republic
+Q21996842,Gouvernement Essid,4,interior|other,1866.0,second_republic
+Q21996842,TN-15,1,interior,603.0,second_republic
+Q22210502,Gouvernement Essid,2,environment,933.0,second_republic
+Q22210502,TN-15,1,environment,568.0,second_republic
+Q22211169,Gouvernement Chahed,2,transport,2740.0,second_republic
+Q22211169,Gouvernement Essid,4,equipment_housing|transport,1866.0,second_republic
+Q22211169,TN-15,1,transport,603.0,second_republic
+Q22282799,Gouvernement Chahed,2,industry_energy,2740.0,second_republic
+Q22282799,TN-16,1,industry_energy,381.0,second_republic
+Q22344522,TN-10,1,women_family,731.0,ben_ali
+Q22344522,TN-12,1,women_family,670.0,transition
+Q2268624,Gouvernement Bourguiba II,2,culture,4849.0,monarchy
+Q2268624,Gouvernement Ladgham,2,culture|other,725.0,bourguiba
+Q2268624,Gouvernement Nouira,3,culture|information_media,10956.0,bourguiba
+Q2268624,TN-02,1,culture,3170.0,bourguiba
+Q2268624,TN-04,2,culture,1541.0,bourguiba
+Q22928978,Gouvernement Hédi Baccouche I,1,agriculture,365.0,bourguiba
+Q22928978,Gouvernement Ladgham,3,agriculture|other,1085.0,bourguiba
+Q22928978,Gouvernement Mohamed Mzali,2,agriculture,4459.0,bourguiba
+Q22928978,Gouvernement Nouira,5,agriculture|equipment_housing|transport,18068.0,bourguiba
+Q22928978,TN-02,1,agriculture,775.0,bourguiba
+Q22928978,TN-04,4,agriculture|equipment_housing|transport,5710.0,bourguiba
+Q23017371,Gouvernement Chahed,2,equipment_housing,2740.0,second_republic
+Q23017371,Gouvernement Essid,2,equipment_housing,933.0,second_republic
+Q23017371,TN-15,2,equipment_housing,2754.0,second_republic
+Q2374730,Gouvernement Ladgham,2,agriculture,725.0,bourguiba
+Q2374730,Gouvernement Mohamed Mzali,1,information_media,2192.0,bourguiba
+Q2374730,Gouvernement Nouira,3,interior|youth_sports,10764.0,bourguiba
+Q2374730,TN-04,2,interior|youth_sports,2099.0,bourguiba
+Q2388455,Gouvernement Caïd Essebsi,2,education,300.0,ben_ali
+Q2388455,Gouvernement Essid,2,foreign_affairs,933.0,second_republic
+Q2388455,Gouvernement Ghannouchi II,1,education,0.0,ben_ali
+Q2388455,TN-10,2,education|other,682.0,transition
+Q2388455,TN-14,1,foreign_affairs,335.0,second_republic
+Q24690603,Gouvernement Ghannouchi I,2,religious_affairs,8503.0,ben_ali
+Q24690603,TN-10,1,religious_affairs,1820.0,ben_ali
+Q24690887,Gouvernement Essid,2,justice,933.0,second_republic
+Q24690887,TN-15,1,justice,228.0,second_republic
+Q24752632,TN-15,1,religious_affairs,228.0,second_republic
+Q24951001,Gouvernement Essid,1,state_property,365.0,second_republic
+Q24951001,TN-15,1,state_property,568.0,second_republic
+Q25391268,Gouvernement Chahed,2,head_of_government,2740.0,second_republic
+Q25391268,Gouvernement Essid,4,agriculture|local_affairs|other,1866.0,second_republic
+Q25391268,TN-15,1,local_affairs,228.0,second_republic
+Q25391268,TN-16,2,head_of_government,2558.0,second_republic
+Q25391292,Gouvernement Essid,2,agriculture,933.0,second_republic
+Q25391292,TN-15,1,agriculture,568.0,second_republic
+Q25453450,Gouvernement Chahed,5,employment_training,6759.0,second_republic
+Q25453450,TN-16,1,employment_training,359.0,second_republic
+Q26505513,Gouvernement Essid,2,trade,933.0,second_republic
+Q26505513,TN-15,1,trade,228.0,second_republic
+Q2655671,TN-04,1,other,2986.0,bourguiba
+Q26710667,Gouvernement Chahed,2,religious_affairs,2740.0,second_republic
+Q26710667,TN-16,1,religious_affairs,69.0,second_republic
+Q26834002,Gouvernement Chahed,2,ict,2740.0,second_republic
+Q26834002,Gouvernement Fakhfakh,2,transport,188.0,second_republic
+Q26834002,TN-16,1,ict,1279.0,second_republic
+Q26834002,TN-17,1,transport,139.0,second_republic
+Q2688070,Gouvernement Karoui,2,foreign_affairs,7355.0,ben_ali
+Q2688070,TN-09,1,foreign_affairs,710.0,ben_ali
+Q26905827,Gouvernement Chahed,2,women_family,2740.0,second_republic
+Q26905827,TN-16,1,women_family,1279.0,second_republic
+Q27179077,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
+Q27179077,TN-04,1,social_affairs,808.0,bourguiba
+Q27665914,Gouvernement Chahed,2,investment_cooperation,2740.0,second_republic
+Q27665914,TN-16,2,finance|investment_cooperation,516.0,second_republic
+Q27666209,Gouvernement Chahed,5,employment_training|health|industry_energy,6759.0,second_republic
+Q27666209,TN-16,3,employment_training|health|industry_energy,803.0,second_republic
+Q27756741,Gouvernement Ghannouchi I,3,information_media|relations_parliament|tourism_handicrafts,12886.0,ben_ali
+Q27756741,Gouvernement Karoui,2,tourism_handicrafts,7355.0,ben_ali
+Q27756741,TN-09,1,tourism_handicrafts,2191.0,ben_ali
+Q27758476,Gouvernement Essid,2,presidency_affairs,933.0,second_republic
+Q27758476,TN-15,1,other,1034.0,second_republic
+Q28018980,TN-10,1,women_family,1156.0,ben_ali
+Q28105062,Gouvernement Chahed,2,social_affairs,2740.0,second_republic
+Q28105062,Gouvernement Mechichi,3,social_affairs,1136.0,second_republic
+Q28105062,TN-16,2,health|social_affairs,1290.0,second_republic
+Q28105062,TN-18,2,health|social_affairs,421.0,second_republic
+Q281184,Gouvernement Jebali,2,interior,1176.0,ben_ali
+Q281184,Gouvernement Larayedh,2,head_of_government,687.0,transition
+Q281184,TN-12,1,interior,445.0,transition
+Q281184,TN-13,2,head_of_government,644.0,transition
+Q282026,Gouvernement Karoui,2,defence,7355.0,ben_ali
+Q282026,Gouvernement Mohamed Mzali,3,education|higher_education,6651.0,bourguiba
+Q282026,Gouvernement Nouira,1,higher_education,3652.0,bourguiba
+Q282026,TN-04,1,higher_education,2870.0,bourguiba
+Q282026,TN-05,1,education,86.0,bourguiba
+Q282026,TN-06,2,culture|social_affairs,251.0,bourguiba
+Q282026,TN-09,1,defence,1708.0,ben_ali
+Q2820925,Gouvernement Bourguiba II,4,agriculture|other,9698.0,monarchy
+Q2820925,Gouvernement Ladgham,2,agriculture,725.0,bourguiba
+Q2820925,Gouvernement Nouira,5,agriculture|defence|equipment_housing|transport,18068.0,bourguiba
+Q2820925,TN-02,1,agriculture,781.0,bourguiba
+Q2820925,TN-04,5,defence|equipment_housing|interior|transport,2593.0,bourguiba
+Q2820931,Gouvernement Ben Ali,1,interior,0.0,
+Q2820931,Gouvernement Ghannouchi I,2,interior,8503.0,ben_ali
+Q2820931,Gouvernement Hédi Baccouche I,1,defence,365.0,bourguiba
+Q2820931,Gouvernement Hédi Baccouche II,1,defence,366.0,ben_ali
+Q2820931,Gouvernement Hédi Baccouche III,1,defence,0.0,ben_ali
+Q2820931,Gouvernement Karoui,9,defence|interior|justice,33072.0,ben_ali
+Q2820931,TN-08,1,defence,1045.0,ben_ali
+Q2820931,TN-09,3,defence|interior|justice,2687.0,ben_ali
+Q2820931,TN-10,1,interior,433.0,ben_ali
+Q2820991,Gouvernement Mohamed Mzali,2,economy_planning,4459.0,bourguiba
+Q2820991,Gouvernement Nouira,1,economy_planning,3652.0,bourguiba
+Q2820991,TN-04,1,industry_energy,1188.0,bourguiba
+Q2820991,TN-05,1,industry_energy,1267.0,bourguiba
+Q2820994,Gouvernement Nouira,1,finance,3652.0,bourguiba
+Q2820994,TN-04,1,finance,851.0,bourguiba
+Q2820994,TN-05,1,other,64.0,bourguiba
+Q2820999,Gouvernement Caïd Essebsi,2,industry_energy,300.0,ben_ali
+Q2820999,Gouvernement Ghannouchi I,4,industry_energy,17006.0,ben_ali
+Q2820999,TN-11,1,industry_energy,299.0,transition
+Q2821010,Gouvernement Ghannouchi I,4,culture|foreign_affairs,17006.0,ben_ali
+Q2821010,Gouvernement Karoui,2,culture,7355.0,ben_ali
+Q2821010,TN-09,1,culture,3019.0,ben_ali
+Q2821010,TN-10,1,foreign_affairs,280.0,ben_ali
+Q2821055,Gouvernement Ghannouchi I,3,education,12886.0,ben_ali
+Q2821055,TN-10,1,youth_sports,19.0,ben_ali
+Q2821119,Gouvernement Jebali,2,transport,1176.0,ben_ali
+Q2821119,Gouvernement Larayedh,2,transport,687.0,transition
+Q2821119,TN-12,1,transport,767.0,transition
+Q2821127,Gouvernement Caïd Essebsi,2,defence,300.0,ben_ali
+Q2821127,Gouvernement Chahed,2,defence,2740.0,second_republic
+Q2821127,Gouvernement Ghannouchi I,5,health|higher_education,21389.0,ben_ali
+Q2821127,Gouvernement Ghannouchi II,1,defence,0.0,ben_ali
+Q2821127,Gouvernement Jebali,2,defence,1176.0,ben_ali
+Q2821127,TN-10,2,defence|health,1034.0,ben_ali
+Q2821127,TN-16,1,defence,783.0,second_republic
+Q2821146,Gouvernement Jebali,2,education,1176.0,ben_ali
+Q2821146,TN-12,1,education,445.0,transition
+Q2821154,Gouvernement Fakhfakh,2,health,188.0,second_republic
+Q2821154,Gouvernement Jebali,2,health,1176.0,ben_ali
+Q2821154,Gouvernement Larayedh,2,health,687.0,transition
+Q2821154,TN-12,1,health,767.0,transition
+Q2821154,TN-17,1,health,139.0,second_republic
+Q2821212,Gouvernement Jebali,2,employment_training,1176.0,ben_ali
+Q2821212,Gouvernement Larayedh,2,trade,687.0,transition
+Q2821212,TN-12,1,employment_training,445.0,transition
+Q2821212,TN-13,1,trade,322.0,transition
+Q2821241,Gouvernement Ghannouchi I,6,tourism_handicrafts|transport|youth_sports,25509.0,ben_ali
+Q2821241,Gouvernement Hédi Baccouche I,1,industry_energy,365.0,bourguiba
+Q2821241,Gouvernement Karoui,6,foreign_affairs|justice|youth_sports,22065.0,ben_ali
+Q2821241,TN-09,4,education|foreign_affairs|justice|youth_sports,2380.0,ben_ali
+Q2821241,TN-10,3,tourism_handicrafts|transport|youth_sports,3286.0,ben_ali
+Q2821259,Gouvernement Jebali,1,public_service_governance,445.0,transition
+Q2821259,Gouvernement Larayedh,1,public_service_governance,322.0,transition
+Q2821273,Gouvernement Ghannouchi I,4,culture|foreign_affairs,17006.0,ben_ali
+Q2821273,TN-10,1,culture,868.0,ben_ali
+Q2821280,Gouvernement Caïd Essebsi,1,local_affairs,0.0,ben_ali
+Q2821280,TN-11,1,economy_planning,292.0,transition
+Q2821297,Gouvernement Ghannouchi I,5,agriculture,21389.0,ben_ali
+Q2821297,TN-10,1,agriculture,871.0,ben_ali
+Q2821308,TN-02,1,agriculture,1190.0,bourguiba
+Q2826117,Gouvernement Ghannouchi I,4,industry_energy,17006.0,ben_ali
+Q2826117,Gouvernement Ghannouchi II,2,industry_energy,0.0,ben_ali
+Q2826117,TN-10,1,industry_energy,2301.0,ben_ali
+Q2827482,Gouvernement Caïd Essebsi,2,state_property,300.0,ben_ali
+Q2827482,Gouvernement Chahed,2,religious_affairs,2740.0,second_republic
+Q2827482,Gouvernement Fakhfakh,2,religious_affairs,188.0,second_republic
+Q2827482,Gouvernement Mechichi,3,religious_affairs|state_property,1136.0,second_republic
+Q2827482,TN-10,1,state_property,331.0,transition
+Q2827482,TN-16,1,religious_affairs,1666.0,second_republic
+Q2827482,TN-18,1,state_property,238.0,second_republic
+Q2827512,Gouvernement Bourguiba II,3,economy_planning|health|other,1398.0,monarchy
+Q2827512,TN-02,6,education|finance|health|industry_energy|social_affairs,10825.0,bourguiba
+Q2827529,Gouvernement Ghannouchi II,1,higher_education,0.0,ben_ali
+Q2827529,TN-10,1,higher_education,49.0,transition
+Q2827554,Gouvernement Ghannouchi I,2,information_media|other,8503.0,ben_ali
+Q2827554,Gouvernement Ghannouchi II,1,interior,0.0,ben_ali
+Q2827554,Gouvernement Hédi Baccouche III,1,equipment_housing,0.0,ben_ali
+Q2827554,Gouvernement Karoui,6,education|equipment_housing|information_media|other,22065.0,ben_ali
+Q2827554,TN-08,1,equipment_housing,1155.0,ben_ali
+Q2827554,TN-09,2,education|higher_education,336.0,ben_ali
+Q2827554,TN-10,1,interior,15.0,ben_ali
+Q2827587,Gouvernement Ghannouchi I,5,education|other|presidency_affairs,21126.0,ben_ali
+Q2827587,TN-10,1,education,433.0,ben_ali
+Q2827624,Gouvernement Bourguiba I,2,justice,832.0,protectorate_end
+Q2827624,Gouvernement Bourguiba II,2,justice,4849.0,monarchy
+Q2827624,Gouvernement Ladgham,2,interior,725.0,bourguiba
+Q2827624,Gouvernement Nouira,2,interior,7112.0,bourguiba
+Q2827624,TN-01,1,justice,989.0,monarchy
+Q2827624,TN-02,2,defence|finance,1165.0,bourguiba
+Q2827624,TN-03,1,interior,449.0,bourguiba
+Q2827627,Gouvernement Bourguiba II,2,equipment_housing,4849.0,monarchy
+Q2827627,Gouvernement Ladgham,2,education,725.0,bourguiba
+Q2827627,TN-02,1,equipment_housing,3965.0,bourguiba
+Q2827627,TN-03,1,education,50.0,bourguiba
+Q2827633,Gouvernement Ghannouchi II,1,local_affairs,0.0,ben_ali
+Q2827633,TN-10,1,economy_planning,49.0,transition
+Q2827664,Gouvernement Hédi Baccouche I,1,tourism_handicrafts,365.0,bourguiba
+Q2827664,Gouvernement Hédi Baccouche II,1,transport,366.0,ben_ali
+Q2827664,Gouvernement Hédi Baccouche III,1,transport,0.0,ben_ali
+Q2827664,Gouvernement Karoui,4,social_affairs|transport,14710.0,ben_ali
+Q2827664,TN-08,1,transport,938.0,ben_ali
+Q2827664,TN-09,1,social_affairs,530.0,ben_ali
+Q2836165,Gouvernement Kaak,2,health,1096.0,protectorate
+Q2836180,Gouvernement Ghannouchi I,2,social_affairs,8503.0,ben_ali
+Q2836180,Gouvernement Karoui,6,equipment_housing|health|interior,22065.0,ben_ali
+Q2836180,TN-09,2,equipment_housing|interior,2346.0,ben_ali
+Q2836180,TN-10,1,social_affairs,1976.0,ben_ali
+Q2836376,TN-04,1,other,465.0,bourguiba
+Q28465669,Gouvernement Essid,3,other|presidency_affairs,1501.0,second_republic
+Q28465669,TN-15,1,other,334.0,second_republic
+Q28502176,Gouvernement Chahed,3,culture|other,4019.0,second_republic
+Q28502176,TN-16,1,culture,1279.0,second_republic
+Q2855981,Gouvernement Bourguiba I,2,economy_planning,832.0,protectorate_end
+Q2855981,TN-01,1,industry_energy,470.0,monarchy
+Q28653580,Gouvernement Chahed,2,environment,2740.0,second_republic
+Q28653580,TN-16,2,environment|local_affairs,1618.0,second_republic
+Q28654181,Gouvernement Chahed,2,higher_education,2740.0,second_republic
+Q28654181,TN-16,2,education|higher_education,1333.0,second_republic
+Q2875109,Gouvernement Caïd Essebsi,2,culture,300.0,ben_ali
+Q2875109,Gouvernement Ghannouchi II,1,culture,0.0,ben_ali
+Q2875109,TN-10,1,culture,331.0,transition
+Q2875153,Gouvernement Ben Ammar,1,without_portfolio,613.0,protectorate_end
+Q2875153,Gouvernement Chenik I,2,other,0.0,protectorate
+Q28869633,Gouvernement Chahed,2,finance,2740.0,second_republic
+Q28869633,Gouvernement Essid,2,investment_cooperation|other,933.0,second_republic
+Q28869633,TN-16,1,finance,246.0,second_republic
+Q2893398,Gouvernement Ghannouchi I,4,women_family,17006.0,ben_ali
+Q2893398,TN-10,1,women_family,367.0,ben_ali
+Q2912277,Gouvernement Ghannouchi I,8,defence|health|interior|social_affairs,34012.0,ben_ali
+Q2912277,Gouvernement Karoui,8,health|higher_education,29420.0,ben_ali
+Q2912277,TN-09,1,health,3098.0,ben_ali
+Q2912277,TN-10,3,defence|interior|social_affairs,1666.0,ben_ali
+Q2929686,TN-04,1,defence,285.0,bourguiba
+Q2929698,TN-12,1,trade,391.0,transition
+Q2929705,Gouvernement Ghannouchi I,4,higher_education|justice,17006.0,ben_ali
+Q2929705,TN-10,2,higher_education|justice,4079.0,ben_ali
+Q29440996,Gouvernement Mohamed Mzali,2,economy_planning|tourism_handicrafts,4384.0,bourguiba
+Q29440996,TN-05,1,tourism_handicrafts,1127.0,bourguiba
+Q2947600,Gouvernement Jebali,1,other,445.0,transition
+Q2947600,Gouvernement Larayedh,1,equipment_housing,322.0,transition
+Q29577458,Gouvernement Caïd Essebsi,2,social_affairs,300.0,ben_ali
+Q29577458,Gouvernement Ghannouchi I,3,ict,12623.0,ben_ali
+Q29577458,Gouvernement Ghannouchi II,1,social_affairs,0.0,ben_ali
+Q29577458,Gouvernement Mohamed Mzali,1,social_affairs,2192.0,bourguiba
+Q29577458,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
+Q29577510,Gouvernement Chahed,2,environment,2740.0,second_republic
+Q29577522,Gouvernement Chahed,2,health,2740.0,second_republic
+Q29577522,TN-16,1,health,116.0,second_republic
+Q29580351,Gouvernement Fakhfakh,1,education,0.0,second_republic
+Q29580435,Gouvernement Chahed,3,foreign_affairs,4019.0,second_republic
+Q29580475,Gouvernement Ben Ammar,1,agriculture,613.0,protectorate_end
+Q29580479,Gouvernement Hédi Baccouche I,1,industry_energy,365.0,bourguiba
+Q29580479,Gouvernement Nouira,2,agriculture|other,7112.0,bourguiba
+Q2961945,Gouvernement Ladgham,3,education|other,1085.0,bourguiba
+Q2961945,Gouvernement Nouira,4,economy_planning|education,14416.0,bourguiba
+Q2961945,TN-03,2,education|youth_sports,651.0,bourguiba
+Q2961945,TN-04,1,industry_energy,917.0,bourguiba
+Q2961945,TN-12,1,other,2033.0,transition
+Q2972023,Gouvernement Ghannouchi I,2,social_affairs,8503.0,ben_ali
+Q2972023,Gouvernement Hédi Baccouche I,1,interior,365.0,bourguiba
+Q2972023,Gouvernement Hédi Baccouche II,2,interior|other,732.0,ben_ali
+Q2972023,Gouvernement Hédi Baccouche III,1,interior,0.0,ben_ali
+Q2972023,Gouvernement Karoui,6,interior|justice|social_affairs,22065.0,ben_ali
+Q2972023,TN-08,1,interior,487.0,ben_ali
+Q2972023,TN-09,2,justice|social_affairs,2041.0,ben_ali
+Q2972023,TN-10,1,social_affairs,1208.0,ben_ali
+Q29816892,Gouvernement Karoui,4,education,14710.0,ben_ali
+Q29816892,TN-09,1,education,1060.0,ben_ali
+Q30104283,Gouvernement Essid,2,religious_affairs,933.0,second_republic
+Q30104283,Gouvernement Hédi Baccouche I,2,education,730.0,bourguiba
+Q30104283,Gouvernement Hédi Baccouche II,1,education,366.0,ben_ali
+Q30104283,Gouvernement Karoui,2,social_affairs,7355.0,ben_ali
+Q30104283,TN-09,1,social_affairs,1410.0,ben_ali
+Q30118294,Gouvernement Chahed,4,economy_planning|environment|presidency_affairs,5480.0,second_republic
+Q30118294,Gouvernement Fakhfakh,3,environment,188.0,second_republic
+Q30118294,TN-17,2,environment|local_affairs,237.0,second_republic
+Q3012366,Gouvernement Ghannouchi I,3,defence|information_media,12886.0,ben_ali
+Q3012366,Gouvernement Hédi Baccouche III,1,health,0.0,ben_ali
+Q3012366,Gouvernement Karoui,4,health|higher_education,14710.0,ben_ali
+Q3012366,TN-08,1,health,1207.0,ben_ali
+Q3012366,TN-09,1,higher_education,1827.0,ben_ali
+Q3012366,TN-10,1,defence,1387.0,ben_ali
+Q30224903,Gouvernement Mechichi,1,agriculture,366.0,second_republic
+Q30224903,TN-18,1,agriculture,166.0,second_republic
+Q3039490,Gouvernement Bourguiba II,2,health,4849.0,monarchy
+Q3039490,Gouvernement Ladgham,3,health,1085.0,bourguiba
+Q3039490,Gouvernement Mohamed Mzali,2,interior,4459.0,bourguiba
+Q3039490,Gouvernement Nouira,4,education|health|interior,14416.0,bourguiba
+Q3039490,TN-02,2,health|social_affairs,1346.0,bourguiba
+Q3039490,TN-04,2,education|interior,2578.0,bourguiba
+Q3051875,Gouvernement Fakhfakh,2,head_of_government,188.0,second_republic
+Q3051875,Gouvernement Jebali,2,tourism_handicrafts,1176.0,ben_ali
+Q3051875,Gouvernement Larayedh,2,finance,687.0,transition
+Q3051875,TN-12,2,finance|tourism_handicrafts,851.0,transition
+Q3051875,TN-17,2,head_of_government,376.0,second_republic
+Q30608047,TN-02,1,other,184.0,bourguiba
+Q3066858,Gouvernement Caïd Essebsi,2,interior,300.0,ben_ali
+Q3066858,Gouvernement Ghannouchi II,1,interior,0.0,ben_ali
+Q3066858,TN-10,1,interior,60.0,transition
+Q3067195,Gouvernement Ben Ammar,2,social_affairs,1343.0,protectorate
+Q3067195,Gouvernement Bourguiba II,2,health,4849.0,monarchy
+Q3067195,TN-02,1,health,540.0,bourguiba
+Q30728289,Gouvernement Karoui,5,religious_affairs,18413.0,ben_ali
+Q30728289,TN-09,1,religious_affairs,2809.0,ben_ali
+Q30728498,Gouvernement Chahed,6,diaspora|transport,8220.0,second_republic
+Q30728498,TN-16,2,state_property|transport,545.0,second_republic
+Q30729046,Gouvernement Chahed,1,foreign_affairs,1461.0,second_republic
+Q30729046,TN-16,1,foreign_affairs,121.0,second_republic
+Q30729047,Gouvernement Chahed,4,finance|state_property,5480.0,second_republic
+Q30729047,TN-16,1,state_property,434.0,second_republic
+Q30729169,Gouvernement Chahed,6,foreign_affairs|other|trade|transport,8220.0,second_republic
+Q30729169,TN-16,1,transport,359.0,second_republic
+Q3079840,Gouvernement Ghannouchi I,3,state_property,12623.0,ben_ali
+Q3079840,TN-10,1,state_property,107.0,ben_ali
+Q308017,Gouvernement Ghannouchi I,2,foreign_affairs,8503.0,ben_ali
+Q308017,Gouvernement Hédi Baccouche I,1,information_media,365.0,bourguiba
+Q308017,TN-10,1,foreign_affairs,1611.0,ben_ali
+Q3125288,Gouvernement Hédi Baccouche I,1,interior,365.0,bourguiba
+Q3125288,Gouvernement Hédi Baccouche II,1,interior,366.0,ben_ali
+Q3125288,Gouvernement Karoui,2,information_media|other,7355.0,ben_ali
+Q3125288,Gouvernement Mechichi,3,tourism_handicrafts,1136.0,second_republic
+Q3125288,TN-08,1,interior,360.0,ben_ali
+Q3125297,Gouvernement Slaheddine Baccouche I,2,justice,2151.0,protectorate
+Q3125299,Gouvernement Ghannouchi I,2,foreign_affairs,8503.0,ben_ali
+Q3125299,Gouvernement Hédi Baccouche II,1,foreign_affairs,366.0,ben_ali
+Q3125299,Gouvernement Hédi Baccouche III,1,foreign_affairs,0.0,ben_ali
+Q3125299,Gouvernement Karoui,6,defence|foreign_affairs,22065.0,ben_ali
+Q3125299,TN-09,3,defence|foreign_affairs,5018.0,ben_ali
+Q3125307,Gouvernement Ghannouchi I,2,health,8503.0,ben_ali
+Q3125307,Gouvernement Ghannouchi II,1,agriculture,0.0,ben_ali
+Q3125307,TN-10,3,agriculture|environment|health,1149.0,ben_ali
+Q3125311,Gouvernement Caïd Essebsi,1,interior,0.0,ben_ali
+Q3125311,Gouvernement Essid,2,head_of_government,933.0,second_republic
+Q3125311,Gouvernement Ghannouchi I,2,agriculture,8503.0,ben_ali
+Q3125311,TN-11,1,interior,271.0,transition
+Q3125311,TN-15,2,head_of_government,1136.0,second_republic
+Q3125336,Gouvernement Caïd Essebsi,2,health,300.0,ben_ali
+Q3125336,Gouvernement Ghannouchi II,1,health,0.0,ben_ali
+Q3125336,TN-10,1,health,155.0,transition
+Q3125835,Gouvernement Jomaa,2,finance,738.0,transition
+Q3125835,TN-14,1,finance,373.0,transition
+Q3126302,Gouvernement Karoui,3,foreign_affairs|other,11058.0,ben_ali
+Q3128202,Gouvernement Ladgham,2,economy_planning|other,725.0,bourguiba
+Q3128202,Gouvernement Mohamed Mzali,2,foreign_affairs,4459.0,bourguiba
+Q3128202,Gouvernement Nouira,3,agriculture|foreign_affairs|transport,10956.0,bourguiba
+Q3128202,TN-02,2,industry_energy,554.0,bourguiba
+Q3128202,TN-04,3,agriculture|foreign_affairs|transport,2394.0,bourguiba
+Q3128235,Gouvernement Ladgham,2,defence,725.0,bourguiba
+Q3128235,Gouvernement Nouira,2,defence,7112.0,bourguiba
+Q3128235,TN-03,1,defence,504.0,bourguiba
+Q3128291,Gouvernement Chahed,2,education,2740.0,second_republic
+Q3128291,Gouvernement Ghannouchi I,6,education|foreign_affairs,25509.0,ben_ali
+Q3128291,TN-10,1,education,871.0,ben_ali
+Q3128291,TN-16,2,education|higher_education,979.0,second_republic
+Q313539,Gouvernement Caïd Essebsi,2,head_of_government,300.0,ben_ali
+Q313539,Gouvernement Ladgham,2,defence,725.0,bourguiba
+Q313539,Gouvernement Mohamed Mzali,2,foreign_affairs|presidency_affairs,4384.0,bourguiba
+Q313539,Gouvernement Sfar,2,foreign_affairs,816.0,bourguiba
+Q313539,TN-02,1,interior,1526.0,bourguiba
+Q313539,TN-03,1,defence,217.0,bourguiba
+Q313539,TN-05,1,foreign_affairs,1979.0,bourguiba
+Q313539,TN-11,2,head_of_government,599.0,transition
+Q3141381,Gouvernement Ghannouchi II,1,employment_training,0.0,ben_ali
+Q3141381,Gouvernement Jebali,2,finance,1176.0,ben_ali
+Q3141381,TN-10,1,employment_training,1.0,transition
+Q3141381,TN-12,1,finance,216.0,transition
+Q3144577,Gouvernement Jebali,1,other,445.0,transition
+Q3144591,Gouvernement Bourguiba II,4,interior|justice,9698.0,monarchy
+Q3144591,Gouvernement Ladgham,2,interior,725.0,bourguiba
+Q3144591,Gouvernement Nouira,4,defence|equipment_housing|interior,14608.0,bourguiba
+Q3144591,TN-02,4,finance|health|interior|justice,4396.0,bourguiba
+Q3144591,TN-04,3,defence|equipment_housing|interior,1590.0,bourguiba
+Q3160736,Gouvernement Ben Ammar,2,education,1343.0,protectorate
+Q3160736,TN-00,1,education,211.0,protectorate_end
+Q3160876,Gouvernement Jebali,2,economy_planning,1176.0,ben_ali
+Q3160876,TN-12,1,economy_planning,445.0,transition
+Q3192376,Gouvernement Ghannouchi I,2,religious_affairs,8503.0,ben_ali
+Q3192376,TN-10,1,religious_affairs,19.0,ben_ali
+Q3196042,Gouvernement Jebali,2,social_affairs,1176.0,ben_ali
+Q3196042,Gouvernement Larayedh,2,social_affairs,687.0,transition
+Q3196042,TN-12,1,social_affairs,767.0,transition
+Q3196140,Gouvernement Chahed,2,foreign_affairs,2740.0,second_republic
+Q3196140,Gouvernement Essid,2,foreign_affairs,933.0,second_republic
+Q3196140,TN-15,1,foreign_affairs,1392.0,second_republic
+Q3216753,Gouvernement Bourguiba I,2,education|other,832.0,protectorate_end
+Q3216753,Gouvernement Bourguiba II,2,education,4849.0,monarchy
+Q3216753,TN-01,1,education,751.0,monarchy
+Q3217980,Gouvernement Caïd Essebsi,2,religious_affairs,300.0,ben_ali
+Q3217980,Gouvernement Ghannouchi II,1,religious_affairs,0.0,ben_ali
+Q3217980,TN-10,1,religious_affairs,341.0,transition
+Q3220051,Gouvernement Caïd Essebsi,1,interior,0.0,ben_ali
+Q3220051,Gouvernement Essid,2,presidency_affairs,933.0,second_republic
+Q3220052,Gouvernement Ghannouchi I,4,higher_education|justice,17006.0,ben_ali
+Q3220052,TN-10,2,higher_education|justice,2259.0,ben_ali
+Q3240795,Gouvernement Caïd Essebsi,2,women_family,300.0,ben_ali
+Q3240795,Gouvernement Ghannouchi II,1,women_family,0.0,ben_ali
+Q3240795,TN-10,1,women_family,341.0,transition
+Q3257623,Gouvernement Fakhfakh,1,presidency_affairs,188.0,second_republic
+Q3257623,TN-17,1,higher_education,49.0,second_republic
+Q3277799,Gouvernement Bourguiba I,2,health,832.0,protectorate_end
+Q3277799,Gouvernement Chenik I,2,interior|other,0.0,protectorate
+Q3277799,Gouvernement Chenik II,2,interior,730.0,protectorate
+Q3277799,TN-01,1,health,470.0,monarchy
+Q3277819,Gouvernement Hédi Baccouche I,1,foreign_affairs,365.0,bourguiba
+Q3277819,Gouvernement Mohamed Mzali,1,foreign_affairs,2192.0,bourguiba
+Q3277819,TN-08,1,foreign_affairs,366.0,ben_ali
+Q3286574,Gouvernement Sfar,2,other|presidency_affairs,816.0,bourguiba
+Q3286574,TN-06,2,equipment_housing|transport,397.0,bourguiba
+Q3304500,Gouvernement Caïd Essebsi,2,trade,300.0,ben_ali
+Q3304500,Gouvernement Ghannouchi II,1,trade,0.0,ben_ali
+Q3304500,TN-10,2,tourism_handicrafts|trade,662.0,transition
+Q3304511,Gouvernement Jebali,2,culture,1176.0,ben_ali
+Q3304511,Gouvernement Larayedh,2,culture,687.0,transition
+Q3304511,TN-12,1,culture,767.0,transition
+Q3318290,Gouvernement Kaak,2,justice,1096.0,protectorate
+Q3318297,Gouvernement Fakhfakh,2,public_service_governance,188.0,second_republic
+Q3318297,Gouvernement Jebali,1,other,445.0,transition
+Q3318311,Gouvernement Ghannouchi I,3,employment_training,12623.0,ben_ali
+Q3318311,TN-10,1,employment_training,368.0,ben_ali
+Q3318356,Gouvernement Caïd Essebsi,2,youth_sports,300.0,ben_ali
+Q3318356,Gouvernement Ghannouchi II,1,youth_sports,0.0,ben_ali
+Q3318356,TN-10,1,youth_sports,165.0,transition
+Q3318419,Gouvernement Chenik II,2,health,730.0,protectorate
+Q3318419,Gouvernement Jebali,2,agriculture,1176.0,ben_ali
+Q3318419,Gouvernement Larayedh,2,agriculture,687.0,transition
+Q3318419,Gouvernement Mohamed Salah Mzali,2,health,2267.0,protectorate
+Q3318419,TN-12,1,agriculture,767.0,transition
+Q3318465,Gouvernement Jebali,1,environment,731.0,ben_ali
+Q3318475,Gouvernement Hédi Baccouche III,1,higher_education,0.0,ben_ali
+Q3318475,Gouvernement Karoui,4,education|higher_education,14710.0,ben_ali
+Q3318475,TN-08,2,education|higher_education,3754.0,ben_ali
+Q3318509,Gouvernement Ghannouchi I,2,culture,8503.0,ben_ali
+Q3318509,TN-10,1,culture,1388.0,ben_ali
+Q3318530,TN-04,2,social_affairs,3619.0,bourguiba
+Q3318530,TN-10,1,social_affairs,331.0,transition
+Q3318545,Gouvernement Nouira,4,finance|foreign_affairs|justice,14416.0,bourguiba
+Q3318545,TN-04,3,finance|foreign_affairs|justice,3450.0,bourguiba
+Q3318622,Gouvernement Ghannouchi I,2,defence,8503.0,ben_ali
+Q3318622,Gouvernement Ghannouchi II,1,trade,0.0,ben_ali
+Q3318622,Gouvernement Hédi Baccouche II,1,tourism_handicrafts,366.0,ben_ali
+Q3318622,Gouvernement Hédi Baccouche III,1,tourism_handicrafts,0.0,ben_ali
+Q3318622,Gouvernement Karoui,6,interior|other|presidency_affairs|tourism_handicrafts,22065.0,ben_ali
+Q3318622,TN-08,1,tourism_handicrafts,2373.0,ben_ali
+Q3318622,TN-09,1,interior,729.0,ben_ali
+Q3318622,TN-10,3,defence|tourism_handicrafts|trade,453.0,ben_ali
+Q3318652,Gouvernement Jebali,2,industry_energy|trade,1176.0,ben_ali
+Q3318652,TN-12,2,industry_energy|trade,499.0,transition
+Q3318702,Gouvernement Karoui,1,environment,3652.0,ben_ali
+Q3318702,TN-09,1,environment,2508.0,ben_ali
+Q3318731,TN-10,1,ict,378.0,ben_ali
+Q3318774,Gouvernement Caïd Essebsi,1,equipment_housing,0.0,ben_ali
+Q3318774,TN-11,1,equipment_housing,176.0,transition
+Q3318781,Gouvernement Essid,2,justice,933.0,second_republic
+Q3318781,TN-15,1,justice,256.0,second_republic
+Q3318800,Gouvernement Jebali,2,equipment_housing,1176.0,ben_ali
+Q3318800,Gouvernement Larayedh,2,equipment_housing,687.0,transition
+Q3318800,TN-12,1,equipment_housing,767.0,transition
+Q3318800,TN-13,1,environment,322.0,transition
+Q3319366,Gouvernement Caïd Essebsi,2,agriculture,300.0,ben_ali
+Q3319366,Gouvernement Ghannouchi II,1,agriculture,0.0,ben_ali
+Q3319366,TN-10,2,agriculture|environment,662.0,transition
+Q3320430,TN-05,1,other,2071.0,bourguiba
+Q3320435,Gouvernement Jebali,2,higher_education,1176.0,ben_ali
+Q3320435,Gouvernement Larayedh,2,higher_education,687.0,transition
+Q3320435,TN-12,1,higher_education,767.0,transition
+Q3320454,Gouvernement Ghannouchi I,4,education|employment_training,17006.0,ben_ali
+Q3320454,Gouvernement Ghannouchi II,1,social_affairs,0.0,ben_ali
+Q3320454,Gouvernement Hédi Baccouche III,1,social_affairs,0.0,ben_ali
+Q3320454,Gouvernement Karoui,6,culture|employment_training|social_affairs,22065.0,ben_ali
+Q3320454,TN-09,3,culture|employment_training|social_affairs,3896.0,ben_ali
+Q3320454,TN-10,2,education|social_affairs,954.0,ben_ali
+Q3320538,Gouvernement Bourguiba II,4,economy_planning|social_affairs|tourism_handicrafts,9698.0,monarchy
+Q3320538,Gouvernement Ladgham,2,economy_planning|tourism_handicrafts,725.0,bourguiba
+Q3320538,TN-02,4,health|social_affairs|tourism_handicrafts|youth_sports,6824.0,bourguiba
+Q3320544,Gouvernement Ben Ali,1,economy_planning,0.0,
+Q3320544,Gouvernement Ghannouchi I,8,health|tourism_handicrafts|trade,34012.0,ben_ali
+Q3320544,Gouvernement Hédi Baccouche I,1,economy_planning,365.0,bourguiba
+Q3320544,Gouvernement Karoui,4,trade|transport,14710.0,ben_ali
+Q3320544,TN-09,2,trade|transport,2430.0,ben_ali
+Q3320544,TN-10,3,health|tourism_handicrafts|trade,4209.0,ben_ali
+Q3320644,Gouvernement Nouira,1,health,3652.0,bourguiba
+Q3320644,TN-04,1,health,261.0,bourguiba
+Q3320646,Gouvernement Karoui,6,culture|education|higher_education,22065.0,ben_ali
+Q3320646,TN-09,1,culture,1202.0,ben_ali
+Q3320650,Gouvernement Mohamed Mzali,1,other,2267.0,bourguiba
+Q3320650,Gouvernement Nouira,2,foreign_affairs|health,7304.0,bourguiba
+Q3320650,TN-04,1,health,574.0,bourguiba
+Q3320655,Gouvernement Essid,2,industry_energy,933.0,second_republic
+Q3320655,Gouvernement Fakhfakh,2,industry_energy,188.0,second_republic
+Q3320655,Gouvernement Jebali,2,ict|other,1176.0,ben_ali
+Q3320655,Gouvernement Larayedh,2,ict|other,687.0,transition
+Q3320655,TN-12,1,ict,767.0,transition
+Q3320655,TN-15,1,industry_energy,228.0,second_republic
+Q3320655,TN-17,1,industry_energy,188.0,second_republic
+Q3326203,Gouvernement Ben Ammar,2,justice,1343.0,protectorate
+Q3328946,Gouvernement Bourguiba I,2,agriculture,832.0,protectorate_end
+Q3328946,Gouvernement Bourguiba II,2,agriculture,4849.0,monarchy
+Q3328946,TN-01,1,agriculture,534.0,monarchy
+Q3328947,Gouvernement Kaak,2,head_of_government,1096.0,protectorate
+Q3328959,Gouvernement Ghannouchi II,2,other,4120.0,ben_ali
+Q3328959,Gouvernement Karoui,5,economy_planning,18413.0,ben_ali
+Q3328959,TN-10,1,other,548.0,transition
+Q3331012,Gouvernement Bourguiba II,2,information_media,4849.0,monarchy
+Q3331012,TN-02,2,agriculture|information_media,1616.0,bourguiba
+Q3331032,Gouvernement Mohamed Mzali,1,higher_education,2192.0,bourguiba
+Q3331032,Gouvernement Sfar,2,higher_education,816.0,bourguiba
+Q3331032,TN-06,2,education|higher_education,580.0,bourguiba
+Q3333020,Gouvernement Jebali,1,environment,445.0,transition
+Q3333020,TN-12,1,environment,445.0,transition
+Q3334747,Gouvernement Ghannouchi I,3,social_affairs,12623.0,ben_ali
+Q3334747,TN-10,1,social_affairs,3.0,transition
+Q3334855,Gouvernement Ghannouchi I,4,agriculture|environment,17006.0,ben_ali
+Q3334855,TN-10,1,environment,2258.0,ben_ali
+Q3344886,Gouvernement Mohamed Mzali,1,other,2192.0,bourguiba
+Q3344886,TN-05,1,social_affairs,243.0,bourguiba
+Q3344889,Gouvernement Jebali,2,religious_affairs,1176.0,ben_ali
+Q3344889,Gouvernement Larayedh,2,religious_affairs,687.0,transition
+Q3344889,TN-12,1,religious_affairs,767.0,transition
+Q3347261,Gouvernement Ghannouchi I,4,employment_training|women_family,17006.0,ben_ali
+Q3347261,Gouvernement Karoui,2,women_family,7355.0,ben_ali
+Q3347261,TN-09,1,women_family,2387.0,ben_ali
+Q3347261,TN-10,1,employment_training,332.0,ben_ali
+Q3357601,Gouvernement Nouira,2,government_secretariat|interior,7304.0,bourguiba
+Q3357601,TN-04,1,interior,115.0,bourguiba
+Q3417419,Gouvernement Ghannouchi I,4,interior,17006.0,ben_ali
+Q3417419,Gouvernement Karoui,2,interior|other,7355.0,ben_ali
+Q3417419,TN-10,1,interior,2253.0,ben_ali
+Q3417420,Gouvernement Jebali,2,foreign_affairs,1176.0,ben_ali
+Q3417420,TN-11,1,foreign_affairs,447.0,transition
+Q3423310,Gouvernement Caïd Essebsi,2,higher_education,300.0,ben_ali
+Q3423310,Gouvernement Ghannouchi I,4,higher_education,17006.0,ben_ali
+Q3423310,TN-11,1,higher_education,292.0,transition
+Q3431735,Gouvernement Ghannouchi I,5,higher_education|industry_energy|trade,21389.0,ben_ali
+Q3431735,Gouvernement Mechichi,1,industry_energy,366.0,second_republic
+Q3431735,TN-10,1,trade,567.0,ben_ali
+Q3431740,Gouvernement Chahed,3,finance,4019.0,second_republic
+Q3431740,Gouvernement Ghannouchi I,2,finance,8503.0,ben_ali
+Q3431740,Gouvernement Ghannouchi II,1,finance,0.0,ben_ali
+Q3431740,TN-10,1,finance,378.0,ben_ali
+Q3431740,TN-16,2,finance|investment_cooperation,1009.0,second_republic
+Q3431740,TN-18,1,other,1968.0,second_republic
+Q3431743,Gouvernement Ghannouchi I,4,defence|state_property,17006.0,ben_ali
+Q3431743,Gouvernement Ghannouchi II,1,defence,0.0,ben_ali
+Q3431743,Gouvernement Karoui,3,government_secretariat|other|state_property,11007.0,ben_ali
+Q3431743,TN-09,1,state_property,3920.0,ben_ali
+Q3431743,TN-10,1,defence,378.0,ben_ali
+Q3431745,Gouvernement Ghannouchi I,4,other|presidency_affairs|trade,17006.0,ben_ali
+Q3431745,TN-10,1,trade,646.0,ben_ali
+Q3461164,Gouvernement Hédi Baccouche I,1,equipment_housing,365.0,bourguiba
+Q3461164,Gouvernement Ladgham,3,equipment_housing|social_affairs,1085.0,bourguiba
+Q3461164,Gouvernement Mohamed Mzali,3,equipment_housing|transport,6651.0,bourguiba
+Q3461164,Gouvernement Nouira,2,other|transport,7112.0,bourguiba
+Q3461164,TN-03,1,social_affairs,721.0,bourguiba
+Q3461164,TN-04,1,transport,1319.0,bourguiba
+Q3461164,TN-05,1,equipment_housing,274.0,bourguiba
+Q3461164,TN-08,1,equipment_housing,243.0,ben_ali
+Q3461169,Gouvernement Ghannouchi I,2,higher_education,8503.0,ben_ali
+Q3461169,Gouvernement Hédi Baccouche III,1,higher_education,0.0,ben_ali
+Q3461169,Gouvernement Karoui,6,higher_education|justice,22065.0,ben_ali
+Q3461169,TN-09,1,justice,1688.0,ben_ali
+Q3461169,TN-10,1,higher_education,1820.0,ben_ali
+Q3461176,Gouvernement Ben Ammar,4,health|justice,2686.0,protectorate
+Q3461176,Gouvernement Bourguiba II,2,foreign_affairs,4849.0,monarchy
+Q3461176,TN-00,1,health,211.0,protectorate_end
+Q3461176,TN-02,1,foreign_affairs,1857.0,bourguiba
+Q3469530,Gouvernement Chenik I,2,justice,0.0,protectorate
+Q3469690,Gouvernement Caïd Essebsi,1,transport,0.0,ben_ali
+Q3469690,TN-11,1,transport,176.0,transition
+Q3469772,Gouvernement Jebali,2,state_property,1176.0,ben_ali
+Q3469772,Gouvernement Larayedh,2,state_property,687.0,transition
+Q3469772,TN-12,1,state_property,767.0,transition
+Q3470003,Gouvernement Ben Ali,1,foreign_affairs,0.0,bourguiba
+Q3470837,Gouvernement Jebali,2,human_rights|justice,1176.0,ben_ali
+Q3470837,Gouvernement Larayedh,2,human_rights|justice,687.0,transition
+Q3470837,TN-12,1,other,767.0,transition
+Q3470845,Gouvernement Ghannouchi I,6,education|information_media|other,25509.0,ben_ali
+Q3470845,TN-10,2,other|youth_sports,871.0,ben_ali
+Q3470847,Gouvernement Chahed,2,agriculture,2740.0,second_republic
+Q3470847,TN-16,1,agriculture,1279.0,second_republic
+Q3470859,Gouvernement Chahed,2,health,2740.0,second_republic
+Q3470859,Gouvernement Essid,2,women_family,933.0,second_republic
+Q3470859,TN-15,1,women_family,568.0,second_republic
+Q3470859,TN-16,1,health,381.0,second_republic
+Q3473691,Gouvernement Ghannouchi I,4,women_family,17006.0,ben_ali
+Q3473691,TN-10,1,women_family,865.0,ben_ali
+Q3474776,Gouvernement Caïd Essebsi,2,employment_training,300.0,ben_ali
+Q3474776,Gouvernement Essid,2,health,933.0,second_republic
+Q3474776,Gouvernement Ghannouchi II,1,employment_training,0.0,ben_ali
+Q3474776,TN-10,1,employment_training,331.0,transition
+Q3474776,TN-15,1,health,568.0,second_republic
+Q3483754,Gouvernement Jebali,2,women_family,1176.0,ben_ali
+Q3483754,Gouvernement Larayedh,2,women_family,687.0,transition
+Q3483754,TN-12,1,women_family,767.0,transition
+Q3486507,Gouvernement Karoui,4,economy_planning|industry_energy,14710.0,ben_ali
+Q3486507,TN-09,1,industry_energy,990.0,ben_ali
+Q3486509,Gouvernement Slaheddine Baccouche I,2,head_of_government,2151.0,protectorate
+Q3486509,Gouvernement Slaheddine Baccouche II,2,head_of_government,1421.0,protectorate
+Q3486512,Gouvernement Caïd Essebsi,1,health,0.0,ben_ali
+Q3486512,TN-11,1,health,176.0,transition
+Q3486513,Gouvernement Ghannouchi I,3,equipment_housing,12886.0,ben_ali
+Q3486513,Gouvernement Ghannouchi II,1,transport,0.0,ben_ali
+Q3486513,TN-10,2,equipment_housing|transport,894.0,ben_ali
+Q3486675,Gouvernement Jebali,1,other,445.0,transition
+Q3486675,TN-12,1,finance,145.0,transition
+Q3486677,Gouvernement Caïd Essebsi,2,tourism_handicrafts|youth_sports,300.0,ben_ali
+Q3486677,Gouvernement Chahed,2,health,2740.0,second_republic
+Q3486677,Gouvernement Essid,2,finance,933.0,second_republic
+Q3486677,TN-11,1,youth_sports,176.0,transition
+Q3486677,TN-15,1,finance,568.0,second_republic
+Q3486677,TN-16,1,health,26.0,second_republic
+Q3486689,Gouvernement Ghannouchi I,6,employment_training|tourism_handicrafts,25509.0,ben_ali
+Q3486689,TN-10,2,employment_training|tourism_handicrafts,871.0,ben_ali
+Q3486705,Gouvernement Ghannouchi I,2,trade,8503.0,ben_ali
+Q3486705,TN-10,1,trade,19.0,ben_ali
+Q3490439,Gouvernement Essid,2,culture,933.0,second_republic
+Q3490439,TN-15,1,culture,228.0,second_republic
+Q3513893,Gouvernement Ben Ammar,2,health,1343.0,protectorate
+Q3513893,TN-00,1,health,606.0,protectorate_end
+Q3515404,Gouvernement Ghannouchi I,4,finance|other,17006.0,ben_ali
+Q3515404,Gouvernement Karoui,1,finance,3652.0,ben_ali
+Q3515404,TN-09,1,finance,1728.0,ben_ali
+Q3515404,TN-10,1,other,2559.0,ben_ali
+Q3516543,Gouvernement Bourguiba I,2,interior,832.0,protectorate_end
+Q3516543,Gouvernement Bourguiba II,2,interior,4849.0,monarchy
+Q3516543,TN-01,1,interior,3362.0,monarchy
+Q3571955,Gouvernement Caïd Essebsi,2,transport,300.0,ben_ali
+Q3571955,Gouvernement Essid,2,investment_cooperation,933.0,second_republic
+Q3571955,Gouvernement Ghannouchi II,1,transport,0.0,ben_ali
+Q3571955,TN-10,2,equipment_housing|transport,310.0,transition
+Q3571955,TN-15,1,investment_cooperation,568.0,second_republic
+Q377921,Gouvernement Bourguiba II,2,defence,4849.0,monarchy
+Q377921,Gouvernement Chenik II,2,trade,730.0,protectorate
+Q377921,Gouvernement Kaak,2,trade,1096.0,protectorate
+Q377921,Gouvernement Ladgham,2,youth_sports,725.0,bourguiba
+Q377921,Gouvernement Mohamed Mzali,3,head_of_government,6651.0,bourguiba
+Q377921,Gouvernement Mohamed Salah Mzali,2,head_of_government,2267.0,protectorate
+Q377921,Gouvernement Nouira,2,education|health,7304.0,bourguiba
+Q377921,Gouvernement Slaheddine Baccouche I,2,other|social_affairs,2151.0,protectorate
+Q377921,TN-02,1,defence,574.0,bourguiba
+Q377921,TN-03,2,education|youth_sports,384.0,bourguiba
+Q377921,TN-04,3,education|health,3101.0,bourguiba
+Q377921,TN-05,3,head_of_government|interior,5376.0,bourguiba
+Q379778,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,culture,1314.0,second_republic
+Q379778,TN-21,1,culture,731.0,saied_exception
+Q38213221,Gouvernement Ghannouchi I,4,women_family,17006.0,ben_ali
+Q38213221,TN-10,1,women_family,1026.0,ben_ali
+Q38259407,Gouvernement Ghannouchi I,2,women_family,8503.0,ben_ali
+Q38259407,TN-10,1,women_family,1130.0,ben_ali
+Q38346104,Gouvernement Karoui,4,social_affairs|women_family,14710.0,ben_ali
+Q38346104,TN-09,1,women_family,598.0,ben_ali
+Q3951110,Gouvernement Ben Ali,1,other,0.0,
+Q3951110,Gouvernement Hédi Baccouche II,1,other,366.0,ben_ali
+Q3951110,Gouvernement Hédi Baccouche III,1,other,0.0,ben_ali
+Q3951110,Gouvernement Karoui,4,foreign_affairs|other,14710.0,ben_ali
+Q3951110,Gouvernement Mohamed Mzali,1,economy_planning,2192.0,bourguiba
+Q3951110,Gouvernement Sfar,2,finance,816.0,bourguiba
+Q3951110,TN-06,1,finance,476.0,bourguiba
+Q3951110,TN-07,1,other,857.0,bourguiba
+Q3951110,TN-09,1,foreign_affairs,178.0,ben_ali
+Q401426,TN-10,1,foreign_affairs,25.0,transition
+Q4167838,Gouvernement Hédi Baccouche I,1,youth_sports,365.0,bourguiba
+Q4167838,Gouvernement Hédi Baccouche II,1,foreign_affairs,366.0,ben_ali
+Q4167838,Gouvernement Hédi Baccouche III,1,foreign_affairs,0.0,ben_ali
+Q4167838,Gouvernement Karoui,4,foreign_affairs|interior,14710.0,ben_ali
+Q4167838,TN-08,2,foreign_affairs|youth_sports,587.0,ben_ali
+Q4167838,TN-09,1,interior,351.0,ben_ali
+Q42311056,Gouvernement Chahed,4,health|youth_sports,5480.0,second_republic
+Q42311056,TN-16,2,health|youth_sports,824.0,second_republic
+Q431515,Gouvernement Ben Ali,1,economy_planning,0.0,
+Q431515,Gouvernement Ghannouchi I,2,head_of_government,8503.0,ben_ali
+Q431515,Gouvernement Ghannouchi II,1,head_of_government,0.0,ben_ali
+Q431515,Gouvernement Hédi Baccouche I,1,economy_planning,365.0,bourguiba
+Q431515,Gouvernement Hédi Baccouche II,1,economy_planning,366.0,ben_ali
+Q431515,Gouvernement Hédi Baccouche III,1,finance,0.0,ben_ali
+Q431515,Gouvernement Karoui,8,finance|investment_cooperation,29420.0,ben_ali
+Q431515,TN-09,3,finance|industry_energy,1183.0,ben_ali
+Q431515,TN-10,2,head_of_government,8240.0,ben_ali
+Q431848,Gouvernement Ghannouchi II,1,culture,0.0,ben_ali
+Q431848,TN-10,1,culture,10.0,transition
+Q43304124,Gouvernement Chahed,4,industry_energy,5480.0,second_republic
+Q43304124,TN-16,1,industry_energy,831.0,second_republic
+Q43654658,Gouvernement Nouira,1,information_media,3652.0,bourguiba
+Q43654658,TN-04,1,information_media,1456.0,bourguiba
+Q44403762,TN-15,1,women_family,821.0,second_republic
+Q473394,Gouvernement Essid,2,religious_affairs,933.0,second_republic
+Q473394,TN-15,1,religious_affairs,340.0,second_republic
+Q4845531,Gouvernement Hédi Baccouche II,1,health,366.0,ben_ali
+Q4845531,TN-08,1,health,259.0,ben_ali
+Q48757077,Gouvernement Nouira,1,industry_energy,3652.0,bourguiba
+Q48757077,TN-04,2,industry_energy,320.0,bourguiba
+Q495676,Gouvernement Ben Ammar,2,head_of_government,1343.0,protectorate
+Q495676,TN-00,3,head_of_government,1226.0,protectorate_end
+Q495681,Gouvernement Chenik I,2,head_of_government,0.0,protectorate
+Q495681,Gouvernement Chenik II,2,head_of_government,730.0,protectorate
+Q496165,Gouvernement Bourguiba II,2,education,4849.0,monarchy
+Q496165,Gouvernement Ladgham,2,other|presidency_affairs,725.0,bourguiba
+Q496165,Gouvernement Nouira,1,culture,3652.0,bourguiba
+Q496165,TN-02,1,education,3824.0,bourguiba
+Q496165,TN-04,1,culture,1105.0,bourguiba
+Q50099224,Gouvernement Chahed,2,interior,2740.0,second_republic
+Q50099224,TN-16,1,interior,273.0,second_republic
+Q50285534,Gouvernement Ben Ali,2,health,0.0,bourguiba
+Q50285534,Gouvernement Hédi Baccouche I,1,health,365.0,bourguiba
+Q50285534,Gouvernement Mohamed Mzali,2,health,4384.0,bourguiba
+Q50285534,Gouvernement Sfar,2,health,816.0,bourguiba
+Q50285534,TN-05,1,health,1649.0,bourguiba
+Q507856,Gouvernement Hédi Baccouche II,1,culture,366.0,ben_ali
+Q507856,Gouvernement Hédi Baccouche III,1,culture,0.0,ben_ali
+Q507856,Gouvernement Karoui,6,culture|defence|foreign_affairs,22065.0,ben_ali
+Q507856,Gouvernement Ladgham,2,culture|information_media,725.0,bourguiba
+Q507856,Gouvernement Nouira,2,culture|information_media,7112.0,bourguiba
+Q507856,TN-03,1,culture,370.0,bourguiba
+Q507856,TN-08,1,culture,584.0,ben_ali
+Q507856,TN-09,2,defence|foreign_affairs,408.0,ben_ali
+Q51460814,Gouvernement Chahed,2,industry_energy,2740.0,second_republic
+Q51460814,TN-16,1,industry_energy,353.0,second_republic
+Q517946,Gouvernement Caïd Essebsi,2,justice,300.0,ben_ali
+Q517946,Gouvernement Ghannouchi II,1,justice,0.0,ben_ali
+Q517946,TN-10,1,justice,341.0,transition
+Q52450891,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,women_family,1314.0,second_republic
+Q52450891,TN-19,1,women_family,1049.0,saied_exception
+Q53015850,TN-16,1,other,2190.0,second_republic
+Q53025434,TN-16,1,women_family,1157.0,second_republic
+Q54875067,Gouvernement Chahed,2,employment_training,2740.0,second_republic
+Q54875067,TN-16,1,employment_training,434.0,second_republic
+Q54875068,Gouvernement Hédi Baccouche I,1,social_affairs,365.0,bourguiba
+Q54875068,Gouvernement Hédi Baccouche II,1,social_affairs,366.0,ben_ali
+Q54875068,Gouvernement Hédi Baccouche III,1,government_secretariat,0.0,ben_ali
+Q54875068,Gouvernement Karoui,4,employment_training|government_secretariat|other,14710.0,ben_ali
+Q54875068,TN-08,1,social_affairs,690.0,ben_ali
+Q54875068,TN-09,1,employment_training,475.0,ben_ali
+Q54875069,Gouvernement Hédi Baccouche II,1,health,366.0,ben_ali
+Q54875069,Gouvernement Hédi Baccouche III,1,health,0.0,ben_ali
+Q54875069,Gouvernement Karoui,4,employment_training|health,14710.0,ben_ali
+Q54875069,TN-09,1,employment_training,354.0,ben_ali
+Q54875074,Gouvernement Hédi Baccouche I,1,education,365.0,bourguiba
+Q54875074,Gouvernement Ladgham,4,equipment_housing,1450.0,bourguiba
+Q54875074,Gouvernement Nouira,2,economy_planning,7112.0,bourguiba
+Q54875074,TN-04,1,industry_energy,502.0,bourguiba
+Q54875084,Gouvernement Mohamed Mzali,2,finance|industry_energy,4384.0,bourguiba
+Q54875084,TN-05,2,finance|industry_energy,1603.0,bourguiba
+Q54875134,Gouvernement Mohamed Mzali,1,health,2192.0,bourguiba
+Q54875134,TN-05,1,health,98.0,bourguiba
+Q54875178,TN-10,1,women_family,1035.0,ben_ali
+Q55196894,Gouvernement Hédi Baccouche I,1,culture,365.0,bourguiba
+Q55196894,Gouvernement Hédi Baccouche II,1,information_media,366.0,ben_ali
+Q55196894,TN-08,1,culture,106.0,ben_ali
+Q55381692,Gouvernement Chahed,4,other|trade,5480.0,second_republic
+Q55381692,TN-16,1,trade,904.0,second_republic
+Q55392087,Gouvernement Karoui,2,culture,7355.0,ben_ali
+Q55392087,TN-09,1,culture,558.0,ben_ali
+Q55999324,Gouvernement Chahed,3,presidency_affairs,4019.0,second_republic
+Q55999324,TN-16,1,employment_training,111.0,second_republic
+Q56309568,Gouvernement Chahed,2,interior,2740.0,second_republic
+Q56309568,TN-16,1,interior,577.0,second_republic
+Q563204,Gouvernement Ben Ammar,4,interior|without_portfolio,2686.0,protectorate
+Q563204,Gouvernement Bourguiba I,2,without_portfolio,832.0,protectorate_end
+Q563204,TN-00,1,interior,207.0,protectorate_end
+Q563204,TN-02,2,foreign_affairs|justice,1903.0,bourguiba
+Q57699,Gouvernement Jebali,2,head_of_government,1176.0,ben_ali
+Q57699,TN-12,2,head_of_government,890.0,transition
+Q586623,Gouvernement Bourguiba I,1,head_of_government,466.0,monarchy
+Q586623,Gouvernement Bourguiba II,1,foreign_affairs,466.0,monarchy
+Q586623,Gouvernement Ladgham,2,foreign_affairs|justice,720.0,bourguiba
+Q586623,TN-02,1,foreign_affairs,2038.0,bourguiba
+Q586623,TN-03,1,justice,147.0,bourguiba
+Q60428357,Gouvernement Fakhfakh,2,investment_cooperation,188.0,second_republic
+Q60428357,TN-17,1,investment_cooperation,188.0,second_republic
+Q60572709,Gouvernement Ghannouchi I,3,foreign_affairs|trade,12886.0,ben_ali
+Q60572709,Gouvernement Karoui,2,foreign_affairs,7355.0,ben_ali
+Q60572709,TN-10,1,trade,588.0,ben_ali
+Q60573008,Gouvernement Hédi Baccouche II,1,equipment_housing,366.0,ben_ali
+Q60573008,TN-08,1,equipment_housing,278.0,ben_ali
+Q60573013,Gouvernement Karoui,2,equipment_housing,7355.0,ben_ali
+Q60573013,TN-09,1,equipment_housing,371.0,ben_ali
+Q60573413,Gouvernement Ghannouchi I,6,industry_energy|investment_cooperation|tourism_handicrafts,25509.0,ben_ali
+Q60573413,TN-10,1,tourism_handicrafts,863.0,ben_ali
+Q61588042,Gouvernement Chahed,2,environment,2740.0,second_republic
+Q61588042,TN-16,2,environment|local_affairs,940.0,second_republic
+Q61598250,Gouvernement Chahed,2,equipment_housing,2740.0,second_republic
+Q61598250,TN-16,1,equipment_housing,470.0,second_republic
+Q62601798,Gouvernement Chahed,2,state_property,2740.0,second_republic
+Q62601798,TN-16,1,state_property,359.0,second_republic
+Q643348,Gouvernement Bourguiba I,1,head_of_government,366.0,protectorate_end
+Q643348,Gouvernement Bourguiba II,1,foreign_affairs,4383.0,monarchy
+Q643348,Gouvernement Ladgham,2,foreign_affairs|justice,730.0,bourguiba
+Q643348,TN-01,2,foreign_affairs|head_of_government,936.0,monarchy
+Q643348,TN-02,1,head_of_government,4484.0,bourguiba
+Q64747816,TN-02,1,other,9353.0,bourguiba
+Q653162,Gouvernement Mohamed Mzali,4,economy_planning|finance|health,8843.0,bourguiba
+Q653162,Gouvernement Nouira,2,defence|industry_energy,7304.0,bourguiba
+Q653162,Gouvernement Sfar,2,head_of_government,816.0,bourguiba
+Q653162,TN-04,2,defence|industry_energy,926.0,bourguiba
+Q653162,TN-05,3,finance|health|industry_energy,2265.0,bourguiba
+Q653162,TN-06,2,head_of_government,902.0,bourguiba
+Q668526,Gouvernement Jebali,2,justice,1176.0,ben_ali
+Q668526,Gouvernement Larayedh,1,presidency_affairs,322.0,transition
+Q668526,TN-12,1,justice,445.0,transition
+Q744499,Gouvernement Bourguiba II,2,other,4849.0,monarchy
+Q744499,Gouvernement Ladgham,4,economy_planning|other,1450.0,bourguiba
+Q744499,Gouvernement Mohamed Mzali,2,finance,4459.0,bourguiba
+Q744499,Gouvernement Nouira,3,economy_planning,10764.0,bourguiba
+Q744499,TN-05,1,finance,1149.0,bourguiba
+Q7480522,Gouvernement Jomaa,2,interior,738.0,transition
+Q7480522,Gouvernement Larayedh,2,interior,687.0,transition
+Q7480522,TN-13,1,interior,695.0,transition
+Q800238,Gouvernement Bourguiba I,2,other,832.0,protectorate_end
+Q800238,Gouvernement Bourguiba II,3,defence,9232.0,monarchy
+Q800238,Gouvernement Ladgham,2,head_of_government,725.0,bourguiba
+Q800238,TN-02,4,defence|finance,3480.0,bourguiba
+Q800238,TN-03,2,head_of_government,720.0,bourguiba
+Q85822499,Gouvernement Fakhfakh,2,justice,188.0,second_republic
+Q85822499,Gouvernement Mechichi,1,presidency_affairs,404.0,second_republic
+Q85822499,TN-17,1,justice,188.0,second_republic
+Q86329266,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,health,1314.0,second_republic
+Q86329266,TN-18,1,health,1115.0,saied_exception
+Q86734094,Gouvernement Fakhfakh,2,equipment_housing,188.0,second_republic
+Q86734094,TN-17,1,equipment_housing,139.0,second_republic
+Q88467296,Gouvernement Fakhfakh,2,culture|other,188.0,second_republic
+Q88467296,TN-17,1,culture,188.0,second_republic
+Q88485687,Gouvernement Fakhfakh,2,interior,188.0,second_republic
+Q88485687,Gouvernement Mechichi,3,head_of_government|interior,1136.0,second_republic
+Q88485687,TN-17,1,interior,188.0,second_republic
+Q88485687,TN-18,3,head_of_government|interior,931.0,second_republic
+Q89844681,Gouvernement Fakhfakh,2,defence,188.0,second_republic
+Q89844681,TN-17,1,defence,188.0,second_republic
+Q89996191,Gouvernement Fakhfakh,3,women_family|youth_sports,188.0,second_republic
+Q89996191,TN-17,3,other|women_family|youth_sports,385.0,second_republic
+Q90570383,Gouvernement Fakhfakh,2,finance,188.0,second_republic
+Q90570383,TN-17,1,finance,188.0,second_republic
+Q90946576,Gouvernement Chenik II,2,justice,730.0,protectorate
+Q90946576,Gouvernement Fakhfakh,2,industry_energy,188.0,second_republic
+Q90946576,TN-17,1,industry_energy,188.0,second_republic
+Q91626084,Gouvernement Fakhfakh,2,foreign_affairs,188.0,second_republic
+Q91626084,TN-17,1,foreign_affairs,148.0,second_republic
+Q91645255,Gouvernement Fakhfakh,3,social_affairs,188.0,second_republic
+Q91645255,TN-17,2,health|social_affairs,237.0,second_republic
+Q91649459,Gouvernement Fakhfakh,2,agriculture,188.0,second_republic
+Q91649459,Gouvernement Mechichi,1,agriculture,366.0,second_republic
+Q91649459,TN-17,1,agriculture,188.0,second_republic
+Q91669922,Gouvernement Fakhfakh,2,ict,0.0,second_republic
+Q91669922,Gouvernement Mechichi,2,ict,732.0,second_republic
+Q91669922,Gouvernement Mohamed Mzali,2,transport|youth_sports,4384.0,bourguiba
+Q91669922,Gouvernement Sfar,1,transport,365.0,bourguiba
+Q91669922,TN-17,2,ict|transport,571.0,second_republic
+Q91669922,TN-18,1,agriculture,168.0,second_republic
+Q92199953,Gouvernement Fakhfakh,2,trade,188.0,second_republic
+Q92199953,TN-17,1,trade,188.0,second_republic
+Q92316785,Gouvernement Fakhfakh,2,higher_education,188.0,second_republic
+Q92316785,TN-17,1,higher_education,139.0,second_republic
+Q92332624,Gouvernement Chahed,2,youth_sports,2740.0,second_republic
+Q92332624,Gouvernement Fakhfakh,2,youth_sports,188.0,second_republic
+Q92332624,TN-17,1,youth_sports,139.0,second_republic
+Q92353813,Gouvernement Fakhfakh,1,foreign_affairs,188.0,second_republic
+Q92353813,TN-17,1,foreign_affairs,40.0,second_republic
+Q92354033,Gouvernement Fakhfakh,2,tourism_handicrafts,188.0,second_republic
+Q92354033,TN-17,1,tourism_handicrafts,188.0,second_republic
+Q9344006,Gouvernement Larayedh,2,defence,687.0,transition
+Q9344006,TN-13,1,defence,322.0,transition
+Q958968,Gouvernement Jebali,2,youth_sports,1176.0,ben_ali
+Q958968,Gouvernement Larayedh,2,youth_sports,687.0,transition
+Q958968,TN-12,1,youth_sports,767.0,transition
+Q96473313,Gouvernement Fakhfakh,2,employment_training,188.0,second_republic
+Q96473313,TN-17,1,employment_training,188.0,second_republic
+Q97961043,Gouvernement Hédi Baccouche I,1,equipment_housing,365.0,bourguiba
+Q97961043,Gouvernement Hédi Baccouche II,1,equipment_housing,366.0,ben_ali
+Q97961043,Gouvernement Hédi Baccouche III,1,equipment_housing,0.0,ben_ali
+Q97961043,Gouvernement Karoui,2,economy_planning|equipment_housing,7355.0,ben_ali
+Q980071,Gouvernement Caïd Essebsi,2,foreign_affairs|other,300.0,ben_ali
+Q980071,TN-10,1,foreign_affairs,305.0,transition
+Q98828346,Gouvernement Mechichi,2,defence,770.0,second_republic
+Q98828346,TN-18,1,defence,327.0,second_republic
+Q98828355,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,interior,1314.0,second_republic
+Q98828355,Gouvernement Mechichi,2,interior,770.0,second_republic
+Q98828355,TN-18,1,interior,125.0,second_republic
+Q98828355,TN-19,1,interior,522.0,saied_exception
+Q98828362,Gouvernement Mechichi,2,finance,770.0,second_republic
+Q98828362,TN-18,1,finance,334.0,second_republic
+Q98828537,Gouvernement Mechichi,2,higher_education,770.0,second_republic
+Q98828537,TN-18,1,higher_education,404.0,second_republic
+Q98828560,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,youth_sports,1314.0,second_republic
+Q98828560,Gouvernement Mechichi,2,youth_sports,770.0,second_republic
+Q98828560,TN-18,1,youth_sports,166.0,second_republic
+Q98828560,TN-19,1,youth_sports,1049.0,saied_exception
+Q98828570,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,justice,1314.0,second_republic
+Q98828570,Gouvernement Mechichi,2,state_property,770.0,second_republic
+Q98828570,TN-18,1,state_property,166.0,second_republic
+Q98828570,TN-19,1,justice,1780.0,saied_exception
+Q98828591,Gouvernement Mechichi,2,environment,770.0,second_republic
+Q98828591,TN-18,2,environment|local_affairs,218.0,second_republic
+Q98828599,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,education,1314.0,second_republic
+Q98828599,Gouvernement Mechichi,2,education,770.0,second_republic
+Q98828599,TN-18,1,education,880.0,second_republic
+Q98844443,Gouvernement Mechichi,2,women_family,770.0,second_republic
+Q98844443,TN-18,1,women_family,404.0,second_republic
+Q99528084,Gouvernement Ghannouchi I,3,economy_planning|finance|government_secretariat,13149.0,ben_ali
+Q99528084,TN-10,1,finance,2122.0,ben_ali
+Q99539200,Gouvernement Mechichi,1,health,366.0,second_republic
+Q99539200,TN-18,1,health,321.0,second_republic
+Q99541044,Gouvernement Ghannouchi I,1,health,4383.0,ben_ali
+Q99541044,TN-10,1,health,1027.0,ben_ali
+Q99542892,Gouvernement Mechichi,1,industry_energy,366.0,second_republic
+Q99542892,TN-18,2,industry_energy,332.0,second_republic
+Q99543891,Gouvernement Hédi Baccouche II,1,trade,366.0,ben_ali
+Q99543891,Gouvernement Hédi Baccouche III,1,economy_planning,0.0,ben_ali
+Q99543891,Gouvernement Karoui,1,economy_planning,3652.0,ben_ali
+Q99543891,TN-08,1,industry_energy,584.0,ben_ali
+Q99574115,Gouvernement Mechichi,2,justice,770.0,second_republic
+Q99574115,TN-18,1,justice,166.0,second_republic
+TN-abdallah-rabhi,Gouvernement Chahed,1,agriculture,1461.0,second_republic
+TN-abdelaziz-beltaief,Gouvernement Ladgham,1,education,365.0,bourguiba
+TN-abdelaziz-hamzaoui,Gouvernement Nouira,1,foreign_affairs,3652.0,bourguiba
+TN-abdelaziz-menchari,Gouvernement Slaheddine Baccouche II,1,agriculture,731.0,protectorate
+TN-abdelaziz-mougou,Gouvernement Ghannouchi I,1,agriculture,4383.0,ben_ali
+TN-abdelfattah-amor,Gouvernement Ghannouchi II,1,other,0.0,ben_ali
+TN-abdelhafidh-harguem,Gouvernement Ghannouchi I,1,foreign_affairs,4383.0,ben_ali
+TN-abdelhakim-bouraoui,Gouvernement Ghannouchi I,3,government_secretariat|public_service_governance|relations_parliament,13149.0,ben_ali
+TN-abdelhakim-bouraoui,Gouvernement Karoui,1,public_service_governance,3652.0,ben_ali
+TN-abdelhamid-sassi,Gouvernement Nouira,6,equipment_housing|transport,21912.0,bourguiba
+TN-abdelhamid-triki,Gouvernement Caïd Essebsi,1,economy_planning,0.0,ben_ali
+TN-abdelhamid-triki,Gouvernement Ghannouchi I,2,foreign_affairs|investment_cooperation,8766.0,ben_ali
+TN-abdelkader-belkhodja,Gouvernement Kaak,1,agriculture,1096.0,protectorate
+TN-abdelkader-belkhodja,Gouvernement Mohamed Salah Mzali,1,agriculture,0.0,protectorate
+TN-abdelkoddous-saadaoui,Gouvernement Chahed,1,youth_sports,1461.0,second_republic
+TN-abdellatif-missaoui,Gouvernement Mechichi,1,state_property,366.0,second_republic
+TN-abdellatif-saddam,Gouvernement Ghannouchi I,1,economy_planning,4383.0,ben_ali
+TN-abdellatif-saddam,Gouvernement Karoui,1,economy_planning,3652.0,ben_ali
+TN-abdelwaheb-jemal,Gouvernement Ghannouchi I,1,foreign_affairs,4383.0,ben_ali
+TN-abderrahman-ben-messaoud,Gouvernement Nouira,1,agriculture,3652.0,bourguiba
+TN-abderrazak-daaloul,Gouvernement Ghannouchi I,1,agriculture,4383.0,ben_ali
+TN-abdessalem-mseddi,Gouvernement Hédi Baccouche I,2,higher_education,730.0,bourguiba
+TN-abdessalem-mseddi,Gouvernement Hédi Baccouche II,1,higher_education,366.0,ben_ali
+TN-abid-briki,Gouvernement Chahed,1,public_service_governance,1461.0,second_republic
+TN-adel-jarboui,Gouvernement Chahed,2,social_affairs|transport,2922.0,second_republic
+TN-afif-hendaoui,Gouvernement Ghannouchi I,1,information_media,4383.0,ben_ali
+TN-ahmed-ben-arfa,Gouvernement Mohamed Mzali,1,foreign_affairs,2192.0,bourguiba
+TN-ahmed-ben-salah,Gouvernement Bourguiba II,3,economy_planning|education|health,13149.0,monarchy
+TN-ahmed-bennour,Gouvernement Mohamed Mzali,1,interior,2192.0,bourguiba
+TN-ahmed-bennour,Gouvernement Nouira,1,defence,3652.0,bourguiba
+TN-ahmed-brahimdemissionnaire,Gouvernement Ghannouchi II,1,higher_education,0.0,ben_ali
+TN-ahmed-dhouib,Gouvernement Ghannouchi I,1,employment_training,4383.0,ben_ali
+TN-ahmed-khaled,Gouvernement Hédi Baccouche III,1,higher_education,0.0,ben_ali
+TN-ahmed-khaled,Gouvernement Karoui,2,culture|higher_education,7304.0,ben_ali
+TN-ahmed-mahjoub,Gouvernement Ghannouchi I,1,ict,4383.0,ben_ali
+TN-ahmed-nejib-chebbidemissionnaire,Gouvernement Ghannouchi II,1,local_affairs,0.0,ben_ali
+TN-ahmed-ounaiesdemissionnaire,Gouvernement Ghannouchi II,1,foreign_affairs,0.0,ben_ali
+TN-albert-bessis,Gouvernement Ben Ammar,1,other,730.0,protectorate
+TN-ali-ladhari,Gouvernement Kaak,1,other,1096.0,protectorate
+TN-amel-nafti,Gouvernement Essid,1,agriculture,365.0,second_republic
+TN-ameur-ghedira,Gouvernement Mohamed Mzali,1,interior,2192.0,bourguiba
+TN-ameur-horchani,Gouvernement Ghannouchi I,1,agriculture,4383.0,ben_ali
+TN-ameur-horchani,Gouvernement Hédi Baccouche I,1,agriculture,365.0,bourguiba
+TN-ameur-horchani,Gouvernement Hédi Baccouche II,1,agriculture,366.0,ben_ali
+TN-ameur-horchani,Gouvernement Hédi Baccouche III,1,agriculture,0.0,ben_ali
+TN-ameur-horchani,Gouvernement Karoui,2,agriculture,7304.0,ben_ali
+TN-amor-bejaoui,Gouvernement Hédi Baccouche I,1,interior,365.0,bourguiba
+TN-amor-bejaoui,Gouvernement Hédi Baccouche II,1,interior,366.0,ben_ali
+TN-amor-ben-romdhan,Gouvernement Hédi Baccouche I,1,other,365.0,bourguiba
+TN-andre-barouch,Gouvernement Bourguiba I,1,equipment_housing,366.0,protectorate_end
+TN-andre-blanchard,Gouvernement Ben Ammar,1,other,730.0,protectorate
+TN-andre-blanchard,Gouvernement Chenik II,1,other,730.0,protectorate
+TN-andre-blanchard,Gouvernement Mohamed Salah Mzali,1,other,0.0,protectorate
+TN-andre-blanchard,Gouvernement Slaheddine Baccouche II,1,other,731.0,protectorate
+TN-azzouz-rebai,Gouvernement Bourguiba I,1,youth_sports,366.0,protectorate_end
+TN-baccar-touzani,Gouvernement Ladgham,1,economy_planning,365.0,bourguiba
+TN-baccar-touzani,Gouvernement Nouira,1,government_secretariat,3652.0,bourguiba
+TN-bechir-ben-yahmed,Gouvernement Bourguiba I,1,information_media,366.0,protectorate_end
+TN-bechir-ennaji,Gouvernement Bourguiba II,1,trade,4383.0,monarchy
+TN-bechir-louzir,Gouvernement Ghannouchi I,1,education,4383.0,ben_ali
+TN-bechir-mejdoub,Gouvernement Ghannouchi I,1,social_affairs,4383.0,ben_ali
+TN-bechir-mhedhebi,Gouvernement Nouira,1,defence,3652.0,bourguiba
+TN-belgacem-sabri,Gouvernement Essid,1,social_affairs,365.0,second_republic
+TN-brahim-baccari,Gouvernement Ghannouchi I,2,higher_education|industry_energy,8766.0,ben_ali
+TN-brahim-turki,Gouvernement Nouira,1,foreign_affairs,3652.0,bourguiba
+TN-chedly-ben-romdhane,Gouvernement Mohamed Salah Mzali,1,other,0.0,protectorate
+TN-chedly-rehaiem,Gouvernement Ben Ammar,1,other,730.0,protectorate
+TN-chef-du-gouvernement,Gouvernement Fakhfakh,1,other,0.0,second_republic
+TN-chef-du-gouvernement,Gouvernement Ghannouchi II,2,other|presidency_affairs,0.0,ben_ali
+TN-chef-du-gouvernement,Gouvernement Mechichi,1,other,366.0,second_republic
+TN-chokri-ayachi,Gouvernement Ghannouchi I,1,defence,4383.0,ben_ali
+TN-chokri-mamoghli,Gouvernement Ghannouchi I,2,trade,8766.0,ben_ali
+TN-chokri-terzi,Gouvernement Essid,1,youth_sports,365.0,second_republic
+TN-ezzeddine-ben-cheikh,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,agriculture,1314.0,second_republic
+TN-fakhreddine-el-messai,Gouvernement Ghannouchi I,1,trade,4383.0,ben_ali
+TN-faouzi-belkahia,Gouvernement Karoui,1,transport,3652.0,ben_ali
+TN-farhat-medini,Gouvernement Ghannouchi I,1,transport,4383.0,ben_ali
+TN-faten-kallel,Gouvernement Chahed,1,youth_sports,1461.0,second_republic
+TN-faycal-hafiane,Gouvernement Chahed,1,trade,1461.0,second_republic
+TN-fethi-houidi,Gouvernement Ghannouchi I,1,information_media,4383.0,ben_ali
+TN-fethi-houidi,Gouvernement Karoui,1,information_media,3652.0,ben_ali
+TN-fredj-jabbes,Gouvernement Nouira,1,education,3652.0,bourguiba
+TN-georges-gaston-puis-lucien-paye-a-partir,Gouvernement Ben Ammar,1,education,730.0,protectorate
+TN-georges-gaston-puis-lucien-paye-a-partir,Gouvernement Chenik II,1,education,730.0,protectorate
+TN-georges-gaston-puis-lucien-paye-a-partir,Gouvernement Kaak,1,education,1096.0,protectorate
+TN-georges-gaston-puis-lucien-paye-a-partir,Gouvernement Mohamed Salah Mzali,1,education,0.0,protectorate
+TN-georges-gaston-puis-lucien-paye-a-partir,Gouvernement Slaheddine Baccouche II,1,education,731.0,protectorate
+TN-habib-ben-cheikh,Gouvernement Ladgham,1,equipment_housing,365.0,bourguiba
+TN-habib-ben-cheikh,Gouvernement Nouira,1,other,3652.0,bourguiba
+TN-habib-debbabi,Gouvernement Chahed,2,ict|industry_energy,2922.0,second_republic
+TN-habib-haddad,Gouvernement Ghannouchi I,1,agriculture,4383.0,ben_ali
+TN-habib-lazreg,Gouvernement Hédi Baccouche III,1,economy_planning,0.0,ben_ali
+TN-habib-lazreg,Gouvernement Karoui,3,economy_planning|finance|information_media,10956.0,ben_ali
+TN-hachem-hmidi,Gouvernement Chahed,1,industry_energy,1461.0,second_republic
+TN-hamadi-badra,Gouvernement Chenik II,1,social_affairs,730.0,protectorate
+TN-hamed-zeghal,Gouvernement Nouira,1,education,3652.0,bourguiba
+TN-hammouda-hamdi,Gouvernement Ghannouchi I,1,investment_cooperation,4383.0,ben_ali
+TN-hassan-hosni-abdelwaheb,Gouvernement Slaheddine Baccouche I,1,other,1461.0,protectorate
+TN-hechmi-kooli,Gouvernement Nouira,1,foreign_affairs,3652.0,bourguiba
+TN-hedi-ben-rais,Gouvernement Slaheddine Baccouche II,1,trade,731.0,protectorate
+TN-hedi-grioui,Gouvernement Karoui,2,culture|information_media,7304.0,ben_ali
+TN-hedi-khairi,Gouvernement Mechichi,1,health,366.0,second_republic
+TN-hedi-zeghal,Gouvernement Mohamed Mzali,1,youth_sports,2192.0,bourguiba
+TN-hedi-zeghal,Gouvernement Nouira,2,education|youth_sports,7304.0,bourguiba
+TN-henri-culmann-puis-jean-gaston-fraisse-a,Gouvernement Ben Ammar,1,finance,730.0,protectorate
+TN-henri-culmann-puis-jean-gaston-fraisse-a,Gouvernement Chenik II,1,finance,730.0,protectorate
+TN-henri-culmann-puis-jean-gaston-fraisse-a,Gouvernement Kaak,1,finance,1096.0,protectorate
+TN-henri-culmann-puis-jean-gaston-fraisse-a,Gouvernement Mohamed Salah Mzali,1,finance,0.0,protectorate
+TN-henri-culmann-puis-jean-gaston-fraisse-a,Gouvernement Slaheddine Baccouche II,1,finance,731.0,protectorate
+TN-houcine-cherif,Gouvernement Hédi Baccouche I,2,government_secretariat|public_service_governance,730.0,bourguiba
+TN-houcine-cherif,Gouvernement Hédi Baccouche II,1,government_secretariat,366.0,ben_ali
+TN-ils-sont-d-un-nombre-variable-en-fonctio,Gouvernement de la Tunisie,1,other,0.0,
+TN-ils-sont-places-au-premier-echelon-de-la,Gouvernement de la Tunisie,1,other,0.0,
+TN-imed-jabri,Gouvernement Chahed,1,youth_sports,1461.0,second_republic
+TN-issam-lahmar,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,social_affairs,1314.0,second_republic
+TN-jacques-vimont-puis-raymond-pons-a-parti,Gouvernement Chenik II,1,other,730.0,protectorate
+TN-jean-louis-bonnenfant,Gouvernement Kaak,1,equipment_housing,1096.0,protectorate
+TN-jean-mathieu,Gouvernement Ben Ammar,1,equipment_housing,730.0,protectorate
+TN-jean-mathieu,Gouvernement Chenik II,1,equipment_housing,730.0,protectorate
+TN-jean-mathieu,Gouvernement Mohamed Salah Mzali,1,equipment_housing,0.0,protectorate
+TN-jean-mathieu,Gouvernement Slaheddine Baccouche II,1,equipment_housing,731.0,protectorate
+TN-kacem-bousnina,Gouvernement Hédi Baccouche II,1,presidency_affairs,366.0,ben_ali
+TN-kacem-bousnina,Gouvernement Hédi Baccouche III,1,religious_affairs,0.0,ben_ali
+TN-kacem-bousnina,Gouvernement Karoui,1,religious_affairs,3652.0,ben_ali
+TN-kamel-ayadi,Gouvernement Essid,1,public_service_governance,365.0,second_republic
+TN-kamel-ayadi,Gouvernement Ghannouchi I,1,equipment_housing,4383.0,ben_ali
+TN-kamel-feki,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,interior,1314.0,second_republic
+TN-kamel-haj-sassi,Gouvernement Ghannouchi I,2,culture|social_affairs,8766.0,ben_ali
+TN-kamel-haj-sassi,Gouvernement Karoui,1,social_affairs,3652.0,ben_ali
+TN-kamel-jendoubi,Gouvernement Essid,2,human_rights|presidency_affairs,730.0,second_republic
+TN-khadija-ghariani,Gouvernement Ghannouchi I,1,ict,4383.0,ben_ali
+TN-khalil-amiri,Gouvernement Chahed,1,higher_education,1461.0,second_republic
+TN-lamia-chafei-seghaier,Gouvernement Ghannouchi I,2,ict,8766.0,ben_ali
+TN-lotfi-dhiab,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,employment_training,1314.0,second_republic
+TN-louis-cartry,Gouvernement Chenik II,1,other,730.0,protectorate
+TN-louis-cartry,Gouvernement Slaheddine Baccouche II,1,other,731.0,protectorate
+TN-m-hamed-ezzine-chelaifa,Gouvernement Essid,1,foreign_affairs,365.0,second_republic
+TN-m-hamed-gachem,Gouvernement Slaheddine Baccouche II,1,health,731.0,protectorate
+TN-mahmoud-khiairi,Gouvernement Bourguiba I,1,other,366.0,protectorate_end
+TN-mahmoud-maamouri,Gouvernement Nouira,1,information_media,3652.0,bourguiba
+TN-mekki-zidi,Gouvernement Nouira,1,economy_planning,3652.0,bourguiba
+TN-mezri-chekir,Gouvernement Mohamed Mzali,1,public_service_governance,2192.0,bourguiba
+TN-ministere-de-l-agriculture,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
+TN-ministere-de-l-agriculture,Gouvernement Caïd Essebsi,1,environment,0.0,ben_ali
+TN-ministere-de-l-agriculture,Gouvernement Fakhfakh,1,agriculture,0.0,second_republic
+TN-ministere-de-l-agriculture,Gouvernement Ghannouchi II,1,agriculture,0.0,ben_ali
+TN-ministere-de-l-agriculture,Gouvernement Jebali,1,agriculture,731.0,ben_ali
+TN-ministere-de-l-agriculture,Gouvernement Larayedh,1,agriculture,365.0,transition
+TN-ministere-de-l-agriculture,Gouvernement Nouira,1,agriculture,3652.0,bourguiba
+TN-ministere-de-l-economie-nationale,Gouvernement Nouira,1,economy_planning,3652.0,bourguiba
+TN-ministere-de-l-education,Gouvernement Caïd Essebsi,1,education,0.0,ben_ali
+TN-ministere-de-l-education,Gouvernement Nouira,1,education,3652.0,bourguiba
+TN-ministere-de-l-equipement,Gouvernement Ghannouchi II,1,transport,0.0,ben_ali
+TN-ministere-de-l-equipement,Gouvernement Jebali,1,equipment_housing,731.0,ben_ali
+TN-ministere-de-l-equipement,Gouvernement Jomaa,1,environment,365.0,transition
+TN-ministere-de-l-equipement,Gouvernement Larayedh,2,equipment_housing,730.0,transition
+TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
+TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Caïd Essebsi,2,ict|other,0.0,ben_ali
+TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Ghannouchi II,2,ict|industry_energy,0.0,ben_ali
+TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Larayedh,1,industry_energy,365.0,transition
+TN-ministere-de-l-interieur,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
+TN-ministere-de-l-interieur,Gouvernement Jebali,1,other,731.0,ben_ali
+TN-ministere-de-l-interieur,Gouvernement Jomaa,2,local_affairs|other,730.0,transition
+TN-ministere-de-l-interieur,Gouvernement Larayedh,1,local_affairs,365.0,transition
+TN-ministere-de-l-investissement-et-de-la-c,Gouvernement Jebali,1,investment_cooperation,731.0,ben_ali
+TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Caïd Essebsi,2,youth_sports,0.0,ben_ali
+TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Ghannouchi II,1,youth_sports,0.0,ben_ali
+TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Jebali,1,youth_sports,731.0,ben_ali
+TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Larayedh,1,youth_sports,365.0,transition
+TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Mechichi,1,youth_sports,366.0,second_republic
+TN-ministere-de-la-sante,Gouvernement Caïd Essebsi,1,health,0.0,ben_ali
+TN-ministere-de-la-sante,Gouvernement Ghannouchi II,1,health,0.0,ben_ali
+TN-ministere-des-affaires-etrangeres,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,investment_cooperation,1314.0,second_republic
+TN-ministere-des-affaires-etrangeres,Gouvernement Fakhfakh,1,foreign_affairs,0.0,second_republic
+TN-ministere-des-affaires-etrangeres,Gouvernement Ghannouchi II,1,foreign_affairs,0.0,ben_ali
+TN-ministere-des-affaires-etrangeres,Gouvernement Jebali,3,other,2193.0,ben_ali
+TN-ministere-des-affaires-etrangeres,Gouvernement Jomaa,1,foreign_affairs,365.0,transition
+TN-ministere-des-affaires-etrangeres,Gouvernement Larayedh,1,other,365.0,transition
+TN-ministere-des-affaires-sociales,Gouvernement Jebali,1,diaspora,731.0,ben_ali
+TN-ministere-des-affaires-sociales,Gouvernement Larayedh,1,diaspora,365.0,transition
+TN-ministere-des-affaires-sociales,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
+TN-ministere-des-finances,Gouvernement Ghannouchi II,2,other|state_property,0.0,ben_ali
+TN-ministere-des-finances,Gouvernement Jebali,1,finance,731.0,ben_ali
+TN-ministere-des-finances,Gouvernement Larayedh,1,finance,365.0,transition
+TN-ministere-des-finances,Gouvernement Mechichi,1,finance,366.0,second_republic
+TN-ministere-des-postes-telegraphes-et-tele,Gouvernement Nouira,1,other,3652.0,bourguiba
+TN-ministere-du-commerce,Gouvernement Caïd Essebsi,1,tourism_handicrafts,0.0,ben_ali
+TN-ministere-du-commerce,Gouvernement Jebali,1,trade,731.0,ben_ali
+TN-ministere-du-developpement-et-de-la-coop,Gouvernement Larayedh,1,investment_cooperation,365.0,transition
+TN-ministere-du-developpement-regional-et-d,Gouvernement Caïd Essebsi,1,local_affairs,0.0,ben_ali
+TN-ministere-du-developpement-regional-et-d,Gouvernement Jebali,1,economy_planning,731.0,ben_ali
+TN-ministre-de-l-economie-et-de-la-planific,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
+TN-ministre-de-l-enseignement-superieur-et-,Gouvernement Ghannouchi II,1,higher_education,0.0,ben_ali
+TN-ministre-de-la-formation-professionnelle,Gouvernement Bouden/Hachani/Madouri/Zaafrani,2,other,2628.0,second_republic
+TN-ministre-de-la-planification-et-de-la-co,Gouvernement Ghannouchi II,1,economy_planning,0.0,ben_ali
+TN-ministre-du-commerce-et-du-tourisme,Gouvernement Ghannouchi II,1,tourism_handicrafts,0.0,ben_ali
+TN-ministre-du-developpement-regional-et-lo,Gouvernement Ghannouchi II,1,local_affairs,0.0,ben_ali
+TN-mohamed-ali-boughdiri,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,education,1314.0,second_republic
+TN-mohamed-ali-ganzoui,Gouvernement Ghannouchi I,2,interior,8766.0,ben_ali
+TN-mohamed-ali-ganzoui,Gouvernement Karoui,1,interior,3652.0,ben_ali
+TN-mohamed-ali-nafti,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,foreign_affairs,1314.0,second_republic
+TN-mohamed-ali-souissi,Gouvernement Nouira,1,equipment_housing,3652.0,bourguiba
+TN-mohamed-amamou,Gouvernement Hédi Baccouche III,1,foreign_affairs,0.0,ben_ali
+TN-mohamed-amamou,Gouvernement Karoui,1,foreign_affairs,3652.0,ben_ali
+TN-mohamed-amor,Gouvernement Ghannouchi I,1,trade,4383.0,ben_ali
+TN-mohamed-badra,Gouvernement Ben Ammar,1,agriculture,730.0,protectorate
+TN-mohamed-ben-ahmed,Gouvernement Karoui,1,higher_education,3652.0,ben_ali
+TN-mohamed-chakroun,Gouvernement Bourguiba I,1,social_affairs,366.0,protectorate_end
+TN-mohamed-dinguizli,Gouvernement Slaheddine Baccouche II,1,other,731.0,protectorate
+TN-mohamed-fadhel-mahfoudh,Gouvernement Chahed,1,relations_parliament,1461.0,second_republic
+TN-mohamed-habib-hadj-said,Gouvernement Karoui,2,finance|government_secretariat,7304.0,ben_ali
+TN-mohamed-hadjouj,Gouvernement Mohamed Salah Mzali,1,trade,0.0,protectorate
+TN-mohamed-jomaa,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
+TN-mohamed-karboul,Gouvernement Hédi Baccouche I,1,interior,365.0,bourguiba
+TN-mohamed-larbi-mahjoubi,Gouvernement Karoui,1,interior,3652.0,ben_ali
+TN-mohamed-nabli,Gouvernement Ghannouchi I,1,environment,4383.0,ben_ali
+TN-mohamed-nejib-berriche,Gouvernement Ghannouchi I,1,equipment_housing,4383.0,ben_ali
+TN-mohamed-nouri-jouini,Gouvernement Ghannouchi I,2,economy_planning|investment_cooperation,8766.0,ben_ali
+TN-mohamed-nouri-jouini,Gouvernement Ghannouchi II,2,economy_planning,0.0,ben_ali
+TN-mohamed-saad,Gouvernement Karoui,2,interior|youth_sports,7304.0,ben_ali
+TN-mohamed-saadallah,Gouvernement Chenik II,1,agriculture,730.0,protectorate
+TN-mohamed-saadallah,Gouvernement Mohamed Salah Mzali,1,other,0.0,protectorate
+TN-mohsen-boujbal,Gouvernement Hédi Baccouche II,1,agriculture,366.0,ben_ali
+TN-mohsen-boujbal,Gouvernement Hédi Baccouche III,1,agriculture,0.0,ben_ali
+TN-mohsen-boujbal,Gouvernement Karoui,1,agriculture,3652.0,ben_ali
+TN-mohsen-laroui,Gouvernement Ghannouchi I,3,interior|trade,13149.0,ben_ali
+TN-moncef-bel-hadj-amor,Gouvernement Mohamed Mzali,1,equipment_housing,2192.0,bourguiba
+TN-moncef-bel-hadj-amor,Gouvernement Nouira,1,government_secretariat,3652.0,bourguiba
+TN-moncef-ben-said,Gouvernement Ghannouchi I,1,employment_training,4383.0,ben_ali
+TN-moncef-bouden,Gouvernement Ghannouchi I,1,finance,4383.0,ben_ali
+TN-moncef-hergli,Gouvernement Ghannouchi I,1,presidency_affairs,4383.0,ben_ali
+TN-moncef-zaafrane,Gouvernement Nouira,1,government_secretariat,3652.0,bourguiba
+TN-mondher-belaid,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,higher_education,1314.0,second_republic
+TN-mongi-bedoui,Gouvernement Ghannouchi I,1,employment_training,4383.0,ben_ali
+TN-mongi-chouchane,Gouvernement Ghannouchi I,2,interior,8766.0,ben_ali
+TN-mongi-safra,Gouvernement Karoui,2,economy_planning|higher_education,7304.0,ben_ali
+TN-montasser-ouaili,Gouvernement Ghannouchi I,4,higher_education|ict|presidency_affairs,17532.0,ben_ali
+TN-mouldi-zouaoui,Gouvernement Hédi Baccouche III,1,economy_planning,0.0,ben_ali
+TN-mouldi-zouaoui,Gouvernement Karoui,3,agriculture|economy_planning|finance,10956.0,ben_ali
+TN-mustapha-ben-jaafardemissionnaire,Gouvernement Ghannouchi II,1,health,0.0,ben_ali
+TN-mustapha-zaanouni,Gouvernement Nouira,2,economy_planning,7304.0,bourguiba
+TN-nabil-ammar,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,foreign_affairs,1314.0,second_republic
+TN-najeh-belkhiria-karoui,Gouvernement Ghannouchi I,1,social_affairs,4383.0,ben_ali
+TN-najoua-miladi,Gouvernement Ghannouchi I,1,health,4383.0,ben_ali
+TN-nebiha-gueddana,Gouvernement Hédi Baccouche III,1,social_affairs,0.0,ben_ali
+TN-nebiha-gueddana,Gouvernement Karoui,2,social_affairs|women_family,7304.0,ben_ali
+TN-nejmeddine-hamrouni,Gouvernement Essid,1,health,365.0,second_republic
+TN-neziha-escheikh,Gouvernement Ghannouchi I,1,health,4383.0,ben_ali
+TN-noureddine-ktari,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
+TN-noureddine-mejdoub,Gouvernement Karoui,1,foreign_affairs,3652.0,ben_ali
+TN-noureddine-zaouche,Gouvernement Mohamed Salah Mzali,1,equipment_housing,0.0,protectorate
+TN-omar-ben-mahmoud,Gouvernement Ghannouchi I,1,social_affairs,4383.0,ben_ali
+TN-omar-el-abed,Gouvernement Ghannouchi I,2,agriculture|employment_training,8766.0,ben_ali
+TN-oussama-romdhani,Gouvernement Ghannouchi I,2,information_media,8766.0,ben_ali
+TN-premier-ministere,Gouvernement Caïd Essebsi,1,government_secretariat,0.0,ben_ali
+TN-premier-ministere,Gouvernement Jebali,4,other|public_service_governance,2924.0,ben_ali
+TN-premier-ministere,Gouvernement Jomaa,2,presidency_affairs|public_service_governance,730.0,transition
+TN-premier-ministere,Gouvernement Ladgham,3,economy_planning|equipment_housing|information_media,1095.0,bourguiba
+TN-premier-ministere,Gouvernement Larayedh,3,other|presidency_affairs,1095.0,transition
+TN-premier-ministere,Gouvernement Mohamed Mzali,3,presidency_affairs|public_service_governance,6576.0,bourguiba
+TN-premier-ministere,Gouvernement Nouira,1,government_secretariat,3652.0,bourguiba
+TN-rachid-amri,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,transport,1314.0,second_republic
+TN-rafaa-ben-achour,Gouvernement Caïd Essebsi,1,presidency_affairs,0.0,ben_ali
+TN-rafaa-ben-achour,Gouvernement Ghannouchi I,1,education,4383.0,ben_ali
+TN-rafaa-dekhil,Gouvernement Ghannouchi I,3,industry_energy|information_media|social_affairs,13149.0,ben_ali
+TN-rafik-chelly,Gouvernement Essid,1,interior,365.0,second_republic
+TN-raymond-duval-puis-eugene-molle-a-partir,Gouvernement Kaak,1,defence,1096.0,protectorate
+TN-raymond-pons-puis-georges-dupoizat-a-par,Gouvernement Slaheddine Baccouche II,1,other,731.0,protectorate
+TN-rene-brouillet,Gouvernement Kaak,1,other,1096.0,protectorate
+TN-rene-rodiere,Gouvernement Kaak,1,other,1096.0,protectorate
+TN-riadh-bettaieb,Gouvernement Jebali,1,investment_cooperation,731.0,ben_ali
+TN-riadh-chaouad,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,employment_training,1314.0,second_republic
+TN-ridha-belhaj,Gouvernement Caïd Essebsi,1,presidency_affairs,0.0,ben_ali
+TN-ridha-hamza,Gouvernement Mohamed Mzali,1,other,2192.0,bourguiba
+TN-sadok-djaziri,Gouvernement Slaheddine Baccouche II,1,justice,731.0,protectorate
+TN-sadok-fayala,Gouvernement Ghannouchi I,1,foreign_affairs,4383.0,ben_ali
+TN-sadok-fayala,Gouvernement Karoui,1,foreign_affairs,3652.0,ben_ali
+TN-sadok-mourali,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,youth_sports,1314.0,second_republic
+TN-saida-chtioui,Gouvernement Ghannouchi I,2,foreign_affairs,8766.0,ben_ali
+TN-salah-brik-hannachi,Gouvernement Karoui,1,investment_cooperation,3652.0,ben_ali
+TN-salah-el-hamdi,Gouvernement Karoui,1,economy_planning,3652.0,ben_ali
+TN-salah-jebali,Gouvernement Hédi Baccouche I,1,economy_planning,365.0,bourguiba
+TN-salah-jebali,Gouvernement Karoui,1,environment,3652.0,ben_ali
+TN-saloua-tarzi-ben-attia,Gouvernement Ghannouchi I,1,women_family,4383.0,ben_ali
+TN-samir-abid,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,trade,1314.0,second_republic
+TN-samir-bechouel,Gouvernement Chahed,1,interior,1461.0,second_republic
+TN-sara-zaafarani,TN-22,1,head_of_government,523.0,saied_exception
+TN-sarra-rejeb,Gouvernement Chahed,1,transport,1461.0,second_republic
+TN-slaheddine-abdallah,Gouvernement Nouira,1,information_media,3652.0,bourguiba
+TN-slaheddine-cherif,Gouvernement Karoui,2,government_secretariat|public_service_governance,7304.0,ben_ali
+TN-slaheddine-jemmali,Gouvernement Ghannouchi I,1,foreign_affairs,4383.0,ben_ali
+TN-slaheddine-makhlouf,Gouvernement Ghannouchi I,1,trade,4383.0,ben_ali
+TN-sofiane-ben-tounes,Gouvernement Mechichi,1,industry_energy,366.0,second_republic
+TN-sofiene-hemissi,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,ict,1314.0,second_republic
+TN-tahar-hadj-ali,Gouvernement Karoui,1,transport,3652.0,ben_ali
+TN-tahar-lakhdar,Gouvernement Mohamed Salah Mzali,1,justice,0.0,protectorate
+TN-taieb-belkhiria,Gouvernement Slaheddine Baccouche II,1,without_portfolio,731.0,protectorate
+TN-taieb-hadhri,Gouvernement Ghannouchi I,1,higher_education,4383.0,ben_ali
+TN-taieb-slim,Gouvernement Nouira,1,without_portfolio,3652.0,bourguiba
+TN-taoufik-bouderbala,Gouvernement Ghannouchi II,1,other,0.0,ben_ali
+TN-tijani-haddad,Gouvernement Ghannouchi I,1,tourism_handicrafts,4383.0,ben_ali
+TN-unknown,Gouvernement Mechichi,1,head_of_government,366.0,second_republic
+TN-unknown-10,Gouvernement Mechichi,1,education,366.0,second_republic
+TN-unknown-100,Gouvernement Ghannouchi I,2,higher_education|ict,8240.0,ben_ali
+TN-unknown-101,Gouvernement Ghannouchi I,1,relations_parliament,4120.0,ben_ali
+TN-unknown-101,Gouvernement Karoui,1,information_media,3703.0,ben_ali
+TN-unknown-102,Gouvernement Ghannouchi I,1,agriculture,4120.0,ben_ali
+TN-unknown-103,Gouvernement Ghannouchi I,1,culture,4120.0,ben_ali
+TN-unknown-103,Gouvernement Karoui,1,social_affairs,3703.0,ben_ali
+TN-unknown-104,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-105,Gouvernement Ghannouchi I,2,foreign_affairs|other,8240.0,ben_ali
+TN-unknown-106,Gouvernement Ghannouchi I,2,foreign_affairs|trade,8240.0,ben_ali
+TN-unknown-107,Gouvernement Ghannouchi I,2,agriculture|employment_training,8240.0,ben_ali
+TN-unknown-108,Gouvernement Ghannouchi I,1,trade,4120.0,ben_ali
+TN-unknown-109,Gouvernement Ghannouchi I,1,trade,4120.0,ben_ali
+TN-unknown-11,Gouvernement Mechichi,1,higher_education,366.0,second_republic
+TN-unknown-110,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-111,Gouvernement Ghannouchi I,1,health,4120.0,ben_ali
+TN-unknown-112,Gouvernement Ghannouchi I,1,tourism_handicrafts,4120.0,ben_ali
+TN-unknown-113,Gouvernement Ghannouchi I,1,foreign_affairs,4120.0,ben_ali
+TN-unknown-114,Gouvernement Ghannouchi I,1,ict,4120.0,ben_ali
+TN-unknown-115,Gouvernement Ghannouchi I,1,industry_energy,4120.0,ben_ali
+TN-unknown-116,Gouvernement Ghannouchi I,1,higher_education,4120.0,ben_ali
+TN-unknown-117,Gouvernement Ghannouchi I,1,agriculture,4120.0,ben_ali
+TN-unknown-118,Gouvernement Ghannouchi I,1,interior,4120.0,ben_ali
+TN-unknown-118,Gouvernement Karoui,1,interior,3703.0,ben_ali
+TN-unknown-119,Gouvernement Ghannouchi I,2,equipment_housing,8240.0,ben_ali
+TN-unknown-12,Gouvernement Mechichi,1,ict,366.0,second_republic
+TN-unknown-120,Gouvernement Ghannouchi I,2,other|relations_parliament,8240.0,ben_ali
+TN-unknown-121,Gouvernement Ghannouchi I,1,health,4120.0,ben_ali
+TN-unknown-122,Gouvernement Ghannouchi I,1,employment_training,4120.0,ben_ali
+TN-unknown-123,Gouvernement Ghannouchi I,1,women_family,4120.0,ben_ali
+TN-unknown-124,Gouvernement Ghannouchi I,2,foreign_affairs|trade,8240.0,ben_ali
+TN-unknown-125,Gouvernement Ghannouchi I,2,ict|other,8240.0,ben_ali
+TN-unknown-126,Gouvernement Ghannouchi I,1,education,4120.0,ben_ali
+TN-unknown-127,Gouvernement Ghannouchi I,1,foreign_affairs,4120.0,ben_ali
+TN-unknown-128,Gouvernement Ghannouchi I,1,employment_training,4120.0,ben_ali
+TN-unknown-129,Gouvernement Ghannouchi I,2,other|relations_parliament,8240.0,ben_ali
+TN-unknown-13,Gouvernement Mechichi,1,women_family,366.0,second_republic
+TN-unknown-130,Gouvernement Ghannouchi I,1,interior,4120.0,ben_ali
+TN-unknown-131,Gouvernement Ghannouchi I,2,agriculture,8240.0,ben_ali
+TN-unknown-132,Gouvernement Ghannouchi I,2,foreign_affairs|other,8240.0,ben_ali
+TN-unknown-133,Gouvernement Ghannouchi I,1,education,4120.0,ben_ali
+TN-unknown-134,Gouvernement Ghannouchi I,1,relations_parliament,4120.0,ben_ali
+TN-unknown-135,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-136,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-137,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-138,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-139,Gouvernement Ghannouchi II,1,other,4120.0,ben_ali
+TN-unknown-14,Gouvernement Mechichi,1,state_property,366.0,second_republic
+TN-unknown-140,Gouvernement Ghannouchi II,1,other,4120.0,ben_ali
+TN-unknown-141,Gouvernement Ghannouchi II,1,other,4120.0,ben_ali
+TN-unknown-142,Gouvernement Ghannouchi II,1,other,4120.0,ben_ali
+TN-unknown-143,Gouvernement Jebali,1,trade,445.0,transition
+TN-unknown-144,Gouvernement Jebali,1,investment_cooperation,445.0,transition
+TN-unknown-145,Gouvernement Jebali,1,economy_planning,445.0,transition
+TN-unknown-145,Gouvernement Larayedh,1,economy_planning,322.0,transition
+TN-unknown-146,Gouvernement Jebali,1,other,445.0,transition
+TN-unknown-147,Gouvernement Jebali,1,interior,445.0,transition
+TN-unknown-147,Gouvernement Larayedh,1,other,322.0,transition
+TN-unknown-148,Gouvernement Jebali,1,other,445.0,transition
+TN-unknown-149,Gouvernement Jebali,1,other,445.0,transition
+TN-unknown-15,Gouvernement Mechichi,1,equipment_housing,366.0,second_republic
+TN-unknown-150,Gouvernement Jebali,1,other,445.0,transition
+TN-unknown-151,Gouvernement Jebali,1,other,445.0,transition
+TN-unknown-152,Gouvernement Jebali,1,agriculture,445.0,transition
+TN-unknown-152,Gouvernement Larayedh,1,agriculture,322.0,transition
+TN-unknown-153,Gouvernement Jomaa,1,health,373.0,transition
+TN-unknown-154,Gouvernement Jomaa,1,interior,373.0,transition
+TN-unknown-155,Gouvernement Jomaa,1,public_service_governance,373.0,transition
+TN-unknown-156,Gouvernement Jomaa,1,other,373.0,transition
+TN-unknown-157,Gouvernement Jomaa,1,foreign_affairs,373.0,transition
+TN-unknown-158,Gouvernement Jomaa,1,women_family,373.0,transition
+TN-unknown-159,Gouvernement Jomaa,1,investment_cooperation,373.0,transition
+TN-unknown-16,Gouvernement Mechichi,1,other,366.0,second_republic
+TN-unknown-160,Gouvernement Jomaa,1,other,373.0,transition
+TN-unknown-161,Gouvernement Kaak,1,social_affairs,0.0,
+TN-unknown-162,Gouvernement Kaak,1,agriculture,0.0,
+TN-unknown-162,Gouvernement Mohamed Salah Mzali,1,agriculture,2267.0,bourguiba
+TN-unknown-163,Gouvernement Kaak,1,other,0.0,
+TN-unknown-164,Gouvernement Kaak,1,other,0.0,
+TN-unknown-165,Gouvernement Kaak,1,defence,0.0,
+TN-unknown-166,Gouvernement Kaak,1,finance,0.0,
+TN-unknown-167,Gouvernement Kaak,1,equipment_housing,0.0,
+TN-unknown-168,Gouvernement Kaak,1,education,0.0,
+TN-unknown-169,Gouvernement Karoui,1,economy_planning,3703.0,ben_ali
+TN-unknown-17,Gouvernement Ben Ali,1,transport,0.0,
+TN-unknown-170,Gouvernement Karoui,1,religious_affairs,3703.0,ben_ali
+TN-unknown-171,Gouvernement Karoui,1,other,3703.0,ben_ali
+TN-unknown-172,Gouvernement Karoui,3,agriculture|finance|trade,11109.0,ben_ali
+TN-unknown-173,Gouvernement Karoui,3,finance|industry_energy|other,11109.0,ben_ali
+TN-unknown-174,Gouvernement Karoui,1,agriculture,3703.0,ben_ali
+TN-unknown-175,Gouvernement Karoui,2,other,7406.0,ben_ali
+TN-unknown-176,Gouvernement Karoui,2,culture|education,7406.0,ben_ali
+TN-unknown-177,Gouvernement Karoui,2,social_affairs|women_family,7406.0,ben_ali
+TN-unknown-178,Gouvernement Karoui,1,interior,3703.0,ben_ali
+TN-unknown-179,Gouvernement Karoui,2,finance|other,7406.0,ben_ali
+TN-unknown-18,Gouvernement Ben Ali,1,other,0.0,
+TN-unknown-180,Gouvernement Karoui,1,culture,3703.0,ben_ali
+TN-unknown-181,Gouvernement Karoui,1,transport,3703.0,ben_ali
+TN-unknown-182,Gouvernement Karoui,1,information_media,3703.0,ben_ali
+TN-unknown-183,Gouvernement Karoui,1,foreign_affairs,3703.0,ben_ali
+TN-unknown-184,Gouvernement Karoui,1,public_service_governance,3703.0,ben_ali
+TN-unknown-185,Gouvernement Karoui,2,economy_planning|higher_education,7406.0,ben_ali
+TN-unknown-186,Gouvernement Karoui,1,environment,3703.0,ben_ali
+TN-unknown-187,Gouvernement Karoui,1,transport,3703.0,ben_ali
+TN-unknown-188,Gouvernement Karoui,1,investment_cooperation,3703.0,ben_ali
+TN-unknown-189,Gouvernement Karoui,1,economy_planning,3703.0,ben_ali
+TN-unknown-19,Gouvernement Ben Ali,1,economy_planning,0.0,
+TN-unknown-19,Gouvernement Karoui,1,environment,3703.0,ben_ali
+TN-unknown-190,Gouvernement Karoui,1,higher_education,3703.0,ben_ali
+TN-unknown-192,Gouvernement Ladgham,1,economy_planning,360.0,bourguiba
+TN-unknown-192,Gouvernement Nouira,1,other,3460.0,bourguiba
+TN-unknown-193,Gouvernement Ladgham,1,education,360.0,bourguiba
+TN-unknown-194,Gouvernement Ladgham,1,equipment_housing,360.0,bourguiba
+TN-unknown-194,Gouvernement Nouira,1,other,3460.0,bourguiba
+TN-unknown-195,Gouvernement Larayedh,1,investment_cooperation,322.0,transition
+TN-unknown-196,Gouvernement Larayedh,1,employment_training,322.0,transition
+TN-unknown-197,Gouvernement Larayedh,1,other,322.0,transition
+TN-unknown-198,Gouvernement Larayedh,1,finance,322.0,transition
+TN-unknown-199,Gouvernement Larayedh,1,investment_cooperation,322.0,transition
+TN-unknown-2,Gouvernement Mechichi,1,interior,366.0,second_republic
+TN-unknown-20,Gouvernement Ben Ammar,2,other|transport,1226.0,protectorate_end
+TN-unknown-200,Gouvernement Larayedh,1,youth_sports,322.0,transition
+TN-unknown-201,Gouvernement Larayedh,1,equipment_housing,322.0,transition
+TN-unknown-202,Gouvernement Mechichi,1,health,404.0,second_republic
+TN-unknown-203,Gouvernement Mechichi,1,industry_energy,404.0,second_republic
+TN-unknown-204,Gouvernement Mechichi,1,finance,404.0,second_republic
+TN-unknown-205,Gouvernement Mechichi,1,foreign_affairs,404.0,second_republic
+TN-unknown-206,Gouvernement Mohamed Mzali,1,youth_sports,2267.0,bourguiba
+TN-unknown-207,Gouvernement Mohamed Mzali,1,public_service_governance,2267.0,bourguiba
+TN-unknown-208,Gouvernement Mohamed Salah Mzali,1,trade,2267.0,bourguiba
+TN-unknown-209,Gouvernement Mohamed Salah Mzali,1,justice,2267.0,bourguiba
+TN-unknown-21,Gouvernement Ben Ammar,1,equipment_housing,613.0,protectorate_end
+TN-unknown-210,Gouvernement Mohamed Salah Mzali,1,other,2267.0,bourguiba
+TN-unknown-211,Gouvernement Mohamed Salah Mzali,1,equipment_housing,2267.0,bourguiba
+TN-unknown-212,Gouvernement Mohamed Salah Mzali,1,other,2267.0,bourguiba
+TN-unknown-213,Gouvernement Nouira,1,other,3460.0,bourguiba
+TN-unknown-214,Gouvernement Nouira,1,other,3460.0,bourguiba
+TN-unknown-215,Gouvernement Nouira,1,other,3460.0,bourguiba
+TN-unknown-216,Gouvernement Slaheddine Baccouche I,1,other,690.0,ben_ali
+TN-unknown-217,Gouvernement Slaheddine Baccouche II,1,without_portfolio,690.0,ben_ali
+TN-unknown-218,Gouvernement Slaheddine Baccouche II,1,health,690.0,ben_ali
+TN-unknown-219,Gouvernement Slaheddine Baccouche II,1,trade,690.0,ben_ali
+TN-unknown-22,Gouvernement Ben Ammar,1,foreign_affairs,613.0,protectorate_end
+TN-unknown-220,Gouvernement Slaheddine Baccouche II,1,agriculture,690.0,ben_ali
+TN-unknown-221,Gouvernement Slaheddine Baccouche II,1,justice,690.0,ben_ali
+TN-unknown-222,Gouvernement Slaheddine Baccouche II,1,other,690.0,ben_ali
+TN-unknown-223,Gouvernement de la Tunisie,1,foreign_affairs,0.0,
+TN-unknown-23,Gouvernement Ben Ammar,1,agriculture,613.0,protectorate_end
+TN-unknown-24,Gouvernement Ben Ammar,1,economy_planning,613.0,protectorate_end
+TN-unknown-25,Gouvernement Bourguiba I,1,other,466.0,monarchy
+TN-unknown-26,Gouvernement Bourguiba I,1,equipment_housing,466.0,monarchy
+TN-unknown-27,Gouvernement Bourguiba I,1,social_affairs,466.0,monarchy
+TN-unknown-28,Gouvernement Bourguiba I,1,other,466.0,monarchy
+TN-unknown-29,Gouvernement Bourguiba I,1,youth_sports,466.0,monarchy
+TN-unknown-3,Gouvernement Mechichi,1,foreign_affairs,366.0,second_republic
+TN-unknown-30,Gouvernement Bourguiba II,1,trade,466.0,monarchy
+TN-unknown-31,Gouvernement Caïd Essebsi,1,economy_planning,300.0,transition
+TN-unknown-31,Gouvernement Ghannouchi I,2,foreign_affairs|investment_cooperation,8240.0,ben_ali
+TN-unknown-32,Gouvernement Caïd Essebsi,1,local_affairs,300.0,transition
+TN-unknown-33,Gouvernement Caïd Essebsi,1,other,300.0,transition
+TN-unknown-33,Gouvernement Ghannouchi I,1,education,4120.0,ben_ali
+TN-unknown-34,Gouvernement Caïd Essebsi,1,other,300.0,transition
+TN-unknown-35,Gouvernement Caïd Essebsi,1,local_affairs,300.0,transition
+TN-unknown-36,Gouvernement Caïd Essebsi,1,environment,300.0,transition
+TN-unknown-37,Gouvernement Caïd Essebsi,1,other,300.0,transition
+TN-unknown-38,Gouvernement Caïd Essebsi,1,youth_sports,300.0,transition
+TN-unknown-39,Gouvernement Caïd Essebsi,1,health,300.0,transition
+TN-unknown-4,Gouvernement Mechichi,1,finance,366.0,second_republic
+TN-unknown-40,Gouvernement Caïd Essebsi,1,other,300.0,transition
+TN-unknown-41,Gouvernement Caïd Essebsi,1,education,300.0,transition
+TN-unknown-42,Gouvernement Chahed,1,public_service_governance,1279.0,second_republic
+TN-unknown-43,Gouvernement Chahed,1,other,1279.0,second_republic
+TN-unknown-44,Gouvernement Chahed,1,trade,1279.0,second_republic
+TN-unknown-45,Gouvernement Chahed,1,youth_sports,1279.0,second_republic
+TN-unknown-46,Gouvernement Chahed,1,youth_sports,1279.0,second_republic
+TN-unknown-47,Gouvernement Chahed,2,ict|industry_energy,2558.0,second_republic
+TN-unknown-48,Gouvernement Chahed,2,higher_education,2558.0,second_republic
+TN-unknown-49,Gouvernement Chahed,2,foreign_affairs|other,2558.0,second_republic
+TN-unknown-5,Gouvernement Mechichi,1,trade,366.0,second_republic
+TN-unknown-50,Gouvernement Chahed,2,agriculture,2558.0,second_republic
+TN-unknown-51,Gouvernement Chahed,1,public_service_governance,1279.0,second_republic
+TN-unknown-52,Gouvernement Chahed,1,trade,1279.0,second_republic
+TN-unknown-53,Gouvernement Chahed,1,transport,1279.0,second_republic
+TN-unknown-54,Gouvernement Chahed,2,social_affairs|transport,2558.0,second_republic
+TN-unknown-55,Gouvernement Chahed,2,youth_sports,2558.0,second_republic
+TN-unknown-56,Gouvernement Chahed,1,human_rights,1279.0,second_republic
+TN-unknown-57,Gouvernement Chahed,1,interior,1279.0,second_republic
+TN-unknown-58,Gouvernement Chenik II,1,social_affairs,0.0,
+TN-unknown-59,Gouvernement Chenik II,1,agriculture,0.0,
+TN-unknown-59,Gouvernement Karoui,2,interior|youth_sports,7406.0,ben_ali
+TN-unknown-59,Gouvernement Mohamed Salah Mzali,1,other,2267.0,bourguiba
+TN-unknown-6,Gouvernement Mechichi,1,transport,366.0,second_republic
+TN-unknown-60,Gouvernement Chenik II,1,other,0.0,
+TN-unknown-61,Gouvernement Chenik II,1,other,0.0,
+TN-unknown-61,Gouvernement Slaheddine Baccouche II,1,other,690.0,ben_ali
+TN-unknown-62,Gouvernement Chenik II,1,other,0.0,
+TN-unknown-62,Gouvernement Slaheddine Baccouche II,1,other,690.0,ben_ali
+TN-unknown-63,Gouvernement Chenik II,1,finance,0.0,
+TN-unknown-63,Gouvernement Mohamed Salah Mzali,1,finance,2267.0,bourguiba
+TN-unknown-63,Gouvernement Slaheddine Baccouche II,1,finance,690.0,ben_ali
+TN-unknown-64,Gouvernement Chenik II,1,equipment_housing,0.0,
+TN-unknown-64,Gouvernement Mohamed Salah Mzali,1,equipment_housing,2267.0,bourguiba
+TN-unknown-64,Gouvernement Slaheddine Baccouche II,1,equipment_housing,690.0,ben_ali
+TN-unknown-65,Gouvernement Chenik II,1,other,0.0,
+TN-unknown-65,Gouvernement Slaheddine Baccouche II,1,other,690.0,ben_ali
+TN-unknown-66,Gouvernement Chenik II,1,education,0.0,
+TN-unknown-66,Gouvernement Mohamed Salah Mzali,1,education,2267.0,bourguiba
+TN-unknown-66,Gouvernement Slaheddine Baccouche II,1,education,690.0,ben_ali
+TN-unknown-67,Gouvernement Essid,1,state_property,568.0,second_republic
+TN-unknown-68,Gouvernement Essid,2,human_rights|presidency_affairs,1136.0,second_republic
+TN-unknown-69,Gouvernement Essid,1,other,568.0,second_republic
+TN-unknown-7,Gouvernement Mechichi,1,tourism_handicrafts,366.0,second_republic
+TN-unknown-70,Gouvernement Essid,1,other,568.0,second_republic
+TN-unknown-71,Gouvernement Essid,1,other,568.0,second_republic
+TN-unknown-72,Gouvernement Essid,1,diaspora,568.0,second_republic
+TN-unknown-73,Gouvernement Essid,2,other|presidency_affairs,1136.0,second_republic
+TN-unknown-74,Gouvernement Essid,1,youth_sports,568.0,second_republic
+TN-unknown-75,Gouvernement Essid,1,other,568.0,second_republic
+TN-unknown-76,Gouvernement Essid,1,public_service_governance,568.0,second_republic
+TN-unknown-76,Gouvernement Ghannouchi I,1,equipment_housing,4120.0,ben_ali
+TN-unknown-77,Gouvernement Fakhfakh,1,human_rights,188.0,second_republic
+TN-unknown-78,Gouvernement Fakhfakh,1,relations_parliament,188.0,second_republic
+TN-unknown-78,Gouvernement Mechichi,1,presidency_affairs,404.0,second_republic
+TN-unknown-79,Gouvernement Fakhfakh,1,agriculture,188.0,second_republic
+TN-unknown-79,Gouvernement Mechichi,1,agriculture,404.0,second_republic
+TN-unknown-8,Gouvernement Mechichi,1,social_affairs,366.0,second_republic
+TN-unknown-80,Gouvernement Ghannouchi I,1,tourism_handicrafts,4120.0,ben_ali
+TN-unknown-81,Gouvernement Ghannouchi I,1,transport,4120.0,ben_ali
+TN-unknown-81,Gouvernement Karoui,1,transport,3703.0,ben_ali
+TN-unknown-82,Gouvernement Ghannouchi I,1,economy_planning,4120.0,ben_ali
+TN-unknown-83,Gouvernement Ghannouchi I,1,environment,4120.0,ben_ali
+TN-unknown-84,Gouvernement Ghannouchi I,1,relations_parliament,4120.0,ben_ali
+TN-unknown-85,Gouvernement Ghannouchi I,2,finance|other,8240.0,ben_ali
+TN-unknown-86,Gouvernement Ghannouchi I,1,foreign_affairs,4120.0,ben_ali
+TN-unknown-86,Gouvernement Karoui,1,foreign_affairs,3703.0,ben_ali
+TN-unknown-87,Gouvernement Ghannouchi I,1,other,4120.0,ben_ali
+TN-unknown-88,Gouvernement Ghannouchi I,2,higher_education|industry_energy,8240.0,ben_ali
+TN-unknown-89,Gouvernement Ghannouchi I,1,foreign_affairs,4120.0,ben_ali
+TN-unknown-9,Gouvernement Mechichi,1,health,366.0,second_republic
+TN-unknown-90,Gouvernement Ghannouchi I,1,defence,4120.0,ben_ali
+TN-unknown-91,Gouvernement Ghannouchi I,1,ict,4120.0,ben_ali
+TN-unknown-92,Gouvernement Ghannouchi I,1,investment_cooperation,4120.0,ben_ali
+TN-unknown-93,Gouvernement Ghannouchi I,1,finance,4120.0,ben_ali
+TN-unknown-94,Gouvernement Ghannouchi I,3,industry_energy|relations_parliament|social_affairs,12360.0,ben_ali
+TN-unknown-95,Gouvernement Ghannouchi I,1,transport,4120.0,ben_ali
+TN-unknown-96,Gouvernement Ghannouchi I,1,employment_training,4120.0,ben_ali
+TN-unknown-97,Gouvernement Ghannouchi I,3,economy_planning|investment_cooperation,12360.0,ben_ali
+TN-unknown-98,Gouvernement Ghannouchi I,2,interior|other,8240.0,ben_ali
+TN-unknown-99,Gouvernement Ghannouchi I,1,trade,4120.0,ben_ali
+TN-wajdi-hdhili,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,state_property,1314.0,second_republic
+TN-walid-dhahbi,Gouvernement Mechichi,1,interior,366.0,second_republic
+TN-yadh-ben-achour,Gouvernement Ghannouchi II,1,other,0.0,ben_ali
+TN-youssef-ben-brahim,Gouvernement Mechichi,1,culture,366.0,second_republic
+TN-youssef-fennira,Gouvernement Mechichi,1,employment_training,366.0,second_republic
+TN-youssef-mokaddem,Gouvernement Ghannouchi I,1,foreign_affairs,4383.0,ben_ali
+TN-youssef-zouaghi,Gouvernement Mechichi,1,justice,366.0,second_republic
+TN-zakaria-belkhodja,Gouvernement Mechichi,1,youth_sports,366.0,second_republic

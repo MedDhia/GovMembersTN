@@ -1,16 +1,16 @@
 {
-  "generated_utc": "2026-08-26T17:03:49+00:00",
+  "generated_utc": "2026-08-26T18:15:14+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
-    "wikidata_persons": false,
-    "wikidata_officeholders": false,
-    "wikipedia_cabinets": false,
-    "leaders_biographies": false
+    "wikidata_persons": true,
+    "wikidata_officeholders": true,
+    "wikipedia_cabinets": true,
+    "leaders_biographies": true
   },
-  "complete": false,
+  "complete": true,
   "tables": {
     "persons": {
-      "rows": 22,
+      "rows": 931,
       "columns": [
         "person_id",
         "wikidata_qid",
@@ -52,6 +52,8 @@
         "first_appointment",
         "last_appointment_end",
         "total_tenure_days",
+        "total_appointment_days",
+        "tenure_days_dated",
         "max_rank_level",
         "ever_sovereign_portfolio",
         "ever_head_of_government",
@@ -62,7 +64,7 @@
       ]
     },
     "appointments": {
-      "rows": 23,
+      "rows": 3061,
       "columns": [
         "appointment_id",
         "record_id",
@@ -78,9 +80,13 @@
         "start_date",
         "end_date",
         "date_precision",
+        "date_basis",
         "source",
         "source_ref",
         "confidence",
+        "party_raw",
+        "replaces",
+        "replaced_by",
         "person_id",
         "tenure_days",
         "is_incumbent",
@@ -96,7 +102,7 @@
       ]
     },
     "cabinets": {
-      "rows": 23,
+      "rows": 53,
       "columns": [
         "cabinet_id",
         "n_members",

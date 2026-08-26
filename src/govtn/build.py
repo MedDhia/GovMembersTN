@@ -33,7 +33,7 @@ from typing import Any
 import pandas as pd
 
 from . import config
-from .normalize import clean_name, parse_date, parse_title
+from .normalize import clean_name, excluded_reason, parse_date, parse_title
 from .reconcile import Reconciler, SourceRecord
 
 log = logging.getLogger(__name__)
@@ -238,6 +238,7 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
             "start_date": start,
             "end_date": end,
             "date_precision": "day",
+            "date_basis": "spine",
             "source": "spine",
             "source_ref": "config/cabinets.yml",
             "confidence": spell.get("confidence", "high"),
@@ -246,7 +247,10 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
     # -- (b) Wikipedia cabinet rosters --------------------------------------
     for cabinet in _load_interim("wikipedia_cabinets.json") or []:
         article = cabinet["article"]
-        spell = spine.spell_for_article(article)
+        # Group the French and Arabic versions of one government under a
+        # single cabinet identity.
+        canonical = cabinet.get("canonical_article") or article
+        spell = spine.spell_for_article(canonical)
         infobox = cabinet.get("infobox") or {}
         cab_start = infobox.get("start_date") or (spell or {}).get("start")
         cab_end = infobox.get("end_date") or (spell or {}).get("end")
@@ -259,12 +263,12 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 record_id=record_id, source="wikipedia",
                 name=member["person_name"],
                 wikilink=member.get("person_wikilink"),
-                cabinet=article, portfolio=parsed.portfolio,
+                cabinet=canonical, portfolio=parsed.portfolio,
             ))
             member_start = _iso(member.get("date_note")) or _iso(cab_start)
             appointments.append({
                 "record_id": record_id,
-                "cabinet_id": article,
+                "cabinet_id": canonical,
                 "spell_id": (spell or {}).get("id"),
                 "cabinet_article": article,
                 "raw_title": member["raw_title"],
@@ -276,6 +280,7 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 "start_date": member_start,
                 "end_date": _iso(cab_end),
                 "date_precision": parse_date(member.get("date_note") or str(cab_start)).precision,
+                "date_basis": "row" if member.get("date_note") else "cabinet",
                 "source": f"wikipedia:{cabinet.get('lang', 'fr')}",
                 "source_ref": f"https://{cabinet.get('lang','fr')}.wikipedia.org/wiki/{article.replace(' ', '_')}",
                 "confidence": "medium",
@@ -283,16 +288,27 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
             })
 
     # -- (c) Wikidata officeholding statements ------------------------------
+    # Arabic labels, keyed by QID, so Wikidata records can carry them as
+    # aliases and bridge the Arabic rosters to the Latin-script ones.
+    arabic_labels: dict[str, str] = {}
+    for row in _load_interim("wikidata_persons.json") or []:
+        qid_value, label_ar = row.get("person_qid"), row.get("personLabelAr")
+        if qid_value and label_ar:
+            arabic_labels[qid_value] = label_ar
+
     for row in _load_interim("wikidata_officeholders.json") or []:
         record_id = new_id("d")
         start = _iso(row.get("start"))
         end = _iso(row.get("end"))
         parsed = parse_title(row.get("positionLabel") or "")
         spell = spine.spell_at(date.fromisoformat(start)) if start else None
+        person_qid = row.get("person_qid")
+        alias_ar = arabic_labels.get(person_qid)
         records.append(SourceRecord(
             record_id=record_id, source="wikidata",
             name=row.get("personLabel") or "",
-            qid=row.get("person_qid"),
+            aliases=(alias_ar,) if alias_ar else (),
+            qid=person_qid,
             portfolio=parsed.portfolio,
         ))
         appointments.append({
@@ -309,6 +325,7 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
             "start_date": start,
             "end_date": end,
             "date_precision": "day" if start else "unknown",
+            "date_basis": "statement" if start else "unknown",
             "source": "wikidata",
             "source_ref": row.get("statement") or row.get("person"),
             "confidence": "high" if start else "low",
@@ -392,7 +409,7 @@ def build_persons(
             "name_variants": "|".join(sorted({clean_name(n) for n in names})),
             "name_ar": wd.get("personLabelAr"),
             "name_en": wd.get("personLabelEn"),
-            "gender": wd.get("genderLabel") or seed.get("gender"),
+            "gender": _normalize_gender(wd.get("genderLabel") or seed.get("gender")),
             "birth_date_precision": (birth_parsed.precision if birth_parsed else None),
             "birth_date": birth,
             "birth_year": _year(birth),
@@ -431,6 +448,23 @@ def build_persons(
         rows.append(row)
 
     persons = pd.DataFrame(rows)
+    # Leaders' Who's Who covers public figures generally, not only ministers.
+    # Subjects who never held a government post are not part of the analysis
+    # frame; keeping them would silently inflate every denominator. They are
+    # written aside rather than discarded, in case a later harvest connects
+    # them to an appointment.
+    held_office = set(appointments["person_id"]) if not appointments.empty else set()
+    if held_office:
+        outside = persons[~persons["person_id"].isin(held_office)]
+        if not outside.empty:
+            path = config.paths().interim / "persons_without_appointments.csv"
+            outside.to_csv(path, index=False)
+            log.info(
+                "set aside %d biographies of people with no government post "
+                "(listed in %s)", len(outside), path.name,
+            )
+        persons = persons[persons["person_id"].isin(held_office)].reset_index(drop=True)
+
     place_columns = persons["birth_place"].apply(
         lambda place: pd.Series(spine.place_attributes(place))
     )
@@ -438,6 +472,26 @@ def build_persons(
     # Wikidata's own P131 label is kept as the raw value; the coded columns
     # above are the harmonised ones.
     return _attach_career_variables(persons, appointments)
+
+
+_GENDER = {
+    "male": "male", "masculin": "male", "homme": "male", "ذكر": "male",
+    "female": "female", "féminin": "female", "feminin": "female",
+    "femme": "female", "أنثى": "female", "انثى": "female",
+}
+
+
+def _normalize_gender(value: str | None) -> str | None:
+    """Map Wikidata's gender label to a controlled vocabulary.
+
+    The SPARQL label service is asked for "fr,ar,en" in that order, so this
+    arrives as "masculin"/"féminin" far more often than "male"/"female".
+    Comparing against the English strings silently reported zero women in
+    every cabinet.
+    """
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+    return _GENDER.get(str(value).strip().lower())
 
 
 def _merge_multi(*values: str | None) -> str | None:
@@ -452,6 +506,35 @@ def _merge_multi(*values: str | None) -> str | None:
             seen.add(key)
             out.append(part)
     return "|".join(out) or None
+
+
+def _union_days(group: pd.DataFrame) -> float:
+    """Days this person spent in government, counting overlapping posts once.
+
+    Summing per-appointment tenure massively overstates service. A minister
+    listed in each of a cabinet's reshuffle tables gets one row per listing,
+    and every row inherits the whole cabinet's span, so the naive sum produced
+    careers of 180+ years. Merging the intervals first is the only way to get
+    a figure that means anything.
+    """
+    spans = [
+        (row.start_dt, row.end_dt)
+        for row in group.itertuples()
+        if pd.notna(row.start_dt) and pd.notna(row.end_dt)
+    ]
+    if not spans:
+        return float("nan")
+    spans.sort()
+    total, current_start, current_end = 0.0, *spans[0]
+    for start, end in spans[1:]:
+        if start > current_end:                       # disjoint: bank the run
+            total += (current_end - current_start).days
+            current_start, current_end = start, end
+        else:
+            current_end = max(current_end, end)
+        
+    total += (current_end - current_start).days
+    return total
 
 
 def _attach_career_variables(persons: pd.DataFrame, appointments: pd.DataFrame) -> pd.DataFrame:
@@ -475,7 +558,15 @@ def _attach_career_variables(persons: pd.DataFrame, appointments: pd.DataFrame) 
         "n_portfolios": grouped["portfolio"].nunique(),
         "first_appointment": grouped["start_dt"].min(),
         "last_appointment_end": grouped["end_dt"].max(),
-        "total_tenure_days": grouped["tenure_days"].sum(),
+        "total_tenure_days": grouped.apply(_union_days, include_groups=False),
+        "total_appointment_days": grouped["tenure_days"].sum(),
+        # Union restricted to rows whose dates describe the PERSON rather than
+        # the cabinet. Far sparser, but it is the only tenure measure that can
+        # carry a duration or survival analysis.
+        "tenure_days_dated": grouped.apply(
+            lambda g: _union_days(g[g["date_basis"].isin(["statement", "row", "spine"])]),
+            include_groups=False,
+        ),
         "max_rank_level": grouped["rank_level"].min(),      # lower level = higher rank
         "ever_sovereign_portfolio": grouped["is_sovereign"].any(),
         "ever_head_of_government": grouped["portfolio"].apply(
@@ -506,6 +597,24 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
         return frame
     frame["person_id"] = frame["record_id"].map(mapping)
 
+    # Drop positions that are not membership of a government. Written out with
+    # the rule that caught each one, so the exclusion is auditable and can be
+    # reversed by editing config/portfolios.yml rather than by re-harvesting.
+    frame["excluded_as"] = frame["raw_title"].map(
+        lambda t: excluded_reason(t) if isinstance(t, str) else None
+    )
+    dropped = frame[frame["excluded_as"].notna()]
+    if not dropped.empty:
+        path = config.paths().interim / "excluded_appointments.csv"
+        dropped[["raw_title", "person_name", "excluded_as", "source", "source_ref"]] \
+            .sort_values(["excluded_as", "raw_title"]).to_csv(path, index=False)
+        counts = dropped["excluded_as"].value_counts().to_dict()
+        log.info(
+            "excluded %d non-government positions (%s); listed in %s",
+            len(dropped), ", ".join(f"{k}={v}" for k, v in counts.items()), path.name,
+        )
+    frame = frame[frame["excluded_as"].isna()].drop(columns=["excluded_as"])
+
     censor = spine.censor
     labels = {p["canonical"]: p for p in config.portfolios()["portfolios"]}
     ranks = {r["canonical"]: r["level"] for r in config.portfolios()["ranks"]}
@@ -528,6 +637,11 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
         return (end - start).days
 
     frame["tenure_days"] = frame.apply(duration, axis=1)
+    # Whether the dates describe THIS PERSON's tenure or were inherited from
+    # the cabinet. Wikipedia roster rows usually carry no individual dates, so
+    # they take the cabinet's span - which is an upper bound, not a tenure.
+    # Filter to `statement` or `row` for any duration analysis.
+    frame["date_basis"] = frame["date_basis"].fillna("cabinet")
     frame["is_incumbent"] = frame["end_date"].isna()
     frame["portfolio_label"] = frame["portfolio"].map(
         lambda p: (labels.get(p) or {}).get("label_en")
@@ -633,7 +747,9 @@ def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
     return tables
 
 
-def _write_manifest(out_dir, tables, spine: Spine) -> None:
+def _contributed_factory(interim_dir):
+    """Predicate: did `<name>.json` in `interim_dir` actually yield rows?"""
+
     def _contributed(name: str) -> bool:
         """A source counts as present only if it actually yielded rows.
 
@@ -642,7 +758,7 @@ def _write_manifest(out_dir, tables, spine: Spine) -> None:
         present and the harvest as complete - exactly the "looks more complete
         than it is" failure this manifest exists to prevent.
         """
-        path = config.paths().interim / f"{name}.json"
+        path = interim_dir / f"{name}.json"
         if not path.exists():
             return False
         try:
@@ -651,6 +767,11 @@ def _write_manifest(out_dir, tables, spine: Spine) -> None:
         except (json.JSONDecodeError, OSError):
             return False
 
+    return _contributed
+
+
+def _write_manifest(out_dir, tables, spine: Spine) -> None:
+    _contributed = _contributed_factory(config.paths().interim)
     sources_present = {
         name: _contributed(name)
         for name in ("wikidata_persons", "wikidata_officeholders",
