@@ -850,11 +850,18 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
     if not payload:
         return appointments
     decrees = payload.get("decrees", payload) if isinstance(payload, dict) else payload
-    usable = [d for d in decrees if d.get("holder") and d.get("published")]
+    # A decree's EFFECTIVE date ("à compter du 23 avril 1980") is the legal
+    # date of the appointment itself; the publication date merely trails it.
+    # Prefer the former wherever the decree states it.
+    for decree in decrees:
+        decree["best_date"] = decree.get("effective") or decree.get("published")
+        decree["date_kind"] = "effective" if decree.get("effective") else "published"
+    usable = [d for d in decrees if d.get("holder") and d.get("best_date")]
     if not usable or appointments.empty:
         return appointments
 
-    for column in ("jort_citation", "jort_date", "jort_url", "jort_kind"):
+    for column in ("jort_citation", "jort_date", "jort_url", "jort_kind",
+                   "jort_office", "jort_date_kind"):
         appointments[column] = pd.NA
     appointments["jort_date_delta"] = pd.NA
 
@@ -877,11 +884,12 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
             for token in name_tokens_strong(name)
             for d in index.get(token, [])
         }
-        best, best_gap = None, None
+        portfolio = row.get("portfolio")
+        best, best_key = None, None
         for decree in candidates.values():
             if name_similarity(name, decree["holder"]) < 0.75:
                 continue
-            published = _as_date_safe(decree["published"])
+            published = _as_date_safe(decree["best_date"])
             if published is None:
                 continue
             gap = abs((published - start).days) if start else 10**6
@@ -889,12 +897,26 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
             # some other episode in the person's career.
             if gap > 365:
                 continue
-            if best_gap is None or gap < best_gap:
-                best, best_gap = decree, gap
+            # A decree that names the office is far stronger evidence than one
+            # that merely lands near the right date: many people hold several
+            # posts within a year, and date proximity alone picks between them
+            # arbitrarily. Rank agreeing portfolios ahead of everything else.
+            office = decree.get("office") or decree.get("portfolio_hint") or ""
+            decree_portfolio = parse_title(office).portfolio if office else None
+            agrees = bool(
+                portfolio and decree_portfolio and decree_portfolio == portfolio
+            )
+            key = (0 if agrees else 1, gap)
+            if best_key is None or key < best_key:
+                best, best_key = decree, key
+        best_gap = best_key[1] if best_key else None
+        if best is not None:
+            appointments.at[position, "jort_office"] = best.get("office")
         if best is None:
             continue
         appointments.at[position, "jort_citation"] = best["citation"]
-        appointments.at[position, "jort_date"] = best["published"]
+        appointments.at[position, "jort_date"] = best["best_date"]
+        appointments.at[position, "jort_date_kind"] = best["date_kind"]
         appointments.at[position, "jort_url"] = best["url"]
         appointments.at[position, "jort_kind"] = best["kind"]
         appointments.at[position, "jort_date_delta"] = best_gap if start else pd.NA

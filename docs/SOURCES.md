@@ -127,12 +127,26 @@ language itself (`"est nommé chef du gouvernement"`,
 officeholder's name can be read off the snippet. It is also two orders of
 magnitude cheaper: a dozen queries rather than one per person.
 
-**Publication is not appointment.** `jort_date` is when the decree appeared in
-the gazette, which trails the appointment by a few days — a median of 8 in
-this data. It is an authoritative upper bound on the start date, not a
+**Publication is not appointment.** `jort_date` is normally when the decree
+appeared in the gazette, which trails the appointment by a few days — a median
+of 8 in this data. It is an authoritative upper bound on the start date, not a
 replacement for it, and the difference is recorded in `jort_date_delta` rather
 than silently resolved. A large gap between the harvested date and the
 official record is a finding worth inspecting.
+
+Decrees often state their own effective date (`à compter du 23 avril 1980`),
+which is the appointment's actual legal date and is preferred where present —
+`jort_date_kind` records which of the two a row carries. In practice it is
+rare: the search snippet runs to a median of 72 characters, enough for the
+officeholder's name **or** the effective date but seldom both, so only 1 of
+372 decrees yields one. Reading it reliably would need the full document,
+which is behind the login.
+
+**Precision over volume.** Broad cessation queries return mostly *délégués* —
+sub-national administrators, not ministers — and dominate the results:
+unfiltered, they made up 779 of 1,169 decrees while yielding a single usable
+name. Narrowing to ministerial phrasing cut the corpus to 372 and raised the
+share with an identifiable officeholder from 18% to 57%.
 
 Two traps are handled: `"ministre plénipotentiaire"` is a diplomatic rank
 rather than a seat in cabinet and dominates the `"est nommé ministre"`

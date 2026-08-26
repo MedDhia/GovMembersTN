@@ -131,7 +131,7 @@ data/raw/        cached source payloads + MANIFEST.json per source
 data/interim/    harvested JSON, reconciliation audit, unmatched titles
 data/processed/  the dataset
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           111 tests, incl. fixtures reproducing real source markup
+tests/           173 tests, incl. fixtures reproducing real source markup
 ```
 
 ## Usage

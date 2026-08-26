@@ -118,3 +118,57 @@ def test_undeclared_charset_is_sniffed_not_assumed_latin1():
     text = fetcher.get("https://jort.tn/probe")
     assert "N°032" in text and "nommé" in text
     assert "Â°" not in text and "Ã©" not in text
+
+
+# --- extraction robustness -------------------------------------------------
+
+@pytest.mark.parametrize("snippet,expected", [
+    # Snippets are cut to a fixed width and often begin mid-word. Requiring
+    # the whole of "Monsieur" discarded a large share of perfect matches.
+    ("...sieur Mohamed MZALI est nommé Premier Ministre à compter du 23 avr...",
+     "Mohamed MZALI"),
+    ("...dame Najla Bouden est nommée cheffe du gouvernement...", "Najla Bouden"),
+    # Tunisian names carry particles; a four-token cap rejected exactly the
+    # multi-particle names that matter most. (OCR reads "Zine" as "Zinc".)
+    ("...Monsieur Zinc El Abidine Ben Ali est nommé Premier ministre , minis...",
+     "Zinc El Abidine Ben Ali"),
+])
+def test_truncated_honorifics_and_long_names(snippet, expected):
+    assert extract_holder(snippet) == expected
+
+
+def test_preamble_references_are_not_decrees():
+    """A decree's preamble cites the decrees it relies on.
+
+    "وعلى الأمر عدد ... المتعلق بتسمية أعضاء الحكومة" is "having regard to
+    decree no. X concerning the naming of members of the government" - a
+    reference TO an appointment decree, not one. These were the single largest
+    group of unparseable results.
+    """
+    from govtn.sources.jort import _PREAMBLE_REFERENCE
+    assert _PREAMBLE_REFERENCE.search(
+        "...وعلى الأمر عدد 51 لسنة 2021 المتعلق ب تسمية أعضاء الحكومة..."
+    )
+    assert not _PREAMBLE_REFERENCE.search(
+        "...Article premier - Monsieur Ahmed Hachani est nommé Chef du Gouvern..."
+    )
+
+
+@pytest.mark.parametrize("snippet,portfolio", [
+    ("...Monsieur X est nommé ministre de l'intérieur , et...", "interior"),
+    ("...Article premier - Monsieur Ahmed Hachani est nommé Chef du Gouvern...",
+     "head_of_government"),
+    ("...dame Najla Bouden est nommée cheffe du gouvernement...",
+     "head_of_government"),
+])
+def test_office_is_extracted_and_maps_to_a_portfolio(snippet, portfolio):
+    """The office named in a decree disambiguates which appointment it records.
+
+    Date proximity alone picks arbitrarily between the several posts a person
+    may hold within a year.
+    """
+    from govtn.sources.jort import extract_office
+    from govtn.normalize import parse_title
+    office = extract_office(snippet)
+    assert office
+    assert parse_title(office).portfolio == portfolio

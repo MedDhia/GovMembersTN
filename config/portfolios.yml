@@ -33,7 +33,7 @@ ranks:
   - canonical: head_of_government
     level: 0
     aliases:
-      - "^(premier ministre|chef du gouvernement|president du conseil)"
+      - "^(premier ministre|cheff?e? du gouvern|president du conseil)"
       - "^(prime minister|head of government)"
       # Title of the head of government under the protectorate and the
       # monarchy, before the office was renamed.
@@ -87,7 +87,10 @@ portfolios:
     label_fr: "Chef du gouvernement"
     power_rank: sovereign
     aliases:
-      - "^(premier ministre|chef du gouvernement)\\b"
+      # `cheffe` (feminine) and truncated gazette snippets ("Chef du Gouvern")
+      # both have to match, or every decree appointing a woman head of
+      # government falls through to `other`.
+      - "^(premier ministre|cheff?e? du gouvern)"
       - "^prime minister\\b"
       - "^(grand vizir|vizir|wazir akbar)\\b"
       - "^(الوزير الاول|الوزير الاكبر|رئيس[هة]? الحكوم[هة])"

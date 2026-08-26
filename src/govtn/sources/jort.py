@@ -66,7 +66,8 @@ _MINISTERIAL = re.compile(
 
 _NOT_CABINET = re.compile(
     r"ministre\s+pl[ée]nipotentiaire|conseiller\s+des\s+affaires\s+[ée]trang[èe]res|"
-    r"وزير مفوض",
+    r"fonctions\s+de\s+(?:premier\s+)?d[ée]l[ée]gu[ée]s?|d[ée]l[ée]gu[ée]s?\s+[àa]\s+compter|"
+    r"وزير مفوض|معتمد",
     re.IGNORECASE,
 )
 
@@ -212,6 +213,11 @@ DECREE_PHRASES: list[tuple[str, str]] = [
     # Whole-cabinet decrees.
     ('"sont nommés membres du gouvernement"', ""),
     ('"تسمية أعضاء الحكومة"', ""),
+    ('"يسمى السيد"', ""),
+    ('"يسمى السيدة"', ""),
+    ('"عين السيد"', ""),
+    ('"أسندت إلى السيد"', ""),
+    ('"وزيرا لدى رئيس الحكومة"', ""),
     # Individual ministers and secretaries of state.
     ('"est nommé ministre"', ""),
     ('"est nommée ministre"', ""),
@@ -219,15 +225,37 @@ DECREE_PHRASES: list[tuple[str, str]] = [
     ('"est nommée secrétaire d\'Etat"', ""),
     # Cessations date the END of a tenure as precisely as a nomination dates
     # its start.
-    ('"il est mis fin aux fonctions"', ""),
-    ('"cessation de fonctions"', ""),
+    # Targeted at ministers: the unqualified forms return mostly délégués and
+    # other sub-national posts.
+    ('"il est mis fin aux fonctions de ministre"', ""),
+    ('"cessation de fonctions du ministre"', ""),
+    ('"cessation de fonctions de membres du gouvernement"', ""),
+    ('"إنهاء مهام عضو بالحكومة"', ""),
 ]
 
 # "Article premier - Monsieur Ahmed Hachani est nommé Chef du Gouvernement"
+#
+# The honorific is allowed to be TRUNCATED. Snippets are cut to a fixed width
+# and frequently begin mid-word - "...sieur Mohamed MZALI est nommé Premier
+# Ministre" - so requiring the whole of "Monsieur" discarded a large share of
+# otherwise perfect matches.
 _HOLDER = re.compile(
-    r"(?:Monsieur|Madame|M\.|Mme)\s+"
-    r"(?P<name>[^,;]{3,60}?)\s*,?\s*"
+    # "sieur" and "dame" on their own are the tails of Monsieur/Madame left by
+    # the snippet's fixed-width cut.
+    r"(?:(?:M(?:on)?)?sieur|(?:Ma)?dame|M\.|Mme)\s+"
+    r"(?P<name>[^,;]{3,70}?)\s*,?\s*"
     r"(?:est\s+nomm|sont\s+nomm|,)",
+    re.IGNORECASE,
+)
+
+# A decree's preamble cites the decrees it relies on: "وعلى الأمر عدد ... المتعلق
+# بتسمية أعضاء الحكومة" - "having regard to decree no. X concerning the naming
+# of members of the government". Those are references TO an appointment
+# decree, not appointment decrees, and they were the single largest group of
+# unparseable results.
+_PREAMBLE_REFERENCE = re.compile(
+    r"وعلى الأمر|وعلى المرسوم|المتعلق ب|بمقتضى الأمر|"
+    r"vu le d[ée]cret|vu la loi",
     re.IGNORECASE,
 )
 # Titles and ranks that precede the office but are not part of the name.
@@ -238,6 +266,41 @@ _NAME_NOISE = re.compile(
 )
 
 
+# The office named after the appointment verb: "est nommé ministre de
+# l'intérieur", "est nommée cheffe du gouvernement".
+_OFFICE_AFTER_VERB = re.compile(
+    r"(?:est|sont)\s+nomm[ées]{1,3}\s+(?P<office>[^.,;]{4,80})",
+    re.IGNORECASE,
+)
+
+
+# "à compter du 25 août 2014" - the date the decree TAKES EFFECT, which is the
+# appointment's actual legal date. It beats the publication date, which merely
+# trails it, and it is stated in the snippet often enough to be worth taking.
+_EFFECTIVE_DATE = re.compile(
+    r"[àa]\s+compter\s+du\s+(?P<date>\d{1,2}\s+[a-zéûôàA-Z]+\s+(?:19|20)\d{2})",
+    re.IGNORECASE,
+)
+
+
+def extract_effective_date(snippet: str) -> str | None:
+    """The decree's effective date, as ISO, or None."""
+    match = _EFFECTIVE_DATE.search(snippet)
+    if not match:
+        return None
+    parsed = parse_date(match.group("date"))
+    return parsed.value.isoformat() if parsed.value else None
+
+
+def extract_office(snippet: str) -> str | None:
+    """The office a decree appoints to, as printed."""
+    match = _OFFICE_AFTER_VERB.search(snippet)
+    if not match:
+        return None
+    office = re.sub(r"\s+", " ", match.group("office")).strip(" .,;-")
+    return office or None
+
+
 def extract_holder(snippet: str) -> str | None:
     """Officeholder's name from a decree snippet, or None."""
     match = _HOLDER.search(snippet)
@@ -245,8 +308,10 @@ def extract_holder(snippet: str) -> str | None:
         return None
     name = _NAME_NOISE.sub("", match.group("name")).strip(" ,.;-")
     name = re.sub(r"\s+", " ", name)
-    # Two to four tokens is a personal name; anything else is a mis-parse.
-    if not 2 <= len(name.split()) <= 4:
+    # Two to six tokens. Tunisian names carry particles ("Zine El Abidine Ben
+    # Ali" is five), and an upper bound of four rejected exactly the
+    # multi-particle names that matter most here.
+    if not 2 <= len(name.split()) <= 6:
         return None
     return name
 
@@ -264,6 +329,8 @@ def harvest_decrees(
     decrees: list[dict[str, Any]] = []
     truncated: list[dict[str, Any]] = []
     seen: set[tuple] = set()
+    skipped_preamble = 0
+    skipped_non_ministerial = 0
     for query, portfolio_hint in phrases or DECREE_PHRASES:
         hits = client.search(query, limit_pages=max_pages)
         total = client.last_total
@@ -281,6 +348,16 @@ def harvest_decrees(
             seen.add(key)
             if not hit.collection.startswith("Journal"):
                 continue                     # Annonces Légales are company filings
+            if _PREAMBLE_REFERENCE.search(hit.snippet) and not _HOLDER.search(hit.snippet):
+                # A preamble citing an appointment decree, not the decree.
+                skipped_preamble += 1
+                continue
+            if hit.is_cessation and not hit.is_ministerial and not portfolio_hint:
+                # Generic cessation results are dominated by sub-national
+                # administrative posts; without ministerial context they are
+                # not this dataset's business.
+                skipped_non_ministerial += 1
+                continue
             if _NOT_CABINET.search(hit.snippet):
                 # "Ministre plénipotentiaire" is a diplomatic rank, not a seat
                 # in the cabinet, and it dominates these results.
@@ -294,11 +371,19 @@ def harvest_decrees(
                 "kind": "cessation" if hit.is_cessation else "nomination",
                 "portfolio_hint": portfolio_hint or None,
                 "holder": extract_holder(hit.snippet),
+                "office": extract_office(hit.snippet),
+                "effective": extract_effective_date(hit.snippet),
                 "published": client.issue_date(hit),
                 "snippet": hit.snippet,
                 "query": query,
                 "url": f"{BASE}/view/journal-officiel/{hit.lang}/{hit.year}/{hit.issue}",
             })
+    if skipped_preamble:
+        log.info("skipped %d preamble references to appointment decrees",
+                 skipped_preamble)
+    if skipped_non_ministerial:
+        log.info("skipped %d cessations with no ministerial context",
+                 skipped_non_ministerial)
     return decrees, truncated
 
 
