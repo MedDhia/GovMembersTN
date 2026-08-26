@@ -1,0 +1,8 @@
+requests>=2.31
+PyYAML>=6.0
+pandas>=2.0
+networkx>=3.1
+mwparserfromhell>=0.6     # robust MediaWiki wikitext parsing
+beautifulsoup4>=4.12      # Leaders.com.tn HTML
+lxml>=5.0
+pytest>=7.4

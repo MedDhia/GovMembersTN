@@ -1,0 +1,401 @@
+# ---------------------------------------------------------------------------
+# Harmonised portfolio taxonomy for Tunisian cabinets, 1956-present.
+#
+# WHY THIS EXISTS
+# Tunisian ministries are renamed, merged and split constantly. Raw titles in
+# the sources include, for the same underlying policy domain:
+#   "Secrétaire d'État à l'Intérieur", "Ministre de l'Intérieur",
+#   "Ministre de l'Intérieur et du Développement local",
+#   "وزير الداخلية"
+# Analysing raw title strings would fragment one portfolio into a dozen
+# categories and make any time-series or network comparison meaningless.
+#
+# `canonical` is the stable analytic category. `aliases` are case-insensitive,
+# accent-insensitive regular expressions matched against the normalised raw
+# title (see govtn.normalize.normalize_title). Matching is ORDERED: the first
+# canonical block whose pattern matches wins, so more specific portfolios are
+# declared before more general ones. This ordering is load-bearing - e.g.
+# `higher_education` must precede `education`, and `foreign_affairs` must
+# precede `affairs`-style catch-alls.
+#
+# Portfolios also carry:
+#   power_rank   - coarse ordering used in elite-politics work. `sovereign`
+#                  covers the classic ministères de souveraineté (interior,
+#                  foreign affairs, justice, defence, finance); `economic`,
+#                  `social`, `service` follow.
+#   created      - first appearance, where the domain did not exist in 1956
+#                  (useful for right-censoring portfolio-level time series).
+# ---------------------------------------------------------------------------
+
+ranks:
+  # Cabinet rank, extracted separately from the policy domain. Ranks matter:
+  # a secretary of state for finance is not the finance minister.
+  - canonical: head_of_government
+    level: 0
+    aliases:
+      - "^(premier ministre|chef du gouvernement|president du conseil)"
+      - "^(prime minister|head of government)"
+      - "رئيس (الحكومة|الوزراء)"
+  - canonical: deputy_head_of_government
+    level: 1
+    aliases:
+      - "vice[- ]?president du gouvernement"
+      - "(premier |)ministre adjoint aupres du (premier ministre|chef du gouvernement)"
+      - "deputy prime minister"
+  - canonical: minister_of_state
+    level: 2
+    aliases:
+      - "^ministre d'?etat"
+      - "^minister of state"
+      - "وزير دولة"
+  - canonical: delegate_minister
+    level: 4
+    aliases:
+      - "ministre delegue"
+      - "minister delegate"
+      - "وزير منتدب"
+  - canonical: secretary_of_state
+    level: 5
+    aliases:
+      - "secretaire d'?etat"
+      - "secretary of state"
+      - "كاتب دولة"
+  - canonical: minister
+    level: 3
+    aliases:
+      - "^ministre\\b"
+      - "^minister\\b"
+      - "^وزير"
+  - canonical: state_secretary_general
+    level: 6
+    aliases:
+      - "secretaire general du gouvernement"
+      - "secretary general of the government"
+      - "الامين العام للحكومة"
+
+portfolios:
+
+  - canonical: head_of_government
+    label_en: "Head of government"
+    label_fr: "Chef du gouvernement"
+    power_rank: sovereign
+    aliases:
+      - "^(premier ministre|chef du gouvernement)$"
+      - "^prime minister$"
+
+  - canonical: interior
+    label_en: "Interior"
+    label_fr: "Intérieur"
+    power_rank: sovereign
+    aliases:
+      - "interieur"
+      - "\\binterior\\b"
+      - "الداخلية"
+
+  - canonical: foreign_affairs
+    label_en: "Foreign affairs"
+    label_fr: "Affaires étrangères"
+    power_rank: sovereign
+    aliases:
+      - "affaires etrangeres"
+      - "foreign affairs"
+      - "الشؤون الخارجية"
+      - "الخارجية"
+
+  - canonical: justice
+    label_en: "Justice"
+    label_fr: "Justice"
+    power_rank: sovereign
+    aliases:
+      - "\\bjustice\\b"
+      - "garde des sceaux"
+      - "العدل"
+
+  - canonical: defence
+    label_en: "Defence"
+    label_fr: "Défense nationale"
+    power_rank: sovereign
+    aliases:
+      - "defense nationale"
+      - "\\bdefence\\b|\\bdefense\\b"
+      - "الدفاع"
+
+  - canonical: finance
+    label_en: "Finance"
+    label_fr: "Finances"
+    power_rank: sovereign
+    aliases:
+      - "\\bfinances?\\b"
+      - "المالية"
+
+  # ---- economic ----------------------------------------------------------
+
+  - canonical: ict
+    label_en: "Communication technologies and digital economy"
+    label_fr: "Technologies de la communication et économie numérique"
+    power_rank: service
+    created: "1990s"
+    aliases:
+      - "technologies? de (la |l')?(communication|information)"
+      - "economie numerique|\\bnumerique\\b"
+      - "postes? et telecommunications?"
+      - "تكنولوجيات الاتصال|الاقتصاد الرقمي"
+
+  - canonical: economy_planning
+    label_en: "Economy and planning"
+    label_fr: "Économie et plan"
+    power_rank: economic
+    aliases:
+      - "economie(?! sociale)"
+      - "\\bplan\\b|planification"
+      - "developpement (economique|et cooperation)"
+      - "الاقتصاد|التخطيط"
+
+  - canonical: investment_cooperation
+    label_en: "Investment and international cooperation"
+    label_fr: "Investissement et coopération internationale"
+    power_rank: economic
+    created: "1970s"
+    aliases:
+      - "cooperation internationale"
+      - "investissement"
+      - "الاستثمار|التعاون الدولي"
+
+  - canonical: trade
+    label_en: "Trade"
+    label_fr: "Commerce"
+    power_rank: economic
+    aliases:
+      - "commerce(?! exterieur seul)"
+      - "\\btrade\\b"
+      - "التجارة"
+
+  - canonical: industry_energy
+    label_en: "Industry, energy and mines"
+    label_fr: "Industrie, énergie et mines"
+    power_rank: economic
+    aliases:
+      - "industrie"
+      - "energie|mines|petrole"
+      - "الصناعة|الطاقة|المناجم"
+
+  - canonical: agriculture
+    label_en: "Agriculture and water resources"
+    label_fr: "Agriculture et ressources hydrauliques"
+    power_rank: economic
+    aliases:
+      - "agriculture"
+      - "peche|ressources hydrauliques|hydraulique"
+      - "الفلاحة|الصيد البحري"
+
+  - canonical: tourism_handicrafts
+    label_en: "Tourism and handicrafts"
+    label_fr: "Tourisme et artisanat"
+    power_rank: economic
+    aliases:
+      - "tourisme|artisanat"
+      - "السياحة|الصناعات التقليدية"
+
+  - canonical: transport
+    label_en: "Transport"
+    label_fr: "Transport"
+    power_rank: economic
+    aliases:
+      - "transports?"
+      - "النقل"
+
+  - canonical: equipment_housing
+    label_en: "Equipment, housing and infrastructure"
+    label_fr: "Équipement et habitat"
+    power_rank: economic
+    aliases:
+      - "equipement|habitat|logement|travaux publics"
+      - "infrastructures?"
+      - "التجهيز|الاسكان|الاشغال العامة"
+
+  - canonical: state_property
+    label_en: "State property and land affairs"
+    label_fr: "Domaines de l'État et affaires foncières"
+    power_rank: economic
+    aliases:
+      - "domaines de l'?etat|affaires foncieres"
+      - "املاك الدولة"
+
+  # ---- social ------------------------------------------------------------
+
+  - canonical: social_affairs
+    label_en: "Social affairs"
+    label_fr: "Affaires sociales"
+    power_rank: social
+    aliases:
+      - "affaires sociales"
+      - "solidarite"
+      - "الشؤون الاجتماعية"
+
+  - canonical: employment_training
+    label_en: "Employment and vocational training"
+    label_fr: "Emploi et formation professionnelle"
+    power_rank: social
+    aliases:
+      - "emploi|formation professionnelle"
+      - "التشغيل|التكوين المهني"
+
+  - canonical: health
+    label_en: "Public health"
+    label_fr: "Santé publique"
+    power_rank: social
+    aliases:
+      - "sante"
+      - "\\bhealth\\b"
+      - "الصحة"
+
+  - canonical: higher_education
+    label_en: "Higher education and scientific research"
+    label_fr: "Enseignement supérieur et recherche scientifique"
+    power_rank: social
+    created: "1970s"
+    aliases:
+      - "enseignement superieur"
+      - "recherche scientifique"
+      - "higher education"
+      - "التعليم العالي|البحث العلمي"
+
+  - canonical: education
+    label_en: "Education"
+    label_fr: "Éducation nationale"
+    power_rank: social
+    aliases:
+      - "education( nationale)?"
+      - "enseignement( de base| secondaire| primaire)?"
+      - "instruction publique"
+      - "التربية|التعليم"
+
+  - canonical: culture
+    label_en: "Cultural affairs"
+    label_fr: "Affaires culturelles"
+    power_rank: social
+    aliases:
+      - "(affaires )?culturell?es?|\\bculture\\b"
+      - "الثقافة"
+
+  - canonical: religious_affairs
+    label_en: "Religious affairs"
+    label_fr: "Affaires religieuses"
+    power_rank: social
+    aliases:
+      - "affaires religieuses"
+      - "الشؤون الدينية"
+
+  - canonical: youth_sports
+    label_en: "Youth and sports"
+    label_fr: "Jeunesse et sports"
+    power_rank: social
+    aliases:
+      - "jeunesse|sports?"
+      - "الشباب|الرياضة"
+
+  - canonical: women_family
+    label_en: "Women, family and childhood"
+    label_fr: "Femme, famille et enfance"
+    power_rank: social
+    created: "1983"
+    aliases:
+      - "(de la )?femme|famille|enfance|personnes agees"
+      - "المراة|الاسرة|الطفولة"
+
+  - canonical: environment
+    label_en: "Environment"
+    label_fr: "Environnement"
+    power_rank: social
+    created: "1991"
+    aliases:
+      - "environnement"
+      - "developpement durable"
+      - "البيئة"
+
+  # ---- service / political ----------------------------------------------
+
+  - canonical: information_media
+    label_en: "Information and media"
+    label_fr: "Information"
+    power_rank: service
+    aliases:
+      - "\\binformation\\b"
+      - "communication(?! technolog)"
+      - "الاعلام"
+
+  - canonical: public_service_governance
+    label_en: "Public service, administrative reform and governance"
+    label_fr: "Fonction publique, réforme administrative et gouvernance"
+    power_rank: service
+    aliases:
+      - "fonction publique|reforme administrative"
+      - "gouvernance|lutte contre la corruption"
+      - "الوظيفة العمومية|الحوكمة|مكافحة الفساد"
+
+  - canonical: local_affairs
+    label_en: "Local affairs and regional development"
+    label_fr: "Affaires locales et environnement"
+    power_rank: service
+    aliases:
+      - "affaires locales|collectivites locales"
+      - "developpement regional"
+      - "الشؤون المحلية|التنمية الجهوية"
+
+  - canonical: relations_parliament
+    label_en: "Relations with parliament and constitutional bodies"
+    label_fr: "Relations avec les assemblées"
+    power_rank: service
+    aliases:
+      - "relations avec (les assemblees|la chambre|le parlement|les instances)"
+      - "العلاقة مع (مجلس|البرلمان)"
+
+  - canonical: human_rights
+    label_en: "Human rights and transitional justice"
+    label_fr: "Droits de l'homme et justice transitionnelle"
+    power_rank: service
+    created: "2011"
+    aliases:
+      - "droits de l'?homme|justice transitionnelle"
+      - "حقوق الانسان|العدالة الانتقالية"
+
+  - canonical: diaspora
+    label_en: "Tunisians abroad and migration"
+    label_fr: "Tunisiens à l'étranger et migration"
+    power_rank: service
+    aliases:
+      - "tunisiens a l'?etranger|emigration|migration"
+      - "التونسيين بالخارج|الهجرة"
+
+  - canonical: government_secretariat
+    label_en: "Secretariat general of the government"
+    label_fr: "Secrétariat général du gouvernement"
+    power_rank: service
+    aliases:
+      - "secretaire general du gouvernement"
+      - "الامين العام للحكومة"
+
+  - canonical: presidency_affairs
+    label_en: "Presidency / premiership affairs"
+    label_fr: "Affaires de la présidence / auprès du Premier ministre"
+    power_rank: service
+    aliases:
+      - "aupres du (president|premier ministre|chef du gouvernement)"
+      - "(directeur|ministre) (du cabinet|conseiller)"
+      - "لدى رئيس (الحكومة|الجمهورية)"
+
+  - canonical: without_portfolio
+    label_en: "Minister without portfolio"
+    label_fr: "Ministre sans portefeuille"
+    power_rank: service
+    aliases:
+      - "sans portefeuille"
+      - "without portfolio"
+      - "بدون حقيبة"
+
+# Fallback when nothing matches. These rows are written to
+# data/interim/unmatched_titles.csv so the taxonomy can be extended rather than
+# silently swallowing real portfolios.
+unmatched:
+  canonical: other
+  label_en: "Other / unclassified"

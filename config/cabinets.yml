@@ -1,0 +1,376 @@
+# ---------------------------------------------------------------------------
+# Tunisian government spells, 1956-present.
+#
+# This file is the hand-curated SPINE of the dataset. It is deliberately
+# conservative: it records the sequence of *government spells* (one per head of
+# government) rather than every numbered cabinet and reshuffle. The individual
+# numbered cabinets (e.g. "Gouvernement Ghannouchi I" vs "II") and their full
+# ministerial rosters are resolved at harvest time from Wikipedia and Wikidata,
+# because reshuffle numbering is a source-specific editorial convention and
+# should not be frozen into a config file.
+#
+# Every record carries a `confidence` field:
+#   high   - start/end dates cross-checked against multiple sources
+#   medium - the spell is certain, exact boundary dates need source confirmation
+#
+# `wikipedia_fr` is a SEED article title. The harvester follows the navigation
+# template `Modèle:Palette Gouvernements de la Tunisie` to enumerate the
+# complete set of cabinet articles; the seeds here are a fallback and a check.
+# ---------------------------------------------------------------------------
+
+meta:
+  country: Tunisia
+  country_qid: Q948
+  coverage_start: "1956-03-20"   # independence
+  index_template_fr: "Modèle:Palette Gouvernements de la Tunisie"
+  index_category_fr: "Catégorie:Gouvernement de la Tunisie"
+  list_article_fr: "Liste des chefs du gouvernement tunisien"
+  list_article_en: "List of prime ministers of Tunisia"
+
+# Regime eras. Used as a categorical covariate for individual-level analysis
+# and as a natural blocking variable for network comparisons.
+eras:
+  - id: protectorate_end
+    label: "End of the protectorate"
+    start: "1954-08-07"
+    end: "1956-04-15"
+  - id: monarchy
+    label: "Kingdom of Tunisia (independent monarchy)"
+    start: "1956-03-20"
+    end: "1957-07-25"
+  - id: bourguiba
+    label: "Bourguiba republic"
+    start: "1957-07-25"
+    end: "1987-11-07"
+  - id: ben_ali
+    label: "Ben Ali republic"
+    start: "1987-11-07"
+    end: "2011-01-14"
+  - id: transition
+    label: "Post-revolution transition"
+    start: "2011-01-14"
+    end: "2014-12-31"
+  - id: second_republic
+    label: "Second Republic (2014 constitution)"
+    start: "2014-12-31"
+    end: "2021-07-25"
+  - id: saied_exception
+    label: "Post-25 July 2021 presidential rule / 2022 constitution"
+    start: "2021-07-25"
+    end: null
+
+# Heads of state, for merging onto appointments as a contextual covariate.
+heads_of_state:
+  - name: "Lamine Bey"
+    title: "Bey of Tunis"
+    start: "1943-05-15"
+    end: "1957-07-25"
+  - name: "Habib Bourguiba"
+    title: "President of the Republic"
+    start: "1957-07-25"
+    end: "1987-11-07"
+  - name: "Zine El Abidine Ben Ali"
+    title: "President of the Republic"
+    start: "1987-11-07"
+    end: "2011-01-14"
+  - name: "Fouad Mebazaa"
+    title: "Interim President"
+    start: "2011-01-15"
+    end: "2011-12-13"
+    interim: true
+  - name: "Moncef Marzouki"
+    title: "President of the Republic"
+    start: "2011-12-13"
+    end: "2014-12-31"
+  - name: "Béji Caïd Essebsi"
+    title: "President of the Republic"
+    start: "2014-12-31"
+    end: "2019-07-25"
+  - name: "Mohamed Ennaceur"
+    title: "Interim President"
+    start: "2019-07-25"
+    end: "2019-10-23"
+    interim: true
+  - name: "Kaïs Saïed"
+    title: "President of the Republic"
+    start: "2019-10-23"
+    end: null
+
+# ---------------------------------------------------------------------------
+# Government spells
+# ---------------------------------------------------------------------------
+# head_role:
+#   prime_minister        - a distinct PM heads the government
+#   head_of_government    - post-2014 title "chef du gouvernement"
+#   president_as_head     - 1957-1969, Bourguiba headed the government himself
+#                           and ministers held the rank of secretary of state
+# ---------------------------------------------------------------------------
+spells:
+
+  - id: TN-00
+    head: "Tahar Ben Ammar"
+    head_role: prime_minister
+    start: "1954-08-07"
+    end: "1956-04-15"
+    era: protectorate_end
+    pre_independence: true
+    note: >-
+      Negotiated and signed the independence protocol of 20 March 1956. Included
+      for continuity with the protectorate elite; excluded by default from the
+      post-independence analysis frame (see `post_independence` flag in build).
+    wikipedia_fr: "Gouvernement Tahar Ben Ammar"
+    confidence: medium
+
+  - id: TN-01
+    head: "Habib Bourguiba"
+    head_role: prime_minister
+    start: "1956-04-15"
+    end: "1957-07-25"
+    era: monarchy
+    first_post_independence: true
+    note: >-
+      First government of independent Tunisia, formed under the monarchy of
+      Lamine Bey. Ends with the proclamation of the Republic on 25 July 1957.
+    wikipedia_fr: "Gouvernement Bourguiba I"
+    confidence: high
+
+  - id: TN-02
+    head: "Habib Bourguiba"
+    head_role: president_as_head
+    start: "1957-07-29"
+    end: "1969-11-07"
+    era: bourguiba
+    note: >-
+      Between the proclamation of the Republic and the appointment of a Prime
+      Minister in November 1969, Bourguiba was simultaneously head of state and
+      head of government; cabinet members held the rank of secretary of state
+      ("secrétaire d'État"). Sources differ on how many numbered governments to
+      distinguish in this period (at minimum a new composition was formed after
+      Bourguiba's election as president on 8 November 1959). The harvester
+      resolves the numbered cabinets and their reshuffles from Wikipedia rather
+      than freezing one convention here.
+    wikipedia_fr: "Gouvernement Habib Bourguiba"
+    resolve_subcabinets: true
+    confidence: medium
+
+  - id: TN-03
+    head: "Bahi Ladgham"
+    head_role: prime_minister
+    start: "1969-11-07"
+    end: "1970-11-02"
+    era: bourguiba
+    wikipedia_fr: "Gouvernement Ladgham"
+    confidence: high
+
+  - id: TN-04
+    head: "Hédi Nouira"
+    head_role: prime_minister
+    start: "1970-11-02"
+    end: "1980-04-23"
+    era: bourguiba
+    note: >-
+      Appointed interim Prime Minister on 9 October 1970 while Ladgham was in
+      Cairo; initial composition announced 6 November 1970.
+    wikipedia_fr: "Gouvernement Hédi Nouira"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-05
+    head: "Mohamed Mzali"
+    head_role: prime_minister
+    start: "1980-04-23"
+    end: "1986-07-08"
+    era: bourguiba
+    note: >-
+      Named coordinator of government action on 1 March 1980 before his formal
+      appointment as Prime Minister on 23 April.
+    wikipedia_fr: "Gouvernement Mohamed Mzali"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-06
+    head: "Rachid Sfar"
+    head_role: prime_minister
+    start: "1986-07-08"
+    end: "1987-10-02"
+    era: bourguiba
+    wikipedia_fr: "Gouvernement Rachid Sfar"
+    confidence: high
+
+  - id: TN-07
+    head: "Zine El Abidine Ben Ali"
+    head_role: prime_minister
+    start: "1987-10-02"
+    end: "1987-11-07"
+    era: bourguiba
+    note: >-
+      Prime Minister for five weeks before deposing Bourguiba on 7 November 1987.
+    wikipedia_fr: "Gouvernement Zine el-Abidine Ben Ali"
+    confidence: high
+
+  - id: TN-08
+    head: "Hédi Baccouche"
+    head_role: prime_minister
+    start: "1987-11-07"
+    end: "1989-09-27"
+    era: ben_ali
+    wikipedia_fr: "Gouvernement Hédi Baccouche"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-09
+    head: "Hamed Karoui"
+    head_role: prime_minister
+    start: "1989-09-27"
+    end: "1999-11-17"
+    era: ben_ali
+    wikipedia_fr: "Gouvernement Hamed Karoui"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-10
+    head: "Mohamed Ghannouchi"
+    head_role: prime_minister
+    start: "1999-11-17"
+    end: "2011-02-27"
+    era: ben_ali
+    spans_regime_change: true
+    note: >-
+      Longest-serving Prime Minister. Remained in office across the 14 January
+      2011 rupture, forming two short-lived post-revolution governments
+      (17 and 27 January 2011) before resigning on 27 February 2011. The
+      `spans_regime_change` flag matters for era coding: appointments under this
+      spell must be split at 2011-01-14 when era is assigned.
+    wikipedia_fr: "Gouvernement Mohamed Ghannouchi"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-11
+    head: "Béji Caïd Essebsi"
+    head_role: prime_minister
+    start: "2011-02-27"
+    end: "2011-12-24"
+    era: transition
+    wikipedia_fr: "Gouvernement Béji Caïd Essebsi"
+    confidence: high
+
+  - id: TN-12
+    head: "Hamadi Jebali"
+    head_role: head_of_government
+    start: "2011-12-24"
+    end: "2013-03-13"
+    era: transition
+    note: "First troika government after the 2011 Constituent Assembly election."
+    wikipedia_fr: "Gouvernement Hamadi Jebali"
+    confidence: high
+
+  - id: TN-13
+    head: "Ali Larayedh"
+    head_role: head_of_government
+    start: "2013-03-13"
+    end: "2014-01-29"
+    era: transition
+    wikipedia_fr: "Gouvernement Ali Larayedh"
+    confidence: high
+
+  - id: TN-14
+    head: "Mehdi Jomaa"
+    head_role: head_of_government
+    start: "2014-01-29"
+    end: "2015-02-06"
+    era: transition
+    note: "Technocratic government produced by the National Dialogue."
+    wikipedia_fr: "Gouvernement Mehdi Jomaa"
+    confidence: high
+
+  - id: TN-15
+    head: "Habib Essid"
+    head_role: head_of_government
+    start: "2015-02-06"
+    end: "2016-08-27"
+    era: second_republic
+    wikipedia_fr: "Gouvernement Habib Essid"
+    confidence: high
+
+  - id: TN-16
+    head: "Youssef Chahed"
+    head_role: head_of_government
+    start: "2016-08-27"
+    end: "2020-02-27"
+    era: second_republic
+    note: "Carthage Agreement government; several major reshuffles."
+    wikipedia_fr: "Gouvernement Chahed"
+    resolve_subcabinets: true
+    confidence: high
+
+  - id: TN-17
+    head: "Elyès Fakhfakh"
+    head_role: head_of_government
+    start: "2020-02-27"
+    end: "2020-09-02"
+    era: second_republic
+    wikipedia_fr: "Gouvernement Elyès Fakhfakh"
+    confidence: high
+
+  - id: TN-18
+    head: "Hichem Mechichi"
+    head_role: head_of_government
+    start: "2020-09-02"
+    end: "2021-10-11"
+    era: second_republic
+    note: >-
+      Dismissed by President Saïed on 25 July 2021; the office remained vacant
+      until Bouden's appointment on 11 October 2021.
+    wikipedia_fr: "Gouvernement Hichem Mechichi"
+    confidence: high
+
+  - id: TN-19
+    head: "Najla Bouden"
+    head_role: head_of_government
+    start: "2021-10-11"
+    end: "2023-08-01"
+    era: saied_exception
+    note: "First woman to head a Tunisian government."
+    wikipedia_fr: "Gouvernement Najla Bouden"
+    confidence: high
+
+  - id: TN-20
+    head: "Ahmed Hachani"
+    head_role: head_of_government
+    start: "2023-08-01"
+    end: "2024-08-07"
+    era: saied_exception
+    wikipedia_fr: "Gouvernement Ahmed Hachani"
+    confidence: high
+
+  - id: TN-21
+    head: "Kamel Maddouri"
+    head_role: head_of_government
+    start: "2024-08-07"
+    end: "2025-03-21"
+    era: saied_exception
+    wikipedia_fr: "Gouvernement Kamel Maddouri"
+    confidence: high
+
+  - id: TN-22
+    head: "Sara Zaafarani"
+    head_role: head_of_government
+    start: "2025-03-21"
+    end: null
+    era: saied_exception
+    note: >-
+      Second woman to head a Tunisian government; minister of equipment and
+      housing before her appointment. `end: null` means incumbent as of the
+      snapshot date recorded in data/processed/MANIFEST.json.
+    wikipedia_fr: "Gouvernement Sara Zaafarani"
+    wikipedia_en: "Zaafarani Cabinet"
+    confidence: high
+
+# Designated but never invested - these people never took office and must not
+# appear in the appointments table. Kept here so the harvester can exclude them
+# explicitly rather than silently.
+designated_never_invested:
+  - name: "Habib Jemli"
+    designated: "2019-11-15"
+    failed_confidence_vote: "2020-01-10"
+    note: "Designated by Saïed on Ennahda's nomination; cabinet rejected by parliament."

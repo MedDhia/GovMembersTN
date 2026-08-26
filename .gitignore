@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Raw payloads are large and re-fetchable; the manifests that record what was
+# fetched, from where and when ARE tracked, so a harvest stays reproducible.
+data/raw/**
+!data/raw/.gitkeep
+!data/raw/**/MANIFEST.json
+data/interim/**
+!data/interim/.gitkeep
