@@ -1,6 +1,6 @@
 # Data validation report
 
-- Generated: `2026-08-26T14:52:48+00:00`
+- Generated: `2026-08-26T14:53:20+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **False**
 - Errors: **0** | Warnings: **2**
@@ -47,6 +47,10 @@ Decades with no appointments at all: 2000s.
 ## ℹ️ INFO: Seat conflicts
 
 No cabinet-portfolio seat has conflicting holders.
+
+## ℹ️ INFO: Birthplace coding
+
+19/19 recorded birthplaces resolved to a governorate (100.0%).
 
 ## ℹ️ INFO: Entity resolution decisions
 

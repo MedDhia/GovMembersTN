@@ -221,6 +221,42 @@ def check_seat_conflicts(report: Report, appointments: pd.DataFrame) -> None:
     )
 
 
+def check_place_coding(report: Report, persons: pd.DataFrame) -> None:
+    """Birthplaces that `config/places.yml` could not resolve.
+
+    Like an unclassified portfolio, an unmapped settlement is actionable
+    rather than fatal: each one names an entry to add. Unreported, the person
+    silently drops out of every regional analysis while still appearing in the
+    denominator.
+    """
+    if "birth_place" not in persons.columns:
+        return
+    known = persons["birth_place"].notna()
+    if "birth_governorate" not in persons.columns:
+        return
+    unmapped = persons[known & persons["birth_governorate"].isna()]
+    coded = int((known & persons["birth_governorate"].notna()).sum())
+    total = int(known.sum())
+    body = (
+        f"{coded}/{total} recorded birthplaces resolved to a governorate "
+        f"({coded / max(total, 1):.1%})."
+    )
+    if unmapped.empty:
+        report.add("INFO", "Birthplace coding", body)
+        return
+    counts = (
+        unmapped["birth_place"].value_counts().rename_axis("birth_place")
+        .reset_index(name="n")
+    )
+    report.add(
+        "WARNING", f"Unmapped birthplaces ({len(counts)} distinct)",
+        body + "\n\nAdd each settlement below to the `settlements` map in "
+        "`config/places.yml`. Until then these people are absent from every "
+        "regional analysis while still counting in the denominator.\n\n"
+        + _table(counts),
+    )
+
+
 def check_reconciliation(report: Report) -> None:
     path = config.paths().interim / "reconciliation_audit.json"
     if not path.exists():
@@ -260,6 +296,7 @@ def run() -> int:
     check_attribute_coverage(report, persons)
     check_temporal_coverage(report, appointments)
     check_seat_conflicts(report, appointments)
+    check_place_coding(report, persons)
     check_reconciliation(report)
 
     output = paths.processed / "VALIDATION.md"
