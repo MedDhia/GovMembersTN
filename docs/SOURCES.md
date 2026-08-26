@@ -83,6 +83,15 @@ Orthographic folding (ة → ه, أ → ا) is used for **matching only**; value
 taken from the original category name, or every Arabic value in the dataset
 would be stored folded.
 
+The portfolio aliases had a related problem. Arabic attaches prefixes (لل، بال)
+and inflects for gender and agreement, so an alias written as an exact noun
+matches almost nothing: `الثقافة` never matches `الشؤون الثقافية`, and
+`الفلاحة` never matches `كاتب دولة للفلاحة`. Matching on the **stem** covers
+the whole family. Tunisia also uses its own vocabulary — the secretary-general
+of government is `الكاتب العام`, not the pan-Arab `الأمين العام`, and the
+interior ministry was historically `وزارة القلم`. Fixing these took
+unclassified titles from 6.9% to 2.6%.
+
 This layer took education coverage from 1% to 37%, and it is what makes the
 concentration of the ministerial elite in a handful of institutions visible at
 all: 46 ministers passed through the Collège Sadiki and 37 through one of the

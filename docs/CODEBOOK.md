@@ -115,7 +115,7 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `raw_title` | string | **The verbatim title as printed by the source.** Always check this before trusting `portfolio` on an unusual case. |
 | `person_name` | string | Name as printed by the source, before reconciliation. |
 | `person_wikilink` | string | Wikipedia article target for the officeholder. |
-| `portfolio` | string | Harmonised portfolio (→ `portfolios.canonical`). `other` means the taxonomy could not classify `raw_title`; those titles are listed in `data/interim/unmatched_titles.csv`. |
+| `portfolio` | string | Harmonised portfolio (→ `portfolios.canonical`), 37 in use. `other` means the taxonomy could not classify `raw_title` (2.6% of rows); those titles are listed in `data/interim/unmatched_titles.csv`. |
 | `portfolio_label` | string | English label. |
 | `portfolio_power_rank` | string | `sovereign`, `economic`, `social`, `service`. `sovereign` is the classic *ministères de souveraineté*. |
 | `rank` | string | Cabinet rank: `head_of_government`, `deputy_head_of_government`, `minister_of_state`, `delegate_minister`, `secretary_of_state`, `minister`, `state_secretary_general`. Parsed separately from the portfolio, because a secretary of state for finance is not the finance minister. |

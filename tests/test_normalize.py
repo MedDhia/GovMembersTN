@@ -181,3 +181,44 @@ def test_institution_names_are_not_people(value):
 def test_real_names_are_not_mistaken_for_institutions(value):
     from govtn.normalize import looks_like_office
     assert not looks_like_office(value)
+
+
+@pytest.mark.parametrize("title,portfolio", [
+    # Arabic inflects and takes prefixes, so aliases have to be stems: the
+    # exact noun الثقافة never matches الشؤون الثقافية, and الفلاحة never
+    # matches للفلاحة.
+    ("وزيرة الشؤون الثقافية", "culture"),
+    ("كاتب دولة للفلاحة", "agriculture"),
+    ("كاتب دولة مكلف بالشؤون الجهوية والجماعات المحلية", "local_affairs"),
+    # Tunisia's secretary-general of government is الكاتب العام, not الأمين العام.
+    ("الكاتب العام للحكومة", "government_secretariat"),
+    # Post, telegraph and telephone, in both languages.
+    ("وزير البريد والبرق والهاتف", "ict"),
+    ("directeur des PTT", "ict"),
+    ("Secrétaire d'État aux Postes, Télégraphes et Téléphones", "ict"),
+    # وزير القلم was the interior ministry's historical name.
+    ("وزير القلم (الداخلية حاليا)", "interior"),
+    # Habous are religious endowments.
+    ("ministre des Habous", "religious_affairs"),
+    ("gouverneur de la Banque centrale de Tunisie", "central_bank"),
+    ("porte-parole du gouvernement tunisien", "information_media"),
+    ("وزير مدير الديوان الرئاسي", "presidency_affairs"),
+])
+def test_arabic_and_historical_titles_are_classified(title, portfolio):
+    assert parse_title(title).portfolio == portfolio
+
+
+@pytest.mark.parametrize("title", ["كاتب دولة", "Secrétaire d'État", "Ministre d'État"])
+def test_rank_only_titles_name_no_policy_domain(title):
+    # A bare rank names no domain. Coding it `other` would pool it with
+    # genuinely unclassified portfolios and distort the coverage diagnostics.
+    assert parse_title(title).portfolio == "without_portfolio"
+
+
+@pytest.mark.parametrize("title", [
+    "prélat territorial de Tunis",
+    "delegate of the Government of the Generalitat of Catalonia in Northern Africa",
+])
+def test_foreign_and_religious_offices_are_out_of_scope(title):
+    from govtn.normalize import excluded_reason
+    assert excluded_reason(title) is not None

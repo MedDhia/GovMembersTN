@@ -377,8 +377,13 @@ def parse_title(raw: str) -> ParsedTitle:
     # A rank-only title ("Ministre d'État", "Ministre sans portefeuille") names
     # no policy domain. Coding it as `other` would pool it with genuinely
     # unclassified portfolios and pollute the taxonomy-coverage diagnostics.
-    if portfolio == fallback and rank in {"minister_of_state", "minister"}:
-        if re.fullmatch(r"ministre d'?etat|minister of state|وزير دوله", text):
+    if portfolio == fallback and rank in {
+        "minister_of_state", "minister", "secretary_of_state"
+    }:
+        if re.fullmatch(
+            r"ministre d'?etat|minister of state|وزير دوله|كاتب دوله|"
+            r"secretaire d'?etat|ministre sans portefeuille", text
+        ):
             portfolio = "without_portfolio"
 
     return ParsedTitle(

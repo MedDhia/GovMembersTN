@@ -77,8 +77,10 @@ ranks:
     level: 6
     aliases:
       - "secretaire general du gouvernement"
+      - "^secretaire general( adjoint)?$"
       - "secretary general of the government"
       - "الامين العام للحكومة"
+      - "الكاتب العام"   # the term Tunisia actually uses
 
 portfolios:
 
@@ -103,6 +105,7 @@ portfolios:
       - "interieur"
       - "\\binterior\\b"
       - "الداخلية"
+      - "القلم"          # وزير القلم: the historical interior ministry
 
   - canonical: foreign_affairs
     label_en: "Foreign affairs"
@@ -113,6 +116,7 @@ portfolios:
       - "foreign affairs"
       - "الشؤون الخارجية"
       - "الخارجية"
+      - "المغاربية|الاوروبية"
 
   - canonical: justice
     label_en: "Justice"
@@ -151,7 +155,10 @@ portfolios:
       - "technologies? de (la |l')?(communication|information)"
       - "economie numerique|\\bnumerique\\b"
       - "postes? et telecommunications?"
+      - "postes.{0,24}t[ée]l[ée]"   # Postes, Télégraphes et Téléphones
+      - "\\bPTT\\b"
       - "تكنولوجيات الاتصال|الاقتصاد الرقمي"
+      - "البريد|البرق|الهاتف|الاتصال"
 
   - canonical: economy_planning
     label_en: "Economy and planning"
@@ -199,6 +206,7 @@ portfolios:
       - "agriculture"
       - "peche|ressources hydrauliques|hydraulique"
       - "الفلاحة|الصيد البحري"
+      - "فلاح"          # stem: الفلاحة، للفلاحة
 
   - canonical: tourism_handicrafts
     label_en: "Tourism and handicrafts"
@@ -215,6 +223,7 @@ portfolios:
     aliases:
       - "transports?"
       - "النقل"
+      - "المواصلات"
 
   - canonical: equipment_housing
     label_en: "Equipment, housing and infrastructure"
@@ -224,6 +233,15 @@ portfolios:
       - "equipement|habitat|logement|travaux publics"
       - "infrastructures?"
       - "التجهيز|الاسكان|الاشغال العامة"
+
+  - canonical: central_bank
+    label_en: "Central bank"
+    label_fr: "Banque centrale"
+    power_rank: economic
+    aliases:
+      - "gouverneur de la banque centrale"
+      - "banque centrale"
+      - "البنك المركزي|محافظ البنك"
 
   - canonical: state_property
     label_en: "State property and land affairs"
@@ -243,6 +261,7 @@ portfolios:
       - "affaires sociales"
       - "solidarite"
       - "الشؤون الاجتماعية"
+      - "الاجتماعي"
 
   - canonical: employment_training
     label_en: "Employment and vocational training"
@@ -281,6 +300,7 @@ portfolios:
       - "enseignement( de base| secondaire| primaire)?"
       - "instruction publique"
       - "التربية|التعليم"
+      - "تربي"
 
   - canonical: culture
     label_en: "Cultural affairs"
@@ -289,6 +309,7 @@ portfolios:
     aliases:
       - "(affaires )?culturell?es?|\\bculture\\b"
       - "الثقافة"
+      - "الثقاف"        # stem: الثقافة، الثقافية
 
   - canonical: religious_affairs
     label_en: "Religious affairs"
@@ -296,7 +317,9 @@ portfolios:
     power_rank: social
     aliases:
       - "affaires religieuses"
+      - "\\bhabous\\b"
       - "الشؤون الدينية"
+      - "الديني|الاوقاف"
 
   - canonical: youth_sports
     label_en: "Youth and sports"
@@ -305,6 +328,7 @@ portfolios:
     aliases:
       - "jeunesse|sports?"
       - "الشباب|الرياضة"
+      - "شباب|رياض"
 
   - canonical: women_family
     label_en: "Women, family and childhood"
@@ -335,6 +359,7 @@ portfolios:
       - "\\binformation\\b"
       - "communication(?! technolog)"
       - "الاعلام"
+      - "porte[- ]parole"
 
   - canonical: public_service_governance
     label_en: "Public service, administrative reform and governance"
@@ -353,6 +378,7 @@ portfolios:
       - "affaires locales|collectivites locales"
       - "developpement regional"
       - "الشؤون المحلية|التنمية الجهوية"
+      - "الجهوي|الجماعات المحلية"
 
   - canonical: relations_parliament
     label_en: "Relations with parliament and constitutional bodies"
@@ -385,7 +411,9 @@ portfolios:
     power_rank: service
     aliases:
       - "secretaire general du gouvernement"
+      - "^secretaire general( adjoint)?$"
       - "الامين العام للحكومة"
+      - "الكاتب العام"
 
   - canonical: presidency_affairs
     label_en: "Presidency / premiership affairs"
@@ -395,6 +423,7 @@ portfolios:
       - "aupres du (president|premier ministre|chef du gouvernement)"
       - "(directeur|ministre) (du cabinet|conseiller)"
       - "لدى رئيس (الحكومة|الجمهورية)"
+      - "لدى الوزير الاول|الديوان الرئاسي|رئاسة الجمهوري"
 
   - canonical: without_portfolio
     label_en: "Minister without portfolio"
@@ -443,6 +472,9 @@ exclude:
     label: "Ambassador or envoy"
     patterns:
       - "ambassadeur|ambassadrice|ambassador"
+      # Envoys OF other governments, e.g. the Generalitat of Catalonia's
+      # delegate in North Africa.
+      - "delegate of the government of"
       - "nonce apostolique|consul general"
       - "سفير"
   - id: head_of_state
@@ -460,7 +492,7 @@ exclude:
   - id: religious_office
     label: "Religious office"
     patterns:
-      - "grand[- ]rabbin|mufti|archeveque|eveque|nonce"
+      - "grand[- ]rabbin|mufti|archeveque|eveque|nonce|prelat"
       - "المفتي|الحبر"
   - id: local_government
     label: "Municipal or regional office"
