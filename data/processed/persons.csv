@@ -1,0 +1,23 @@
+person_id,wikidata_qid,name,name_variants,name_ar,name_en,gender,birth_date,birth_year,death_date,death_year,birth_place,birth_region,birth_place_qid,citizenship,education,degrees,academic_fields,occupations,profession_domains,parties,party_qids,religion,awards,wikipedia_fr,wikipedia_ar,wikipedia_en,leaders_url,sources,n_appointments,n_cabinets,n_portfolios,first_appointment,last_appointment_end,total_tenure_days,max_rank_level,ever_sovereign_portfolio,ever_head_of_government,portfolios_held,eras_served,age_at_first_appointment,career_span_years
+TN-tahar-ben-ammar,,Tahar Ben Ammar,tahar ben ammar,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1954-08-07,1956-04-15,617,0,True,True,head_of_government,protectorate_end,,1.7
+TN-habib-bourguiba,,Habib Bourguiba,habib bourguiba,,,,,,,,,,,,,,,,,,,,,,,,,spine,2,2,1,1956-04-15,1969-11-07,4950,0,True,True,head_of_government,bourguiba|monarchy,,13.6
+TN-bahi-ladgham,,Bahi Ladgham,bahi ladgham,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1969-11-07,1970-11-02,360,0,True,True,head_of_government,bourguiba,,1.0
+TN-hedi-nouira,,Hédi Nouira,hedi nouira,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1970-11-02,1980-04-23,3460,0,True,True,head_of_government,bourguiba,,9.5
+TN-mohamed-mzali,,Mohamed Mzali,mohamed mzali,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1980-04-23,1986-07-08,2267,0,True,True,head_of_government,bourguiba,,6.2
+TN-rachid-sfar,,Rachid Sfar,rachid sfar,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1986-07-08,1987-10-02,451,0,True,True,head_of_government,bourguiba,,1.2
+TN-zine-el-abidine-ben-ali,,Zine El Abidine Ben Ali,zine el abidine ben ali,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1987-10-02,1987-11-07,36,0,True,True,head_of_government,bourguiba,,0.1
+TN-hedi-baccouche,,Hédi Baccouche,hedi baccouche,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1987-11-07,1989-09-27,690,0,True,True,head_of_government,ben_ali,,1.9
+TN-hamed-karoui,,Hamed Karoui,hamed karoui,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1989-09-27,1999-11-17,3703,0,True,True,head_of_government,ben_ali,,10.1
+TN-mohamed-ghannouchi,,Mohamed Ghannouchi,mohamed ghannouchi,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,1999-11-17,2011-02-27,4120,0,True,True,head_of_government,ben_ali,,11.3
+TN-beji-caid-essebsi,,Béji Caïd Essebsi,beji caid essebsi,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2011-02-27,2011-12-24,300,0,True,True,head_of_government,transition,,0.8
+TN-hamadi-jebali,,Hamadi Jebali,hamadi jebali,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2011-12-24,2013-03-13,445,0,True,True,head_of_government,transition,,1.2
+TN-ali-larayedh,,Ali Larayedh,ali larayedh,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2013-03-13,2014-01-29,322,0,True,True,head_of_government,transition,,0.9
+TN-mehdi-jomaa,,Mehdi Jomaa,mehdi jomaa,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2014-01-29,2015-02-06,373,0,True,True,head_of_government,transition,,1.0
+TN-habib-essid,,Habib Essid,habib essid,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2015-02-06,2016-08-27,568,0,True,True,head_of_government,second_republic,,1.6
+TN-youssef-chahed,,Youssef Chahed,youssef chahed,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2016-08-27,2020-02-27,1279,0,True,True,head_of_government,second_republic,,3.5
+TN-elyes-fakhfakh,,Elyès Fakhfakh,elyes fakhfakh,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2020-02-27,2020-09-02,188,0,True,True,head_of_government,second_republic,,0.5
+TN-hichem-mechichi,,Hichem Mechichi,hichem mechichi,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2020-09-02,2021-10-11,404,0,True,True,head_of_government,second_republic,,1.1
+TN-najla-bouden,,Najla Bouden,najla bouden,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2021-10-11,2023-08-01,659,0,True,True,head_of_government,saied_exception,,1.8
+TN-ahmed-hachani,,Ahmed Hachani,ahmed hachani,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2023-08-01,2024-08-07,372,0,True,True,head_of_government,saied_exception,,1.0
+TN-kamel-maddouri,,Kamel Maddouri,kamel maddouri,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2024-08-07,2025-03-21,226,0,True,True,head_of_government,saied_exception,,0.6
+TN-sara-zaafarani,,Sara Zaafarani,sara zaafarani,,,,,,,,,,,,,,,,,,,,,,,,,spine,1,1,1,2025-03-21,,523,0,True,True,head_of_government,saied_exception,,

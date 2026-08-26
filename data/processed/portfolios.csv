@@ -1,0 +1,36 @@
+canonical,label_en,label_fr,power_rank,created
+head_of_government,Head of government,Chef du gouvernement,sovereign,
+interior,Interior,Intérieur,sovereign,
+foreign_affairs,Foreign affairs,Affaires étrangères,sovereign,
+justice,Justice,Justice,sovereign,
+defence,Defence,Défense nationale,sovereign,
+finance,Finance,Finances,sovereign,
+ict,Communication technologies and digital economy,Technologies de la communication et économie numérique,service,1990s
+economy_planning,Economy and planning,Économie et plan,economic,
+investment_cooperation,Investment and international cooperation,Investissement et coopération internationale,economic,1970s
+trade,Trade,Commerce,economic,
+industry_energy,"Industry, energy and mines","Industrie, énergie et mines",economic,
+agriculture,Agriculture and water resources,Agriculture et ressources hydrauliques,economic,
+tourism_handicrafts,Tourism and handicrafts,Tourisme et artisanat,economic,
+transport,Transport,Transport,economic,
+equipment_housing,"Equipment, housing and infrastructure",Équipement et habitat,economic,
+state_property,State property and land affairs,Domaines de l'État et affaires foncières,economic,
+social_affairs,Social affairs,Affaires sociales,social,
+employment_training,Employment and vocational training,Emploi et formation professionnelle,social,
+health,Public health,Santé publique,social,
+higher_education,Higher education and scientific research,Enseignement supérieur et recherche scientifique,social,1970s
+education,Education,Éducation nationale,social,
+culture,Cultural affairs,Affaires culturelles,social,
+religious_affairs,Religious affairs,Affaires religieuses,social,
+youth_sports,Youth and sports,Jeunesse et sports,social,
+women_family,"Women, family and childhood","Femme, famille et enfance",social,1983
+environment,Environment,Environnement,social,1991
+information_media,Information and media,Information,service,
+public_service_governance,"Public service, administrative reform and governance","Fonction publique, réforme administrative et gouvernance",service,
+local_affairs,Local affairs and regional development,Affaires locales et environnement,service,
+relations_parliament,Relations with parliament and constitutional bodies,Relations avec les assemblées,service,
+human_rights,Human rights and transitional justice,Droits de l'homme et justice transitionnelle,service,2011
+diaspora,Tunisians abroad and migration,Tunisiens à l'étranger et migration,service,
+government_secretariat,Secretariat general of the government,Secrétariat général du gouvernement,service,
+presidency_affairs,Presidency / premiership affairs,Affaires de la présidence / auprès du Premier ministre,service,
+without_portfolio,Minister without portfolio,Ministre sans portefeuille,service,
