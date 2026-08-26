@@ -27,19 +27,44 @@ developed on sits behind an egress proxy that blocks `wikidata.org`,
 never run. Every parser is nonetheless implemented and tested against fixtures
 that reproduce the real source markup.
 
-**To produce the full dataset, run this on a machine with network access:**
+### Unblocking it
+
+The harvest needs these four domains reachable. They are governed by the
+**environment's network policy**, not by anything in this repo — an admin
+widens it in the Claude Code environment settings on claude.ai
+([docs](https://code.claude.com/docs/en/claude-code-on-the-web)):
+
+| Domain | Why it is needed | Required? |
+|---|---|---|
+| `*.wikipedia.org` | Cabinet rosters (fr is load-bearing; ar/en add name variants) | **yes** |
+| `query.wikidata.org` | SPARQL: officeholding statements and person attributes | **yes** |
+| `www.wikidata.org` | Entity API for lookups | **yes** |
+| `www.leaders.com.tn` | Biographies: education and pre-ministerial career | optional |
+
+**Then verify and run:**
 
 ```bash
 make install
-make all          # harvest -> build -> networks -> validate
+make preflight    # confirms every source host actually answers
+make all          # preflight -> harvest -> build -> networks -> validate
 ```
 
-That populates `data/processed/` with the complete tables. `MANIFEST.json`
+`make preflight` exists because the harvest stages are failure-tolerant by
+design — one dead source does not sink the others — which means a blocked host
+produces quietly empty tables rather than a loud error. Run it first; it names
+exactly which domains are still refused and exits non-zero.
+
+Until then, `make build` still assembles the tables from the curated seed and
+`make offline` rebuilds from any cached payloads; both mark the harvest partial
+in `MANIFEST.json`.
+
+`make all` populates `data/processed/` with the complete tables. `MANIFEST.json`
 records which sources contributed, and `VALIDATION.md` reports coverage holes;
 both currently say the harvest is partial, and will say so until it is run.
 
-If your environment also blocks the Wikidata endpoint, `make queries` prints
-the SPARQL to paste into <https://query.wikidata.org> by hand.
+If Wikidata alone stays blocked, `make queries` prints the SPARQL to paste into
+<https://query.wikidata.org> by hand; save the JSON results into
+`data/interim/` and the build picks them up.
 
 The seed is not thrown away when the harvest runs: `govtn.build` merges it at
 a precedence of **Wikidata > seed > Leaders**, so structured data wins and the
@@ -132,18 +157,20 @@ src/govtn/
   build.py       analysis table assembly
   networks.py    edge lists and graph exports
   validate.py    data quality report
+  preflight.py   source reachability check
   pipeline.py    end-to-end runner
 data/raw/        cached source payloads + MANIFEST.json per source
 data/interim/    harvested JSON, reconciliation audit, unmatched titles
 data/processed/  the dataset
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           104 tests, incl. fixtures reproducing real source markup
+tests/           111 tests, incl. fixtures reproducing real source markup
 ```
 
 ## Usage
 
 ```bash
 make install     # dependencies
+make preflight   # check every source host is reachable
 make all         # full pipeline (needs network access)
 make offline     # rebuild from the cached payloads, no network
 make build       # re-assemble tables from what has been harvested

@@ -2,7 +2,7 @@
 PY ?= python3
 export PYTHONPATH := src
 
-.PHONY: help install test harvest build networks validate all clean queries
+.PHONY: help install test preflight harvest build networks validate all clean queries
 
 help:
 	@grep -E '^[a-z-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -13,6 +13,9 @@ install:  ## Install Python dependencies
 
 test:  ## Run the test suite
 	$(PY) -m pytest tests/ -q
+
+preflight:  ## Check every source host is reachable before harvesting
+	$(PY) -m govtn.preflight
 
 harvest:  ## Fetch from Wikidata, Wikipedia and Leaders (needs network access)
 	$(PY) -m govtn.pipeline --stages wikidata,wikipedia,leaders
@@ -26,7 +29,7 @@ networks:  ## Build the edge lists and graph files
 validate:  ## Run data quality checks and write VALIDATION.md
 	$(PY) -m govtn.validate
 
-all:  ## Full pipeline: harvest -> build -> networks -> validate
+all: preflight  ## Full pipeline: preflight -> harvest -> build -> networks -> validate
 	$(PY) -m govtn.pipeline
 
 offline:  ## Rebuild everything from cached payloads, no network
