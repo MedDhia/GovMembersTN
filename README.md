@@ -14,9 +14,12 @@ timestamp.
 
 ## ⚠️ Current state: the pipeline is complete, the harvest is not
 
-**The tables in `data/processed/` are currently built from the curated spine
-only** — 23 government spells and their heads of government, 1954–2026. They
-are correct and usable, but they are not the full dataset.
+**The tables in `data/processed/` are currently built from the curated seed
+only** — 23 government spells and the 22 people who headed them, 1954–2026,
+with verified birth dates, birthplaces coded to governorate and region,
+profession, education and Wikidata QIDs where they could be confirmed. That
+series is correct and immediately usable; it is simply not the *full* dataset,
+which is every minister rather than every head of government.
 
 The reason is environmental, not a bug: the machine this repository was
 developed on sits behind an egress proxy that blocks `wikidata.org`,
@@ -37,6 +40,16 @@ both currently say the harvest is partial, and will say so until it is run.
 
 If your environment also blocks the Wikidata endpoint, `make queries` prints
 the SPARQL to paste into <https://query.wikidata.org> by hand.
+
+The seed is not thrown away when the harvest runs: `govtn.build` merges it at
+a precedence of **Wikidata > seed > Leaders**, so structured data wins and the
+seed fills gaps. The QIDs it carries let the seeded rows join straight to the
+Wikidata harvest instead of relying on name matching to reunite them.
+
+As a sanity check on the coding, the seeded series already reproduces a
+standing empirical claim about Tunisian elite recruitment — Sahel origin among
+heads of government runs at 83% under Bourguiba and 100% under Ben Ali, then
+falls to 25% in the Second Republic and 0% after 2021.
 
 ---
 
@@ -85,6 +98,10 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 - **Regime eras are half-open intervals.** A government formed on a transition
   date belongs to the incoming regime — Hédi Baccouche, appointed 7 November
   1987, is coded under Ben Ali, not Bourguiba.
+- **Birthplaces are coded to governorate and region**, with `birth_sahel`
+  reserved for the narrow historical Sahel (Sousse, Monastir, Mahdia) and kept
+  distinct from `birth_coastal`, which also covers Greater Tunis, the northeast
+  and Sfax. Conflating the two is the usual way this variable goes wrong.
 - **Date precision is recorded, never invented.** A source that says "1970"
   yields `1970-01-01` with `date_precision = year`. Filter on it before
   computing durations.
@@ -100,7 +117,12 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 ## Repository layout
 
 ```
-config/          cabinets.yml (curated spine), portfolios.yml (taxonomy), sources.yml
+config/
+  cabinets.yml            curated spine: 23 government spells, eras, heads of state
+  heads_biographical.yml  verified biographical seed for the heads of government
+  portfolios.yml          35 harmonised portfolios, 7 cabinet ranks, FR/AR/EN aliases
+  places.yml              governorates, regions, settlement -> governorate map
+  sources.yml             endpoints, rate limits, crawl policy
 src/govtn/
   config.py      paths, config loading, snapshot date
   http.py        cached, rate-limited client with provenance manifests
@@ -115,7 +137,7 @@ data/raw/        cached source payloads + MANIFEST.json per source
 data/interim/    harvested JSON, reconciliation audit, unmatched titles
 data/processed/  the dataset
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           97 tests, incl. fixtures reproducing real source markup
+tests/           104 tests, incl. fixtures reproducing real source markup
 ```
 
 ## Usage
@@ -149,6 +171,8 @@ python -m govtn.pipeline --snapshot 2026-08-26
 - **A merge is wrong.** Check `data/interim/reconciliation_audit.json`, then
   either add a disqualifier in `govtn.reconcile` or raise
   `NAME_MERGE_THRESHOLD`.
+- **A birthplace was not coded.** Add the settlement to `config/places.yml`;
+  unmapped birthplaces are left empty, never guessed.
 - **A new source.** Add a module under `src/govtn/sources/` that emits
   `SourceRecord`s and appointment dicts, then register it in
   `govtn.build.collect_records` and `govtn.pipeline.STAGES`.

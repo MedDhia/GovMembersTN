@@ -1,0 +1,141 @@
+# ---------------------------------------------------------------------------
+# Tunisian places: governorates, regions, and a settlement -> governorate map.
+#
+# WHY THIS EXISTS
+# Regional origin is arguably the central structural variable in the study of
+# Tunisian ministerial elites. The dominance of the Sahel - the coastal strip
+# of Sousse, Monastir and Mahdia - in recruitment under Bourguiba and Ben Ali
+# is a standing empirical claim, and testing it requires birthplaces coded to
+# governorate and region, not free-text settlement names.
+#
+# Sources give a settlement ("Hammam Sousse"), not a governorate. Wikidata's
+# P131 supplies the containing unit where the person has an item; this file
+# covers everyone else, and reconciles the two to one vocabulary.
+#
+# CODING NOTES
+# - `sahel` is the narrow historical Sahel (Sousse, Monastir, Mahdia). It is
+#   NOT the same as `coastal`, which includes Greater Tunis, the northeast and
+#   Sfax. Analyses conflating them will attribute Greater Tunis's weight to
+#   the Sahel.
+# - `coastal` follows the conventional coastal/interior development cleavage.
+#   Médenine and Gabès are coded coastal by geography though they belong to
+#   the disadvantaged south; use `region` when that distinction matters.
+# - Governorate boundaries changed over the period (Sidi Bouzid 1973, Ben
+#   Arous 1983, Manouba 2000). Places are coded to their CURRENT governorate,
+#   which is the convention that keeps a seventy-year series comparable.
+# ---------------------------------------------------------------------------
+
+governorates:
+  - {name: "Tunis",       region: greater_tunis, coastal: true,  sahel: false}
+  - {name: "Ariana",      region: greater_tunis, coastal: true,  sahel: false}
+  - {name: "Ben Arous",   region: greater_tunis, coastal: true,  sahel: false}
+  - {name: "Manouba",     region: greater_tunis, coastal: true,  sahel: false}
+  - {name: "Nabeul",      region: northeast,     coastal: true,  sahel: false}
+  - {name: "Zaghouan",    region: northeast,     coastal: false, sahel: false}
+  - {name: "Bizerte",     region: northeast,     coastal: true,  sahel: false}
+  - {name: "Béja",        region: northwest,     coastal: false, sahel: false}
+  - {name: "Jendouba",    region: northwest,     coastal: false, sahel: false}
+  - {name: "Le Kef",      region: northwest,     coastal: false, sahel: false}
+  - {name: "Siliana",     region: northwest,     coastal: false, sahel: false}
+  - {name: "Sousse",      region: centre_east,   coastal: true,  sahel: true}
+  - {name: "Monastir",    region: centre_east,   coastal: true,  sahel: true}
+  - {name: "Mahdia",      region: centre_east,   coastal: true,  sahel: true}
+  - {name: "Sfax",        region: centre_east,   coastal: true,  sahel: false}
+  - {name: "Kairouan",    region: centre_west,   coastal: false, sahel: false}
+  - {name: "Kasserine",   region: centre_west,   coastal: false, sahel: false}
+  - {name: "Sidi Bouzid", region: centre_west,   coastal: false, sahel: false}
+  - {name: "Gabès",       region: southeast,     coastal: true,  sahel: false}
+  - {name: "Médenine",    region: southeast,     coastal: true,  sahel: false}
+  - {name: "Tataouine",   region: southeast,     coastal: false, sahel: false}
+  - {name: "Gafsa",       region: southwest,     coastal: false, sahel: false}
+  - {name: "Tozeur",      region: southwest,     coastal: false, sahel: false}
+  - {name: "Kébili",      region: southwest,     coastal: false, sahel: false}
+
+# Settlement -> governorate. Matched on the normalised name, so accents and
+# the definite article ("Le Kef", "El Kef") do not need separate entries.
+# Extend freely: an unmapped birthplace is reported by `govtn.validate`, not
+# silently dropped.
+settlements:
+  # Greater Tunis
+  Tunis: Tunis
+  "Sidi Bou Saïd": Tunis
+  Carthage: Tunis
+  La Marsa: Tunis
+  Le Bardo: Tunis
+  La Goulette: Tunis
+  Ariana: Ariana
+  Ben Arous: Ben Arous
+  Hammam Lif: Ben Arous
+  Radès: Ben Arous
+  Manouba: Manouba
+  # Northeast
+  Nabeul: Nabeul
+  Hammamet: Nabeul
+  Kelibia: Nabeul
+  Menzel Temime: Nabeul
+  Korba: Nabeul
+  Zaghouan: Zaghouan
+  Bizerte: Bizerte
+  Menzel Bourguiba: Bizerte
+  Mateur: Bizerte
+  Ras Jebel: Bizerte
+  # Northwest
+  Béja: Béja
+  Testour: Béja
+  Jendouba: Jendouba
+  Tabarka: Jendouba
+  Ghardimaou: Jendouba
+  "Le Kef": "Le Kef"
+  Dahmani: "Le Kef"
+  Siliana: Siliana
+  Makthar: Siliana
+  # Centre-east (Sahel and Sfax)
+  Sousse: Sousse
+  "Hammam Sousse": Sousse
+  Msaken: Sousse
+  Kalaa Kebira: Sousse
+  Enfidha: Sousse
+  Hergla: Sousse
+  Monastir: Monastir
+  Ksar Hellal: Monastir
+  Moknine: Monastir
+  Jemmal: Monastir
+  Téboulba: Monastir
+  Sayada: Monastir
+  Mahdia: Mahdia
+  Ksour Essef: Mahdia
+  Chebba: Mahdia
+  El Jem: Mahdia
+  Sfax: Sfax
+  Sakiet Ezzit: Sfax
+  Kerkennah: Sfax
+  Mahres: Sfax
+  # Centre-west
+  Kairouan: Kairouan
+  Haffouz: Kairouan
+  Sbikha: Kairouan
+  Kasserine: Kasserine
+  Sbeitla: Kasserine
+  Thala: Kasserine
+  Fériana: Kasserine
+  "Sidi Bouzid": "Sidi Bouzid"
+  Regueb: "Sidi Bouzid"
+  Meknassy: "Sidi Bouzid"
+  # South
+  Gabès: Gabès
+  Mareth: Gabès
+  Matmata: Gabès
+  Médenine: Médenine
+  Djerba: Médenine
+  Houmt Souk: Médenine
+  Zarzis: Médenine
+  Ben Gardane: Médenine
+  Tataouine: Tataouine
+  Gafsa: Gafsa
+  Metlaoui: Gafsa
+  Redeyef: Gafsa
+  "Moularès": Gafsa
+  Tozeur: Tozeur
+  Nefta: Tozeur
+  Kébili: Kébili
+  Douz: Kébili

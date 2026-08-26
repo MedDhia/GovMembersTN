@@ -111,13 +111,15 @@ spells:
     head: "Tahar Ben Ammar"
     head_role: prime_minister
     start: "1954-08-07"
-    end: "1956-04-15"
+    end: "1956-04-11"
     era: protectorate_end
     pre_independence: true
     note: >-
-      Negotiated and signed the independence protocol of 20 March 1956. Included
-      for continuity with the protectorate elite; excluded by default from the
-      post-independence analysis frame (see `post_independence` flag in build).
+      Negotiated and signed the independence protocol of 20 March 1956, and
+      continued as first head of government of the independent Kingdom from
+      20 March until the handover to Bourguiba on 11 April 1956. Included for
+      continuity with the protectorate elite; flagged `pre_independence` so it
+      can be excluded from the post-independence analysis frame.
     wikipedia_fr: "Gouvernement Tahar Ben Ammar"
     confidence: medium
 
@@ -131,6 +133,11 @@ spells:
     note: >-
       First government of independent Tunisia, formed under the monarchy of
       Lamine Bey. Ends with the proclamation of the Republic on 25 July 1957.
+      SOURCES DIFFER ON THE START DATE: Bourguiba was appointed Prime Minister
+      by the Bey on 11 April 1956, but the government's composition was
+      announced on 15 April. The later date is used because the unit of this
+      table is the GOVERNMENT, not the person's appointment; the four-day gap
+      after TN-00 is the real interregnum, not a data error.
     wikipedia_fr: "Gouvernement Bourguiba I"
     confidence: high
 

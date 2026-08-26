@@ -40,8 +40,13 @@ One row per person.
 | `gender` | string | Wikidata `P21` label. Sparse for the pre-1987 period. |
 | `birth_date`, `birth_year` | date, int | Birth. `birth_year` is provided because year-precision is often all that is available. |
 | `death_date`, `death_year` | date, int | Death. Empty for the living **and** for the undocumented — do not read an empty cell as "alive". |
-| `birth_place` | string | Settlement of birth. |
-| `birth_region` | string | The administrative unit containing `birth_place` (Wikidata `P131`), i.e. the governorate. This is the variable for coastal/interior analysis, not `birth_place`. |
+| `birth_date_precision` | string | `day`, `month` or `year` — what the source actually gave. `1972-01-01` with precision `year` means "born in 1972", not "born on 1 January". |
+| `birth_place` | string | Settlement of birth, as given by the source. |
+| `birth_governorate` | string | Settlement resolved to its **current** governorate via `config/places.yml`. Boundaries changed over the period (Sidi Bouzid 1973, Ben Arous 1983, Manouba 2000); coding to current boundaries is what keeps a seventy-year series comparable. Empty where the settlement is not in the map — `VALIDATION.md` lists those. |
+| `birth_region_type` | string | `greater_tunis`, `northeast`, `northwest`, `centre_east`, `centre_west`, `southeast`, `southwest`. |
+| `birth_coastal` | bool | The conventional coastal/interior development cleavage. Note Gabès and Médenine are coastal by geography while belonging to the disadvantaged south — use `birth_region_type` when that matters. |
+| `birth_sahel` | bool | The **narrow historical Sahel**: Sousse, Monastir, Mahdia only. Deliberately not the same as `birth_coastal`, which also includes Greater Tunis, the northeast and Sfax. Conflating the two attributes Greater Tunis's weight to the Sahel and is the most common way this variable is got wrong. |
+| `birth_region` | string | Raw Wikidata `P131` label for the birthplace. Kept verbatim; use `birth_governorate` for the harmonised coding. |
 | `birth_place_qid` | string | QID of the birth settlement, for joining to external geodata. |
 | `citizenship` | string | Wikidata `P27` label. |
 

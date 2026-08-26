@@ -1,5 +1,5 @@
 cabinet_id,n_members,n_appointments,n_women,n_sovereign_posts,start_date,end_date,spell_id,era,president,share_women,head_of_government,head_role,confidence
-TN-00,1,1,0,1,1954-08-07,1956-04-15,TN-00,protectorate_end,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
+TN-00,1,1,0,1,1954-08-07,1956-04-11,TN-00,protectorate_end,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
 TN-01,1,1,0,1,1956-04-15,1957-07-25,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
 TN-02,1,1,0,1,1957-07-29,1969-11-07,TN-02,bourguiba,Habib Bourguiba,0.0,Habib Bourguiba,president_as_head,medium
 TN-03,1,1,0,1,1969-11-07,1970-11-02,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
@@ -18,7 +18,7 @@ TN-15,1,1,0,1,2015-02-06,2016-08-27,TN-15,second_republic,Béji Caïd Essebsi,0.
 TN-16,1,1,0,1,2016-08-27,2020-02-27,TN-16,second_republic,Béji Caïd Essebsi,0.0,Youssef Chahed,head_of_government,high
 TN-17,1,1,0,1,2020-02-27,2020-09-02,TN-17,second_republic,Kaïs Saïed,0.0,Elyès Fakhfakh,head_of_government,high
 TN-18,1,1,0,1,2020-09-02,2021-10-11,TN-18,second_republic,Kaïs Saïed,0.0,Hichem Mechichi,head_of_government,high
-TN-19,1,1,0,1,2021-10-11,2023-08-01,TN-19,saied_exception,Kaïs Saïed,0.0,Najla Bouden,head_of_government,high
+TN-19,1,1,1,1,2021-10-11,2023-08-01,TN-19,saied_exception,Kaïs Saïed,1.0,Najla Bouden,head_of_government,high
 TN-20,1,1,0,1,2023-08-01,2024-08-07,TN-20,saied_exception,Kaïs Saïed,0.0,Ahmed Hachani,head_of_government,high
 TN-21,1,1,0,1,2024-08-07,2025-03-21,TN-21,saied_exception,Kaïs Saïed,0.0,Kamel Maddouri,head_of_government,high
-TN-22,1,1,0,1,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,0.0,Sara Zaafarani,head_of_government,high
+TN-22,1,1,1,1,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,1.0,Sara Zaafarani,head_of_government,high

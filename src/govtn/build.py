@@ -24,6 +24,7 @@ is never mistaken for being more complete than it is.
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import logging
 from datetime import date, datetime, timezone
@@ -81,6 +82,61 @@ class Spine:
             clean_name(p["name"]) for p in cfg.get("designated_never_invested", [])
         }
         self.censor = config.snapshot_date()
+        # Hand-verified biographical seed for the heads of government, keyed
+        # by normalised name rather than by spell id: Bourguiba holds two
+        # spells (TN-01 and TN-02) but is one person with one biography.
+        try:
+            seed = config.load_yaml("heads_biographical")
+        except FileNotFoundError:
+            seed = {"people": []}
+        self.head_bios = {
+            clean_name(person["name"]): person for person in seed.get("people", [])
+        }
+
+    def bio_for(self, name: str) -> dict:
+        return self.head_bios.get(clean_name(name), {})
+
+    @functools.cached_property
+    def _places(self) -> tuple[dict, dict]:
+        """(settlement -> governorate, governorate -> attributes), normalised."""
+        try:
+            cfg = config.load_yaml("places")
+        except FileNotFoundError:
+            return {}, {}
+        governorates = {
+            clean_name(g["name"]): g for g in cfg.get("governorates", [])
+        }
+        settlements = {
+            clean_name(place): governorate
+            for place, governorate in (cfg.get("settlements") or {}).items()
+        }
+        # A governorate capital shares its name with its governorate; map it to
+        # itself so "Sousse" resolves whether it is given as city or province.
+        for key, governorate in governorates.items():
+            settlements.setdefault(key, governorate["name"])
+        return settlements, governorates
+
+    def place_attributes(self, place: str | None) -> dict:
+        """Governorate and region coding for a birthplace string.
+
+        Returns empty values rather than guessing when a settlement is not in
+        the map; `govtn.validate` reports those so the map can be extended.
+        """
+        blank = {"birth_governorate": None, "birth_region_type": None,
+                 "birth_coastal": None, "birth_sahel": None}
+        if not place or (isinstance(place, float) and pd.isna(place)):
+            return blank
+        settlements, governorates = self._places
+        governorate_name = settlements.get(clean_name(str(place)))
+        if not governorate_name:
+            return blank
+        attributes = governorates.get(clean_name(governorate_name), {})
+        return {
+            "birth_governorate": governorate_name,
+            "birth_region_type": attributes.get("region"),
+            "birth_coastal": attributes.get("coastal"),
+            "birth_sahel": attributes.get("sahel"),
+        }
 
     def _covering(self, records: list[dict], when: date | None) -> dict | None:
         """First record whose interval contains `when`, treated as HALF-OPEN.
@@ -157,9 +213,16 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
         record_id = new_id("s")
         start = _iso(spell["start"])
         end = _iso(spell.get("end"))
+        bio = spine.bio_for(spell["head"])
         records.append(SourceRecord(
             record_id=record_id, source="spine", name=spell["head"],
+            # Seeding the QID here means the spine record joins directly to the
+            # Wikidata harvest when it runs, instead of relying on name
+            # matching to reunite them.
+            qid=bio.get("qid"),
+            birth_year=_year(bio.get("birth_date")),
             cabinet=spell["id"], portfolio="head_of_government",
+            payload=bio,
         ))
         appointments.append({
             "record_id": record_id,
@@ -291,6 +354,7 @@ def build_persons(
     mapping: dict[str, str],
     records: list[SourceRecord],
     appointments: pd.DataFrame,
+    spine: "Spine",
 ) -> pd.DataFrame:
     """One row per person: the individual-level analysis frame."""
     wikidata_persons = {
@@ -306,27 +370,43 @@ def build_persons(
         names = [m.name for m in members if m.name]
         wd = wikidata_persons.get(person_id, {})
         leaders = next((m.payload for m in members if m.source == "leaders" and m.payload), {})
+        # Precedence: Wikidata (structured) > hand-verified seed > Leaders
+        # (pattern-extracted). Each fills only what the one above left empty.
+        seed = next((m.payload for m in members if m.source == "spine" and m.payload), {})
 
-        birth = _iso(wd.get("birth")) or leaders.get("birth_date")
-        death = _iso(wd.get("death"))
+        birth_raw = wd.get("birth") or seed.get("birth_date") or leaders.get("birth_date")
+        birth_parsed = parse_date(str(birth_raw)) if birth_raw else None
+        birth = birth_parsed.value.isoformat() if birth_parsed and birth_parsed.value else None
+        death = _iso(wd.get("death")) or _iso(seed.get("death_date"))
+        names.extend(seed.get("name_variants", []))
         row = {
             "person_id": person_id,
             "wikidata_qid": person_id if person_id.startswith("Q") else None,
-            "name": max(names, key=len) if names else None,
+            # Preferred display form, in order: the hand-verified canonical
+            # name, then Wikidata's label, then the longest variant seen.
+            # "Longest" alone is a poor default - it reliably picks an
+            # alternate transliteration ("Béji Caïd Es-Sebsi") over the
+            # conventional spelling.
+            "name": (seed.get("name") or wd.get("personLabel")
+                     or (max(names, key=len) if names else None)),
             "name_variants": "|".join(sorted({clean_name(n) for n in names})),
             "name_ar": wd.get("personLabelAr"),
             "name_en": wd.get("personLabelEn"),
-            "gender": wd.get("genderLabel"),
+            "gender": wd.get("genderLabel") or seed.get("gender"),
+            "birth_date_precision": (birth_parsed.precision if birth_parsed else None),
             "birth_date": birth,
             "birth_year": _year(birth),
             "death_date": death,
             "death_year": _year(death),
-            "birth_place": wd.get("birthPlaceLabel") or leaders.get("birth_place"),
+            "birth_place": (wd.get("birthPlaceLabel") or seed.get("birth_place")
+                            or leaders.get("birth_place")),
             "birth_region": wd.get("birthRegionLabel"),
             "birth_place_qid": wd.get("birth_place_qid"),
             "citizenship": wd.get("countryLabel"),
             "education": _merge_multi(
-                wd.get("education"), "|".join(leaders.get("education_institutions", []))
+                wd.get("education"),
+                "|".join(seed.get("education", [])),
+                "|".join(leaders.get("education_institutions", [])),
             ),
             "degrees": _merge_multi(
                 wd.get("degrees"),
@@ -334,7 +414,10 @@ def build_persons(
             ),
             "academic_fields": wd.get("fields"),
             "occupations": wd.get("occupations"),
-            "profession_domains": "|".join(leaders.get("profession_domains", [])) or None,
+            "profession_domains": _merge_multi(
+                "|".join(seed.get("profession", [])),
+                "|".join(leaders.get("profession_domains", [])),
+            ),
             "parties": wd.get("parties"),
             "party_qids": wd.get("partyQids"),
             "religion": wd.get("religions"),
@@ -348,6 +431,12 @@ def build_persons(
         rows.append(row)
 
     persons = pd.DataFrame(rows)
+    place_columns = persons["birth_place"].apply(
+        lambda place: pd.Series(spine.place_attributes(place))
+    )
+    persons = pd.concat([persons, place_columns], axis=1)
+    # Wikidata's own P131 label is kept as the raw value; the coded columns
+    # above are the harmonised ones.
     return _attach_career_variables(persons, appointments)
 
 
@@ -522,7 +611,7 @@ def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
     reconciler.write_audit()
 
     appointments = build_appointments(mapping, raw_appointments, spine)
-    persons = build_persons(mapping, records, appointments)
+    persons = build_persons(mapping, records, appointments, spine)
     cabinets = build_cabinets(appointments, persons, spine)
 
     portfolios = pd.DataFrame(config.portfolios()["portfolios"]).drop(columns=["aliases"])
@@ -545,8 +634,25 @@ def run(*, out_dir=None) -> dict[str, pd.DataFrame]:
 
 
 def _write_manifest(out_dir, tables, spine: Spine) -> None:
+    def _contributed(name: str) -> bool:
+        """A source counts as present only if it actually yielded rows.
+
+        A harvest stage that fails after discovery still writes an empty JSON
+        file. Testing for existence alone would then report the source as
+        present and the harvest as complete - exactly the "looks more complete
+        than it is" failure this manifest exists to prevent.
+        """
+        path = config.paths().interim / f"{name}.json"
+        if not path.exists():
+            return False
+        try:
+            with path.open(encoding="utf-8") as fh:
+                return bool(json.load(fh))
+        except (json.JSONDecodeError, OSError):
+            return False
+
     sources_present = {
-        name: (config.paths().interim / f"{name}.json").exists()
+        name: _contributed(name)
         for name in ("wikidata_persons", "wikidata_officeholders",
                      "wikipedia_cabinets", "leaders_biographies")
     }

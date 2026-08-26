@@ -136,3 +136,11 @@ def test_overlap_days():
         date(2019, 1, 1), date(2020, 7, 1),
         censor=date(2026, 1, 1),
     ) == 182
+
+
+def test_truncated_iso_dates_report_month_precision():
+    # "1974-01" occurs where a source gives only month and year; it must not
+    # be padded up to a false day-level claim.
+    parsed = parse_date("1974-01")
+    assert parsed.value is not None and parsed.value.isoformat() == "1974-01-01"
+    assert parsed.precision == "month"

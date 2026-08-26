@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-08-26T14:46:18+00:00",
+  "generated_utc": "2026-08-26T14:52:49+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": false,
     "wikidata_officeholders": false,
-    "wikipedia_cabinets": true,
-    "leaders_biographies": true
+    "wikipedia_cabinets": false,
+    "leaders_biographies": false
   },
   "complete": false,
   "tables": {
@@ -19,6 +19,7 @@
         "name_ar",
         "name_en",
         "gender",
+        "birth_date_precision",
         "birth_date",
         "birth_year",
         "death_date",
@@ -41,6 +42,10 @@
         "wikipedia_en",
         "leaders_url",
         "sources",
+        "birth_governorate",
+        "birth_region_type",
+        "birth_coastal",
+        "birth_sahel",
         "n_appointments",
         "n_cabinets",
         "n_portfolios",

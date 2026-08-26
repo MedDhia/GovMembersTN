@@ -382,6 +382,7 @@ _ALL_MONTHS = {
 
 _ISO = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
 _DMY_NUM = re.compile(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{4})\b")
+_YEAR_MONTH = re.compile(r"\b(1[89]\d{2}|20\d{2})-(0[1-9]|1[0-2])\b")
 _YEAR_ONLY = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")
 
 
@@ -414,6 +415,13 @@ def parse_date(raw: str | None) -> ParsedDate:
             return ParsedDate(date(*map(int, m.groups())), "day", original)
         except ValueError:
             pass
+
+    # Truncated ISO ("1974-01") occurs where a source gives only month and
+    # year. Reported at month precision, not padded up to a false day.
+    m = _YEAR_MONTH.fullmatch(text)
+    if m:
+        year, month = map(int, m.groups())
+        return ParsedDate(date(year, month, 1), "month", original)
 
     m = _DMY_NUM.search(text)
     if m:
