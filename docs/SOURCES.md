@@ -72,7 +72,18 @@ regular category vocabulary that is far more reliable than parsing prose:
     Catégorie:Ingénieure tunisienne              -> profession, and gender via
                                                     the feminine form
 
-This layer took education coverage from 1% to 35%, and it is what makes the
+Arabic uses its own conventions and carries its own trap: the birth year is
+tagged **twice**, Gregorian and Hijri — `مواليد 1955` alongside
+`مواليد 1374 هـ`. Matching the year without excluding the Hijri marker puts
+the birth 580 years adrift, and the result looks entirely plausible in a
+table. Arabic also marks the feminine with a distinct plural (`وزيرات`,
+`مهندسات`), which is an unambiguous gender signal where the masculine is not.
+
+Orthographic folding (ة → ه, أ → ا) is used for **matching only**; values are
+taken from the original category name, or every Arabic value in the dataset
+would be stored folded.
+
+This layer took education coverage from 1% to 37%, and it is what makes the
 concentration of the ministerial elite in a handful of institutions visible at
 all: 46 ministers passed through the Collège Sadiki and 37 through one of the
 two Écoles nationales d'administration.

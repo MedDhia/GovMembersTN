@@ -112,6 +112,51 @@ FR_FEMININE = re.compile(
     r"^premiere ministre|avocate |medecin femme|professeure"
 )
 
+# ---------------------------------------------------------------------------
+# Category patterns (Arabic)
+# ---------------------------------------------------------------------------
+# Matched against text folded by `normalize_text` (ة -> ه, أ -> ا), so the
+# patterns are written in that folded orthography.
+#
+# THE HIJRI TRAP: Arabic Wikipedia tags a birth year twice, once Gregorian and
+# once Hijri - "مواليد 1955" alongside "مواليد 1374 هـ". Matching the year
+# without excluding the Hijri marker yields a birth year 580 years adrift, and
+# it looks perfectly plausible in a table.
+
+AR_PATTERNS: dict[str, list[re.Pattern]] = {
+    "birth": [re.compile(r"^مواليد (\d{4})$")],          # bare year only: no هـ
+    "birth_place": [
+        re.compile(r"^مواليد في (.+)$"),
+        re.compile(r"^اشخاص من (?:ولايه )?(.+)$"),
+    ],
+    "death": [re.compile(r"^وفيات (\d{4})$")],
+    "education": [re.compile(r"^خريج(?:و|ات) (.+)$")],
+    "party": [re.compile(r"^شخصيات (.+)$")],
+}
+
+AR_FLAGS: dict[str, re.Pattern] = {
+    "political_prisoner": re.compile(r"ضحايا التعذيب|سجناء سياسيون|معتقلون"),
+    "exile": re.compile(r"منفيون|لاجئون"),
+    "academic": re.compile(r"^اكاديمي|^اساتذه جامع"),
+    "military": re.compile(r"^عسكريون|^جنرالات"),
+    "diplomat": re.compile(r"^دبلوماسيون|^سفراء"),
+    "lawyer": re.compile(r"^محامون|^قضاه"),
+    "physician": re.compile(r"^اطباء"),
+    "engineer": re.compile(r"^مهندس"),
+    "economist": re.compile(r"^اقتصاديون"),
+    "journalist": re.compile(r"^صحفيون"),
+}
+
+# Arabic marks the feminine with a distinct plural form, which is an
+# unambiguous gender signal: وزيرات (women ministers), سياسيات (women
+# politicians), مهندسات (women engineers), رئيسات (women heads of).
+AR_FEMININE = re.compile(
+    r"^نساء |وزيرات|سياسيات|مهندسات|رئيسات|اكاديميات|طبيبات|محاميات|عالمات"
+)
+
+# Values the "شخصيات X" shape produces that are not parties.
+_AR_NOT_A_PARTY = re.compile(r"^(الربيع العربي|الثوره|تونسيه|تونسيون)")
+
 _MONTHS_FR = {
     "janvier": 1, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
     "juillet": 7, "aout": 8, "septembre": 9, "octobre": 10, "novembre": 11,
@@ -133,8 +178,10 @@ _NOT_A_PARTY = re.compile(
 )
 
 
-def parse_categories(categories: Iterable[str]) -> dict[str, Any]:
+def parse_categories(categories: Iterable[str], lang: str = "fr") -> dict[str, Any]:
     """Turn a biography's category list into structured fields."""
+    if lang == "ar":
+        return _parse_arabic(categories)
     out: dict[str, Any] = {
         "education_institutions": [],
         "parties": [],
@@ -189,6 +236,65 @@ def parse_categories(categories: Iterable[str]) -> dict[str, Any]:
                         out["memberships"].append(value)
                 elif field == "award":
                     out["awards"].append(name)
+                break
+
+    if feminine:
+        out["gender_hint"] = "female"
+    for key in ("education_institutions", "parties", "awards", "employers",
+                "memberships"):
+        out[key] = _dedupe(out[key])
+    return out
+
+
+def _parse_arabic(categories: Iterable[str]) -> dict[str, Any]:
+    """Arabic-edition equivalent of :func:`parse_categories`."""
+    out: dict[str, Any] = {
+        "education_institutions": [], "parties": [], "awards": [],
+        "employers": [], "memberships": [], "flags": [],
+    }
+    feminine = False
+
+    for raw in categories:
+        name = raw.split(":", 1)[-1]
+        text = normalize_text(name)
+        if not text:
+            continue
+        if AR_FEMININE.search(text):
+            feminine = True
+        for flag, pattern in AR_FLAGS.items():
+            if pattern.search(text) and flag not in out["flags"]:
+                out["flags"].append(flag)
+
+        for field, patterns in AR_PATTERNS.items():
+            matched = False
+            for pattern in patterns:
+                match = pattern.match(text)
+                if not match:
+                    continue
+                matched = True
+                if field in {"birth", "death"}:
+                    if field not in out:
+                        out[field] = f"{match.group(1)}-01-01"
+                        out[f"{field}_precision"] = "year"
+                else:
+                    # Take the value from the ORIGINAL category name, not the
+                    # folded one: folding is for matching only, and returning
+                    # its output would store حركه النهضه instead of
+                    # حركة النهضة. Folding never changes token counts, so the
+                    # matched prefix can be measured in tokens and dropped.
+                    prefix_tokens = len(text[:match.start(1)].split())
+                    value = " ".join(name.split()[prefix_tokens:]).strip()
+                    if not value:
+                        break
+                    if field == "birth_place":
+                        out.setdefault("birth_place", value)
+                    elif field == "education":
+                        out["education_institutions"].append(value)
+                    elif field == "party":
+                        if not _AR_NOT_A_PARTY.match(normalize_text(value)):
+                            out["parties"].append(value)
+                break
+            if matched:
                 break
 
     if feminine:
@@ -278,7 +384,7 @@ def harvest(
             log.warning("category batch failed (%s...): %s", batch[0], exc)
             continue
         for title, entry in categories.items():
-            record = parse_categories(entry["categories"])
+            record = parse_categories(entry["categories"], lang)
             record["qid"] = entry.get("qid")
             record["article"] = title
             record["lang"] = lang

@@ -1,6 +1,6 @@
 # Data validation report
 
-- Generated: `2026-08-26T20:21:33+00:00`
+- Generated: `2026-08-26T20:30:01+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **True**
 - Errors: **0** | Warnings: **5**
@@ -31,18 +31,18 @@ _120 further rows omitted._
 
 ## ⚠️ WARNING: Individual-level attribute coverage
 
-Person-level attribute coverage across 928 people.
+Person-level attribute coverage across 889 people.
 
 | variable           |   present | coverage   |
 |:-------------------|----------:|:-----------|
-| birth_date         |       533 | 57.4%      |
-| birth_place        |       472 | 50.9%      |
-| gender             |       557 | 60.0%      |
-| education          |       317 | 34.2%      |
-| parties            |       308 | 33.2%      |
-| occupations        |       555 | 59.8%      |
-| profession_domains |        42 | 4.5%       |
-| wikidata_qid       |       559 | 60.2%      |
+| birth_date         |       564 | 63.4%      |
+| birth_place        |       494 | 55.6%      |
+| gender             |       600 | 67.5%      |
+| education          |       330 | 37.1%      |
+| parties            |       330 | 37.1%      |
+| occupations        |       587 | 66.0%      |
+| profession_domains |        42 | 4.7%       |
+| wikidata_qid       |       603 | 67.8%      |
 
 Below 50% coverage: `education`, `parties`, `profession_domains`. Analyses using these variables are effectively conditioned on being well documented, which correlates with seniority and with the post-2011 period.
 
@@ -61,7 +61,7 @@ Below 50% coverage: `education`, `parties`, `profession_domains`. Analyses using
 
 213 appointments carry no usable start date.
 
-## ⚠️ WARNING: Cabinet seats with more than one recorded holder (499)
+## ⚠️ WARNING: Cabinet seats with more than one recorded holder (487)
 
 Expected where a portfolio changed hands mid-cabinet; a problem where it reflects a source disagreement or a failed merge. Review before treating these as co-holdings.
 
@@ -83,20 +83,21 @@ Expected where a portfolio changed hands mid-cabinet; a problem where it reflect
 | Gouvernement Bouden/Hachani/Madouri/Zaafrani | defence           |           2 |
 | Gouvernement Bouden/Hachani/Madouri/Zaafrani | economy_planning  |           3 |
 
-_484 further rows omitted._
+_472 further rows omitted._
 
-## ⚠️ WARNING: Unmapped birthplaces (61 distinct)
+## ⚠️ WARNING: Unmapped birthplaces (66 distinct)
 
-388/472 recorded birthplaces resolved to a governorate (82.2%).
+402/494 recorded birthplaces resolved to a governorate (81.4%).
 
 Add each settlement below to the `settlements` map in `config/places.yml`. Until then these people are absent from every regional analysis while still counting in the denominator.
 
 | birth_place        |   n |
 |:-------------------|----:|
-| Tunisie            |   7 |
+| Tunisie            |   8 |
 | M'saken            |   3 |
 | Dar Chaâbane       |   3 |
 | Métouia            |   3 |
+| Bou Salem          |   2 |
 | Téboursouk         |   2 |
 | El Hamma           |   2 |
 | La Manouba         |   2 |
@@ -104,16 +105,15 @@ Add each settlement below to the `settlements` map in `config/places.yml`. Until
 | El Ksour           |   2 |
 | Khniss             |   2 |
 | Paris              |   2 |
+| Ezzahra            |   2 |
 | Ksibet el-Médiouni |   2 |
 | Degache            |   2 |
-| Béni Khiar         |   2 |
-| Akouda             |   2 |
 
-_46 further rows omitted._
+_51 further rows omitted._
 
 ## ⚠️ WARNING: Entity resolution decisions
 
-3141 merges accepted, 1129 vetoed by a disqualifier. 706 rest on name similarity alone (threshold 0.75).
+3395 merges accepted, 1559 vetoed by a disqualifier. 474 rest on name similarity alone (threshold 0.75).
 
 Lowest-scoring name-only merges, which are the ones worth eyeballing:
 
@@ -140,4 +140,4 @@ Lowest-scoring name-only merges, which are the ones worth eyeballing:
 | w00365 | w01052  |     0.9 |
 | w01163 | w01196  |     0.9 |
 
-_23 further rows omitted._
+_10 further rows omitted._
