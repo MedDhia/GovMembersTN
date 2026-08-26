@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-26T20:05:20+00:00",
+  "generated_utc": "2026-08-26T20:12:39+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": true,
@@ -89,10 +89,12 @@
         "source",
         "source_ref",
         "confidence",
+        "table_caption",
         "party_raw",
         "replaces",
         "replaced_by",
         "person_id",
+        "end_date_unreliable",
         "tenure_days",
         "is_incumbent",
         "portfolio_label",

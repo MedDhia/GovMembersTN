@@ -1,6 +1,6 @@
 # Data validation report
 
-- Generated: `2026-08-26T20:01:48+00:00`
+- Generated: `2026-08-26T20:11:45+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **True**
 - Errors: **0** | Warnings: **5**
@@ -50,16 +50,16 @@ Below 50% coverage: `education`, `parties`, `profession_domains`. Analyses using
 
 | decade   |   appointments |
 |:---------|---------------:|
-| 1950s    |            217 |
-| 1960s    |            110 |
-| 1970s    |            195 |
-| 1980s    |            640 |
-| 1990s    |            492 |
-| 2000s    |             57 |
-| 2010s    |            809 |
+| 1950s    |            176 |
+| 1960s    |            120 |
+| 1970s    |            223 |
+| 1980s    |            518 |
+| 1990s    |            450 |
+| 2000s    |            180 |
+| 2010s    |            863 |
 | 2020s    |            342 |
 
-75 appointments carry no usable start date.
+65 appointments carry no usable start date.
 
 ## ⚠️ WARNING: Cabinet seats with more than one recorded holder (462)
 

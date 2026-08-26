@@ -132,3 +132,50 @@ def test_image_size_is_not_read_as_a_portfolio():
     rows = parse_tables(wikitext)
     assert not any(r["raw_title"].strip() == "60px" for r in rows)
     assert not any(r["person_name"].strip() == "60px" for r in rows)
+
+
+def test_table_caption_supplies_a_composition_date():
+    """Each roster table is captioned with its own composition/reshuffle date.
+
+    Using it turns a cabinet-inherited span into a real individual start date.
+    The caption's value sits inside a {{date|...}} template, so it must be
+    UNWRAPPED, not stripped: `_cell_text` removes templates and left
+    "Composition le" with no date at all, losing every captioned table.
+    """
+    wikitext = """{| class="wikitable"
+|+ Composition le {{date|27 septembre 1989}}
+! Portefeuille !! Nom
+|-
+| Ministre de l'Intérieur || [[Chédli Neffati]]
+|}"""
+    rows = parse_tables(wikitext)
+    assert len(rows) == 1
+    assert rows[0]["table_date"] == "1989-09-27"
+    assert rows[0]["table_date_precision"] == "day"
+
+
+def test_reshuffle_tables_get_their_own_dates():
+    wikitext = """{| class="wikitable"
+|+ Composition le {{date|27 septembre 1989}}
+! Portefeuille !! Nom
+|-
+| Ministre de l'Intérieur || [[A]]
+|}
+{| class="wikitable"
+|+ Postes remaniés le {{date|3 mars 1990}}
+! Portefeuille !! Nom
+|-
+| Ministre de l'Intérieur || [[B]]
+|}"""
+    dates = {r["person_name"]: r["table_date"] for r in parse_tables(wikitext)}
+    assert dates == {"A": "1989-09-27", "B": "1990-03-03"}
+
+
+def test_caption_without_a_date_yields_none():
+    wikitext = """{| class="wikitable"
+|+ Membres du gouvernement
+! Portefeuille !! Nom
+|-
+| Ministre de la Justice || [[C]]
+|}"""
+    assert parse_tables(wikitext)[0]["table_date"] is None

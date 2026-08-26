@@ -245,6 +245,26 @@ def _cell_text(cell: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+_DATE_TEMPLATE = re.compile(r"\{\{\s*(?:date|Date)\s*\|([^}]*)\}\}")
+
+
+def _caption_text(caption: str) -> str:
+    """Caption text with date templates expanded to their arguments.
+
+    `{{date|27 septembre 1989}}` carries the value, so it must be unwrapped
+    rather than removed. Template arguments are pipe-separated and may carry
+    named parameters, which are dropped.
+    """
+    def expand(match: re.Match) -> str:
+        parts = [p.strip() for p in match.group(1).split("|") if "=" not in p]
+        return " ".join(parts)
+
+    text = _DATE_TEMPLATE.sub(expand, caption)
+    text = re.sub(r"\{\{[^}]*\}\}", " ", text)      # any remaining templates
+    text = re.sub(r"\[\[([^\]|]*\|)?([^\]]*)\]\]", r"\2", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def _cell_links(cell: str) -> list[str]:
     """Wikilink targets in a cell - the reliable join key to Wikidata."""
     code = mwparserfromhell.parse(cell)
@@ -314,6 +334,26 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
     """Extract roster rows from every wikitable in the article."""
     rows: list[dict[str, Any]] = []
     for table in re.findall(r"\{\|.*?\n\|\}", wikitext, flags=re.DOTALL):
+        # The caption dates the table, and each table is one composition or
+        # one reshuffle: "Composition le 27 septembre 1989", "Postes remaniés
+        # le 3 mars 1990". That is a real, individual-level start date for
+        # every row in it - far better than inheriting the whole cabinet's
+        # span, which for a ten-year government is useless as a tenure.
+        table_date = None
+        caption = re.search(r"\n\|\+([^\n]*)", table)
+        if caption:
+            # NOT _cell_text here: that removes templates, and the date IS a
+            # template ({{date|27 septembre 1989}}). Stripping it left
+            # "Composition le" and the date was lost for every captioned
+            # table in the corpus.
+            parsed_caption = parse_date(_caption_text(caption.group(1)))
+            if parsed_caption.value:
+                table_date = {
+                    "date": parsed_caption.value.isoformat(),
+                    "precision": parsed_caption.precision,
+                    "caption": _cell_text(caption.group(1))[:80],
+                }
+
         chunks = re.split(r"\n\|-+", table)
         roles: dict[str, int] = {}
         for chunk in chunks:
@@ -352,6 +392,9 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
                 "person_wikilink": links[0] if links else None,
                 "party": texts[roles["party"]] if "party" in roles and roles["party"] < len(texts) else None,
                 "date_note": texts[roles["date"]] if "date" in roles and roles["date"] < len(texts) else None,
+                "table_date": (table_date or {}).get("date"),
+                "table_date_precision": (table_date or {}).get("precision"),
+                "table_caption": (table_date or {}).get("caption"),
                 "layout": "table",
             })
     return rows

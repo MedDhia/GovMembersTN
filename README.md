@@ -27,6 +27,8 @@ Harvested from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn:
 
 Person-level attribute coverage: occupation 62%, gender 62%, Wikidata QID 62%,
 birth date 59%, birthplace 52%, education 35%, party 34%, career flags 34%.
+54% of appointments carry a date describing the person rather than the cabinet
+(see `date_basis`), and 65% of people have a strictly-dated tenure.
 `VALIDATION.md` breaks this down by decade and variable — **read it before
 computing any long-run trend**; coverage is markedly better after 1987 than
 before.

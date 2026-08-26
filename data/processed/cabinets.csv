@@ -2,7 +2,7 @@ cabinet_id,n_members,n_appointments,n_women,n_sovereign_posts,start_date,end_dat
 Gouvernement Ben Ali,19,31,1,10,1987-01-01,1987-01-01,,bourguiba,Habib Bourguiba,0.053,,,
 Gouvernement Ben Ammar,24,43,0,12,1954-01-01,1956-04-11,TN-00,protectorate,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
 Gouvernement Bouden/Hachani/Madouri/Zaafrani,57,58,15,15,2021-01-01,2024-08-07,TN-20,second_republic,Kaïs Saïed,0.263,Ahmed Hachani,head_of_government,high
-Gouvernement Bourguiba I,23,34,0,7,1956-01-01,1957-07-25,TN-01,protectorate_end,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
+Gouvernement Bourguiba I,23,34,0,7,1956-01-01,1957-07-25,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
 Gouvernement Bourguiba II,25,63,0,24,1956-04-15,1969-01-01,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
 Gouvernement Caïd Essebsi,42,62,2,13,2011-01-01,2011-12-24,TN-11,ben_ali,Zine El Abidine Ben Ali,0.048,Béji Caïd Essebsi,prime_minister,high
 Gouvernement Chahed,84,177,11,32,2016-01-01,2020-02-27,TN-16,second_republic,Béji Caïd Essebsi,0.131,Youssef Chahed,head_of_government,high
@@ -18,14 +18,14 @@ Gouvernement Hédi Baccouche III,32,32,1,8,1989-01-01,1989-01-01,TN-08,ben_ali,Z
 Gouvernement Jebali,43,68,3,14,2011-01-01,2013-03-13,TN-12,transition,Moncef Marzouki,0.07,Hamadi Jebali,head_of_government,high
 Gouvernement Jomaa,30,49,2,14,2014-01-01,2015-02-06,TN-14,transition,Moncef Marzouki,0.067,Mehdi Jomaa,head_of_government,high
 Gouvernement Kaak,21,24,0,8,1947-01-01,1950-01-01,,protectorate,Lamine Bey,0.0,,,
-Gouvernement Karoui,113,297,4,82,1989-01-01,1999-11-17,TN-09,ben_ali,Zine El Abidine Ben Ali,0.035,Hamed Karoui,prime_minister,high
-Gouvernement Ladgham,32,67,0,20,1969-01-01,1970-11-02,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
+Gouvernement Karoui,113,297,4,82,1989-09-27,1999-11-17,TN-09,ben_ali,Zine El Abidine Ben Ali,0.035,Hamed Karoui,prime_minister,high
+Gouvernement Ladgham,32,67,0,20,1969-11-07,1970-11-02,TN-03,bourguiba,Habib Bourguiba,0.0,Bahi Ladgham,prime_minister,high
 Gouvernement Larayedh,41,64,2,14,2013-01-01,2014-01-29,TN-13,transition,Moncef Marzouki,0.049,Ali Larayedh,head_of_government,high
 Gouvernement Mechichi,61,86,8,21,2020-01-01,2021-10-11,TN-18,second_republic,Kaïs Saïed,0.131,Hichem Mechichi,head_of_government,high
 Gouvernement Mohamed Mzali,48,81,2,24,1980-01-01,1986-07-08,TN-05,bourguiba,Habib Bourguiba,0.042,Mohamed Mzali,prime_minister,high
 Gouvernement Mohamed Salah Mzali,24,24,0,6,1954-01-01,1986-07-08,TN-05,protectorate,Lamine Bey,0.0,Mohamed Mzali,prime_minister,high
-Gouvernement Nouira,70,125,0,34,1970-01-01,1980-04-23,TN-04,bourguiba,Habib Bourguiba,0.0,Hédi Nouira,prime_minister,high
-Gouvernement Sfar,13,24,1,10,1986-01-01,1987-10-02,TN-06,bourguiba,Habib Bourguiba,0.077,Rachid Sfar,prime_minister,high
+Gouvernement Nouira,70,125,0,34,1970-11-02,1980-04-23,TN-04,bourguiba,Habib Bourguiba,0.0,Hédi Nouira,prime_minister,high
+Gouvernement Sfar,13,24,1,10,1986-07-08,1987-10-02,TN-06,bourguiba,Habib Bourguiba,0.077,Rachid Sfar,prime_minister,high
 Gouvernement Slaheddine Baccouche I,6,8,0,4,1943-01-01,1989-09-27,TN-08,protectorate,Zine El Abidine Ben Ali,0.0,Hédi Baccouche,prime_minister,high
 Gouvernement Slaheddine Baccouche II,25,26,0,6,1952-01-01,1989-09-27,TN-08,protectorate,Lamine Bey,0.0,Hédi Baccouche,prime_minister,high
 Gouvernement de la Tunisie,3,3,0,1,,,,,,0.0,,,

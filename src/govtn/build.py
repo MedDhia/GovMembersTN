@@ -284,7 +284,23 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 cabinet=canonical, portfolio=parsed.portfolio,
                 payload=bio,
             ))
-            member_start = _iso(member.get("date_note")) or _iso(cab_start)
+            # Individual date first, then the table's own composition or
+            # reshuffle date, and only then the cabinet's span.
+            member_start = (
+                _iso(member.get("date_note"))
+                or member.get("table_date")
+                or _iso(cab_start)
+            )
+            if member.get("date_note") or member.get("table_date"):
+                basis = "row"
+                precision = (
+                    parse_date(member["date_note"]).precision
+                    if member.get("date_note")
+                    else member.get("table_date_precision", "day")
+                )
+            else:
+                basis = "cabinet"
+                precision = parse_date(str(cab_start)).precision
             appointments.append({
                 "record_id": record_id,
                 "cabinet_id": canonical,
@@ -298,8 +314,9 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 "is_interim": parsed.is_interim,
                 "start_date": member_start,
                 "end_date": _iso(cab_end),
-                "date_precision": parse_date(member.get("date_note") or str(cab_start)).precision,
-                "date_basis": "row" if member.get("date_note") else "cabinet",
+                "date_precision": precision,
+                "date_basis": basis,
+                "table_caption": member.get("table_caption"),
                 "source": f"wikipedia:{cabinet.get('lang', 'fr')}",
                 "source_ref": f"https://{cabinet.get('lang','fr')}.wikipedia.org/wiki/{article.replace(' ', '_')}",
                 "confidence": "medium",
@@ -676,6 +693,28 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
             return None
         end = _as_date(row["end_date"]) or censor
         return (end - start).days
+
+    # A row's start can now be a mid-cabinet reshuffle date, day-precise, while
+    # its end is still the cabinet's, sometimes only year-precise and padded to
+    # 1 January. That yields an end BEFORE the start. We know when the person
+    # took the post and not when they left it, so the honest encoding is an
+    # open end, flagged - not a negative tenure.
+    starts_after_end = frame.apply(
+        lambda row: (
+            _as_date(row["start_date"]) is not None
+            and _as_date(row["end_date"]) is not None
+            and _as_date(row["end_date"]) < _as_date(row["start_date"])
+        ),
+        axis=1,
+    )
+    frame["end_date_unreliable"] = starts_after_end
+    if starts_after_end.any():
+        log.info(
+            "%d appointments had an end date before their start (a mid-cabinet "
+            "reshuffle against a year-precision cabinet end); their end date is "
+            "recorded as unknown", int(starts_after_end.sum()),
+        )
+    frame.loc[starts_after_end, "end_date"] = None
 
     frame["tenure_days"] = frame.apply(duration, axis=1)
     # Whether the dates describe THIS PERSON's tenure or were inherited from

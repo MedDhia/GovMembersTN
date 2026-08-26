@@ -124,6 +124,8 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `start_date`, `end_date` | date | Tenure bounds. `end_date` empty = still in office at the snapshot. |
 | `date_precision` | string | `day`, `month`, `year`, or `unknown` — the precision of `start_date` as given by the source. **Filter on this before computing durations.** |
 | `tenure_days` | int | Days in office; open tenures censored at the snapshot. Read together with `date_basis` — where that is `cabinet`, this is the cabinet's span, not the person's tenure. |
+| `table_caption` | string | The roster table's caption, where the date came from (`Composition le 27 septembre 1989`, `Postes remaniés le 3 mars 1990`). Kept so a date can be traced to the exact reshuffle it describes. |
+| `end_date_unreliable` | bool | The source's end date preceded the start date — a mid-cabinet reshuffle start measured against a year-precision cabinet end. `end_date` is set to empty in those rows, so they read as open-ended; do **not** mistake them for incumbents. Cross-check with `is_incumbent`. |
 | `date_basis` | string | Where this row's dates came from: `statement` (a Wikidata P580/P582 qualifier — the person's own tenure), `row` (a date cell in the Wikipedia roster table), `spine` (the curated government spine), `cabinet` (**inherited from the cabinet**, because the source gave no individual dates), `unknown`. About three quarters of rows are `cabinet`. **Filter to `statement`/`row`/`spine` before computing any duration.** |
 | `is_incumbent` | bool | `end_date` is empty. |
 | `era` | string | Regime era at the start of the tenure (→ `spells.era`). Boundaries are half-open, so a government formed on a transition date is coded to the incoming regime. |
