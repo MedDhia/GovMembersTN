@@ -33,7 +33,7 @@ from typing import Any
 import pandas as pd
 
 from . import config
-from .normalize import clean_name, excluded_reason, parse_date, parse_title
+from .normalize import clean_name, excluded_reason, looks_like_office, parse_date, parse_title
 from .reconcile import Reconciler, SourceRecord
 
 log = logging.getLogger(__name__)
@@ -245,6 +245,7 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
         })
 
     # -- (b) Wikipedia cabinet rosters --------------------------------------
+    skipped_offices: list[dict] = []
     for cabinet in _load_interim("wikipedia_cabinets.json") or []:
         article = cabinet["article"]
         # Group the French and Arabic versions of one government under a
@@ -257,6 +258,12 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
         for member in cabinet["members"]:
             if clean_name(member["person_name"]) in spine.never_invested:
                 continue                       # designated but never took office
+            if looks_like_office(member["person_name"]):
+                # The person column holds a ministry name - a misaligned row,
+                # or a vacant post recorded by naming the department. Not a
+                # person, so not an appointment.
+                skipped_offices.append(member)
+                continue
             parsed = parse_title(member["raw_title"])
             record_id = new_id("w")
             records.append(SourceRecord(
@@ -286,6 +293,12 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 "confidence": "medium",
                 "party_raw": member.get("party"),
             })
+
+    if skipped_offices:
+        log.info(
+            "skipped %d roster rows whose officeholder cell named an "
+            "institution rather than a person", len(skipped_offices),
+        )
 
     # -- (c) Wikidata officeholding statements ------------------------------
     # Arabic labels, keyed by QID, so Wikidata records can carry them as

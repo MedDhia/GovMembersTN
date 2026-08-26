@@ -161,3 +161,23 @@ def test_iso_timestamps_keep_day_precision(raw):
     parsed = parse_date(raw)
     assert parsed.value is not None and parsed.value.isoformat() == "1903-08-03"
     assert parsed.precision == "day"
+
+
+@pytest.mark.parametrize("value", [
+    "Ministère de l'Intérieur",
+    "Ministre des Affaires étrangères, de la Migration et des Tunisiens à l'étranger",
+    "Présidence du gouvernement",
+    "وزارة الداخلية",
+])
+def test_institution_names_are_not_people(value):
+    from govtn.normalize import looks_like_office
+    assert looks_like_office(value)
+
+
+@pytest.mark.parametrize("value", [
+    "Taïeb Mehiri", "Najla Bouden", "الحبيب الصيد", "Béji Caïd Essebsi",
+    "Ministar Radovanović",           # a surname that merely starts like one
+])
+def test_real_names_are_not_mistaken_for_institutions(value):
+    from govtn.normalize import looks_like_office
+    assert not looks_like_office(value)

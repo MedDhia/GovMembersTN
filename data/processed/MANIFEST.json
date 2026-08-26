@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-26T18:15:14+00:00",
+  "generated_utc": "2026-08-26T18:20:44+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": true,
@@ -10,7 +10,7 @@
   "complete": true,
   "tables": {
     "persons": {
-      "rows": 931,
+      "rows": 909,
       "columns": [
         "person_id",
         "wikidata_qid",
@@ -64,7 +64,7 @@
       ]
     },
     "appointments": {
-      "rows": 3061,
+      "rows": 2979,
       "columns": [
         "appointment_id",
         "record_id",

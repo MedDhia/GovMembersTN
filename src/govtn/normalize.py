@@ -330,6 +330,24 @@ def excluded_reason(raw: str) -> str | None:
     return None
 
 
+# An institution or an office title, not a person. These reach the person
+# column when a roster row is misaligned or records a vacant post by naming
+# the ministry. Left in, they become "people" with careers and network ties.
+_OFFICE_AS_NAME = re.compile(
+    r"^(le |la |l')?("
+    r"minist(ere|re|ère)|secretariat|secretaire d'?etat|presidence|premier ministere|"
+    r"chef du gouvernement|gouvernement|direction|departement|agence|"
+    r"conseil|assemblee|republique|banque centrale|office\b|"
+    r"وزار[ةه]|رئاس[ةه]|كتاب[ةه]|الحكوم[ةه]|مجلس"
+    r")\b"
+)
+
+
+def looks_like_office(name: str) -> bool:
+    """True when a supposed person name is really an institution or a post."""
+    return bool(_OFFICE_AS_NAME.match(normalize_text(name)))
+
+
 def parse_title(raw: str) -> ParsedTitle:
     """Split a raw ministerial title into cabinet rank and policy portfolio.
 

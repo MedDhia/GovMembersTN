@@ -170,3 +170,39 @@ def test_bipartite_collapses_multiple_posts_per_cabinet():
     assert len(edges) == 1
     assert edges.iloc[0]["n_posts"] == 2
     assert edges.iloc[0]["portfolios"] == "defence|interior"
+
+
+def test_exported_graphs_can_be_read_back(tmp_path):
+    """A graph file that cannot be re-read is not a deliverable.
+
+    Regression: missing values were written as empty strings. GEXF and GraphML
+    infer an attribute's type from the values present, so a numeric column
+    containing "" was declared numeric and `nx.read_gexf` then failed with
+    "could not convert string to float: ''" - the exported network was
+    unloadable in networkx, and by extension in anything else reading the
+    format strictly.
+    """
+    import networkx as nx
+
+    persons = pd.DataFrame([
+        {"person_id": "P1", "name": "A", "birth_year": 1950, "n_appointments": 3},
+        {"person_id": "P2", "name": "B", "birth_year": None, "n_appointments": 1},
+        {"person_id": "P3", "name": None, "birth_year": 1970, "n_appointments": None},
+    ])
+    edges = pd.DataFrame([
+        {"source": "P1", "target": "P2", "weight": 5, "cabinets": "C1", "eras": None},
+    ])
+    graph = build_graph(edges, persons)
+
+    for extension, writer, reader in (
+        ("gexf", nx.write_gexf, nx.read_gexf),
+        ("graphml", nx.write_graphml, nx.read_graphml),
+    ):
+        path = tmp_path / f"g.{extension}"
+        writer(graph, path)
+        back = reader(path)
+        assert back.number_of_nodes() == 3
+        assert back.number_of_edges() == 1
+        # A recorded value survives; a missing one is absent, not empty string.
+        assert back.nodes["P1"]["birth_year"] == 1950
+        assert back.nodes["P2"].get("birth_year", None) in (None, "")

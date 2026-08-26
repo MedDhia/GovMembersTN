@@ -293,11 +293,17 @@ def _node_attributes(persons: pd.DataFrame) -> dict[str, dict[str, Any]]:
     columns = [c for c in NODE_ATTRIBUTES if c in persons.columns]
     attributes: dict[str, dict[str, Any]] = {}
     for _, person in persons[["person_id", *columns]].iterrows():
+        # OMIT missing values rather than writing an empty string. GEXF and
+        # GraphML infer each attribute's type from the values present, so a
+        # numeric column containing "" is declared numeric and then fails to
+        # parse on read - `nx.read_gexf` raised
+        # "could not convert string to float: ''" and the exported graph could
+        # not be loaded at all. Both formats allow an attribute to be absent
+        # on a node, which is the correct encoding of "not recorded".
         attributes[person["person_id"]] = {
-            # GEXF and GraphML reject NaN and None; empty string is the
-            # portable representation of "missing" in both formats.
-            column: ("" if pd.isna(person[column]) else person[column])
+            column: person[column]
             for column in columns
+            if not pd.isna(person[column])
         }
     return attributes
 
@@ -312,9 +318,9 @@ def build_graph(
     if not edges.empty:
         for _, edge in edges.iterrows():
             payload = {
-                key: ("" if pd.isna(value) else value)
+                key: value
                 for key, value in edge.items()
-                if key not in {"source", "target"}
+                if key not in {"source", "target"} and not pd.isna(value)
             }
             graph.add_edge(edge["source"], edge["target"], **payload)
     # Isolates are people with no qualifying tie. They are kept deliberately:

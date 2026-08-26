@@ -18,11 +18,11 @@ Harvested from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn:
 
 | | |
 |---|---|
-| **931** people who held a post in a Tunisian government | |
-| **3,061** appointments | one row per person × cabinet × portfolio |
+| **909** people who held a post in a Tunisian government | |
+| **2,979** appointments | one row per person × cabinet × portfolio |
 | **53** cabinets | 1943–2026, spanning 23 government spells |
-| **42,583** co-membership ties | weighted by days of overlapping service |
-| **2,309** succession ties | directed, within portfolio |
+| **~41,000** co-membership ties | weighted by days of overlapping service |
+| **~1,900** succession ties | directed, within portfolio |
 
 Coverage of person-level attributes, which is uneven by nature of the sources:
 birth date 50%, gender 53%, Wikidata QID 53%, education 1%. `VALIDATION.md`

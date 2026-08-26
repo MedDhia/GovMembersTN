@@ -1388,9 +1388,6 @@ TN-brahim-baccari,Gouvernement Ghannouchi I,2,higher_education|industry_energy,8
 TN-brahim-turki,Gouvernement Nouira,1,foreign_affairs,3652.0,bourguiba
 TN-chedly-ben-romdhane,Gouvernement Mohamed Salah Mzali,1,other,0.0,protectorate
 TN-chedly-rehaiem,Gouvernement Ben Ammar,1,other,730.0,protectorate
-TN-chef-du-gouvernement,Gouvernement Fakhfakh,1,other,0.0,second_republic
-TN-chef-du-gouvernement,Gouvernement Ghannouchi II,2,other|presidency_affairs,0.0,ben_ali
-TN-chef-du-gouvernement,Gouvernement Mechichi,1,other,366.0,second_republic
 TN-chokri-ayachi,Gouvernement Ghannouchi I,1,defence,4383.0,ben_ali
 TN-chokri-mamoghli,Gouvernement Ghannouchi I,2,trade,8766.0,ben_ali
 TN-chokri-terzi,Gouvernement Essid,1,youth_sports,365.0,second_republic
@@ -1463,61 +1460,7 @@ TN-mahmoud-khiairi,Gouvernement Bourguiba I,1,other,366.0,protectorate_end
 TN-mahmoud-maamouri,Gouvernement Nouira,1,information_media,3652.0,bourguiba
 TN-mekki-zidi,Gouvernement Nouira,1,economy_planning,3652.0,bourguiba
 TN-mezri-chekir,Gouvernement Mohamed Mzali,1,public_service_governance,2192.0,bourguiba
-TN-ministere-de-l-agriculture,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
-TN-ministere-de-l-agriculture,Gouvernement Caïd Essebsi,1,environment,0.0,ben_ali
-TN-ministere-de-l-agriculture,Gouvernement Fakhfakh,1,agriculture,0.0,second_republic
-TN-ministere-de-l-agriculture,Gouvernement Ghannouchi II,1,agriculture,0.0,ben_ali
-TN-ministere-de-l-agriculture,Gouvernement Jebali,1,agriculture,731.0,ben_ali
-TN-ministere-de-l-agriculture,Gouvernement Larayedh,1,agriculture,365.0,transition
-TN-ministere-de-l-agriculture,Gouvernement Nouira,1,agriculture,3652.0,bourguiba
-TN-ministere-de-l-economie-nationale,Gouvernement Nouira,1,economy_planning,3652.0,bourguiba
-TN-ministere-de-l-education,Gouvernement Caïd Essebsi,1,education,0.0,ben_ali
-TN-ministere-de-l-education,Gouvernement Nouira,1,education,3652.0,bourguiba
-TN-ministere-de-l-equipement,Gouvernement Ghannouchi II,1,transport,0.0,ben_ali
-TN-ministere-de-l-equipement,Gouvernement Jebali,1,equipment_housing,731.0,ben_ali
-TN-ministere-de-l-equipement,Gouvernement Jomaa,1,environment,365.0,transition
-TN-ministere-de-l-equipement,Gouvernement Larayedh,2,equipment_housing,730.0,transition
-TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
-TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Caïd Essebsi,2,ict|other,0.0,ben_ali
-TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Ghannouchi II,2,ict|industry_energy,0.0,ben_ali
-TN-ministere-de-l-industrie-et-de-la-techno,Gouvernement Larayedh,1,industry_energy,365.0,transition
-TN-ministere-de-l-interieur,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
-TN-ministere-de-l-interieur,Gouvernement Jebali,1,other,731.0,ben_ali
-TN-ministere-de-l-interieur,Gouvernement Jomaa,2,local_affairs|other,730.0,transition
-TN-ministere-de-l-interieur,Gouvernement Larayedh,1,local_affairs,365.0,transition
-TN-ministere-de-l-investissement-et-de-la-c,Gouvernement Jebali,1,investment_cooperation,731.0,ben_ali
-TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Caïd Essebsi,2,youth_sports,0.0,ben_ali
-TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Ghannouchi II,1,youth_sports,0.0,ben_ali
-TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Jebali,1,youth_sports,731.0,ben_ali
-TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Larayedh,1,youth_sports,365.0,transition
-TN-ministere-de-la-jeunesse-et-des-sports,Gouvernement Mechichi,1,youth_sports,366.0,second_republic
-TN-ministere-de-la-sante,Gouvernement Caïd Essebsi,1,health,0.0,ben_ali
-TN-ministere-de-la-sante,Gouvernement Ghannouchi II,1,health,0.0,ben_ali
-TN-ministere-des-affaires-etrangeres,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,investment_cooperation,1314.0,second_republic
-TN-ministere-des-affaires-etrangeres,Gouvernement Fakhfakh,1,foreign_affairs,0.0,second_republic
-TN-ministere-des-affaires-etrangeres,Gouvernement Ghannouchi II,1,foreign_affairs,0.0,ben_ali
-TN-ministere-des-affaires-etrangeres,Gouvernement Jebali,3,other,2193.0,ben_ali
-TN-ministere-des-affaires-etrangeres,Gouvernement Jomaa,1,foreign_affairs,365.0,transition
-TN-ministere-des-affaires-etrangeres,Gouvernement Larayedh,1,other,365.0,transition
-TN-ministere-des-affaires-sociales,Gouvernement Jebali,1,diaspora,731.0,ben_ali
-TN-ministere-des-affaires-sociales,Gouvernement Larayedh,1,diaspora,365.0,transition
-TN-ministere-des-affaires-sociales,Gouvernement Nouira,1,social_affairs,3652.0,bourguiba
-TN-ministere-des-finances,Gouvernement Ghannouchi II,2,other|state_property,0.0,ben_ali
-TN-ministere-des-finances,Gouvernement Jebali,1,finance,731.0,ben_ali
-TN-ministere-des-finances,Gouvernement Larayedh,1,finance,365.0,transition
-TN-ministere-des-finances,Gouvernement Mechichi,1,finance,366.0,second_republic
-TN-ministere-des-postes-telegraphes-et-tele,Gouvernement Nouira,1,other,3652.0,bourguiba
-TN-ministere-du-commerce,Gouvernement Caïd Essebsi,1,tourism_handicrafts,0.0,ben_ali
-TN-ministere-du-commerce,Gouvernement Jebali,1,trade,731.0,ben_ali
-TN-ministere-du-developpement-et-de-la-coop,Gouvernement Larayedh,1,investment_cooperation,365.0,transition
-TN-ministere-du-developpement-regional-et-d,Gouvernement Caïd Essebsi,1,local_affairs,0.0,ben_ali
-TN-ministere-du-developpement-regional-et-d,Gouvernement Jebali,1,economy_planning,731.0,ben_ali
-TN-ministre-de-l-economie-et-de-la-planific,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,other,1314.0,second_republic
-TN-ministre-de-l-enseignement-superieur-et-,Gouvernement Ghannouchi II,1,higher_education,0.0,ben_ali
-TN-ministre-de-la-formation-professionnelle,Gouvernement Bouden/Hachani/Madouri/Zaafrani,2,other,2628.0,second_republic
-TN-ministre-de-la-planification-et-de-la-co,Gouvernement Ghannouchi II,1,economy_planning,0.0,ben_ali
-TN-ministre-du-commerce-et-du-tourisme,Gouvernement Ghannouchi II,1,tourism_handicrafts,0.0,ben_ali
-TN-ministre-du-developpement-regional-et-lo,Gouvernement Ghannouchi II,1,local_affairs,0.0,ben_ali
+TN-ministeres-de-l-equipement-et-de-l-envir,Gouvernement Larayedh,1,equipment_housing,365.0,transition
 TN-mohamed-ali-boughdiri,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,education,1314.0,second_republic
 TN-mohamed-ali-ganzoui,Gouvernement Ghannouchi I,2,interior,8766.0,ben_ali
 TN-mohamed-ali-ganzoui,Gouvernement Karoui,1,interior,3652.0,ben_ali
@@ -1575,13 +1518,7 @@ TN-noureddine-zaouche,Gouvernement Mohamed Salah Mzali,1,equipment_housing,0.0,p
 TN-omar-ben-mahmoud,Gouvernement Ghannouchi I,1,social_affairs,4383.0,ben_ali
 TN-omar-el-abed,Gouvernement Ghannouchi I,2,agriculture|employment_training,8766.0,ben_ali
 TN-oussama-romdhani,Gouvernement Ghannouchi I,2,information_media,8766.0,ben_ali
-TN-premier-ministere,Gouvernement Caïd Essebsi,1,government_secretariat,0.0,ben_ali
-TN-premier-ministere,Gouvernement Jebali,4,other|public_service_governance,2924.0,ben_ali
-TN-premier-ministere,Gouvernement Jomaa,2,presidency_affairs|public_service_governance,730.0,transition
-TN-premier-ministere,Gouvernement Ladgham,3,economy_planning|equipment_housing|information_media,1095.0,bourguiba
-TN-premier-ministere,Gouvernement Larayedh,3,other|presidency_affairs,1095.0,transition
-TN-premier-ministere,Gouvernement Mohamed Mzali,3,presidency_affairs|public_service_governance,6576.0,bourguiba
-TN-premier-ministere,Gouvernement Nouira,1,government_secretariat,3652.0,bourguiba
+TN-premier-ministre,Gouvernement Ghannouchi II,2,other|presidency_affairs,0.0,ben_ali
 TN-rachid-amri,Gouvernement Bouden/Hachani/Madouri/Zaafrani,1,transport,1314.0,second_republic
 TN-rafaa-ben-achour,Gouvernement Caïd Essebsi,1,presidency_affairs,0.0,ben_ali
 TN-rafaa-ben-achour,Gouvernement Ghannouchi I,1,education,4383.0,ben_ali
