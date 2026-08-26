@@ -20,16 +20,24 @@ wikipedia:
   # Ordered by expected coverage for Tunisian cabinets. French is by far the
   # richest for the 1956-2011 period; Arabic adds native-script name variants
   # and occasionally fills post-2011 gaps.
+  # Each edition names its own index. Reusing the French category name for
+  # Arabic returned zero articles, so Arabic cabinets were only ever found
+  # through French langlinks - which silently missed every government that has
+  # an Arabic article and no French one, including the three most recent.
   editions:
     - lang: fr
       api: "https://fr.wikipedia.org/w/api.php"
       priority: 1
+      index_template: "Modèle:Palette Gouvernements de la Tunisie"
+      index_category: "Catégorie:Gouvernement de la Tunisie"
     - lang: ar
       api: "https://ar.wikipedia.org/w/api.php"
       priority: 2
+      index_category: "تصنيف:مجالس وزراء تونس"
     - lang: en
       api: "https://en.wikipedia.org/w/api.php"
       priority: 3
+      index_category: "Category:Cabinets of Tunisia"
   index_template: "Modèle:Palette Gouvernements de la Tunisie"
   index_category: "Catégorie:Gouvernement de la Tunisie"
   # 1.0s drew repeated HTTP 429s from the MediaWiki API on a full run.

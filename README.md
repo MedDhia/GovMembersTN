@@ -14,7 +14,8 @@ timestamp.
 
 ## What's in it
 
-Harvested from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn:
+Harvested from Wikidata, the French and Arabic Wikipedias, minister biography
+articles, Leaders.com.tn, and the official government portal tunisie.gov.tn:
 
 | | |
 |---|---|

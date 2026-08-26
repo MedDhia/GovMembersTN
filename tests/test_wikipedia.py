@@ -179,3 +179,29 @@ def test_caption_without_a_date_yields_none():
 | Ministre de la Justice || [[C]]
 |}"""
     assert parse_tables(wikitext)[0]["table_date"] is None
+
+
+def test_each_edition_declares_its_own_index():
+    """Reusing the French category name for Arabic returned zero articles.
+
+    Arabic cabinets were then only reachable through French langlinks, which
+    silently missed every government having an Arabic article and no French
+    one - including the three most recent (Hachani, Madouri, Zaafarani), whose
+    ministers were absent from the dataset entirely.
+    """
+    from govtn import config
+    editions = {e["lang"]: e for e in config.sources()["wikipedia"]["editions"]}
+    assert editions["ar"]["index_category"] == "تصنيف:مجالس وزراء تونس"
+    assert editions["ar"]["index_category"] != editions["fr"]["index_category"]
+    # French keeps its navigation template; Arabic has no equivalent.
+    assert "index_template" in editions["fr"]
+
+
+def test_non_french_discovery_unions_langlinks_with_the_local_index():
+    import inspect
+    from govtn.sources import wikipedia
+    body = inspect.getsource(wikipedia.harvest)
+    # The local index must be consulted unconditionally, not only when
+    # langlinks come back empty.
+    assert "own = discover_cabinet_articles" in body
+    assert "if not mapping" not in body, "local index must not be a mere fallback"

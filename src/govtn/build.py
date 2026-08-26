@@ -375,6 +375,46 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
             "replaced_by": row.get("replacedByLabel"),
         })
 
+    # -- (c2) Official government portal: the sitting government ------------
+    # Authoritative, and it covers precisely the period the encyclopaedic
+    # sources are weakest on. Membership is certain; the individual start date
+    # is not, because the portal shows a snapshot with no appointment dates,
+    # so these rows inherit the government's start and are marked accordingly.
+    current = next(
+        (sp for sp in spine.spells if sp.get("end") is None), spine.spells[-1]
+    )
+    for member in _load_interim("govtn_portal_members.json") or []:
+        raw_title = member.get("function") or member.get("ministry") or ""
+        if not raw_title:
+            continue
+        parsed = parse_title(raw_title)
+        record_id = new_id("g")
+        records.append(SourceRecord(
+            record_id=record_id, source="govtn_portal",
+            name=member["name"],
+            cabinet=current["id"], portfolio=parsed.portfolio,
+        ))
+        appointments.append({
+            "record_id": record_id,
+            "cabinet_id": current["id"],
+            "spell_id": current["id"],
+            "cabinet_article": None,
+            "raw_title": raw_title,
+            "person_name": member["name"],
+            "person_wikilink": None,
+            "portfolio": parsed.portfolio,
+            "rank": parsed.rank,
+            "is_interim": parsed.is_interim,
+            "start_date": _iso(current["start"]),
+            "end_date": None,
+            "date_precision": "day",
+            "date_basis": "cabinet",
+            "source": "govtn_portal",
+            "source_ref": member["source_url"],
+            # Membership is authoritative even though the date is not.
+            "confidence": "high",
+        })
+
     # -- (d) Leaders biographies (person attributes only, no appointments) ---
     for bio in _load_interim("leaders_biographies.json") or []:
         name = _name_from_leaders(bio)
@@ -855,7 +895,8 @@ def _write_manifest(out_dir, tables, spine: Spine) -> None:
     sources_present = {
         name: _contributed(name)
         for name in ("wikidata_persons", "wikidata_officeholders",
-                     "wikipedia_cabinets", "leaders_biographies")
+                     "wikipedia_cabinets", "biographies_fr",
+                     "leaders_biographies", "govtn_portal_members")
     }
     manifest = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),

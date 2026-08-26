@@ -36,8 +36,14 @@ UNIONs three discovery strategies rather than relying on any one. Run
 - **What it contributes:** the full ministerial rosters. This is the only
   source with near-complete cabinet composition back to 1956.
 
-The French edition is by far the richest for 1956–2011. Arabic adds
-native-script name variants and occasionally fills post-2011 gaps.
+The French edition is by far the richest for 1956–2011. Arabic is not merely
+a supplement: several governments have an Arabic article and **no French
+one**, including the three most recent (Hachani, Madouri, Zaafarani). Each
+edition therefore declares its own index in `config/sources.yml` — the Arabic
+category is `تصنيف:مجالس وزراء تونس`, which is not a translation of the French
+one — and non-French discovery takes the **union** of langlinks and that local
+index. Treating the local index as a fallback that ran only when langlinks
+returned nothing left those three governments with no ministers at all.
 
 Cabinet articles are discovered through **both** the navigation template
 `Modèle:Palette Gouvernements de la Tunisie` **and** `Catégorie:Gouvernement
@@ -78,6 +84,28 @@ and proves nothing on its own.
 The same request resolves each article to its Wikidata QID via `pageprops`,
 which gives a stable identifier to ministers who appear only in a roster
 table and have no officeholding statement of their own.
+
+## Official government portal (tunisie.gov.tn)
+
+- **Base:** `https://www.tunisie.gov.tn`
+- **What it contributes:** the membership of the SITTING government, with each
+  post's official Arabic title.
+
+The only authoritative source in this pipeline; everything else is
+encyclopaedic or journalistic. Its coverage is deliberately narrow - the
+portal lists the current government and keeps no archive - but that is exactly
+the period the encyclopaedic sources are weakest on, because an article for a
+sitting cabinet is written slowly and is sometimes absent altogether. Before
+this source was added the current government contributed one person to the
+dataset, its head; it now contributes 31.
+
+Membership is authoritative, the dates are not: the portal is a snapshot with
+no appointment dates, so these rows inherit the government's start date and
+carry `date_basis = cabinet`.
+
+Only the Arabic portal is reachable. The French subdomain
+(`fr.tunisie.gov.tn`) refuses connections, so titles arrive in Arabic and are
+harmonised through the same portfolio taxonomy as every other source.
 
 ## Leaders.com.tn
 

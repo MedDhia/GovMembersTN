@@ -16,7 +16,7 @@ import argparse
 import logging
 
 from . import build, config, networks, validate
-from .sources import leaders, wikidata, wikipedia
+from .sources import biographies, govtn_portal, leaders, wikidata, wikipedia
 
 log = logging.getLogger(__name__)
 
@@ -24,6 +24,8 @@ STAGES = {
     "wikidata": lambda offline: wikidata.harvest(offline=offline),
     "wikipedia": lambda offline: wikipedia.harvest(offline=offline, langs=("fr", "ar")),
     "leaders": lambda offline: leaders.harvest(offline=offline),
+    "biographies": lambda offline: biographies.harvest(offline=offline, lang="fr"),
+    "govtn_portal": lambda offline: govtn_portal.harvest(offline=offline),
 }
 
 
@@ -42,7 +44,7 @@ def harvest(stages: list[str], *, offline: bool) -> dict[str, bool]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--stages", default="wikidata,wikipedia,leaders",
+    parser.add_argument("--stages", default="wikidata,wikipedia,biographies,leaders,govtn_portal",
                         help="comma-separated harvest stages, or 'none'")
     parser.add_argument("--no-fetch", action="store_true",
                         help="rebuild from cached payloads without network access")

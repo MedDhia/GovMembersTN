@@ -73,7 +73,7 @@ One row per person.
 |---|---|---|
 | `wikipedia_fr`, `wikipedia_ar`, `wikipedia_en` | url | Article URLs. |
 | `leaders_url` | url | The Leaders biography the person-level fields were extracted from. |
-| `sources` | string (piped) | Which harvesters contributed to this row: `spine`, `wikidata`, `wikipedia`, `leaders`. A row seen by only one source is weaker evidence than one seen by three. |
+| `sources` | string (piped) | Which harvesters contributed to this row: `spine`, `wikidata`, `wikipedia`, `govtn_portal`, `leaders`. A row seen by only one source is weaker evidence than one seen by three. |
 
 ### Derived career variables
 
@@ -137,7 +137,7 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `replaces` | string | Wikidata `P1365`: the person this appointment's holder succeeded in the post. Populated only for Wikidata rows. Independent of `edges_succession.csv`, which is derived from observed date ordering — where both exist they are a useful cross-check on each other. |
 | `replaced_by` | string | Wikidata `P1366`: who succeeded this holder. Same caveats as `replaces`. |
 | `party_raw` | string | Party as printed in the Wikipedia roster table, verbatim and unharmonised (`RCD`, `Ennahdha`, `Indépendant`). Populated only for Wikipedia rows. Unlike `persons.parties`, which is career-level, this is attached to a specific appointment and so is the better source for **time-varying** party affiliation — at the cost of being an uncontrolled vocabulary. Normalise before use. |
-| `source` | string | `spine`, `wikidata`, `wikipedia:fr`, `wikipedia:ar`, `leaders`. |
+| `source` | string | `spine`, `wikidata`, `wikipedia:fr`, `wikipedia:ar`, `govtn_portal`, `leaders`. `govtn_portal` is the government's own listing — authoritative on membership, but a dated snapshot with no appointment dates, so those rows carry `date_basis = cabinet`. |
 | `source_ref` | url/string | The specific URL, Wikidata statement or config file the row came from. |
 | `confidence` | string | `high` / `medium` / `low`. `low` marks a Wikidata statement with no tenure qualifiers, i.e. an office known to have been held but not when. |
 

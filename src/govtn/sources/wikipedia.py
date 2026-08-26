@@ -168,12 +168,16 @@ def discover_cabinet_articles(fetcher: Fetcher, lang: str = "fr") -> list[str]:
     omits cabinets nobody has added to it, the category omits cabinets whose
     article was never categorised.
     """
-    cfg = config.sources()["wikipedia"]
+    edition = next(
+        (e for e in config.sources()["wikipedia"]["editions"] if e["lang"] == lang), {}
+    )
     titles: list[str] = []
-    for finder, arg in (
-        (list_template_links, cfg["index_template"]),
-        (list_category_members, cfg["index_category"]),
-    ):
+    channels = []
+    if edition.get("index_template"):
+        channels.append((list_template_links, edition["index_template"]))
+    if edition.get("index_category"):
+        channels.append((list_category_members, edition["index_category"]))
+    for finder, arg in channels:
         try:
             found = finder(arg, fetcher, lang)
             log.info("%s -> %d titles", arg, len(found))
@@ -527,12 +531,17 @@ def harvest(*, offline: bool = False, langs: Iterable[str] = ("fr",)) -> list[di
             french_titles = list(titles)
         else:
             mapping = langlinked_titles(french_titles, fetcher, lang)
-            log.info("[%s] %d titles resolved via langlinks", lang, len(mapping))
-            if not mapping:                      # fall back to this edition's own index
-                titles = discover_cabinet_articles(fetcher, lang)
-            else:
-                titles = list(mapping)
-                canonical = mapping
+            own = discover_cabinet_articles(fetcher, lang)
+            log.info(
+                "[%s] %d titles via langlinks, %d via this edition's own index",
+                lang, len(mapping), len(own),
+            )
+            # UNION, not fallback. A government with an Arabic article and no
+            # French one has no langlink to follow, and treating the local
+            # index as a mere fallback meant it was never consulted whenever
+            # langlinks returned anything at all.
+            canonical = mapping
+            titles = list(mapping) + [t for t in own if t not in mapping]
         # Seeds from the curated spine catch anything discovery missed.
         seeds = [s.get(f"wikipedia_{lang}") for s in config.cabinets()["spells"]]
         for seed in seeds:

@@ -1,16 +1,18 @@
 {
-  "generated_utc": "2026-08-26T20:12:39+00:00",
+  "generated_utc": "2026-08-26T20:23:15+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": true,
     "wikidata_officeholders": true,
     "wikipedia_cabinets": true,
-    "leaders_biographies": true
+    "biographies_fr": true,
+    "leaders_biographies": true,
+    "govtn_portal_members": true
   },
   "complete": true,
   "tables": {
     "persons": {
-      "rows": 902,
+      "rows": 928,
       "columns": [
         "person_id",
         "wikidata_qid",
@@ -69,7 +71,7 @@
       ]
     },
     "appointments": {
-      "rows": 2979,
+      "rows": 3157,
       "columns": [
         "appointment_id",
         "record_id",
@@ -109,7 +111,7 @@
       ]
     },
     "cabinets": {
-      "rows": 53,
+      "rows": 57,
       "columns": [
         "cabinet_id",
         "n_members",
