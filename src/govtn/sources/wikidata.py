@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 from typing import Any, Iterable, Iterator
 
 from .. import config
@@ -152,6 +153,84 @@ GROUP BY ?person ?personLabel ?personLabelAr ?personLabelEn ?birth ?death
 
 
 # ---------------------------------------------------------------------------
+# Query 4 - multi-valued person attributes, ONE ROW PER VALUE
+# ---------------------------------------------------------------------------
+# Query 3 originally group-concatenated these inside the main person query.
+# That silently returned empty strings for every one of them: Wikidata's
+# `wikibase:label` service binds ?xLabel only for variables that survive to
+# the projection, and a variable consumed by GROUP_CONCAT does not. The raw
+# QIDs came through (819 people had party QIDs) while every label came back
+# blank, so education, occupation, party, degrees, religion and awards were
+# absent from the dataset without any error being raised.
+#
+# Returning one row per value and aggregating in Python avoids the
+# interaction entirely, and is easier to verify.
+
+Q_PERSON_MULTI = PREFIXES + """
+SELECT ?person ?prop ?value ?valueLabel
+WHERE {
+  VALUES ?person { %s }
+  {
+    ?person wdt:P69  ?value . BIND("education"  AS ?prop)
+  } UNION {
+    ?person wdt:P512 ?value . BIND("degree"     AS ?prop)
+  } UNION {
+    ?person wdt:P101 ?value . BIND("field"      AS ?prop)
+  } UNION {
+    ?person wdt:P106 ?value . BIND("occupation" AS ?prop)
+  } UNION {
+    ?person wdt:P102 ?value . BIND("party"      AS ?prop)
+  } UNION {
+    ?person wdt:P140 ?value . BIND("religion"   AS ?prop)
+  } UNION {
+    ?person wdt:P166 ?value . BIND("award"      AS ?prop)
+  } UNION {
+    ?person wdt:P39  ?value . BIND("position"   AS ?prop)
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "%s". }
+}
+""" % ("%s", LANGS)
+
+
+# Output field names, chosen to match what `govtn.build` reads. Deriving them
+# by pluralising the property name gave "educations" and "partys", which the
+# build then looked for under "education" and "parties" and never found.
+ATTRIBUTE_FIELDS = {
+    "education": "education",
+    "degree": "degrees",
+    "field": "fields",
+    "occupation": "occupations",
+    "party": "parties",
+    "religion": "religions",
+    "award": "awards",
+    "position": "positions",
+}
+
+
+def harvest_person_attributes(
+    person_qids: list[str], fetcher: Fetcher, *, force: bool = False
+) -> dict[str, dict[str, list[str]]]:
+    """Multi-valued attributes per person, aggregated in Python.
+
+    Returns {qid: {"education": [...], "party": [...], ...}}.
+    """
+    chunk_size = config.sources()["wikidata"]["chunk_size"]
+    out: dict[str, dict[str, list[str]]] = {}
+    for batch in chunked(sorted(set(person_qids)), chunk_size):
+        values = " ".join(f"wd:{q}" for q in batch)
+        for row in run_query(Q_PERSON_MULTI % values, fetcher, force=force):
+            person = qid(row.get("person"))
+            label = (row.get("valueLabel") or "").strip()
+            # An unresolved label falls back to the QID itself; that is noise,
+            # not a value.
+            if not person or not label or re.fullmatch(r"Q\d+", label):
+                continue
+            bucket = out.setdefault(person, {}).setdefault(row["prop"], [])
+            if label not in bucket:
+                bucket.append(label)
+        log.info("attributes: %d people after %d qids", len(out), len(batch))
+    return out
+
 
 def _fetcher(offline: bool = False) -> Fetcher:
     cfg = config.sources()["wikidata"]
@@ -247,6 +326,20 @@ def harvest_persons(
     return out
 
 
+def _biography_qids() -> list[str]:
+    """QIDs resolved from harvested Wikipedia biographies, if any."""
+    found: list[str] = []
+    for path in sorted(config.paths().interim.glob("biographies_*.json")):
+        try:
+            with path.open(encoding="utf-8") as fh:
+                found.extend(r["qid"] for r in json.load(fh) if r.get("qid"))
+        except (json.JSONDecodeError, OSError) as exc:
+            log.warning("could not read %s: %s", path.name, exc)
+    if found:
+        log.info("adding %d QIDs resolved from biography articles", len(set(found)))
+    return found
+
+
 def harvest(*, offline: bool = False, force: bool = False) -> dict[str, list[dict]]:
     """Full Wikidata harvest. Writes JSON to data/interim/."""
     fetcher = _fetcher(offline)
@@ -257,7 +350,18 @@ def harvest(*, offline: bool = False, force: bool = False) -> dict[str, list[dic
 
     officeholders = harvest_officeholders(position_qids, fetcher, force=force)
     person_qids = [r["person_qid"] for r in officeholders if r.get("person_qid")]
+
+    # Also take QIDs resolved from Wikipedia biography articles. Many
+    # ministers appear in a cabinet roster but have no P39 statement, so they
+    # are invisible to the officeholder query - yet Wikidata still holds their
+    # birth, education and party. Without this they stay attribute-less.
+    person_qids.extend(_biography_qids())
+
     persons = harvest_persons(person_qids, fetcher, force=force)
+    attributes = harvest_person_attributes(person_qids, fetcher, force=force)
+    for row in persons:
+        for prop, values in attributes.get(row.get("person_qid"), {}).items():
+            row[ATTRIBUTE_FIELDS.get(prop, f"{prop}s")] = "|".join(values)
 
     bundle = {
         "positions": positions,

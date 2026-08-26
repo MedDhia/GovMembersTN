@@ -54,13 +54,18 @@ One row per person.
 
 | Column | Type | Description |
 |---|---|---|
-| `education` | string (piped) | Institutions attended, merged from Wikidata `P69` and Leaders biographies. Institution names are **not** reconciled to identifiers — `"Sorbonne"` and `"Université de Paris"` may both appear. Normalise before using as a homophily key. |
+| `education` | string (piped) | Institutions attended, merged from Wikidata `P69`, Wikipedia biography categories (`Élève de …`, `Étudiant de …`) and Leaders. Institution names are **not** reconciled to identifiers — `"Sorbonne"` and `"Université de Paris"` may both appear, and note that `École nationale d'administration` and `École nationale d'administration (Tunisie)` are **genuinely different institutions** and must not be merged. Normalise deliberately before using as a homophily key. |
 | `degrees` | string (piped) | Highest-level credential terms (doctorat, maîtrise, diplôme d'ingénieur). |
 | `academic_fields` | string (piped) | Wikidata `P101`. |
 | `occupations` | string (piped) | Wikidata `P106` labels — an unstructured vocabulary. |
 | `profession_domains` | string (piped) | A **controlled** vocabulary derived from Leaders biographies: `law`, `engineering`, `medicine`, `academia`, `economics`, `finance`, `diplomacy`, `security`, `media`, `labour`, `business`, `civil_service`. Prefer this over `occupations` for coding technocrat/party/security backgrounds. |
 | `parties`, `party_qids` | string (piped) | Party affiliation from Wikidata `P102`. **Not time-varying**: Wikidata records that someone belonged to a party, not when. Treat as a career-level attribute. |
-| `religion`, `awards` | string (piped) | Wikidata `P140`, `P166`. Both very sparse. |
+| `religion`, `awards` | string (piped) | Wikidata `P140`, `P166`. |
+| `memberships` | string (piped) | Learned societies and non-party bodies (Académie tunisienne des sciences, UN committees), from Wikipedia's `Membre de …` categories. Kept **separate from `parties`**: pooling them made an academy read as the eighth-largest party in Tunisia. |
+| `employers` | string (piped) | Institutions the person worked at, from `Professeur à …` / `Enseignant à …` categories. Mostly universities. |
+| `career_flags` | string (piped) | Controlled markers from Wikipedia biography categories: `political_prisoner`, `exile`, `trade_unionist`, `academic`, `military`, `diplomat`, `lawyer`, `physician`, `engineer`, `economist`, `journalist`, `writer`. A pre-ministerial-career signal that is denser than `occupations` for the pre-1987 cohort. |
+| `political_prisoner` | bool | Extracted separately because experience of repression is a standard covariate in elite-recruitment work and appears in **no other source in this pipeline**. `True`/`False` where a biography was harvested, empty where none was. Read an empty cell as "unknown", never as "no". |
+| `wikipedia_bio_url` | url | The biography article the category-derived fields came from. |
 
 ### Source links
 

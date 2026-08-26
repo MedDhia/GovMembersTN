@@ -14,6 +14,15 @@
   qualifiers frequently absent, which is why those rows carry
   `confidence = low`; party affiliation carries no dates.
 
+**A trap worth knowing about.** Multi-valued attributes must NOT be
+group-concatenated inside the SPARQL query. Wikidata's `wikibase:label`
+service binds `?xLabel` only for variables that survive to the projection, and
+a variable consumed by `GROUP_CONCAT` does not — so the query returns empty
+strings for every label, with no error. This silently cost the dataset its
+education, occupation, party, degree, religion and award data; the raw QIDs
+came through, which is what made it detectable. `Q_PERSON_MULTI` returns one
+row per value and aggregates in Python instead.
+
 Tunisian ministerial offices are modelled inconsistently on Wikidata — some
 are typed as positions with `country = Tunisia`, some only as subclasses of
 *minister*, some are reachable only from the officeholder side. The harvester
@@ -42,6 +51,33 @@ far more reliable join than displayed name strings.
 Two roster layouts occur and both are parsed: wikitables (with varying column
 headers) and bullet lists of the form `* Ministre de X : [[Y]]`, which is the
 usual layout for the 1950s–60s governments.
+
+## Wikipedia biographies (categories)
+
+Separate from the cabinet rosters, each officeholder's own article is
+harvested for its **categories**. French Wikipedia uses a controlled,
+regular category vocabulary that is far more reliable than parsing prose:
+
+    Catégorie:Naissance en août 1955             -> birth, month precision
+    Catégorie:Naissance à Médenine               -> birthplace
+    Catégorie:Élève du Collège Sadiki            -> education
+    Catégorie:Personnalité du Mouvement Ennahdha -> party
+    Catégorie:Prisonnier politique tunisien      -> political imprisonment
+    Catégorie:Ingénieure tunisienne              -> profession, and gender via
+                                                    the feminine form
+
+This layer took education coverage from 1% to 35%, and it is what makes the
+concentration of the ministerial elite in a handful of institutions visible at
+all: 46 ministers passed through the Collège Sadiki and 37 through one of the
+two Écoles nationales d'administration.
+
+Gender is inferred only from unambiguous feminine grammatical forms, and only
+where Wikidata supplies nothing — the masculine is French's unmarked default
+and proves nothing on its own.
+
+The same request resolves each article to its Wikidata QID via `pageprops`,
+which gives a stable identifier to ministers who appear only in a roster
+table and have no officeholding statement of their own.
 
 ## Leaders.com.tn
 

@@ -1,6 +1,6 @@
 # Data validation report
 
-- Generated: `2026-08-26T18:19:42+00:00`
+- Generated: `2026-08-26T20:01:48+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **True**
 - Errors: **0** | Warnings: **5**
@@ -23,28 +23,28 @@ Written in full to `data/interim/unmatched_titles.csv`. Each distinct title belo
 | وزير معتمد لدى الوزير الأول                                                   |   3 |
 | كاتب دولة للفلاحة                                                             |   3 |
 | Secrétaire d'État aux Postes, Télégraphes et Téléphones                       |   3 |
-| وزير الاتصال                                                                  |   3 |
 | Président de la                                                               |   3 |
+| وزير الاتصال                                                                  |   3 |
 | secrétaire général                                                            |   3 |
 
 _117 further rows omitted._
 
 ## ⚠️ WARNING: Individual-level attribute coverage
 
-Person-level attribute coverage across 909 people.
+Person-level attribute coverage across 902 people.
 
 | variable           |   present | coverage   |
 |:-------------------|----------:|:-----------|
-| birth_date         |       468 | 51.5%      |
-| birth_place        |       417 | 45.9%      |
-| gender             |       491 | 54.0%      |
-| education          |        13 | 1.4%       |
-| parties            |         0 | 0.0%       |
-| occupations        |         0 | 0.0%       |
-| profession_domains |        43 | 4.7%       |
-| wikidata_qid       |       490 | 53.9%      |
+| birth_date         |       533 | 59.1%      |
+| birth_place        |       472 | 52.3%      |
+| gender             |       557 | 61.8%      |
+| education          |       317 | 35.1%      |
+| parties            |       308 | 34.1%      |
+| occupations        |       555 | 61.5%      |
+| profession_domains |        42 | 4.7%       |
+| wikidata_qid       |       559 | 62.0%      |
 
-Below 50% coverage: `birth_place`, `education`, `parties`, `occupations`, `profession_domains`. Analyses using these variables are effectively conditioned on being well documented, which correlates with seniority and with the post-2011 period.
+Below 50% coverage: `education`, `parties`, `profession_domains`. Analyses using these variables are effectively conditioned on being well documented, which correlates with seniority and with the post-2011 period.
 
 ## ℹ️ INFO: Temporal coverage by decade
 
@@ -61,14 +61,13 @@ Below 50% coverage: `birth_place`, `education`, `parties`, `occupations`, `profe
 
 75 appointments carry no usable start date.
 
-## ⚠️ WARNING: Cabinet seats with more than one recorded holder (460)
+## ⚠️ WARNING: Cabinet seats with more than one recorded holder (462)
 
 Expected where a portfolio changed hands mid-cabinet; a problem where it reflects a source disagreement or a failed merge. Review before treating these as co-holdings.
 
 | cabinet_id                                   | portfolio         |   n_holders |
 |:---------------------------------------------|:------------------|------------:|
 | Gouvernement Ben Ali                         | economy_planning  |           4 |
-| Gouvernement Ben Ali                         | foreign_affairs   |           2 |
 | Gouvernement Ben Ali                         | transport         |           2 |
 | Gouvernement Ben Ali                         | youth_sports      |           2 |
 | Gouvernement Ben Ammar                       | agriculture       |           3 |
@@ -82,12 +81,13 @@ Expected where a portfolio changed hands mid-cabinet; a problem where it reflect
 | Gouvernement Bouden/Hachani/Madouri/Zaafrani | agriculture       |           3 |
 | Gouvernement Bouden/Hachani/Madouri/Zaafrani | culture           |           2 |
 | Gouvernement Bouden/Hachani/Madouri/Zaafrani | defence           |           2 |
+| Gouvernement Bouden/Hachani/Madouri/Zaafrani | economy_planning  |           3 |
 
-_445 further rows omitted._
+_447 further rows omitted._
 
-## ⚠️ WARNING: Unmapped birthplaces (56 distinct)
+## ⚠️ WARNING: Unmapped birthplaces (61 distinct)
 
-341/417 recorded birthplaces resolved to a governorate (81.8%).
+388/472 recorded birthplaces resolved to a governorate (82.2%).
 
 Add each settlement below to the `settlements` map in `config/places.yml`. Until then these people are absent from every regional analysis while still counting in the denominator.
 
@@ -96,35 +96,31 @@ Add each settlement below to the `settlements` map in `config/places.yml`. Until
 | Tunisie            |   7 |
 | M'saken            |   3 |
 | Dar Chaâbane       |   3 |
+| Métouia            |   3 |
 | Téboursouk         |   2 |
 | El Hamma           |   2 |
 | La Manouba         |   2 |
+| Tazarka            |   2 |
 | El Ksour           |   2 |
 | Khniss             |   2 |
 | Paris              |   2 |
-| Métouia            |   2 |
 | Ksibet el-Médiouni |   2 |
 | Degache            |   2 |
+| Béni Khiar         |   2 |
 | Akouda             |   2 |
-| Bou Salem          |   1 |
-| Bouhjar            |   1 |
 
-_41 further rows omitted._
+_46 further rows omitted._
 
 ## ⚠️ WARNING: Entity resolution decisions
 
-2438 merges accepted, 1039 vetoed by a disqualifier. 1041 rest on name similarity alone (threshold 0.75).
+2989 merges accepted, 1129 vetoed by a disqualifier. 636 rest on name similarity alone (threshold 0.75).
 
 Lowest-scoring name-only merges, which are the ones worth eyeballing:
 
 | left   | right   |   score |
 |:-------|:--------|--------:|
-| s00002 | w00143  |     0.9 |
-| w00026 | d02706  |     0.9 |
 | w00664 | w00689  |     0.9 |
-| s00006 | w00287  |     0.9 |
 | l03681 | l03719  |     0.9 |
-| w00039 | d02958  |     0.9 |
 | w00041 | w00763  |     0.9 |
 | w00292 | w01244  |     0.9 |
 | w00044 | w01244  |     0.9 |
@@ -136,8 +132,12 @@ Lowest-scoring name-only merges, which are the ones worth eyeballing:
 | w00085 | l03632  |     0.9 |
 | w00268 | l03780  |     0.9 |
 | w00361 | l03689  |     0.9 |
-| w00170 | d02274  |     0.9 |
 | w01163 | w01184  |     0.9 |
 | w00208 | l03762  |     0.9 |
+| w00650 | d02879  |     0.9 |
+| w00340 | w00658  |     0.9 |
+| w00340 | l03743  |     0.9 |
+| w00365 | w01052  |     0.9 |
+| w01163 | w01196  |     0.9 |
 
-_26 further rows omitted._
+_17 further rows omitted._

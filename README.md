@@ -18,16 +18,18 @@ Harvested from Wikidata, the French and Arabic Wikipedias, and Leaders.com.tn:
 
 | | |
 |---|---|
-| **909** people who held a post in a Tunisian government | |
+| **902** people who held a post in a Tunisian government | |
 | **2,979** appointments | one row per person × cabinet × portfolio |
 | **53** cabinets | 1943–2026, spanning 23 government spells |
-| **~41,000** co-membership ties | weighted by days of overlapping service |
-| **~1,900** succession ties | directed, within portfolio |
+| **40,892** co-membership ties | weighted by days of overlapping service |
+| **1,880** succession ties | directed, within portfolio |
+| **7,799** homophily ties | shared university, party or birth region |
 
-Coverage of person-level attributes, which is uneven by nature of the sources:
-birth date 50%, gender 53%, Wikidata QID 53%, education 1%. `VALIDATION.md`
-breaks this down by decade and variable — **read it before computing any
-long-run trend.**
+Person-level attribute coverage: occupation 62%, gender 62%, Wikidata QID 62%,
+birth date 59%, birthplace 52%, education 35%, party 34%, career flags 34%.
+`VALIDATION.md` breaks this down by decade and variable — **read it before
+computing any long-run trend**; coverage is markedly better after 1987 than
+before.
 
 To rebuild from scratch:
 

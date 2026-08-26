@@ -161,3 +161,17 @@ def test_alias_bridge_does_not_merge_unrelated_people():
     groups = groups_of(mapping)
     assert len(groups) == 2
     assert mapping["b"] == mapping["c"], "Arabic row joins the right person"
+
+
+def test_biography_qid_gives_roster_only_people_an_identity():
+    """A minister who appears only in a cabinet table has no QID of their own.
+
+    Resolving the article's Wikidata item through pageprops is what lets that
+    person inherit structured attributes and merge with any other source.
+    """
+    _, mapping = resolve([
+        R("wp", "wikipedia", "Taïeb Mehiri", wikilink="Taïeb Mehiri", qid="Q3508964"),
+        R("wd", "wikidata", "Taieb Mehiri", qid="Q3508964"),
+    ])
+    assert len(set(mapping.values())) == 1
+    assert set(mapping.values()) == {"Q3508964"}

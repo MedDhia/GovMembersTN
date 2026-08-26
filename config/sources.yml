@@ -10,7 +10,8 @@ wikidata:
   entity_api: "https://www.wikidata.org/w/api.php"
   country_qid: "Q948"        # Tunisia
   human_qid: "Q5"
-  rate_limit_seconds: 1.5
+  # 1.5s drew HTTP 429 from the public endpoint on a full run.
+  rate_limit_seconds: 2.5
   timeout_seconds: 180
   # The public endpoint enforces a 60s query timeout; harvests are chunked.
   chunk_size: 200

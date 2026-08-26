@@ -245,6 +245,14 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
         })
 
     # -- (b) Wikipedia cabinet rosters --------------------------------------
+    # Biographies are keyed by article title and join to roster rows on the
+    # wikilink. That is an exact key, unlike name matching, so this is the
+    # most reliable enrichment path in the pipeline.
+    biographies: dict[str, dict] = {}
+    for lang in ("fr", "ar"):
+        for bio in _load_interim(f"biographies_{lang}.json") or []:
+            biographies.setdefault(bio["article"], bio)
+
     skipped_offices: list[dict] = []
     for cabinet in _load_interim("wikipedia_cabinets.json") or []:
         article = cabinet["article"]
@@ -266,11 +274,15 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
                 continue
             parsed = parse_title(member["raw_title"])
             record_id = new_id("w")
+            bio = biographies.get(member.get("person_wikilink") or "", {})
             records.append(SourceRecord(
                 record_id=record_id, source="wikipedia",
                 name=member["person_name"],
                 wikilink=member.get("person_wikilink"),
+                qid=bio.get("qid"),
+                birth_year=_year(bio.get("birth")),
                 cabinet=canonical, portfolio=parsed.portfolio,
+                payload=bio,
             ))
             member_start = _iso(member.get("date_note")) or _iso(cab_start)
             appointments.append({
@@ -403,11 +415,14 @@ def build_persons(
         # Precedence: Wikidata (structured) > hand-verified seed > Leaders
         # (pattern-extracted). Each fills only what the one above left empty.
         seed = next((m.payload for m in members if m.source == "spine" and m.payload), {})
+        bio = next((m.payload for m in members if m.source == "wikipedia" and m.payload), {})
 
-        birth_raw = wd.get("birth") or seed.get("birth_date") or leaders.get("birth_date")
+        birth_raw = (wd.get("birth") or seed.get("birth_date")
+                     or leaders.get("birth_date") or bio.get("birth"))
         birth_parsed = parse_date(str(birth_raw)) if birth_raw else None
         birth = birth_parsed.value.isoformat() if birth_parsed and birth_parsed.value else None
-        death = _iso(wd.get("death")) or _iso(seed.get("death_date"))
+        death = (_iso(wd.get("death")) or _iso(seed.get("death_date"))
+                 or _iso(bio.get("death")))
         names.extend(seed.get("name_variants", []))
         row = {
             "person_id": person_id,
@@ -422,20 +437,23 @@ def build_persons(
             "name_variants": "|".join(sorted({clean_name(n) for n in names})),
             "name_ar": wd.get("personLabelAr"),
             "name_en": wd.get("personLabelEn"),
-            "gender": _normalize_gender(wd.get("genderLabel") or seed.get("gender")),
+            "gender": _normalize_gender(
+                wd.get("genderLabel") or seed.get("gender") or bio.get("gender_hint")
+            ),
             "birth_date_precision": (birth_parsed.precision if birth_parsed else None),
             "birth_date": birth,
             "birth_year": _year(birth),
             "death_date": death,
             "death_year": _year(death),
             "birth_place": (wd.get("birthPlaceLabel") or seed.get("birth_place")
-                            or leaders.get("birth_place")),
+                            or bio.get("birth_place") or leaders.get("birth_place")),
             "birth_region": wd.get("birthRegionLabel"),
             "birth_place_qid": wd.get("birth_place_qid"),
             "citizenship": wd.get("countryLabel"),
             "education": _merge_multi(
                 wd.get("education"),
                 "|".join(seed.get("education", [])),
+                "|".join(bio.get("education_institutions", [])),
                 "|".join(leaders.get("education_institutions", [])),
             ),
             "degrees": _merge_multi(
@@ -448,7 +466,17 @@ def build_persons(
                 "|".join(seed.get("profession", [])),
                 "|".join(leaders.get("profession_domains", [])),
             ),
-            "parties": wd.get("parties"),
+            "parties": _merge_multi(wd.get("parties"), "|".join(bio.get("parties", []))),
+            "memberships": "|".join(bio.get("memberships", [])) or None,
+            "employers": "|".join(bio.get("employers", [])) or None,
+            # Career markers from biography categories. `political_prisoner`
+            # and `exile` are the ones worth having: experience of repression
+            # is a standard covariate in elite-recruitment work and appears in
+            # no other source here.
+            "career_flags": "|".join(bio.get("flags", [])) or None,
+            "political_prisoner": ("political_prisoner" in bio.get("flags", [])
+                                   if bio else None),
+            "wikipedia_bio_url": bio.get("source_url"),
             "party_qids": wd.get("partyQids"),
             "religion": wd.get("religions"),
             "awards": wd.get("awards"),
