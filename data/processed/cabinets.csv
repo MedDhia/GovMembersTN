@@ -1,5 +1,5 @@
 cabinet_id,n_members,n_appointments,n_women,n_sovereign_posts,start_date,end_date,spell_id,era,president,share_women,head_of_government,head_role,confidence
-Gouvernement Ben Ali,19,31,1,10,1987-01-01,1987-01-01,,bourguiba,Habib Bourguiba,0.053,,,
+Gouvernement Ben Ali,19,31,1,10,1987-01-01,1987-01-01,TN-07,bourguiba,Habib Bourguiba,0.053,Zine El Abidine Ben Ali,prime_minister,high
 Gouvernement Ben Ammar,23,43,0,12,1954-01-01,1956-04-11,TN-00,protectorate_end,Lamine Bey,0.0,Tahar Ben Ammar,prime_minister,medium
 Gouvernement Bouden/Hachani/Madouri/Zaafrani,57,58,15,15,2021-01-01,2024-08-07,TN-20,second_republic,Kaïs Saïed,0.263,Ahmed Hachani,head_of_government,high
 Gouvernement Bourguiba I,21,34,0,7,1956-01-01,1957-07-25,TN-01,monarchy,Lamine Bey,0.0,Habib Bourguiba,prime_minister,high
@@ -51,8 +51,8 @@ TN-18,31,42,8,12,2020-09-02,2025-02-05,TN-18,second_republic,Kaïs Saïed,0.258,
 TN-19,23,26,10,5,2021-10-11,2025-03-21,TN-19,saied_exception,Kaïs Saïed,0.435,Najla Bouden,head_of_government,high
 TN-20,9,10,5,3,2023-08-01,2026-04-27,TN-20,saied_exception,Kaïs Saïed,0.556,Ahmed Hachani,head_of_government,high
 TN-21,11,12,3,4,2024-08-07,2025-03-21,TN-21,saied_exception,Kaïs Saïed,0.273,Kamel Maddouri,head_of_government,high
-TN-22,31,35,6,9,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,0.194,Sara Zaafarani,head_of_government,high
-حكومة أحمد الحشاني,33,37,9,7,,,,,,0.273,,,
-حكومة سارة الزعفراني,30,30,6,7,,,,,,0.2,,,
-حكومة كمال المدوري,49,55,12,12,,,,,,0.245,,,
-حكومة نجلاء بودن,26,26,9,6,,,,,,0.346,,,
+TN-22,31,35,6,10,2025-03-21,,TN-22,saied_exception,Kaïs Saïed,0.194,Sara Zaafarani,head_of_government,high
+حكومة أحمد الحشاني,33,37,9,7,2023-08-01,,TN-20,saied_exception,Kaïs Saïed,0.273,Ahmed Hachani,head_of_government,high
+حكومة سارة الزعفراني,30,30,6,8,,,,,,0.2,,,
+حكومة كمال المدوري,49,55,12,12,2024-08-07,,TN-21,saied_exception,Kaïs Saïed,0.245,Kamel Maddouri,head_of_government,high
+حكومة نجلاء بودن,26,26,9,7,2021-10-11,,TN-19,saied_exception,Kaïs Saïed,0.346,Najla Bouden,head_of_government,high

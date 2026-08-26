@@ -1,11 +1,11 @@
 # Data validation report
 
-- Generated: `2026-08-26T20:30:01+00:00`
+- Generated: `2026-08-26T20:37:00+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **True**
 - Errors: **0** | Warnings: **5**
 
-## ⚠️ WARNING: Unclassified ministerial titles (222 rows, 7.0%)
+## ⚠️ WARNING: Unclassified ministerial titles (219 rows, 6.9%)
 
 Written in full to `data/interim/unmatched_titles.csv`. Each distinct title below is an alias that should be added to `config/portfolios.yml`.
 
@@ -27,7 +27,7 @@ Written in full to `data/interim/unmatched_titles.csv`. Each distinct title belo
 | Président de la                                                               |   3 |
 | وزير الاتصال                                                                  |   3 |
 
-_120 further rows omitted._
+_118 further rows omitted._
 
 ## ⚠️ WARNING: Individual-level attribute coverage
 
@@ -53,13 +53,13 @@ Below 50% coverage: `education`, `parties`, `profession_domains`. Analyses using
 | 1950s    |            176 |
 | 1960s    |            120 |
 | 1970s    |            223 |
-| 1980s    |            518 |
+| 1980s    |            528 |
 | 1990s    |            450 |
 | 2000s    |            180 |
 | 2010s    |            863 |
-| 2020s    |            372 |
+| 2020s    |            490 |
 
-213 appointments carry no usable start date.
+85 appointments carry no usable start date.
 
 ## ⚠️ WARNING: Cabinet seats with more than one recorded holder (487)
 

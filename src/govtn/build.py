@@ -713,6 +713,49 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
         )
     frame = frame[frame["excluded_as"].isna()].drop(columns=["excluded_as"])
 
+    # Link cabinets that no article-title match could place. An Arabic-only
+    # cabinet article ("حكومة كمال المدوري") carries no French head name for
+    # `spell_for_article` to match on, so it and its ministers floated free of
+    # any government spell. Its HEAD is identifiable, though, and entity
+    # resolution has already bridged the two scripts through Wikidata - so the
+    # cabinet can be placed by asking which spell its head of government leads.
+    spine_heads = {
+        row["spell_id"]: row["person_id"]
+        for row in frame[frame["source"] == "spine"].to_dict("records")
+        if row.get("person_id")
+    }
+    heads_to_spells: dict[str, list[str]] = {}
+    for spell_id, person in spine_heads.items():
+        heads_to_spells.setdefault(person, []).append(spell_id)
+
+    unplaced = frame["spell_id"].isna()
+    linked = 0
+    for cabinet_id in frame.loc[unplaced, "cabinet_id"].dropna().unique():
+        rows = frame[frame["cabinet_id"] == cabinet_id]
+        head_people = set(
+            rows.loc[rows["portfolio"] == "head_of_government", "person_id"].dropna()
+        )
+        candidates = {
+            spell for person in head_people for spell in heads_to_spells.get(person, [])
+        }
+        # Bourguiba heads two spells; without a further discriminator, leaving
+        # the cabinet unplaced is better than guessing which one.
+        if len(candidates) == 1:
+            spell_id = candidates.pop()
+            frame.loc[frame["cabinet_id"] == cabinet_id, "spell_id"] = spell_id
+            linked += int((frame["cabinet_id"] == cabinet_id).sum())
+    if linked:
+        log.info("placed %d appointments by their cabinet's head of government", linked)
+
+    # A row with no date of its own can still take the era of the spell it
+    # belongs to, which is better than leaving it uncoded.
+    spell_starts = {sp["id"]: _iso(sp["start"]) for sp in spine.spells}
+    missing_start = frame["start_date"].isna() & frame["spell_id"].notna()
+    frame.loc[missing_start, "start_date"] = frame.loc[missing_start, "spell_id"].map(
+        spell_starts
+    )
+    frame.loc[missing_start, "date_basis"] = "cabinet"
+
     censor = spine.censor
     labels = {p["canonical"]: p for p in config.portfolios()["portfolios"]}
     ranks = {r["canonical"]: r["level"] for r in config.portfolios()["ranks"]}

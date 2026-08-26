@@ -38,7 +38,11 @@ ranks:
       # Title of the head of government under the protectorate and the
       # monarchy, before the office was renamed.
       - "^grand vizir"
-      - "رئيس (الحكومة|الوزراء)"
+      # رئيسة (feminine) folds to رئيسه; a masculine-only pattern
+      # missed both women who have headed a Tunisian government.
+      - "^رئيس[هة]? (الحكوم[هة]|الوزراء)"
+      # The pre-2014 Arabic title of the prime minister.
+      - "^(الوزير الاول|الوزير الاكبر)"
   - canonical: deputy_head_of_government
     level: 1
     aliases:
@@ -86,7 +90,7 @@ portfolios:
       - "^(premier ministre|chef du gouvernement)\\b"
       - "^prime minister\\b"
       - "^(grand vizir|vizir|wazir akbar)\\b"
-      - "^(الوزير الاول|الوزير الاكبر|رئيس الحكومه)"
+      - "^(الوزير الاول|الوزير الاكبر|رئيس[هة]? الحكوم[هة])"
 
   - canonical: interior
     label_en: "Interior"
