@@ -107,8 +107,13 @@ class Fetcher:
             return path.read_text(encoding="utf-8", errors="replace")
 
         if self.offline:
+            # Params can be a multi-kilobyte SPARQL query; summarise rather
+            # than dumping it into the log.
+            summary = json.dumps(params or {}, ensure_ascii=False)
+            if len(summary) > 160:
+                summary = summary[:160] + f"... ({len(summary)} chars)"
             raise FetchError(
-                f"offline mode: no cached payload for {url} params={params}. "
+                f"offline mode: no cached payload for {url} params={summary}. "
                 "Run the harvest with network access first, or point "
                 "GOVTN_ROOT at a tree that ships data/raw/."
             )

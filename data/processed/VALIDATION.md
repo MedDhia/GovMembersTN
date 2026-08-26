@@ -1,11 +1,11 @@
 # Data validation report
 
-- Generated: `2026-08-26T14:41:55+00:00`
+- Generated: `2026-08-26T14:46:16+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **False**
 - Errors: **0** | Warnings: **2**
 
-> **This dataset was built from a partial harvest.** Missing sources: `wikidata_persons`, `wikidata_officeholders`, `wikipedia_cabinets`, `leaders_biographies`.
+> **This dataset was built from a partial harvest.** Missing sources: `wikidata_persons`, `wikidata_officeholders`.
 > Counts below describe what was built, not what exists.
 
 ## ℹ️ INFO: Portfolio taxonomy coverage

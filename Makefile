@@ -15,7 +15,7 @@ test:  ## Run the test suite
 	$(PY) -m pytest tests/ -q
 
 harvest:  ## Fetch from Wikidata, Wikipedia and Leaders (needs network access)
-	$(PY) -m govtn.pipeline --stages wikidata,wikipedia,leaders --skip-harvest=false
+	$(PY) -m govtn.pipeline --stages wikidata,wikipedia,leaders
 
 build:  ## Assemble the analysis tables from whatever has been harvested
 	$(PY) -m govtn.build

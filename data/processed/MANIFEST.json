@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-08-26T14:45:48+00:00",
+  "generated_utc": "2026-08-26T14:46:18+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": false,
     "wikidata_officeholders": false,
-    "wikipedia_cabinets": false,
-    "leaders_biographies": false
+    "wikipedia_cabinets": true,
+    "leaders_biographies": true
   },
   "complete": false,
   "tables": {
