@@ -401,7 +401,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--draws", type=int, default=2000,
                         help="bootstrap resamples for the confidence interval")
     parser.add_argument("--out", type=pathlib.Path, default=None,
-                        help="directory for the CSV output (default: data/processed)")
+                        help="directory for the CSV output (default: data/processed/indices)")
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -422,7 +422,7 @@ def main(argv: list[str] | None = None) -> int:
         ignore_index=True,
     )
 
-    out_dir = args.out or processed
+    out_dir = args.out or config.paths().indices
     out_dir.mkdir(parents=True, exist_ok=True)
     table.to_csv(out_dir / "representation_gini.csv", index=False)
     ratios.to_csv(out_dir / "representation_by_governorate.csv", index=False)

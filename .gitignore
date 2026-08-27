@@ -13,3 +13,9 @@ data/raw/**
 !data/raw/**/MANIFEST.json
 data/interim/**
 !data/interim/.gitkeep
+
+# Bundles produced by `make bundle`.
+dist/
+
+# Example-script output; regenerate with `make analysis`.
+output/

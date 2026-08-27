@@ -36,7 +36,10 @@ def test_pipeline_produces_a_valid_dataset(tables):
     Counts depend on how much has been harvested, so asserting them pins the
     test to one harvest state and breaks the moment a source is added.
     """
-    assert set(tables) == {"persons", "appointments", "cabinets", "spells", "portfolios"}
+    # The five analysis tables, plus the two reference tables that publish the
+    # YAML coding decisions as CSV for users without a YAML parser.
+    assert set(tables) == {"persons", "appointments", "cabinets", "spells",
+                           "portfolios", "governorates", "eras"}
     appointments = tables["appointments"]
     # The curated spine alone guarantees at least the 23 head-of-government rows.
     assert len(appointments) >= 23

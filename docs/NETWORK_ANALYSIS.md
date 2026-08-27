@@ -116,7 +116,7 @@ why open tenures are censored at a frozen snapshot rather than left empty.
 ```python
 import networkx as nx
 
-G = nx.read_gexf("data/processed/network_co_membership.gexf")
+G = nx.read_gexf("data/processed/networks/network_co_membership.gexf")
 print(f"{G.number_of_nodes()} nodes, {G.number_of_edges()} edges, "
       f"density {nx.density(G):.4f}")
 
@@ -182,7 +182,7 @@ for era in ["bourguiba", "ben_ali", "transition", "second_republic", "saied_exce
 ### Portfolio circulation
 
 ```python
-S = nx.read_gexf("data/processed/network_succession.gexf")
+S = nx.read_gexf("data/processed/networks/network_succession.gexf")
 interior = nx.DiGraph((u, v, d) for u, v, d in S.edges(data=True)
                       if d.get("portfolio") == "interior")
 print(f"interior chain: {interior.number_of_nodes()} holders")
@@ -192,8 +192,8 @@ print(f"cycles (returning ministers): {len(list(nx.simple_cycles(interior)))}")
 ### Homophily as a separate layer
 
 ```python
-homophily = pd.read_csv("data/processed/edges_homophily.csv")
-co = pd.read_csv("data/processed/edges_co_membership.csv")
+homophily = pd.read_csv("data/processed/networks/edges_homophily.csv")
+co = pd.read_csv("data/processed/networks/edges_co_membership.csv")
 
 key = lambda f: set(zip(f["source"], f["target"]))
 shared_education = key(homophily.query("tie_type == 'shared_education'"))
@@ -215,7 +215,7 @@ QAP correlation rather than reading the raw overlap.
 ```r
 library(igraph); library(readr); library(dplyr)
 
-edges   <- read_csv("data/processed/edges_co_membership.csv")
+edges   <- read_csv("data/processed/networks/edges_co_membership.csv")
 persons <- read_csv("data/processed/persons.csv")
 
 g <- graph_from_data_frame(

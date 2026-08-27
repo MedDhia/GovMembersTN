@@ -1,0 +1,10 @@
+era,era_label,era_start,era_end,interval
+beylical,Beylical / pre-protectorate,1600-01-01,1881-05-12,"[era_start, era_end)"
+protectorate,French protectorate,1881-05-12,1954-08-07,"[era_start, era_end)"
+protectorate_end,End of the protectorate,1954-08-07,1956-04-15,"[era_start, era_end)"
+monarchy,Kingdom of Tunisia (independent monarchy),1956-03-20,1957-07-25,"[era_start, era_end)"
+bourguiba,Bourguiba republic,1957-07-25,1987-11-07,"[era_start, era_end)"
+ben_ali,Ben Ali republic,1987-11-07,2011-01-14,"[era_start, era_end)"
+transition,Post-revolution transition,2011-01-14,2014-12-31,"[era_start, era_end)"
+second_republic,Second Republic (2014 constitution),2014-12-31,2021-07-25,"[era_start, era_end)"
+saied_exception,Post-25 July 2021 presidential rule / 2022 constitution,2021-07-25,,"[era_start, era_end)"

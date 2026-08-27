@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "GovMembersTN: Members of Tunisian Governments, 1861-2026"
+message: "If you use this dataset, please cite it."
+type: dataset
+authors:
+  - family-names: Hammami
+    given-names: Mohamed Dhia
+repository-code: "https://github.com/MedDhia/GovMembersTN"
+abstract: >-
+  An individual-level dataset of members of Tunisian governments from the
+  beylical period to the present, covering 884 people and 3,151 ministerial
+  appointments across 57 cabinets and 23 government spells. Each appointment
+  carries a harmonised portfolio, a cabinet rank, dated tenure bounds with
+  recorded precision, and where available a Journal Officiel decree citation.
+  Person-level variables cover birth date and place coded to governorate and
+  region, gender, education, party affiliation and profession. Four network
+  layers are published alongside the tables: bipartite person-cabinet
+  affiliation, time-aware co-membership weighted by days of overlapping
+  service, directed within-portfolio succession, and typed homophily ties.
+  Built from Wikidata, French and Arabic Wikipedia, the Tunisian Journal
+  Officiel, rulers.org and the Tunisian press, with entity resolution across
+  Latin and Arabic scripts.
+keywords:
+  - Tunisia
+  - political elites
+  - cabinet ministers
+  - authoritarianism
+  - regime change
+  - Middle East and North Africa
+  - social network analysis
+  - prosopography
+license: MIT

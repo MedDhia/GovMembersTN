@@ -12,11 +12,18 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CODEBOOK = ROOT / "docs" / "CODEBOOK.md"
 PROCESSED = ROOT / "data" / "processed"
 
-TABLES = [
-    "persons", "appointments", "cabinets", "spells", "portfolios",
-    "edges_bipartite", "edges_co_membership", "edges_succession",
-    "edges_homophily",
-]
+# Table -> subdirectory under data/processed, mirroring how they are published.
+TABLES = {
+    "persons": "", "appointments": "", "cabinets": "", "spells": "",
+    "portfolios": "", "governorates": "", "eras": "",
+    "edges_bipartite": "networks", "edges_co_membership": "networks",
+    "edges_succession": "networks", "edges_homophily": "networks",
+}
+
+
+def table_path(name: str) -> pathlib.Path:
+    sub = TABLES[name]
+    return (PROCESSED / sub / f"{name}.csv") if sub else PROCESSED / f"{name}.csv"
 
 
 def documented_columns() -> set[str]:
@@ -32,7 +39,7 @@ def documented_columns() -> set[str]:
 
 @pytest.mark.parametrize("table", TABLES)
 def test_every_column_is_documented(table):
-    path = PROCESSED / f"{table}.csv"
+    path = table_path(table)
     if not path.exists():
         pytest.skip(f"{table}.csv not built")
     columns = set(pd.read_csv(path).columns)
@@ -65,7 +72,7 @@ def test_readme_headline_figures_match_the_data():
     assert claimed, "no headline figures found in README.md"
 
     def rows(name):
-        return len(pd.read_csv(PROCESSED / f"{name}.csv"))
+        return len(pd.read_csv(table_path(name)))
 
     actual = {
         "people who held a post in a tunisian government": rows("persons"),

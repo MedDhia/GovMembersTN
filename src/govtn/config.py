@@ -43,10 +43,30 @@ class Paths:
 
     @property
     def processed(self) -> Path:
+        """Analysis-ready tables: the five core CSVs a user actually loads."""
         return self.root / "data" / "processed"
 
+    @property
+    def networks(self) -> Path:
+        """Edge lists and graph files, kept out of the core table listing.
+
+        Someone opening `data/processed/` should see the tables they are meant
+        to load, not four core tables buried among eight network exports.
+        """
+        return self.processed / "networks"
+
+    @property
+    def indices(self) -> Path:
+        """Derived measures computed FROM the core tables, not alongside them.
+
+        Keeping them separate marks the dependency: these can be regenerated
+        from the tables, the tables cannot be regenerated from these.
+        """
+        return self.processed / "indices"
+
     def ensure(self) -> "Paths":
-        for p in (self.raw, self.interim, self.processed):
+        for p in (self.raw, self.interim, self.processed,
+                  self.networks, self.indices):
             p.mkdir(parents=True, exist_ok=True)
         return self
 

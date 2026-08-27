@@ -376,7 +376,7 @@ def run(*, min_overlap_days: int = DEFAULT_MIN_OVERLAP_DAYS) -> dict[str, Any]:
         "homophily": homophily_edges(persons),
     }
     for name, frame in layers.items():
-        path = paths.processed / f"edges_{name}.csv"
+        path = paths.networks / f"edges_{name}.csv"
         frame.to_csv(path, index=False)
         log.info("wrote %-26s %6d edges", path.name, len(frame))
 
@@ -387,7 +387,7 @@ def run(*, min_overlap_days: int = DEFAULT_MIN_OVERLAP_DAYS) -> dict[str, Any]:
     for name, graph in graphs.items():
         add_centrality(graph)
         for extension, writer in (("gexf", nx.write_gexf), ("graphml", nx.write_graphml)):
-            path = paths.processed / f"network_{name}.{extension}"
+            path = paths.networks / f"network_{name}.{extension}"
             writer(graph, path)
         log.info(
             "wrote network_%s.{gexf,graphml}  %d nodes, %d edges, density %.4f",

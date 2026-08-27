@@ -1113,6 +1113,8 @@ def run(*, out_dir=None, force: bool = False) -> dict[str, pd.DataFrame]:
             "  To overwrite anyway:  python -m govtn.build --force\n"
         )
 
+    tables.update(_reference_tables())
+
     for name, frame in tables.items():
         path = out_dir / f"{name}.csv"
         frame.to_csv(path, index=False)
@@ -1120,6 +1122,41 @@ def run(*, out_dir=None, force: bool = False) -> dict[str, pd.DataFrame]:
 
     _write_manifest(out_dir, tables, spine)
     return tables
+
+
+def _reference_tables() -> dict[str, pd.DataFrame]:
+    """Lookup tables mirroring the YAML config as CSV.
+
+    The coding decisions in `config/` - which governorate is Sahel, when an era
+    starts - are needed to work with the data, but they are locked in YAML, and
+    base R has no YAML parser. Publishing them as CSV is what lets someone
+    reproduce a regional or era-level result in R without installing anything.
+    """
+    places = config.load_yaml("places")
+    governorates = pd.DataFrame(places.get("governorates", []))
+    if not governorates.empty:
+        governorates = governorates.rename(columns={
+            "name": "governorate", "region": "region_type",
+            "coastal": "coastal", "sahel": "sahel",
+        })
+
+    cabinets_cfg = config.cabinets()
+    eras = pd.DataFrame(cabinets_cfg.get("eras", []))
+    if not eras.empty:
+        eras = eras.rename(columns={"id": "era", "label": "era_label",
+                                    "start": "era_start", "end": "era_end"})
+        # Eras are half-open [start, end): the end date belongs to the NEXT
+        # era. Stating it in the published table stops anyone re-deriving era
+        # membership with an inclusive filter and misplacing every government
+        # formed on a transition date.
+        eras["interval"] = "[era_start, era_end)"
+
+    out = {}
+    if not governorates.empty:
+        out["governorates"] = governorates
+    if not eras.empty:
+        out["eras"] = eras
+    return out
 
 
 def _contributed_factory(interim_dir):

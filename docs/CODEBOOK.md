@@ -288,12 +288,39 @@ in each era they served; only those with a coded birthplace enter.
 | `coverage` | Share of that era's ministers with a coded birthplace. Every index is conditional on it. |
 | `basis` | `reported`, or `withheld:` and the reason. Post-2021 cabinets are withheld: only 2 of the 46 ministers who entered under Saied have a coded birthplace, so the coded sample is almost entirely holdovers. |
 
+Also in `representation_gini.csv`:
+
+| Variable | Meaning |
+|---|---|
+| `era` | Regime period, matching `era` in `appointments.csv`. |
+| `ministers` | All ministers who served in that era, coded or not — the denominator behind `coverage`. |
+| `coded` | Ministers with a birthplace resolved to a governorate. The index is computed on these. |
+| `governorates_represented` | Distinct governorates supplying at least one minister. A breadth measure independent of the Gini: it rose from 6 under the protectorate to 21 under Ben Ali and has been flat since. |
+
 **`representation_changes.csv`** — change between consecutive eras, with a
 bootstrap interval built on the *difference*. Overlapping per-era intervals are
 not a test of a change; this is.
 
-**`representation_by_governorate.csv`** — `ratio` is minister share ÷
-population share. 1.0 is exact proportionality.
+| Variable | Meaning |
+|---|---|
+| `units` | The partition, as above. Changes are only comparable within one. |
+| `from`, `to` | The two eras being compared, in chronological order. |
+| `gini_from`, `gini_to` | The index in each, repeated here so a row is self-contained. |
+| `delta` | `gini_to − gini_from`. **Negative means more equal.** |
+| `ci_low`, `ci_high` | 95% pivotal bootstrap interval on `delta`, resampling both eras jointly. |
+| `significant` | True when the interval excludes zero. Under every partition this is true for protectorate→Bourguiba and false for Ben Ali→transition. |
+
+**`representation_by_governorate.csv`** — how over- or under-represented each
+governorate is, all eras pooled.
+
+| Variable | Meaning |
+|---|---|
+| `governorate` | One of the 24 current governorates. All appear, including those supplying no minister. |
+| `ministers` | Person-era observations born there. A minister serving under two regimes counts twice. |
+| `population` | 2024 general census (INS), from `config/places.yml`. |
+| `population_share` | That governorate's share of the national population. |
+| `minister_share` | Its share of all coded ministers. |
+| `ratio` | `minister_share ÷ population_share`. **1.0 is exact proportionality**; Tunis is 3.77, Ariana 0.00. |
 
 ### Read trends, not levels
 
@@ -309,3 +336,28 @@ applied to ministers born across a century. Holding it fixed is what makes
 era-to-era movement pure recruitment change, but it means a level describes
 today's population, not the population a cohort was drawn from. Against the
 2014 census the relative distribution is near-identical (r = 0.995).
+
+## Reference tables
+
+`config/` holds the coding decisions in YAML; these two tables publish them as
+CSV so they can be used without a YAML parser — base R has none, which would
+otherwise make regional and era-level work in R impossible without a rewrite.
+
+**`governorates.csv`** — the 24 current governorates and their coding.
+
+| Variable | Meaning |
+|---|---|
+| `governorate` | Name as used in `persons.birth_governorate`. Join on this. |
+| `region_type` | `greater_tunis`, `northeast`, `northwest`, `centre_east`, `centre_west`, `southeast`, `southwest`. |
+| `coastal` | The conventional coastal/interior development cleavage. |
+| `sahel` | The **narrow historical Sahel** — Sousse, Monastir, Mahdia only. Not the same variable as `coastal`. |
+| `population` | 2024 general census (Institut national de la statistique). The denominator for representation measures. |
+
+**`eras.csv`** — regime periods.
+
+| Variable | Meaning |
+|---|---|
+| `era` | Identifier, matching `era` in `appointments.csv` and `persons.eras_served`. |
+| `era_label` | Human-readable name. |
+| `era_start`, `era_end` | Bounds. `era_end` is empty for the current period. |
+| `interval` | Always `[era_start, era_end)`. Stated in the data because the convention is load-bearing: eras are **half-open**, so a government formed on a transition date belongs to the incoming regime. Re-deriving era membership with an inclusive end date misplaces every such government — Hédi Baccouche, appointed 7 November 1987, would fall under Bourguiba rather than Ben Ali. |

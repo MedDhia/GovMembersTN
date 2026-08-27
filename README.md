@@ -12,6 +12,65 @@ in which a Tunisian ministerial appointment legally takes effect.
 
 ---
 
+## Quick start
+
+Everything below works **offline, on a fresh install, with no pipeline run**.
+The tables are committed to the repository; you only need the data.
+
+```bash
+git clone --depth 1 https://github.com/MedDhia/GovMembersTN.git
+cd GovMembersTN
+```
+
+Prefer a download? Grab the ZIP from GitHub, or build a 1.8 MB data-only
+archive with `make bundle` — the analysis scripts below run from either.
+
+**R** — base R, no packages to install:
+
+```r
+source("analysis/R/load_govtn.R")
+tn <- govtn_load_all()          # all tables, correctly typed
+nrow(tn$persons)                # 884
+
+govtn_describe("persons", "birth_sahel")   # what does this column mean?
+panel <- govtn_panel()          # appointments + person + cabinet attributes
+```
+
+**Python** — needs pandas and nothing else:
+
+```python
+import sys; sys.path.insert(0, "analysis/python")
+from load_govtn import load_all, describe, panel
+
+tn = load_all()
+tn["persons"].shape             # (884, 56)
+describe("persons", "birth_sahel")
+```
+
+Both loaders read column types from `data/processed/codebook.csv`, so dates
+arrive as dates and flags as booleans, and Arabic and French names arrive as
+UTF-8 rather than mojibake. Neither hard-codes the schema, so neither can drift
+out of step with the data.
+
+### Worked examples
+
+```bash
+make analysis        # runs all six, Python and R
+```
+
+| Script | What it does |
+|---|---|
+| `01_descriptives` | Coverage by variable, appointments per decade, women per era. |
+| `02_representation_gini` | Rebuilds the territorial representation index **from the raw tables** and checks it against the published file. |
+| `03_networks` | Co-membership degree and regional assortativity. |
+
+Each exists in both `analysis/R/` and `analysis/python/` and produces the same
+numbers, so a result from one can be checked in the other. `02` is a genuine
+reproduction test rather than a re-display: it recomputes the index and fails
+loudly if its answer disagrees with `data/processed/indices/`.
+
+---
+
 ## What's in it
 
 Harvested from Wikidata; the French and Arabic Wikipedias, both cabinet
@@ -64,9 +123,17 @@ you want.
 | `cabinets.csv` | one cabinet | Size, composition, share of women, sovereign posts. |
 | `spells.csv` | one government spell | The curated spine: 23 governments with heads, dates, eras. |
 | `portfolios.csv` | one portfolio | The harmonised portfolio taxonomy. |
-| `edges_*.csv` | one tie | Four network layers (see below). |
-| `network_*.{gexf,graphml}` | graph | Ready for Gephi / Cytoscape, with centralities precomputed. |
+| `governorates.csv` | one governorate | Region, coastal/Sahel coding and 2024 census population. Join on `birth_governorate`. |
+| `eras.csv` | one regime period | Era bounds and labels. Intervals are half-open. |
+| `codebook.csv` | one variable | Machine-readable dictionary for all 185 variables: type, coverage, levels, description. |
+| `networks/edges_*.csv` | one tie | Four network layers (see below). |
+| `networks/network_*.{gexf,graphml}` | graph | Ready for Gephi / Cytoscape, with centralities precomputed. |
+| `indices/representation_*.csv` | one era × partition | Territorial representation Gini, its changes, and per-governorate ratios. |
 | `MANIFEST.json`, `VALIDATION.md` | — | Provenance and data quality. **Read `VALIDATION.md` first.** |
+
+The last three tables exist because `config/` holds the coding decisions in
+YAML and base R has no YAML parser: publishing them as CSV is what lets an R
+user reproduce a regional or era-level result without a rewrite.
 
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
@@ -150,12 +217,22 @@ src/govtn/
   validate.py    data quality report
   preflight.py   source reachability check
   pipeline.py    end-to-end runner
-data/raw/        cached source payloads + MANIFEST.json per source
-data/interim/    harvested JSON, reconciliation audit, unmatched titles
-data/processed/  the dataset
+analysis/
+  R/             load_govtn.R + 01-03 example scripts (base R, no packages)
+  python/        load_govtn.py + the same three examples (pandas)
+data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
+data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
+data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
+  networks/      edge lists and graph exports
+  indices/       derived measures computed from the tables
+output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           173 tests, incl. fixtures reproducing real source markup
+tests/           237 tests, incl. fixtures reproducing real source markup
 ```
+
+`data/processed/` is the deliverable and is committed. `src/govtn/` is the
+pipeline that produced it — provenance, not a prerequisite. You never need to
+run it to use the data.
 
 ## Usage
 
@@ -167,6 +244,10 @@ make offline     # rebuild from the cached payloads, no network
 make build       # re-assemble tables from what has been harvested
 make networks    # rebuild edge lists and graph files
 make validate    # regenerate VALIDATION.md
+make inequality  # territorial representation index
+make codebook    # regenerate the machine-readable codebook
+make analysis    # run the example analyses in Python and R
+make bundle      # zip the data + docs + scripts, without the pipeline
 make test        # run the test suite
 make queries     # print the SPARQL for manual execution
 ```
@@ -216,6 +297,12 @@ python -m govtn.pipeline --snapshot 2026-08-26
   a `jort_citation` it is corroborated by the official gazette; where it does
   not, it rests on encyclopaedic sources alone. See
   [docs/SOURCES.md](docs/SOURCES.md).
+
+## Citing this dataset
+
+`CITATION.cff` carries machine-readable metadata; GitHub renders a "Cite this
+repository" button from it, and `citation("...")`-style tools can read it
+directly.
 
 ## Licence
 

@@ -1,0 +1,25 @@
+governorate,region_type,coastal,sahel,population
+Tunis,greater_tunis,True,False,1075306
+Ariana,greater_tunis,True,False,668552
+Ben Arous,greater_tunis,True,False,722828
+Manouba,greater_tunis,True,False,418354
+Nabeul,northeast,True,False,863172
+Zaghouan,northeast,False,False,201065
+Bizerte,northeast,True,False,607388
+Béja,northwest,False,False,311417
+Jendouba,northwest,False,False,404352
+Le Kef,northwest,False,False,237686
+Siliana,northwest,False,False,216242
+Sousse,centre_east,True,True,762281
+Monastir,centre_east,True,True,599769
+Mahdia,centre_east,True,True,449985
+Sfax,centre_east,True,False,1047468
+Kairouan,centre_west,False,False,600803
+Kasserine,centre_west,False,False,492741
+Sidi Bouzid,centre_west,False,False,489991
+Gabès,southeast,True,False,410847
+Médenine,southeast,True,False,537255
+Tataouine,southeast,False,False,162654
+Gafsa,southwest,False,False,388776
+Tozeur,southwest,False,False,120036
+Kébili,southwest,False,False,183201
