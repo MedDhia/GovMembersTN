@@ -2,7 +2,7 @@
 PY ?= python3
 export PYTHONPATH := src
 
-.PHONY: help install test preflight harvest build networks validate all clean queries
+.PHONY: help install test preflight harvest build networks validate inequality all clean queries
 
 help:
 	@grep -E '^[a-z-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -28,6 +28,9 @@ networks:  ## Build the edge lists and graph files
 
 validate:  ## Run data quality checks and write VALIDATION.md
 	$(PY) -m govtn.validate
+
+inequality:  ## Territorial representation index (Gini) per era
+	$(PY) -m govtn.inequality
 
 all: preflight  ## Full pipeline: preflight -> harvest -> build -> networks -> validate
 	$(PY) -m govtn.pipeline

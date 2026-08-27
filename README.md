@@ -189,6 +189,11 @@ python -m govtn.pipeline --snapshot 2026-08-26
 - **A merge is wrong.** Check `data/interim/reconciliation_audit.json`, then
   either add a disqualifier in `govtn.reconcile` or raise
   `NAME_MERGE_THRESHOLD`.
+- **Territorial representation.** `make inequality` writes a population-weighted
+  Gini of ministerial recruitment per era, plus significance tests on each
+  era-to-era change. Read the trend, not the level: the level depends on which
+  territorial partition you pick, and all three are reported for that reason.
+  See [docs/CODEBOOK.md](docs/CODEBOOK.md).
 - **A birthplace was not coded.** Add the settlement to the `settlements` map
   in `config/places.yml`, or to `foreign_origins` if it lies outside Tunisia.
   Unmapped birthplaces are left empty, never guessed.

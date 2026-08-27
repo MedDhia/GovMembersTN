@@ -25,31 +25,44 @@
 #   which is the convention that keeps a seventy-year series comparable.
 # ---------------------------------------------------------------------------
 
+# `population` is the 2024 general census (Institut national de la statistique),
+# via the FR Wikipedia governorate table which cites the INS release directly.
+# It is the denominator for representation measures in `govtn.inequality`:
+# ministerial counts alone conflate a governorate's weight in government with
+# its weight in the population.
+#
+# ONE VINTAGE, DELIBERATELY. Boundaries here are current (see the note above),
+# so a matching historical population does not exist for most of the series -
+# Manouba was created in 2000, Ben Arous and Ariana in 1983. Holding the
+# denominator fixed means every movement in a representation index reflects
+# recruitment, not demographic drift or redistricting. Against the 2014 census
+# the relative distribution is near-identical (Pearson r = 0.995), so the
+# choice of vintage does not drive the result.
 governorates:
-  - {name: "Tunis",       region: greater_tunis, coastal: true,  sahel: false}
-  - {name: "Ariana",      region: greater_tunis, coastal: true,  sahel: false}
-  - {name: "Ben Arous",   region: greater_tunis, coastal: true,  sahel: false}
-  - {name: "Manouba",     region: greater_tunis, coastal: true,  sahel: false}
-  - {name: "Nabeul",      region: northeast,     coastal: true,  sahel: false}
-  - {name: "Zaghouan",    region: northeast,     coastal: false, sahel: false}
-  - {name: "Bizerte",     region: northeast,     coastal: true,  sahel: false}
-  - {name: "Béja",        region: northwest,     coastal: false, sahel: false}
-  - {name: "Jendouba",    region: northwest,     coastal: false, sahel: false}
-  - {name: "Le Kef",      region: northwest,     coastal: false, sahel: false}
-  - {name: "Siliana",     region: northwest,     coastal: false, sahel: false}
-  - {name: "Sousse",      region: centre_east,   coastal: true,  sahel: true}
-  - {name: "Monastir",    region: centre_east,   coastal: true,  sahel: true}
-  - {name: "Mahdia",      region: centre_east,   coastal: true,  sahel: true}
-  - {name: "Sfax",        region: centre_east,   coastal: true,  sahel: false}
-  - {name: "Kairouan",    region: centre_west,   coastal: false, sahel: false}
-  - {name: "Kasserine",   region: centre_west,   coastal: false, sahel: false}
-  - {name: "Sidi Bouzid", region: centre_west,   coastal: false, sahel: false}
-  - {name: "Gabès",       region: southeast,     coastal: true,  sahel: false}
-  - {name: "Médenine",    region: southeast,     coastal: true,  sahel: false}
-  - {name: "Tataouine",   region: southeast,     coastal: false, sahel: false}
-  - {name: "Gafsa",       region: southwest,     coastal: false, sahel: false}
-  - {name: "Tozeur",      region: southwest,     coastal: false, sahel: false}
-  - {name: "Kébili",      region: southwest,     coastal: false, sahel: false}
+  - {name: "Tunis",       region: greater_tunis, coastal: true,  sahel: false, population: 1075306}
+  - {name: "Ariana",      region: greater_tunis, coastal: true,  sahel: false, population: 668552}
+  - {name: "Ben Arous",   region: greater_tunis, coastal: true,  sahel: false, population: 722828}
+  - {name: "Manouba",     region: greater_tunis, coastal: true,  sahel: false, population: 418354}
+  - {name: "Nabeul",      region: northeast,     coastal: true,  sahel: false, population: 863172}
+  - {name: "Zaghouan",    region: northeast,     coastal: false, sahel: false, population: 201065}
+  - {name: "Bizerte",     region: northeast,     coastal: true,  sahel: false, population: 607388}
+  - {name: "Béja",        region: northwest,     coastal: false, sahel: false, population: 311417}
+  - {name: "Jendouba",    region: northwest,     coastal: false, sahel: false, population: 404352}
+  - {name: "Le Kef",      region: northwest,     coastal: false, sahel: false, population: 237686}
+  - {name: "Siliana",     region: northwest,     coastal: false, sahel: false, population: 216242}
+  - {name: "Sousse",      region: centre_east,   coastal: true,  sahel: true, population: 762281}
+  - {name: "Monastir",    region: centre_east,   coastal: true,  sahel: true, population: 599769}
+  - {name: "Mahdia",      region: centre_east,   coastal: true,  sahel: true, population: 449985}
+  - {name: "Sfax",        region: centre_east,   coastal: true,  sahel: false, population: 1047468}
+  - {name: "Kairouan",    region: centre_west,   coastal: false, sahel: false, population: 600803}
+  - {name: "Kasserine",   region: centre_west,   coastal: false, sahel: false, population: 492741}
+  - {name: "Sidi Bouzid", region: centre_west,   coastal: false, sahel: false, population: 489991}
+  - {name: "Gabès",       region: southeast,     coastal: true,  sahel: false, population: 410847}
+  - {name: "Médenine",    region: southeast,     coastal: true,  sahel: false, population: 537255}
+  - {name: "Tataouine",   region: southeast,     coastal: false, sahel: false, population: 162654}
+  - {name: "Gafsa",       region: southwest,     coastal: false, sahel: false, population: 388776}
+  - {name: "Tozeur",      region: southwest,     coastal: false, sahel: false, population: 120036}
+  - {name: "Kébili",      region: southwest,     coastal: false, sahel: false, population: 183201}
 
 # Settlement -> governorate. Matched on the normalised name, so accents and
 # the definite article ("Le Kef", "El Kef") do not need separate entries.

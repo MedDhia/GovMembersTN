@@ -270,3 +270,42 @@ centrality distribution computed from the file.
 the harvest was complete, and the row/column inventory. `VALIDATION.md` is the
 data quality report — **read it before using the tables**; it reports coverage
 holes that are invisible in the tables themselves.
+
+## Territorial representation index
+
+`make inequality` writes three tables measuring how evenly governorates supply
+ministers, relative to their populations. Ministers are counted once per era,
+in each era they served; only those with a coded birthplace enter.
+
+**`representation_gini.csv`** — one row per era per partition.
+
+| Column | Meaning |
+|---|---|
+| `units` | The territorial partition: `governorate` (all 24), `greater_tunis_merged` (the four capital governorates as one), `region` (the seven regions). **The level is only meaningful relative to a partition** — see below. |
+| `gini_representation` | Gini of the Lorenz curve of cumulative population share against cumulative minister share. 0 = every governorate supplies ministers in exact proportion to its population; 1 = every minister from one vanishingly small place. |
+| `ci_low`, `ci_high` | 95% pivotal bootstrap interval, resampling individual ministers. Pivotal rather than percentile: resampling adds dispersion to the count vector and the Gini rises with it, so the percentile interval is biased upward and can fail to bracket the estimate. |
+| `gini_counts` | Gini of the raw counts, ignoring population. Reported so the two cannot be confused — an even split of ministers across governorates of wildly different size scores 0 here and badly unequal on `gini_representation`. |
+| `coverage` | Share of that era's ministers with a coded birthplace. Every index is conditional on it. |
+| `basis` | `reported`, or `withheld:` and the reason. Post-2021 cabinets are withheld: only 2 of the 46 ministers who entered under Saied have a coded birthplace, so the coded sample is almost entirely holdovers. |
+
+**`representation_changes.csv`** — change between consecutive eras, with a
+bootstrap interval built on the *difference*. Overlapping per-era intervals are
+not a test of a change; this is.
+
+**`representation_by_governorate.csv`** — `ratio` is minister share ÷
+population share. 1.0 is exact proportionality.
+
+### Read trends, not levels
+
+Ariana and Ben Arous were carved out of Greater Tunis in 1983 and Manouba in
+2000 — after most of these ministers were born, and after the sources recording
+their birthplace as "Tunis" were written. Splitting the capital four ways
+concentrates it artificially: Ariana holds 5.6% of the population and shows
+zero ministers. On the Second Republic the three partitions give 0.42, 0.26 and
+0.19. Quoting one without naming its partition quotes an artefact.
+
+The denominator is a single census vintage (INS 2024, in `config/places.yml`)
+applied to ministers born across a century. Holding it fixed is what makes
+era-to-era movement pure recruitment change, but it means a level describes
+today's population, not the population a cohort was drawn from. Against the
+2014 census the relative distribution is near-identical (r = 0.995).
