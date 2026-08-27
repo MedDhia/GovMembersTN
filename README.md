@@ -1,10 +1,15 @@
 # GovMembersTN
 
-A reproducible, source-linked dataset of the members of Tunisia's governments
-from the first post-independence cabinet (15 April 1956) to the present,
+A reproducible, source-linked dataset of the members of Tunisia's governments,
 built for both **individual-level analysis** (who gets into government, from
 where, with what background, for how long) and **network analysis**
 (who served alongside whom, who succeeded whom, who shares a background).
+
+The record centres on the independent republic — 2,930 of 3,151 appointments
+fall after April 1956 — and extends backwards through the protectorate and,
+thinly, into the beylical ministries: 136 appointments before independence, 9
+of them before 1900. Treat the pre-1956 rows as a usable but sparse tail, not
+as a comparable series.
 
 Every extracted value is traceable to a source URL and a retrieval timestamp,
 and 162 appointments carry a citation to the *Journal Officiel*, the gazette
@@ -55,7 +60,7 @@ out of step with the data.
 ### Worked examples
 
 ```bash
-make analysis        # runs all six, Python and R
+make analysis        # all three scripts, in both languages
 ```
 
 | Script | What it does |
@@ -90,29 +95,13 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 Person-level attribute coverage: Wikidata QID 68%, occupation 66%, gender 67%,
 Arabic name 65%, birth date 63%, birthplace 55%, education 37%, party 37%,
 career flags 38%.
-51% of appointments carry a date describing the person rather than the
-cabinet (see `date_basis`), and 63% of people have a strictly-dated tenure.
+50% of appointments carry a date describing the person rather than the
+cabinet (see `date_basis`); the rest inherit their cabinet's dates, which
+makes their tenure a cabinet fact rather than a personal one. 93% of
+appointments have a day-precise start date and 7% no usable date at all.
 `VALIDATION.md` breaks this down by decade and variable — **read it before
 computing any long-run trend**; coverage is markedly better after 1987 than
 before.
-
-To rebuild from scratch:
-
-```bash
-make install
-make preflight    # confirms every source host is reachable
-make all          # harvest -> build -> networks -> validate
-```
-
-Re-running after a parser change costs zero requests: every payload is cached
-under `data/raw/`, and `make offline` rebuilds from that cache alone.
-
-**A clone ships `data/processed/` but not `data/raw/` or `data/interim/`** —
-the payloads are too large to track. So `make offline` works only after you
-have harvested at least once, and `make build` on a fresh clone would rebuild
-from the curated spine alone. It refuses to do so rather than replacing the
-published dataset with a 23-row one; pass `--force` if that is genuinely what
-you want.
 
 ## What you get
 
@@ -131,9 +120,9 @@ you want.
 | `indices/representation_*.csv` | one era × partition | Territorial representation Gini, its changes, and per-governorate ratios. |
 | `MANIFEST.json`, `VALIDATION.md` | — | Provenance and data quality. **Read `VALIDATION.md` first.** |
 
-The last three tables exist because `config/` holds the coding decisions in
-YAML and base R has no YAML parser: publishing them as CSV is what lets an R
-user reproduce a regional or era-level result without a rewrite.
+`governorates.csv` and `eras.csv` exist because `config/` holds those coding
+decisions in YAML and base R has no YAML parser: publishing them as CSV is what
+lets an R user reproduce a regional or era-level result without a rewrite.
 
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
@@ -161,7 +150,7 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 ## Design decisions that affect your results
 
 - **Portfolios are harmonised.** Tunisian ministries are renamed, merged and
-  split constantly. `config/portfolios.yml` maps 35 canonical portfolios to
+  split constantly. `config/portfolios.yml` maps 36 canonical portfolios to
   their French, Arabic and English variants, so "Secrétaire d'État à
   l'Intérieur" (1958) and "وزير الداخلية" (2021) land in the same category.
   Raw titles are preserved in `appointments.raw_title`.
@@ -199,10 +188,12 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 ## Repository layout
 
 ```
+README.md  LICENSE  CITATION.cff  Makefile  requirements.txt
+GovMembersTN.Rproj        opens the repository as an RStudio project
 config/
   cabinets.yml            curated spine: 23 government spells, eras, heads of state
   heads_biographical.yml  verified biographical seed for the heads of government
-  portfolios.yml          35 harmonised portfolios, 7 cabinet ranks, FR/AR/EN aliases
+  portfolios.yml          36 harmonised portfolios, 7 cabinet ranks, FR/AR/EN aliases
   places.yml              governorates, regions, settlement -> governorate map,
                           countries of birth for ministers born abroad
   sources.yml             endpoints, rate limits, crawl policy
@@ -210,10 +201,13 @@ src/govtn/
   config.py      paths, config loading, snapshot date
   http.py        cached, rate-limited client with provenance manifests
   normalize.py   transliteration-invariant names, title parsing, multi-script dates
-  sources/       wikidata.py, wikipedia.py, leaders.py
+  sources/       wikidata.py, wikipedia.py, biographies.py, leaders.py,
+                 govtn_portal.py, jort.py
   reconcile.py   cross-source entity resolution
   build.py       analysis table assembly
   networks.py    edge lists and graph exports
+  inequality.py  territorial representation index
+  codebook.py    generates the machine-readable data dictionary
   validate.py    data quality report
   preflight.py   source reachability check
   pipeline.py    end-to-end runner
@@ -227,19 +221,27 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           237 tests, incl. fixtures reproducing real source markup
+tests/           240 tests, incl. fixtures reproducing real source markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
 pipeline that produced it — provenance, not a prerequisite. You never need to
 run it to use the data.
 
-## Usage
+## Rebuilding it
+
+You do not need any of this to use the data. It is here so the tables can be
+audited and regenerated.
 
 ```bash
 make install     # dependencies
 make preflight   # check every source host is reachable
-make all         # full pipeline (needs network access)
+make all         # harvest -> build -> networks -> validate (needs network)
+```
+
+Working on the data rather than the harvest:
+
+```bash
 make offline     # rebuild from the cached payloads, no network
 make build       # re-assemble tables from what has been harvested
 make networks    # rebuild edge lists and graph files
@@ -253,7 +255,14 @@ make queries     # print the SPARQL for manual execution
 ```
 
 Re-running after a parser change costs zero requests: every payload is cached
-under `data/raw/` and the caching is also the politeness mechanism.
+under `data/raw/`, and the caching is also the politeness mechanism.
+
+**A clone ships `data/processed/` but not `data/raw/` or `data/interim/`** —
+the payloads are too large to track. So `make offline` works only after you
+have harvested at least once, and `make build` on a fresh clone would rebuild
+from the curated spine alone. It refuses to do so rather than replacing the
+published dataset with a 23-row one; pass `--force` if that is genuinely what
+you want.
 
 To freeze the censoring date for a published version:
 
@@ -300,9 +309,15 @@ python -m govtn.pipeline --snapshot 2026-08-26
 
 ## Citing this dataset
 
-`CITATION.cff` carries machine-readable metadata; GitHub renders a "Cite this
-repository" button from it, and `citation("...")`-style tools can read it
-directly.
+> Hammami, Mohamed Dhia. *GovMembersTN: Members of Tunisian Governments,
+> 1861–2026*. https://github.com/MedDhia/GovMembersTN
+
+`CITATION.cff` carries the same metadata in machine-readable form; GitHub
+renders a "Cite this repository" button from it.
+
+Cite the **snapshot date** in `data/processed/MANIFEST.json` alongside it
+(currently `2026-08-26`), not the date you downloaded the files. Open tenures
+are censored at that date, so it is what makes a tenure length reproducible.
 
 ## Licence
 

@@ -54,6 +54,96 @@ def test_codebook_warns_about_date_precision():
     assert "censored" in text.lower()
 
 
+def test_readme_prose_figures_match_the_data():
+    """The percentages in prose, not just the numbers in the table.
+
+    The coverage sentence and the portfolio count had each drifted twice while
+    the headline table stayed correct, because only the table was under test.
+    A reader has no way to tell a stale percentage from a current one.
+    """
+    import re
+    import pandas as pd
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    persons = pd.read_csv(table_path("persons"), low_memory=False)
+    appointments = pd.read_csv(table_path("appointments"), low_memory=False)
+
+    def pct(series):
+        return round(series.notna().mean() * 100)
+
+    # "Wikidata QID 68%, occupation 66%, gender 67%, ..."
+    coverage_claims = dict(
+        (label.strip().lower(), int(value))
+        for label, value in re.findall(
+            r"([A-Za-z][A-Za-z ]+?)\s+(\d{1,3})%", readme)
+    )
+    expected = {
+        "wikidata qid": pct(persons["wikidata_qid"]),
+        "occupation": pct(persons["occupations"]),
+        "gender": pct(persons["gender"]),
+        "arabic name": pct(persons["name_ar"]),
+        "birth date": pct(persons["birth_date"]),
+        "birthplace": pct(persons["birth_place"]),
+        "education": pct(persons["education"]),
+        "party": pct(persons["parties"]),
+        "career flags": pct(persons["career_flags"]),
+    }
+    for label, value in expected.items():
+        assert label in coverage_claims, f"README no longer states coverage for {label}"
+        assert coverage_claims[label] == value, (
+            f"README says {coverage_claims[label]}% for {label}, data has {value}%")
+
+    # Day-precise start dates, and dates that describe the person not the cabinet.
+    day = round((appointments["date_precision"] == "day").mean() * 100)
+    personal = round(appointments["date_basis"].isin(["statement", "row"]).mean() * 100)
+    assert f"{day}% of\nappointments have a day-precise start date" in readme \
+        or f"{day}% of appointments have a day-precise start date" in readme, \
+        f"README day-precision figure is stale; data has {day}%"
+    assert f"{personal}% of appointments carry a date describing the person" in readme, \
+        f"README date_basis figure is stale; data has {personal}%"
+
+    # The portfolio count appears in two places and was wrong in both.
+    portfolios = len(pd.read_csv(table_path("portfolios")))
+    assert f"{portfolios} canonical portfolios" in readme
+    assert f"{portfolios} harmonised portfolios" in readme
+
+    # The pre/post-independence split in the opening paragraph.
+    years = pd.to_datetime(appointments["start_date"], errors="coerce").dt.year
+    post = int((years >= 1956).sum())
+    assert f"{post:,} of {len(appointments):,} appointments" in readme, \
+        f"README opening figure is stale; data has {post:,} post-1956"
+
+
+def test_readme_names_only_files_that_exist():
+    """Every path the README points at must be real.
+
+    Directory reorganisations move files faster than prose gets updated.
+    """
+    import re
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    links = re.findall(r"\]\((?!https?:)([^)]+)\)", readme)
+    missing = [link for link in links if not (ROOT / link).exists()]
+    assert not missing, f"README links to missing files: {missing}"
+
+    # Modules and configs named in the layout block.
+    named = re.findall(r"^\s{2}([a-z_]+\.(?:py|yml))\s{2,}", readme, re.M)
+    for name in set(named):
+        found = list(ROOT.rglob(name))
+        assert found, f"README layout names {name}, which does not exist"
+
+
+def test_readme_make_targets_exist():
+    """A README that documents a target the Makefile lost is worse than silence."""
+    import re
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    makefile = (ROOT / "Makefile").read_text(encoding="utf-8")
+    targets = set(re.findall(r"^make ([a-z]+)", readme, re.M))
+    assert targets, "no make targets documented in README.md"
+    for target in sorted(targets):
+        assert re.search(rf"^{target}:", makefile, re.M), \
+            f"README documents `make {target}`, which the Makefile does not define"
+
+
 def test_readme_headline_figures_match_the_data():
     """The README's summary table must not drift from the tables it describes.
 
