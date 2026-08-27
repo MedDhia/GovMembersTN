@@ -73,7 +73,7 @@ def test_readme_headline_figures_match_the_data():
         "comembership ties weighted by days of overlapping service":
             rows("edges_co_membership"),
         "succession ties directed within portfolio": rows("edges_succession"),
-        "homophily ties  shared university party or birth region":
+        "homophily ties  shared university party or birth governorate":
             rows("edges_homophily"),
     }
     for label, expected in actual.items():

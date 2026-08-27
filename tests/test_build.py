@@ -137,6 +137,90 @@ def test_unmapped_birthplace_is_left_empty_not_guessed():
     assert all(value is None for value in coded.values())
 
 
+def test_foreign_birth_is_coded_rather_than_left_missing():
+    """A birth outside Tunisia is a finding, not a gap in the settlement map.
+
+    The beylical-era mamluk administrators were born in Circassia, Georgia and
+    the Caucasus. Coding them as unmapped would drop them from regional
+    analysis while leaving them in the denominator, and would invite someone to
+    "fix" it by inventing a governorate for Paris.
+    """
+    from govtn.build import Spine
+    spine = Spine()
+    paris = spine.place_attributes("Paris")
+    assert paris["birth_country"] == "France"
+    assert paris["birth_abroad"] is True
+    assert paris["birth_governorate"] is None
+    assert paris["birth_region_type"] is None
+
+    # A polity named as of the time of birth, not a modern successor state.
+    assert spine.place_attributes("Circassie")["birth_country"] == "Circassia"
+
+    # The country alone: the country is known, the governorate genuinely is not.
+    country_only = spine.place_attributes("Tunisie")
+    assert country_only["birth_country"] == "Tunisia"
+    assert country_only["birth_abroad"] is False
+    assert country_only["birth_governorate"] is None
+
+    tunisian = spine.place_attributes("Sousse")
+    assert tunisian["birth_country"] == "Tunisia"
+    assert tunisian["birth_abroad"] is False
+
+
+def test_birthplace_spelling_variants_resolve_to_one_governorate():
+    """Sources disagree about the article and the apostrophe.
+
+    Wikidata writes "La Manouba" and "M'saken" where the settlement map says
+    "Manouba" and "Msaken". Both spellings must land on the same governorate
+    without needing an entry each.
+    """
+    from govtn.build import Spine
+    spine = Spine()
+    assert spine.place_attributes("La Manouba")["birth_governorate"] == "Manouba"
+    assert spine.place_attributes("Manouba")["birth_governorate"] == "Manouba"
+    for spelling in ("M'saken", "Msaken", "M saken"):
+        assert spine.place_attributes(spelling)["birth_governorate"] == "Sousse"
+
+
+def test_birthplace_governorates_come_from_the_qid_not_the_label(tables):
+    """Several Tunisian settlement names collide across governorates.
+
+    Matching birthplaces by label puts El Guettar in Kairouan, El Ksar and
+    El Mida in Gabès and Ezzahra in Tataouine, because each name is borne by
+    more than one place. The map was built from the containment chain of the
+    QID that each person's P19 statement actually points at, and these four
+    are the regression guard for that.
+    """
+    from govtn.build import Spine
+    spine = Spine()
+    expected = {
+        "El Guettar": "Gafsa",
+        "El Ksar": "Gafsa",
+        "El Mida": "Nabeul",
+        "Ezzahra": "Ben Arous",
+    }
+    for place, governorate in expected.items():
+        assert spine.place_attributes(place)["birth_governorate"] == governorate
+
+
+def test_every_recorded_birthplace_is_coded_somehow(tables):
+    """No birthplace should be silently uninterpretable.
+
+    Each one must resolve to a governorate, to a foreign country, or to
+    Tunisia-without-a-governorate. Anything else is a person who quietly
+    vanishes from regional analysis.
+    """
+    persons = tables["persons"]
+    known = persons[persons["birth_place"].notna()]
+    assert len(known) > 400
+    uncoded = known[known["birth_governorate"].isna() & known["birth_country"].isna()]
+    assert uncoded.empty, sorted(uncoded["birth_place"].unique())
+    # A governorate always implies the country; the converse does not hold.
+    with_governorate = known[known["birth_governorate"].notna()]
+    assert (with_governorate["birth_country"] == "Tunisia").all()
+    assert not with_governorate["birth_abroad"].any()
+
+
 def test_reduced_date_precision_is_reported_not_hidden(tables):
     """Precision must be recorded for every date, and never overstate a source.
 

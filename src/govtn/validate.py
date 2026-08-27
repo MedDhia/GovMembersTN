@@ -234,13 +234,32 @@ def check_place_coding(report: Report, persons: pd.DataFrame) -> None:
     known = persons["birth_place"].notna()
     if "birth_governorate" not in persons.columns:
         return
-    unmapped = persons[known & persons["birth_governorate"].isna()]
-    coded = int((known & persons["birth_governorate"].notna()).sum())
+    has_governorate = persons["birth_governorate"].notna()
+    # A birthplace outside Tunisia is coded, not missing: it has a country and
+    # legitimately has no governorate. Counting it as unmapped would ask for a
+    # `settlements` entry that must never be written, and would hide the real
+    # gap behind a permanently non-zero warning.
+    if "birth_country" in persons.columns:
+        coded_elsewhere = persons["birth_country"].notna()
+    else:
+        coded_elsewhere = pd.Series(False, index=persons.index)
+    unmapped = persons[known & ~has_governorate & ~coded_elsewhere]
+    coded = int((known & has_governorate).sum())
     total = int(known.sum())
     body = (
         f"{coded}/{total} recorded birthplaces resolved to a governorate "
         f"({coded / max(total, 1):.1%})."
     )
+    if "birth_abroad" in persons.columns:
+        abroad = persons[persons["birth_abroad"].fillna(False).astype(bool)]
+        country_only = persons[known & ~has_governorate & coded_elsewhere
+                               & ~persons["birth_abroad"].fillna(False).astype(bool)]
+        if len(abroad) or len(country_only):
+            body += (
+                f" A further {len(abroad)} were born outside Tunisia and "
+                f"{len(country_only)} name the country only; both are coded in "
+                "`birth_country` and carry no governorate by design."
+            )
     if unmapped.empty:
         report.add("INFO", "Birthplace coding", body)
         return
@@ -251,8 +270,9 @@ def check_place_coding(report: Report, persons: pd.DataFrame) -> None:
     report.add(
         "WARNING", f"Unmapped birthplaces ({len(counts)} distinct)",
         body + "\n\nAdd each settlement below to the `settlements` map in "
-        "`config/places.yml`. Until then these people are absent from every "
-        "regional analysis while still counting in the denominator.\n\n"
+        "`config/places.yml`, or to `foreign_origins` if it lies outside "
+        "Tunisia. Until then these people are absent from every regional "
+        "analysis while still counting in the denominator.\n\n"
         + _table(counts),
     )
 

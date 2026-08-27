@@ -146,6 +146,37 @@ def test_homophily_drops_oversized_groups():
     assert not homophily_edges(persons, attributes=("education",), max_group_size=50).empty
 
 
+def test_regional_homophily_uses_the_harmonised_governorate():
+    """Not `birth_region`, which is Wikidata's raw P131 delegation label.
+
+    Two ministers both born in Sousse governorate share a region. Tying on the
+    delegation instead splits them apart whenever the source names different
+    delegations, and leaves out entirely everyone whose settlement was coded
+    from `config/places.yml` and so has no P131 value at all.
+    """
+    persons = pd.DataFrame([
+        {"person_id": "P1", "birth_region": "délégation de M'saken",
+         "birth_governorate": "Sousse"},
+        {"person_id": "P2", "birth_region": "délégation d'Akouda",
+         "birth_governorate": "Sousse"},
+        {"person_id": "P3", "birth_region": None, "birth_governorate": "Sousse"},
+        {"person_id": "P4", "birth_region": None, "birth_governorate": "Gafsa"},
+    ])
+    edges = homophily_edges(persons)
+    assert set(edges["tie_type"]) == {"shared_birth_governorate"}
+    tied = {frozenset((row["source"], row["target"])) for _, row in edges.iterrows()}
+    assert tied == {frozenset(("P1", "P2")), frozenset(("P1", "P3")),
+                    frozenset(("P2", "P3"))}
+
+
+def test_network_nodes_carry_the_harmonised_region_coding(tables):
+    """Anyone colouring a graph by region needs the coded columns, not the raw ones."""
+    from govtn.networks import NODE_ATTRIBUTES
+    for column in ("birth_governorate", "birth_region_type", "birth_sahel",
+                   "birth_country", "birth_abroad"):
+        assert column in NODE_ATTRIBUTES
+
+
 def test_isolates_are_retained_in_the_graph():
     # Dropping zero-degree nodes would bias any centrality distribution.
     persons = pd.DataFrame([

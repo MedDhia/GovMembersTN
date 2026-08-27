@@ -42,12 +42,14 @@ One row per person.
 | `death_date`, `death_year` | date, int | Death. Empty for the living **and** for the undocumented — do not read an empty cell as "alive". |
 | `birth_date_precision` | string | `day`, `month` or `year` — what the source actually gave. `1972-01-01` with precision `year` means "born in 1972", not "born on 1 January". |
 | `birth_place` | string | Settlement of birth, as given by the source. |
-| `birth_governorate` | string | Settlement resolved to its **current** governorate via `config/places.yml`. Boundaries changed over the period (Sidi Bouzid 1973, Ben Arous 1983, Manouba 2000); coding to current boundaries is what keeps a seventy-year series comparable. Empty where the settlement is not in the map — `VALIDATION.md` lists those. |
+| `birth_governorate` | string | Settlement resolved to its **current** governorate via `config/places.yml`. Boundaries changed over the period (Sidi Bouzid 1973, Ben Arous 1983, Manouba 2000); coding to current boundaries is what keeps a seventy-year series comparable. Empty for a birth outside Tunisia and for the few records that name only the country — check `birth_abroad` before treating an empty value as missing data. `VALIDATION.md` lists settlements genuinely absent from the map. |
 | `birth_region_type` | string | `greater_tunis`, `northeast`, `northwest`, `centre_east`, `centre_west`, `southeast`, `southwest`. |
 | `birth_coastal` | bool | The conventional coastal/interior development cleavage. Note Gabès and Médenine are coastal by geography while belonging to the disadvantaged south — use `birth_region_type` when that matters. |
 | `birth_sahel` | bool | The **narrow historical Sahel**: Sousse, Monastir, Mahdia only. Deliberately not the same as `birth_coastal`, which also includes Greater Tunis, the northeast and Sfax. Conflating the two attributes Greater Tunis's weight to the Sahel and is the most common way this variable is got wrong. |
 | `birth_region` | string | Raw Wikidata `P131` label for the birthplace. Kept verbatim; use `birth_governorate` for the harmonised coding. |
-| `birth_place_qid` | string | QID of the birth settlement, for joining to external geodata. |
+| `birth_place_qid` | string | QID of the birth settlement, for joining to external geodata. This is the key the settlement map was verified against: the governorate comes from the containment chain of *this* item, not from matching the birthplace string, which collides across governorates (El Guettar, El Ksar, Ezzahra and El Mida each name more than one Tunisian place). |
+| `birth_country` | string | Country or polity of birth. `Tunisia` whenever a governorate resolved. For births elsewhere, the polity the source names **at the time of birth**, not a modern successor state: `Circassia`, `Caucasus`, `Georgia`, `Moldova` and `Russian Empire` appear for the Husainid-era mamluk administrators. Not ISO country codes; do not join on them without recoding. |
+| `birth_abroad` | bool | True where the birthplace is outside Tunisia. Distinguishes a genuine finding — foreign-born ministers, concentrated in the beylical era and the late protectorate — from an unmapped settlement. An empty `birth_governorate` with `birth_abroad = True` is complete data. |
 | `citizenship` | string | Wikidata `P27` label. |
 
 ### Background
@@ -248,7 +250,7 @@ Shared background, **not** observed interaction.
 | Column | Description |
 |---|---|
 | `source`, `target` | `person_id`s. |
-| `tie_type` | `shared_education`, `shared_birth_region`, or `shared_parties`. |
+| `tie_type` | `shared_education`, `shared_birth_governorate`, or `shared_parties`. Regional ties use the harmonised `birth_governorate`, not the raw `birth_region` delegation label — the latter splits a governorate across many strings and is absent for everyone coded from `config/places.yml`. Values held by more than 60 people are dropped rather than expanded into a clique, which removes birth in Tunis, study at the Université de Tunis, and PSD and RCD membership. |
 | `shared_values` | The values held in common (piped). |
 | `weight` | Number of shared values of that type. |
 

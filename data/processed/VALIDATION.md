@@ -1,9 +1,9 @@
 # Data validation report
 
-- Generated: `2026-08-26T21:55:01+00:00`
+- Generated: `2026-08-27T02:27:07+00:00`
 - Snapshot date: `2026-08-26`
 - Harvest complete: **True**
-- Errors: **0** | Warnings: **4**
+- Errors: **0** | Warnings: **3**
 
 ## ℹ️ INFO: Unclassified ministerial titles (81 rows, 2.6%)
 
@@ -85,31 +85,9 @@ Expected where a portfolio changed hands mid-cabinet; a problem where it reflect
 
 _494 further rows omitted._
 
-## ⚠️ WARNING: Unmapped birthplaces (62 distinct)
+## ℹ️ INFO: Birthplace coding
 
-402/489 recorded birthplaces resolved to a governorate (82.2%).
-
-Add each settlement below to the `settlements` map in `config/places.yml`. Until then these people are absent from every regional analysis while still counting in the denominator.
-
-| birth_place        |   n |
-|:-------------------|----:|
-| Tunisie            |   8 |
-| M'saken            |   3 |
-| Dar Chaâbane       |   3 |
-| Métouia            |   3 |
-| Bou Salem          |   2 |
-| Téboursouk         |   2 |
-| El Hamma           |   2 |
-| La Manouba         |   2 |
-| Tazarka            |   2 |
-| El Ksour           |   2 |
-| Khniss             |   2 |
-| Ezzahra            |   2 |
-| Ksibet el-Médiouni |   2 |
-| Degache            |   2 |
-| Béni Khiar         |   2 |
-
-_47 further rows omitted._
+464/489 recorded birthplaces resolved to a governorate (94.9%). A further 17 were born outside Tunisia and 8 name the country only; both are coded in `birth_country` and carry no governorate by design.
 
 ## ⚠️ WARNING: Entity resolution decisions
 

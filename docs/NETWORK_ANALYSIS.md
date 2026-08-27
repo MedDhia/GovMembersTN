@@ -221,7 +221,8 @@ persons <- read_csv("data/processed/persons.csv")
 g <- graph_from_data_frame(
   d = edges %>% select(source, target, weight, n_cabinets, eras),
   vertices = persons %>% select(person_id, name, gender, birth_year,
-                                birth_region, eras_served, n_appointments),
+                                birth_governorate, birth_region_type,
+                                birth_sahel, eras_served, n_appointments),
   directed = FALSE
 )
 
@@ -230,9 +231,21 @@ communities <- cluster_louvain(g, weights = E(g)$weight)
 cat("modularity:", modularity(communities), "\n")
 
 # Assortativity on region of birth - a direct test of regional closure.
-region <- as.factor(V(g)$birth_region)
-cat("assortativity by birth region:",
-    assortativity_nominal(g, as.integer(region), directed = FALSE), "\n")
+#
+# Use `birth_governorate` (24 categories) or `birth_region_type` (7), NOT
+# `birth_region`: that column is Wikidata's raw P131 label, which names a
+# delegation. With several hundred near-unique categories it drives nominal
+# assortativity towards zero and makes regional closure look absent.
+#
+# `assortativity_nominal` has no missing-data handling, so drop the
+# uncoded vertices explicitly rather than letting NA become its own
+# category - ministers born abroad have no governorate by design, and
+# silently treating "born abroad" as a region of its own inflates the
+# coefficient.
+coded <- induced_subgraph(g, which(!is.na(V(g)$birth_governorate)))
+region <- as.factor(V(coded)$birth_governorate)
+cat("assortativity by governorate of birth:",
+    assortativity_nominal(coded, as.integer(region), directed = FALSE), "\n")
 ```
 
 For ERGMs, `statnet` reads the same edge list:
@@ -250,8 +263,12 @@ net <- network(as.matrix(edges[, c("source", "target")]),
 
 Open `network_co_membership.gexf` directly. `degree`, `weighted_degree`,
 `betweenness`, `closeness` and `eigenvector` are precomputed as node
-attributes, along with `name`, `gender`, `birth_region`, `eras_served` and
-`ever_sovereign_portfolio` for sizing and colouring. Edge weight is days of
+attributes, along with `name`, `gender`, `birth_governorate`,
+`birth_region_type`, `birth_sahel`, `eras_served` and
+`ever_sovereign_portfolio` for sizing and colouring. Partition on
+`birth_governorate` or `birth_region_type` rather than `birth_region`, which
+is the raw Wikidata delegation label and has far too many categories to
+colour usefully. Edge weight is days of
 overlapping service — set edge thickness to `weight` and the reshuffle noise
 recedes on its own.
 

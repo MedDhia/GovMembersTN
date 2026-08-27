@@ -78,8 +78,14 @@ def _with_schema(frame: pd.DataFrame, layer: str) -> pd.DataFrame:
 
 # Person attributes carried onto graph nodes. Kept small: Gephi and GraphML
 # both cope badly with very wide attribute tables.
+# `birth_region` here is Wikidata's raw P131 label - a delegation, not a
+# governorate. It is exported for provenance, but the harmonised coding is what
+# anyone partitioning or colouring a graph by region actually wants, so
+# `birth_governorate` and `birth_region_type` travel with it.
 NODE_ATTRIBUTES = [
     "name", "gender", "birth_year", "birth_place", "birth_region",
+    "birth_governorate", "birth_region_type", "birth_coastal", "birth_sahel",
+    "birth_country", "birth_abroad",
     "education", "parties", "profession_domains", "n_appointments",
     "n_cabinets", "total_tenure_days", "ever_sovereign_portfolio",
     "ever_head_of_government", "eras_served", "wikidata_qid",
@@ -227,7 +233,7 @@ _GENERIC_VALUES = {
 def homophily_edges(
     persons: pd.DataFrame,
     *,
-    attributes: Iterable[str] = ("education", "birth_region", "parties"),
+    attributes: Iterable[str] = ("education", "birth_governorate", "parties"),
     max_group_size: int = 60,
 ) -> pd.DataFrame:
     """Ties from shared multi-valued background attributes.
@@ -235,6 +241,15 @@ def homophily_edges(
     Groups larger than `max_group_size` are dropped rather than expanded:
     a shared value held by hundreds of people is a category, not a tie, and
     turning it into a clique would add O(n^2) edges that swamp the graph.
+    Birth of Tunis is dropped for exactly this reason, which is the right
+    answer: a sixth of all ministers were born in the capital, and that is a
+    fact about the capital rather than a connection between any two of them.
+
+    Regional ties use `birth_governorate`, not the raw Wikidata `birth_region`
+    label. `birth_region` is a P131 value naming a delegation, so it both
+    splits one governorate across many labels and is absent for everyone whose
+    settlement was coded from `config/places.yml` instead - it produced
+    scattered ties among the well-documented and none at all for the rest.
     Dropped groups are logged so the omission is visible.
     """
     from .normalize import clean_name

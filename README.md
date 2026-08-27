@@ -25,7 +25,7 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 | **57** | cabinets, 1943–2026, across 23 government spells |
 | **36,978** | co-membership ties, weighted by days of overlapping service |
 | **1,995** | succession ties, directed, within portfolio |
-| **6,513** | homophily ties — shared university, party or birth region |
+| **8,389** | homophily ties — shared university, party or birth governorate |
 | **162** | appointments carrying a *Journal Officiel* citation |
 
 Person-level attribute coverage: Wikidata QID 68%, occupation 66%, gender 67%,
@@ -82,9 +82,12 @@ these is substantive:
    *label* frequently never overlapped in office.
 3. **`edges_succession`** — directed, minister → whoever next held the same
    portfolio. Portfolio inheritance rather than co-presence.
-4. **`edges_homophily`** — shared university, birth region or party. These are
-   *potential* channels, not observed interaction, and are kept as a separate
-   typed layer so they are never silently mixed into co-membership.
+4. **`edges_homophily`** — shared university, birth governorate or party.
+   These are *potential* channels, not observed interaction, and are kept as a
+   separate typed layer so they are never silently mixed into co-membership.
+   A value held by more than 60 people is a category rather than a tie and is
+   dropped instead of expanded into a clique: birth in Tunis, study at the
+   Université de Tunis, and PSD and RCD membership all fall out on that rule.
 
 Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 
@@ -104,6 +107,16 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
   reserved for the narrow historical Sahel (Sousse, Monastir, Mahdia) and kept
   distinct from `birth_coastal`, which also covers Greater Tunis, the northeast
   and Sfax. Conflating the two is the usual way this variable goes wrong.
+  Governorates were resolved through the Wikidata QID each birthplace points
+  at, not by matching the settlement name: El Guettar, El Ksar, El Mida and
+  Ezzahra each name more than one Tunisian place, and label matching puts them
+  in the wrong governorate.
+- **Foreign birth is coded, not left blank.** `birth_abroad` and
+  `birth_country` separate a genuine finding — the Circassian, Georgian and
+  Caucasian origins of the beylical-era administrators, and the French and
+  Levantine births of the late protectorate elite — from a settlement missing
+  from the map. Check `birth_abroad` before reading an empty
+  `birth_governorate` as missing data.
 - **Date precision is recorded, never invented.** A source that says "1970"
   yields `1970-01-01` with `date_precision = year`. Filter on it before
   computing durations.
@@ -123,7 +136,8 @@ config/
   cabinets.yml            curated spine: 23 government spells, eras, heads of state
   heads_biographical.yml  verified biographical seed for the heads of government
   portfolios.yml          35 harmonised portfolios, 7 cabinet ranks, FR/AR/EN aliases
-  places.yml              governorates, regions, settlement -> governorate map
+  places.yml              governorates, regions, settlement -> governorate map,
+                          countries of birth for ministers born abroad
   sources.yml             endpoints, rate limits, crawl policy
 src/govtn/
   config.py      paths, config loading, snapshot date
@@ -175,8 +189,9 @@ python -m govtn.pipeline --snapshot 2026-08-26
 - **A merge is wrong.** Check `data/interim/reconciliation_audit.json`, then
   either add a disqualifier in `govtn.reconcile` or raise
   `NAME_MERGE_THRESHOLD`.
-- **A birthplace was not coded.** Add the settlement to `config/places.yml`;
-  unmapped birthplaces are left empty, never guessed.
+- **A birthplace was not coded.** Add the settlement to the `settlements` map
+  in `config/places.yml`, or to `foreign_origins` if it lies outside Tunisia.
+  Unmapped birthplaces are left empty, never guessed.
 - **A new source.** Add a module under `src/govtn/sources/` that emits
   `SourceRecord`s and appointment dicts, then register it in
   `govtn.build.collect_records` and `govtn.pipeline.STAGES`.

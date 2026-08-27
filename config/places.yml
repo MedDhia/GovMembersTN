@@ -68,6 +68,10 @@ settlements:
   Hammam Lif: Ben Arous
   Radès: Ben Arous
   Manouba: Manouba
+  Ezzahra: Ben Arous
+  Mégrine: Ben Arous
+  La Manouba: Manouba
+  Djedeida: Manouba
   # Northeast
   Nabeul: Nabeul
   Hammamet: Nabeul
@@ -79,6 +83,13 @@ settlements:
   Menzel Bourguiba: Bizerte
   Mateur: Bizerte
   Ras Jebel: Bizerte
+  Metline: Bizerte
+  Béni Khalled: Nabeul
+  Béni Khiar: Nabeul
+  Dar Chaâbane: Nabeul
+  El Mida: Nabeul
+  Tazarka: Nabeul
+  Zriba: Zaghouan
   # Northwest
   Béja: Béja
   Testour: Béja
@@ -89,6 +100,18 @@ settlements:
   Dahmani: "Le Kef"
   Siliana: Siliana
   Makthar: Siliana
+  Medjez el-Bab: Béja
+  Téboursouk: Béja
+  Bou Salem: Jendouba
+  # Arabic-script forms, added as sources supply them. Matching is on
+  # the normalised string, so a settlement written both with and
+  # without a space needs both entries.
+  بوسالم: Jendouba
+  بو سالم: Jendouba
+  El Ksour: "Le Kef"
+  Nebeur: "Le Kef"
+  Tajerouine: "Le Kef"
+  Bou Arada: Siliana
   # Centre-east (Sahel and Sfax)
   Sousse: Sousse
   "Hammam Sousse": Sousse
@@ -110,6 +133,16 @@ settlements:
   Sakiet Ezzit: Sfax
   Kerkennah: Sfax
   Mahres: Sfax
+  Akouda: Sousse
+  Kalâa Seghira: Sousse
+  M'saken: Sousse
+  Bekalta: Monastir
+  Bouhjar: Monastir
+  Khniss: Monastir
+  Ksibet el-Médiouni: Monastir
+  Menzel Hayet: Monastir
+  Rejiche: Mahdia
+  Jebiniana: Sfax
   # Centre-west
   Kairouan: Kairouan
   Haffouz: Kairouan
@@ -121,6 +154,11 @@ settlements:
   "Sidi Bouzid": "Sidi Bouzid"
   Regueb: "Sidi Bouzid"
   Meknassy: "Sidi Bouzid"
+  Hajeb El Ayoun: Kairouan
+  Nasrallah: Kairouan
+  Foussana: Kasserine
+  Haïdra: Kasserine
+  Mezzouna: "Sidi Bouzid"
   # South
   Gabès: Gabès
   Mareth: Gabès
@@ -139,3 +177,45 @@ settlements:
   Nefta: Tozeur
   Kébili: Kébili
   Douz: Kébili
+  El Hamma: Gabès
+  Métouia: Gabès
+  El Guettar: Gafsa
+  El Ksar: Gafsa
+  Degache: Tozeur
+  Beni Khedache: Médenine
+  El Mey: Médenine
+  Hassi Amor: Médenine
+  Mahboubine: Médenine
+  Chenini: Tataouine
+
+# Country or polity of birth for ministers born outside Tunisia.
+#
+# WHY THIS EXISTS
+# Foreign birth is a finding, not missing data. Two distinct groups appear:
+# the Circassian, Georgian and Caucasian origins of the Husainid-era mamluk
+# administrators, and the French, Italian and Levantine births of the late
+# protectorate and early independence elite. Left uncoded, both fall out of
+# regional analysis while still counting in the denominator, which understates
+# how much of the beylical state was staffed from outside the country.
+#
+# Values are the polity the source names, not a modern successor state:
+# "Circassia" and "Caucasus" are regions, and "Russian Empire" is the state
+# that existed at the time of birth. Do not treat these as ISO countries.
+foreign_origins:
+  Circassie: Circassia
+  Caucase: Caucasus
+  "Empire russe": Russian Empire
+  Géorgie: Georgia
+  Moldavie: Moldova
+  Oran: Algeria
+  Paris: France
+  "6e arrondissement de Paris": France
+  Marseille: France
+  Maubeuge: France
+  "Vernoil-le-Fourrier": France
+  Kos: Greece
+  Kardamila: Greece
+  Guwahati: India
+  Favignana: Italy
+  Homs: Syria
+  Douma: Syria

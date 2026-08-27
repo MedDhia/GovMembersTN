@@ -42,6 +42,36 @@ log = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
+# Places
+# ---------------------------------------------------------------------------
+
+# Birthplaces given as the country and nothing finer. The country is known;
+# the governorate is not, and must not be guessed.
+_TUNISIA_ALIASES = {"tunisie", "tunisia", "تونس"}
+
+# Leading articles that sources attach inconsistently: Wikidata writes
+# "La Manouba" for the town the settlement map calls "Manouba".
+_PLACE_ARTICLES = ("la ", "le ", "el ", "les ")
+
+
+def _place_variants(key: str) -> set[str]:
+    """Alternative spellings of a normalised place name.
+
+    Covers the two ways Tunisian toponyms are written inconsistently across
+    sources: an optional leading article, and an apostrophe standing in for
+    an elided vowel ("M'saken" / "Msaken"). Returns only variants that differ
+    from the input, so callers can register them without clobbering the
+    original key.
+    """
+    variants = {key, key.replace("'", ""), key.replace("'", " ")}
+    for article in _PLACE_ARTICLES:
+        for variant in list(variants):
+            if variant.startswith(article):
+                variants.add(variant[len(article):])
+    return {v.strip() for v in variants if v.strip() and v != key}
+
+
+# ---------------------------------------------------------------------------
 # Loading
 # ---------------------------------------------------------------------------
 
@@ -99,12 +129,12 @@ class Spine:
         return self.head_bios.get(clean_name(name), {})
 
     @functools.cached_property
-    def _places(self) -> tuple[dict, dict]:
-        """(settlement -> governorate, governorate -> attributes), normalised."""
+    def _places(self) -> tuple[dict, dict, dict]:
+        """(settlement -> governorate, governorate -> attributes, place -> country)."""
         try:
             cfg = config.load_yaml("places")
         except FileNotFoundError:
-            return {}, {}
+            return {}, {}, {}
         governorates = {
             clean_name(g["name"]): g for g in cfg.get("governorates", [])
         }
@@ -116,21 +146,52 @@ class Spine:
         # itself so "Sousse" resolves whether it is given as city or province.
         for key, governorate in governorates.items():
             settlements.setdefault(key, governorate["name"])
-        return settlements, governorates
+        # Sources disagree about the definite article and the apostrophe:
+        # Wikidata says "La Manouba" and "M'saken" where the map says
+        # "Manouba" and "Msaken". Register both forms of every key rather
+        # than requiring an entry per spelling. A variant that two settlements
+        # in different governorates both claim is dropped instead of resolved
+        # by iteration order - "El Hamma" in Gabès and El Hamma du Jérid in
+        # Tozeur must not silently become each other.
+        variants: dict[str, set[str]] = {}
+        for key, governorate in settlements.items():
+            for variant in _place_variants(key):
+                if variant not in settlements:
+                    variants.setdefault(variant, set()).add(governorate)
+        for variant, claimed in variants.items():
+            if len(claimed) == 1:
+                settlements[variant] = next(iter(claimed))
+        foreign = {
+            clean_name(place): country
+            for place, country in (cfg.get("foreign_origins") or {}).items()
+        }
+        return settlements, governorates, foreign
 
     def place_attributes(self, place: str | None) -> dict:
-        """Governorate and region coding for a birthplace string.
+        """Governorate, region and country coding for a birthplace string.
 
-        Returns empty values rather than guessing when a settlement is not in
-        the map; `govtn.validate` reports those so the map can be extended.
+        Returns empty values rather than guessing when a settlement is in
+        neither map; `govtn.validate` reports those so the maps can be
+        extended. A birthplace known to be outside Tunisia gets a country and
+        `birth_abroad = True` but no governorate, which keeps it out of
+        regional breakdowns without silently discarding the person.
         """
         blank = {"birth_governorate": None, "birth_region_type": None,
-                 "birth_coastal": None, "birth_sahel": None}
+                 "birth_coastal": None, "birth_sahel": None,
+                 "birth_country": None, "birth_abroad": None}
         if not place or (isinstance(place, float) and pd.isna(place)):
             return blank
-        settlements, governorates = self._places
-        governorate_name = settlements.get(clean_name(str(place)))
+        settlements, governorates, foreign = self._places
+        key = clean_name(str(place))
+        governorate_name = settlements.get(key)
         if not governorate_name:
+            country = foreign.get(key)
+            if country:
+                return {**blank, "birth_country": country, "birth_abroad": True}
+            # "Tunisie" as a birthplace names the country and nothing finer:
+            # the country is known, the governorate genuinely is not.
+            if key in _TUNISIA_ALIASES:
+                return {**blank, "birth_country": "Tunisia", "birth_abroad": False}
             return blank
         attributes = governorates.get(clean_name(governorate_name), {})
         return {
@@ -138,6 +199,8 @@ class Spine:
             "birth_region_type": attributes.get("region"),
             "birth_coastal": attributes.get("coastal"),
             "birth_sahel": attributes.get("sahel"),
+            "birth_country": "Tunisia",
+            "birth_abroad": False,
         }
 
     def _covering(self, records: list[dict], when: date | None) -> dict | None:
