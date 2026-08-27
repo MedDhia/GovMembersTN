@@ -5,14 +5,14 @@ built for both **individual-level analysis** (who gets into government, from
 where, with what background, for how long) and **network analysis**
 (who served alongside whom, who succeeded whom, who shares a background).
 
-The record centres on the independent republic — 2,930 of 3,151 appointments
+The record centres on the independent republic — 2,945 of 3,136 appointments
 fall after April 1956 — and extends backwards through the protectorate and,
-thinly, into the beylical ministries: 136 appointments before independence, 9
+thinly, into the beylical ministries: 139 appointments before independence, 9
 of them before 1900. Treat the pre-1956 rows as a usable but sparse tail, not
 as a comparable series.
 
 Every extracted value is traceable to a source URL and a retrieval timestamp,
-and 162 appointments carry a citation to the *Journal Officiel*, the gazette
+and 163 appointments carry a citation to the *Journal Officiel*, the gazette
 in which a Tunisian ministerial appointment legally takes effect.
 
 ---
@@ -35,7 +35,7 @@ archive with `make bundle` — the analysis scripts below run from either.
 ```r
 source("analysis/R/load_govtn.R")
 tn <- govtn_load_all()          # all tables, correctly typed
-nrow(tn$persons)                # 884
+nrow(tn$persons)                # 882
 
 govtn_describe("persons", "birth_sahel")   # what does this column mean?
 panel <- govtn_panel()          # appointments + person + cabinet attributes
@@ -48,7 +48,7 @@ import sys; sys.path.insert(0, "analysis/python")
 from load_govtn import load_all, describe, panel
 
 tn = load_all()
-tn["persons"].shape             # (884, 56)
+tn["persons"].shape             # (882, 56)
 describe("persons", "birth_sahel")
 ```
 
@@ -84,17 +84,17 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 
 | Rows | What |
 |---:|---|
-| **884** | people who held a post in a Tunisian government |
-| **3,151** | appointments — one row per person × cabinet × portfolio |
+| **882** | people who held a post in a Tunisian government |
+| **3,136** | appointments — one row per person × cabinet × portfolio |
 | **57** | cabinets, 1943–2026, across 23 government spells |
-| **36,978** | co-membership ties, weighted by days of overlapping service |
-| **1,995** | succession ties, directed, within portfolio |
-| **8,389** | homophily ties — shared university, party or birth governorate |
-| **162** | appointments carrying a *Journal Officiel* citation |
+| **38,287** | co-membership ties, weighted by days of overlapping service |
+| **1,976** | succession ties, directed, within portfolio |
+| **12,613** | homophily ties — shared university, party or birth governorate |
+| **163** | appointments carrying a *Journal Officiel* citation |
 
-Person-level attribute coverage: Wikidata QID 68%, occupation 66%, gender 67%,
-Arabic name 65%, birth date 63%, birthplace 55%, education 37%, party 37%,
-career flags 38%.
+Person-level attribute coverage: Wikidata QID 65%, occupation 64%, gender 65%,
+Arabic name 64%, birth date 61%, birthplace 54%, education 35%, party 37%,
+career flags 29%.
 50% of appointments carry a date describing the person rather than the
 cabinet (see `date_basis`); the rest inherit their cabinet's dates, which
 makes their tenure a cabinet fact rather than a personal one. 93% of
@@ -114,7 +114,7 @@ before.
 | `portfolios.csv` | one portfolio | The harmonised portfolio taxonomy. |
 | `governorates.csv` | one governorate | Region, coastal/Sahel coding and 2024 census population. Join on `birth_governorate`. |
 | `eras.csv` | one regime period | Era bounds and labels. Intervals are half-open. |
-| `codebook.csv` | one variable | Machine-readable dictionary for all 185 variables: type, coverage, levels, description. |
+| `codebook.csv` | one variable | Machine-readable dictionary for all 195 variables: type, coverage, levels, description. |
 | `networks/edges_*.csv` | one tie | Four network layers (see below). |
 | `networks/network_*.{gexf,graphml}` | graph | Ready for Gephi / Cytoscape, with centralities precomputed. |
 | `indices/representation_*.csv` | one era × partition | Territorial representation Gini, its changes, and per-governorate ratios. |
@@ -221,7 +221,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           240 tests, incl. fixtures reproducing real source markup
+tests/           250 tests, incl. fixtures reproducing real source markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
@@ -298,6 +298,14 @@ python -m govtn.pipeline --snapshot 2026-08-26
   1960s, and senior ministers far better than secretaries of state. Any
   seventy-year trend must be read against the decade coverage table in
   `VALIDATION.md`.
+- **The post-2021 cabinets have almost no biographical layer.** Of the 30
+  people whose first ministerial post came after July 2021, 7% have a coded
+  birthplace. This is not a harvesting gap: of the nine who have a Wikidata
+  item, none carries a birthplace, and a search of Arabic Wikipedia for the 36
+  unlinked roster names matched no article. Their *appointments* are sound —
+  those come from rosters and the gazette — but do not compute person-level
+  statistics for the period. See "Coverage after July 2021" in
+  [docs/CODEBOOK.md](docs/CODEBOOK.md).
 - **Party affiliation is not time-varying.** Wikidata records that someone
   belonged to a party, not when.
 - **Education strings are not reconciled to identifiers.** Normalise before

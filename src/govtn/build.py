@@ -142,6 +142,13 @@ class Spine:
             clean_name(place): governorate
             for place, governorate in (cfg.get("settlements") or {}).items()
         }
+        # Arabic-script names for the same settlements. Kept in their own
+        # config block so the provenance of each list stays separate, but they
+        # resolve to the same governorates and so join the same lookup.
+        settlements.update({
+            clean_name(place): governorate
+            for place, governorate in (cfg.get("settlements_ar") or {}).items()
+        })
         # A governorate capital shares its name with its governorate; map it to
         # itself so "Sousse" resolves whether it is given as city or province.
         for key, governorate in governorates.items():
@@ -318,6 +325,15 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
         for bio in _load_interim(f"biographies_{lang}.json") or []:
             biographies.setdefault(bio["article"], bio)
 
+    # Biographies found by searching the wiki for a roster name that carried no
+    # link. Keyed by that name rather than by an article title, and kept in a
+    # SEPARATE map so the link-based join above always wins: a link is an
+    # editor's assertion of identity, a name match is ours.
+    searched: dict[str, dict] = {}
+    for bio in _load_interim("biographies_ar_search.json") or []:
+        if bio.get("matched_name"):
+            searched.setdefault(clean_name(bio["matched_name"]), bio)
+
     skipped_offices: list[dict] = []
     for cabinet in _load_interim("wikipedia_cabinets.json") or []:
         article = cabinet["article"]
@@ -340,6 +356,8 @@ def collect_records(spine: Spine) -> tuple[list[SourceRecord], list[dict]]:
             parsed = parse_title(member["raw_title"])
             record_id = new_id("w")
             bio = biographies.get(member.get("person_wikilink") or "", {})
+            if not bio:
+                bio = searched.get(clean_name(member["person_name"]), {})
             records.append(SourceRecord(
                 record_id=record_id, source="wikipedia",
                 name=member["person_name"],

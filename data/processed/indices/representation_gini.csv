@@ -1,28 +1,28 @@
 era,units,ministers,coded,coverage,governorates_represented,basis,gini_representation,ci_low,ci_high,gini_counts
 beylical,governorate,6,1,0.167,1,withheld: only 1 coded ministers,,,,
-protectorate,governorate,59,30,0.508,6,reported,0.8564,0.8137,0.8834,0.9139
-protectorate_end,governorate,20,15,0.75,6,withheld: only 15 coded ministers,,,,
-monarchy,governorate,23,16,0.696,7,withheld: only 16 coded ministers,,,,
-bourguiba,governorate,144,91,0.632,18,reported,0.5585,0.4579,0.5941,0.6836
-ben_ali,governorate,346,178,0.514,21,reported,0.4649,0.3766,0.4977,0.5913
-transition,governorate,139,110,0.791,19,reported,0.4834,0.3643,0.5144,0.6068
-second_republic,governorate,238,161,0.676,20,reported,0.423,0.3126,0.4499,0.5613
-saied_exception,governorate,92,30,0.326,14,withheld: newcomers 4% covered; sample is almost all holdovers,,,,
+protectorate,governorate,61,29,0.475,6,reported,0.8546,0.8147,0.8845,0.9095
+protectorate_end,governorate,23,14,0.609,5,withheld: only 14 coded ministers,,,,
+monarchy,governorate,24,16,0.667,7,withheld: only 16 coded ministers,,,,
+bourguiba,governorate,147,92,0.626,18,reported,0.5591,0.4603,0.591,0.6848
+ben_ali,governorate,351,175,0.499,21,reported,0.4519,0.3634,0.485,0.5836
+transition,governorate,137,113,0.825,19,reported,0.4681,0.3477,0.4989,0.5992
+second_republic,governorate,246,154,0.626,20,reported,0.4181,0.3033,0.444,0.5519
+saied_exception,governorate,74,30,0.405,14,withheld: newcomers 4% covered; sample is almost all holdovers,,,,
 beylical,greater_tunis_merged,6,1,0.167,1,withheld: only 1 coded ministers,,,,
-protectorate,greater_tunis_merged,59,30,0.508,5,reported,0.6945,0.6397,0.7378,0.9175
-protectorate_end,greater_tunis_merged,20,15,0.75,6,withheld: only 15 coded ministers,,,,
-monarchy,greater_tunis_merged,23,16,0.696,7,withheld: only 16 coded ministers,,,,
-bourguiba,greater_tunis_merged,144,91,0.632,18,reported,0.4039,0.2689,0.4406,0.6384
-ben_ali,greater_tunis_merged,346,178,0.514,20,reported,0.2589,0.1496,0.2764,0.5527
-transition,greater_tunis_merged,139,110,0.791,18,reported,0.3052,0.1744,0.3265,0.5974
-second_republic,greater_tunis_merged,238,161,0.676,18,reported,0.2553,0.14,0.2717,0.5708
-saied_exception,greater_tunis_merged,92,30,0.326,12,withheld: newcomers 4% covered; sample is almost all holdovers,,,,
+protectorate,greater_tunis_merged,61,29,0.475,5,reported,0.6859,0.6328,0.7146,0.913
+protectorate_end,greater_tunis_merged,23,14,0.609,5,withheld: only 14 coded ministers,,,,
+monarchy,greater_tunis_merged,24,16,0.667,7,withheld: only 16 coded ministers,,,,
+bourguiba,greater_tunis_merged,147,92,0.626,18,reported,0.4007,0.2652,0.4384,0.6398
+ben_ali,greater_tunis_merged,351,175,0.499,20,reported,0.2573,0.1474,0.2762,0.5442
+transition,greater_tunis_merged,137,113,0.825,18,reported,0.2864,0.1563,0.3033,0.5883
+second_republic,greater_tunis_merged,246,154,0.626,18,reported,0.2484,0.1287,0.2622,0.5584
+saied_exception,greater_tunis_merged,74,30,0.405,12,withheld: newcomers 4% covered; sample is almost all holdovers,,,,
 beylical,region,6,1,0.167,1,withheld: only 1 coded ministers,,,,
-protectorate,region,59,30,0.508,3,reported,0.6702,0.5974,0.7475,0.7905
-protectorate_end,region,20,15,0.75,4,withheld: only 15 coded ministers,,,,
-monarchy,region,23,16,0.696,5,withheld: only 16 coded ministers,,,,
-bourguiba,region,144,91,0.632,7,reported,0.3194,0.2018,0.4027,0.5149
-ben_ali,region,346,178,0.514,7,reported,0.1658,0.0693,0.2027,0.3483
-transition,region,139,110,0.791,7,reported,0.202,0.0859,0.2619,0.3896
-second_republic,region,238,161,0.676,7,reported,0.1881,0.0924,0.2427,0.3656
-saied_exception,region,92,30,0.326,7,withheld: newcomers 4% covered; sample is almost all holdovers,,,,
+protectorate,region,61,29,0.475,4,reported,0.6289,0.5318,0.723,0.7685
+protectorate_end,region,23,14,0.609,4,withheld: only 14 coded ministers,,,,
+monarchy,region,24,16,0.667,5,withheld: only 16 coded ministers,,,,
+bourguiba,region,147,92,0.626,7,reported,0.3076,0.1921,0.3927,0.5093
+ben_ali,region,351,175,0.499,7,reported,0.1555,0.0612,0.1976,0.3347
+transition,region,137,113,0.825,7,reported,0.1839,0.0714,0.2416,0.3767
+second_republic,region,246,154,0.626,7,reported,0.1721,0.0687,0.2233,0.3469
+saied_exception,region,74,30,0.405,7,withheld: newcomers 4% covered; sample is almost all holdovers,,,,

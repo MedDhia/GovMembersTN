@@ -23,6 +23,7 @@ elite datasets if ignored:
 from __future__ import annotations
 
 import functools
+import difflib
 import re
 import unicodedata
 from datetime import date
@@ -170,6 +171,13 @@ def _strip_article_prefix(token: str) -> str:
     return token
 
 
+def _strip_arabic_article(token: str) -> str:
+    """Remove a leading ال from an Arabic token when enough of it survives."""
+    if token.startswith("ال") and len(token) - 2 >= 3:
+        return token[2:]
+    return token
+
+
 def name_key(name: str) -> str:
     """Moderate-strength blocking key.
 
@@ -203,7 +211,14 @@ def name_tokens_strong(name: str) -> frozenset[str]:
     """
     text = name_key(name)
     if has_arabic(text):
-        return frozenset(t for t in text.split() if len(t) > 1)
+        # Strip the Arabic definite article, exactly as `_strip_article_prefix`
+        # does for its romanised forms. Sources attach it inconsistently:
+        # a cabinet table lists "حبيب عبيد" where the biography is titled
+        # "الحبيب عبيد", and without this they score 0.33 and never match.
+        # Three characters must survive, so short names are left alone.
+        return frozenset(
+            _strip_arabic_article(t) for t in text.split() if len(t) > 1
+        )
 
     tokens: list[str] = []
     for token in text.split():
@@ -225,27 +240,73 @@ def name_key_strong(name: str) -> str:
     return " ".join(sorted(name_tokens_strong(name)))
 
 
+# A leftover token pair this similar is the same name spelled two ways.
+# Calibrated, not guessed: "Gharsalloui"/"Gharsallaoui" - one person, two
+# transliterations of غرسلاوي, who appeared twice in the published persons
+# table - folds to a ratio of 0.94, while "Feki"/"Fekih" reaches 0.89 and may
+# well be two people. The bar sits between them, and the length floor keeps
+# short tokens ("Abid"/"Obeid", "ben"/"bin") out of near-matching entirely,
+# since a single character is a large share of a short token.
+#
+# The asymmetry of the risk sets the direction: a missed merge leaves a visible
+# duplicate, a false merge silently fuses two ministers' careers into one.
+_NEAR_TOKEN_RATIO = 0.92
+_NEAR_TOKEN_MIN_LEN = 6
+
+
+def _near_token_pairs(only_a: set[str], only_b: set[str]) -> int:
+    """How many leftover tokens are the same name spelled differently."""
+    if not only_a or not only_b:
+        return 0
+    claimed: set[str] = set()
+    matched = 0
+    for left in sorted(only_a):
+        if len(left) < _NEAR_TOKEN_MIN_LEN:
+            continue
+        best, best_ratio = None, 0.0
+        for right in sorted(only_b):
+            if right in claimed or len(right) < _NEAR_TOKEN_MIN_LEN:
+                continue
+            ratio = difflib.SequenceMatcher(None, left, right).ratio()
+            if ratio > best_ratio:
+                best, best_ratio = right, ratio
+        if best is not None and best_ratio >= _NEAR_TOKEN_RATIO:
+            claimed.add(best)
+            matched += 1
+    return matched
+
+
 def name_similarity(a: str, b: str) -> float:
     """Similarity in [0, 1] between two person names.
 
-    Jaccard overlap of the strong token sets, with a containment override:
-    when one name's tokens are a strict subset of the other's, the pair is
-    scored 0.9 rather than penalised. That case is systematic in this data -
-    sources drop middle names inconsistently ("Hédi Nouira" in a cabinet
-    table, "Hédi Amara Nouira" in the biography) - and plain Jaccard would
-    push those genuine matches below any usable threshold.
+    Jaccard overlap of the strong token sets, with two adjustments.
+
+    A containment override: when one name's tokens are a strict subset of the
+    other's, the pair is scored 0.9 rather than penalised. That case is
+    systematic in this data - sources drop middle names inconsistently ("Hédi
+    Nouira" in a cabinet table, "Hédi Amara Nouira" in the biography) - and
+    plain Jaccard would push those genuine matches below any usable threshold.
+
+    And near-token matching: tokens are compared by equality after folding,
+    which still splits a surname transliterated two ways by a single letter.
+    Leftover tokens similar enough to clear `_NEAR_TOKEN_RATIO` count as the
+    same token, so "Ridha Gharsalloui" and "Ridha Gharsallaoui" score 1.0
+    while "Mohamed Ghannouchi" and "Rached Ghannouchi" stay at 0.33.
     """
     ta, tb = name_tokens_strong(a), name_tokens_strong(b)
     if not ta or not tb:
         return 0.0
     if ta == tb:
         return 1.0
-    intersection = len(ta & tb)
-    if not intersection:
-        return 0.0
     if ta <= tb or tb <= ta:
         return 0.9
-    return intersection / len(ta | tb)
+    exact = len(ta & tb)
+    near = _near_token_pairs(ta - tb, tb - ta)
+    if not exact and not near:
+        return 0.0
+    # A near pair removes one element from the union as well as adding one to
+    # the intersection: the two tokens are being treated as one.
+    return (exact + near) / (len(ta | tb) - near)
 
 
 # ---------------------------------------------------------------------------

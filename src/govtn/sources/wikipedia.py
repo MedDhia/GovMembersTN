@@ -39,7 +39,7 @@ log = logging.getLogger(__name__)
 PORTFOLIO_HEADERS = (
     "portefeuille", "fonction", "poste", "ministere", "departement",
     "charge", "attribution", "qualite", "office", "portfolio", "الوزارة",
-    "الحقيبة", "المنصب", "الخطة",
+    "الحقيبة", "المنصب", "الخطة", "الوظيفة", "الصفة",
 )
 PERSON_HEADERS = (
     "titulaire", "ministre", "nom", "identite", "membre", "personnalite",
@@ -62,7 +62,26 @@ DATE_HEADERS = tuple(normalize_text(h) for h in DATE_HEADERS)
 IMAGE_HEADERS = tuple(normalize_text(h) for h in IMAGE_HEADERS)
 
 # Values that are never an officeholder or an office.
-_NOT_A_VALUE = re.compile(r"^(\d+\s*px|\d+|-|—|n/?a)$", re.IGNORECASE)
+# Cell contents that are placeholders rather than values. A cell reduced to
+# punctuation is the residue of markup the parser stripped, not a name.
+_NOT_A_VALUE = re.compile(
+    r"^(\d+\s*px|\d+|[-—|/.,:;]+|n/?a|"
+    # A post recorded as unfilled. Harvested as a person, "Poste vacant" and
+    # its Arabic equivalent become ministers who never existed.
+    r"poste vacant|vacant|vacance|shagher|"
+    r"شاغر|شاغرة|منصب شاغر)$",
+    re.IGNORECASE)
+
+# A person name longer than this is prose, not a name. Set well clear of the
+# longest real names in the data - full Arabic patronymic chains run to about
+# forty characters and six tokens.
+_MAX_NAME_CHARS = 90
+_MAX_NAME_WORDS = 12
+
+# A full stop with running text after it. Only consulted for cells already
+# longer than a title has any reason to be; on its own it fires on the
+# abbreviation in "Secr. d'État au Plan et aux Finances".
+_SENTENCE_BREAK = re.compile(r"[.؟!]\s+\S+\s+\S+")
 
 # Rows that are section separators rather than officeholders.
 _SKIP_ROW = re.compile(
@@ -234,6 +253,11 @@ def _cell_text(cell: str) -> str:
     cell = re.sub(r"<ref[^>]*/>", " ", cell)
     cell = re.sub(r"<ref[^>]*>.*?</ref>", " ", cell, flags=re.DOTALL | re.IGNORECASE)
     cell = re.sub(r"<!--.*?-->", " ", cell, flags=re.DOTALL)
+    # A line break separates two things; removing it welds them together.
+    # Without this, a minister holding two portfolios came out as
+    # "Ministre du Commerce et du Developpement des exportationsMinistre de
+    # l'Industrie", which matches no alias and lands in `other`.
+    cell = re.sub(r"<\s*br\s*/?\s*>", " / ", cell, flags=re.IGNORECASE)
     code = mwparserfromhell.parse(cell)
     for template in code.filter_templates():
         # Flag/date templates carry no roster information; drop them so they
@@ -281,11 +305,25 @@ def _cell_links(cell: str) -> list[str]:
     return out
 
 
+# `colspan=3`, `colspan="3"`. A spanned cell occupies that many columns, so
+# every column to its right shifts unless the span is expanded.
+_COLSPAN = re.compile(r"\bcolspan\s*=\s*[\"\']?(\d{1,2})", re.IGNORECASE)
+
+
 def _split_row(row: str) -> list[str]:
-    """Split one wikitable row into cells.
+    """Split one wikitable row into cells, expanding `colspan`.
 
     Cells may be written one per line (`| value`) or inline (`| a || b`), and
     a single article mixes both. Splitting has to handle each.
+
+    COLSPAN IS EXPANDED INTO PLACEHOLDER CELLS. A header written
+    `! colspan=2 | Titulaire` describes two columns, and the data rows beneath
+    it supply two. Emitting one header cell makes the header shorter than its
+    rows, so every column index derived from the header points one place to
+    the left. In the FR "Gouvernement Mechichi" article that put the person
+    column on a party-colour swatch, and sixteen ministers were harvested with
+    the literal name "|" - a person record per office, all of them junk, all in
+    the least-documented period of the dataset.
     """
     cells: list[str] = []
     for line in row.split("\n"):
@@ -306,12 +344,89 @@ def _split_row(row: str) -> list[str]:
             if cells:                                   # continuation of previous cell
                 cells[-1] += " " + line
             continue
+        is_header = line.startswith("!")
         for part in parts:
-            # Drop cell attributes ("colspan=2 | value") but not wikilink pipes.
-            if re.match(r"^[^\[\]{}]*=[^|]*\|(?!\|)", part):
-                part = part.split("|", 1)[1]
-            cells.append(part.strip())
+            attributes, part = _split_attributes(part)
+            part = part.strip()
+            cells.append(part)
+            # The cell already occupies one column; add the rest of its span.
+            # A spanned HEADER label describes each column it covers, so it is
+            # repeated - that is what lets a role find the real value inside
+            # the span. A spanned DATA cell gets blanks: repeating a value
+            # would invent duplicates.
+            span = _COLSPAN.search(attributes)
+            if span:
+                extra = max(0, min(int(span.group(1)), 12) - 1)
+                cells.extend([part if is_header else ""] * extra)
     return cells
+
+
+def _split_attributes(part: str) -> tuple[str, str]:
+    """Separate a cell's HTML attributes from its content.
+
+    MediaWiki reads everything before the first pipe as attributes, but only
+    when that pipe is at the top level: a pipe inside `[[...]]`, `{{...}}` or
+    `<!--...-->` belongs to the link, template or comment. Scanning for the
+    first *unnested* pipe is what distinguishes
+    `| {{Infobox .../couleurs|Autre}} |` - a swatch template followed by an
+    empty content cell - from a wikilink whose pipe separates target and label.
+    Returns ("", part) when the cell carries no attributes.
+    """
+    depth_brace = depth_bracket = 0
+    index = 0
+    while index < len(part):
+        pair = part[index:index + 2]
+        if pair == "{{":
+            depth_brace += 1; index += 2; continue
+        if pair == "}}":
+            depth_brace = max(0, depth_brace - 1); index += 2; continue
+        if pair == "[[":
+            depth_bracket += 1; index += 2; continue
+        if pair == "]]":
+            depth_bracket = max(0, depth_bracket - 1); index += 2; continue
+        if part[index] == "|" and not depth_brace and not depth_bracket:
+            head, tail = part[:index], part[index + 1:]
+            # Attributes are `key=value` pairs, optionally preceded by a
+            # template that renders a background colour. Anything else with a
+            # pipe in it is content that happens to contain one.
+            if "=" in head or _TEMPLATE_ONLY.fullmatch(head.strip()):
+                return head, tail
+            return "", part
+        index += 1
+    return "", part
+
+
+_TEMPLATE_ONLY = re.compile(r"(?:\{\{[^{}]*\}\}\s*)+")
+
+
+def _implausible_person(person: str, portfolio: str) -> bool:
+    """True when this pairing cannot be an officeholder and an office.
+
+    Shared by the table and list parsers, because the same two failures reach
+    both:
+
+    A SECTION LABEL that lands in every column. Arabic rosters group members
+    under headings like "الوزراء التونسيون" / "الوزراء الفرنسيون" (the Tunisian
+    / the French ministers); where the heading is not marked up as a spanned
+    cell it fills both columns, and was harvested as a minister holding an
+    office named after himself - one record collecting eleven appointments
+    across five cabinets. No minister is named after the post they hold.
+
+    PROSE. Descriptive articles define the offices rather than listing holders:
+    "Gouvernement de la Tunisie" has bullets reading
+    "les ministres : ils sont d'un nombre variable...". The definition became
+    the minister and the defined term became the portfolio.
+    """
+    if normalize_text(person) == normalize_text(portfolio):
+        return True
+    if len(person) > _MAX_NAME_CHARS or len(person.split()) > _MAX_NAME_WORDS:
+        return True
+    # Prose in the OFFICE cell instead, with a plural common noun as the
+    # holder: "الوزراء" ("the ministers") against a sentence explaining how
+    # they are appointed. Neither test alone works - a genuine dual portfolio
+    # runs to 125 characters, and "Secr. d'État au Plan et aux Finances"
+    # contains a full stop - so both must hold.
+    return len(portfolio) > _MAX_NAME_CHARS and bool(_SENTENCE_BREAK.search(portfolio))
 
 
 def _classify_headers(cells: list[str]) -> dict[str, int]:
@@ -332,6 +447,32 @@ def _classify_headers(cells: list[str]) -> dict[str, int]:
         elif "date" not in roles and any(k in text for k in DATE_HEADERS):
             roles["date"] = index
     return roles
+
+
+def _resolve(role: str, roles: dict[str, int], headers: list[str],
+             texts: list[str]) -> int | None:
+    """Index of the cell that actually holds `role`'s value in this row.
+
+    A `colspan` header covers several columns and only one of them carries the
+    value. "Titulaire" spanning two columns in the FR cabinet tables covers a
+    party-colour swatch and then the name; the swatch is empty once its
+    template is stripped. Walk right through the columns the same header label
+    covers and take the first that is not empty.
+    """
+    if role not in roles:
+        return None
+    start = roles[role]
+    if start >= len(texts):
+        return None
+    if texts[start]:
+        return start
+    label = headers[start] if start < len(headers) else ""
+    index = start + 1
+    while index < len(texts) and index < len(headers) and headers[index] == label:
+        if texts[index]:
+            return index
+        index += 1
+    return start
 
 
 def parse_tables(wikitext: str) -> list[dict[str, Any]]:
@@ -360,6 +501,7 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
 
         chunks = re.split(r"\n\|-+", table)
         roles: dict[str, int] = {}
+        headers: list[str] = []
         for chunk in chunks:
             cells_raw = _split_row(chunk)
             if not cells_raw:
@@ -370,6 +512,7 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
                 # A usable header needs both a portfolio and a person column.
                 if "portfolio" in candidate and "person" in candidate:
                     roles = candidate
+                    headers = texts
                     continue
                 # Two-column tables without headers are the common minimal
                 # case: assume portfolio then officeholder.
@@ -379,17 +522,33 @@ def parse_tables(wikitext: str) -> list[dict[str, Any]]:
                     continue
             if max(roles.values()) >= len(cells_raw):
                 continue
-            portfolio = texts[roles["portfolio"]]
-            person = texts[roles["person"]]
+            portfolio_at = _resolve("portfolio", roles, headers, texts)
+            person_at = _resolve("person", roles, headers, texts)
+            if portfolio_at is None or person_at is None:
+                continue
+            portfolio = texts[portfolio_at]
+            person = texts[person_at]
             if not portfolio or not person:
                 continue
             if _SKIP_ROW.match(normalize_text(portfolio)):
+                continue
+            # A header restated mid-table. Long wikitables repeat their header
+            # every so often, and a repeat written with "|" instead of "!" is
+            # indistinguishable from data by position alone. Recognise it by
+            # content: both cells naming their own column means this row
+            # describes the table, not a minister. Left in, the Arabic word for
+            # "Name" became a person, and then a search for a biography of that
+            # person matched the grammar article for "noun".
+            if (any(k in normalize_text(person) for k in PERSON_HEADERS)
+                    and any(k in normalize_text(portfolio) for k in PORTFOLIO_HEADERS)):
+                continue
+            if _implausible_person(person, portfolio):
                 continue
             # Image sizes ("60px") and bare seat counts come from picture and
             # summary columns, not from roster columns.
             if _NOT_A_VALUE.match(portfolio.strip()) or _NOT_A_VALUE.match(person.strip()):
                 continue
-            links = _cell_links(cells_raw[roles["person"]])
+            links = _cell_links(cells_raw[person_at])
             rows.append({
                 "raw_title": portfolio,
                 "person_name": person,
@@ -444,6 +603,8 @@ def parse_lists(wikitext: str) -> list[dict[str, Any]]:
         # List items carry the sentence punctuation of the surrounding prose
         # ("grand vizir ;"); it is not part of the office name.
         raw_title = re.sub(r"[\s;,.]+$", "", raw_title)
+        if _implausible_person(person, raw_title):
+            continue
         links = _cell_links(person_cell)
         rows.append({
             "raw_title": raw_title,

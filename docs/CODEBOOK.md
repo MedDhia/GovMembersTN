@@ -361,3 +361,39 @@ otherwise make regional and era-level work in R impossible without a rewrite.
 | `era_label` | Human-readable name. |
 | `era_start`, `era_end` | Bounds. `era_end` is empty for the current period. |
 | `interval` | Always `[era_start, era_end)`. Stated in the data because the convention is load-bearing: eras are **half-open**, so a government formed on a transition date belongs to the incoming regime. Re-deriving era membership with an inclusive end date misplaces every such government — Hédi Baccouche, appointed 7 November 1987, would fall under Bourguiba rather than Ben Ali. |
+
+## Coverage after July 2021
+
+The ministers appointed under the post-2021 presidential order are the least
+documented people in the dataset, and no amount of harvesting fixes it. This
+section records what was tried, so the gap is read as a property of the
+sources rather than of the pipeline.
+
+Of the 30 people whose first ministerial post came after July 2021:
+
+| | Coverage |
+|---|---|
+| Wikidata item | 27% |
+| gender | 27% |
+| birthplace coded to a governorate | 7% |
+
+**Wikidata is exhausted.** Nine of them have items. Every one is confirmed a
+human with Tunisian citizenship, and **not one carries a birthplace** (P19);
+three carry a birth date, two of which are year-precision placeholders.
+
+**Arabic Wikipedia is nearly exhausted.** Their names appear in cabinet
+rosters as plain text, so the biography harvester — which follows wikilinks —
+never looked them up. `biographies_ar_search` closes that hole by searching
+the wiki for each unlinked roster name and accepting an article only if its
+title matches the name (see `SEARCH_ACCEPT`). Run against 36 unlinked names it
+matched none: the articles do not exist.
+
+What this means for analysis: **do not compute anything about the post-2021
+period from person-level attributes.** The people who do have attributes are
+overwhelmingly holdovers from earlier cabinets, so a statistic computed on the
+covered subset describes the recruitment of previous regimes. `representation_gini.csv`
+withholds the era for this reason, with `basis` stating it in the data itself.
+
+The appointment record for the period is sound — who held which portfolio, and
+when, comes from cabinet rosters and the *Journal Officiel*, not from
+biographies. It is the biographical layer that is thin.

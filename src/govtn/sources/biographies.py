@@ -35,7 +35,7 @@ from typing import Any, Iterable
 
 from .. import config
 from ..http import Fetcher
-from ..normalize import normalize_text, parse_date
+from ..normalize import name_similarity, normalize_text, parse_date
 
 log = logging.getLogger(__name__)
 
@@ -396,6 +396,116 @@ def harvest(
         log.info("  %d/%d articles parsed", len(records), len(titles))
 
     path = interim / f"biographies_{lang}.json"
+    with path.open("w", encoding="utf-8") as fh:
+        json.dump(records, fh, indent=1, ensure_ascii=False)
+    log.info("wrote %s (%d biographies)", path, len(records))
+    fetcher.flush()
+    return records
+
+
+# A search result is accepted only at or above this name similarity. The
+# search engine ranks by relevance, which is not identity: querying
+# "سمير عبيد" returns "سمير العبيدي" and "سميرة خميس عبيد" at the top, both
+# different people. Scoring the TITLE against the name is what separates them
+# (0.33 and 0.25) from a genuine hit like "حبيب عبيد" / "الحبيب عبيد" (1.0).
+SEARCH_ACCEPT = 0.9
+
+# Article titles that are never a person, however well they score.
+_NOT_A_BIOGRAPHY = re.compile(
+    r"^(حكومة|قائمة|تصنيف|عائلة|وزارة|Gouvernement|Liste|Catégorie|Famille)\b"
+)
+
+
+def search_titles(names: Iterable[str], fetcher: Fetcher, lang: str,
+                  threshold: float = SEARCH_ACCEPT) -> dict[str, str]:
+    """Find a biography article for each name, by search rather than by link.
+
+    `harvest` follows `person_wikilink`, which only exists where the roster
+    table linked the name. Arabic cabinet tables mostly do not link, so the
+    ministers of the post-2021 cabinets - the least documented in the dataset -
+    had no biography fetched even where an article existed. This closes that
+    gap without loosening anything: a hit is accepted only if the article TITLE
+    matches the name, so the search engine ranks candidates but does not decide.
+    """
+    found: dict[str, str] = {}
+    for name in names:
+        clean = str(name).strip()
+        if not clean:
+            continue
+        try:
+            payload = fetcher.get_json(_api(lang), {
+                "action": "query", "list": "search", "srsearch": clean,
+                "srlimit": "5", "format": "json", "formatversion": "2",
+            })
+        except Exception as exc:                      # a miss is not fatal
+            log.debug("search failed for %r: %s", clean, exc)
+            continue
+        for hit in payload.get("query", {}).get("search", []):
+            title = hit.get("title", "")
+            if _NOT_A_BIOGRAPHY.match(title):
+                continue
+            if name_similarity(clean, title) >= threshold:
+                found[clean] = title
+                break
+    return found
+
+
+def harvest_unlinked(*, offline: bool = False, lang: str = "ar",
+                     limit: int | None = None) -> list[dict[str, Any]]:
+    """Biographies for roster names that carried no wikilink.
+
+    Written to its own interim file so the linked and searched sets stay
+    distinguishable: one rests on an editor's link, the other on a name match.
+    """
+    fetcher = _fetcher(offline)
+    interim = config.paths().ensure().interim
+
+    cabinets = json.loads((interim / "wikipedia_cabinets.json").read_text(encoding="utf-8"))
+    linked, unlinked = set(), set()
+    for cabinet in cabinets:
+        for member in cabinet["members"]:
+            name = (member.get("person_name") or "").strip()
+            if not name:
+                continue
+            if member.get("person_wikilink"):
+                linked.add(name)
+            else:
+                unlinked.add(name)
+    # Someone linked in one table needs no search on account of another.
+    names = sorted(unlinked - linked)
+    if limit:
+        names = names[:limit]
+    log.info("[%s] %d unlinked roster names to search", lang, len(names))
+
+    titles = search_titles(names, fetcher, lang)
+    log.info("[%s] %d names matched an article title", lang, len(titles))
+
+    records: list[dict[str, Any]] = []
+    ordered = sorted(set(titles.values()))
+    for start in range(0, len(ordered), BATCH):
+        batch = ordered[start:start + BATCH]
+        try:
+            categories = fetch_categories(batch, fetcher, lang)
+        except Exception as exc:
+            log.warning("category batch failed (%s...): %s", batch[0], exc)
+            continue
+        for title, entry in categories.items():
+            record = parse_categories(entry["categories"], lang)
+            record["qid"] = entry.get("qid")
+            record["article"] = title
+            record["lang"] = lang
+            record["n_categories"] = len(entry["categories"])
+            # The roster name this article was matched to, so a reader can see
+            # what the match rested on.
+            record["matched_name"] = next(
+                (n for n, t in titles.items() if t == title), None)
+            record["match_basis"] = "title_search"
+            record["source_url"] = (
+                f"https://{lang}.wikipedia.org/wiki/{title.replace(' ', '_')}"
+            )
+            records.append(record)
+
+    path = interim / f"biographies_{lang}_search.json"
     with path.open("w", encoding="utf-8") as fh:
         json.dump(records, fh, indent=1, ensure_ascii=False)
     log.info("wrote %s (%d biographies)", path, len(records))

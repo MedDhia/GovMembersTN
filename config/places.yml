@@ -116,11 +116,6 @@ settlements:
   Medjez el-Bab: Béja
   Téboursouk: Béja
   Bou Salem: Jendouba
-  # Arabic-script forms, added as sources supply them. Matching is on
-  # the normalised string, so a settlement written both with and
-  # without a space needs both entries.
-  بوسالم: Jendouba
-  بو سالم: Jendouba
   El Ksour: "Le Kef"
   Nebeur: "Le Kef"
   Tajerouine: "Le Kef"
@@ -232,3 +227,160 @@ foreign_origins:
   Favignana: Italy
   Homs: Syria
   Douma: Syria
+
+# ---------------------------------------------------------------------------
+# Arabic-script settlement names.
+#
+# WHY THESE ARE HERE
+# Arabic Wikipedia is the only source that covers recent cabinets in any
+# depth, and it writes birthplaces in Arabic. With a Latin-only map those
+# ministers were coded as having an unmapped birthplace - not missing from
+# the sources, just unreadable to the pipeline.
+#
+# Every entry was taken from the Wikidata item for the settlement already in
+# the map above, constrained to Tunisia and required to sit in the
+# governorate that map assigns. That is the same containment check that
+# caught El Guettar and Ezzahra being matched to the wrong governorate by
+# name, so these carry the same guarantee rather than being transliterated by
+# hand. Governorate names appear in both bare and "ولاية X" forms because
+# sources use both.
+# ---------------------------------------------------------------------------
+settlements_ar:
+  أريانة: Ariana
+  ولاية أريانة: Ariana
+  الزهراء: "Ben Arous"
+  بن عروس: "Ben Arous"
+  حمام الأنف: "Ben Arous"
+  رادس: "Ben Arous"
+  مقرين: "Ben Arous"
+  ولاية بن عروس: "Ben Arous"
+  الماتلين: Bizerte
+  بنزرت: Bizerte
+  رأس الجبل: Bizerte
+  ماطر: Bizerte
+  منزل بورقيبة: Bizerte
+  ولاية بنزرت: Bizerte
+  باجة: Béja
+  تبرسق: Béja
+  تستور: Béja
+  مجاز الباب: Béja
+  ولاية باجة: Béja
+  الحامة: Gabès
+  المطوية: Gabès
+  قابس: Gabès
+  مارث: Gabès
+  مطماطة: Gabès
+  ولاية قابس: Gabès
+  أم العرائس: Gafsa
+  الرديف: Gafsa
+  القصر: Gafsa
+  القطار: Gafsa
+  قفصة: Gafsa
+  ولاية قفصة: Gafsa
+  بو سالم: Jendouba
+  بوسالم: Jendouba
+  جندوبة: Jendouba
+  طبرقة: Jendouba
+  غار الدماء: Jendouba
+  ولاية جندوبة: Jendouba
+  السبيخة: Kairouan
+  القيروان: Kairouan
+  حاجب العيون: Kairouan
+  حفوز: Kairouan
+  نصر الله: Kairouan
+  ولاية القيروان: Kairouan
+  القصرين: Kasserine
+  الموقع الأثري بحيدرة: Kasserine
+  تالة: Kasserine
+  حيدرة: Kasserine
+  فريانة: Kasserine
+  فوسانة: Kasserine
+  ولاية القصرين: Kasserine
+  دوز: Kébili
+  قبلي: Kébili
+  ولاية قبلي: Kébili
+  الدهماني: "Le Kef"
+  القصور: "Le Kef"
+  الكاف: "Le Kef"
+  تاجروين: "Le Kef"
+  نبر: "Le Kef"
+  ولاية الكاف: "Le Kef"
+  الجم: Mahdia
+  الشابة: Mahdia
+  المهدية: Mahdia
+  رجيش: Mahdia
+  قصور الساف: Mahdia
+  ولاية المهدية: Mahdia
+  الجديدة: Manouba
+  منوبة: Manouba
+  البقالطة: Monastir
+  المكنين: Monastir
+  المنستير: Monastir
+  بوحجر: Monastir
+  جمال: Monastir
+  خنيس: Monastir
+  صيادة: Monastir
+  طبلبة: Monastir
+  قصر هلال: Monastir
+  قصيبة المديوني: Monastir
+  منزل الحياة: Monastir
+  ولاية المنستــير: Monastir
+  الماي: Médenine
+  المحبوبين: Médenine
+  بنقردان: Médenine
+  بني خداش: Médenine
+  جربة: Médenine
+  جرجيس: Médenine
+  حسي عمر: Médenine
+  حومة السوق: Médenine
+  مدنين: Médenine
+  ولاية مدنين: Médenine
+  الحمامات: Nabeul
+  الميدة: Nabeul
+  بني خلاد: Nabeul
+  بني خيار: Nabeul
+  تازركة: Nabeul
+  دار شعبان الفهري: Nabeul
+  قربة: Nabeul
+  منزل تميم: Nabeul
+  نابل: Nabeul
+  ولاية نابل: Nabeul
+  جبنيانة: Sfax
+  ساقية الزيت: Sfax
+  صفاقس: Sfax
+  قرقنة: Sfax
+  ولاية صفاقس: Sfax
+  المزونة: "Sidi Bouzid"
+  المكناسي: "Sidi Bouzid"
+  سيدي بوزيد: "Sidi Bouzid"
+  ولاية الرڨاب: "Sidi Bouzid"
+  ولاية سيدي بوزيد: "Sidi Bouzid"
+  الموقع الأثري بمكثر: Siliana
+  بوعرادة: Siliana
+  سليانة: Siliana
+  مكثر: Siliana
+  ولاية سليانة: Siliana
+  أكودة: Sousse
+  القلعة الصغرى: Sousse
+  حمام سوسة: Sousse
+  سوسة: Sousse
+  مساكن: Sousse
+  هرقلة: Sousse
+  ولاية سوسة: Sousse
+  تطاوين: Tataouine
+  شنني: Tataouine
+  ولاية تطاوين: Tataouine
+  توزر: Tozeur
+  دقاش: Tozeur
+  نفطة: Tozeur
+  ولاية توزر: Tozeur
+  المرسى: Tunis
+  باردو: Tunis
+  تونس: Tunis
+  حلق الوادي: Tunis
+  سيدي بوسعيد: Tunis
+  قرطاج: Tunis
+  ولاية تونس: Tunis
+  الزريبة: Zaghouan
+  زغوان: Zaghouan
+  ولاية زغوان: Zaghouan

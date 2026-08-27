@@ -205,3 +205,200 @@ def test_non_french_discovery_unions_langlinks_with_the_local_index():
     # langlinks come back empty.
     assert "own = discover_cabinet_articles" in body
     assert "if not mapping" not in body, "local index must not be a mere fallback"
+
+
+# --- colspan alignment ------------------------------------------------------
+
+MECHICHI_TABLE = """{| class="wikitable"
+|+Composition au 11 octobre 2021
+|-
+! Poste
+! colspan=2 | Titulaire
+! Parti
+|-
+| '''[[Chef du gouvernement tunisien|Chef du gouvernement]]'''
+| {{Infobox Parti politique tunisien/couleurs|Autre}} |
+| ''Poste vacant''
+|
+|-
+| [[Ministère de l'Intérieur (Tunisie)|Ministre de l'Intérieur]] <small>(intérim)</small>
+| {{Infobox Parti politique tunisien/couleurs|Autre}} |
+| [[Ridha Gharsallaoui]]
+| [[Indépendant (politique)|Indépendant]]
+|-
+| [[Ministère du Commerce (Tunisie)|Ministre du Commerce]]<br>[[Ministère de l'Industrie (Tunisie)|Ministre de l'Industrie]] <small>(intérim)</small>
+| {{Infobox Parti politique tunisien/couleurs|Autre}} |
+| [[Mohamed Bousaïd]]
+| Indépendant
+|}"""
+
+
+def test_colspan_header_does_not_shift_the_person_column():
+    """The FR cabinet tables put a colour swatch and the name under one header.
+
+    `! colspan=2 | Titulaire` covers two columns. Emitting one header cell made
+    the header shorter than its rows, so every index shifted left and the
+    person column landed on the swatch - which strips to a bare "|". Sixteen
+    ministers of the Mechichi cabinet were harvested with the literal name "|",
+    in the least-documented period of the dataset.
+    """
+    rows = parse_tables(MECHICHI_TABLE)
+    names = [r["person_name"] for r in rows]
+    assert "Ridha Gharsallaoui" in names
+    assert "Mohamed Bousaïd" in names
+    assert not any(set(name) <= set("| \t") for name in names), names
+
+
+def test_vacant_posts_are_not_people():
+    """"Poste vacant" is a statement that nobody holds the office."""
+    rows = parse_tables(MECHICHI_TABLE)
+    names = [r["person_name"].lower() for r in rows]
+    assert not any("vacant" in name for name in names), names
+    # And its Arabic equivalent, which reached the published persons table.
+    arabic = """{| class="wikitable"
+! المنصب !! الوزير
+|-
+| وزير الشؤون الدينية || شاغر
+|-
+| وزير الداخلية || خالد النوري
+|}"""
+    rows_ar = parse_tables(arabic)
+    assert [r["person_name"] for r in rows_ar] == ["خالد النوري"]
+
+
+def test_line_breaks_separate_concatenated_portfolios():
+    """A minister holding two portfolios has them joined by <br>, not nothing.
+
+    Stripping the tag welded them into "...du CommerceMinistre de
+    l'Industrie", which matches no alias and falls into `other`.
+    """
+    rows = parse_tables(MECHICHI_TABLE)
+    dual = [r for r in rows if r["person_name"] == "Mohamed Bousaïd"][0]
+    assert "CommerceMinistre" not in dual["raw_title"]
+    assert "Commerce" in dual["raw_title"] and "Industrie" in dual["raw_title"]
+
+
+def test_party_column_survives_the_span():
+    rows = parse_tables(MECHICHI_TABLE)
+    parties = {r["person_name"]: r["party"] for r in rows}
+    assert parties["Ridha Gharsallaoui"] == "Indépendant"
+
+
+def test_restated_header_rows_are_not_ministers():
+    """Long tables repeat their header, sometimes written with | not !.
+
+    Position cannot tell such a row from data, so it is recognised by content.
+    Left in, the Arabic for "Name" became a minister called الاسم - and a
+    search for that person's biography then matched the article on the
+    grammatical noun.
+    """
+    table = """{| class="wikitable"
+! المنصب !! الوزير
+|-
+| وزير الداخلية || خالد النوري
+|-
+| الوظيفة || الاسم
+|-
+| وزير المالية || سهام البوغديري
+|}"""
+    names = [r["person_name"] for r in parse_tables(table)]
+    assert names == ["خالد النوري", "سهام البوغديري"]
+
+
+def test_search_titles_rejects_namesakes():
+    """The search engine ranks by relevance; identity is decided by the title.
+
+    Querying Arabic Wikipedia for "سمير عبيد" returns "سمير العبيدي" and
+    "سميرة خميس عبيد" above any exact match. Accepting the top hit would
+    attach another person's biography.
+    """
+    from govtn.sources.biographies import SEARCH_ACCEPT, search_titles
+
+    class FakeFetcher:
+        def __init__(self, results):
+            self.results = results
+
+        def get_json(self, url, params=None, **kwargs):
+            term = (params or {}).get("srsearch")
+            return {"query": {"search": [{"title": t}
+                                          for t in self.results.get(term, [])]}}
+
+    fetcher = FakeFetcher({
+        "سمير عبيد": ["سمير العبيدي", "سميرة خميس عبيد"],
+        "حبيب عبيد": ["الحبيب عبيد", "نبيلة عبيد"],
+        "منير بن رجيبة": ["حكومة أحمد الحشاني"],
+    })
+    found = search_titles(["سمير عبيد", "حبيب عبيد", "منير بن رجيبة"],
+                          fetcher, "ar", threshold=SEARCH_ACCEPT)
+    # The definite article differs; the person does not.
+    assert found == {"حبيب عبيد": "الحبيب عبيد"}
+
+
+def test_section_labels_spanning_a_row_are_not_ministers():
+    """Arabic rosters group members under headings inside the table.
+
+    "الوزراء التونسيون" / "الوزراء الفرنسيون" (the Tunisian / the French
+    ministers) separate sections of the protectorate cabinets. Where the
+    heading is not marked up as a spanned cell it lands in every column, and
+    was harvested as a minister holding an office named after himself - one
+    record accumulating eleven appointments across five cabinets.
+    """
+    table = """{| class="wikitable"
+! المنصب !! الوزير
+|-
+| الوزراء التونسيون || الوزراء التونسيون
+|-
+| وزير الداخلية || خالد النوري
+|}"""
+    assert [r["person_name"] for r in parse_tables(table)] == ["خالد النوري"]
+
+
+def test_prose_in_a_name_column_is_rejected():
+    """One article explains in a table cell how ministers are appointed."""
+    sentence = ("الوزراء يقترحهم رئيس الحكومة وعددهم متغير حسب الوزارات "
+                "الموجودة وزير الدفاع ووزير الخارجية يتم تعيينهم بعد التشاور")
+    table = f"""{{| class="wikitable"
+! المنصب !! الوزير
+|-
+| مجلس الوزراء || {sentence}
+|-
+| وزير الداخلية || خالد النوري
+|}}"""
+    assert [r["person_name"] for r in parse_tables(table)] == ["خالد النوري"]
+
+
+def test_descriptive_bullets_are_not_roster_lines():
+    """The list parser reached prose the table parser never saw.
+
+    "Gouvernement de la Tunisie" describes the institution rather than listing
+    a cabinet; its bullets define the offices. The definition was harvested as
+    the minister and the defined term as the portfolio.
+    """
+    wikitext = (
+        "* les ministres : ils sont d'un nombre variable en fonction des "
+        "ministères qu'ils sont amenés à diriger ;\n"
+        "* Ministre de l'Intérieur : [[Taïeb Mehiri]]\n"
+    )
+    assert [r["person_name"] for r in parse_lists(wikitext)] == ["Taïeb Mehiri"]
+
+
+def test_prose_in_the_office_cell_is_rejected_but_real_titles_survive():
+    """Both halves of this guard are load-bearing.
+
+    An Arabic article explains in a table cell how ministers are appointed,
+    with "الوزراء" ("the ministers") as the holder. Length alone would also
+    reject a genuine dual portfolio, which runs to 125 characters; a full stop
+    alone would reject "Secr. d'État au Plan et aux Finances".
+    """
+    from govtn.sources.wikipedia import _implausible_person
+
+    prose = ("الوزراء يقترحهم رئيس الحكومة وعددهم متغير حسب الوزارات الموجودة. "
+             "وزير الدفاع ووزير الخارجية يتم تعيينهم بعد التشاور من رئيس الوزراء")
+    assert _implausible_person("الوزراء", prose)
+
+    dual = ("Ministre du Commerce et du Développement des exportations / "
+            "Ministre de l'Industrie, de l'Énergie et des Mines (intérim)")
+    assert len(dual) > 90
+    assert not _implausible_person("Mohamed Bousaïd", dual)
+    assert not _implausible_person("Ahmed Ben Salah",
+                                   "Secr. d'État au Plan et aux Finances")

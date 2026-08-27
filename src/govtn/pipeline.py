@@ -26,6 +26,10 @@ STAGES = {
     "wikipedia": lambda offline: wikipedia.harvest(offline=offline, langs=("fr", "ar")),
     "leaders": lambda offline: leaders.harvest(offline=offline),
     "biographies": lambda offline: biographies.harvest(offline=offline, lang="fr"),
+    # Arabic rosters mostly do not link their members, so the linked-only
+    # harvest never reached the post-2021 ministers. This searches by name.
+    "biographies_ar_search": lambda offline: biographies.harvest_unlinked(
+        offline=offline, lang="ar"),
     "govtn_portal": lambda offline: govtn_portal.harvest(offline=offline),
     "jort": lambda offline: jort.harvest(offline=offline),
 }
@@ -46,7 +50,7 @@ def harvest(stages: list[str], *, offline: bool) -> dict[str, bool]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--stages", default="wikidata,wikipedia,biographies,leaders,govtn_portal,jort",
+    parser.add_argument("--stages", default="wikidata,wikipedia,biographies,biographies_ar_search,leaders,govtn_portal,jort",
                         help="comma-separated harvest stages, or 'none'")
     parser.add_argument("--no-fetch", action="store_true",
                         help="rebuild from cached payloads without network access")
