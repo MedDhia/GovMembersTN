@@ -1,6 +1,6 @@
 """Publication figures for GovMembersTN.
 
-Twenty-six figures, built offline from `data/processed/` alone. Like the example
+Thirty-six figures, built offline from `data/processed/` alone. Like the example
 scripts in `analysis/`, this reads only the published tables - it never imports
 `govtn` and never touches `config/`, so it runs against a `make bundle` archive
 with nothing installed but pandas and matplotlib.
@@ -1914,6 +1914,596 @@ def fig_seat_switching(d):
     return fig, table
 
 
+# ------------------------------------------------ shared for figures 27-36 ---
+# The GEXF carries `betweenness`, `closeness` and `eigenvector` precomputed by
+# `govtn.networks`. Recomputing them here would risk quietly disagreeing with
+# the numbers docs/NETWORK_ANALYSIS.md tells a Gephi user to partition on, so
+# the published values are read rather than re-derived. It ships in
+# `data/processed/`, so this still runs from a `make bundle` archive.
+GEXF = PROCESSED / "networks" / "network_co_membership.gexf"
+
+LAYERS = [
+    ("edges_bipartite", "Bipartite\nperson → cabinet"),
+    ("edges_co_membership", "Co-membership\nserved together"),
+    ("edges_succession", "Succession\nsame portfolio"),
+    ("edges_homophily", "Homophily\nshared attribute"),
+]
+
+
+def co_graph():
+    import networkx as nx
+    return nx.read_gexf(GEXF)
+
+
+def communities(graph, min_size: int = 10):
+    """Louvain communities, largest first, singletons dropped.
+
+    Seeded, so the figure is reproducible; `govtn` reports the same modularity
+    of 0.465 from `analysis/*/03_networks`.
+    """
+    import networkx as nx
+    found = nx.community.louvain_communities(graph, seed=20260827, weight="weight")
+    return sorted((c for c in found if len(c) >= min_size), key=len, reverse=True)
+
+
+# -------------------------------------------------------- figures 27 to 36 ---
+def fig_degree_distribution(d):
+    """How connectedness is spread: a dense core and a long thin tail."""
+    import networkx as nx
+    g = co_graph()
+    degrees = pd.Series(dict(g.degree())).sort_values()
+    table = (degrees.value_counts().sort_index().rename_axis("degree")
+             .reset_index(name="people"))
+
+    fig, ax = plt.subplots(figsize=(7.0, 3.8))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-8, degrees.max() * 1.05)
+    counts, edges = np.histogram(degrees, bins=28)
+    ax.set_ylim(0, counts.max() * 1.2)
+    for lo, hi, c in zip(edges[:-1], edges[1:], counts):
+        if c:
+            rounded_bar(ax, lo + (hi - lo) * 0.08, 0, (hi - lo) * 0.84, c, CAT[0])
+    median = degrees.median()
+    ax.axvline(median, color=INK_2, lw=1.2, zorder=5)
+    ax.text(median + 6, counts.max() * 1.1, f"median {median:.0f}", fontsize=8,
+            color=INK_2)
+    isolates = int((degrees == 0).sum())
+    ax.set_xlabel("Colleagues (degree in the co-membership layer)")
+    ax.set_ylabel("Ministers")
+    ax.set_title("How many colleagues a Tunisian minister has")
+    ax.text(0, -0.22, f"{isolates} ministers have none — they are the sole "
+                      f"recorded member of their cabinet, or overlapped no one "
+                      f"by 30 days.\nTransitivity is {nx.transitivity(g):.2f}, "
+                      f"which is a property of the construction: everyone in a "
+                      f"cabinet is joined to everyone else,\nso the layer is a "
+                      f"union of near-cliques rather than a sparse social "
+                      f"network. Read degree as exposure, not popularity.\nThe "
+                      f"spike near 175 is a single composite roster whose "
+                      f"members all take the same degree — a fact about how the "
+                      f"source chunks cabinets.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_exposure_vs_brokerage(d):
+    """Two different kinds of centrality, and they pick different people.
+
+    Weighted degree is time served alongside others - exposure. Betweenness is
+    sitting on the paths between people who never served together - brokerage.
+    Fig. 16's top-degree list is wall-to-wall Ben Ali; the top brokers are the
+    people whose careers straddle a regime change.
+    """
+    g = co_graph()
+    rows = []
+    for n, attr in g.nodes(data=True):
+        rows.append({"person_id": n, "name": attr.get("name", n),
+                     "colleague_years": float(attr.get("weighted_degree", 0)) / 365.25,
+                     "betweenness": float(attr.get("betweenness", 0)),
+                     "eras_served": attr.get("eras_served", ""),
+                     "n_eras": len([e for e in str(attr.get("eras_served", "")).split("|") if e])})
+    table = pd.DataFrame(rows).sort_values("betweenness", ascending=False)
+    live = table[table["colleague_years"] > 0]
+
+    fig, ax = plt.subplots(figsize=(7.0, 4.4))
+    ax.set_axisbelow(True); ax.grid(True)
+    ax.set_xlim(0, live["colleague_years"].max() * 1.08)
+    ax.set_ylim(-0.002, live["betweenness"].max() * 1.18)
+    single = live[live["n_eras"] <= 1]
+    multi = live[live["n_eras"] >= 2]
+    ax.plot(single["colleague_years"], single["betweenness"], linestyle="none",
+            marker="o", markersize=5, color="#d6d5cf", markeredgecolor=SURFACE,
+            markeredgewidth=1.2, zorder=3)
+    ax.plot(multi["colleague_years"], multi["betweenness"], linestyle="none",
+            marker="o", markersize=6, color=CAT[0], markeredgecolor=SURFACE,
+            markeredgewidth=1.2, zorder=4)
+    # Three labels, fanned to distinct sides with leader lines. Five stacked
+    # on top of each other was unreadable where the brokers cluster.
+    for (_, r), (dx, dy) in zip(table.head(3).iterrows(),
+                                [(-14, 18), (16, 14), (18, -14)]):
+        ax.annotate(r["name"][:24], xy=(r["colleague_years"], r["betweenness"]),
+                    xytext=(dx, dy), textcoords="offset points", fontsize=7.5,
+                    color=INK, ha="left" if dx > 0 else "right", va="center",
+                    arrowprops=dict(arrowstyle="-", color=AXIS, lw=0.8,
+                                    shrinkA=0, shrinkB=5))
+    ax.set_xlabel("Colleague-years (exposure)")
+    ax.set_ylabel("Betweenness (brokerage)")
+    ax.set_title("Exposure and brokerage are not the same thing")
+    ax.legend(handles=[
+        Line2D([], [], marker="o", linestyle="none", markersize=6,
+               markerfacecolor=CAT[0], markeredgecolor=SURFACE,
+               label="served under two or more regimes"),
+        Line2D([], [], marker="o", linestyle="none", markersize=5,
+               markerfacecolor="#d6d5cf", markeredgecolor=SURFACE,
+               label="one regime only")], loc="upper center",
+        bbox_to_anchor=(0.5, -0.14), ncol=2)
+    ax.text(0, -0.26, "The three highest brokers are labelled. All 20 of the "
+                      "highest are multi-regime; among the 707 who served under "
+                      "one regime only,\n0.1% clear a betweenness of 0.01, "
+                      "against 17.7% of the 175 who served under two or more. "
+                      "Exposure does not buy it: the thirteen\nministers past "
+                      "3,000 colleague-years top out at 0.0095, while the top "
+                      "broker ranks only 30th on exposure. Sitting between "
+                      "cohorts that\nnever overlapped is what betweenness "
+                      "measures here — a regime-spanning statistic, not an "
+                      "influence one.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table.head(40)
+
+
+def fig_communities(d):
+    """The community structure is chronology. That is the finding.
+
+    Modularity of 0.465 across six communities sounds like faction structure
+    until you see what the communities are: each is a cohort. Nobody is
+    grouped with people they did not serve alongside, because co-membership
+    ties cannot cross time.
+    """
+    g = co_graph()
+    comms = communities(g)
+    app = d["appointments"]
+    eras = [e for e in ERA_ORDER if e != "beylical"]
+
+    grid, labels, rows = [], [], []
+    for i, c in enumerate(comms, start=1):
+        block = app[app["person_id"].isin(c)]
+        shares = [float((block["era"] == e).mean()) for e in eras]
+        years = pd.to_numeric(block["start_year"], errors="coerce").dropna()
+        median_year = int(years.median()) if len(years) else 0
+        grid.append(shares)
+        labels.append(f"C{i}  (n={len(c)})\nmedian {median_year}")
+        row = {"community": f"C{i}", "members": len(c), "median_start_year": median_year}
+        row.update({e: round(s, 3) for e, s in zip(eras, shares)})
+        rows.append(row)
+    grid = np.array(grid)
+
+    fig, ax = plt.subplots(figsize=(7.4, 4.8))
+    for i in range(grid.shape[0]):
+        for j in range(grid.shape[1]):
+            v = grid[i, j]
+            color = seq_color(v)
+            ax.add_patch(plt.Rectangle((j + 0.03, i + 0.03), 0.94, 0.94,
+                                       facecolor=color, edgecolor="none"))
+            if v >= 0.04:
+                ax.text(j + 0.5, i + 0.5, f"{v:.0%}", ha="center", va="center",
+                        fontsize=7.5, color=ink_on(color))
+    ax.set_xlim(0, grid.shape[1]); ax.set_ylim(grid.shape[0], 0)
+    ax.set_xticks(np.arange(len(eras)) + 0.5)
+    ax.set_xticklabels([ERA_SHORT[e] for e in eras], rotation=35, ha="right")
+    ax.set_yticks(np.arange(len(comms)) + 0.5)
+    ax.set_yticklabels(labels, fontsize=8)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.tick_params(length=0)
+    ax.set_title("Every community is a cohort")
+    ax.text(0, -0.42, "Rows are Louvain communities (modularity 0.465, seeded); "
+                      "cells are the share of that community's appointments "
+                      "falling in each era,\nand the row label carries the "
+                      "median start year. Each row concentrates on one era. "
+                      "Co-membership ties cannot cross time, so\nhigh modularity "
+                      "here is a restatement of the calendar, not evidence of "
+                      "factions.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, pd.DataFrame(rows)
+
+
+def fig_assortativity(d):
+    """Does any attribute predict who serves with whom? Not really.
+
+    Polarity around zero, so the colour job is diverging. Each coefficient is
+    computed on the subgraph where the attribute is coded, which is why n
+    travels with it - a coefficient over 456 people is not the same claim as
+    one over 882.
+    """
+    import networkx as nx
+    g = co_graph()
+    attributes = [
+        ("birth_region_type", "Region of birth"),
+        ("birth_sahel", "Born in the Sahel"),
+        ("birth_coastal", "Born on the coast"),
+        ("gender", "Gender"),
+        ("ever_sovereign_portfolio", "Ever held a sovereign post"),
+        ("ever_head_of_government", "Ever head of government"),
+    ]
+    rows = []
+    for key, label in attributes:
+        nodes = [n for n, a in g.nodes(data=True)
+                 if a.get(key) not in (None, "", "nan")]
+        sub = g.subgraph(nodes)
+        if sub.number_of_edges() < 100:
+            continue
+        r = nx.attribute_assortativity_coefficient(sub, key)
+        rows.append({"attribute": label, "key": key, "people": sub.number_of_nodes(),
+                     "ties": sub.number_of_edges(), "assortativity": round(r, 4)})
+    table = pd.DataFrame(rows).sort_values("assortativity")
+
+    fig, ax = plt.subplots(figsize=(6.8, 3.6))
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_ylim(len(table) - 0.4, -0.7); ax.set_xlim(-0.12, 0.12)
+    for i, r in table.reset_index(drop=True).iterrows():
+        positive = r["assortativity"] >= 0
+        lo, hi = min(0.0, r["assortativity"]), max(0.0, r["assortativity"])
+        rounded_bar(ax, lo, i - 0.2, hi - lo, 0.4,
+                    DIV_HIGH if positive else DIV_LOW, horizontal=True,
+                    flip=not positive)
+        ax.text(r["assortativity"] + (0.005 if positive else -0.005), i,
+                f"{r['assortativity']:+.3f}", va="center",
+                ha="left" if positive else "right", fontsize=7.5, color=INK_2)
+    ax.axvline(0, color=AXIS, lw=1.2, zorder=2)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels([f"{r['attribute']}  (n={r['people']})"
+                        for _, r in table.reset_index(drop=True).iterrows()])
+    ax.set_xlabel("Assortativity coefficient")
+    ax.set_title("Nothing sorts who serves alongside whom")
+    ax.text(0, -0.24, "0 is what proportional mixing would give; ±1 would be "
+                      "perfect sorting. Everything lands inside ±0.05, so none "
+                      "of it is sorting.\nGender is the largest at +0.046, and "
+                      "even that is more plausibly cohort than affinity: women "
+                      "arrive in numbers only after 2011,\nso they share "
+                      "cabinets by arriving together. Each coefficient uses only "
+                      "the subgraph where the attribute is coded.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_layers_compared(d):
+    """Four layers, four different objects — the README says so; here it is.
+
+    Density is not comparable across layers with different node counts, so it
+    is shown beside the counts rather than on its own.
+    """
+    import networkx as nx
+    rows = []
+    for name, label in LAYERS:
+        frame = pd.read_csv(PROCESSED / "networks" / f"{name}.csv")
+        if name == "edges_bipartite":
+            people = set(frame["person_id"]); cabinets = set(frame["cabinet_id"])
+            rows.append({"layer": label.replace("\n", " "), "nodes": len(people) + len(cabinets),
+                         "ties": len(frame), "directed": False,
+                         "mean_degree": round(2 * len(frame) / (len(people) + len(cabinets)), 1)})
+            continue
+        graph = nx.DiGraph() if name == "edges_succession" else nx.Graph()
+        graph.add_edges_from(zip(frame["source"], frame["target"]))
+        n = graph.number_of_nodes()
+        rows.append({"layer": label.replace("\n", " "), "nodes": n, "ties": len(frame),
+                     "directed": name == "edges_succession",
+                     "mean_degree": round(2 * len(frame) / n, 1) if n else 0})
+    table = pd.DataFrame(rows)
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.8, 3.4))
+    for ax, column, title in zip(axes, ["ties", "mean_degree"],
+                                 ["Ties in the layer", "Mean degree"]):
+        ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+        ax.set_xlim(-0.7, len(table) - 0.3)
+        ax.set_ylim(0, table[column].max() * 1.22)
+        for i, v in enumerate(table[column]):
+            rounded_bar(ax, i - 0.2, 0, 0.4, v, CAT[0])
+            ax.text(i, v + table[column].max() * 0.03,
+                    f"{v:,.0f}" if column == "ties" else f"{v:,.1f}",
+                    ha="center", va="bottom", fontsize=8, color=INK)
+        ax.set_xticks(range(len(table)))
+        ax.set_xticklabels([lab.split("\n")[0] for _, lab in LAYERS],
+                           fontsize=8)
+        ax.set_title(title, fontsize=10)
+    fig.suptitle("The four layers are four different objects", fontsize=11,
+                 fontweight="bold", color=INK, y=1.03)
+    fig.text(0, -0.12, "Bipartite is person → cabinet; co-membership is served "
+                       "together; succession is same portfolio, directed; "
+                       "homophily is a shared\nattribute. Counts are not a "
+                       "ranking: co-membership dominates by construction, since "
+                       "every pair in a cabinet is a tie and it grows with "
+                       "the\nsquare of cabinet size, while succession grows "
+                       "linearly with handovers. The bipartite layer is the "
+                       "primitive the other three derive from;\nits node count "
+                       "includes cabinets as well as people.",
+             fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_homophily_and_co_service(d):
+    """Do people who share an attribute actually end up serving together?
+
+    Unconditional, and cohort-confounded: two people from the same small
+    governorate who both reach government are quite likely to be of an age,
+    and so to serve at the same time. Fig. 13 asks the conditional version -
+    given who was in office, does origin sort co-membership - and answers no.
+    Both can be true; they are different questions.
+    """
+    co, ho, persons = d["co"], d["homophily"], d["persons"]
+    co_pairs = {frozenset((a, b)) for a, b in zip(co["source"], co["target"])}
+    # Every person in the frame could in principle have served with every
+    # other, and both layers are built over that same frame - so it is the
+    # denominator. Restricting to people who DID form a tie would inflate the
+    # baseline by dropping the isolates.
+    people = set(persons["person_id"])
+    possible = len(people) * (len(people) - 1) / 2
+    baseline = len(co_pairs) / possible
+
+    pretty = {"shared_parties": "Shared party",
+              "shared_education": "Shared university",
+              "shared_birth_governorate": "Shared birth governorate"}
+    rows = []
+    for tie_type, block in ho.groupby("tie_type"):
+        pairs = {frozenset((a, b)) for a, b in zip(block["source"], block["target"])}
+        overlap = len(pairs & co_pairs)
+        rows.append({"channel": pretty.get(tie_type, tie_type), "pairs": len(pairs),
+                     "also_co_served": overlap,
+                     "share": round(overlap / len(pairs), 4),
+                     "times_baseline": round((overlap / len(pairs)) / baseline, 2)})
+    table = pd.DataFrame(rows).sort_values("share")
+
+    fig, ax = plt.subplots(figsize=(6.8, 3.6))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(table) - 0.3); ax.set_ylim(0, table["share"].max() * 1.3)
+    for i, r in table.reset_index(drop=True).iterrows():
+        rounded_bar(ax, i - 0.2, 0, 0.4, r["share"], CAT[0])
+        ax.text(i, r["share"] + table["share"].max() * 0.04,
+                f"{r['share']:.0%}\n{r['times_baseline']:.1f}×", ha="center",
+                va="bottom", fontsize=8, color=INK)
+    ax.axhline(baseline, color=INK_2, lw=1.4, zorder=5)
+    ax.text(len(table) - 0.35, baseline + table["share"].max() * 0.02,
+            f"all pairs: {baseline:.1%}", ha="right", fontsize=7.5, color=INK_2)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels(table["channel"])
+    ax.set_ylabel("Share of pairs who also served together")
+    ax.set_title("Shared background and actually serving together")
+    ax.text(0, -0.26, "Party is the strongest channel and birth governorate the "
+                      "weakest. Unconditional and cohort-confounded — people who "
+                      "share a small\ngovernorate tend to share a generation. "
+                      "Fig. 13 asks whether origin sorts co-membership GIVEN who "
+                      "was in office, and finds it does not.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_cohesion_by_era(d):
+    """How tightly knit each era's government network is."""
+    import networkx as nx
+    co, app = d["co"], d["appointments"]
+    rows = []
+    for era in ERA_ORDER:
+        people = set(app.loc[app["era"] == era, "person_id"].dropna())
+        if len(people) < 20:
+            continue
+        block = co[co["source"].isin(people) & co["target"].isin(people)]
+        graph = nx.Graph()
+        graph.add_nodes_from(people)
+        graph.add_edges_from(zip(block["source"], block["target"]))
+        n, m = graph.number_of_nodes(), graph.number_of_edges()
+        rows.append({"era": era, "era_label": ERA_SHORT[era], "people": n,
+                     "ties": m, "mean_degree": round(2 * m / n, 1),
+                     "density": round(nx.density(graph), 3),
+                     "transitivity": round(nx.transitivity(graph), 3)})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.8, 3.8))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.4, len(table) - 0.6)
+    ax.set_ylim(0, table["mean_degree"].max() * 1.25)
+    xs = range(len(table))
+    ax.plot(xs, table["mean_degree"], color=CAT[0], lw=2.0, marker="o",
+            markersize=6, markeredgecolor=SURFACE, markeredgewidth=2, zorder=4)
+    for i in (int(table["mean_degree"].idxmax()), len(table) - 1):
+        ax.text(i, table["mean_degree"].iloc[i] + table["mean_degree"].max() * 0.05,
+                f"{table['mean_degree'].iloc[i]:.0f}", ha="center", fontsize=8.5,
+                color=INK)
+    ax.set_xticks(list(xs))
+    ax.set_xticklabels([f"{r['era_label']}\nn={r['people']}"
+                        for _, r in table.iterrows()], fontsize=7.5)
+    ax.set_ylabel("Mean colleagues per minister")
+    ax.set_title("How many colleagues an era gives you")
+    ax.text(0, -0.30, "Mean degree rather than density: density falls "
+                      "mechanically as an era admits more people, so the two "
+                      "move in opposite directions here and\ndensity would read "
+                      "as decline where the network is in fact getting larger. "
+                      "Both are in the table. The Ben Ali peak is inflated by "
+                      "the same\ncomposite rosters as figs. 7 and 35 — one "
+                      "article covering a decade of reshuffles ties everyone in "
+                      "it to everyone else.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_brokers(d):
+    """The top brokers, and the regimes each of them spans.
+
+    Read beside fig. 16: that list is exposure and is wall-to-wall Ben Ali.
+    This one is brokerage, and every name on it crosses at least one
+    transition.
+    """
+    g = co_graph()
+    rows = []
+    for n, attr in g.nodes(data=True):
+        served = [e for e in str(attr.get("eras_served", "")).split("|") if e]
+        rows.append({"person_id": n, "name": attr.get("name", n),
+                     "betweenness": float(attr.get("betweenness", 0)),
+                     "n_eras": len(served),
+                     "eras_served": "|".join(sorted(served, key=ERA_ORDER.index))})
+    table = (pd.DataFrame(rows).sort_values("betweenness", ascending=False)
+             .head(15).reset_index(drop=True))
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(8.4, 4.6),
+                                  gridspec_kw={"width_ratios": [1.25, 1]})
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_ylim(len(table) - 0.4, -0.8)
+    ax.set_xlim(0, table["betweenness"].max() * 1.18)
+    for i, r in table.iterrows():
+        rounded_bar(ax, 0, i - 0.2, r["betweenness"], 0.4, CAT[0], horizontal=True)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels([n[:26] for n in table["name"]], fontsize=8)
+    ax.set_xlabel("Betweenness")
+    ax.set_title("Brokerage", fontsize=10)
+
+    # The eras each broker spans, on the same rows. Five ordered periods, so
+    # the ordinal ramp, not categorical hues.
+    spans = ["protectorate", "monarchy", "bourguiba", "ben_ali", "transition",
+             "second_republic", "saied_exception"]
+    ax2.set_axisbelow(True); ax2.xaxis.grid(True); ax2.yaxis.grid(False)
+    ax2.set_ylim(len(table) - 0.4, -0.8); ax2.set_xlim(-0.5, len(spans) - 0.5)
+    for i, r in table.iterrows():
+        served = set(r["eras_served"].split("|"))
+        for j, era in enumerate(spans):
+            if era in served:
+                ax2.add_patch(plt.Rectangle((j - 0.36, i - 0.2), 0.72, 0.4,
+                                            facecolor=CAT[0], edgecolor="none",
+                                            zorder=3))
+    ax2.set_yticks([]); ax2.set_xticks(range(len(spans)))
+    ax2.set_xticklabels([ERA_SHORT[e] for e in spans], rotation=45, ha="right",
+                        fontsize=7.5)
+    ax2.set_title("Regimes served under", fontsize=10)
+
+    fig.suptitle("The brokers are the people who outlived a regime",
+                 fontsize=11, fontweight="bold", color=INK, y=1.0)
+    fig.text(0, -0.04, "Betweenness is precomputed in the published GEXF. In a "
+                       "layer whose ties cannot cross time, sitting between "
+                       "cohorts requires having been\nin both — so all fifteen "
+                       "span at least two regimes, eight span three, and "
+                       "Mohamed Ben Salem and Hédi Nouira span four apiece.",
+             fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_tie_weights(d):
+    """What a co-membership tie is worth, and where the 30-day floor falls.
+
+    `DEFAULT_MIN_OVERLAP_DAYS = 30` is documented as a research decision
+    rather than a fact, so the distribution it cuts into is worth seeing.
+    """
+    co = d["co"]
+    years = co["overlap_days"] / 365.25
+    table = pd.DataFrame({
+        "quantile": ["min", "p10", "p25", "median", "p75", "p90", "max"],
+        "overlap_days": [int(co["overlap_days"].quantile(q)) if isinstance(q, float)
+                         else int(getattr(co["overlap_days"], q)())
+                         for q in ["min", 0.10, 0.25, 0.50, 0.75, 0.90, "max"]],
+    })
+
+    CLIP = 20.0
+    beyond = int((years > CLIP).sum())
+    fig, ax = plt.subplots(figsize=(7.2, 3.8))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    counts, edges = np.histogram(years.clip(upper=CLIP), bins=40, range=(0, CLIP))
+    ax.set_xlim(0, CLIP * 1.02); ax.set_ylim(0, counts.max() * 1.22)
+    for lo, hi, c in zip(edges[:-1], edges[1:], counts):
+        if c:
+            rounded_bar(ax, lo + (hi - lo) * 0.08, 0, (hi - lo) * 0.84, c, CAT[0])
+    median = float(years.median())
+    ax.axvline(median, color=INK_2, lw=1.2, zorder=5)
+    ax.text(median + 0.25, counts.max() * 1.12, f"median {median:.1f} years",
+            fontsize=8, color=INK_2)
+    ax.annotate(f"{beyond:,} ties run longer\nthan {CLIP:.0f} years",
+                xy=(CLIP * 0.985, counts.max() * 0.16), xytext=(-10, 30),
+                textcoords="offset points", ha="right", fontsize=7.5,
+                color=DIV_LOW,
+                arrowprops=dict(arrowstyle="-", color=DIV_LOW, lw=0.8))
+    ax.set_xlabel(f"Years of overlapping service in one tie (clipped at {CLIP:.0f})")
+    ax.set_ylabel("Ties")
+    ax.set_title("What a co-membership tie is worth")
+    ax.text(0, -0.24, "Weight is days of overlap, not a count of shared "
+                      "cabinets: two people who share a cabinet label but never "
+                      "sat in it together are not tied.\nThe floor is 30 days — "
+                      "0.08 on this axis — and raising it is a research "
+                      "decision `govtn.networks` exposes as a parameter. The "
+                      "tail past 20 years\nis not real service: it comes from "
+                      "the composite rosters that also inflate fig. 7, where one "
+                      "article covers a decade of reshuffles and every\npair "
+                      "inside it inherits that span. Treat every weight as an "
+                      "upper bound.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_succession_inheritance(d):
+    """Does following a long-serving minister go with lasting longer yourself?
+
+    Weakly, and this is a correlation in a layer where both sides are shaped
+    by the same cabinet calendar - a stable decade gives long tenures to
+    predecessor and successor alike. It is here as the succession layer's own
+    descriptive, not as an inheritance effect.
+    """
+    succ, app = d["succession"], d["appointments"]
+    tenures = personal_tenures(app)
+    per_person = tenures.groupby("person_id")["tenure_days"].median()
+
+    block = succ.dropna(subset=["predecessor_tenure_days"]).copy()
+    block["successor_days"] = block["target"].map(per_person)
+    block = block.dropna(subset=["successor_days"])
+    block = block[(block["predecessor_tenure_days"] > 0) & (block["successor_days"] > 0)]
+
+    bins = [0, 365, 730, 1460, 2920, np.inf]
+    names = ["<1y", "1–2y", "2–4y", "4–8y", "8y+"]
+    block["bucket"] = pd.cut(block["predecessor_tenure_days"], bins=bins,
+                             labels=names, right=False)
+    rows = []
+    for name in names:
+        grp = block[block["bucket"] == name]["successor_days"] / 365.25
+        if len(grp) < 20:
+            continue
+        rows.append({"predecessor_tenure": name, "handovers": len(grp),
+                     "q1": round(grp.quantile(.25), 2),
+                     "median_successor_years": round(grp.median(), 2),
+                     "q3": round(grp.quantile(.75), 2)})
+    table = pd.DataFrame(rows)
+    corr = float(np.corrcoef(np.log1p(block["predecessor_tenure_days"]),
+                             np.log1p(block["successor_days"]))[0, 1])
+
+    fig, ax = plt.subplots(figsize=(6.6, 3.6))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.6, len(table) - 0.4); ax.set_ylim(0, table["q3"].max() * 1.25)
+    for i, r in table.iterrows():
+        ax.plot([i, i], [r["q1"], r["q3"]], color=CAT[0], lw=6, alpha=0.28,
+                solid_capstyle="round", zorder=3)
+        ax.plot([i], [r["median_successor_years"]], marker="o", markersize=9,
+                color=CAT[0], markeredgecolor=SURFACE, markeredgewidth=2, zorder=4)
+    for i in (0, len(table) - 1):
+        r = table.iloc[i]
+        ax.text(i, r["median_successor_years"] + table["q3"].max() * 0.05,
+                f"{r['median_successor_years']:.1f}y", ha="center", fontsize=8.5,
+                color=INK)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{r['predecessor_tenure']}\nn={r['handovers']}"
+                        for _, r in table.iterrows()])
+    ax.set_xlabel("How long the predecessor lasted")
+    ax.set_ylabel("Successor's median tenure (years)")
+    ax.set_title("Inheriting a portfolio from someone who lasted")
+    ax.text(0, -0.30, f"Dot is the median, band the interquartile range. "
+                      f"Correlation of the logged tenures is {corr:.2f} — weak.\n"
+                      f"Both sides are shaped by the same cabinet calendar, so a "
+                      f"stable decade lengthens predecessor and successor alike. "
+                      f"Descriptive only.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
 FIGURES = [
     ("fig01_coverage_by_decade", fig_coverage),
     ("fig02_women_share_by_era", fig_women),
@@ -1941,6 +2531,16 @@ FIGURES = [
     ("fig24_governorate_parity_by_era", fig_governorate_by_era),
     ("fig25_coast_sahel_interior", fig_coastal_interior),
     ("fig26_seat_switching_and_career", fig_seat_switching),
+    ("fig27_degree_distribution", fig_degree_distribution),
+    ("fig28_exposure_vs_brokerage", fig_exposure_vs_brokerage),
+    ("fig29_communities_are_cohorts", fig_communities),
+    ("fig30_assortativity_by_attribute", fig_assortativity),
+    ("fig31_network_layers_compared", fig_layers_compared),
+    ("fig32_homophily_and_co_service", fig_homophily_and_co_service),
+    ("fig33_cohesion_by_era", fig_cohesion_by_era),
+    ("fig34_brokers_span_regimes", fig_brokers),
+    ("fig35_tie_weight_distribution", fig_tie_weights),
+    ("fig36_succession_inheritance", fig_succession_inheritance),
 ]
 
 

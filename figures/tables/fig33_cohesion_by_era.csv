@@ -1,0 +1,9 @@
+era,era_label,people,ties,mean_degree,density,transitivity
+protectorate,Protectorate,61,372,12.2,0.203,0.693
+protectorate_end,Protec. end,23,207,18.0,0.818,0.942
+monarchy,Monarchy,24,220,18.3,0.797,0.923
+bourguiba,Bourguiba,147,4165,56.7,0.388,0.779
+ben_ali,Ben Ali,351,22935,130.7,0.373,0.868
+transition,Transition,137,2548,37.2,0.274,0.816
+second_republic,2nd Republic,246,8001,65.0,0.266,0.847
+saied_exception,Post-2021,74,1899,51.3,0.703,0.869

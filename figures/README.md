@@ -1,6 +1,6 @@
 # Figures
 
-Twenty-six publication figures built from `data/processed/` alone.
+Thirty-six publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -43,6 +43,16 @@ deterministic: the one stochastic step, the graph layout in fig. 6, is seeded.
 | `fig24_governorate_parity_by_era` | Heatmap, diverging | Ministers per capita against parity, governorate × era. |
 | `fig25_coast_sahel_interior` | Multi-line | Coast, narrow Sahel and interior shares, era by era. |
 | `fig26_seat_switching_and_career` | Interval | Career length by number of portfolios held. |
+| `fig27_degree_distribution` | Histogram | How many colleagues a minister has. |
+| `fig28_exposure_vs_brokerage` | Scatter, emphasis | Weighted degree against betweenness. |
+| `fig29_communities_are_cohorts` | Heatmap, sequential | Louvain communities against era — they are cohorts. |
+| `fig30_assortativity_by_attribute` | Diverging bar | Does any attribute sort who serves with whom? |
+| `fig31_network_layers_compared` | Bar, two panels | The four layers on comparable counts. |
+| `fig32_homophily_and_co_service` | Bar + baseline | Do shared-attribute pairs actually serve together? |
+| `fig33_cohesion_by_era` | Line | Mean colleagues per minister, era by era. |
+| `fig34_brokers_span_regimes` | Bar + presence grid | Top betweenness, and the regimes each spans. |
+| `fig35_tie_weight_distribution` | Histogram | What a co-membership tie is worth. |
+| `fig36_succession_inheritance` | Interval | Successor tenure by predecessor tenure. |
 
 ## Reading them
 
@@ -108,6 +118,35 @@ protectorate's 68% same-region handover rate in fig. 23 looks like strong
 homophily until you see the chance line at 65%: recruitment was already that
 concentrated. Without the baseline the figure would state a finding that
 isn't there.
+
+**The network layer is a union of cliques, and that governs how to read it.**
+Everyone in a cabinet is tied to everyone else, so transitivity is 0.82 by
+construction and degree measures *exposure*, not popularity. Two consequences
+run through figs. 27–35. Louvain finds six communities at modularity 0.465,
+but each one is a cohort (fig. 29) — ties cannot cross time, so the community
+structure restates the calendar rather than revealing factions. And the same
+composite rosters that inflate fig. 7 inflate tie weights: fig. 35's tail past
+20 years is not real shared service, and the spike near degree 175 in fig. 27
+is one oversized roster whose members all take the same degree. Treat every
+weight as an upper bound.
+
+**Betweenness here is a regime-spanning statistic, not an influence one.**
+Because ties cannot cross time, sitting between two cohorts requires having
+been in both. All twenty highest-betweenness ministers served under two or
+more regimes; among the 707 who served under one, 0.1% clear a betweenness of
+0.01, against 17.7% of the 175 who served under two or more (fig. 28).
+Exposure does not buy it — the thirteen ministers past 3,000 colleague-years
+top out at 0.0095, while the top broker ranks only 30th on exposure. Fig. 34
+puts the fifteen highest beside the regimes each of them spans; two span four.
+
+**Figs. 30 and 32 look like they disagree, and do not.** Fig. 30 finds no
+attribute sorts co-membership: everything lands inside ±0.05, gender largest
+at +0.046 and even that more plausibly cohort than affinity. Fig. 32 finds
+that pairs sharing a party co-serve at 4.7× the base rate. The difference is
+conditioning. Fig. 32 is unconditional and cohort-confounded — people who
+share a small governorate tend to share a generation — while figs. 13 and 30
+ask whether origin sorts co-membership *given who was in office*. Both are
+true; they answer different questions.
 
 **Fig. 6 is drawn at the cabinet level on purpose.** The person-level
 co-membership graph has 832 nodes and 35,211 ties even after discarding every
