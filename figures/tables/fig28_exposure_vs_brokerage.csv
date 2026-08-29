@@ -1,0 +1,41 @@
+person_id,name,colleague_years,betweenness,eras_served,n_eras
+Q2821127,Abdelkrim Zbidi,2687.895961670089,0.08035716335414543,ben_ali|second_republic|transition,3
+Q29577458,Mohamed Ennaceur Jbira,846.2505133470225,0.061905491280399155,ben_ali|bourguiba|transition,3
+Q12270270,Othman Jerandi,453.19917864476383,0.053012506237127874,saied_exception|second_republic|transition,3
+Q3318419,Mohamed Ben Salem (1953),248.43258042436688,0.05173448824032037,ben_ali|bourguiba|protectorate|transition,4
+Q91669922,Mohamed Fadhel Kraiem,279.90417522245036,0.047968055886950106,bourguiba|second_republic,2
+Q3431740,Ridha Chalghoum,2238.5927446954142,0.04663923406873605,ben_ali|second_republic,2
+Q3125288,Habib Ammar,1112.39151266256,0.043435624091374594,ben_ali|bourguiba|second_republic,3
+Q2827482,Ahmed Adhoum,519.4633812457221,0.03973153143144463,ben_ali|second_republic|transition,3
+Q377921,Mohamed Mzali,1169.6208076659823,0.03864616620042422,bourguiba|protectorate,2
+Q3431735,Ridha Ben Mosbah,1890.9979466119096,0.03302066193103226,ben_ali|second_republic,2
+Q30104283,Mohamed Fadhel Khelil,1172.39151266256,0.02968034913363043,ben_ali|second_republic,2
+Q3318530,Mohamed Ennaceur,1987.1978097193703,0.02729571053530652,ben_ali|bourguiba|transition,3
+Q1642894,Hédi Nouira,985.2731006160164,0.02681189046321454,bourguiba|monarchy|protectorate|protectorate_end,4
+Q3320655,Mongi Marzouk,296.4161533196441,0.026551675990881124,ben_ali|second_republic|transition,3
+Q313539,Béji Caïd Essebsi,361.94934976043805,0.02645003126890724,ben_ali|bourguiba|transition,3
+Q98828570,Leïla Jaffel,718.9103353867214,0.021075318487705042,saied_exception|second_republic,2
+Q98828560,Kamel Deguiche,631.3648186173854,0.02020781435592233,saied_exception|second_republic,2
+Q1951854,Mohamed Masmoudi,551.5674195756332,0.0192234700995531,bourguiba|monarchy|protectorate|protectorate_end,4
+Q2961945,Chedly Ayari,544.9007529089664,0.0176481070751611,bourguiba|transition,2
+Q3128291,Hatem Ben Salem,2257.037645448323,0.01661897171579018,ben_ali|second_republic,2
+Q1043040,Kamel Morjane,2275.8850102669403,0.016164584285108984,ben_ali|second_republic,2
+Q507856,Habib Boularès,1525.1964407939768,0.014931411887900026,ben_ali|bourguiba,2
+Q282026,Abdelaziz Ben Dhia,1432.6899383983573,0.013784725594528566,ben_ali|bourguiba,2
+Q16855080,Chiheb Ben Ahmed,83.72347707049965,0.01340247090025717,second_republic|transition,2
+Q109045280,Mohamed Ali Nafti,214.29705681040383,0.013219880114256868,saied_exception|second_republic,2
+Q98828599,Fethi Sellaouti,405.94934976043805,0.012802567168022888,saied_exception|second_republic,2
+Q17425841,Slaheddine Ben Mbarek,1399.6550308008214,0.012485030990365999,ben_ali|bourguiba,2
+Q90946576,Salah Ben Youssef,56.709103353867214,0.01244257784729113,protectorate|second_republic,2
+Q3125311,Habib Essid,1944.8268309377138,0.011881018915625693,ben_ali|second_republic|transition,3
+Q28105062,Mohamed Trabelsi,470.0971937029432,0.011717053219596296,second_republic,1
+Q16802173,Ahmed Ammar Younbaii,139.29089664613278,0.010183178778695802,second_republic|transition,2
+Q98828355,Taoufik Charfeddine,414.0013689253936,0.010123088769095904,saied_exception|second_republic,2
+Q431515,Mohamed Ghannouchi,3509.429158110883,0.009455414562049944,ben_ali|bourguiba,2
+Q108159069,Sihem Boughdiri,552.3258042436687,0.00909659718937195,saied_exception|second_republic,2
+Q86329266,Ali Mrabet,551.441478439425,0.00909659718937195,saied_exception|second_republic,2
+Q108163613,Nizar Ben Néji,551.6057494866529,0.00909659718937195,saied_exception|second_republic,2
+Q3486677,Slim Chaker,480.09582477754964,0.008884699543516034,ben_ali|second_republic|transition,3
+Q27756614,Kamel Ayadi,1896.3969883641341,0.008683755684695727,ben_ali|second_republic,2
+TN-kamel-ayadi,Kamel Ayadi,1105.2457221081452,0.00855090321961004,ben_ali|second_republic,2
+Q16639035,Ghazi Jeribi,409.9219712525667,0.006996125822317815,second_republic|transition,2

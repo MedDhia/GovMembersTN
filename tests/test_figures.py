@@ -43,6 +43,22 @@ STEMS = [
     "fig24_governorate_parity_by_era",
     "fig25_coast_sahel_interior",
     "fig26_seat_switching_and_career",
+    "fig27_degree_distribution",
+    "fig28_exposure_vs_brokerage",
+    "fig29_communities_are_cohorts",
+    "fig30_assortativity_by_attribute",
+    "fig31_network_layers_compared",
+    "fig32_homophily_and_co_service",
+    "fig33_cohesion_by_era",
+    "fig34_brokers_span_regimes",
+    "fig35_tie_weight_distribution",
+    "fig36_succession_inheritance",
+    "fig37_cohort_chords",
+    "fig38_succession_arcs",
+    "fig39_carryover_ribbons",
+    "fig40_co_membership_backbone",
+    "fig41_broker_ego_network",
+    "fig42_network_by_era",
 ]
 
 
@@ -240,3 +256,108 @@ def test_succession_chance_baseline_is_a_probability():
         assert 0 < row["chance"] < 1, row["era"]
         assert 0 <= row["same_region"] <= 1, row["era"]
         assert row["handovers"] >= 25, row["era"]
+
+
+def test_every_top_broker_spans_a_regime_change():
+    """Fig. 34's title is a claim, and its caption gives exact counts.
+
+    In a layer whose ties cannot cross time, high betweenness should require
+    having served in more than one cohort. If a single-era minister ever tops
+    the list, the figure's whole reading is wrong - so this asserts the claim
+    rather than trusting it.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig34_brokers_span_regimes.csv")
+    assert len(table) == 15
+    assert (table["n_eras"] >= 2).all(), (
+        "a broker served under one regime only; fig. 34 says all fifteen span "
+        "at least two")
+    assert (table["n_eras"] == 3).sum() == 8, "caption says eight span three"
+    assert (table["n_eras"] == 4).sum() == 2, "caption says two span four"
+    assert table["betweenness"].is_monotonic_decreasing
+
+
+def test_assortativity_stays_near_zero():
+    """Fig. 30's title says nothing sorts co-membership. Hold it to that."""
+    table = pd.read_csv(FIGURES / "tables" / "fig30_assortativity_by_attribute.csv")
+    assert len(table) >= 4
+    worst = table["assortativity"].abs().max()
+    assert worst < 0.05, (
+        f"an attribute now sorts co-membership at {worst:.3f}; fig. 30 claims "
+        "everything lands inside ±0.05")
+    assert (table["ties"] >= 100).all()
+
+
+def test_communities_are_dominated_by_one_era_each():
+    """Fig. 29's claim is that each Louvain community is a cohort.
+
+    Louvain is seeded, so this is reproducible; if a rebuild produced a
+    community spread evenly across eras the figure's title would be false.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig29_communities_are_cohorts.csv")
+    era_columns = [c for c in table.columns
+                   if c not in ("community", "members", "median_start_year")]
+    assert len(table) >= 4, "expected several communities"
+    for _, row in table.iterrows():
+        top = max(row[c] for c in era_columns)
+        assert top >= 0.5, (
+            f"{row['community']} has no era above {top:.0%}; fig. 29 claims "
+            "every community concentrates on one era")
+
+
+def test_homophily_channels_beat_the_base_rate_in_order():
+    """Fig. 32 states a gradient: party > university > birth governorate."""
+    table = pd.read_csv(FIGURES / "tables" / "fig32_homophily_and_co_service.csv")
+    ordered = table.sort_values("share")["channel"].tolist()
+    assert ordered == ["Shared birth governorate", "Shared university",
+                       "Shared party"], f"the channel ordering changed: {ordered}"
+    assert (table["times_baseline"] > 1).all(), (
+        "a channel no longer beats the base rate; fig. 32's point is that all "
+        "three do")
+
+
+def test_carryover_concentrates_on_adjacent_periods():
+    """Fig. 39's caption claims neighbours share and distant periods do not.
+
+    The chord diagram makes that claim visually, with ribbon width. If a
+    distant pair ever outweighed an adjacent one the picture would say the
+    opposite of the caption, and nothing in the rendering would flag it.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig39_carryover_ribbons.csv")
+    order = ["Pre-1957", "Bourguiba 1957–87", "Ben Ali 1987–2011",
+             "2011–2021", "Post-2021"]
+    rank = {name: i for i, name in enumerate(order)}
+    adjacent, distant = [], []
+    for _, row in table.iterrows():
+        gap = abs(rank[row["period_a"]] - rank[row["period_b"]])
+        (adjacent if gap == 1 else distant).append(row["shared"])
+    assert adjacent, "no adjacent-period carry-over at all"
+    assert min(adjacent) > max(distant), (
+        f"a non-adjacent pair now shares more ({max(distant)}) than the "
+        f"weakest adjacent pair ({min(adjacent)}); fig. 39's caption says "
+        "carry-over is a handover between neighbours")
+
+
+def test_backbone_keeps_a_drawable_graph():
+    """Fig. 40 depends on the filter leaving something layout can handle.
+
+    `spring_layout` needs scipy above 500 nodes and the project does not
+    depend on it, so a filter that stopped biting would not produce an ugly
+    figure - it would produce an ImportError at render time.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig40_co_membership_backbone.csv")
+    assert 100 <= len(table) <= 500, (
+        f"the backbone has {len(table)} nodes; under 500 is what keeps the "
+        "layout scipy-free, and under 100 would not be worth drawing")
+    assert table["backbone_degree"].min() >= 1
+    assert table["backbone_degree"].is_monotonic_decreasing
+
+
+def test_era_panels_cover_the_whole_series():
+    """Fig. 42 claims comparability across six eras drawn on identical rules."""
+    table = pd.read_csv(FIGURES / "tables" / "fig42_network_by_era.csv")
+    assert len(table) == 6
+    assert (table["ministers"] > 0).all()
+    # Ben Ali must remain the densest panel; the caption names it as such.
+    table["mean_degree"] = 2 * table["ties"] / table["ministers"]
+    assert table.loc[table["mean_degree"].idxmax(), "era"] == "ben_ali"
+    assert table.loc[table["mean_degree"].idxmin(), "era"] == "protectorate"

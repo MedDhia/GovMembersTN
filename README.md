@@ -76,16 +76,19 @@ loudly if its answer disagrees with `data/processed/indices/`.
 
 ### Figures
 
-Twenty-six publication figures are committed under `figures/`, as PNG for
+Forty-two publication figures are committed under `figures/`, as PNG for
 screen and PDF for `\includegraphics`, each with a CSV of the exact numbers
 plotted. They cover source coverage by decade; women's share, seniority and
 regional origin by era; the representation Gini, the Lorenz curves behind it
 and parity by governorate and era; the size of government, turnover and
 renewal year by year; survival both in a post and in government, by regime
-and by region of birth; succession in the sovereign portfolios; the network —
-cabinets linked by shared ministers, regional mixing and succession against
-chance, the homophily channels, and who survives a regime change; and the
-coast, Sahel and interior shares over time.
+and by region of birth; succession in the sovereign portfolios; the coast,
+Sahel and interior shares over time; and a dozen views of the network —
+degree and tie weights, the four layers compared, communities, assortativity,
+brokerage against exposure, homophily against actual co-service, who survives
+a regime change, and the layer drawn six ways — a chord diagram of all 38,287
+ties, an arc diagram of every sovereign handover, carry-over ribbons, the
+disparity-filtered backbone, a broker's ego network, and one panel per era.
 
 ![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
 
@@ -93,7 +96,11 @@ coast, Sahel and interior shares over time.
 them recompute the index from the raw tables and fail if their answer disagrees
 with the published file, on the same principle as `02` above. Every duration
 figure filters on `date_basis`, because a roster row that inherited its
-cabinet's span carries an upper bound rather than a tenure.
+cabinet's span carries an upper bound rather than a tenure. The network
+figures read the centralities precomputed in the published GEXF rather than
+re-deriving them, so they cannot disagree with what
+[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md) tells a Gephi user to
+partition on.
 **[figures/README.md](figures/README.md)** explains what each one shows and how
 to read it — start with fig. 1, which is the coverage caveat as a picture.
 
@@ -237,7 +244,7 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
-figures/         twenty-six publication figures, PNG + PDF + numbers as CSV
+figures/         forty-two publication figures, PNG + PDF + numbers as CSV
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
 data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
