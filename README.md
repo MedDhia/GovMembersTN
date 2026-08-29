@@ -76,15 +76,16 @@ loudly if its answer disagrees with `data/processed/indices/`.
 
 ### Figures
 
-Sixteen publication figures are committed under `figures/`, as PNG for screen
-and PDF for `\includegraphics`, each with a CSV of the exact numbers plotted.
-They cover source coverage by decade; women's share, seniority and regional
-origin by era; the representation Gini and the Lorenz curves behind it;
-over- and under-representation by governorate; the size of government,
-turnover and renewal year by year; survival in office by regime; succession in
-the sovereign portfolios; and three views of the network — cabinets linked by
-shared ministers, regional mixing against chance, and the most connected
-ministers.
+Twenty-six publication figures are committed under `figures/`, as PNG for
+screen and PDF for `\includegraphics`, each with a CSV of the exact numbers
+plotted. They cover source coverage by decade; women's share, seniority and
+regional origin by era; the representation Gini, the Lorenz curves behind it
+and parity by governorate and era; the size of government, turnover and
+renewal year by year; survival both in a post and in government, by regime
+and by region of birth; succession in the sovereign portfolios; the network —
+cabinets linked by shared ministers, regional mixing and succession against
+chance, the homophily channels, and who survives a regime change; and the
+coast, Sahel and interior shares over time.
 
 ![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
 
@@ -236,7 +237,7 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
-figures/         sixteen publication figures, PNG + PDF + the numbers as CSV
+figures/         twenty-six publication figures, PNG + PDF + numbers as CSV
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
 data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
