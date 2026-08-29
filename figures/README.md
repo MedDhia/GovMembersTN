@@ -1,6 +1,6 @@
 # Figures
 
-Thirty-six publication figures built from `data/processed/` alone.
+Forty-two publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -13,7 +13,8 @@ every figure is readable without relying on colour.
 
 The `.png` and `.pdf` files are committed, so a clone or a `make bundle`
 archive has the figures without running anything. Regenerating them is
-deterministic: the one stochastic step, the graph layout in fig. 6, is seeded.
+deterministic: every stochastic step — the force layouts in figs. 6, 40 and
+42, and the Louvain community detection in fig. 29 — is seeded.
 
 | Figure | Form | What it shows |
 |---|---|---|
@@ -53,6 +54,12 @@ deterministic: the one stochastic step, the graph layout in fig. 6, is seeded.
 | `fig34_brokers_span_regimes` | Bar + presence grid | Top betweenness, and the regimes each spans. |
 | `fig35_tie_weight_distribution` | Histogram | What a co-membership tie is worth. |
 | `fig36_succession_inheritance` | Interval | Successor tenure by predecessor tenure. |
+| `fig37_cohort_chords` | Circular chords | The whole layer, ministers ordered by arrival. |
+| `fig38_succession_arcs` | Arc diagram | Every handover in the six sovereign portfolios. |
+| `fig39_carryover_ribbons` | Chord diagram | Ministers two periods have in common. |
+| `fig40_co_membership_backbone` | Node-link | The network after the disparity filter. |
+| `fig41_broker_ego_network` | Radial ego | One broker's colleagues, grouped by arrival. |
+| `fig42_network_by_era` | Small multiples | The same network drawn once per era. |
 
 ## Reading them
 
@@ -147,6 +154,29 @@ conditioning. Fig. 32 is unconditional and cohort-confounded — people who
 share a small governorate tend to share a generation — while figs. 13 and 30
 ask whether origin sorts co-membership *given who was in office*. Both are
 true; they answer different questions.
+
+## The drawn networks
+
+Figs. 37–42 are the layer drawn rather than summarised, and each solves the
+hairball a different way. **Fig. 37** puts all 862 ministers on a circle
+ordered by arrival and draws every one of the 38,287 ties, with the bow of
+each chord scaled to its angular span so neighbours stay near the rim and only
+distant pairs cross the middle; the cohort blocks emerge without any filtering
+or selection. **Fig. 40** filters instead, with Serrano's disparity filter —
+which keeps ties that are strong *relative to the person they belong to*, so a
+short-career minister keeps their defining colleagues where a flat weight
+threshold would just keep the largest cabinets. That leaves 403 ministers and
+2,733 ties. **Fig. 42** partitions, drawing each era's own subgraph under
+identical layout rules so the shapes are comparable. **Fig. 41** abandons
+force layout altogether: a star graph has nothing for a force layout to say,
+so the alters are placed on arcs by the period they entered, which makes the
+brokerage visible rather than merely computed.
+
+Two things not to read into them. A selection by tie strength would have been
+prettier and false — weight is inflated by the composite rosters of fig. 35,
+which sit almost entirely under Ben Ali, so the strongest *n* ties hand that
+period most of the ink. And in fig. 41 the four colleagues from before 1987
+are almost certainly roster artefacts of the same kind, not a 55-year career.
 
 **Fig. 6 is drawn at the cabinet level on purpose.** The person-level
 co-membership graph has 832 nodes and 35,211 ties even after discarding every

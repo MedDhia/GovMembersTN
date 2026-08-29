@@ -76,7 +76,7 @@ loudly if its answer disagrees with `data/processed/indices/`.
 
 ### Figures
 
-Thirty-six publication figures are committed under `figures/`, as PNG for
+Forty-two publication figures are committed under `figures/`, as PNG for
 screen and PDF for `\includegraphics`, each with a CSV of the exact numbers
 plotted. They cover source coverage by decade; women's share, seniority and
 regional origin by era; the representation Gini, the Lorenz curves behind it
@@ -85,8 +85,10 @@ renewal year by year; survival both in a post and in government, by regime
 and by region of birth; succession in the sovereign portfolios; the coast,
 Sahel and interior shares over time; and a dozen views of the network —
 degree and tie weights, the four layers compared, communities, assortativity,
-brokerage against exposure, homophily against actual co-service, and who
-survives a regime change.
+brokerage against exposure, homophily against actual co-service, who survives
+a regime change, and the layer drawn six ways — a chord diagram of all 38,287
+ties, an arc diagram of every sovereign handover, carry-over ribbons, the
+disparity-filtered backbone, a broker's ego network, and one panel per era.
 
 ![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
 
@@ -242,7 +244,7 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
-figures/         thirty-six publication figures, PNG + PDF + numbers as CSV
+figures/         forty-two publication figures, PNG + PDF + numbers as CSV
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
 data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)

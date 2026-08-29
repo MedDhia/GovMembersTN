@@ -53,6 +53,12 @@ STEMS = [
     "fig34_brokers_span_regimes",
     "fig35_tie_weight_distribution",
     "fig36_succession_inheritance",
+    "fig37_cohort_chords",
+    "fig38_succession_arcs",
+    "fig39_carryover_ribbons",
+    "fig40_co_membership_backbone",
+    "fig41_broker_ego_network",
+    "fig42_network_by_era",
 ]
 
 
@@ -307,3 +313,51 @@ def test_homophily_channels_beat_the_base_rate_in_order():
     assert (table["times_baseline"] > 1).all(), (
         "a channel no longer beats the base rate; fig. 32's point is that all "
         "three do")
+
+
+def test_carryover_concentrates_on_adjacent_periods():
+    """Fig. 39's caption claims neighbours share and distant periods do not.
+
+    The chord diagram makes that claim visually, with ribbon width. If a
+    distant pair ever outweighed an adjacent one the picture would say the
+    opposite of the caption, and nothing in the rendering would flag it.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig39_carryover_ribbons.csv")
+    order = ["Pre-1957", "Bourguiba 1957–87", "Ben Ali 1987–2011",
+             "2011–2021", "Post-2021"]
+    rank = {name: i for i, name in enumerate(order)}
+    adjacent, distant = [], []
+    for _, row in table.iterrows():
+        gap = abs(rank[row["period_a"]] - rank[row["period_b"]])
+        (adjacent if gap == 1 else distant).append(row["shared"])
+    assert adjacent, "no adjacent-period carry-over at all"
+    assert min(adjacent) > max(distant), (
+        f"a non-adjacent pair now shares more ({max(distant)}) than the "
+        f"weakest adjacent pair ({min(adjacent)}); fig. 39's caption says "
+        "carry-over is a handover between neighbours")
+
+
+def test_backbone_keeps_a_drawable_graph():
+    """Fig. 40 depends on the filter leaving something layout can handle.
+
+    `spring_layout` needs scipy above 500 nodes and the project does not
+    depend on it, so a filter that stopped biting would not produce an ugly
+    figure - it would produce an ImportError at render time.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig40_co_membership_backbone.csv")
+    assert 100 <= len(table) <= 500, (
+        f"the backbone has {len(table)} nodes; under 500 is what keeps the "
+        "layout scipy-free, and under 100 would not be worth drawing")
+    assert table["backbone_degree"].min() >= 1
+    assert table["backbone_degree"].is_monotonic_decreasing
+
+
+def test_era_panels_cover_the_whole_series():
+    """Fig. 42 claims comparability across six eras drawn on identical rules."""
+    table = pd.read_csv(FIGURES / "tables" / "fig42_network_by_era.csv")
+    assert len(table) == 6
+    assert (table["ministers"] > 0).all()
+    # Ben Ali must remain the densest panel; the caption names it as such.
+    table["mean_degree"] = 2 * table["ties"] / table["ministers"]
+    assert table.loc[table["mean_degree"].idxmax(), "era"] == "ben_ali"
+    assert table.loc[table["mean_degree"].idxmin(), "era"] == "protectorate"
