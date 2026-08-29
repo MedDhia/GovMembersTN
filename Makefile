@@ -2,7 +2,7 @@
 PY ?= python3
 export PYTHONPATH := src
 
-.PHONY: help install test preflight harvest build networks validate inequality codebook analysis bundle all clean queries
+.PHONY: help install test preflight harvest build networks validate inequality codebook analysis figures bundle all clean queries
 
 help:
 	@grep -E '^[a-z-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -45,11 +45,14 @@ analysis:  ## Run the example analyses in both Python and R
 	  Rscript analysis/R/03_networks.R; \
 	} || echo "Rscript not found - skipped the R examples"
 
+figures:  ## Rebuild the publication figures in figures/
+	$(PY) figures/make_figures.py
+
 bundle:  ## Zip the analysis-ready data + docs for people who don't want the pipeline
 	@rm -rf dist && mkdir -p dist/GovMembersTN
 	@mkdir -p dist/GovMembersTN/data
 	@cp -r data/processed dist/GovMembersTN/data/processed
-	@cp -r analysis docs dist/GovMembersTN/
+	@cp -r analysis docs figures dist/GovMembersTN/
 	@cp README.md LICENSE CITATION.cff dist/GovMembersTN/
 	@cd dist && zip -qr GovMembersTN-data.zip GovMembersTN && rm -rf GovMembersTN
 	@echo "wrote dist/GovMembersTN-data.zip ($$(du -h dist/GovMembersTN-data.zip | cut -f1))"
