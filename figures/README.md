@@ -1,6 +1,6 @@
 # Figures
 
-Sixteen publication figures built from `data/processed/` alone.
+Twenty-six publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -33,6 +33,16 @@ deterministic: the one stochastic step, the graph layout in fig. 6, is seeded.
 | `fig14_age_at_first_appointment` | Interval | Median and interquartile age on entering government. |
 | `fig15_cabinets_served` | Bar | How many governments one person serves in. |
 | `fig16_top_centrality` | Bar | The twenty most connected ministers. |
+| `fig17_survival_in_office_by_region` | Kaplan-Meier | Tenure in a post, by region of birth. |
+| `fig18_survival_in_government_by_regime` | Kaplan-Meier | Tenure in government — seat changes included — by regime of entry. |
+| `fig19_survival_in_government_by_region` | Kaplan-Meier | The same career clock, by region of birth. |
+| `fig20_exit_and_global_shocks` | Line + markers | Ministerial exit against the global shocks. Descriptive; see below. |
+| `fig21_homophily_channels` | Bar, two panels | Which shared attribute carries the homophily layer, and how often they coincide. |
+| `fig22_elite_persistence_across_eras` | Heatmap, sequential | Ministers two eras have in common — who survives a regime change. |
+| `fig23_succession_within_region` | Bar + reference | Same-region handovers against chance, by era. |
+| `fig24_governorate_parity_by_era` | Heatmap, diverging | Ministers per capita against parity, governorate × era. |
+| `fig25_coast_sahel_interior` | Multi-line | Coast, narrow Sahel and interior shares, era by era. |
+| `fig26_seat_switching_and_career` | Interval | Career length by number of portfolios held. |
 
 ## Reading them
 
@@ -48,7 +58,7 @@ axis, shaded, and the series is drawn as a thin faded connector across the gap
 rather than a solid line — the segment is visibly not a measurement. Read the
 trend within a partition, never the level across partitions.
 
-**Figs. 9, 11 and 14 filter, and say what they dropped.** `build` warns that a
+**Figs. 9, 11, 14, 17, 18, 19 and 26 filter, and say what they dropped.** `build` warns that a
 roster row with no individual dates inherits its cabinet's span, which is an
 upper bound and not a tenure — so every duration figure keeps only
 `date_basis` of `statement` or `row`, and drops the end dates the pipeline
@@ -62,6 +72,42 @@ anything before 2011 it usually means the sources never recorded an end, not
 that someone is still serving. Fig. 7 therefore bounds an open appointment by
 its cabinet, and lets it run to the snapshot only where the cabinet itself has
 no end date; fig. 9 censors the twelve genuinely open spells and says so.
+
+**Office and government are different clocks, and the gap is the finding.**
+Fig. 9 measures how long one appointment lasts; figs. 18 and 19 measure how
+long someone stays in government at all, with the clock surviving a move
+between portfolios. Under Ben Ali the median post lasts 6.1 years and the
+median career 10.1; under Bourguiba, 2.5 against 8.2. A regime that reshuffles
+constantly can look unstable in fig. 9 and stable in fig. 18, because the same
+people are moving seats rather than leaving. The cliffs in fig. 18 are regime
+endings, not attrition — a career begun under Ben Ali could not outlast
+January 2011.
+
+**Fig. 20 is descriptive and says so.** There is no event study here and the
+data will not support one. Exit is recorded at reshuffle granularity: in the
+18 years a cabinet was formed the median exit rate is 0.55, against 0.06 in
+the other 43. Four of the five shocks fall in ordinary years — 1973 at 0.16,
+1979 at 0.10, 2008 at 0.03, 2022 at 0.00 — and 2020 coincides with a cabinet
+formed for domestic reasons. The economic-portfolio share sits at its 0.19
+overall mean in every shock window, on samples as small as one appointment.
+Five shocks cannot be separated from the reshuffle calendar, so the figure
+draws the calendar and marks the shocks for the reader to judge.
+
+**Fig. 19's regional gap is composition, not staying power.** Pooled, ministers
+born in the Sahel show a median career of 7.0 years against Greater Tunis's
+4.2. That is an era effect: 30% of Sahel entrants begin under Bourguiba
+against 11% of Greater Tunis ones, and within an era of entry the medians
+converge — under Ben Ali, 11.3, 10.1, 11.3 and 11.3 years across the four
+regions. Split by era before reading anything regional into it. The same
+caution applies to fig. 17.
+
+**Figs. 13 and 23 both carry a chance baseline, and both come out at chance.**
+Regional origin does not structure who serves alongside whom, and a minister
+is no likelier than chance to hand over to someone from their own region. The
+protectorate's 68% same-region handover rate in fig. 23 looks like strong
+homophily until you see the chance line at 65%: recruitment was already that
+concentrated. Without the baseline the figure would state a finding that
+isn't there.
 
 **Fig. 6 is drawn at the cabinet level on purpose.** The person-level
 co-membership graph has 832 nodes and 35,211 ties even after discarding every

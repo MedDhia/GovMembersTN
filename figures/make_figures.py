@@ -1,6 +1,6 @@
 """Publication figures for GovMembersTN.
 
-Sixteen figures, built offline from `data/processed/` alone. Like the example
+Twenty-six figures, built offline from `data/processed/` alone. Like the example
 scripts in `analysis/`, this reads only the published tables - it never imports
 `govtn` and never touches `config/`, so it runs against a `make bundle` archive
 with nothing installed but pandas and matplotlib.
@@ -227,6 +227,8 @@ def load():
         ratios=read(PROCESSED / "indices" / "representation_by_governorate.csv"),
         bipartite=read(PROCESSED / "networks" / "edges_bipartite.csv"),
         co=read(PROCESSED / "networks" / "edges_co_membership.csv"),
+        homophily=read(PROCESSED / "networks" / "edges_homophily.csv"),
+        succession=read(PROCESSED / "networks" / "edges_succession.csv"),
     )
 
 
@@ -1303,6 +1305,615 @@ def fig_centrality(d):
     return fig, table
 
 
+# ------------------------------------------------ shared for figures 17-26 ---
+# Global shocks, plus the one domestic rupture, for annotation only.
+SHOCKS = [(1973, "1973 oil"), (1979, "1979 oil"), (2008, "global financial"),
+          (2020, "COVID-19"), (2022, "Ukraine / food & energy")]
+DOMESTIC = [(2011, "revolution"), (2021, "25 July")]
+
+CAREER_ERAS = ["bourguiba", "ben_ali", "transition", "second_republic"]
+
+
+def folded_region(persons: pd.DataFrame) -> pd.Series:
+    """Birth region collapsed to the four groups the figures compare.
+
+    Seven region types over 456 coded people leaves cells too thin to read a
+    survival curve from, and the all-pairs colour cap is three. Greater Tunis
+    and the Sahel are kept apart because that contrast is the substantive one;
+    the rest fold into coastal and interior.
+    """
+    return persons["birth_region_type"].map(REGION_FOLD)
+
+
+def careers(persons, appointments, cabinets) -> pd.DataFrame:
+    """One row per person: entry, final exit, and whether still in government.
+
+    This is tenure in GOVERNMENT rather than in a post - the clock keeps
+    running when someone moves between portfolios, and stops when they leave
+    altogether. Someone is treated as still serving only if one of their
+    appointments sits in a cabinet with no recorded end date; a missing end
+    date on a 1969 appointment is a gap in the sources, not an open career.
+    """
+    open_cabinets = set(cabinets.loc[
+        pd.to_datetime(cabinets["end_date"], errors="coerce").isna(), "cabinet_id"])
+    still_serving = set(appointments.loc[
+        appointments["cabinet_id"].isin(open_cabinets)
+        & appointments["end_date"].isna(), "person_id"].dropna())
+
+    out = persons[["person_id", "first_appointment", "last_appointment_end",
+                   "career_span_years", "n_portfolios"]].copy()
+    out["censored"] = out["person_id"].isin(still_serving)
+    out = out[out["first_appointment"].notna()]
+    # A censored career still needs a length: run it to the snapshot.
+    span = pd.to_numeric(out["career_span_years"], errors="coerce")
+    snap_span = ((pd.Timestamp("2026-08-26")
+                  - pd.to_datetime(out["first_appointment"], errors="coerce"))
+                 .dt.days / 365.25)
+    out["years"] = span.where(~out["censored"], snap_span)
+    out = out[out["years"].notna() & (out["years"] >= 0)]
+
+    entry = (appointments[appointments["is_first_appointment"].fillna(False)]
+             [["person_id", "era"]].drop_duplicates("person_id"))
+    return out.merge(entry, on="person_id", how="left")
+
+
+def km_panel(ax, groups, colors, xmax):
+    """Draw one Kaplan-Meier curve per group and return the summary rows."""
+    rows = []
+    for slot, (label, years, observed) in enumerate(groups):
+        pts = km_curve(np.asarray(years), np.asarray(observed))
+        ax.step([p[0] for p in pts], [p[1] for p in pts], where="post",
+                color=colors[slot], lw=2.0, zorder=4)
+        median = next((t for t, s in pts if s <= 0.5), None)
+        if median is not None:
+            ax.plot([median], [0.5], marker="o", markersize=7,
+                    color=colors[slot], markeredgecolor=SURFACE,
+                    markeredgewidth=2, zorder=5)
+        rows.append({"group": label, "n": len(years),
+                     "censored": int((~np.asarray(observed)).sum()),
+                     "median_years": round(median, 2) if median else None})
+    ax.axhline(0.5, color=AXIS, lw=1.0, zorder=1)
+    ax.set_xlim(0, xmax); ax.set_ylim(0, 1.02)
+    return pd.DataFrame(rows)
+
+
+# -------------------------------------------------------- figures 17 to 26 ---
+def fig_survival_office_region(d):
+    """Does where a minister was born predict how long they keep the post?"""
+    tenures = personal_tenures(d["appointments"])
+    persons = d["persons"].assign(fold=folded_region(d["persons"]))
+    m = tenures.merge(persons[["person_id", "fold"]], on="person_id", how="left")
+
+    groups = []
+    for region in REGION_ORDER:
+        block = m[m["fold"] == region]
+        if len(block) < 40:
+            continue
+        groups.append((region, block["tenure_days"] / 365.25,
+                       block["end_date"].notna().to_numpy()))
+
+    fig, ax = plt.subplots(figsize=(6.8, 4.2))
+    ax.set_axisbelow(True); ax.grid(True)
+    table = km_panel(ax, groups, CAT4, xmax=12)
+    ax.set_xlabel("Years in post")
+    ax.set_ylabel("Share still in post")
+    ax.set_title("Survival in office, by region of birth")
+    ax.legend(handles=[Line2D([], [], color=CAT4[i], lw=2,
+                              label=f"{r['group']}  (median {r['median_years']:.1f}y, n={r['n']})")
+                       for i, (_, r) in enumerate(table.iterrows())],
+              loc="upper right")
+    ax.text(0, -0.16, f"Personally-dated appointments only. The four curves sit "
+                      f"close together — origin does not buy tenure in a post. "
+                      f"Rests on the\n{int(m['fold'].notna().sum())} of {len(m)} "
+                      f"appointments whose holder has a coded birthplace, so it "
+                      f"inherits that variable's bias toward the well "
+                      f"documented,\nand the regional cohorts differ in era "
+                      f"composition (see fig. 19).",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_survival_government_regime(d):
+    """Time in GOVERNMENT, not in one post: the clock survives a seat change.
+
+    The contrast with fig. 9 is the point. A regime that reshuffles constantly
+    can show short tenure in office and long careers in government, because the
+    same people move between portfolios rather than leaving.
+    """
+    career = careers(d["persons"], d["appointments"], d["cabinets"])
+    groups = []
+    for era in CAREER_ERAS:
+        block = career[career["era"] == era]
+        if len(block) < 40:
+            continue
+        groups.append((ERA_SHORT[era], block["years"].to_numpy(),
+                       (~block["censored"]).to_numpy()))
+
+    fig, ax = plt.subplots(figsize=(6.8, 4.2))
+    ax.set_axisbelow(True); ax.grid(True)
+    table = km_panel(ax, groups, CAT4, xmax=30)
+    ax.set_xlabel("Years between first and last ministerial post")
+    ax.set_ylabel("Share still in government")
+    ax.set_title("Survival in government, by the regime of entry")
+    ax.legend(handles=[Line2D([], [], color=CAT4[i], lw=2,
+                              label=f"{r['group']}  (median {r['median_years']:.1f}y, n={r['n']})")
+                       for i, (_, r) in enumerate(table.iterrows())],
+              loc="upper right")
+    ax.text(0, -0.16, "Entry to final exit, seat changes included, grouped by "
+                      "the era of the first appointment. Careers that begin "
+                      "late are still\nrunning at the snapshot and are censored; "
+                      "a career whose end date is simply missing is not treated "
+                      "as open.\nThe cliffs are regime endings, not attrition: "
+                      "a career begun under Ben Ali could not outlast January "
+                      "2011.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_survival_government_region(d):
+    """The same career clock, cut by region of birth rather than by regime."""
+    career = careers(d["persons"], d["appointments"], d["cabinets"])
+    persons = d["persons"].assign(fold=folded_region(d["persons"]))
+    career = career.merge(persons[["person_id", "fold"]], on="person_id",
+                          how="left")
+    groups = []
+    for region in REGION_ORDER:
+        block = career[career["fold"] == region]
+        if len(block) < 40:
+            continue
+        groups.append((region, block["years"].to_numpy(),
+                       (~block["censored"]).to_numpy()))
+
+    fig, ax = plt.subplots(figsize=(6.8, 4.2))
+    ax.set_axisbelow(True); ax.grid(True)
+    table = km_panel(ax, groups, CAT4, xmax=30)
+    ax.set_xlabel("Years between first and last ministerial post")
+    ax.set_ylabel("Share still in government")
+    ax.set_title("Survival in government, by region of birth")
+    ax.legend(handles=[Line2D([], [], color=CAT4[i], lw=2,
+                              label=f"{r['group']}  (median {r['median_years']:.1f}y, n={r['n']})")
+                       for i, (_, r) in enumerate(table.iterrows())],
+              loc="upper right")
+    ax.text(0, -0.16, "Careers, not posts, and the pooled gap is COMPOSITION, "
+                      "not staying power. 30% of Sahel entrants begin under "
+                      "Bourguiba against 11%\nof Greater Tunis ones, and within "
+                      "an era of entry the regional medians converge — under "
+                      "Ben Ali 11.3, 10.1, 11.3 and 11.3 years.\nSplit by era "
+                      "before reading a regional effect here; who gets in at all "
+                      "is figs. 5 and 12.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_shocks(d):
+    """Ministerial exit against the global shocks, and why this is descriptive.
+
+    An event study is not available here and the figure says so rather than
+    implying one. Exit dates cluster at cabinet transitions, so the annual
+    series is a near-binary "was there a reshuffle": it runs at 0.01-0.03 in
+    ordinary years and 0.7-0.85 in formation years. Against that, a five-shock
+    window cannot separate a shock effect from the reshuffle calendar, and the
+    economic-portfolio share sits at its 0.193 overall mean in every shock
+    window on samples as small as one appointment. What the picture shows is
+    the reshuffle calendar itself, with the shocks marked for the reader to
+    judge.
+    """
+    app = d["appointments"].copy()
+    cab = d["cabinets"].copy()
+    snapshot = pd.Timestamp("2026-08-26")
+    cab_end = dict(zip(cab["cabinet_id"],
+                       pd.to_datetime(cab["end_date"], errors="coerce")))
+    app["s"] = pd.to_datetime(app["start_date"], errors="coerce")
+    app["e"] = pd.to_datetime(app["end_date"], errors="coerce")
+    app = app.dropna(subset=["s", "person_id"])
+    fallback = app["cabinet_id"].map(cab_end)
+    app["e"] = app["e"].fillna(fallback).mask(
+        app["e"].isna() & fallback.isna(), snapshot)
+    app = app.dropna(subset=["e"])
+    app = app[app["e"] >= app["s"]]
+
+    rows = []
+    for y in range(1965, 2026):
+        lo, hi = pd.Timestamp(f"{y}-01-01"), pd.Timestamp(f"{y}-12-31")
+        live = app[(app["s"] <= hi) & (app["e"] >= lo)]
+        n = live["person_id"].nunique()
+        exits = live[(live["e"] >= lo) & (live["e"] <= hi)]["person_id"].nunique()
+        rows.append({"year": y, "in_office": n, "exits": exits,
+                     "exit_rate": round(exits / n, 4) if n else None})
+    table = pd.DataFrame(rows)
+
+    formations = sorted({pd.to_datetime(v, errors="coerce").year
+                         for v in cab["start_date"] if pd.notna(v)})
+    formations = [y for y in formations if 1965 <= y <= 2025]
+    table["cabinet_formed"] = table["year"].isin(formations)
+
+    fig, ax = plt.subplots(figsize=(7.6, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(1963, 2028); ax.set_ylim(0, 1.05)
+    for year, _ in SHOCKS:
+        ax.axvline(year, color=DIV_LOW, lw=1.0, alpha=0.55, zorder=1)
+    for year, _ in DOMESTIC:
+        ax.axvline(year, color=AXIS, lw=1.0, zorder=1)
+    ax.plot(table["year"], table["exit_rate"], color=CAT[0], lw=2.0, zorder=4)
+    formed = table[table["cabinet_formed"]]
+    ax.plot(formed["year"], formed["exit_rate"], linestyle="none", marker="o",
+            markersize=5, color=CAT[0], markeredgecolor=SURFACE,
+            markeredgewidth=1.6, zorder=5)
+    for year, label in SHOCKS:
+        ax.text(year, 1.0, label, rotation=90, ha="right", va="top",
+                fontsize=7, color=DIV_LOW)
+    for year, label in DOMESTIC:
+        ax.text(year, 1.0, label, rotation=90, ha="right", va="top",
+                fontsize=7, color=MUTED)
+    ax.set_ylabel("Share of those in office who leave that year")
+    ax.set_title("Ministerial exit, and the global shocks")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], lw=2, label="exit rate"),
+        Line2D([], [], color=CAT[0], marker="o", linestyle="none", markersize=6,
+               markeredgecolor=SURFACE, label="a cabinet was formed"),
+        Line2D([], [], color=DIV_LOW, lw=1, label="global shock"),
+        Line2D([], [], color=AXIS, lw=1, label="domestic rupture")],
+        loc="upper center", bbox_to_anchor=(0.5, -0.13), ncol=4)
+    ax.text(0, -0.26, "Descriptive, not an event study. Exit is recorded at "
+                      "reshuffle granularity: in the 18 years a cabinet was "
+                      "formed the median exit rate is\n0.55, against 0.06 in "
+                      "the other 43. Four of the five shocks fall in ordinary "
+                      "years (1973: 0.16, 1979: 0.10, 2008: 0.03, 2022: 0.00); "
+                      "2020\ncoincides with a cabinet formed for domestic "
+                      "reasons. Five shocks cannot be separated from that "
+                      "calendar, and the economic-portfolio\nshare sits at its "
+                      "0.19 overall mean in every shock window. Read this as the "
+                      "calendar, not as an effect.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_homophily_channels(d):
+    """Which shared attribute carries the homophily layer, and how much overlap."""
+    edges = d["homophily"]
+    counts = edges["tie_type"].value_counts()
+    pretty = {"shared_parties": "Shared party",
+              "shared_education": "Shared university",
+              "shared_birth_governorate": "Shared birth governorate"}
+    labels = [pretty.get(k, k) for k in counts.index]
+
+    pairs = edges.assign(
+        key=[tuple(sorted((a, b))) for a, b in zip(edges["source"], edges["target"])])
+    per_pair = pairs.groupby("key")["tie_type"].nunique()
+    overlap = per_pair.value_counts().sort_index()
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(7.8, 3.4),
+                                  gridspec_kw={"width_ratios": [1.5, 1]})
+    for axis in (ax, ax2):
+        axis.set_axisbelow(True)
+        axis.yaxis.grid(True); axis.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(counts) - 0.3); ax.set_ylim(0, counts.max() * 1.22)
+    for i, v in enumerate(counts.values):
+        rounded_bar(ax, i - 0.225, 0, 0.45, v, CAT[0])
+        ax.text(i, v + counts.max() * 0.03, f"{v:,}", ha="center", va="bottom",
+                fontsize=8, color=INK)
+    ax.set_xticks(range(len(counts)))
+    ax.set_xticklabels(labels, rotation=18, ha="right")
+    ax.set_ylabel("Ties")
+    ax.set_title("Which channel carries the layer", fontsize=10)
+
+    ax2.set_xlim(0.3, len(overlap) + 0.7)
+    ax2.set_ylim(0, overlap.max() * 1.22)
+    for k, v in overlap.items():
+        rounded_bar(ax2, k - 0.225, 0, 0.45, v, CAT[0])
+        ax2.text(k, v + overlap.max() * 0.03, f"{v:,}", ha="center",
+                 va="bottom", fontsize=8, color=INK)
+    ax2.set_xticks(list(overlap.index))
+    ax2.set_xlabel("Channels shared by one pair")
+    ax2.set_ylabel("Pairs")
+    ax2.set_title("How often they coincide", fontsize=10)
+
+    fig.suptitle("The homophily layer, by channel", fontsize=11,
+                 fontweight="bold", color=INK, y=1.02)
+    fig.text(0, -0.06, "These are POTENTIAL channels, not observed interaction, "
+                       "and are kept out of the co-membership layer for that "
+                       "reason. A value held by\nmore than 60 people is a "
+                       "category rather than a tie and is dropped — which is why "
+                       "birth in Tunis, the Université de Tunis, and PSD and RCD "
+                       "membership\nare all absent.",
+             fontsize=7.5, color=MUTED, va="top")
+    table = pd.concat([
+        pd.DataFrame({"measure": "ties_by_channel", "key": labels,
+                      "value": counts.values}),
+        pd.DataFrame({"measure": "pairs_by_channels_shared",
+                      "key": [str(k) for k in overlap.index],
+                      "value": overlap.values}),
+    ], ignore_index=True)
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_elite_persistence(d):
+    """Who survives a regime change: people serving under both of two eras."""
+    app = d["appointments"]
+    eras = [e for e in ERA_ORDER if e not in ("beylical",)]
+    served = {era: set(app.loc[app["era"] == era, "person_id"].dropna())
+              for era in eras}
+    eras = [e for e in eras if len(served[e]) >= 15]
+
+    grid = np.zeros((len(eras), len(eras)), dtype=int)
+    for i, a in enumerate(eras):
+        for j, b in enumerate(eras):
+            grid[i, j] = len(served[a] & served[b])
+
+    fig, ax = plt.subplots(figsize=(6.6, 5.2))
+    mx = max(grid[i, j] for i in range(len(eras)) for j in range(len(eras))
+             if i != j) or 1
+    for i in range(len(eras)):
+        for j in range(len(eras)):
+            v = grid[i, j]
+            if i == j:
+                color = "#f2f2ef"
+            else:
+                color = seq_color(v / mx)
+            ax.add_patch(plt.Rectangle((j + 0.03, i + 0.03), 0.94, 0.94,
+                                       facecolor=color, edgecolor="none"))
+            ax.text(j + 0.5, i + 0.5, f"{v}", ha="center", va="center",
+                    fontsize=8, color=MUTED if i == j else ink_on(color))
+    ax.set_xlim(0, len(eras)); ax.set_ylim(len(eras), 0)
+    ax.set_xticks(np.arange(len(eras)) + 0.5)
+    ax.set_xticklabels([ERA_SHORT[e] for e in eras], rotation=35, ha="right")
+    ax.set_yticks(np.arange(len(eras)) + 0.5)
+    ax.set_yticklabels([ERA_SHORT[e] for e in eras])
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.tick_params(length=0)
+    ax.set_title("Ministers who served under both regimes")
+    ax.text(0, -0.22, "Off-diagonal cells count the people two eras have in "
+                      "common; the diagonal is that era's own total and is left "
+                      "unshaded so it\ncannot be read as continuity. The "
+                      "adjacent pairs carry almost all of it — carry-over is a "
+                      "handover, not a durable class that\nsurvives every "
+                      "transition.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    table = pd.DataFrame(grid, index=[ERA_SHORT[e] for e in eras],
+                         columns=[ERA_SHORT[e] for e in eras])
+    table.index.name = "era"
+    fig.tight_layout()
+    return fig, table.reset_index()
+
+
+def fig_succession_homophily(d):
+    """Is a minister replaced by someone from their own region?
+
+    Against chance, which here is the probability that two ministers drawn at
+    random from that era's coded pool share a region - so the baseline moves
+    with how concentrated recruitment already was.
+    """
+    persons, succ, app = d["persons"], d["succession"], d["appointments"]
+    region = persons.set_index("person_id")["birth_region_type"]
+    edges = succ.copy()
+    edges["rs"] = edges["source"].map(region)
+    edges["rt"] = edges["target"].map(region)
+    edges = edges.dropna(subset=["rs", "rt"])
+
+    rows = []
+    for era in ERA_ORDER:
+        block = edges[edges["era"] == era]
+        if len(block) < 25:
+            continue
+        pool = (app.loc[app["era"] == era, "person_id"].dropna().unique())
+        shares = region.reindex(pool).dropna().value_counts(normalize=True)
+        chance = float((shares ** 2).sum())
+        observed = float((block["rs"] == block["rt"]).mean())
+        rows.append({"era": era, "era_label": ERA_SHORT[era],
+                     "handovers": len(block), "same_region": round(observed, 3),
+                     "chance": round(chance, 3),
+                     "ratio": round(observed / chance, 2) if chance else None})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.0, 3.8))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(table) - 0.3)
+    ax.set_ylim(0, max(table["same_region"].max(), table["chance"].max()) * 1.3)
+    for i, r in table.iterrows():
+        rounded_bar(ax, i - 0.18, 0, 0.36, r["same_region"], CAT[0])
+        ax.plot([i - 0.26, i + 0.26], [r["chance"]] * 2, color=INK_2, lw=1.6,
+                zorder=5, solid_capstyle="butt")
+    for i in (0, len(table) - 1):
+        r = table.iloc[i]
+        ax.text(i, r["same_region"] + 0.02, f"{r['same_region']:.0%}",
+                ha="center", va="bottom", fontsize=8.5, color=INK)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{r['era_label']}\nn={r['handovers']}"
+                        for _, r in table.iterrows()], rotation=20, ha="right")
+    ax.set_ylabel("Handovers within the same region")
+    ax.set_title("Does a minister hand over to someone from their own region?")
+    ax.legend(handles=[Line2D([], [], color=CAT[0], lw=7, label="observed"),
+                       Line2D([], [], color=INK_2, lw=1.6, label="chance, given that era's pool")],
+              loc="upper right")
+    ax.text(0, -0.42, "Chance is the probability two ministers drawn from that "
+                      "era's coded pool share a region, so it moves with "
+                      "recruitment\nconcentration. Observed sits at chance "
+                      "throughout: the protectorate's 68% is high because "
+                      "recruitment was already that concentrated,\nnot because "
+                      "handovers were regional.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_governorate_by_era(d):
+    """Spatial inequality with time in it: the ratio, per governorate, per era."""
+    persons, app, gov = d["persons"], d["appointments"], d["governorates"]
+    pops = dict(zip(gov["governorate"], gov["population"]))
+    total_pop = sum(pops.values())
+    order = list(gov.sort_values("population", ascending=False)["governorate"])
+
+    eras = [e for e in ERA_ORDER if e not in ("beylical", "protectorate_end")]
+    cells, kept, coded = {}, [], {}
+    for era in eras:
+        counts = era_counts(persons, app, era)
+        counts = {k: v for k, v in counts.items() if k in pops}
+        total = sum(counts.values())
+        if total < 25:
+            continue
+        kept.append(era); coded[era] = total
+        cells[era] = {g: ((counts.get(g, 0) / total) / (pops[g] / total_pop))
+                      for g in order}
+
+    fig, ax = plt.subplots(figsize=(6.8, 7.4))
+    span = 1.0  # ratios run 0 to ~4; +/-1 around parity covers the readable band
+    for i, g in enumerate(order):
+        for j, era in enumerate(kept):
+            v = cells[era][g]
+            t = max(-1.0, min(1.0, (v - 1) / span))
+            base = DIV_HIGH if t >= 0 else DIV_LOW
+            color = _mix(DIV_MID, base, abs(t))
+            ax.add_patch(plt.Rectangle((j + 0.03, i + 0.03), 0.94, 0.94,
+                                       facecolor=color, edgecolor="none"))
+            ax.text(j + 0.5, i + 0.5, f"{v:.1f}", ha="center", va="center",
+                    fontsize=7.5, color=ink_on(color))
+    ax.set_xlim(0, len(kept)); ax.set_ylim(len(order), 0)
+    ax.set_xticks(np.arange(len(kept)) + 0.5)
+    ax.set_xticklabels([f"{ERA_SHORT[e]}\nn={coded[e]}" for e in kept],
+                       rotation=35, ha="right")
+    ax.set_yticks(np.arange(len(order)) + 0.5)
+    ax.set_yticklabels(order)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.tick_params(length=0)
+    ax.set_title("Ministers per capita against parity, by governorate and era")
+    ax.text(0, -0.13, "1.0 is parity with the governorate's share of the 2024 "
+                      "census population; blue is over-represented, red under. "
+                      "Governorates are\nordered by population, and n is that "
+                      "era's coded ministers. In a thin column a 0.0 means no "
+                      "CODED minister, not none — the post-2021\ncolumn rests "
+                      "on 30 people. Population is held at 2024 throughout, so "
+                      "read the columns against each other, not as levels.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    table = pd.DataFrame(cells).round(3)
+    table.index.name = "governorate"
+    fig.tight_layout()
+    return fig, table.reset_index()
+
+
+def fig_coastal_interior(d):
+    """The coast-interior gap, and the Sahel inside it, era by era.
+
+    `birth_sahel` is the narrow historical Sahel - Sousse, Monastir, Mahdia -
+    and is deliberately not the same as `birth_coastal`, which also takes in
+    Greater Tunis, the northeast and Sfax. Conflating them is the usual way
+    this variable goes wrong, so both are drawn.
+    """
+    persons, app, gov = d["persons"], d["appointments"], d["governorates"]
+    coastal = set(gov.loc[gov["coastal"].astype(str).str.lower() == "true",
+                          "governorate"])
+    sahel = set(gov.loc[gov["sahel"].astype(str).str.lower() == "true",
+                        "governorate"])
+    pop = dict(zip(gov["governorate"], gov["population"]))
+    total_pop = sum(pop.values())
+    pop_coastal = sum(p for g, p in pop.items() if g in coastal) / total_pop
+    pop_sahel = sum(p for g, p in pop.items() if g in sahel) / total_pop
+
+    rows = []
+    for era in ERA_ORDER:
+        counts = era_counts(persons, app, era)
+        counts = {k: v for k, v in counts.items() if k in pop}
+        total = sum(counts.values())
+        if total < 25:
+            continue
+        rows.append({
+            "era": era, "era_label": ERA_SHORT[era], "coded": total,
+            "coastal": sum(v for g, v in counts.items() if g in coastal) / total,
+            "sahel": sum(v for g, v in counts.items() if g in sahel) / total,
+            "interior": sum(v for g, v in counts.items() if g not in coastal) / total,
+        })
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.4, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.45, len(table) - 0.35); ax.set_ylim(0, 1.05)
+    xs = range(len(table))
+    for slot, key in enumerate(["coastal", "sahel", "interior"]):
+        ax.plot(xs, table[key], color=CAT[slot], lw=2.0, marker="o",
+                markersize=5, markeredgecolor=SURFACE, markeredgewidth=2,
+                zorder=4)
+    # Population shares as the reference each series should be read against.
+    ax.axhline(pop_coastal, color=CAT[0], lw=1.0, alpha=0.5, zorder=1)
+    ax.axhline(pop_sahel, color=CAT[1], lw=1.0, alpha=0.5, zorder=1)
+    ax.text(-0.38, pop_coastal + 0.018, "coastal share of population",
+            ha="left", fontsize=7, color=MUTED)
+    ax.text(-0.38, pop_sahel - 0.05, "Sahel share of population",
+            ha="left", fontsize=7, color=MUTED)
+    ax.set_xticks(list(xs))
+    ax.set_xticklabels([f"{r['era_label']}\nn={r['coded']}"
+                        for _, r in table.iterrows()])
+    ax.set_yticks([0, .25, .5, .75, 1])
+    ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.set_ylabel("Share of coded ministers")
+    ax.set_title("Coast, Sahel and interior in ministerial recruitment")
+    ax.legend(handles=[Line2D([], [], color=CAT[i], lw=2, label=lab)
+                       for i, lab in enumerate(["Coastal", "Sahel (narrow)",
+                                                "Interior"])],
+              loc="center left", bbox_to_anchor=(0.02, 0.42))
+    ax.text(0, -0.24, "The Sahel line is a subset of the coastal one. Thin "
+                      "horizontal rules are each group's share of the 2024 "
+                      "population — the gap to them is the inequality.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_seat_switching(d):
+    """Does moving between portfolios go with a longer career in government?
+
+    Descriptive and almost certainly not causal in the direction it invites:
+    a long career gives you the time to collect portfolios. It is here because
+    the same-seat / switching-seats distinction is what separates fig. 9 from
+    figs. 18 and 19.
+    """
+    career = careers(d["persons"], d["appointments"], d["cabinets"])
+    career["bucket"] = career["n_portfolios"].clip(upper=4).astype("Int64")
+    rows = []
+    for b in [1, 2, 3, 4]:
+        block = career[career["bucket"] == b]
+        if len(block) < 10:
+            continue
+        rows.append({"portfolios_held": "4+" if b == 4 else str(b),
+                     "people": len(block),
+                     "q1": round(block["years"].quantile(.25), 2),
+                     "median": round(block["years"].median(), 2),
+                     "q3": round(block["years"].quantile(.75), 2)})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(6.4, 3.6))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.6, len(table) - 0.4)
+    ax.set_ylim(0, table["q3"].max() * 1.25)
+    for i, r in table.iterrows():
+        ax.plot([i, i], [r["q1"], r["q3"]], color=CAT[0], lw=6, alpha=0.28,
+                solid_capstyle="round", zorder=3)
+        ax.plot([i], [r["median"]], marker="o", markersize=9, color=CAT[0],
+                markeredgecolor=SURFACE, markeredgewidth=2, zorder=4)
+    for i in (0, len(table) - 1):
+        r = table.iloc[i]
+        ax.text(i, r["median"] + table["q3"].max() * 0.05,
+                f"{r['median']:.1f}y", ha="center", fontsize=8.5, color=INK)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{r['portfolios_held']}\nn={r['people']}"
+                        for _, r in table.iterrows()])
+    ax.set_xlabel("Distinct portfolios held")
+    ax.set_ylabel("Years in government")
+    ax.set_title("Seat switching and the length of a ministerial career")
+    ax.text(0, -0.30, "Dot is the median, band the interquartile range. "
+                      "Descriptive: a long career is what gives someone time to "
+                      "collect portfolios,\nso this cannot be read the other way "
+                      "round.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
 FIGURES = [
     ("fig01_coverage_by_decade", fig_coverage),
     ("fig02_women_share_by_era", fig_women),
@@ -1320,6 +1931,16 @@ FIGURES = [
     ("fig14_age_at_first_appointment", fig_age),
     ("fig15_cabinets_served", fig_recycling),
     ("fig16_top_centrality", fig_centrality),
+    ("fig17_survival_in_office_by_region", fig_survival_office_region),
+    ("fig18_survival_in_government_by_regime", fig_survival_government_regime),
+    ("fig19_survival_in_government_by_region", fig_survival_government_region),
+    ("fig20_exit_and_global_shocks", fig_shocks),
+    ("fig21_homophily_channels", fig_homophily_channels),
+    ("fig22_elite_persistence_across_eras", fig_elite_persistence),
+    ("fig23_succession_within_region", fig_succession_homophily),
+    ("fig24_governorate_parity_by_era", fig_governorate_by_era),
+    ("fig25_coast_sahel_interior", fig_coastal_interior),
+    ("fig26_seat_switching_and_career", fig_seat_switching),
 ]
 
 

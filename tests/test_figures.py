@@ -33,6 +33,16 @@ STEMS = [
     "fig14_age_at_first_appointment",
     "fig15_cabinets_served",
     "fig16_top_centrality",
+    "fig17_survival_in_office_by_region",
+    "fig18_survival_in_government_by_regime",
+    "fig19_survival_in_government_by_region",
+    "fig20_exit_and_global_shocks",
+    "fig21_homophily_channels",
+    "fig22_elite_persistence_across_eras",
+    "fig23_succession_within_region",
+    "fig24_governorate_parity_by_era",
+    "fig25_coast_sahel_interior",
+    "fig26_seat_switching_and_career",
 ]
 
 
@@ -172,3 +182,61 @@ def test_duration_figures_exclude_cabinet_inherited_dates():
             f"{row['era']}: figure drawn with n={row['n']}, filtered data has "
             f"{n}; re-run `make figures`")
         assert 0 < row["median_years"] < 25, row["era"]
+
+
+@pytest.mark.parametrize("stem", [
+    "fig09_survival_in_office",
+    "fig17_survival_in_office_by_region",
+    "fig18_survival_in_government_by_regime",
+    "fig19_survival_in_government_by_region",
+])
+def test_survival_medians_are_within_the_observed_window(stem):
+    """A Kaplan-Meier median outside the plotted x-range is a silent lie.
+
+    The curve is drawn to a fixed axis; if a group's median falls beyond it the
+    reader sees a curve that never crosses 0.5 and no median marker, with
+    nothing saying why.
+    """
+    table = pd.read_csv(FIGURES / "tables" / f"{stem}.csv")
+    limit = 12 if "in_office" in stem else 30
+    assert len(table) >= 2, f"{stem} needs at least two groups to compare"
+    for _, row in table.iterrows():
+        assert row["n"] >= 40, f"{stem}: {row.iloc[0]} drawn on n={row['n']}"
+        assert row["censored"] <= row["n"]
+        median = row["median_years"]
+        assert pd.notna(median), f"{stem}: no median for {row.iloc[0]}"
+        assert 0 < median < limit, (
+            f"{stem}: median {median} for {row.iloc[0]} falls outside the "
+            f"plotted 0-{limit}y window")
+
+
+def test_shock_figure_still_shows_the_reshuffle_calendar():
+    """Fig. 20's whole claim is that exits track cabinet formation, not shocks.
+
+    It states specific numbers in its caption. If a rebuild moved them the
+    caption would be quietly wrong, which on a figure whose point is "do not
+    read an effect here" is worse than usual.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig20_exit_and_global_shocks.csv")
+    formed = table[table["cabinet_formed"]]["exit_rate"]
+    other = table[~table["cabinet_formed"]]["exit_rate"]
+    assert len(formed) >= 10 and len(other) >= 30
+    assert formed.median() > 4 * other.median(), (
+        "formation years no longer dominate the exit series; fig. 20's caption "
+        f"claims 0.55 against 0.06, data now has {formed.median():.2f} against "
+        f"{other.median():.2f}")
+    # The four shocks the caption calls ordinary must still be ordinary.
+    for year in (1973, 1979, 2008, 2022):
+        rate = table.loc[table["year"] == year, "exit_rate"].iloc[0]
+        assert rate <= other.quantile(0.95), (
+            f"{year} is no longer an ordinary year ({rate:.2f}); fig. 20's "
+            "caption names it as one")
+
+
+def test_succession_chance_baseline_is_a_probability():
+    """Fig. 23 is only readable because of its chance baseline."""
+    table = pd.read_csv(FIGURES / "tables" / "fig23_succession_within_region.csv")
+    for _, row in table.iterrows():
+        assert 0 < row["chance"] < 1, row["era"]
+        assert 0 <= row["same_region"] <= 1, row["era"]
+        assert row["handovers"] >= 25, row["era"]
