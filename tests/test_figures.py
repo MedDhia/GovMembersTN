@@ -23,6 +23,16 @@ STEMS = [
     "fig04_lorenz_curves",
     "fig05_representation_by_governorate",
     "fig06_cabinet_continuity",
+    "fig07_government_size_over_time",
+    "fig08_rank_composition_by_era",
+    "fig09_survival_in_office",
+    "fig10_turnover_and_renewal",
+    "fig11_sovereign_portfolio_tenure",
+    "fig12_regional_composition_by_era",
+    "fig13_region_mixing_matrix",
+    "fig14_age_at_first_appointment",
+    "fig15_cabinets_served",
+    "fig16_top_centrality",
 ]
 
 
@@ -102,3 +112,63 @@ def test_readme_shows_a_figure_that_exists():
     assert embedded, "README.md no longer shows any figure"
     for rel in embedded:
         assert (ROOT / rel).exists(), f"README embeds {rel}, which does not exist"
+
+
+def test_no_orphan_figure_files():
+    """A renamed figure must not leave its predecessor behind.
+
+    `fig07` was rebuilt from cabinet roster size to people-in-office and
+    renamed with it. The old png, pdf and csv would otherwise have sat in the
+    repository forever, indistinguishable from a current figure.
+    """
+    stems = set(STEMS)
+    for path in sorted(FIGURES.glob("fig*.*")):
+        assert path.stem in stems, f"{path.name} belongs to no current figure"
+    for path in sorted((FIGURES / "tables").glob("fig*.csv")):
+        assert path.stem in stems, f"tables/{path.name} belongs to no current figure"
+
+
+def test_mixing_matrix_is_symmetric_and_centred_on_chance():
+    """Fig. 13's normalisation is easy to get wrong and the error is invisible.
+
+    Adding a whole edge to both cells of an undirected pair counts every
+    cross-region tie twice and every same-region tie once. The matrix still
+    looks plausible - but the diagonal is halved, and the figure then claims
+    ministers from the same region avoid each other. Half an edge each way is
+    the fix; these are the two properties that catch the regression.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig13_region_mixing_matrix.csv")
+    regions = table["region"].tolist()
+    matrix = table.set_index("region")[regions]
+
+    for a in regions:
+        for b in regions:
+            assert abs(matrix.loc[a, b] - matrix.loc[b, a]) < 5e-3, (
+                f"mixing matrix is not symmetric at ({a}, {b})")
+
+    diagonal = [matrix.loc[r, r] for r in regions]
+    assert min(diagonal) > 0.7, (
+        f"same-region ratios bottom out at {min(diagonal)} - the diagonal is "
+        "being under-counted relative to the off-diagonal cells")
+    assert max(diagonal) < 1.4, f"diagonal implausibly high: {max(diagonal)}"
+
+
+def test_duration_figures_exclude_cabinet_inherited_dates():
+    """`build` says an inherited cabinet span is an upper bound, not a tenure.
+
+    Fig. 9's medians are only meaningful under that filter, so this checks the
+    counts behind it match a filtered recount rather than the raw table.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig09_survival_in_office.csv")
+    app = pd.read_csv(PROCESSED / "appointments.csv", low_memory=False)
+    eligible = app[
+        app["date_basis"].isin(["statement", "row"])
+        & ~app["end_date_unreliable"].fillna(False)
+        & app["tenure_days"].notna()
+    ]
+    for _, row in table.iterrows():
+        n = int((eligible["era"] == row["era"]).sum())
+        assert n == row["n"], (
+            f"{row['era']}: figure drawn with n={row['n']}, filtered data has "
+            f"{n}; re-run `make figures`")
+        assert 0 < row["median_years"] < 25, row["era"]

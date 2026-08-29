@@ -1,6 +1,6 @@
 # Figures
 
-Six publication figures built from `data/processed/` alone.
+Sixteen publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -23,6 +23,16 @@ deterministic: the one stochastic step, the graph layout in fig. 6, is seeded.
 | `fig04_lorenz_curves` | Line, emphasis | The Lorenz curves the index is computed from. |
 | `fig05_representation_by_governorate` | Diverging bar | Which governorates sit above and below population parity. |
 | `fig06_cabinet_continuity` | Node-link | Cabinets linked by the ministers they share, 1943–2026. |
+| `fig07_government_size_over_time` | Line | People holding a ministerial post in each year, 1956–2026. |
+| `fig08_rank_composition_by_era` | Stacked bar, ordinal | Seniority mix of appointments, era by era. |
+| `fig09_survival_in_office` | Kaplan-Meier | How long an appointment lasts, by the regime that made it. |
+| `fig10_turnover_and_renewal` | Multi-line | Appointments per year against first-time entrants. |
+| `fig11_sovereign_portfolio_tenure` | Timeline | Succession in the six sovereign portfolios. |
+| `fig12_regional_composition_by_era` | Stacked bar | Where ministers were born, era by era. |
+| `fig13_region_mixing_matrix` | Heatmap, diverging | Co-membership by region pair, against chance. |
+| `fig14_age_at_first_appointment` | Interval | Median and interquartile age on entering government. |
+| `fig15_cabinets_served` | Bar | How many governments one person serves in. |
+| `fig16_top_centrality` | Bar | The twenty most connected ministers. |
 
 ## Reading them
 
@@ -37,6 +47,21 @@ withheld by the index for insufficient coverage. Their positions stay on the
 axis, shaded, and the series is drawn as a thin faded connector across the gap
 rather than a solid line — the segment is visibly not a measurement. Read the
 trend within a partition, never the level across partitions.
+
+**Figs. 9, 11 and 14 filter, and say what they dropped.** `build` warns that a
+roster row with no individual dates inherits its cabinet's span, which is an
+upper bound and not a tenure — so every duration figure keeps only
+`date_basis` of `statement` or `row`, and drops the end dates the pipeline
+already flagged unreliable. That alone takes the 20-year-plus "tenures" from
+108 to 22. Fig. 14 additionally excludes ten implausible ages, three of them
+negative: `age_at_first_appointment` in the published table contains a handful
+of people whose recorded birth date falls after their first appointment.
+
+**`is_incumbent` is not censoring.** It is defined as `end_date.isna()`, so for
+anything before 2011 it usually means the sources never recorded an end, not
+that someone is still serving. Fig. 7 therefore bounds an open appointment by
+its cabinet, and lets it run to the snapshot only where the cabinet itself has
+no end date; fig. 9 censors the twelve genuinely open spells and says so.
 
 **Fig. 6 is drawn at the cabinet level on purpose.** The person-level
 co-membership graph has 832 nodes and 35,211 ties even after discarding every
@@ -62,10 +87,17 @@ Colours come from a validated palette and are used unchanged — no eyeballed
 hex. The categorical slots were checked under protanopia and deuteranopia
 before any chart code was written; the three-slot subset in figs. 3 and 6
 clears the all-pairs gate (worst CVD ΔE 9.2, worst normal-vision ΔE 24.0),
-which is the harder test that a scatter or a node-link needs. Fig. 6 colours
-chronological periods, which are *ordered*, so it takes a one-hue ordinal ramp
-rather than categorical hues — swapping two periods would change the meaning,
-which is the test for ordinal.
+which is the harder test that a scatter or a node-link needs. A fourth slot is
+used only in figs. 9 and 12, both adjacent-pairlist forms — lines and stacked
+bars — where it clears its own gate (worst CVD ΔE 9.1, normal-vision ΔE 22.9).
+
+Ordered scales take a one-hue ordinal ramp rather than categorical hues, since
+swapping two of their categories would change the meaning: chronological
+periods in fig. 6, seniority in fig. 8. Fig. 13 encodes polarity around a
+meaningful midpoint — above or below chance — so it is diverging, not
+sequential. Fig. 11's two alternating shades carry no meaning at all; they only
+separate neighbouring blocks where a holding is too short for the surface gap
+to read.
 
 Three hues in the palette sit below 3:1 against the chart surface. That is
 allowed only with a relief channel, which is what `tables/*.csv` and the direct
