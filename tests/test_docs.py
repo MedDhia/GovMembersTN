@@ -216,3 +216,27 @@ def test_readme_inline_counts_match_the_data():
     last = pd.to_datetime(cabinets["end_date"], errors="coerce").dt.year.max()
     assert f"{int(first)}–{int(last)}" in readme, \
         f"README cabinet year range is stale; data spans {int(first)}–{int(last)}"
+
+
+def test_readme_test_count_matches_the_suite():
+    """The layout block advertises the size of the suite, and it had gone stale.
+
+    It read 250 when the suite had grown well past it. Counting `def test_`
+    statically is exact and cheap; the parametrised case count is checked
+    loosely, since a new `parametrize` legitimately moves it.
+    """
+    import re
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    functions = sum(
+        len(re.findall(r"^def test_", path.read_text(encoding="utf-8"), re.M))
+        for path in sorted((ROOT / "tests").glob("test_*.py")))
+
+    match = re.search(r"(\d+) test functions, (\d+) cases", readme)
+    assert match, "README no longer states the suite size in its layout block"
+    claimed_functions, claimed_cases = int(match.group(1)), int(match.group(2))
+    assert claimed_functions == functions, (
+        f"README says {claimed_functions} test functions, tests/ defines "
+        f"{functions}")
+    assert claimed_cases >= claimed_functions, (
+        "cases cannot be fewer than the functions that generate them")

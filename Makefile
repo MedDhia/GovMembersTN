@@ -48,7 +48,7 @@ analysis:  ## Run the example analyses in both Python and R
 figures:  ## Rebuild the publication figures in figures/
 	$(PY) figures/make_figures.py
 
-bundle:  ## Zip the analysis-ready data + docs for people who don't want the pipeline
+bundle:  ## Zip the analysis-ready data, docs and figures, without the pipeline
 	@rm -rf dist && mkdir -p dist/GovMembersTN
 	@mkdir -p dist/GovMembersTN/data
 	@cp -r data/processed dist/GovMembersTN/data/processed

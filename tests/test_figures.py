@@ -361,3 +361,31 @@ def test_era_panels_cover_the_whole_series():
     table["mean_degree"] = 2 * table["ties"] / table["ministers"]
     assert table.loc[table["mean_degree"].idxmax(), "era"] == "ben_ali"
     assert table.loc[table["mean_degree"].idxmin(), "era"] == "protectorate"
+
+
+def test_readme_figure_count_and_themes_match_the_figures():
+    """The README states a figure count in words and a breakdown by theme.
+
+    Both drifted the moment a batch was added, and the theme column is worse
+    than a bare count: it looked right while summing to 41 against 42 figures,
+    because nothing added the column up. This does.
+    """
+    import re
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    words = {"Thirty-six": 36, "Forty-two": 42, "Forty-eight": 48,
+             "Fifty-four": 54, "Sixty": 60}
+    stated = [n for word, n in words.items()
+              if f"{word} publication figures" in readme]
+    assert len(stated) == 1, (
+        f"README should state exactly one figure count in words; found {stated}")
+    assert stated[0] == len(STEMS), (
+        f"README says {stated[0]} figures, the generator builds {len(STEMS)}")
+
+    # The theme table: a right-aligned integer in the first cell of each row.
+    themes = [int(n) for n in re.findall(r"^\|\s*(\d+)\s*\|\s*[A-Z]", readme,
+                                        re.M)]
+    assert len(themes) >= 5, "README theme table not found"
+    assert sum(themes) == len(STEMS), (
+        f"the README's theme breakdown sums to {sum(themes)}, not the "
+        f"{len(STEMS)} figures that exist")
