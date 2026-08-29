@@ -102,7 +102,7 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 |---:|---|
 | **882** | people who held a post in a Tunisian government |
 | **3,136** | appointments — one row per person × cabinet × portfolio |
-| **57** | cabinets, 1943–2026, across 23 government spells |
+| **56** | cabinets, 1943–2026, across 23 government spells |
 | **38,287** | co-membership ties, weighted by days of overlapping service |
 | **1,976** | succession ties, directed, within portfolio |
 | **12,613** | homophily ties — shared university, party or birth governorate |

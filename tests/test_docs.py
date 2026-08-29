@@ -164,9 +164,17 @@ def test_readme_headline_figures_match_the_data():
     def rows(name):
         return len(pd.read_csv(table_path(name)))
 
+    appointments = pd.read_csv(table_path("appointments"), low_memory=False)
+
     actual = {
         "people who held a post in a tunisian government": rows("persons"),
         "appointments  one row per person  cabinet  portfolio": rows("appointments"),
+        # These two rows sat unguarded while the five around them were checked,
+        # and the cabinet count duly drifted to 57 against an actual 56. Every
+        # bolded row in the table is covered now.
+        "cabinets  across  government spells": rows("cabinets"),
+        "appointments carrying a journal officiel citation":
+            int(appointments["jort_citation"].notna().sum()),
         "comembership ties weighted by days of overlapping service":
             rows("edges_co_membership"),
         "succession ties directed within portfolio": rows("edges_succession"),
@@ -178,3 +186,33 @@ def test_readme_headline_figures_match_the_data():
         assert claimed[label] == expected, (
             f"README says {claimed[label]} for {label!r}, data has {expected}"
         )
+
+    # Nothing bolded is left out: a new row added without a check here is a
+    # row free to drift, which is the failure this test exists to prevent.
+    assert set(claimed) == set(actual), (
+        f"headline rows with no check: {sorted(set(claimed) - set(actual))}")
+
+
+def test_readme_inline_counts_match_the_data():
+    """The numbers written into the prose of the headline table, not just the
+    bolded ones.
+
+    The cabinet row carries two counts - the bolded cabinet total and the spell
+    count inside the label - and only the first is in the bold-cell regex above.
+    The year range is the same kind of claim: cheap to state, easy to leave
+    behind when the spine gains a government.
+    """
+    import re
+    import pandas as pd
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    cabinets = pd.read_csv(table_path("cabinets"))
+    spells = len(pd.read_csv(table_path("spells")))
+
+    assert f"across {spells} government spells" in readme, \
+        f"README spell count is stale; data has {spells}"
+
+    first = pd.to_datetime(cabinets["start_date"], errors="coerce").dt.year.min()
+    last = pd.to_datetime(cabinets["end_date"], errors="coerce").dt.year.max()
+    assert f"{int(first)}–{int(last)}" in readme, \
+        f"README cabinet year range is stale; data spans {int(first)}–{int(last)}"
