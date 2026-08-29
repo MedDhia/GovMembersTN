@@ -76,17 +76,23 @@ loudly if its answer disagrees with `data/processed/indices/`.
 
 ### Figures
 
-Six publication figures are committed under `figures/`, as PNG for screen and
-PDF for `\includegraphics`, each with a CSV of the exact numbers plotted:
-coverage by decade, women's share by era, the representation Gini and the
-Lorenz curves behind it, over- and under-representation by governorate, and
-cabinets linked by the ministers they share.
+Sixteen publication figures are committed under `figures/`, as PNG for screen
+and PDF for `\includegraphics`, each with a CSV of the exact numbers plotted.
+They cover source coverage by decade; women's share, seniority and regional
+origin by era; the representation Gini and the Lorenz curves behind it;
+over- and under-representation by governorate; the size of government,
+turnover and renewal year by year; survival in office by regime; succession in
+the sovereign portfolios; and three views of the network — cabinets linked by
+shared ministers, regional mixing against chance, and the most connected
+ministers.
 
 ![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
 
 `make figures` rebuilds them; you never need to, since they are tracked. Two of
 them recompute the index from the raw tables and fail if their answer disagrees
-with the published file, on the same principle as `02` above.
+with the published file, on the same principle as `02` above. Every duration
+figure filters on `date_basis`, because a roster row that inherited its
+cabinet's span carries an upper bound rather than a tenure.
 **[figures/README.md](figures/README.md)** explains what each one shows and how
 to read it — start with fig. 1, which is the coverage caveat as a picture.
 
@@ -230,7 +236,7 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
-figures/         six publication figures, PNG + PDF + the numbers as CSV
+figures/         sixteen publication figures, PNG + PDF + the numbers as CSV
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
 data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
