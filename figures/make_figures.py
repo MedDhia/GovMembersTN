@@ -1,6 +1,6 @@
 """Publication figures for GovMembersTN.
 
-Forty-two figures, built offline from `data/processed/` alone. Like the example
+Forty-eight figures, built offline from `data/processed/` alone. Like the example
 scripts in `analysis/`, this reads only the published tables - it never imports
 `govtn` and never touches `config/`, so it runs against a `make bundle` archive
 with nothing installed but pandas and matplotlib.
@@ -3049,6 +3049,474 @@ def fig_era_small_multiples(d):
     return fig, pd.DataFrame(rows)
 
 
+# ------------------------------------------------------- pathway helpers ---
+# Cohorts below this are not drawn. The monarchy (18 entrants over 16 months),
+# the end of the protectorate (12) and the beylical rows (6) are too thin to
+# carry a share, and drawing them anyway would put the noisiest points at the
+# left edge where a reader starts.
+MIN_COHORT = 25
+
+# Biographical attributes are documented for only part of each cohort, and the
+# documented part is whoever has a Wikidata or Wikipedia presence. Every panel
+# built on them prints its own denominator; below this many documented people
+# the point is dropped rather than drawn small.
+MIN_DOCUMENTED = 12
+
+PATHWAY_ERAS = ["protectorate", "bourguiba", "ben_ali", "transition",
+                "second_republic", "saied_exception"]
+
+
+def entry_cohort(appointments: pd.DataFrame) -> pd.DataFrame:
+    """One row per person: the appointment they entered government through.
+
+    Uses the pipeline's own `is_first_appointment` flag rather than re-deriving
+    it, so these panels and `persons.first_appointment` cannot disagree. The
+    flag is exactly one row per person for all 882.
+    """
+    first = appointments[appointments["is_first_appointment"].fillna(False)]
+    assert first["person_id"].is_unique, "is_first_appointment is not one per person"
+    return first.copy()
+
+
+def personal_starts(appointments: pd.DataFrame) -> pd.DataFrame:
+    """Rows whose START date describes the person rather than their cabinet.
+
+    The codebook's rule for durations, applied to a start date. It matters
+    here for more than precision: one roster in the sources covers four
+    successive premierships as a single cabinet
+    (`Gouvernement Bouden/Hachani/Madouri/Zaafrani`) dated 2021-01-01, so
+    without this filter the last four heads of government stack on one x and
+    every one of them looks like a 2021 appointment.
+    """
+    app = appointments.copy()
+    app["_start"] = pd.to_datetime(app["start_date"], errors="coerce")
+    return app[app["date_basis"].isin(["statement", "row", "spine"])
+               & app["date_precision"].isin(["day", "month"])
+               & app["_start"].notna() & app["person_id"].notna()].copy()
+
+
+def documented_share(cohort: pd.DataFrame, column: str, patterns: dict) -> list:
+    """Share of each era's DOCUMENTED entrants matching each pattern.
+
+    `patterns` maps a label to a regex run over the pipe-joined field, in both
+    the French and Arabic forms the sources use for the same institution or
+    party. Eras with fewer than MIN_DOCUMENTED documented entrants are omitted.
+    """
+    known = cohort.dropna(subset=[column])
+    low = known[column].str.lower()
+    rows = []
+    for era in PATHWAY_ERAS:
+        block = known[known["era"] == era]
+        if len(block) < MIN_DOCUMENTED:
+            continue
+        row = {"era": era, "era_label": ERA_SHORT[era],
+               "cohort": int((cohort["era"] == era).sum()),
+               "documented": len(block)}
+        for label, pattern in patterns.items():
+            hit = low.loc[block.index].str.contains(pattern, regex=True, na=False)
+            row[label] = round(float(hit.mean()), 4)
+        rows.append(row)
+    return rows
+
+
+# The two halves of every institution name: the sources carry French and
+# Arabic forms of the same school, and counting only one loses a third of it.
+TRAINING = {
+    "Collège Sadiki": r"sadiki|الصادقية",
+    "Tunisian university": (r"de tunis|tunis -|el manar|manar|carthage|sousse|"
+                            r"sfax|monastir|jendouba|gabès|تونس|سوسة|صفاقس|"
+                            r"قرطاج|المنار"),
+    "Trained in France": (r"paris|sorbonne|lyon|grenoble|montpellier|aix-|nice|"
+                          r"strasbourg|toulouse|bordeaux|polytechnique|centrale|"
+                          r"des mines|nantes|rennes|dauphine|sciences po|باريس|"
+                          r"السوربون|فرنسا"),
+}
+
+PARTY_TICKET = {
+    "Destour family": (r"destour|néo-destour|neo-destour|"
+                       r"rassemblement constitutionnel|التجمع الدستوري|الدستور"),
+    "Ennahdha": r"ennahdha|nahda|النهضة",
+    "Nidaa Tounes": r"nidaa|نداء",
+    "No party": r"^indépendant$|^independent$|مستقل",
+}
+
+CAREERS = [("Diplomat", "diplomat"), ("Academic", "academic"),
+           ("Engineer", "engineer"), ("Lawyer", "lawyer")]
+
+
+def fig_entry_grade(d):
+    """The rank people ENTER at, which is not the rank mix of the payroll.
+
+    Fig. 8 is the seniority of every appointment; this is the seniority of the
+    first one only, and the two say different things. A government can be
+    mostly ministers while its recruits all arrive as secretaries of state -
+    that is precisely the Ben Ali pattern, and it is invisible in fig. 8.
+    """
+    cohort = entry_cohort(d["appointments"])
+    rows = []
+    for era in PATHWAY_ERAS:
+        block = cohort[cohort["era"] == era]
+        if len(block) < MIN_COHORT:
+            continue
+        row = {"era": era, "era_label": ERA_SHORT[era], "n": len(block)}
+        for label, levels in RANK_TIERS:
+            row[label] = round(float(block["rank_level"].isin(levels).mean()), 4)
+        rows.append(row)
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.6, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_ylim(0, 1.0); ax.set_xlim(-0.7, len(table) - 0.3)
+    colors = ORD[:2] + ORD[3:5]
+    for i, r in table.iterrows():
+        stacked_bar(ax, i, [r[label] for label, _ in RANK_TIERS], colors)
+    # Four series, and two of the four ramp steps sit under 3:1 on the
+    # surface: the two tiers that carry the argument are labelled in place.
+    for i, r in table.iterrows():
+        if r["Secretary of state"] > 0.12:
+            ax.text(i, r["Secretary of state"] / 2, f"{r['Secretary of state']:.0%}",
+                    ha="center", va="center", fontsize=7.5,
+                    color=ink_on(colors[0]))
+        if r["Minister"] > 0.12:
+            ax.text(i, r["Secretary of state"] + r["Minister"] / 2,
+                    f"{r['Minister']:.0%}", ha="center", va="center",
+                    fontsize=7.5, color=ink_on(colors[1]))
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{r.era_label}\nn={r.n}" for r in table.itertuples()])
+    ax.set_yticks([0, .25, .5, .75, 1])
+    ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.set_ylabel("Share of that era's new entrants")
+    ax.set_title("The grade people enter government at, by era")
+    handles = [Line2D([], [], color=c, lw=7, label=label)
+               for (label, _), c in zip(RANK_TIERS, colors)]
+    ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.20),
+              ncol=2)
+    ax.text(0, -0.46,
+            "One row per person, the post they came in through. Under Ben Ali a "
+            "majority of newcomers started below ministerial rank; after 2011 "
+            "three quarters\narrive at full rank. The protectorate's 20% "
+            "head-of-government block is coverage, not recruitment: those "
+            "rosters record the chief minister\nfar more reliably than the "
+            f"rest of the cabinet (fig. 1). Cohorts under {MIN_COHORT} are not "
+            "drawn. Compare fig. 8, the mix of all\nappointments rather than "
+            "of first ones.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_training(d):
+    """Where entrants were educated. Three trajectories, one chart."""
+    cohort = entry_cohort(d["appointments"]).merge(
+        d["persons"][["person_id", "education"]], on="person_id", how="left")
+    table = pd.DataFrame(documented_share(cohort, "education", TRAINING))
+
+    fig, ax = plt.subplots(figsize=(7.0, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    xs = list(range(len(table)))
+    ax.set_xlim(-0.35, len(table) - 0.35); ax.set_ylim(0, 0.85)
+    for slot, label in enumerate(TRAINING):
+        ys = table[label].tolist()
+        ax.plot(xs, ys, color=CAT[slot], lw=2.0, zorder=4)
+        ax.plot(xs, ys, marker="o", markersize=8, linestyle="none",
+                color=CAT[slot], markeredgecolor=SURFACE, markeredgewidth=2,
+                zorder=5)
+        ax.annotate(label, xy=(xs[-1], ys[-1]), xytext=(9, 0),
+                    textcoords="offset points", va="center", fontsize=8,
+                    color=INK_2)
+    ax.set_xticks(xs)
+    ax.set_xticklabels([f"{r.era_label}\n{r.documented} of {r.cohort}"
+                        for r in table.itertuples()])
+    ax.set_yticks([0, .2, .4, .6, .8])
+    ax.set_yticklabels(["0%", "20%", "40%", "60%", "80%"])
+    ax.set_ylabel("Share of entrants with education recorded")
+    ax.set_title("What trained a minister, by era of entry")
+    ax.legend(handles=[Line2D([], [], color=CAT[i], lw=2, label=k)
+                       for i, k in enumerate(TRAINING)],
+              loc="upper right", ncol=1)
+    ax.text(0, -0.30,
+            "The denominator under each era is the entrants whose education is "
+            "recorded, not the cohort — coverage runs from 15 of 60 under the "
+            "protectorate to\n105 of 218 in the Second Republic, and it favours "
+            "the prominent. Post-2021 is omitted at 3 documented entrants. A "
+            "person can appear in more\nthan one series; the shares do not sum "
+            "to 100%.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_party_ticket(d):
+    """Party affiliation at entry: the single-party ticket and what replaced it."""
+    cohort = entry_cohort(d["appointments"]).merge(
+        d["persons"][["person_id", "parties"]], on="person_id", how="left")
+    table = pd.DataFrame(documented_share(cohort, "parties", PARTY_TICKET))
+
+    fig, ax = plt.subplots(figsize=(7.0, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    xs = list(range(len(table)))
+    ax.set_xlim(-0.35, len(table) - 0.35); ax.set_ylim(0, 1.0)
+    for slot, label in enumerate(PARTY_TICKET):
+        ys = table[label].tolist()
+        ax.plot(xs, ys, color=CAT4[slot], lw=2.0, zorder=4)
+        ax.plot(xs, ys, marker="o", markersize=8, linestyle="none",
+                color=CAT4[slot], markeredgecolor=SURFACE, markeredgewidth=2,
+                zorder=5)
+        # Direct-label each line at its own peak: two of the four hues sit
+        # below 3:1 on this surface and cannot be identified by colour alone.
+        peak = int(np.argmax(ys))
+        # Placed by where the peak sits: straight above runs into the title at
+        # 93%, and at the right-hand end into the neighbouring series' label.
+        if ys[peak] > 0.85:
+            offset, ha, va = (11, 3), "left", "bottom"
+        elif peak == len(xs) - 1:
+            offset, ha, va = (11, 0), "left", "center"
+        else:
+            offset, ha, va = (0, 15), "center", "bottom"
+        ax.annotate(f"{label} {ys[peak]:.0%}", xy=(xs[peak], ys[peak]),
+                    xytext=offset, textcoords="offset points", ha=ha, va=va,
+                    fontsize=8, color=INK_2)
+    ax.set_xticks(xs)
+    ax.set_xticklabels([f"{r.era_label}\n{r.documented} of {r.cohort}"
+                        for r in table.itertuples()])
+    ax.set_yticks([0, .25, .5, .75, 1])
+    ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.set_ylabel("Share of entrants with a party recorded")
+    ax.set_title("The party ticket into government, by era of entry")
+    ax.legend(handles=[Line2D([], [], color=CAT4[i], lw=2, label=k)
+                       for i, k in enumerate(PARTY_TICKET)],
+              loc="center left", ncol=1)
+    ax.text(0, -0.30,
+            "Destour family folds the Néo-Destour, the PSD and the RCD — one "
+            "organisation under three names. No successor monopoly formed: "
+            "Ennahdha and\nNidaa each supply a fifth of Second Republic "
+            "entrants, and a third arrive with no party recorded at all. "
+            "Party is recorded for a minority of each\ncohort, printed under "
+            "the era; post-2021 has none and is omitted.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_renewal_by_era(d):
+    """How open the door was, per era - and how little that moved.
+
+    Fig. 10 draws the two counts per year. This is the ratio between them,
+    pooled per regime, which is the comparison the counts cannot support: a
+    long era makes more of both. Each small mark is one year, so the spread
+    behind the pooled value stays visible.
+    """
+    app = d["appointments"].copy()
+    app["year"] = pd.to_numeric(app["start_year"], errors="coerce")
+    app = app[(app["year"] >= 1956) & (app["year"] <= 2026)]
+    eras = [e for e in PATHWAY_ERAS if e != "protectorate"]
+
+    rows, annual = [], {}
+    for era in eras:
+        block = app[app["era"] == era]
+        if block.empty:
+            continue
+        by_year = block.groupby("year").agg(
+            starts=("appointment_id", "size"),
+            new=("is_first_appointment", lambda s: int(s.fillna(False).sum())))
+        by_year = by_year[by_year["starts"] >= 5]
+        annual[era] = (by_year["new"] / by_year["starts"]).tolist()
+        rows.append({"era": era, "era_label": ERA_SHORT[era],
+                     "years_drawn": len(by_year),
+                     "appointments": int(block["appointment_id"].size),
+                     "first_time_entrants":
+                         int(block["is_first_appointment"].fillna(False).sum()),
+                     "pooled_renewal_rate": round(
+                         float(block["is_first_appointment"].fillna(False).sum()
+                               / len(block)), 4)})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.8))
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_xlim(0, 0.62); ax.set_ylim(-0.7, len(table) - 0.3)
+    band = table["pooled_renewal_rate"].drop(
+        index=table.index[table["era"] == "saied_exception"])
+    ax.axvspan(band.min(), band.max(), color=SEQ[0], alpha=0.55, zorder=0)
+    ax.text(band.max(), len(table) - 0.5,
+            f"  {band.min():.0%}–{band.max():.0%} across four regimes",
+            fontsize=7.5, color=INK_2, va="center")
+    rng = np.random.default_rng(20260831)   # jitter must not encode year order
+    for i, r in table.iterrows():
+        row = len(table) - 1 - i             # oldest era at the top
+        values = annual[r["era"]]
+        ax.plot(values, row + rng.uniform(-0.14, 0.14, len(values)),
+                marker="o", markersize=4, linestyle="none", color=AXIS,
+                zorder=3)
+        ax.plot([r["pooled_renewal_rate"]], [row], marker="o", markersize=11,
+                color=CAT[0], markeredgecolor=SURFACE, markeredgewidth=2,
+                zorder=5)
+        ax.annotate(f"{r['pooled_renewal_rate']:.0%}",
+                    xy=(r["pooled_renewal_rate"], row), xytext=(0, 13),
+                    textcoords="offset points", ha="center", fontsize=8,
+                    color=INK_2)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels([f"{r.era_label}\n{r.appointments:,} appointments"
+                        for r in reversed(list(table.itertuples()))])
+    ax.set_xticks([0, .1, .2, .3, .4, .5, .6])
+    ax.set_xticklabels(["0%", "10%", "20%", "30%", "40%", "50%", "60%"])
+    ax.set_xlabel("Share of new appointments going to someone who had never served")
+    ax.set_title("How often government recruited a new face, by era")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], marker="o", markersize=9, lw=0,
+               label="era pooled"),
+        Line2D([], [], color=AXIS, marker="o", markersize=5, lw=0,
+               label="one year (5+ appointments)")],
+        loc="upper center", bbox_to_anchor=(0.5, -0.28), ncol=2)
+    ax.text(0, -0.44,
+            "Single-party rule, revolution and multiparty competition all "
+            "recruited fresh faces at between a fifth and a third of "
+            "appointments. The rate is a\nratio of two flows, so it does not "
+            "inflate with the length of an era the way fig. 10's counts do. "
+            "Only the post-2021 governments break the band.\nAn era is the one "
+            "each appointment is coded to, not the calendar year. Pre-1956 is "
+            "excluded: source coverage there is too thin for a rate (fig. 1).",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_premiership_apprenticeship(d):
+    """Years of ministerial service before the top job, per head of government.
+
+    Twenty-two people, each of whom has to be named, so this is one labelled
+    row per premiership rather than a scatter against time: at this density a
+    dated scatter writes half the names on top of each other. Chronological
+    order down the rows carries the time axis.
+
+    Dates come from `personal_starts`. Without that filter the last four
+    premierships collapse onto one composite roster date of 2021-01-01, which
+    is the date of an article covering all four, not of anyone's appointment.
+    """
+    starts = personal_starts(d["appointments"])
+    entry = starts.groupby("person_id")["_start"].min()
+    hog = starts[starts["rank"] == "head_of_government"]
+    firsts = hog.sort_values("_start").groupby("person_id").agg(
+        took_office=("_start", "min"))
+    # Names off `persons`, not off the appointment row: whichever roster row
+    # sorts first decides `person_name`, and for two of these it is Arabic.
+    firsts["name"] = firsts.index.map(
+        d["persons"].set_index("person_id")["name"])
+    firsts["entry"] = entry
+    firsts["prior_years"] = ((firsts["took_office"] - firsts["entry"]).dt.days
+                             / 365.25)
+    firsts["prior_portfolios"] = [
+        starts[(starts["person_id"] == pid) & (starts["_start"] < when)]
+        ["portfolio"].nunique()
+        for pid, when in firsts["took_office"].items()]
+    firsts = firsts[firsts["took_office"].dt.year >= 1956]
+    firsts = firsts.sort_values("took_office")
+    table = firsts.reset_index()[
+        ["person_id", "name", "took_office", "prior_years", "prior_portfolios"]]
+    table["prior_years"] = table["prior_years"].round(2)
+    table["era"] = table["person_id"].map(
+        hog.drop_duplicates("person_id").set_index("person_id")["era"])
+
+    # Béji Caïd Essebsi's 45.6 years is three times the next longest. Drawn to
+    # scale he sets the axis and every other bar becomes a stub, so his bar is
+    # cut at the ceiling and carries its real value as its label.
+    ceiling = 16.0
+    fig, ax = plt.subplots(figsize=(7.2, 6.6))
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_xlim(0, ceiling + 1.5); ax.set_ylim(len(table) - 0.4, -0.6)
+    for i, r in table.iterrows():
+        color = CAT[1] if r["prior_portfolios"] == 0 else CAT[0]
+        drawn = min(r["prior_years"], ceiling)
+        ax.plot([0, drawn], [i, i], color=color, lw=2.0, zorder=3,
+                solid_capstyle="butt")
+        ax.plot([drawn], [i], marker="o", markersize=8, color=color,
+                markeredgecolor=SURFACE, markeredgewidth=2, zorder=5)
+        if r["prior_years"] > ceiling:      # the clipped bar says so in place
+            ax.annotate("//", xy=(ceiling - 0.55, i), ha="center", va="center",
+                        fontsize=9, color=SURFACE, zorder=6)
+        ax.annotate(f"{r['prior_years']:.1f}", xy=(drawn, i), xytext=(11, 0),
+                    textcoords="offset points", va="center", fontsize=7.5,
+                    color=INK_2)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels([f"{r.took_office.year}  {r.name}"
+                        for r in table.itertuples()])
+    ax.set_xticks([0, 5, 10, 15])
+    ax.set_xlabel("Years in government before becoming head of government")
+    ax.set_title("The premiership stops being a capstone")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], marker="o", markersize=8, lw=2,
+               label="had held a ministerial portfolio"),
+        Line2D([], [], color=CAT[1], marker="o", markersize=8, lw=2,
+               label="no prior portfolio")],
+        loc="lower right")
+
+    recent = table[table["took_office"].dt.year >= 2011]
+    ax.text(0, -0.11,
+            "One row per premiership, oldest first. Bourguiba's four prime "
+            "ministers arrived with 8.5 to 15.2 years of ministerial service "
+            f"behind them. Of the\n{len(recent)} premierships since 2011 the "
+            f"median is {recent['prior_years'].median():.1f} years: "
+            f"{int((recent['prior_years'] <= 1).sum())} arrived with a year or "
+            f"less, {int((recent['prior_portfolios'] == 0).sum())} having never "
+            "held a portfolio at all. Bourguiba himself is a\nzero in 1956 "
+            "because there was no prior government to serve in. Béji Caïd "
+            "Essebsi's bar is cut at the axis: his 45.6 years run from a 1965 "
+            "appointment.\nDates are person-level only: without that filter the "
+            "last four premierships collapse onto one composite roster date.\nSee the codebook on `date_basis`.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_prior_careers(d):
+    """What entrants did before politics. Four panels, one scale, one hue.
+
+    Spaghetti at four series and a shared denominator this thin would be
+    unreadable, and the comparison that matters is each trade against its own
+    past, not against the others. One series per panel needs no legend: the
+    panel title names it.
+    """
+    cohort = entry_cohort(d["appointments"]).merge(
+        d["persons"][["person_id", "career_flags"]], on="person_id", how="left")
+    patterns = {label: rf"(?:^|\|){flag}(?:\||$)" for label, flag in CAREERS}
+    table = pd.DataFrame(documented_share(cohort, "career_flags", patterns))
+
+    fig, axes = plt.subplots(2, 2, figsize=(7.2, 5.0), sharex=True, sharey=True)
+    xs = list(range(len(table)))
+    top = float(table[[label for label, _ in CAREERS]].to_numpy().max())
+    for ax, (label, _) in zip(axes.ravel(), CAREERS):
+        ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+        ax.set_xlim(-0.3, len(table) - 0.7); ax.set_ylim(0, top * 1.25)
+        ys = table[label].tolist()
+        ax.plot(xs, ys, color=CAT[0], lw=2.0, zorder=4)
+        ax.plot(xs, ys, marker="o", markersize=7, linestyle="none",
+                color=CAT[0], markeredgecolor=SURFACE, markeredgewidth=2,
+                zorder=5)
+        for x, y in zip(xs, ys):
+            ax.annotate(f"{y:.0%}", xy=(x, y), xytext=(0, 9),
+                        textcoords="offset points", ha="center", fontsize=7,
+                        color=INK_2)
+        ax.set_title(label, loc="left")
+        ax.set_xticks(xs)
+        ax.set_xticklabels([r.era_label for r in table.itertuples()],
+                           rotation=25, ha="right")
+        ax.set_yticks([0, .2, .4, .6])
+        ax.set_yticklabels(["0%", "20%", "40%", "60%"])
+    fig.suptitle("What entrants had been before, by era of entry", x=0.02,
+                 ha="left", fontsize=11, fontweight="bold", color=INK)
+    fig.text(0.02, 0.015,
+             "Share of entrants whose career is coded, per era: "
+             + ", ".join(f"{r.era_label} {r.documented} of {r.cohort}"
+                         for r in table.itertuples())
+             + ".\nThe coded minority is whoever has a biography, which favours "
+               "the prominent; read the levels as a floor and the direction as "
+               "the finding. A person can\ncarry several flags. The diplomatic "
+               "elite of the single-party decades gives way to a credentialed "
+               "one — but see fig. 44, where the same shift\nappears in the "
+               "schooling of a much larger documented group.",
+             fontsize=7.5, color=MUTED, va="bottom")
+    fig.tight_layout(rect=(0, 0.13, 1, 0.95))
+    return fig, table
+
 FIGURES = [
     ("fig01_coverage_by_decade", fig_coverage),
     ("fig02_women_share_by_era", fig_women),
@@ -3092,6 +3560,12 @@ FIGURES = [
     ("fig40_co_membership_backbone", fig_backbone),
     ("fig41_broker_ego_network", fig_broker_ego),
     ("fig42_network_by_era", fig_era_small_multiples),
+    ("fig43_entry_grade_by_era", fig_entry_grade),
+    ("fig44_training_of_entrants", fig_training),
+    ("fig45_party_ticket_at_entry", fig_party_ticket),
+    ("fig46_renewal_rate_by_era", fig_renewal_by_era),
+    ("fig47_premiership_apprenticeship", fig_premiership_apprenticeship),
+    ("fig48_prior_careers_of_entrants", fig_prior_careers),
 ]
 
 

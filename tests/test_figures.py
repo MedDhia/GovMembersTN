@@ -59,6 +59,12 @@ STEMS = [
     "fig40_co_membership_backbone",
     "fig41_broker_ego_network",
     "fig42_network_by_era",
+    "fig43_entry_grade_by_era",
+    "fig44_training_of_entrants",
+    "fig45_party_ticket_at_entry",
+    "fig46_renewal_rate_by_era",
+    "fig47_premiership_apprenticeship",
+    "fig48_prior_careers_of_entrants",
 ]
 
 
@@ -389,3 +395,182 @@ def test_readme_figure_count_and_themes_match_the_figures():
     assert sum(themes) == len(STEMS), (
         f"the README's theme breakdown sums to {sum(themes)}, not the "
         f"{len(STEMS)} figures that exist")
+
+
+# ------------------------------------------------- pathways into office ---
+# Figures 43-48 all rest on one construction - the entry cohort, one row per
+# person at their first appointment - and on denominators that are a documented
+# minority of it. These check both, because a share whose denominator quietly
+# moves is exactly the error a reader cannot see.
+
+PATHWAY_TABLES = ["fig43_entry_grade_by_era", "fig44_training_of_entrants",
+                  "fig45_party_ticket_at_entry",
+                  "fig48_prior_careers_of_entrants"]
+
+
+def _entry_cohort():
+    app = pd.read_csv(PROCESSED / "appointments.csv", low_memory=False)
+    first = app[app["is_first_appointment"].fillna(False)]
+    assert first["person_id"].is_unique
+    return first
+
+
+def test_entry_cohort_sizes_match_the_appointments_table():
+    """Every pathway figure's cohort column is the same count from the data."""
+    counts = _entry_cohort()["era"].value_counts()
+    for stem in PATHWAY_TABLES:
+        table = pd.read_csv(FIGURES / "tables" / f"{stem}.csv")
+        column = "n" if "n" in table.columns else "cohort"
+        for _, row in table.iterrows():
+            assert row[column] == counts[row["era"]], (
+                f"{stem}: drawn with {row[column]} entrants for {row['era']}, "
+                f"data now has {counts[row['era']]}")
+
+
+@pytest.mark.parametrize("stem,column", [
+    ("fig44_training_of_entrants", "education"),
+    ("fig45_party_ticket_at_entry", "parties"),
+    ("fig48_prior_careers_of_entrants", "career_flags"),
+])
+def test_documented_denominators_match_the_persons_table(stem, column):
+    """The `k of n` under each era is coverage, and coverage moves on enrichment."""
+    persons = pd.read_csv(PROCESSED / "persons.csv", low_memory=False)
+    cohort = _entry_cohort().merge(persons[["person_id", column]],
+                                   on="person_id", how="left")
+    table = pd.read_csv(FIGURES / "tables" / f"{stem}.csv")
+    for _, row in table.iterrows():
+        block = cohort[cohort["era"] == row["era"]]
+        documented = int(block[column].notna().sum())
+        assert documented == row["documented"], (
+            f"{stem}: {row['era']} drawn with {row['documented']} documented "
+            f"entrants, data now has {documented}")
+        assert row["documented"] <= row["cohort"], (
+            f"{stem}: {row['era']} documents more people than entered")
+        assert row["documented"] >= 12, (
+            f"{stem}: {row['era']} is drawn on {row['documented']} people, "
+            "below the floor the figure claims to apply")
+
+
+def test_entry_grade_shares_are_a_partition():
+    """Fig. 43 stacks four tiers that must together be every entrant."""
+    table = pd.read_csv(FIGURES / "tables" / "fig43_entry_grade_by_era.csv")
+    tiers = ["Secretary of state", "Minister",
+             "Minister of state / delegate", "Head of government"]
+    for _, row in table.iterrows():
+        assert abs(sum(row[t] for t in tiers) - 1.0) < 1e-3, (
+            f"{row['era']}: entry grades sum to {sum(row[t] for t in tiers)}")
+
+
+def test_the_apprenticeship_grade_is_a_ben_ali_pattern():
+    """The claim the figure is drawn to make: entry below minister peaks there.
+
+    Ben Ali is the only era in which most newcomers arrive below ministerial
+    rank, and it is also the era the caption names. If enrichment moves that,
+    the caption is wrong and this fails rather than the picture quietly lying.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig43_entry_grade_by_era.csv"
+                        ).set_index("era")
+    below = table["Secretary of state"] + table["Minister of state / delegate"]
+    assert below.idxmax() == "ben_ali"
+    assert below["ben_ali"] > 0.5, "Ben Ali no longer recruits mostly below rank"
+    for era in ("transition", "second_republic"):
+        assert table.loc[era, "Minister"] > 0.70, (
+            f"{era}: the caption says three quarters enter at full rank")
+
+
+def test_the_single_party_ticket_collapses():
+    """Fig. 45's whole point, and the successor shares that did not replace it."""
+    table = pd.read_csv(FIGURES / "tables" / "fig45_party_ticket_at_entry.csv"
+                        ).set_index("era")
+    assert table.loc["bourguiba", "Destour family"] > 0.85
+    assert table.loc["ben_ali", "Destour family"] > 0.55
+    for era in ("transition", "second_republic"):
+        assert table.loc[era, "Destour family"] < 0.10
+        # No successor monopoly - the caption says so in as many words.
+        for party in ("Ennahdha", "Nidaa Tounes"):
+            assert table.loc[era, party] < 0.35, (
+                f"{era}: {party} now looks like a replacement monopoly")
+
+
+def test_sadiki_gives_way_to_domestic_universities():
+    """Fig. 44 draws a crossover; a rebuild that loses it invalidates the caption."""
+    table = pd.read_csv(FIGURES / "tables" / "fig44_training_of_entrants.csv"
+                        ).set_index("era")
+    assert table.loc["protectorate", "Collège Sadiki"] > 0.60
+    assert table.loc["bourguiba", "Collège Sadiki"] > table.loc["ben_ali", "Collège Sadiki"]
+    assert table.loc["second_republic", "Collège Sadiki"] < 0.10
+    assert table.loc["protectorate", "Tunisian university"] == 0.0
+    assert table.loc["ben_ali", "Tunisian university"] > 0.50
+    # France never goes away, which is the part a decline story would miss.
+    assert table["Trained in France"].min() > 0.20
+
+
+def test_renewal_rate_is_flat_across_regimes_and_breaks_after_2021():
+    """Fig. 46 asserts a band, and the exception to it, against the data."""
+    app = pd.read_csv(PROCESSED / "appointments.csv", low_memory=False)
+    table = pd.read_csv(FIGURES / "tables" / "fig46_renewal_rate_by_era.csv")
+    for _, row in table.iterrows():
+        block = app[app["era"] == row["era"]]
+        block = block[pd.to_numeric(block["start_year"], errors="coerce")
+                      .between(1956, 2026)]
+        assert len(block) == row["appointments"], f"{row['era']}: flow moved"
+        new = int(block["is_first_appointment"].fillna(False).sum())
+        assert new == row["first_time_entrants"], f"{row['era']}: entrants moved"
+        assert abs(new / len(block) - row["pooled_renewal_rate"]) < 5e-4
+
+    band = table[table["era"] != "saied_exception"]["pooled_renewal_rate"]
+    assert band.min() > 0.15 and band.max() < 0.40, (
+        "the four-regime band the figure shades has moved outside a fifth "
+        "to a third")
+    post = table.loc[table["era"] == "saied_exception", "pooled_renewal_rate"]
+    assert post.iloc[0] < band.min(), (
+        "post-2021 no longer breaks the band, which is the figure's exception")
+
+
+def test_premierships_do_not_collapse_onto_the_composite_roster_date():
+    """A regression test for the bug this figure was first drawn with.
+
+    One source article covers the Bouden, Hachani, Madouri and Zaafrani
+    governments as a single cabinet dated 2021-01-01. Taking the earliest
+    start date per person without filtering on `date_basis` put all four
+    premierships on that date, three of them years early. The fix is the
+    `personal_starts` filter; this is what fails if it is ever dropped.
+    """
+    table = pd.read_csv(FIGURES / "tables" / "fig47_premiership_apprenticeship.csv",
+                        parse_dates=["took_office"])
+    recent = table[table["took_office"].dt.year >= 2021]
+    assert len(recent) >= 4, "expected the post-2021 premierships"
+    assert recent["took_office"].is_unique, (
+        "post-2021 premierships share a date - the composite roster is back")
+    assert (recent["took_office"].dt.month != 1).any(), (
+        "every recent premiership starts on 1 January, which is the placeholder")
+
+
+def test_the_premiership_stops_being_a_capstone():
+    """The figure's title is a claim. These are the numbers behind it."""
+    table = pd.read_csv(FIGURES / "tables" / "fig47_premiership_apprenticeship.csv",
+                        parse_dates=["took_office"])
+    assert table["took_office"].dt.year.min() >= 1956
+
+    bourguiba_pms = table[table["took_office"].dt.year.between(1969, 1986)]
+    assert len(bourguiba_pms) == 4
+    assert bourguiba_pms["prior_years"].min() > 8, (
+        "Bourguiba's prime ministers no longer arrive with 8+ years")
+
+    recent = table[table["took_office"].dt.year >= 2011]
+    assert recent["prior_years"].median() < 2, (
+        "the median apprenticeship since 2011 is no longer under two years")
+    assert (recent["prior_portfolios"] == 0).sum() >= 4, (
+        "the outsider premierships the caption counts have gone")
+
+
+def test_prior_careers_shift_from_diplomacy_to_credentials():
+    """Fig. 48's four panels, and the one comparison its caption draws."""
+    table = pd.read_csv(FIGURES / "tables" / "fig48_prior_careers_of_entrants.csv"
+                        ).set_index("era")
+    assert table.loc["bourguiba", "Diplomat"] > 0.5
+    assert table.loc["second_republic", "Diplomat"] < 0.15
+    assert (table.loc["second_republic", "Academic"]
+            > table.loc["bourguiba", "Academic"] + 0.25)
+    # Shares are per-flag, not a partition: a person can be both.
+    assert (table[["Diplomat", "Academic", "Engineer", "Lawyer"]] <= 1.0).all().all()

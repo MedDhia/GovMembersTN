@@ -1,6 +1,6 @@
 # Figures
 
-Forty-two publication figures built from `data/processed/` alone.
+Forty-eight publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -60,6 +60,12 @@ deterministic: every stochastic step — the force layouts in figs. 6, 40 and
 | `fig40_co_membership_backbone` | Node-link | The network after the disparity filter. |
 | `fig41_broker_ego_network` | Radial ego | One broker's colleagues, grouped by arrival. |
 | `fig42_network_by_era` | Small multiples | The same network drawn once per era. |
+| `fig43_entry_grade_by_era` | Stacked bar, ordinal | The rank people *enter* government at. Ben Ali's graded ladder, and its disappearance after 2011. |
+| `fig44_training_of_entrants` | Multi-line | Collège Sadiki, Tunisian universities and France as routes into office. |
+| `fig45_party_ticket_at_entry` | Multi-line | The Destour ticket at 93%, and the third of entrants arriving with no party after 2011. |
+| `fig46_renewal_rate_by_era` | Strip + summary dot | How often each regime recruited someone who had never served. |
+| `fig47_premiership_apprenticeship` | Lollipop, 22 rows | Years in government before the top job, one row per head of government. |
+| `fig48_prior_careers_of_entrants` | Small multiples | Diplomat, academic, engineer, lawyer — what entrants had been before. |
 
 ## Reading them
 
@@ -186,6 +192,56 @@ a shared minister — collapses it to 56 nodes and makes the real structure
 visible: governments chain to their neighbours in time. For the person-level
 graph, open `data/processed/networks/network_co_membership.gexf` in Gephi and
 follow the recipe in [`../docs/NETWORK_ANALYSIS.md`](../docs/NETWORK_ANALYSIS.md).
+
+## Pathways into office (figs. 43–48)
+
+These six share one construction: the **entry cohort**, one row per person at
+the appointment they came in through, taken from the pipeline's own
+`is_first_appointment` flag rather than re-derived. A person is counted in the
+era they *entered*, not in every era they served, so the six cohorts partition
+the 882 people exactly once.
+
+**Read fig. 46 before the other five.** It is the one that says how much of
+the elite each regime replaced, and the answer — between a fifth and a third
+of appointments in every regime from Bourguiba to the Second Republic — is the
+background against which the other figures' changes are changes in *who* was
+recruited rather than in *how many*. Post-2021 is the exception at 13%.
+
+**Fig. 43 is not fig. 8.** Fig. 8 is the seniority of every appointment; fig.
+43 is the seniority of first ones only. A government can be mostly ministers
+while its recruits all arrive below that rank, which is exactly the Ben Ali
+pattern and is invisible in fig. 8.
+
+**Figs. 44, 45 and 48 rest on a documented minority, and print it.** Education
+is recorded for 15 of 60 protectorate entrants and 105 of 218 Second Republic
+ones; party for 14 and 90; career flags for 12 and 66. The documented minority
+is whoever has a Wikidata or Wikipedia presence, which favours the prominent
+and the recent — so read the *direction* as the finding and the *level* as a
+floor. Eras with fewer than 12 documented entrants are dropped rather than
+drawn thin, which removes the monarchy, the end of the protectorate and the
+post-2021 governments from all three. Shares are per-attribute, not
+partitions: a person can hold a French and a Tunisian degree, or carry three
+career flags.
+
+**Fig. 47 needed the `date_basis` filter to be true at all.** One source
+article covers the Bouden, Hachani, Madouri and Zaafrani governments as a
+single cabinet dated 2021-01-01. Taking each person's earliest start date
+without filtering to person-level dates put all four premierships on that
+date, three of them years early, and made four separate governments look like
+one. The filter is the codebook's rule for durations
+(`date_basis` in `statement`/`row`/`spine`) applied to a start date, and
+`tests/test_figures.py` has a regression test for it.
+
+Béji Caïd Essebsi's bar in fig. 47 is cut at the axis. His 45.6 years run from
+a 1965 appointment and are three times the next longest; drawn to scale he
+sets the axis and every other premiership becomes a stub. The real value is
+printed beside the bar and is exact in the CSV.
+
+**What these figures cannot show.** The dataset records ministerial office and
+nothing else, so a prior parliamentary seat, a governorship or a party post is
+invisible to it. `parties` and `career_flags` are proxies for the recruitment
+channel, not measurements of it: fig. 45 shows that the Destour card stopped
+being the ticket, not what replaced it as a career path.
 
 ## Two of them are reproduction tests
 
