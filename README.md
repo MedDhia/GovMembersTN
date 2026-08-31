@@ -83,7 +83,7 @@ loudly if its answer disagrees with `data/processed/indices/`.
 
 ### Figures
 
-Forty-two publication figures are committed under `figures/`, as PNG for
+Forty-eight publication figures are committed under `figures/`, as PNG for
 screen and PDF for `\includegraphics`, each with a CSV of the exact numbers
 plotted.
 
@@ -95,6 +95,7 @@ plotted.
 | 5 | Careers and survival | Tenure in a post and in government, by regime and by region of birth; seat switching. |
 | 1 | Global shocks | Ministerial exit against five shocks — descriptive, and the figure says why. |
 | 23 | The network | Degree, tie weights and the four layers compared; communities, assortativity, brokerage and homophily; and the layer itself drawn six ways. |
+| 6 | Pathways into office | Who got recruited and through which door: entry rank, schooling, the party ticket, prior careers, the renewal rate, and the apprenticeship before the premiership. |
 
 ![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
 
@@ -252,7 +253,7 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
-figures/         forty-two publication figures, PNG + PDF
+figures/         forty-eight publication figures, PNG + PDF
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
   tables/          the exact numbers behind each figure, one CSV per figure
   README.md        what each figure shows, and how to read it
@@ -263,7 +264,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           187 test functions, 357 cases; fixtures reproduce real markup
+tests/           197 test functions, 381 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
