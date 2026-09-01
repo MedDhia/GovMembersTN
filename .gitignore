@@ -8,7 +8,12 @@ venv/
 
 # Raw payloads are large and re-fetchable; the manifests that record what was
 # fetched, from where and when ARE tracked, so a harvest stays reproducible.
+# The `!data/raw/**/` line is load-bearing: git will not re-include a file
+# whose parent directory is excluded, and without it the MANIFEST negation
+# below never matches - `data/raw/**` excludes data/raw/<source>/ itself, so
+# git never descends far enough to see the manifest inside it.
 data/raw/**
+!data/raw/**/
 !data/raw/.gitkeep
 !data/raw/**/MANIFEST.json
 data/interim/**

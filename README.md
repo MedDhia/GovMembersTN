@@ -264,7 +264,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           197 test functions, 381 cases; fixtures reproduce real markup
+tests/           198 test functions, 382 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the

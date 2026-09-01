@@ -240,3 +240,35 @@ def test_readme_test_count_matches_the_suite():
         f"{functions}")
     assert claimed_cases >= claimed_functions, (
         "cases cannot be fewer than the functions that generate them")
+
+
+def test_gitignore_tracks_manifests_and_ignores_payloads():
+    """The `.gitignore` comment makes a claim; this is that claim under test.
+
+    `data/raw/**` excludes `data/raw/<source>/` itself, and git will not
+    re-include a file whose parent directory is excluded - so the
+    `!data/raw/**/MANIFEST.json` negation matched nothing at all, and the
+    manifests the comment said were tracked were silently absent from every
+    clone. The `!data/raw/**/` line that re-includes the directories is what
+    makes the negation reachable, and nothing about the file's appearance says
+    so. Asking git directly is the only honest check.
+    """
+    import shutil
+    import subprocess
+
+    if shutil.which("git") is None or not (ROOT / ".git").exists():
+        pytest.skip("not a git checkout")
+
+    def ignored(path: str) -> bool:
+        # -q: exit 0 when the path is ignored, 1 when it is not. Works on
+        # paths that do not exist, since this is pattern matching, not I/O.
+        return subprocess.run(["git", "check-ignore", "-q", path],
+                              cwd=ROOT).returncode == 0
+
+    # A harvest writes data/raw/<source>/MANIFEST.json beside its payloads.
+    assert not ignored("data/raw/wikidata/MANIFEST.json"), (
+        "manifests are ignored again - the `!data/raw/**/` re-include is gone")
+    assert ignored("data/raw/wikidata/0123456789abcdef.json"), (
+        "raw payloads are tracked, which is what the size exclusion prevents")
+    assert not ignored("data/raw/.gitkeep")
+    assert ignored("data/interim/reconciliation_audit.json")

@@ -89,11 +89,18 @@ def test_issue_date_takes_the_gregorian_half_not_the_hijri():
     assert parsed.value is not None and parsed.value.isoformat() == "2021-04-08"
 
 
-def test_undeclared_charset_is_sniffed_not_assumed_latin1():
+def test_undeclared_charset_is_sniffed_not_assumed_latin1(tmp_path, monkeypatch):
     """requests defaults to ISO-8859-1 when a response declares no charset.
 
     jort.tn declares none, so its UTF-8 came back as "NÂ°032" and "nommÃ©",
     and every regex against it failed in ways that looked like a parser bug.
+
+    `Fetcher` writes a cache directory and a manifest as a side effect of
+    construction, under `config.paths().raw`. Left pointing at the real tree
+    this drops a `data/raw/charset-test/` into the working copy on every run -
+    harmless while `.gitignore` swallowed every manifest, and a file waiting to
+    be committed by accident now that the manifests are tracked. `GOVTN_ROOT`
+    is the override the config module documents for exactly this.
     """
     import requests
     from govtn.http import Fetcher
@@ -113,7 +120,10 @@ def test_undeclared_charset_is_sniffed_not_assumed_latin1():
         def raise_for_status(self):
             return None
 
+    monkeypatch.setenv("GOVTN_ROOT", str(tmp_path))
     fetcher = Fetcher(source="charset-test", rate_limit=0)
+    assert fetcher.manifest_path.is_relative_to(tmp_path), (
+        "the fetcher is still writing into the real data/raw/")
     fetcher.session.get = lambda *a, **k: FakeResponse()
     text = fetcher.get("https://jort.tn/probe")
     assert "N°032" in text and "nommé" in text
