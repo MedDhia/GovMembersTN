@@ -84,12 +84,12 @@ log = logging.getLogger(__name__)
 MIN_MINISTERS = 25
 
 # Eras whose coded sample is unrepresentative for a reason a count threshold
-# cannot catch. The post-2021 cabinets clear MIN_MINISTERS on 30 coded
-# ministers, but those 30 are almost entirely holdovers: of the 46 people whose
-# first ministerial post came after July 2021, 2 have a coded birthplace (4%),
-# against 61% of the holdovers serving beside them. An index built on that
-# sample would describe the recruitment of previous regimes, which is the
-# opposite of what it would appear to say.
+# cannot catch. The post-2021 cabinets clear MIN_MINISTERS, but the ministers
+# who clear it are almost entirely holdovers: of the 30 people whose first
+# ministerial post came after July 2021, 7% have a coded birthplace, against
+# far higher coverage among the holdovers serving beside them. An index built
+# on that sample would describe the recruitment of previous regimes, which is
+# the opposite of what it would appear to say.
 UNREPRESENTATIVE = {
     "saied_exception": "newcomers 4% covered; sample is almost all holdovers",
 }

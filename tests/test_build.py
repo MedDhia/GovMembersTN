@@ -303,3 +303,130 @@ def test_build_refuses_to_replace_a_more_complete_dataset(tmp_path):
 def test_regression_guard_is_silent_on_a_first_build(tmp_path):
     from govtn.build import _would_regress
     assert _would_regress(tmp_path, {"wikidata_persons": False}) == []
+
+
+# --- Journal Officiel matching ---------------------------------------------
+
+def _jort_fixture(tmp_path, decrees):
+    """Write a decree store and point the build's interim loader at it."""
+    import json
+    interim = tmp_path / "interim"
+    interim.mkdir(parents=True, exist_ok=True)
+    (interim / "jort_decrees.json").write_text(
+        json.dumps({"decrees": decrees, "truncated": []}, ensure_ascii=False),
+        encoding="utf-8")
+    return interim
+
+
+def test_a_decree_two_people_could_claim_is_not_attached_to_either(monkeypatch):
+    """Mohamed Mzali and Mohamed Salah Mzali are different men.
+
+    Containment scores them 0.9 - one name's tokens are a subset of the
+    other's - so the gazette's "Mohamed MZALI" fits both. Date proximity
+    cannot separate them: they are two people, not two guesses. Unless the
+    decree names an office that only one of them held, it is evidence about
+    neither.
+    """
+    from govtn import build
+
+    decree = {
+        "citation": "JORT 1980, N°028, p. 2 (fr)", "year": 1980, "issue": "028",
+        "page": 2, "lang": "fr", "kind": "nomination", "portfolio_hint": None,
+        "holder": "Mohamed MZALI", "office": "Premier Ministre",
+        "effective": None, "published": "1980-04-24", "snippet": "",
+        "query": "", "url": "https://jort.tn/x",
+    }
+    monkeypatch.setattr(build, "_load_interim",
+                        lambda name: {"decrees": [decree]} if "jort" in name else None)
+
+    appointments = pd.DataFrame([
+        {"appointment_id": "A1", "person_id": "P-mzali",
+         "person_name": "Mohamed Mzali", "portfolio": "education",
+         "start_date": "1980-04-24"},
+        {"appointment_id": "A2", "person_id": "P-salah-mzali",
+         "person_name": "Mohamed Salah Mzali", "portfolio": "education",
+         "start_date": "1980-04-24"},
+    ])
+    out = build.attach_jort_citations(appointments.copy())
+    assert out["jort_citation"].isna().all(), (
+        "a decree matching two distinct people was attached anyway")
+
+
+def test_the_office_named_in_a_decree_breaks_the_tie(monkeypatch):
+    """Ambiguity by name is resolved by evidence, not abandoned.
+
+    The same two Mzalis, but now the decree names a portfolio only one of them
+    holds in the row being matched. That is an assertion about identity, and
+    it is allowed to decide.
+    """
+    from govtn import build
+
+    decree = {
+        "citation": "JORT 1980, N°028, p. 2 (fr)", "year": 1980, "issue": "028",
+        "page": 2, "lang": "fr", "kind": "nomination", "portfolio_hint": None,
+        "holder": "Mohamed MZALI", "office": "Premier Ministre",
+        "effective": None, "published": "1980-04-24", "snippet": "",
+        "query": "", "url": "https://jort.tn/x",
+    }
+    monkeypatch.setattr(build, "_load_interim",
+                        lambda name: {"decrees": [decree]} if "jort" in name else None)
+
+    appointments = pd.DataFrame([
+        {"appointment_id": "A1", "person_id": "P-mzali",
+         "person_name": "Mohamed Mzali", "portfolio": "head_of_government",
+         "start_date": "1980-04-24"},
+        {"appointment_id": "A2", "person_id": "P-salah-mzali",
+         "person_name": "Mohamed Salah Mzali", "portfolio": "education",
+         "start_date": "1980-04-24"},
+    ])
+    out = build.attach_jort_citations(appointments.copy()).set_index("appointment_id")
+    assert out.loc["A1", "jort_citation"] == "JORT 1980, N°028, p. 2 (fr)"
+    assert pd.isna(out.loc["A2", "jort_citation"])
+    assert out.loc["A1", "jort_match_basis"] == "office_and_date"
+
+
+def test_a_year_only_decree_matches_within_its_year_and_not_by_day(monkeypatch):
+    """Before about 1980 the gazette's issue pages carry no publication date.
+
+    Those decrees were unusable and never matched - which lost the
+    prime-ministerial appointments of Nouira, Mzali, Sfar and Baccouche. Dated
+    to the year, they match inside that calendar year only, and never claim a
+    day-level gap they cannot support.
+    """
+    from govtn import build
+
+    decree = {
+        "citation": "JORT 1979, N°064, p. 2 (fr)", "year": 1979, "issue": "064",
+        "page": 2, "lang": "fr", "kind": "nomination", "portfolio_hint": None,
+        "holder": "Hédi NOUIRA", "office": "Premier Ministre",
+        "effective": None, "published": None, "snippet": "",
+        "query": "", "url": "https://jort.tn/x",
+    }
+    monkeypatch.setattr(build, "_load_interim",
+                        lambda name: {"decrees": [decree]} if "jort" in name else None)
+
+    appointments = pd.DataFrame([
+        {"appointment_id": "IN", "person_id": "P1", "person_name": "Hédi Nouira",
+         "portfolio": "head_of_government", "start_date": "1979-09-01"},
+        {"appointment_id": "OUT", "person_id": "P1", "person_name": "Hédi Nouira",
+         "portfolio": "head_of_government", "start_date": "1978-09-01"},
+    ])
+    out = build.attach_jort_citations(appointments.copy()).set_index("appointment_id")
+    assert out.loc["IN", "jort_citation"] == "JORT 1979, N°064, p. 2 (fr)"
+    assert out.loc["IN", "jort_date_kind"] == "year_only"
+    # No day-level gap is asserted for a decree dated only to its year.
+    assert pd.isna(out.loc["IN", "jort_date_delta"])
+    # A different year does not match at all.
+    assert pd.isna(out.loc["OUT", "jort_citation"])
+
+
+def test_the_gazette_name_is_published_beside_ours(tables):
+    """A citation matched on a name must be checkable without re-running it."""
+    appointments = tables["appointments"]
+    cited = appointments[appointments["jort_citation"].notna()]
+    assert not cited.empty
+    assert cited["jort_holder"].notna().all()
+    from govtn.normalize import name_similarity
+    worst = min(name_similarity(str(a), str(b))
+                for a, b in zip(cited["person_name"], cited["jort_holder"]))
+    assert worst >= 0.75, f"a citation was accepted at similarity {worst}"
