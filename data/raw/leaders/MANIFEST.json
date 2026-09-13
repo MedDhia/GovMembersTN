@@ -1,0 +1,3866 @@
+{
+  "entries": {
+    "001a0c34e77c8860c12f": {
+      "bytes": 51258,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/f",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:20+00:00",
+      "sha256": "f5da1d72ec08c458797ee58f78d0e0d1ba116803ba450a78996d8d0a78e85bb5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/f"
+    },
+    "001f289210de2ee59243": {
+      "bytes": 60210,
+      "final_url": "https://www.leaders.com.tn/article/35806-qui-est-riadh-chaoued-secretaire-d-etat-aupres-du-ministre-de-l-emploi-et-de-la-formation-professionnelle-charge-des-societes-communautaires",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:33+00:00",
+      "sha256": "cc5a067925d1999e9a62ac8fd587f778906889e48c857d0715cfe5df7293c36b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35806-qui-est-riadh-chaoued-secretaire-d-etat-aupres-du-ministre-de-l-emploi-et-de-la-formation-professionnelle-charge-des-societes-communautaires"
+    },
+    "0133ba4862306014d3a4": {
+      "bytes": 57659,
+      "final_url": "https://www.leaders.com.tn/article/27785-tahar-abdessalem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:11+00:00",
+      "sha256": "a94c3de02c856261271329681118fb1b8e8b2123fd794cfc8c759cf80defd62a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27785-tahar-abdessalem"
+    },
+    "014165b9525cfaf66e21": {
+      "bytes": 82444,
+      "final_url": "https://www.leaders.com.tn/article/26254-qui-est-sonia-bahri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:34+00:00",
+      "sha256": "c9017cb3f38befe2ac1f369fadd0b17a00acb6d6c1a6401d6ed3c801251416b4",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26254-qui-est-sonia-bahri"
+    },
+    "02d6964b4126a1ca412f": {
+      "bytes": 39035,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hakim-karoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:16+00:00",
+      "sha256": "be6e350b134f8b1403160c9139151c2f0cd75feb057f64d9b50e1c13448d06ff",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hakim-karoui"
+    },
+    "02e1262a07e800d21b29": {
+      "bytes": 38956,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-jribi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:50+00:00",
+      "sha256": "d74745a634df91f8b024203f564168b0993e9dba407f8242360ba0165530523f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-jribi"
+    },
+    "036d48b7c4f0d505493a": {
+      "bytes": 57248,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chedly-ayari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:32+00:00",
+      "sha256": "eb844d1945665214f7d9e94d63c0441b84c4b3c13279fb1a96bde4d244816e8d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chedly-ayari"
+    },
+    "03de2ecd24e40868c5bd": {
+      "bytes": 40393,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-sraieb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:02+00:00",
+      "sha256": "75a1a3bb446bab0701234850c9c416624a1b65762c455dd109de37335fb94608",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-sraieb"
+    },
+    "048e1c258409a6c121db": {
+      "bytes": 60238,
+      "final_url": "https://www.leaders.com.tn/article/28935-ahmed-nouisser",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:05+00:00",
+      "sha256": "807350d85ebacca35c1b6f7c3256de18b7c6949ff2a9ca5a04930654413295f5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28935-ahmed-nouisser"
+    },
+    "04b0ed140e486fef8e9a": {
+      "bytes": 69039,
+      "final_url": "https://www.leaders.com.tn/article/27791-haroun-farhat",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:09+00:00",
+      "sha256": "0e880bb86e9e1a1462a63dd446e233d1f0e211272bb30f53aac040d051d7cc2b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27791-haroun-farhat"
+    },
+    "05a25414d356d6aa0c67": {
+      "bytes": 81852,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-essid",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:07+00:00",
+      "sha256": "2c5dd54eb511afbb1bb26a361dd5ce42ea6863306bbdd74264ca28e09bb82cb7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-essid"
+    },
+    "0743501e79269dc7867f": {
+      "bytes": 39257,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelmejid-esseghir",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:42+00:00",
+      "sha256": "586eb7875b0df34a0802244d283eedb747d45275e0df1222c36daa7bfd1410e1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelmejid-esseghir"
+    },
+    "0984a127d384bd0677fe": {
+      "bytes": 77466,
+      "final_url": "https://www.leaders.com.tn/article/35042-qui-est-le-docteur-mohamed-jemaa-specialiste-en-cancerologie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:04+00:00",
+      "sha256": "76dd7eb49e876957b5acccc7199095695f222e3c55099da2d11f7f50c5a06fa2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35042-qui-est-le-docteur-mohamed-jemaa-specialiste-en-cancerologie"
+    },
+    "0a7de2d4e6ba83da9866": {
+      "bytes": 39084,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-thaalbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:07+00:00",
+      "sha256": "e1bece3724d075faf45ef7edc16755a24b23ea1469345603a10772a103d855be",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-thaalbi"
+    },
+    "0b4ff906b95b56af1656": {
+      "bytes": 38166,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fathi-laayouni",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:22+00:00",
+      "sha256": "5aa7ddd5c7f1193a3c39c81e4bb257e23dd368ad827f814d81455d40d992849b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fathi-laayouni"
+    },
+    "0bf7d8fb18e83a1e3938": {
+      "bytes": 51206,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/k",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:35+00:00",
+      "sha256": "862a4d3a2e699af927082c94c3c8cf01fae1b646965c7338adff20bf20e28c5a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/k"
+    },
+    "0c3610dc5cacfe4dfafd": {
+      "bytes": 58494,
+      "final_url": "https://www.leaders.com.tn/article/32536-hajer-el-ouardani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:37+00:00",
+      "sha256": "1aa61ee378e74912ad42460e24fa92a246f7e3bf52558c2b3d4c0fdcd9281408",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/32536-hajer-el-ouardani"
+    },
+    "0cca8084056dbcc6d141": {
+      "bytes": 51203,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/r",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:47+00:00",
+      "sha256": "92af7f6cf8643a8d084bcd301f06454bfda935a2ea7ba850b25ca781143f4b95",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/r"
+    },
+    "0ccc506c7686a0b96fd2": {
+      "bytes": 38204,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-ben-ayed",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:45+00:00",
+      "sha256": "5a7d0dd6ff2b01aa22f81eea912afe809b40050c103f073a6911008a227e4a57",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-ben-ayed"
+    },
+    "0d4a4a59121f409b859b": {
+      "bytes": 46496,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/houcine-abassi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:16+00:00",
+      "sha256": "c2bce754ebc22224bcd8bb2da21d74042bbfff1f6155d698267d6af36c2cd08b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/houcine-abassi"
+    },
+    "0e8a3291435669db133c": {
+      "bytes": 38249,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-kechiche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:41+00:00",
+      "sha256": "a7b2ebccacb44d4a75bc1a041e3892dce3ec40f08cad789f919afd3ad25f17f1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-kechiche"
+    },
+    "0ebe55f499de785177e1": {
+      "bytes": 62650,
+      "final_url": "https://www.leaders.com.tn/article/33511-le-parcours-de-leila-chikhaoui-mahdaoui-ministre-de-l-environnement",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:08+00:00",
+      "sha256": "5dba36f3c7df2f7b8b27f0a9ac6ae732ec319577ae01baabd98f9a3eaf071570",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33511-le-parcours-de-leila-chikhaoui-mahdaoui-ministre-de-l-environnement"
+    },
+    "0ed48c8e2d200ca29208": {
+      "bytes": 60808,
+      "final_url": "https://www.leaders.com.tn/article/24197-m-mohamed-ben-ayed-ambassadeur-de-la-republique-tunisienne-a-rabat",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:01+00:00",
+      "sha256": "a15498a4872db9b41991d562485e1ebaa0f231016026b84a4f08a7e44eb1a3c2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24197-m-mohamed-ben-ayed-ambassadeur-de-la-republique-tunisienne-a-rabat"
+    },
+    "0f297c8d0ae13e66fad9": {
+      "bytes": 63685,
+      "final_url": "https://www.leaders.com.tn/article/26199-qui-est-hassine-sghari-le-nouveau-delegue-a-la-resolution",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:36+00:00",
+      "sha256": "984645f57262bbfd81cc6bbac26cfc3cf2c653ed285b50ff4a4a320a62d482dd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26199-qui-est-hassine-sghari-le-nouveau-delegue-a-la-resolution"
+    },
+    "101be915cdc1c8c1af29": {
+      "bytes": 58740,
+      "final_url": "https://www.leaders.com.tn/article/28980-karim-koundi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:04+00:00",
+      "sha256": "f30b036518215bfeecac673e775ab22cc6992973f212b7c743a24a9cd552ba20",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28980-karim-koundi"
+    },
+    "1063685f8c896f7677e7": {
+      "bytes": 58757,
+      "final_url": "https://www.leaders.com.tn/article/33974-qui-est-kamel-deguiche-ministre-de-la-jeunesse-et-des-sports",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:46+00:00",
+      "sha256": "68810a7ea737a04e2cbf1aa48e644c3998b46a86070174b5dd588c43c85fe53d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33974-qui-est-kamel-deguiche-ministre-de-la-jeunesse-et-des-sports"
+    },
+    "111f28a67934114eb5c8": {
+      "bytes": 41429,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/dhafer-saidane",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:44+00:00",
+      "sha256": "497d7beba6c310791829857f82731ff56c237fb070a02c2b67c35b23d935b426",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/dhafer-saidane"
+    },
+    "12241cc4f4661878751b": {
+      "bytes": 51534,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=3",
+      "params": {
+        "page": 3
+      },
+      "retrieved_utc": "2026-08-26T17:39:48+00:00",
+      "sha256": "5424c307d638e61b8d90def4bfe0f66aa15da380969ac6459de991b1303f6b4b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "1279f3a50ec5cffd67b6": {
+      "bytes": 39124,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-bouricha",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:50+00:00",
+      "sha256": "d01a937ad8d0e114f3516272710f9db77a9c8b040120e5bf3bb8651accc7e3a3",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-bouricha"
+    },
+    "12c9dedca050c1761f25": {
+      "bytes": 59522,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chokri-belaid",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:43+00:00",
+      "sha256": "ef0dd93def5b25a443e1a24dda3f3c14447d818d7cea155f5b1b2f7313bdce8c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chokri-belaid"
+    },
+    "12d75b9d1c6446b044a9": {
+      "bytes": 63570,
+      "final_url": "https://www.leaders.com.tn/article/25522-qui-est-mohamed-samir-koubaa-le-chef-de-la-mission-de-la-ligue-des-etats-arabes-a-vienne",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:01+00:00",
+      "sha256": "f47c6abf93f83163412f7e6a50503be80e136de286611abc9befbc2936cf169d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25522-qui-est-mohamed-samir-koubaa-le-chef-de-la-mission-de-la-ligue-des-etats-arabes-a-vienne"
+    },
+    "131d9c01ac8177591e6e": {
+      "bytes": 41687,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abou-iyadh",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:12+00:00",
+      "sha256": "a3b0db621605b8442f1e6cae4602703f3b2e2a1614b22e24528c9451806f984d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abou-iyadh"
+    },
+    "13601560aea93279575a": {
+      "bytes": 39102,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/alaya-sassi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:09+00:00",
+      "sha256": "5b48756e2471cd0bbffeb5b9b8578451b3e8390b6aaed2706c80df61d8c621e5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/alaya-sassi"
+    },
+    "13d32e2f5156a4774f2e": {
+      "bytes": 40187,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/brahim-gassas",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:24+00:00",
+      "sha256": "6d964fd54de1bb23c0b328d70c0436cebde2479a61df4a8feae61fa4c1496300",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/brahim-gassas"
+    },
+    "1446c3db9cb40904eb0f": {
+      "bytes": 39252,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chedli-klibi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:30+00:00",
+      "sha256": "7148dc2a1c58ef9e97762266f0233041353161d461e827fdf5c4ea997725b7d9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chedli-klibi"
+    },
+    "14a074f93233c994a9ff": {
+      "bytes": 58365,
+      "final_url": "https://www.leaders.com.tn/article/29700-taicir-masmoudi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:36+00:00",
+      "sha256": "961d813a2f58a0df26ad07c6e8181633eac9a6b1de5d1b8024a4c1379014783d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29700-taicir-masmoudi"
+    },
+    "14d97c10595f2332ff1a": {
+      "bytes": 39190,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-gherairi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:46+00:00",
+      "sha256": "57b181b9bb0dbd8bc37d26b0152631444eb7e2fe87399efb50e49f4179f76035",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-gherairi"
+    },
+    "14f84978340ea04256d0": {
+      "bytes": 40523,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/boubaker-hakim",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:21+00:00",
+      "sha256": "c35f8cadb79051a21e0b78fab22129180d80e2242554e01d8695d39dd41e8ff4",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/boubaker-hakim"
+    },
+    "1506aac2e481fc382cd4": {
+      "bytes": 62111,
+      "final_url": "https://www.leaders.com.tn/article/35795-qui-est-samir-abdelhafidh-secretaire-d-etat-aupres-de-la-ministre-de-l-economie-et-de-la-planification-charge-des-petites-et-moyennes-entreprises",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:44+00:00",
+      "sha256": "832dd4896443714840e9cabe9878abd9e45475c77a11997dd8b3e37765a10c13",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35795-qui-est-samir-abdelhafidh-secretaire-d-etat-aupres-de-la-ministre-de-l-economie-et-de-la-planification-charge-des-petites-et-moyennes-entreprises"
+    },
+    "155761a2d9029a5f4a81": {
+      "bytes": 66266,
+      "final_url": "https://www.leaders.com.tn/article/35787-qui-est-fatma-thabet-chiboub-ministre-de-l-industrie-des-mines-et-de-l-energie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:49+00:00",
+      "sha256": "3bbee4e874a619a441024c78d84ff0e86826085a2a3426b3089c5c26035737ce",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35787-qui-est-fatma-thabet-chiboub-ministre-de-l-industrie-des-mines-et-de-l-energie"
+    },
+    "167845999dc028cbe54b": {
+      "bytes": 51426,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/h",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:31+00:00",
+      "sha256": "061899218b9f0a67b51094c4666bdabe55fa6503cd9a545c527798e686359bac",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/h"
+    },
+    "17554552be0ee93c144d": {
+      "bytes": 67277,
+      "final_url": "https://www.leaders.com.tn/article/33340-le-parcours-de-nizar-ben-neji-ministre-des-technologies-de-la-communication",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:23+00:00",
+      "sha256": "5727519d9e1990cd50132f96508514e8fa5eecf0433f48f4850298e924b7fba6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33340-le-parcours-de-nizar-ben-neji-ministre-des-technologies-de-la-communication"
+    },
+    "17bf3d30869c0e176572": {
+      "bytes": 39295,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-belkhodja",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:03+00:00",
+      "sha256": "170a2f61353d8fa79741121b972aa2fee10d6dff3600c31a3ddc922a9a951ae6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-belkhodja"
+    },
+    "187445dbf7ce1dcee0fa": {
+      "bytes": 38891,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfettah-mourou",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:17+00:00",
+      "sha256": "ae318e582e34af5f79f7bf2cb73aa5607eb36af46e30eb22517690f00793941f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfettah-mourou"
+    },
+    "18d096fbe41af328de52": {
+      "bytes": 39370,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/foued-mebazaa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:38+00:00",
+      "sha256": "7813af76e5deaf3c80d604a1ef38a5a98393591c51ed90e511b21ad6db62c3af",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/foued-mebazaa"
+    },
+    "190ca3b19726faf655dc": {
+      "bytes": 60598,
+      "final_url": "https://www.leaders.com.tn/article/28932-hatem-haddad",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:07+00:00",
+      "sha256": "cb9cac0347fbd38c08bd102617c03db8f50e6137d2db26a19d999dc1f7c6a31c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28932-hatem-haddad"
+    },
+    "1ab862cc245d6f8855bb": {
+      "bytes": 38251,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-gharbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:52+00:00",
+      "sha256": "1b8aa660f30b4a23a1b2a4418e09d6d8ad96d76c91e278f63070282aa63a5265",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-gharbi"
+    },
+    "1b352267964bcedd0f9c": {
+      "bytes": 42469,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-ellouze",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:04+00:00",
+      "sha256": "efb58c0f73043c0510c42d6235dc7fad955b89ce73f369932d52265c5595d169",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-ellouze"
+    },
+    "1ba2d9ed7b3f1f1dfe4c": {
+      "bytes": 37945,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hechmi-lakriche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:48+00:00",
+      "sha256": "56f9eb3813ad28119b0379d88d46f9be8ee3a70284f219a29254442df7570aa5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hechmi-lakriche"
+    },
+    "1d0a1783e17a85095c56": {
+      "bytes": 38043,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-ben-hassen",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:00+00:00",
+      "sha256": "42508aaadaed4a1afb6944d9068be55346a85c29351ea1d3e5b11df13cdd4eae",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-ben-hassen"
+    },
+    "1d9c7d23ec1bb79554c4": {
+      "bytes": 38238,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-aloulou",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:07+00:00",
+      "sha256": "cc7814a45495c020a5329aabe293d831012fb9daa5c0cadf4261cb23864e6c8f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-aloulou"
+    },
+    "1e391f1b2dcae0b0c382": {
+      "bytes": 38053,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-zaafouri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:08+00:00",
+      "sha256": "2e94875bcd210ea7c1b25a044722bb38a28924338290ab0ace32d29bf25921d9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-zaafouri"
+    },
+    "1fc39134306194b8d52f": {
+      "bytes": 38036,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-rdissi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:25+00:00",
+      "sha256": "7ce0f9ff7ab8f9e0ff1aa87eb729d4f5306b6630aa97fb197c30ac05c5aa46d1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-rdissi"
+    },
+    "1fe632b41dd53f36dd55": {
+      "bytes": 58570,
+      "final_url": "https://www.leaders.com.tn/article/23560-qui-est-bassem-bouguerra",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:23+00:00",
+      "sha256": "02a036b6af254a964c6dd66263eb0564aa745775d1506dac1bbce47c158486cb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23560-qui-est-bassem-bouguerra"
+    },
+    "20106ac6328a69211ff0": {
+      "bytes": 59687,
+      "final_url": "https://www.leaders.com.tn/article/25418-qui-est-sofiane-bouhdiba-le-demographe-tunisien",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:09+00:00",
+      "sha256": "14ddbcdd92f9049cda15cc2e6301a7e82490aa8474283640b61b2f6c99cb2d23",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25418-qui-est-sofiane-bouhdiba-le-demographe-tunisien"
+    },
+    "20c5574387776be1440b": {
+      "bytes": 38305,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-miled",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:44+00:00",
+      "sha256": "ba97bb1d8a3e1616702f5a029210affa392e230121b8bf2d46bab82bbd7a452c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-miled"
+    },
+    "21b311fd5dfea9d4e6ce": {
+      "bytes": 38888,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdeljelil-mehiri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:23+00:00",
+      "sha256": "1cf7452da2acf1de569e0b1a462efc7cf2df0049452427172a606e9876805a95",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdeljelil-mehiri"
+    },
+    "21cf7982fd857de78d00": {
+      "bytes": 61290,
+      "final_url": "https://www.leaders.com.tn/article/34550-qui-est-fabrice-rousseau-conseiller-de-cooperation-et-d-action-culturelle-directeur-de-l-institut-francais-de-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:17+00:00",
+      "sha256": "57dd187d4cd665b097336bf9a683e315a23798e5f254d30fa7d6bd6f26826087",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34550-qui-est-fabrice-rousseau-conseiller-de-cooperation-et-d-action-culturelle-directeur-de-l-institut-francais-de-tunisie"
+    },
+    "220efea21007e047349d": {
+      "bytes": 41352,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfattah-mourou",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:11+00:00",
+      "sha256": "12235da93d5444d30b8702fb279be93ccd005101b0079a430b65ae167bfc47ff",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfattah-mourou"
+    },
+    "22806b7269e8f78b39cd": {
+      "bytes": 59846,
+      "final_url": "https://www.leaders.com.tn/article/26136-ahmed-ghezal",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:47+00:00",
+      "sha256": "fa9b5a028bf4c5c0f8a307794b6423a36fbd7a84be5f1f9f1e487695c9ca45c6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26136-ahmed-ghezal"
+    },
+    "23891ba53762a6ec5be1": {
+      "bytes": 38115,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hela-cheikhrouhou",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:04+00:00",
+      "sha256": "e65c1ac2551f17f26681cd463b53790c7072d98b85836e583ffa90da7d92103f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hela-cheikhrouhou"
+    },
+    "23acd3c1a2e118a2d0d5": {
+      "bytes": 64874,
+      "final_url": "https://www.leaders.com.tn/article/28489-qui-est-ridha-zguidane-directeur-general-de-l-institut-diplomatique-pour-la-formation-et-les-etudes-idfe",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:33+00:00",
+      "sha256": "30f95722c697d9ea9e646696c9063e1f98b0cdb23f5bf0b2d0faefb0fb8ca963",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28489-qui-est-ridha-zguidane-directeur-general-de-l-institut-diplomatique-pour-la-formation-et-les-etudes-idfe"
+    },
+    "23ad5490d9129101e6ed": {
+      "bytes": 59625,
+      "final_url": "https://www.leaders.com.tn/article/27986-ambassadeur-de-turquie-refik-ali-onaner",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:55+00:00",
+      "sha256": "fc4f9e5cea06765207306ba522dc85b2a0db3f47f7b48e9b2b60d801987caa4d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27986-ambassadeur-de-turquie-refik-ali-onaner"
+    },
+    "23c1f31020cf279c7d1b": {
+      "bytes": 59153,
+      "final_url": "https://www.leaders.com.tn/article/29883-ali-mhiri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:28+00:00",
+      "sha256": "818a0d1b3ebadd02892c048b03384edd3415a3ea6d7fdf1149e474556fb5170d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29883-ali-mhiri"
+    },
+    "23e51aaf6c1912ef0763": {
+      "bytes": 60715,
+      "final_url": "https://www.leaders.com.tn/article/37848-mongi-chemli-melanges-a-lire",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:21+00:00",
+      "sha256": "9fa5029f8e7fd761ca6e110b51b143501dcb0c6c1a4c266de653049bad04174f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37848-mongi-chemli-melanges-a-lire"
+    },
+    "251660dc3f8bcdc8ab7d": {
+      "bytes": 51521,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/m",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:39+00:00",
+      "sha256": "428fe57f806b38ecc95dfaa46164bcd8d8c9d4b4293c058419605a0cd0085e4e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/m"
+    },
+    "2538ebbb5fafdaabb646": {
+      "bytes": 39291,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adel-fekih",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:26+00:00",
+      "sha256": "00f8ffe8ef819efde7b2170c5a034137ae451c22374a67b0d2268f4e17ceca8d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adel-fekih"
+    },
+    "264b7e132b38d2602859": {
+      "bytes": 60414,
+      "final_url": "https://www.leaders.com.tn/article/24901-qui-est-ezzeddine-larbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:45+00:00",
+      "sha256": "786d1fe8d36e69de501de3ad9d3f01cb665a0f23bc8f68046223f176dfb76665",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24901-qui-est-ezzeddine-larbi"
+    },
+    "26e822c7abb41b7656a7": {
+      "bytes": 39305,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hafedh-ben-salah",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:14+00:00",
+      "sha256": "f3c07570bea99c9d7ac81fdaf301289e256921ef5c8a0fc2555b349105c6287e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hafedh-ben-salah"
+    },
+    "27416e73dc044972af47": {
+      "bytes": 38186,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/guido-westerwelle",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:56+00:00",
+      "sha256": "4d11fc3a522feca5a383b5eb2603c85c19c57dd45222d5bd9dcfe0db6349c6db",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/guido-westerwelle"
+    },
+    "27f5200e4e8c51f72c89": {
+      "bytes": 40225,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/azyz-amami",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:47+00:00",
+      "sha256": "131d8c281dff8d3834914ec8b2b421d5400c788bd5b094397190f4c43da48829",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/azyz-amami"
+    },
+    "2825930ebec8274f72bc": {
+      "bytes": 45100,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/g",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:27+00:00",
+      "sha256": "b987ce16d9dd40f302d0f688b0682ea56e78a01a0feae4508b222c558f4a057f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/g"
+    },
+    "2950e725e333e0537ed4": {
+      "bytes": 57805,
+      "final_url": "https://www.leaders.com.tn/article/29621-abdelhamid-hassairi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:38+00:00",
+      "sha256": "86f6538131fb6f21321b1a92886639ab2f302aeba831c548c878b1d6a55ff7a7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29621-abdelhamid-hassairi"
+    },
+    "2b01884d5c48add1fabd": {
+      "bytes": 38207,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwaheb-nechi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:53+00:00",
+      "sha256": "147a36d96db972e88775a5c7f8d20c69aa1fbafb2454fa329c30716fec80bd48",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwaheb-nechi"
+    },
+    "2c07cb21adea489628a4": {
+      "bytes": 39210,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hassen-zargouni",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:38+00:00",
+      "sha256": "26086c8bb195e99264d454bbdf59e674ceec8e4993860ab40f831a5d70df3187",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hassen-zargouni"
+    },
+    "2c1cccf5e7f4aacb196b": {
+      "bytes": 38248,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ali-mezghani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:21+00:00",
+      "sha256": "8be3030bc3e5025ae79a5fc5c607fa4fb93c2b3dd89d402c6bb1f5b83b7b34ba",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ali-mezghani"
+    },
+    "2c4b5bf56ddc4b8ae903": {
+      "bytes": 38223,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abou-zid-ettounsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:16+00:00",
+      "sha256": "d422dc3a4e95204007ea1c85b20e12a16c3fbfaf6af7b1df665fb3651fa74149",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abou-zid-ettounsi"
+    },
+    "2d2f61795cfecc30d5b1": {
+      "bytes": 38173,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-ben-mrad",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:08+00:00",
+      "sha256": "1f63170104e41ce854e7fb07413d67e18e4f25098e9eeadaee7b9aaa6a829c7e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-ben-mrad"
+    },
+    "2d427f512031e79303f9": {
+      "bytes": 59072,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ali-larayedh",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:13+00:00",
+      "sha256": "2abfd3018ff976f4bf0a87ff0d096144f7de0aee3426aabb6327504a9ae66538",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ali-larayedh"
+    },
+    "2fa5055b96be8ae6fdb7": {
+      "bytes": 38205,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwaheb-maatar",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:51+00:00",
+      "sha256": "12545cdfa428b6e0886a346dfc51555fd3cdfae5986d1c783415b2ff1885da87",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwaheb-maatar"
+    },
+    "2fd9ce35b54f1293309a": {
+      "bytes": 40277,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-redissi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:26+00:00",
+      "sha256": "39758687e66f353e724e8bd5471de41ab8fdc42a2a9cda77835c44385debb92b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-redissi"
+    },
+    "3087d47d5e0bbf7e9734": {
+      "bytes": 42933,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/z",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:57+00:00",
+      "sha256": "2703126914d10545ce16569370337d7b9b849bbc045a68a74179d8c08fbb2067",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/z"
+    },
+    "31db495de7910e7d0eab": {
+      "bytes": 38020,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-hamza",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:04+00:00",
+      "sha256": "6539a19f717dbda247f32ba5572e5dcdb830b7474687e78494d20ce4627413d3",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-hamza"
+    },
+    "323932e0d6a73d3e47e7": {
+      "bytes": 51246,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/n",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:41+00:00",
+      "sha256": "5bb26e271c3b9e1d2d568a74abe0b94878cfec15b6044082df4b8309add6d005",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/n"
+    },
+    "329e2de5a151ab32f151": {
+      "bytes": 58242,
+      "final_url": "https://www.leaders.com.tn/article/37604-qui-est-john-h-humphrey-le-fondateur-du-journal-of-roman-archaeology",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:19+00:00",
+      "sha256": "0f62102ea0f5a2d45f1549c52080b9b858f02ef6d3f30804c20d14384e1ded08",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37604-qui-est-john-h-humphrey-le-fondateur-du-journal-of-roman-archaeology"
+    },
+    "344d71a2b0410c928767": {
+      "bytes": 51611,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=8",
+      "params": {
+        "page": 8
+      },
+      "retrieved_utc": "2026-08-26T17:39:58+00:00",
+      "sha256": "0fbecd703eb98eda1c8efcc1cbd2383c791cd221f0356ba890544586eb1a991f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "349064f42b6427fe635b": {
+      "bytes": 38036,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/aziz-miled",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:45+00:00",
+      "sha256": "fea798f2a7ddce1f89d67740d0eaa83f62196d3e833ce6f5a9944d0e929c25dd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/aziz-miled"
+    },
+    "34ce0a67a553a2c7f9f9": {
+      "bytes": 40462,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-ghrairi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:48+00:00",
+      "sha256": "c9e12bb00bba064bd4aa92ca3789dee632a31571c83ab3c558a191047535476c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-ghrairi"
+    },
+    "356d3eafb7084500c843": {
+      "bytes": 49472,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/j",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:33+00:00",
+      "sha256": "201dd0e540bd4da9a0870fbbe2a71a80dd56672436def2359639425c59971c67",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/j"
+    },
+    "36844817d20c32b04877": {
+      "bytes": 58826,
+      "final_url": "https://www.leaders.com.tn/article/33081-le-parcours-de-hubert-tardy-joubert",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:32+00:00",
+      "sha256": "0ac60014244bb0a565477c0d5e3801e9cda0ee68333bcc8cfbc0864950074d7d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33081-le-parcours-de-hubert-tardy-joubert"
+    },
+    "371cf64caa53ee4534b7": {
+      "bytes": 48983,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amel-karboul",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:25+00:00",
+      "sha256": "04f469399667b4c4af8bc9b372bddf4a7eca5cd6181b2d032eb1ff52dded38b6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amel-karboul"
+    },
+    "37558aee8060504c7704": {
+      "bytes": 51426,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/s",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:49+00:00",
+      "sha256": "dc428da7c22ee66ae5d7621550e0b5b88dfb5a22631ba9eee05d2bf128c587ff",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/s"
+    },
+    "37a830c6bc07ca23f642": {
+      "bytes": 61087,
+      "final_url": "https://www.leaders.com.tn/article/33878-qui-est-irina-guerif-arbitre-international-agreee-avocate-au-barreau-de-paris-et-ancienne-secretaire-generale-de-la-chambre-internationale-de-l-arbitrage-de-paris",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:55+00:00",
+      "sha256": "a33ec4cfb70e563d083aeb8bd0474e4877e3a95edd78e2918c2bdf1b1645e5ef",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33878-qui-est-irina-guerif-arbitre-international-agreee-avocate-au-barreau-de-paris-et-ancienne-secretaire-generale-de-la-chambre-internationale-de-l-arbitrage-de-paris"
+    },
+    "37cc4dc38286b948e647": {
+      "bytes": 51715,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=7",
+      "params": {
+        "page": 7
+      },
+      "retrieved_utc": "2026-08-26T17:39:56+00:00",
+      "sha256": "50416eedc23538d6397f57116d2e76261ca1c8af342c7fd3a88932b61ad104e1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "3832da000d5c17ac2f05": {
+      "bytes": 42191,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/d",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:16+00:00",
+      "sha256": "e5314e2efcbcc74db73bb0e8aa336929ec0cbbfa66aca792b218569b706ee7d6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/d"
+    },
+    "38b9275e8def55eb99df": {
+      "bytes": 59059,
+      "final_url": "https://www.leaders.com.tn/article/28351-hichem-rebai-le-nouveau-directeur-general-de-la-bh-bank",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:35+00:00",
+      "sha256": "3e76e1ab00d6105e93ac6af7d1fe63b71b31b4eeb4dee00d7a26a1362840b791",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28351-hichem-rebai-le-nouveau-directeur-general-de-la-bh-bank"
+    },
+    "391d5a6227200ccf1b62": {
+      "bytes": 53778,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=7",
+      "params": {
+        "page": 7
+      },
+      "retrieved_utc": "2026-08-26T17:39:32+00:00",
+      "sha256": "afbee802ebaff3a3618a23528b61e7923b2ee94458c3fb5b40bc0c9b91d9a677",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "3929e71be11769170cf2": {
+      "bytes": 74382,
+      "final_url": "https://www.leaders.com.tn/article/38333-ahmed-friaa-mohamed-amara-l-universitaire-exemplaire",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:53+00:00",
+      "sha256": "d9762f437432de71a5b761d92f123af3e3e40314d05b21f5be1d7ba35a4acd90",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38333-ahmed-friaa-mohamed-amara-l-universitaire-exemplaire"
+    },
+    "39b1d9ac0f0ec9355737": {
+      "bytes": 67955,
+      "final_url": "https://www.leaders.com.tn/article/38330-hommages-ponctues-au-recteur-mohamed-amara-decede-les-mathematiques-en-deuil",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:51+00:00",
+      "sha256": "7d21b344d221bde666702f36c1a21f359b0a85f680bb1d49a8e2bc8286ae619f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38330-hommages-ponctues-au-recteur-mohamed-amara-decede-les-mathematiques-en-deuil"
+    },
+    "3a67a05ee4bbcf7b9ddd": {
+      "bytes": 67347,
+      "final_url": "https://www.leaders.com.tn/article/26724-mohamed-adel-chouari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:22+00:00",
+      "sha256": "ff757fe4f9ecdea1a48ed56b2e6264a75e6dd1217b0496efb32b44c437cc8793",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26724-mohamed-adel-chouari"
+    },
+    "3a6db42ef2e434bb8655": {
+      "bytes": 39256,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hichem-djait",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:06+00:00",
+      "sha256": "f86d91e779a2e06008005e95f3d36f328e39c65af347e7793c37b4b2fb51e216",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hichem-djait"
+    },
+    "3beeac19e1fc83611c49": {
+      "bytes": 38064,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hmida-ennaifer",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:10+00:00",
+      "sha256": "eec1f27b06455c172e6bcfa951f762288a05868df7d389619350713948d6ae7c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hmida-ennaifer"
+    },
+    "3c7b256e2b8aa1440850": {
+      "bytes": 75688,
+      "final_url": "https://www.leaders.com.tn/article/28596-lobna-jeribi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:17+00:00",
+      "sha256": "6cc407c5b3864e408f27e08dc4ebf891e1f96b65f513f3dd9cc44e6da71c2bbc",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28596-lobna-jeribi"
+    },
+    "3c86c9c0a525105ea77f": {
+      "bytes": 57727,
+      "final_url": "https://www.leaders.com.tn/article/34148-nafla-dhahab",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:41+00:00",
+      "sha256": "e6a282e8e32f8fa370cb47df348ffa7442b45871c032dfbdfd781f7252780f88",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34148-nafla-dhahab"
+    },
+    "3c8ef3837ca1d957f89f": {
+      "bytes": 38095,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/belhassan-trabelsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:12+00:00",
+      "sha256": "ccd8a4eab95b08b70ddd0dea9b6c2d8744587dc8204e11b723badf0a4cd99626",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/belhassan-trabelsi"
+    },
+    "3dc0595552ac38486339": {
+      "bytes": 83686,
+      "final_url": "https://www.leaders.com.tn/article/31919-mohamed-chouikha",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:48+00:00",
+      "sha256": "77144bd619a0ce3c1f5e61f8a796e11baa00721d4dd71e262c87fd27d8281ddb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31919-mohamed-chouikha"
+    },
+    "3e5d79b8978c053d3ef7": {
+      "bytes": 39478,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fouad-mbazaa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:34+00:00",
+      "sha256": "1c08909db86b7fe646f69b4d0c3b8c04c9bac30a27fecb5e7513a6605dfd1103",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fouad-mbazaa"
+    },
+    "3eda3a142ffd110e2435": {
+      "bytes": 60188,
+      "final_url": "https://www.leaders.com.tn/article/31758-moez-mehdi-mahmoudi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:02+00:00",
+      "sha256": "7a9dbdeeda2ac5a1e4fec29c5d3fd683e04b5109520800553a07ffb9660ac3cd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31758-moez-mehdi-mahmoudi"
+    },
+    "3efdfa894d98e1c52e92": {
+      "bytes": 60118,
+      "final_url": "https://www.leaders.com.tn/article/25003-mohamed-dachraoui-directeur-de-l-ecole-polytechnique-groupe-universite-centrale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:42+00:00",
+      "sha256": "dad5daf5163ebdd9386d9cbede53a552050785835fa039bf3c875fd1679b6701",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25003-mohamed-dachraoui-directeur-de-l-ecole-polytechnique-groupe-universite-centrale"
+    },
+    "3f8c94e8f1e092a007fb": {
+      "bytes": 38054,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ali-chebbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:09+00:00",
+      "sha256": "4ff962d3c7b0de3f3957ec9f12feb4fa058ab749f4f508e430de18a5c7203e1f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ali-chebbi"
+    },
+    "404f2dde4ef5add8d253": {
+      "bytes": 39291,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chiheb-ben-ahmed",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:38+00:00",
+      "sha256": "4e615a42e2d8610c195a16e01b2b3043a0d4caa81cbf74fe7be146bf82f08a3b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chiheb-ben-ahmed"
+    },
+    "4154e9ce553241d18040": {
+      "bytes": 39046,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelkerim-zebidi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:28+00:00",
+      "sha256": "be570f6008dfa68bee6e57ff7d89e49236cdd4065a647867b2d8ab52dea5ca6f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelkerim-zebidi"
+    },
+    "41662d0b12d3b1c174cf": {
+      "bytes": 99061,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-jebali",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:23+00:00",
+      "sha256": "533dc4c69adfb9323dc280fe07226cba13628362a812bce60c4733278868f323",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-jebali"
+    },
+    "41c46c9992b1f93b4dcc": {
+      "bytes": 57719,
+      "final_url": "https://www.leaders.com.tn/article/29183-imed-hazgui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:51+00:00",
+      "sha256": "1ede165cc3fd7781ef704adcda4e54973a9eaa0fc354d5a93b015e126356eeb7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29183-imed-hazgui"
+    },
+    "4275d138d1c6b540d049": {
+      "bytes": 51733,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/a",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:10+00:00",
+      "sha256": "d80aa9b88e63bdc3cbb1ba01b5d80375f28ffc4376918611cad11a066d78bb14",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/a"
+    },
+    "449c7842fad4646b9b80": {
+      "bytes": 38092,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/cheikh-kameleddine-djait",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:36+00:00",
+      "sha256": "0d195a4c11c2d52333d9ed945aa546c04aad053c3e4a95b1cfb86b1a83584022",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/cheikh-kameleddine-djait"
+    },
+    "44f0400ab0c06e7971c3": {
+      "bytes": 58252,
+      "final_url": "https://www.leaders.com.tn/article/31107-leila-baghdadi-economiste",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:04+00:00",
+      "sha256": "ff75516a485ba7586e6976743e9f191b99ac7a9d49e6a1888121933813ec2643",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31107-leila-baghdadi-economiste"
+    },
+    "45b5145c80b7ba1858a4": {
+      "bytes": 58677,
+      "final_url": "https://www.leaders.com.tn/article/35804-qui-est-feryel-ouerghi-ep-sebai-ministre-de-l-economie-et-de-la-planification",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:37+00:00",
+      "sha256": "16b0eabc58642ae55a4f8f097f5b672f08e14083e45447362695031d195d615e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35804-qui-est-feryel-ouerghi-ep-sebai-ministre-de-l-economie-et-de-la-planification"
+    },
+    "465d1c26f6bc879161be": {
+      "bytes": 39218,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-arfa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:39+00:00",
+      "sha256": "50098f7263cbad126af8f1e0d1c3b002098fe8750c89c62492de8135dd2d72db",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-arfa"
+    },
+    "467fd9f541a96e21d460": {
+      "bytes": 61147,
+      "final_url": "https://www.leaders.com.tn/article/25002-kais-mabrouk-directeur-developpement-international-groupe-universite-centrale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:36+00:00",
+      "sha256": "57020f3a3b6867339a419fbbf8830f07acc6d9f9af6ac8fe7fb35d8b7cf5eb54",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25002-kais-mabrouk-directeur-developpement-international-groupe-universite-centrale"
+    },
+    "46849138f4b759e483aa": {
+      "bytes": 62895,
+      "final_url": "https://www.leaders.com.tn/article/27866-moncef-baati",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:04+00:00",
+      "sha256": "521caa2db80b1161efe62fd2c1d2f91f3ac0cccfa4572041f928a0d4e2ffee3f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27866-moncef-baati"
+    },
+    "468b788f26b90dc229c5": {
+      "bytes": 38161,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fahmi-chelli",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:04+00:00",
+      "sha256": "037979aacf3d4e89b8aa91d22870bd5c2a5df4ed45e8d9f4a369e8f3e07778aa",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fahmi-chelli"
+    },
+    "46d9fb19c54ee853287f": {
+      "bytes": 38157,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-ayadi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:28+00:00",
+      "sha256": "a90af48dbd56dcc2f5497f84f7dbfcaba930e2e2fbdb247c4add706688e5deda",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-ayadi"
+    },
+    "48959b38fcb5f364b0d7": {
+      "bytes": 46630,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amina",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:30+00:00",
+      "sha256": "f83ddbc3eba90598baefa1d2bc4975f0af66d968399f01e8c8d62ae35964aac9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amina"
+    },
+    "4907a53a4492222fc48a": {
+      "bytes": 75796,
+      "final_url": "https://www.leaders.com.tn/article/28484-leila-ouled-ali",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:38+00:00",
+      "sha256": "975817a156b87ad8bb4852cf930da366bd96e92c5e10fce48585a1b60043bb17",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28484-leila-ouled-ali"
+    },
+    "4947fde40c0bb40623be": {
+      "bytes": 62141,
+      "final_url": "https://www.leaders.com.tn/article/38386-qnb-tunisia-annonce-des-resultats-financiers-performants-au-premier-semestre-2026",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:08+00:00",
+      "sha256": "2a1afb4e46bb776d7afc2328353953caf62852fe244b064fe095d5e46551871c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38386-qnb-tunisia-annonce-des-resultats-financiers-performants-au-premier-semestre-2026"
+    },
+    "4975113ad223d7c37ad5": {
+      "bytes": 40362,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-larbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:58+00:00",
+      "sha256": "ceb4cc4166583eafc75934c8aea3ec94d07bb5539dd1d87073fb381e5ecf3097",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-larbi"
+    },
+    "49cb960e072dc3678853": {
+      "bytes": 74642,
+      "final_url": "https://www.leaders.com.tn/article/38319-elyes-ghariani-israel-perd-l-amerique-democrate",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:49+00:00",
+      "sha256": "af58c9dc4a7f6a947b034159a26379ec234393d2e81bd8f5b9870dbb39e6487a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38319-elyes-ghariani-israel-perd-l-amerique-democrate"
+    },
+    "4a14a248003ca00ec3d1": {
+      "bytes": 40163,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelhamid-bouricha",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:19+00:00",
+      "sha256": "8d7ca11ecc5ec5084d8b380fd8794700a982dfffeb9b3609a0b4f97347fe8c05",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelhamid-bouricha"
+    },
+    "4a2a9a5aeede75c243cc": {
+      "bytes": 38177,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fattoum-attia",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:26+00:00",
+      "sha256": "231e662b5078de95226968690fc8c6309704b65255952d85f9a3b296dffeadc8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fattoum-attia"
+    },
+    "4ad19559779f5d311762": {
+      "bytes": 38064,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/francois-gouyette",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:42+00:00",
+      "sha256": "51a04a39f95032e8c4835c44957eb61bc00886c6ef3e14fd54c0fbae4e0c711a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/francois-gouyette"
+    },
+    "4b0947b641eb35dae95f": {
+      "bytes": 61771,
+      "final_url": "https://www.leaders.com.tn/article/25618-qui-est-mohamed-fadhel-derouiche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:56+00:00",
+      "sha256": "12235e1d140ac306a1e300aa608616d02c6393d65c724a069ed1885ed68001c1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25618-qui-est-mohamed-fadhel-derouiche"
+    },
+    "4bdfff992a425ea106d0": {
+      "bytes": 57523,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:39:21+00:00",
+      "sha256": "f51f2d3d3e9704e818a5c303ee39b90a23e5da77d597395680f26dad588302d9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "4c19c18a8d5cbbf41d2e": {
+      "bytes": 51833,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=2",
+      "params": {
+        "page": 2
+      },
+      "retrieved_utc": "2026-08-26T17:39:46+00:00",
+      "sha256": "d2fa7145ae5fd2d57083db64c41d7d1b535a4b816908ab6687951d996a06f4fc",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "4cf65ef8c080f211b6ae": {
+      "bytes": 63236,
+      "final_url": "https://www.leaders.com.tn/article/31037-qui-est-asma-s-hiri-laabidi-nouvelle-secretaire-generale-a-la-mer",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:06+00:00",
+      "sha256": "66ea2d7bee4becd0ccb92a483794e638f64282cb3e875aa017c800197f641319",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31037-qui-est-asma-s-hiri-laabidi-nouvelle-secretaire-generale-a-la-mer"
+    },
+    "4d2274bbebcb263886d7": {
+      "bytes": 59874,
+      "final_url": "https://www.leaders.com.tn/article/20573-slim-feriani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:54+00:00",
+      "sha256": "555997d0288b8cb46154a0cfe1219005a6a246bf8fd5340bf6465be0ca8b9c0f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20573-slim-feriani"
+    },
+    "4d311a53c505ba201094": {
+      "bytes": 63504,
+      "final_url": "https://www.leaders.com.tn/article/30071-samir-marzouki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:21+00:00",
+      "sha256": "52c140a85290abab642d26c49fb26234dc0775392640f52a067dad767f880d24",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30071-samir-marzouki"
+    },
+    "4d731bae74623e4d45bf": {
+      "bytes": 57320,
+      "final_url": "https://www.leaders.com.tn/article/34121-ibrahim-ben-mrad",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:42+00:00",
+      "sha256": "e867349dcbec409851fb4bdc518960994635fe5e6c393dc32898b242fb13ad20",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34121-ibrahim-ben-mrad"
+    },
+    "4de4e5213634b54eb694": {
+      "bytes": 56793,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=3",
+      "params": {
+        "page": 3
+      },
+      "retrieved_utc": "2026-08-26T17:39:24+00:00",
+      "sha256": "e2a7f358f2fbd37a0d73a76812265734a0a102b76fe00af8dd592d5acec60190",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "4f5d841f12f0cb3832be": {
+      "bytes": 91468,
+      "final_url": "https://www.leaders.com.tn/article/33349-le-parcours-de-najet-brahmi-directrice-de-la-chaire-alecso-pour-l-arbitrage-commercial-international",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:20+00:00",
+      "sha256": "00ddef6d3da05a5e79bde8abdac229b9e50081f9b0199210020275ee3095b415",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33349-le-parcours-de-najet-brahmi-directrice-de-la-chaire-alecso-pour-l-arbitrage-commercial-international"
+    },
+    "4f63cdb5b11b088f2887": {
+      "bytes": 39042,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amel-bennys",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:23+00:00",
+      "sha256": "cd573fc9a269e668f4b67277168b5b15426b860a39ffe2d5a87cf7b3c0035f86",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amel-bennys"
+    },
+    "505b61258fd31447a531": {
+      "bytes": 51679,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:39:43+00:00",
+      "sha256": "125a93ecab2fda18824d914daf26bd056bfbdbbd12dc13f0cbb952dc488d0663",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "53bdacded9ced5c51f40": {
+      "bytes": 63103,
+      "final_url": "https://www.leaders.com.tn/article/38318-tsb-des-resultats-2025-marques-par-un-premier-tournant-operationnel-encourageant",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:47+00:00",
+      "sha256": "3a4b0581e536e8a14ee878cec17465deb80ab737c40c9f7ba2193c880b92f3f5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38318-tsb-des-resultats-2025-marques-par-un-premier-tournant-operationnel-encourageant"
+    },
+    "5464e64ca47cc9fd43c5": {
+      "bytes": 39201,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/afif-hendaoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:35+00:00",
+      "sha256": "5e9219c8485457b9aac93a2039bf03431895e6b68e3c460ff537e0d9c49221a7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/afif-hendaoui"
+    },
+    "54dcbec28a2d11e6c505": {
+      "bytes": 55266,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=5",
+      "params": {
+        "page": 5
+      },
+      "retrieved_utc": "2026-08-26T17:39:28+00:00",
+      "sha256": "b49d846ca4750a3cfb1894e68bc169bd9935a0ae48b54ed86dbe5f833651e628",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "556346d09bccc8aad861": {
+      "bytes": 38970,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/akissa-bahri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:57+00:00",
+      "sha256": "7f453b79a9744edd86b7793925e8b974035c7192416bffa226c2b886b06f0132",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/akissa-bahri"
+    },
+    "56e44b5164fb633ebce5": {
+      "bytes": 38057,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bahri-jelassi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:51+00:00",
+      "sha256": "7fd5736b103b044f154da75514561925fecf47477cae16fe9359ef33661702a0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bahri-jelassi"
+    },
+    "5737ccdccb9ece6f0492": {
+      "bytes": 61757,
+      "final_url": "https://www.leaders.com.tn/article/32493-qui-est-taieb-baccouche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:40+00:00",
+      "sha256": "4b88a088e75afbdfdebe8cb9057d443a8c7041093efc0228eb4129c168035c0f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/32493-qui-est-taieb-baccouche"
+    },
+    "57689426e1d816b6018f": {
+      "bytes": 63827,
+      "final_url": "https://www.leaders.com.tn/article/36095-rachid-batita-nouveau-directeur-general-de-la-stb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:32+00:00",
+      "sha256": "78c02f49e526b7a9ceb5b9cf9cc9ba5060cfffec3d6830b8ca8e4a910041d856",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36095-rachid-batita-nouveau-directeur-general-de-la-stb"
+    },
+    "577984c5e3acfe5b2265": {
+      "bytes": 40315,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-najib-chebbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:49+00:00",
+      "sha256": "c59a76da0416fd997e8a0f5339b9114ed1000f7cf7c0d4eaa0500a978810b9ea",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-najib-chebbi"
+    },
+    "584c562fabf2c9f3d974": {
+      "bytes": 59733,
+      "final_url": "https://www.leaders.com.tn/article/30583-samir-trabelsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:12+00:00",
+      "sha256": "5150c066a39d2b8478f7371acac4f684ffe5faec30abdd44672071ddf0498f98",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30583-samir-trabelsi"
+    },
+    "58b0a9487d393f509150": {
+      "bytes": 41499,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/p",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:45+00:00",
+      "sha256": "4c02238101eb06737b082675b954bf9fde2d47dbecb7533d73c149ffdb7abc85",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/p"
+    },
+    "58d4c18d7cf3baef9cd8": {
+      "bytes": 43924,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-meddeb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:51+00:00",
+      "sha256": "e18edf4637d62c0b2d6386b86c428646dc078ec32282d2c31abd1ae77258fb7d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-meddeb"
+    },
+    "596d65cd349e6d36acb2": {
+      "bytes": 60088,
+      "final_url": "https://www.leaders.com.tn/article/36643-bio-express-sofiane-hemissi-de-l-intelligence-et-du-digital",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:32+00:00",
+      "sha256": "36b5ca0476d203e36e00eca690d0f14fd455464ddeb4ce71a784ed9bd32f8bcc",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36643-bio-express-sofiane-hemissi-de-l-intelligence-et-du-digital"
+    },
+    "5a2e50342f646f14db76": {
+      "bytes": 38970,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chakib-kara",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:29+00:00",
+      "sha256": "a87529f06fa8012e0c7496fde5112a21503e9305d402ce28c6d7f874d0aca49e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chakib-kara"
+    },
+    "5a34049832cda461a46e": {
+      "bytes": 46522,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-jouini",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:54+00:00",
+      "sha256": "d989529786969fd9f99ef82615dcad202c480eed45a2ff7ebdcfd221fac57c1c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-jouini"
+    },
+    "5db56700a92bcb233a6d": {
+      "bytes": 61628,
+      "final_url": "https://www.leaders.com.tn/article/33372-leila-temime-blili-la-militante-l-historienne",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:13+00:00",
+      "sha256": "950c6763482032f32b3e29edc33da36cb19a46b46fe239abbab24efc6d58a24d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33372-leila-temime-blili-la-militante-l-historienne"
+    },
+    "5dc3e8e04aff5587f56c": {
+      "bytes": 57613,
+      "final_url": "https://www.leaders.com.tn/article/29901-mouna-ketata",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:25+00:00",
+      "sha256": "0a75c3711fe330763dc47565b21834ca47f9648c86183f320431f2baf0829774",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29901-mouna-ketata"
+    },
+    "5e3143250754705bddaa": {
+      "bytes": 123448,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/beji-caid-essebsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:11+00:00",
+      "sha256": "f3506abe7235d93bec8beb5bf641709c2db57fc1c9b61ea08467c6c1bc860feb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/beji-caid-essebsi"
+    },
+    "5ea695d38610a82352ee": {
+      "bytes": 38241,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/dora-latiri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:48+00:00",
+      "sha256": "98354e26048cf888af2b6b8382e3af04ad5b5bedf294a56751204bc7627e7a18",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/dora-latiri"
+    },
+    "5fc499a344568983805a": {
+      "bytes": 57761,
+      "final_url": "https://www.leaders.com.tn/article/24427-mohamed-hedi-zaiem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:58+00:00",
+      "sha256": "c0b70b45f84122cdbde30ceef4074bad0f415ddbe473fef3581b1ce5c040ef6b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24427-mohamed-hedi-zaiem"
+    },
+    "5fea16c184421e6938bf": {
+      "bytes": 58543,
+      "final_url": "https://www.leaders.com.tn/article/25422-qui-est-achraf-ayadi-l-expert-bancaire",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:06+00:00",
+      "sha256": "518082488a79a285c0f05f540130394897b8f617ad1efdcac9c83e99ae8eb77b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25422-qui-est-achraf-ayadi-l-expert-bancaire"
+    },
+    "611f36c522fb4dd2960f": {
+      "bytes": 57485,
+      "final_url": "https://www.leaders.com.tn/article/26261-houda-cherif",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:32+00:00",
+      "sha256": "28840656912a9dcb97fbf2c6707479c61b3308aaec9e7bf3bb0d1ad1cce33e47",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26261-houda-cherif"
+    },
+    "6197b802a5857df0ea39": {
+      "bytes": 42735,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hakim-ben-hammouda",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:18+00:00",
+      "sha256": "f274f99c6409ceae83f5805d488682e99da0c0830da79323e3e597cbe69ea6f2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hakim-ben-hammouda"
+    },
+    "62f082e7a91c920437ca": {
+      "bytes": 45039,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/aziz-krichen",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:43+00:00",
+      "sha256": "c5aac19653c2ecd41e22f6c4fdc1961c3619e71de327a106adb5b1ed25058e24",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/aziz-krichen"
+    },
+    "63b7aba13994976214d3": {
+      "bytes": 61133,
+      "final_url": "https://www.leaders.com.tn/article/20424-omar-behi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:59+00:00",
+      "sha256": "bb2a0c42fbdd16cf4d44552f8469de2c6e5941e735d965137136e9523b71ebed",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20424-omar-behi"
+    },
+    "63f33543bda6cbcb1f9d": {
+      "bytes": 39041,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-bouraoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:05+00:00",
+      "sha256": "819f292c93797b6f087f3960449f9e5e340e70d74da4ab901a850e3689441db4",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-bouraoui"
+    },
+    "64352044bc5917fa2885": {
+      "bytes": 38970,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-jarray",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:30+00:00",
+      "sha256": "b436dfb2061fa0e5905f73fb854d351ec1cc319524e416d584d475ff64529185",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-jarray"
+    },
+    "64bc9d6acdd401ef2827": {
+      "bytes": 51410,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/t",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:51+00:00",
+      "sha256": "3640c342bcd8e0cef39af3d593c10b0dc0a42d56f84e5de2055a85e180ae5149",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/t"
+    },
+    "65ba2e160a55407bb57d": {
+      "bytes": 59438,
+      "final_url": "https://www.leaders.com.tn/article/24067-eduardo-ferro-rodrigues",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:06+00:00",
+      "sha256": "ba86a6d3f9e76d9492d767c1faed3734f656df5a755bad3420437f9ee2e8d933",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24067-eduardo-ferro-rodrigues"
+    },
+    "65ca720603b8d2ed30a8": {
+      "bytes": 57894,
+      "final_url": "https://www.leaders.com.tn/article/34659-qui-est-mahmoud-tounsi-l-ecrivain-le-poete-et-le-peintre",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:11+00:00",
+      "sha256": "12b9c9a5385190639fea57e63e47e1a9bb513624c35ae75e56734e14bc0bb471",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34659-qui-est-mahmoud-tounsi-l-ecrivain-le-poete-et-le-peintre"
+    },
+    "65e1d76bdfec94a624b8": {
+      "bytes": 50976,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/l",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:38+00:00",
+      "sha256": "e71408bb72c0c78259b3dbb52b1958906e1ff5dacabe781e64c9cb2ba5d06d4d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/l"
+    },
+    "662ab003a3e4dd672047": {
+      "bytes": 59228,
+      "final_url": "https://www.leaders.com.tn/article/36393-driss-guiga-bio-express",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:23+00:00",
+      "sha256": "214092fc6093e7d2b0b5d907aedc48b830b99abe497801b8ac36fac1182fe71f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36393-driss-guiga-bio-express"
+    },
+    "67241c4fb778d5195379": {
+      "bytes": 39371,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-abdelkefi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:58+00:00",
+      "sha256": "135dfe2e09ae4725f78a45fc63440572d119565580a5a72d1b0987710607c3ea",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-abdelkefi"
+    },
+    "67e11da4fb3fc0bf4c2f": {
+      "bytes": 44760,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-nejib-chebbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:51+00:00",
+      "sha256": "d88f9b896873a7152d1f5f58a07d16fa697c0b33acef81cb6f920bbee72c339d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-nejib-chebbi"
+    },
+    "68136f646a253639baa6": {
+      "bytes": 56864,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=10",
+      "params": {
+        "page": 10
+      },
+      "retrieved_utc": "2026-08-26T17:39:38+00:00",
+      "sha256": "7494663bab5aeb8b70a468087bc5bb3e440bff6ac783e7f3eccd1008a5afcfbd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "6914a874a8d140e54118": {
+      "bytes": 118218,
+      "final_url": "https://www.leaders.com.tn/article/24599-aymen-mekki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:54+00:00",
+      "sha256": "8a1f6a15ddc63065cf84bf20714402dd4f5beae44f033491ac94b60bcede67bf",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24599-aymen-mekki"
+    },
+    "6920241c95e1918a4e08": {
+      "bytes": 60120,
+      "final_url": "https://www.leaders.com.tn/article/26924-mohamed-hafedh-cherif",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:20+00:00",
+      "sha256": "65689caaeccc3fdabf0672de6adc852ae1d8f13beb6a9d97b088398550c89428",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26924-mohamed-hafedh-cherif"
+    },
+    "6998e80b495b0b542b78": {
+      "bytes": 58634,
+      "final_url": "https://www.leaders.com.tn/article/34485-qui-est-dominique-mas-nouveau-consul-general-de-france-en-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:24+00:00",
+      "sha256": "5999caebd73dcf1d6714c08ef00c95561a6a5737955f80896f52158130581292",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34485-qui-est-dominique-mas-nouveau-consul-general-de-france-en-tunisie"
+    },
+    "69aa228dc475910b4abb": {
+      "bytes": 76793,
+      "final_url": "https://www.leaders.com.tn/article/34283-feriel-chabrak-epouse-kraiem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:32+00:00",
+      "sha256": "0eac8fd53650c1a5c688677a814bc7742d266870388f1b8ef8246a9f15c8c5f8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34283-feriel-chabrak-epouse-kraiem"
+    },
+    "69ddbc546cb95c7a22e2": {
+      "bytes": 65215,
+      "final_url": "https://www.leaders.com.tn/article/37871-comprendre-le-moyen-orient-ce-foyer-de-crises",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:16+00:00",
+      "sha256": "9963629e5f198bdac07d022632a0e43f710511ad80d94e4e83368d712d8c74c1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37871-comprendre-le-moyen-orient-ce-foyer-de-crises"
+    },
+    "6a8b601394fea3cba052": {
+      "bytes": 59009,
+      "final_url": "https://www.leaders.com.tn/article/34873-dr-mongi-maalej-professeur-en-medecine",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:06+00:00",
+      "sha256": "8195cda4a08988ca456728a3c114138f9e628a87e7a466efeb72fbe57e870228",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34873-dr-mongi-maalej-professeur-en-medecine"
+    },
+    "6a9c197ae5e8ea4a7329": {
+      "bytes": 39347,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-khaskhoussi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:45+00:00",
+      "sha256": "f1dd1aae6e99bcceeb302b868dac7939cffb6605d36343317eb6b89d8987806e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-khaskhoussi"
+    },
+    "6b95f7f153703592d820": {
+      "bytes": 77219,
+      "final_url": "https://www.leaders.com.tn/article/26178-qui-est-khemais-chammari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:43+00:00",
+      "sha256": "66086c71ecc6cb86d9ac019ffd5ef4a27df10cecaa5cec6c15d564b8098cba68",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26178-qui-est-khemais-chammari"
+    },
+    "6c1fe3de5e6b73a59c09": {
+      "bytes": 38192,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abderraouf-ayadi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:03+00:00",
+      "sha256": "ebd18ac49a1d2d9efa1f0a848cc3fe563d218bf01d8132934bdb1d0721018228",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abderraouf-ayadi"
+    },
+    "6c466c140d2ff975814b": {
+      "bytes": 64369,
+      "final_url": "https://www.leaders.com.tn/article/37982-vient-de-paraitre-dictionnaire-des-feministes-un-siecle-de-feminisme-en-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:14+00:00",
+      "sha256": "09fc090c36606ac80382a49d09d4d8007521a90113890149a7fd4a9e3e73607a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37982-vient-de-paraitre-dictionnaire-des-feministes-un-siecle-de-feminisme-en-tunisie"
+    },
+    "6c5b1296f0f40a2a64c5": {
+      "bytes": 69503,
+      "final_url": "https://www.leaders.com.tn/article/28491-mohamed-ridha-mlika-gouverneur-de-nabeul",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:31+00:00",
+      "sha256": "a2bdb1c533586afa7dc3848b362aede9a4591819710cf4d5fb456f9048eaa1d8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28491-mohamed-ridha-mlika-gouverneur-de-nabeul"
+    },
+    "6c8a39fd2794dd65ad47": {
+      "bytes": 40440,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abderaouf-ayadi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:55+00:00",
+      "sha256": "49a39e0a14a80a5a8b0114fc4c719e4a72e590755046550d8a1152d8eb3b5262",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abderaouf-ayadi"
+    },
+    "6e8d244f9aaec376a0fa": {
+      "bytes": 39008,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-belkhodja",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:37+00:00",
+      "sha256": "4e43f7e0ce9d48c0fe9f8041874cc56d5be710c1078c31c8c36e0a0c70208866",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-belkhodja"
+    },
+    "6f48165c35ff6e280510": {
+      "bytes": 45156,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/y",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:55+00:00",
+      "sha256": "0b3ead2b51e088f089c46af4a46db8fddcd6a470ec52dee43f15824975bd4248",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/y"
+    },
+    "6fa741515ac7f3c707a7": {
+      "bytes": 38271,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amira-yahyaoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:34+00:00",
+      "sha256": "e89fc1a537e4769fc8837d91e2fc330d8bc7fbb9b9313ea2483d8bc81f98fee0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amira-yahyaoui"
+    },
+    "6faa019893ba02fc74a2": {
+      "bytes": 61407,
+      "final_url": "https://www.leaders.com.tn/article/27194-qui-est-dr-samira-ben-ammar-docteur-en-geosciences-et-presidente-de-l-association-bledyzina",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:18+00:00",
+      "sha256": "4a1acc3f9b23f43a846526131846dbb3a6d8444e73f763dfe3037967602f5087",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27194-qui-est-dr-samira-ben-ammar-docteur-en-geosciences-et-presidente-de-l-association-bledyzina"
+    },
+    "708c5c9868d6bf70f3d2": {
+      "bytes": 38177,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fouad-mebazaa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:36+00:00",
+      "sha256": "6b19c9ddd49c1f8719668fca7e3a38905e194f966397dc052e1acbc03d46b7aa",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fouad-mebazaa"
+    },
+    "7163afce284b8f3a376d": {
+      "bytes": 57658,
+      "final_url": "https://www.leaders.com.tn/article/36349-hanen-khanchel",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:24+00:00",
+      "sha256": "b2c2292f51892971973b4c74d10dc1ed9fe11ed21fd1da3f0bab1c6101363064",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36349-hanen-khanchel"
+    },
+    "724296ad4af95911f4db": {
+      "bytes": 51544,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=11",
+      "params": {
+        "page": 11
+      },
+      "retrieved_utc": "2026-08-26T17:40:04+00:00",
+      "sha256": "c71fb2c8fe45b6cbdf647ac5ebda3340ece4c08197cf93cbc7646262c73938c7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "7244ee8c2ece0e2fc0dd": {
+      "bytes": 39037,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdessalem-kamoun",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:08+00:00",
+      "sha256": "9908492519a3b369e5ff524160eef3f784841ffc6c1f595fcd3be119c11d8558",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdessalem-kamoun"
+    },
+    "7278138d956d06244153": {
+      "bytes": 67138,
+      "final_url": "https://www.leaders.com.tn/article/35647-fethi-zouhair-nouri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:55+00:00",
+      "sha256": "06a9f892ece57d469be1ed64b3a39cff52b291c021e202f4800c296dfd173099",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35647-fethi-zouhair-nouri"
+    },
+    "740f688fc721d5fca05c": {
+      "bytes": 38055,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/brahim-bouguessas",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:23+00:00",
+      "sha256": "8c5b3ce9f868b8cc446511d91ae15d05d8460c7393201d4dfa8454185b0d3f92",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/brahim-bouguessas"
+    },
+    "7462e75a3a94a532e335": {
+      "bytes": 61340,
+      "final_url": "https://www.leaders.com.tn/article/26185-qui-est-mohamed-ali-khelil",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:42+00:00",
+      "sha256": "9266b6c5a75b851470b635ac6781162b73468b2e62d210d419a5a7439481b832",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26185-qui-est-mohamed-ali-khelil"
+    },
+    "75914c80b9f7ed8221b8": {
+      "bytes": 51684,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=12",
+      "params": {
+        "page": 12
+      },
+      "retrieved_utc": "2026-08-26T17:40:06+00:00",
+      "sha256": "b9c5a971b8c05ca733c10a45a6f523290fd1da3ad9bf4534e4cef37e71320c9e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "760a24b795a951fe2c79": {
+      "bytes": 58068,
+      "final_url": "https://www.leaders.com.tn/article/29850-pr-mohamed-samir-boubaker",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:30+00:00",
+      "sha256": "8c16a45e3b9c31cb96ec46af2af5c8495aed93b7974d370266876e8a9396e456",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29850-pr-mohamed-samir-boubaker"
+    },
+    "765e15451c0f3cb369ca": {
+      "bytes": 40319,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abou-yadh",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:16+00:00",
+      "sha256": "fa6cb929ff4edea345d646bbd5a73c5730955c42fa70be2345de699441694572",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abou-yadh"
+    },
+    "77150a6e393ab1ca45b8": {
+      "bytes": 58207,
+      "final_url": "https://www.leaders.com.tn/article/24667-qui-est-mohamed-ali-trabelsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:49+00:00",
+      "sha256": "1ee9ec6dbeed82a12f8e246ca757198e55f399fd1c1cfa99613cc5c3a1fedc16",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24667-qui-est-mohamed-ali-trabelsi"
+    },
+    "7730ccbcc2686d31f3fc": {
+      "bytes": 55983,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=11",
+      "params": {
+        "page": 11
+      },
+      "retrieved_utc": "2026-08-26T17:39:40+00:00",
+      "sha256": "32753fe65b177ff44c07a70c9f76d2c55eeed627a5efb3e607ecf625fde2db82",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "78165ebfbe1b7cf3c6a0": {
+      "bytes": 55260,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=9",
+      "params": {
+        "page": 9
+      },
+      "retrieved_utc": "2026-08-26T17:39:36+00:00",
+      "sha256": "b769ac8cc5e3d355fc052b0c6280c365b1de71461307bdc42cf63e093e4f6039",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "788abe48e635722395af": {
+      "bytes": 58524,
+      "final_url": "https://www.leaders.com.tn/article/26528-bejaoui-aymen",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:28+00:00",
+      "sha256": "d78057c23d91868b31cff3e06769653f7d6971fefee0c9796c608980961b0b20",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26528-bejaoui-aymen"
+    },
+    "78acb5cb56c74383f0ef": {
+      "bytes": 39263,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adel-boussarsar",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:24+00:00",
+      "sha256": "4c6c66d402c1a5823f4b596fc95958477d316ebe86e5650233829b546ea66fad",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adel-boussarsar"
+    },
+    "7986bc3445d44c98e81f": {
+      "bytes": 60629,
+      "final_url": "https://www.leaders.com.tn/article/34281-pr-amel-hamza-chaffai",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:34+00:00",
+      "sha256": "1282db2901c47ccecabf49b95f1c254183be49a558d142889f94fbc8c2f3ee1e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34281-pr-amel-hamza-chaffai"
+    },
+    "7a74d92a9feb5ad7de9b": {
+      "bytes": 65381,
+      "final_url": "https://www.leaders.com.tn/article/38356-parler-pour-exister-communiquer-pour-durer",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:03+00:00",
+      "sha256": "5cea13ff804c218a9d575deb7562446f129e6cae5116b253ace3852562274ddf",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38356-parler-pour-exister-communiquer-pour-durer"
+    },
+    "7c238510a800af042100": {
+      "bytes": 93714,
+      "final_url": "https://www.leaders.com.tn/article/38225-qui-est-la-professeure-raja-bahri-yassine-nouvelle-presidente-de-beit-al-hikma",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:12+00:00",
+      "sha256": "f17dd9601ce9d83ce976a37596228b451c9734efec704329c0f0c2556210a43f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38225-qui-est-la-professeure-raja-bahri-yassine-nouvelle-presidente-de-beit-al-hikma"
+    },
+    "7cc75c3cdf6192ae553d": {
+      "bytes": 59564,
+      "final_url": "https://www.leaders.com.tn/article/28079-zouhaier-dhaouadi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:44+00:00",
+      "sha256": "4d525e489375fa9a20e8d027cd05ce0a5d387158fd3f5c50a9c0070954f2da51",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28079-zouhaier-dhaouadi"
+    },
+    "7de80286445e8bdd61c8": {
+      "bytes": 39206,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adlen-loukil",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:28+00:00",
+      "sha256": "b8d0a91509bf90d102987612e368dedf393e1b58e4901f837dad54cb870cce98",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adlen-loukil"
+    },
+    "7e5b8c6cd172a245d299": {
+      "bytes": 94280,
+      "final_url": "https://www.leaders.com.tn/article/38343-dr-sami-bahri-la-tunisie-face-a-l-ia-2eme-partie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:58+00:00",
+      "sha256": "2e60693430b27e400bd653d9a66b3a2f5c2e46d591380ce09d579a742daf4d8d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38343-dr-sami-bahri-la-tunisie-face-a-l-ia-2eme-partie"
+    },
+    "7f4cd7007c0d21c471f7": {
+      "bytes": 40022,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hosni-moubarak",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:14+00:00",
+      "sha256": "e4c28406ec9c76f0902336fcc982bad237337ce7249b47e32016aa5cf6af1346",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hosni-moubarak"
+    },
+    "818ee778428c27c92bcb": {
+      "bytes": 51745,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/all",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:08+00:00",
+      "sha256": "5ceacc49a07a034ee3e7edc0455e3f9e0116272a7587d80f04afbc188f671296",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/all"
+    },
+    "8261566c42e8489b1642": {
+      "bytes": 60301,
+      "final_url": "https://www.leaders.com.tn/article/26525-walid-oueslati-senior-economiste-ocde",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:30+00:00",
+      "sha256": "db4f7a874dee2915a8397f2a37db6c298f377e83fc601bcd1072ba62ce7f17c2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26525-walid-oueslati-senior-economiste-ocde"
+    },
+    "82d32ddd3c82dde28729": {
+      "bytes": 38189,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/donia-chaouch",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:46+00:00",
+      "sha256": "0f409b4472bd7ef3f0ee2add4a865299f67116dad7cbbe352a6095b55dc8b82a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/donia-chaouch"
+    },
+    "82e0cd712976ad904949": {
+      "bytes": 38199,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abderrazak-zouari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:05+00:00",
+      "sha256": "9a2fdec1080605dcca5691b16778f808ec450f6634d2a4990998532e7cb02aa1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abderrazak-zouari"
+    },
+    "83ba651c28c437701e38": {
+      "bytes": 59312,
+      "final_url": "https://www.leaders.com.tn/article/20667-tarak-ben-salem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:50+00:00",
+      "sha256": "ce1cc1baa9118f28d8ae2db063c94072040cb559f70e0e2ca64fb75470c33a0e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20667-tarak-ben-salem"
+    },
+    "83f012b0f1812a110f34": {
+      "bytes": 59724,
+      "final_url": "https://www.leaders.com.tn/article/23843-hassene-feki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:24+00:00",
+      "sha256": "23c3a7132b50e8a925bf0711a03406039be643169c8870911c0983b5e62ffbea",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23843-hassene-feki"
+    },
+    "84b311a87c65970ddd40": {
+      "bytes": 38041,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ayoub-messaoudi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:41+00:00",
+      "sha256": "40f37bf616cdbbac5f662b5c26b557cb212a7613806890f033494fb6ebbd37f2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ayoub-messaoudi"
+    },
+    "84ee6d7c7b4d0d59c7a1": {
+      "bytes": 59049,
+      "final_url": "https://www.leaders.com.tn/article/26570-rached-fourati-president-du-conseil-de-surveillance-de-amen-bank",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:24+00:00",
+      "sha256": "143af14750fde9af2d4c05f5af8d85b15a14d6c4a9a89575de5574a5ac3209fe",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26570-rached-fourati-president-du-conseil-de-surveillance-de-amen-bank"
+    },
+    "856e6f78d6e87d3ee2c3": {
+      "bytes": 58747,
+      "final_url": "https://www.leaders.com.tn/article/20634-dr-noureddine-selmi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:53+00:00",
+      "sha256": "08f8eadf0d165c35e08095f62ee1749fc3e490904b2e68c6abe19ac872fc030d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20634-dr-noureddine-selmi"
+    },
+    "8620b4f8a90caec97c04": {
+      "bytes": 45142,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/w",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:53+00:00",
+      "sha256": "d95b7d996e4770b22c83e04b6ec685fc01eed5d2f3cd6de2dac811620ce0e945",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/w"
+    },
+    "864f37eb0c25fda5f1e1": {
+      "bytes": 38041,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelkrim-zbidi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:29+00:00",
+      "sha256": "1fc1228a1dc13e19ff412c9d16945a15a9f34c9ddcf7854fc30aee6b8f6739e9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelkrim-zbidi"
+    },
+    "868fc7954dd203093291": {
+      "bytes": 39190,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-kechrid",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:10+00:00",
+      "sha256": "74c94ddfb7837facf455a130babf73185e3b821c02d8164a5cfcc25f4fabba4b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/faouzi-kechrid"
+    },
+    "86ee477793469e2832ab": {
+      "bytes": 58831,
+      "final_url": "https://www.leaders.com.tn/article/23312-aziz-zouhir",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:29+00:00",
+      "sha256": "88021d2424ae3c9cc8b12762a6e1ca2b50817efe334c29ca4fb5896f100b2930",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23312-aziz-zouhir"
+    },
+    "8ac6091b24546ddbfed5": {
+      "bytes": 60094,
+      "final_url": "https://www.leaders.com.tn/article/20687-wahida-ayari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:49+00:00",
+      "sha256": "1b6340a4d752ef7948ce1b7dc08145820313d070022d5bc38fc5ce4d63da1516",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20687-wahida-ayari"
+    },
+    "8af2212932be5c2d8b9a": {
+      "bytes": 45762,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/i",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:31+00:00",
+      "sha256": "60cbce3d291e5f0fd9e61de29225d17e3c17dc1b8f90b92c7c6db0eb6f3584fa",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/i"
+    },
+    "8b2379e25ae3ca6050d8": {
+      "bytes": 38159,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-layouni",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:32+00:00",
+      "sha256": "ad933f3461e802340710ed5b81c0dbd41dc05da08b51b56374289346472712ea",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fethi-layouni"
+    },
+    "8bfb496584f6d35af422": {
+      "bytes": 68381,
+      "final_url": "https://www.leaders.com.tn/article/38371-l-universite-ibn-khaldoun-celebre-20-ans-d-histoire-d-innovation-et-d-ouverture-internationale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:12+00:00",
+      "sha256": "0ba86276c4e77c3f625ae76d3529228221047e7aeccd105782d3bf1c86976645",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38371-l-universite-ibn-khaldoun-celebre-20-ans-d-histoire-d-innovation-et-d-ouverture-internationale"
+    },
+    "8c51dd5befc09f45a1d3": {
+      "bytes": 59433,
+      "final_url": "https://www.leaders.com.tn/article/37310-qui-est-sami-lakhdar-directeur-de-recherche-au-cnrs",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:30+00:00",
+      "sha256": "7b3ad133231a4f1006e1ca07f42b0b1ad47a3eaa38d3ed3c19372c423ee46524",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37310-qui-est-sami-lakhdar-directeur-de-recherche-au-cnrs"
+    },
+    "8d4790c2ff7795279135": {
+      "bytes": 38017,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/basma-belaid",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:54+00:00",
+      "sha256": "2bf4bb06b64f27417c832b88f26585d92a7bc620986cc7c5066779eb09428f28",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/basma-belaid"
+    },
+    "8ec7189cc7781665903b": {
+      "bytes": 63034,
+      "final_url": "https://www.leaders.com.tn/article/36534-hedia-abdelkefi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:36+00:00",
+      "sha256": "bd4294cd358982708e6ec815e7cf4020e35aab9a657c0e301e94ac87ce02d991",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36534-hedia-abdelkefi"
+    },
+    "8f1975736dac6304ce74": {
+      "bytes": 68086,
+      "final_url": "https://www.leaders.com.tn/article/37954-qui-est-slim-laghmani-candidat-de-la-tunisie-au-poste-de-juge-au-tribunal-international-du-droit-de-la-mer-2026-2035-approuve-par-l-union-africaine",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:14+00:00",
+      "sha256": "41ee5f7f0e26458aea5e6fb5d9eaddb78ce6bbaa646df082eb10779be254202c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37954-qui-est-slim-laghmani-candidat-de-la-tunisie-au-poste-de-juge-au-tribunal-international-du-droit-de-la-mer-2026-2035-approuve-par-l-union-africaine"
+    },
+    "8f8ba993ab7aae2dd23d": {
+      "bytes": 39002,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hassine-abbassi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:40+00:00",
+      "sha256": "90b40dfaccaf43dadc00deaac592d74daa61163f9a9e61655ba72d1ec768931c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hassine-abbassi"
+    },
+    "8fffd01ac3cb23941e3d": {
+      "bytes": 39098,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/gilles-keppel",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:54+00:00",
+      "sha256": "65f75455a2bbec3eebb3d5d06f1d2a96e8085dee85146c578c580724a349241e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/gilles-keppel"
+    },
+    "901ef3cce9ee6a47e891": {
+      "bytes": 54082,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=12",
+      "params": {
+        "page": 12
+      },
+      "retrieved_utc": "2026-08-26T17:39:42+00:00",
+      "sha256": "1ed1988ef36839999294600359bfb13eb951bb6b4e6f4d2385d58468a10d1b57",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "9051f0182580050c83af": {
+      "bytes": 38847,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hayet-ben-said",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:47+00:00",
+      "sha256": "73f3f52339ad85c85fcddce58d9056d4ad56bfb3cc2ee40dd9a9a8b74a140c31",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hayet-ben-said"
+    },
+    "90b84795a3cb7a6aaea0": {
+      "bytes": 80511,
+      "final_url": "https://www.leaders.com.tn/article/38317-sidi-bou-said-a-l-unesco-une-reconnaissance-qui-oblige-autant-qu-elle-honore",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:46+00:00",
+      "sha256": "e5ef154e3221c2dfc1194505977b10fc1b8a69110cedb52b2f058e81707c6afb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38317-sidi-bou-said-a-l-unesco-une-reconnaissance-qui-oblige-autant-qu-elle-honore"
+    },
+    "90ef2ac9df032ae5959f": {
+      "bytes": 62536,
+      "final_url": "https://www.leaders.com.tn/article/28566-mohamed-lasaad-ben-lamine",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:18+00:00",
+      "sha256": "2c4a4f34a835d5615c1f87be369331bb8b2c69f763dfdefb614e75061e85a98b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28566-mohamed-lasaad-ben-lamine"
+    },
+    "91c6f34ee533d35b8166": {
+      "bytes": 62063,
+      "final_url": "https://www.leaders.com.tn/article/30651-mohamed-houssem-kasbaoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:10+00:00",
+      "sha256": "4ecfda599436f944ff632a5fb2216ed4c4529cb7f1235d1ead65dc47d36715b7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30651-mohamed-houssem-kasbaoui"
+    },
+    "91e37b58d882021a95dc": {
+      "bytes": 39176,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adnan-mansar",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:29+00:00",
+      "sha256": "578818d29d484b1f4b319f8d6aea18e2a366d7de19b6be599f4a4ef9150cbc50",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adnan-mansar"
+    },
+    "9293b94051a7e26f2976": {
+      "bytes": 66474,
+      "final_url": "https://www.leaders.com.tn/article/34475-qui-est-nozha-brahmi-directrice-generale-du-centre-mahmoud-yakoub-pour-la-reanimation-medicale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:26+00:00",
+      "sha256": "fc58c81ed3380f3f2f6df5c78f40a914ce88c3c39500c453338eb4f07bb6f3ab",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34475-qui-est-nozha-brahmi-directrice-generale-du-centre-mahmoud-yakoub-pour-la-reanimation-medicale"
+    },
+    "9395bd9ac99072f11a02": {
+      "bytes": 96366,
+      "final_url": "https://www.leaders.com.tn/article/37592-qui-est-oualid-gadhoum-le-professeur-a-la-faculte-de-droit-de-sfax",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:26+00:00",
+      "sha256": "829a49cfe18cae77aa43ed5d4b52dfc3e471e4d0cb7343efcbe2a281a7816760",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37592-qui-est-oualid-gadhoum-le-professeur-a-la-faculte-de-droit-de-sfax"
+    },
+    "93cbd0f790f3163191c4": {
+      "bytes": 60342,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ali-laarayedh",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:11+00:00",
+      "sha256": "00835d6ecf590b68820e28b5b0b8ae72f17fff464a749b00e3b2d7f4bb6c66b6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ali-laarayedh"
+    },
+    "93f0aed5a49fd67ee581": {
+      "bytes": 57696,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=2",
+      "params": {
+        "page": 2
+      },
+      "retrieved_utc": "2026-08-26T17:39:22+00:00",
+      "sha256": "0fdbb7e0017d950fbaa21f3f4c9493640e0216c049446980d91bbe71914fcd21",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "956c22b98a2cac31ff9e": {
+      "bytes": 39240,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fares-soltani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:16+00:00",
+      "sha256": "ab2b3d960c8f8ffee22ecd17ac493b0bd0b4cba2a18ee14fecde0574e2aeed88",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fares-soltani"
+    },
+    "9595d2db22c42c14d05f": {
+      "bytes": 42320,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamed-karoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:31+00:00",
+      "sha256": "e7561e376340a03d54e46cfea35bb6488081ac6b01b6b2a714c9afabc73d6d06",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamed-karoui"
+    },
+    "95c4483da4257bb5289d": {
+      "bytes": 60256,
+      "final_url": "https://www.leaders.com.tn/article/33329-le-parcours-de-malek-ezzahi-ministre-des-affaires-sociales",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:24+00:00",
+      "sha256": "b738aff1fce497be861fb1ad5caf608157bfae9672ef23dd5d008f1cf83d79dd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33329-le-parcours-de-malek-ezzahi-ministre-des-affaires-sociales"
+    },
+    "96c1303eacba25c36fbf": {
+      "bytes": 38066,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/horst-wolfram-kerll",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:12+00:00",
+      "sha256": "55fde62e5e889868f7fb443e92b4c43aded4ea1d9f949e5a3185bec793a50eb6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/horst-wolfram-kerll"
+    },
+    "96cc490af75269e16fee": {
+      "bytes": 65272,
+      "final_url": "https://www.leaders.com.tn/article/31900-nejla-ben-abdallah",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:57+00:00",
+      "sha256": "6ea2059476aad22a26a255ad2e47aae532944d74083f10d8f9d84d0ca18e402f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31900-nejla-ben-abdallah"
+    },
+    "96da5ac2461bfc66dc80": {
+      "bytes": 39221,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/belhassen-trabelsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:15+00:00",
+      "sha256": "e47b729e6f151f88feae5eb4a5b70df0bef361053e838260d254e1c7d4d03050",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/belhassen-trabelsi"
+    },
+    "96dc089dc1e39f141fa4": {
+      "bytes": 38113,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-achour",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:58+00:00",
+      "sha256": "bce53df391216f3f5e719a047ac42594bb26f9a2c4da270c206af964e1b525da",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-achour"
+    },
+    "982149715aac36e284c2": {
+      "bytes": 63572,
+      "final_url": "https://www.leaders.com.tn/article/23222-malika-zeghal",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:38+00:00",
+      "sha256": "1993682566fd89ae2513fd1f12544ef72640ab83f5b09eb2d137b5c9d6f123c6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23222-malika-zeghal"
+    },
+    "9903afabce338585582d": {
+      "bytes": 71836,
+      "final_url": "https://www.leaders.com.tn/article/27265-sonia-mbarek",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:16+00:00",
+      "sha256": "11ac5f7e53774070f1ca0e87abf72819989bb85d5eac6cf6dc37e7693fc1da5f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27265-sonia-mbarek"
+    },
+    "99e774e45c9aae2ce134": {
+      "bytes": 38897,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdallah-kallel",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:00+00:00",
+      "sha256": "3ecfb168f8ac9dd079486dcf3ca488c4fe54f2185b27b2e61777bfe5de5f2cdb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdallah-kallel"
+    },
+    "99f8e09e5ab6c46b7b8f": {
+      "bytes": 38117,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chahida-ben-fraj-bouraoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:26+00:00",
+      "sha256": "623d94fc5c0308682414487891ebee000df1eaf5306becd416eaa6e1b0784233",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chahida-ben-fraj-bouraoui"
+    },
+    "99fa1429d0eaf2d31c88": {
+      "bytes": 61933,
+      "final_url": "https://www.leaders.com.tn/article/28598-rzig-oueslati",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:09+00:00",
+      "sha256": "9e62aa476bed8f7ffc994bd84377660c89f1e16e6e158a271729bf8cd61a135e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28598-rzig-oueslati"
+    },
+    "9adafa85d0b01809dbb7": {
+      "bytes": 62499,
+      "final_url": "https://www.leaders.com.tn/article/25257-qui-est-maher-kasdali-fondateur-et-president-de-groupe-kasdali-canada-inc",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:31+00:00",
+      "sha256": "31f143e45361a6e17b43aec26dfc83d8ce619f7df75cb08138c2e9dbd47f38c7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25257-qui-est-maher-kasdali-fondateur-et-president-de-groupe-kasdali-canada-inc"
+    },
+    "9b60e24ccae9876ee461": {
+      "bytes": 38223,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-maatar",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:47+00:00",
+      "sha256": "8ff675f7b0972b1330e2cd71d11b265ad8523264e9d551f34fab689fd4d9faee",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelwahab-maatar"
+    },
+    "9b688fbed421d5df39ea": {
+      "bytes": 57599,
+      "final_url": "https://www.leaders.com.tn/article/29778-ahmed-guidara",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:34+00:00",
+      "sha256": "ef50289039cca03c0502aab4db1543c9f13823cce132ef4a100e0386fe4c4b3f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29778-ahmed-guidara"
+    },
+    "9bd836eed20122916d7a": {
+      "bytes": 60573,
+      "final_url": "https://www.leaders.com.tn/article/37605-qui-est-le-dr-nejib-ben-lazreg-archeologue",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:23+00:00",
+      "sha256": "f33347b43e8352583459d1c0a53ee7b3e4489ff075bb9d7b879b4eb89a645eca",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37605-qui-est-le-dr-nejib-ben-lazreg-archeologue"
+    },
+    "9c18121725b8547f2d4a": {
+      "bytes": 72263,
+      "final_url": "https://www.leaders.com.tn/article/24770-qui-est-mondher-kharrat",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:48+00:00",
+      "sha256": "995d43147c63881869fdb337500f3b64761229a9f9220836efb063c9ca75a415",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24770-qui-est-mondher-kharrat"
+    },
+    "9d0756e0cd742648f716": {
+      "bytes": 51892,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamma-hammami",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:32+00:00",
+      "sha256": "657d371cce32a55a2ac73c1ecc33bbd063df3ea5fe96e53fa7ce1016427de3b6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamma-hammami"
+    },
+    "9d1b76185f85631cff74": {
+      "bytes": 39198,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/actualites-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:22+00:00",
+      "sha256": "76e067445a612265073da360cf4d0898c0e48462257907cfc0df6274a4151075",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/actualites-tunisie"
+    },
+    "9e03ba655cc97ad66f37": {
+      "bytes": 38027,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hassine-triki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:42+00:00",
+      "sha256": "0c958d69de1c17e9a9cf6905f0efd95254aeda8d4c68b926692c96f145173ee0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hassine-triki"
+    },
+    "9e2bc62b30e9c3db81df": {
+      "bytes": 51575,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=10",
+      "params": {
+        "page": 10
+      },
+      "retrieved_utc": "2026-08-26T17:40:02+00:00",
+      "sha256": "52e3dcc86afe7f65224281b2a89490ad6a2212c73bf2f10c7240a5123cf50c92",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "9ea92021962b45ca14cd": {
+      "bytes": 62688,
+      "final_url": "https://www.leaders.com.tn/article/37918-qui-est-samira-guiza-nouvelle-premiere-presidente-du-tribunal-administratif",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:17+00:00",
+      "sha256": "93a1cf2c4ec3ac8d18df4d84277e786b1ff3bda986f3580f8cf97ad41b62f7c9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37918-qui-est-samira-guiza-nouvelle-premiere-presidente-du-tribunal-administratif"
+    },
+    "9f1539885c30ac2667cc": {
+      "bytes": 58255,
+      "final_url": "https://www.leaders.com.tn/article/29609-aida-caid-essebsi-fourati",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:40+00:00",
+      "sha256": "f468ed82a4a91fd1b07ac0a57e5831123a617daf34dee148381b6bd6b52c10e3",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29609-aida-caid-essebsi-fourati"
+    },
+    "a04a7ed971a8d78b6adf": {
+      "bytes": 46715,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/c",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:14+00:00",
+      "sha256": "8b776813aecbee5e1138480605f98cffb33c89e6345da50ee46ee5383f1b5a7b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/c"
+    },
+    "a084517221cd1ca7dfd6": {
+      "bytes": 58683,
+      "final_url": "https://www.leaders.com.tn/article/28205-qui-est-mondher-lakhal-nouveau-directeur-general-adjoint-de-la-bna",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:43+00:00",
+      "sha256": "12a9ee1dc901739807edddd7e745d459778e539afa37d9a3fa2b7e90a5964ce1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28205-qui-est-mondher-lakhal-nouveau-directeur-general-adjoint-de-la-bna"
+    },
+    "a0a284c45c5a05ead369": {
+      "bytes": 61582,
+      "final_url": "https://www.leaders.com.tn/article/20526-mohamed-mourad-fradi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:57+00:00",
+      "sha256": "4f2a0d0228b330a1eed03d794fc4dee423fb2e1aaf6f0b0181bd1aee29e13c2d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20526-mohamed-mourad-fradi"
+    },
+    "a0c20d3aec869010908e": {
+      "bytes": 39167,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hachemi-hamdi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:12+00:00",
+      "sha256": "32114ad80db094bd3d7c3e15f1b3486489828f166245bff966b2236f5fa32fb6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hachemi-hamdi"
+    },
+    "a0c59587f1aa2fbb4656": {
+      "bytes": 59469,
+      "final_url": "https://www.leaders.com.tn/article/27366-qui-est-ramzi-sandi-directeur-general-de-la-societe-arabe-des-industries-pharmaceutiques-saiph",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:14+00:00",
+      "sha256": "80b1179d4f011325fd23b33d133655bc5ca6f7fe44634ff919ce00d15b6b32c2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27366-qui-est-ramzi-sandi-directeur-general-de-la-societe-arabe-des-industries-pharmaceutiques-saiph"
+    },
+    "a0d839a3760e60e0ae93": {
+      "bytes": 39079,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamouda-ben-slama",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:34+00:00",
+      "sha256": "38baf8f785ffa00ed2e871dcb0a3e6aab2d30db1f55d50349f99422f592db8f2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamouda-ben-slama"
+    },
+    "a0f3929a656726ffaa8a": {
+      "bytes": 72076,
+      "final_url": "https://www.leaders.com.tn/article/32605-qui-est-dr-bilel-jamoussi-candidat-de-la-tunisie-au-poste-de-directeur-du-bureau-de-la-normalisation-des-telecommunications-de-l-uit-2023-2026",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:36+00:00",
+      "sha256": "4df19e19029549cfe959385f6818ba8228de965081cf9ece482aaea88c13041d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/32605-qui-est-dr-bilel-jamoussi-candidat-de-la-tunisie-au-poste-de-directeur-du-bureau-de-la-normalisation-des-telecommunications-de-l-uit-2023-2026"
+    },
+    "a13eea1461b8324eaf33": {
+      "bytes": 58396,
+      "final_url": "https://www.leaders.com.tn/article/35266-qui-est-karim-aloui-directeur-general-founa-by-mg",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:56+00:00",
+      "sha256": "47a1b18bc028a3ae116f932107cef39a3bbed1c65816a55b1b736e6b2e26588c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35266-qui-est-karim-aloui-directeur-general-founa-by-mg"
+    },
+    "a16f87abbbee2d35c39b": {
+      "bytes": 60107,
+      "final_url": "https://www.leaders.com.tn/article/25314-qui-est-habib-ammar-p-d-g-societe-d-etudes-et-de-developpement-de-sousse-nord",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:12+00:00",
+      "sha256": "5fab6ae5ee5bb3efee34af2395bd5e2926930cf719db19777f214fb12bcfe8ff",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25314-qui-est-habib-ammar-p-d-g-societe-d-etudes-et-de-developpement-de-sousse-nord"
+    },
+    "a279c04b19135b4c56f5": {
+      "bytes": 61838,
+      "final_url": "https://www.leaders.com.tn/article/23300-abderraouf-laajimi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:32+00:00",
+      "sha256": "5ce1de913de62ca734022350242796cfed981fb1114cf835c672ee4eb3a8ba96",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23300-abderraouf-laajimi"
+    },
+    "a2ad2c366a0763ed01d9": {
+      "bytes": 47795,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-kazdaghli",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:08+00:00",
+      "sha256": "fbea459480cde78b178f761d1b44460808b7e06ff4183be50b76fbac4d59deb7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-kazdaghli"
+    },
+    "a355437882faa3a3030a": {
+      "bytes": 59085,
+      "final_url": "https://www.leaders.com.tn/article/29181-qui-est-imed-hazgui-propose-au-ministere-de-la-defense",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:54+00:00",
+      "sha256": "d7b6dd3dc682f12dee349b89979ea980fdbca9ff16b9cb1d8e3b6bc67e8f129e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29181-qui-est-imed-hazgui-propose-au-ministere-de-la-defense"
+    },
+    "a3b0c7c90990405f5ed2": {
+      "bytes": 38167,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/farhat-rajhi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:20+00:00",
+      "sha256": "86f196736212a8f0e9223036631b84b4418facd109a02ea196a3431dfd0fb566",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/farhat-rajhi"
+    },
+    "a3e16ead64c8d4b67b05": {
+      "bytes": 95397,
+      "final_url": "https://www.leaders.com.tn/article/31904-ahmed-el-karm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:52+00:00",
+      "sha256": "77d91ed0d6841c833e2ac8f6b2d457143f8d2c5220ed71754f85309430837a4e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31904-ahmed-el-karm"
+    },
+    "a53f1a5679ed0e3bc864": {
+      "bytes": 38034,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ayoub-massoudi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:39+00:00",
+      "sha256": "599c8e227f13d4294e47fe101923ef59bc75f6b62777ba342e199eee379bd98c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ayoub-massoudi"
+    },
+    "a564ec1204d57d5611e7": {
+      "bytes": 38048,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfattah-amor",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:14+00:00",
+      "sha256": "26fc162cfd7c67e6bb6fbe7a069faebe45a28c7b8e806dede1ad81f488c4320f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfattah-amor"
+    },
+    "a62b3a7e5dd4db4450af": {
+      "bytes": 68966,
+      "final_url": "https://www.leaders.com.tn/article/23886-qui-est-rafla-tej-epouse-dellagi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:15+00:00",
+      "sha256": "1519121ed21ecbabfa66342ce520bcac3fafa7ac07eafd92fea8ed98825e6825",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23886-qui-est-rafla-tej-epouse-dellagi"
+    },
+    "a6cc5a8f2906c2f38824": {
+      "bytes": 51843,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=6",
+      "params": {
+        "page": 6
+      },
+      "retrieved_utc": "2026-08-26T17:39:54+00:00",
+      "sha256": "2f1c366fce6f1cfae53baab9894a2c818225a3d31c9ef9dc6a2762228a1d445d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "a8331dc2331028aa3b17": {
+      "bytes": 63724,
+      "final_url": "https://www.leaders.com.tn/article/36546-zohra-boukadida",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:34+00:00",
+      "sha256": "8c6233d285c9aac4ec03be0fd01c38d4303ef5793393d1ed6b61d47b2cddff87",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/36546-zohra-boukadida"
+    },
+    "a8abb6b3c17ec2c81365": {
+      "bytes": 64012,
+      "final_url": "https://www.leaders.com.tn/article/32980-marc-gerard",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:34+00:00",
+      "sha256": "ecb69c00ba40e832ff6be3f89cd6dad46e7e73f7d0815c3e7c37b2d782a3f3da",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/32980-marc-gerard"
+    },
+    "a8b8b1570bf64a9d7fc4": {
+      "bytes": 38217,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amel-belkhiria",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:22+00:00",
+      "sha256": "38cb0294062aa0f1255ceed55c39701a2047d7cf8f53975d38632ded420ee335",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amel-belkhiria"
+    },
+    "a8f1191738b64dc2f65a": {
+      "bytes": 38019,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-nouira",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:00+00:00",
+      "sha256": "016813c95c0fbabf6144fa07e09e48c0a9c7d453fa9245743466a65c721c4146",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-nouira"
+    },
+    "ab3c8f5248e8832ac524": {
+      "bytes": 39092,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdallah-triki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:01+00:00",
+      "sha256": "878846b4089efa9bb186dce4d62915a1b0a78050a75dcaf4c8d18ca4618a70b1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdallah-triki"
+    },
+    "abad3d4faccebe7b4d9f": {
+      "bytes": 40519,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/faouzia-charfi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:12+00:00",
+      "sha256": "64b07488c8badac5d93af0f65ec470a8754a91e9af72cd2234d12ff6194e6595",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/faouzia-charfi"
+    },
+    "abddb7c5552b3c6a18f1": {
+      "bytes": 38050,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/cheikh-kamel-djait",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:35+00:00",
+      "sha256": "70326b6b1fc45e2cd49fa7dec231b65dde73b77b3f2ee2cbe50afda108984be6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/cheikh-kamel-djait"
+    },
+    "ade72fe2e1e052e13fc6": {
+      "bytes": 41199,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-boulares",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:00+00:00",
+      "sha256": "a2b1342ff974ae7d687866c864e1e94229f5d84824d8b433950b9ff50981b14b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-boulares"
+    },
+    "adf61f64a48a0d3bd2b9": {
+      "bytes": 39148,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ajmi-lourimi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:55+00:00",
+      "sha256": "a7cd8c94236c9003a9e035ff3e7b2d9220c9e7f348be67848522965fd58cb4ec",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ajmi-lourimi"
+    },
+    "ae9e47af2b3f4f86fbd4": {
+      "bytes": 38091,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amor-chadli",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:37+00:00",
+      "sha256": "6ad9e4d0cf69dacb73b1f6a7ef26e0665604af65b98a9fd33b29f40019ba21b7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amor-chadli"
+    },
+    "af0f51963b49db74c60c": {
+      "bytes": 39171,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amor-belkhiria",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:35+00:00",
+      "sha256": "ccffd8e02abaf89c864a9d1593002923e5ac1f2c5678a32d02a7e026f7502667",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amor-belkhiria"
+    },
+    "afcf91cdd5d3323ee5e9": {
+      "bytes": 40308,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-fakhfakh",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:50+00:00",
+      "sha256": "122ed9957970185e56f6edf75a07eedeb3d8bcedc101bf8cc2aae2be6e140bd2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/elyes-fakhfakh"
+    },
+    "b0156a46b0cd637e4d13": {
+      "bytes": 69316,
+      "final_url": "https://www.leaders.com.tn/article/35794-qui-est-ouael-chouchene-secretaire-d-etat-aupres-de-la-ministre-de-l-industrie-des-mines-et-de-l-energie-charge-de-la-transition-energetique",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:47+00:00",
+      "sha256": "e6d63f65e84df3bdd8c93bdcda8929527332213b408268a45c0c4d0fb41ae629",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35794-qui-est-ouael-chouchene-secretaire-d-etat-aupres-de-la-ministre-de-l-industrie-des-mines-et-de-l-energie-charge-de-la-transition-energetique"
+    },
+    "b042442d2affafbe1d9a": {
+      "bytes": 102207,
+      "final_url": "https://www.leaders.com.tn/article/37437-jilani-benmbarek-de-grandes-qualites-multiples",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:28+00:00",
+      "sha256": "f943ac7bb682b18bf28c1c90ec8bc21de99ce81c975682f91163aa543f0ddfb8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37437-jilani-benmbarek-de-grandes-qualites-multiples"
+    },
+    "b0be674acce81305468d": {
+      "bytes": 61308,
+      "final_url": "https://www.leaders.com.tn/article/26537-professeur-naziha-atti-belhaj",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:26+00:00",
+      "sha256": "d08e023c4d1b992160380d6b5dea4733bf5f54c43d83bfd530f85248f5e320fd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/26537-professeur-naziha-atti-belhaj"
+    },
+    "b10cebb0cc70f678b747": {
+      "bytes": 60358,
+      "final_url": "https://www.leaders.com.tn/article/34286-professeur-mohamed-jouini",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:29+00:00",
+      "sha256": "f66e9597eb14f3af7f4d4fe77b16cb2aa4dbddde1fbccfdc66fb2a7ff86be3ec",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34286-professeur-mohamed-jouini"
+    },
+    "b22826ce97ece4fc518b": {
+      "bytes": 38085,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelhay-chouikha",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:21+00:00",
+      "sha256": "0bb921ed3352c85718fa4ee3364c1d25cd1dbbf4ba3d4e13dc11bdc464ec2be2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelhay-chouikha"
+    },
+    "b26ba321df2003cd2f1e": {
+      "bytes": 39430,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-jaibi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:00+00:00",
+      "sha256": "4fdb7cb040afeb9f0a92543e62063414f9c51bdb30834397f89bf41efeb849df",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-jaibi"
+    },
+    "b4c32762d61abc66b17b": {
+      "bytes": 42911,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/e",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:18+00:00",
+      "sha256": "3a92dca059969b1a0f3ace83d5b3f3f44c335e9cb94612fc46bdaebe5480d600",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/e"
+    },
+    "b66cc169df3fcff92b60": {
+      "bytes": 55577,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=8",
+      "params": {
+        "page": 8
+      },
+      "retrieved_utc": "2026-08-26T17:39:34+00:00",
+      "sha256": "78a5864a5a0e09d86a2e30af6cdc63dc9e33e7e2aaa91ddace9f3fc6f6d7550c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "b67cdc2e4b6794d6c537": {
+      "bytes": 38278,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adnan-manser",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:31+00:00",
+      "sha256": "089701dd5b0d18996ad07d9699300b38bfb823bf98b036eea5b42422a84f89d7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adnan-manser"
+    },
+    "b6928e99a7367b9bca2f": {
+      "bytes": 39189,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fares-mabrouk",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:14+00:00",
+      "sha256": "b3bcaeac77242d828705439ca26927e77117c661fafe284ceb7f78ed8b08108b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fares-mabrouk"
+    },
+    "b808015b703914197566": {
+      "bytes": 58790,
+      "final_url": "https://www.leaders.com.tn/article/29892-hakim-gabtni",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:26+00:00",
+      "sha256": "8789ba49282fd7ddbb0600ef2b534cfe9c5d5464e79b18358c37399ec98d8f27",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29892-hakim-gabtni"
+    },
+    "b83d857f988e74f1a000": {
+      "bytes": 38156,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/emna-menif",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:56+00:00",
+      "sha256": "078a31079110f6d6714d68b6e6a3b9d96abe703a6c48230fc2246f2e1aa10645",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/emna-menif"
+    },
+    "b86d9bd17394b77b0c04": {
+      "bytes": 66919,
+      "final_url": "https://www.leaders.com.tn/article/32408-maher-sellami",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:42+00:00",
+      "sha256": "93010675d2b3bfaa3faf601bea5547c56611413ee179e2d767a14cc01f88cf20",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/32408-maher-sellami"
+    },
+    "b95bd0d4076ffbd34925": {
+      "bytes": 59451,
+      "final_url": "https://www.leaders.com.tn/article/25755-qui-est-le-nouvel-ambassadeur-d-espagne-en-tunisie-ardizone-garcia-guillermo",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:48+00:00",
+      "sha256": "9b7bb4a8fb86c6984b39ca0a2465263d59a522840a85d3a1bd87e8dbd1206cdc",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25755-qui-est-le-nouvel-ambassadeur-d-espagne-en-tunisie-ardizone-garcia-guillermo"
+    },
+    "b983e56d10b9c37477de": {
+      "bytes": 58201,
+      "final_url": "https://www.leaders.com.tn/article/30236-riadh-zghal",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:16+00:00",
+      "sha256": "3453da1ff2e36e71368c13b5c84897f3759503f9a032d46f7ef8af0366c7fe9c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30236-riadh-zghal"
+    },
+    "bb07fd2b293d9c6fdfe5": {
+      "bytes": 58962,
+      "final_url": "https://www.leaders.com.tn/article/29793-salma-zouari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:32+00:00",
+      "sha256": "6bdd15112ba3aaa58f6beaebb07e3066fcfa587e3fd185cf36bb5e5b2244092f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29793-salma-zouari"
+    },
+    "bb441b99463cdaad8900": {
+      "bytes": 60793,
+      "final_url": "https://www.leaders.com.tn/article/24996-houbeb-ajmi-directrice-generale-du-groupe-universite-centrale-et-membre-de-honoris-united",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:44+00:00",
+      "sha256": "63043c7c3ac2289c90fb0202d44c1b1840f233372b9897a3e3b19452645ec88e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24996-houbeb-ajmi-directrice-generale-du-groupe-universite-centrale-et-membre-de-honoris-united"
+    },
+    "bb8de6af617e7390807a": {
+      "bytes": 41351,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ounaies",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:53+00:00",
+      "sha256": "b0adfae7891abbebf12c124271581c0e34b47cd091211b0b090a0c08e80736d1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ounaies"
+    },
+    "bd53ef04dca2e2750b82": {
+      "bytes": 70171,
+      "final_url": "https://www.leaders.com.tn/article/31898-nejia-gharbi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:00+00:00",
+      "sha256": "011dc348079bf5951078028aaff53871e6bb87ae4ca7452b974413046475eaf1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31898-nejia-gharbi"
+    },
+    "bd559bb6c570ccdf918c": {
+      "bytes": 38159,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fathi-layouni",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:25+00:00",
+      "sha256": "29b98d23c04aa047229b18be97ab03f2ed78d5c1e0ef4fc6416f62bce6d17a99",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fathi-layouni"
+    },
+    "be469a5e2233ae69311b": {
+      "bytes": 51689,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=4",
+      "params": {
+        "page": 4
+      },
+      "retrieved_utc": "2026-08-26T17:39:50+00:00",
+      "sha256": "d3937bb34c695df0a8f67b65a0a22ef7778281b240cb90401f6785bb1e5780dd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "be97c113cf97dd7fbfa2": {
+      "bytes": 60143,
+      "final_url": "https://www.leaders.com.tn/article/20392-ghazi-jeribi-ministre-de-la-justice",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:00+00:00",
+      "sha256": "e47ff083875cd72b0ceac5c346c7f6c2939ac66407a93477bf209ea39c2053d1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20392-ghazi-jeribi-ministre-de-la-justice"
+    },
+    "bf8b0357d8a846ddcdf9": {
+      "bytes": 59650,
+      "final_url": "https://www.leaders.com.tn/article/34557-qui-est-mohamed-koubaa-directeur-general-de-l-ubci",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:15+00:00",
+      "sha256": "8c4a7134159182f132b7de0c4244838595702d30393b0b6e8e922871773a80d1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34557-qui-est-mohamed-koubaa-directeur-general-de-l-ubci"
+    },
+    "c0626ea3db17ab42ed5d": {
+      "bytes": 38199,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abderrahim-zouari",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:57+00:00",
+      "sha256": "a32acd5298abc8bb1e10b9282e8f945a2e6eb5739daa9f0ba099c6c56b434c22",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abderrahim-zouari"
+    },
+    "c0a3dab9ebff4259a646": {
+      "bytes": 63073,
+      "final_url": "https://www.leaders.com.tn/article/30839-qui-est-hichem-fourati-le-nouvel-ambassadeur-de-tunisie-en-arabie-saoudite",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:08+00:00",
+      "sha256": "fce6021d7d07243d6b0a25da1c7b0a4379a11302fa4d43560d62bc0811e7d6ab",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30839-qui-est-hichem-fourati-le-nouvel-ambassadeur-de-tunisie-en-arabie-saoudite"
+    },
+    "c0e3a1085efcb4e89a91": {
+      "bytes": 59315,
+      "final_url": "https://www.leaders.com.tn/article/34444-qui-est-makram-ben-mna-le-president-de-la-commission-nationale-de-la-conciliation-penale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:27+00:00",
+      "sha256": "b0c3aed2c54cb514166bca3ffe25d08cb116fa05b10d72581fc3b4523bc9e139",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34444-qui-est-makram-ben-mna-le-president-de-la-commission-nationale-de-la-conciliation-penale"
+    },
+    "c43d18c4156ec67e6b41": {
+      "bytes": 51426,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/b",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:12+00:00",
+      "sha256": "656c588f8d3aac265db274b681c1451006591d5a582eedf0228c7bcf6c72e947",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/b"
+    },
+    "c4654bc8a386e7830009": {
+      "bytes": 72701,
+      "final_url": "https://www.leaders.com.tn/article/38355-mohamed-el-aziz-ben-achour-djerba-survol-historique",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:59+00:00",
+      "sha256": "5d4dcb28a0b6ac7d252640dbcc2a426f16e69b099b09c94d2525771516116eaa",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38355-mohamed-el-aziz-ben-achour-djerba-survol-historique"
+    },
+    "c4befdb6e6835ea803a3": {
+      "bytes": 42215,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/o",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:43+00:00",
+      "sha256": "9b170a228ad2fe3c85ef0f1e2a62a6c9ec4023db6036361f00801e2c927d8b6c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/lettre/o"
+    },
+    "c5a68a0562edb8c595e8": {
+      "bytes": 69446,
+      "final_url": "https://www.leaders.com.tn/article/31899-khalifa-sboui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:58+00:00",
+      "sha256": "ec8a8e6fc3ada04400d841d1a118c1efb7094488398f1af6bc0e753d5e81acae",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31899-khalifa-sboui"
+    },
+    "c64137efcce380785153": {
+      "bytes": 60418,
+      "final_url": "https://www.leaders.com.tn/article/24997-pr-khaled-ghedira-recteur-du-groupe-universite-centrale",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:35+00:00",
+      "sha256": "1d30312cdcbc87f76973a8bdfdc78dd11051d5f6878a38c021bd0acc380e4715",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24997-pr-khaled-ghedira-recteur-du-groupe-universite-centrale"
+    },
+    "c6ea219ede8d07e9510e": {
+      "bytes": 57895,
+      "final_url": "https://www.leaders.com.tn/article/29909-makram-montacer",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:22+00:00",
+      "sha256": "568817b0a9e8987aac03dea8936b813feab0718411eef074c333478d44633975",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29909-makram-montacer"
+    },
+    "c75d770b377261cf2a73": {
+      "bytes": 38822,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-guediri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:56+00:00",
+      "sha256": "5132c97323bae7ef5bc2400a3cbef059a64b87cc7d5881bfe17f1aa7a88b94ee",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-guediri"
+    },
+    "c7a8190d18cf4c66b295": {
+      "bytes": 58218,
+      "final_url": "https://www.leaders.com.tn/article/34846-nihed-fezai",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:07+00:00",
+      "sha256": "47f34f239c619cef197b9e3394afc206da1095ed54e5ac0b0271a4d6165e60e0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34846-nihed-fezai"
+    },
+    "c86c22a20bb788a61fed": {
+      "bytes": 61279,
+      "final_url": "https://www.leaders.com.tn/article/33440-le-parcours-de-farouk-bouasker-le-president-de-l-instance-superieure-independante-pour-les-elections",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:12+00:00",
+      "sha256": "a40376e55b78a5071390a58fce1715a6e616efbc25244c3b5a0f91be1c21ffb3",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33440-le-parcours-de-farouk-bouasker-le-president-de-l-instance-superieure-independante-pour-les-elections"
+    },
+    "c9ab05dc0c204fc266d5": {
+      "bytes": 59126,
+      "final_url": "https://www.leaders.com.tn/article/29515-mehdi-ben-slama",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:42+00:00",
+      "sha256": "9e2570ad74200337045b7f8a987268dde3801748cc191d1639dfa80978f0717d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29515-mehdi-ben-slama"
+    },
+    "c9d42451617bcb44f199": {
+      "bytes": 71954,
+      "final_url": "https://www.leaders.com.tn/article/24181-koubaa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:03+00:00",
+      "sha256": "f8733b67fc0126fe66c36067086a87875daa219f4ffc2c0f0ef38481ddb955fc",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24181-koubaa"
+    },
+    "c9ea5a21986b8fed07b3": {
+      "bytes": 61211,
+      "final_url": "https://www.leaders.com.tn/article/33611-le-parcours-de-hedi-jallab-le-directeur-general-des-archives-nationales",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:05+00:00",
+      "sha256": "3a86c034c7532c8731135606c6fdce6629ba2bdaf718d6451a27309d8304bdd2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33611-le-parcours-de-hedi-jallab-le-directeur-general-des-archives-nationales"
+    },
+    "ca494420d12610e282f8": {
+      "bytes": 58818,
+      "final_url": "https://www.leaders.com.tn/article/31903-neji-ghandri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:55+00:00",
+      "sha256": "0bcf35ece905f728dcf37e0de6d4b5f322c594bb00313053cc8b3c77aa346f4c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31903-neji-ghandri"
+    },
+    "cb78c2e749805b511571": {
+      "bytes": 60475,
+      "final_url": "https://www.leaders.com.tn/article/29463-abdennaceur-karoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:50+00:00",
+      "sha256": "b0a4becccd1bbdbdf8fcf895e0aeb14524331b8858c57fedd3f3bc9a45642d9f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/29463-abdennaceur-karoui"
+    },
+    "cc703f2f29b410f252a9": {
+      "bytes": 60764,
+      "final_url": "https://www.leaders.com.tn/article/23359-bouzid-nasraoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:28+00:00",
+      "sha256": "ec3c3d96872ddd78afee62fc67e5f18db498bdf15517f07d5750795ec71df645",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/23359-bouzid-nasraoui"
+    },
+    "ccc6e3796b25ac36414b": {
+      "bytes": 58480,
+      "final_url": "https://www.leaders.com.tn/article/35805-qui-est-lotfi-dhiab-ministre-de-l-emploi-et-de-la-formation-professionnelle",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:35+00:00",
+      "sha256": "9875e802de3ca3eb9447a08128d0b93b43c312ee9f760c1089447f8e38bcede1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35805-qui-est-lotfi-dhiab-ministre-de-l-emploi-et-de-la-formation-professionnelle"
+    },
+    "cd35635e490f4401d524": {
+      "bytes": 39136,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-bousbia",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:20+00:00",
+      "sha256": "58297be7c004bcd23db91918c20fcfb950ab3b86f439c09bc0d0d0ec4cf0b3fd",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamadi-bousbia"
+    },
+    "cd3ee506f915ecc757d8": {
+      "bytes": 38036,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-belhassen",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:00+00:00",
+      "sha256": "88633f24ece19ce25ca0c89e9ae7bd23187ef4e03c1c7701c03769bfdfa094ff",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-belhassen"
+    },
+    "cd602c0a6d4c2cba8fe9": {
+      "bytes": 39238,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamza-balloumi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:36+00:00",
+      "sha256": "247f8d6ee51d1db91a4025493d81931d2a032afa1268cc293b7261c9545fb86d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamza-balloumi"
+    },
+    "cdc891e318d1cb2598ab": {
+      "bytes": 63881,
+      "final_url": "https://www.leaders.com.tn/article/25718-qui-est-nabil-ben-khedher-l-ambassadeur-de-tunisie-en-irlande",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:56+00:00",
+      "sha256": "053d2d53f7b095c994f6afa422e5cdf934896784b3ebbe4a769929f2dfeb83db",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25718-qui-est-nabil-ben-khedher-l-ambassadeur-de-tunisie-en-irlande"
+    },
+    "cdd4a24cceba84b2fec4": {
+      "bytes": 62661,
+      "final_url": "https://www.leaders.com.tn/article/38376-qui-est-la-pr-amel-hamza-chaffai-la-scientifique-qui-representera-la-tunisie-au-sein-du-groupe-d-experts-de-l-onu-sur-les-oceans",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:08+00:00",
+      "sha256": "a330886d3d1b50b695baaa1561d6ca89f059d7a2f407cb9f97a5c8585425b8f6",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38376-qui-est-la-pr-amel-hamza-chaffai-la-scientifique-qui-representera-la-tunisie-au-sein-du-groupe-d-experts-de-l-onu-sur-les-oceans"
+    },
+    "cee32b3f06d890bbfc35": {
+      "bytes": 39125,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-chaker",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:52+00:00",
+      "sha256": "fa0b22a1255e035c454654ec089074f765cb1f880e25ed76562cfd5a82e5a83d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-chaker"
+    },
+    "cf0b7cdf9f414a7c34ad": {
+      "bytes": 38199,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/chiheb-esseghaier",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:40+00:00",
+      "sha256": "bb38f0c7d485ac71a259d30f1c0ec69ad85f6d50f452cee1c0003c5bd0349698",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/chiheb-esseghaier"
+    },
+    "d1428d031d3273469c15": {
+      "bytes": 38178,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/alaya-bettaieb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:02+00:00",
+      "sha256": "37b2afd571527dd6a3aab35fa139d6f0504f0f365601deb2e42af25fa34f2e6c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/alaya-bettaieb"
+    },
+    "d203d56d85f19a50574e": {
+      "bytes": 69895,
+      "final_url": "https://www.leaders.com.tn/article/38387-epson-renouvelle-sa-campagne-de-rentree-scolaire-pour-accompagner-les-jeunes-dans-le-developpement-de-leurs-talents",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:06+00:00",
+      "sha256": "298860e5cc7f1d5cb60314568b93d03be237a47c48c344653e49569855bcc95b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38387-epson-renouvelle-sa-campagne-de-rentree-scolaire-pour-accompagner-les-jeunes-dans-le-developpement-de-leurs-talents"
+    },
+    "d25092dcf3736b99d886": {
+      "bytes": 63704,
+      "final_url": "https://www.leaders.com.tn/article/38316-pour-une-resilience-territoriale-en-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:43+00:00",
+      "sha256": "b78199358ba6b030de8f17dc8ab3dfb3da08f2d62597a9c9aa7bc05255ed63c7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38316-pour-une-resilience-territoriale-en-tunisie"
+    },
+    "d25ed0849eeb24117a16": {
+      "bytes": 39495,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-moussa",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:02+00:00",
+      "sha256": "1ad8a6416e87c3dd422778a210d8a721fee0eac035470c57dd9c86651b6f3173",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/fadhel-moussa"
+    },
+    "d31e16a7f0929f5749ce": {
+      "bytes": 59067,
+      "final_url": "https://www.leaders.com.tn/article/33961-qui-est-ali-mrabet-ministre-de-la-sante",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:50+00:00",
+      "sha256": "27ec18a626a13fda45edf6252819e8166b4dc2879d84caf1e936d79f3b86b3a3",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33961-qui-est-ali-mrabet-ministre-de-la-sante"
+    },
+    "d3add6fe64464793e809": {
+      "bytes": 51456,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=5",
+      "params": {
+        "page": 5
+      },
+      "retrieved_utc": "2026-08-26T17:39:52+00:00",
+      "sha256": "21023307c2e8567a8bad6b36f03fb13a97985b2b7e9aa3e16c9c34309756be98",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "d3cef99665f05abef873": {
+      "bytes": 58130,
+      "final_url": "https://www.leaders.com.tn/article/33140-hajer-el-ouardani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:28+00:00",
+      "sha256": "84bd9b201ef674fbb0ec7741a8e915e6614209d04b14bd868407e83b2bedfb9f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33140-hajer-el-ouardani"
+    },
+    "d4feead6116580b8358c": {
+      "bytes": 80289,
+      "final_url": "https://www.leaders.com.tn/article/31922-amel-jebari-mdini",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:44+00:00",
+      "sha256": "7d86bd01afcbd4b4ad69494514c3ccc57af8df0fd2153450b142afcfd3ca421e",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31922-amel-jebari-mdini"
+    },
+    "d549197c8bd57bffc87d": {
+      "bytes": 39407,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/farhat-hached",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:18+00:00",
+      "sha256": "98dc4f2f08e6ebd36a7f6411ab5d3c5151354784d92d7eda5190d93b42df6a22",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/farhat-hached"
+    },
+    "d72cce2bc3ed69b22267": {
+      "bytes": 65689,
+      "final_url": "https://www.leaders.com.tn/article/28513-boutara-lassaad",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:20+00:00",
+      "sha256": "1d2e51d896a657f051af83b70e85444fbcfc103be40e172cbabf0d2afb9fe0b8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28513-boutara-lassaad"
+    },
+    "da7cceafd319a9c0daf8": {
+      "bytes": 38193,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-ben-yahmed",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:02+00:00",
+      "sha256": "ea98b362217eaabadc80dbb8657039cb46144be9120c8036dba64aa793209d2c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-ben-yahmed"
+    },
+    "db124abd596d41311d6c": {
+      "bytes": 60415,
+      "final_url": "https://www.leaders.com.tn/article/33478-dr-neila-akrimi-directrice-generale-cilg-vng-international",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:10+00:00",
+      "sha256": "1f4cfc8ba9aa3fce4b61c7795cd345d38c489effc6ee570532e6ea1df72f3337",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33478-dr-neila-akrimi-directrice-generale-cilg-vng-international"
+    },
+    "db64dfb4d471dc0231fc": {
+      "bytes": 38050,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hamdi-meddeb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:28+00:00",
+      "sha256": "4f64ff378a172df6dd97c35cb1cd7c676de6565371710ff9b076d7fc50fb251a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hamdi-meddeb"
+    },
+    "dba6eee8578350dfa490": {
+      "bytes": 60516,
+      "final_url": "https://www.leaders.com.tn/article/33900-le-parcours-de-nebgha-driss-nouvelle-pdg-de-la-compagnie-tunisienne-pour-l-assurance-du-commerce-exterieur-cotunace",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:52+00:00",
+      "sha256": "9940a05c898800258f08627630bcaab6accfa6a9e2ff9d3c2d6524d316e00c1f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33900-le-parcours-de-nebgha-driss-nouvelle-pdg-de-la-compagnie-tunisienne-pour-l-assurance-du-commerce-exterieur-cotunace"
+    },
+    "dca481a92b284068a0dc": {
+      "bytes": 59298,
+      "final_url": "https://www.leaders.com.tn/article/35251-qui-est-majdouline-el-idrissi-directrice-generale-de-glovo-en-tunisie",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:58+00:00",
+      "sha256": "2e0d69b0a5a8c99a7aa2a4854b88cf8993d7d8c1bdeb232154df3a1adc6e371d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/35251-qui-est-majdouline-el-idrissi-directrice-generale-de-glovo-en-tunisie"
+    },
+    "dd148714b7db036a5146": {
+      "bytes": 58731,
+      "final_url": "https://www.leaders.com.tn/article/25296-qui-est-omar-anis-zormati-directeur-general-marina-hammamet-sud",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:22+00:00",
+      "sha256": "0746babec441376670a7028b3654540a1dd337c7b369ac7bcca1fc2b98de4dee",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25296-qui-est-omar-anis-zormati-directeur-general-marina-hammamet-sud"
+    },
+    "dd4e745bc0916db7efcd": {
+      "bytes": 39060,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bassem-loukil",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:57+00:00",
+      "sha256": "65de835e1082b0df0f72992351074cbf71e56a1925ee3eedc7bbddefa47cb434",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bassem-loukil"
+    },
+    "de4be9f21104bf5ce872": {
+      "bytes": 61518,
+      "final_url": "https://www.leaders.com.tn/article/33221-le-parcours-de-khelil-chaibi-president-de-la-chambre-tuniso-francaise-de-commerce-et-d-industrie-ctfci",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:26+00:00",
+      "sha256": "d69e072ca34ce7688069f6ff755ae40fb50d134dd3d4948fc2f942b09791f90b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33221-le-parcours-de-khelil-chaibi-president-de-la-chambre-tuniso-francaise-de-commerce-et-d-industrie-ctfci"
+    },
+    "df1f298d661c9ecbc3c3": {
+      "bytes": 59073,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=4",
+      "params": {
+        "page": 4
+      },
+      "retrieved_utc": "2026-08-26T17:39:26+00:00",
+      "sha256": "de7c6a96d39634550c10247fe627b42dc0707e43870082f53b4f82213eef0885",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "df9dbfe5f53f0aba5c3e": {
+      "bytes": 38147,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abou-ayoub",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:09+00:00",
+      "sha256": "4069d35bc6766a594abb6bb0794f1544c9712c1f045c2eef6c690fd64bf4d990",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abou-ayoub"
+    },
+    "dfe83661bf7f359dd377": {
+      "bytes": 58218,
+      "final_url": "https://www.leaders.com.tn/article/37606-qui-est-sihem-aloui-agregee-et-docteur-en-histoire-ancienne",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:20+00:00",
+      "sha256": "49614bcb8e911e4fe3d5a59a261738179b84857033c332d7c2b337807a2a3ee7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37606-qui-est-sihem-aloui-agregee-et-docteur-en-histoire-ancienne"
+    },
+    "e037249bb6443bdd258c": {
+      "bytes": 60979,
+      "final_url": "https://www.leaders.com.tn/article/28315-hichem-bayoudh-secretaire-general-du-ministere-des-affaires-etrangeres",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:41+00:00",
+      "sha256": "096e51e5c8bdfc42ee753fa328608da8a86ebd9061db20f31f7bd32e2d74301f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28315-hichem-bayoudh-secretaire-general-du-ministere-des-affaires-etrangeres"
+    },
+    "e04748bda176affc9b6c": {
+      "bytes": 41392,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/gilles-kepel",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:52+00:00",
+      "sha256": "0c3ae65fa938eb798ae9098bec7f86b8d177e67533c33c8f838ffdcda0ec7da9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/gilles-kepel"
+    },
+    "e07f29d63988c1fb8681": {
+      "bytes": 39061,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/alaa-yacoub",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:59+00:00",
+      "sha256": "7d08ba8ddc6e64228e822e19bba4b24a1a5eac1280796a5f21f8960b2cf8eb79",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/alaa-yacoub"
+    },
+    "e08867ffba5beb76d3fe": {
+      "bytes": 40305,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-el-mekki",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:39+00:00",
+      "sha256": "d1006c174dc2808ac33eb4929a2fa082aad4ccc31e91ca887c39d97684ce5cd5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-el-mekki"
+    },
+    "e239c7cdfd531ab5d921": {
+      "bytes": 76498,
+      "final_url": "https://www.leaders.com.tn/article/38315-la-muqaddima-du-management-iii-l-agilite-nomade-face-a-l-asphyxie-sedentaire-ou-l-art-de-remettre-l-organisation-en-mouvement",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:41+00:00",
+      "sha256": "698379e70b24eba1e766f5792da3ba3c48b524c40e6cfafee0f40f6857f3a665",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38315-la-muqaddima-du-management-iii-l-agilite-nomade-face-a-l-asphyxie-sedentaire-ou-l-art-de-remettre-l-organisation-en-mouvement"
+    },
+    "e2493964b1534bde4889": {
+      "bytes": 48203,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-bourguiba",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:02+00:00",
+      "sha256": "826e9e8e0a0ec851dd57739d2537dcca8692b941081b87f9f919a31d6832d1d0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-bourguiba"
+    },
+    "e4a0ba1012b726866e0e": {
+      "bytes": 38060,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bochra-belhaj-hmida",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:17+00:00",
+      "sha256": "b230f764ab8f7abc1795627db582a9224ce62efb9f6ddcf9dd0bc6ba23339d20",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bochra-belhaj-hmida"
+    },
+    "e5335e1a081d9f761126": {
+      "bytes": 40662,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-mestiri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:48+00:00",
+      "sha256": "49fc9c56f7b5b9a5d3b7c4af7f2996ac28405c11122726b91fa18c59982babac",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-mestiri"
+    },
+    "e5fa4cc6ee50926a5fb0": {
+      "bytes": 39171,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amine-miled",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:33+00:00",
+      "sha256": "2ebfe1ea4b4988732e2b7d369766a2b20f38f85421d9b78c111feba5cceafb48",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amine-miled"
+    },
+    "e703a3972c438b8f3e01": {
+      "bytes": 39304,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abderrahmane-khochtali",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:03+00:00",
+      "sha256": "bec33daee0d98e2f72ea78cdc58bdd7c709ce5a37062e561a27197b82446cde4",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abderrahmane-khochtali"
+    },
+    "e73ed3056567cb3576cd": {
+      "bytes": 58625,
+      "final_url": "https://www.leaders.com.tn/article/31918-hichem-rebai",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:50+00:00",
+      "sha256": "c86af4abfaa1335e334c6fa590f98481ac35ff8bd81d9350378da6302b4c1aa8",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31918-hichem-rebai"
+    },
+    "e7845d8d65f6d53db3ed": {
+      "bytes": 58876,
+      "final_url": "https://www.leaders.com.tn/article/27375-monia-saadaoui-areas-of-expertise",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:13+00:00",
+      "sha256": "87f9a7a1f7f1e910411f5f243a304abfdd07aaa8635beb44d6ad0e7a7bfc238b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27375-monia-saadaoui-areas-of-expertise"
+    },
+    "e7edae93f1c21b2e44f7": {
+      "bytes": 58581,
+      "final_url": "https://www.leaders.com.tn/article/25318-qui-est-neila-hafsia-p-d-g-de-bizerte-cap-3000",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:11+00:00",
+      "sha256": "0e123c52cf2f6e79510b556ad3b96b16c653b894e06b6c5a5b3847c1054e0131",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25318-qui-est-neila-hafsia-p-d-g-de-bizerte-cap-3000"
+    },
+    "e8b3c778013b79ad15d0": {
+      "bytes": 40596,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/adnen-manser",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:33+00:00",
+      "sha256": "65781a40a4b6c2d6d2972c16005d2e5f28ff8b60a10e41e7f176c96178d0011c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/adnen-manser"
+    },
+    "e8e2f719e128840d2b06": {
+      "bytes": 38030,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/habib-touhami",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:11+00:00",
+      "sha256": "2bc956568458ccf4a476472ab1a7fd07e28758743ea3496ac2a4836fe09f7243",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/habib-touhami"
+    },
+    "e998eac0a2c966928835": {
+      "bytes": 59825,
+      "final_url": "https://www.leaders.com.tn/article/28099-puneet-r-kundal",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:45:53+00:00",
+      "sha256": "4823b21003878c96ffb9f6ba983d57f3f5ea2114f8116ae18d0f7db68626f2a7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/28099-puneet-r-kundal"
+    },
+    "ea5ae31f31447380d00f": {
+      "bytes": 59163,
+      "final_url": "https://www.leaders.com.tn/article/24021-ali-goddi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:14+00:00",
+      "sha256": "f4d9b8478a6f8efeab246d4f3f18435c4adf7bca6e156482b1f8d939411418ac",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/24021-ali-goddi"
+    },
+    "ea9c05504a771ebbddbf": {
+      "bytes": 58497,
+      "final_url": "https://www.leaders.com.tn/article/33993-qui-est-hatem-mziou-le-nouveau-batonnier",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:44+00:00",
+      "sha256": "fee88a1f3699c5ce6b44c4c3424fff81fefcfe0e358c0f681760aa9a2bb7878d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33993-qui-est-hatem-mziou-le-nouveau-batonnier"
+    },
+    "ec294c0f867c4e62bc58": {
+      "bytes": 59929,
+      "final_url": "https://www.leaders.com.tn/article/38340-adnene-ben-abdesselem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:10+00:00",
+      "sha256": "7df5745ec4549ad4328c797e2ec2cc5caa0a2ccd101fc030dd57f48e7411b2c7",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38340-adnene-ben-abdesselem"
+    },
+    "ee4e8fea250ff2200ced": {
+      "bytes": 38037,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/borhane-bsaies",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:19+00:00",
+      "sha256": "a6d11fcb133e00dbce1147210382e71f38c538db5a2eca1312a5e4ae21a92f49",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/borhane-bsaies"
+    },
+    "ee8645bf1349c3616e4b": {
+      "bytes": 38051,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/foued-zaouche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:40+00:00",
+      "sha256": "cada1c52a864bec77e59ac751e9b7feb1e108520e33a5b1e06e62c9fd284361d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/foued-zaouche"
+    },
+    "eea104f391c925e0d00e": {
+      "bytes": 59853,
+      "final_url": "https://www.leaders.com.tn/article/33877-qui-est-aslen-ben-rejeb-membre-permanent-de-la-chaire-alecso-pour-l-arbitrage-commercial-international",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:56+00:00",
+      "sha256": "6f3bec524b93c63ac764eb5935726f66713543e882c543a85f398665c97e2a6b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33877-qui-est-aslen-ben-rejeb-membre-permanent-de-la-chaire-alecso-pour-l-arbitrage-commercial-international"
+    },
+    "eea4053d68b627684e7b": {
+      "bytes": 61336,
+      "final_url": "https://www.leaders.com.tn/article/33876-qui-est-gaston-kenfack-douajni-president-de-la-49e-session-de-la-commission-des-nations-unies-pour-le-droit-commercial-international-cnudci",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:58+00:00",
+      "sha256": "c891f0a271d7331732f8af5eaaefa9dd4275ed6444a1fa4c0f144ba27c07cf04",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33876-qui-est-gaston-kenfack-douajni-president-de-la-49e-session-de-la-commission-des-nations-unies-pour-le-droit-commercial-international-cnudci"
+    },
+    "eed278fad5ab3160afd7": {
+      "bytes": 115530,
+      "final_url": "https://www.leaders.com.tn/article/20742-faycal-derbel",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:47+00:00",
+      "sha256": "f9f596a9c7f67074e83cb48de1c95de200873138dc2292f2e251045d4036443c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/20742-faycal-derbel"
+    },
+    "f098eab0a8d49a5eb8a6": {
+      "bytes": 59038,
+      "final_url": "https://www.leaders.com.tn/article/25280-qui-est-moez-belhassine-p-d-g-de-la-societe-des-loisirs-touristiques",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:23+00:00",
+      "sha256": "d23f1288e5304bed27999860ecfbbb23f1db23841bf3998259696b8c97637ced",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25280-qui-est-moez-belhassine-p-d-g-de-la-societe-des-loisirs-touristiques"
+    },
+    "f120e5c4e9e39e4ab6f8": {
+      "bytes": 38048,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfettah-amor",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:15+00:00",
+      "sha256": "6b9429144ff835827e688b27181d51e5dee49ff96c1b778c659d52693269c36d",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelfettah-amor"
+    },
+    "f1bc4b5af2d5828863df": {
+      "bytes": 39009,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hind-meddeb",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:56:08+00:00",
+      "sha256": "aebb932b81db5e882f1dbcad6633ca1482dacb7630e98da8c4206cc0084ad34a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hind-meddeb"
+    },
+    "f2283f50d337d0028916": {
+      "bytes": 59250,
+      "final_url": "https://www.leaders.com.tn/article/34541-sadok-rouai",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:20+00:00",
+      "sha256": "8621e65f0781630f204ba3c908150c369baa8d934142cd62c57d016630804b46",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34541-sadok-rouai"
+    },
+    "f2514ea6e2966aa4bbf1": {
+      "bytes": 61267,
+      "final_url": "https://www.leaders.com.tn/article/21314-antonio-guterres",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:48:39+00:00",
+      "sha256": "447d72827a3fa73ec919e281bdd004814fa0a984caeca7a2a770da69598f1590",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/21314-antonio-guterres"
+    },
+    "f25dc47eef2173c69c48": {
+      "bytes": 60635,
+      "final_url": "https://www.leaders.com.tn/article/33875-najet-brahmi-zouaoui-titulaire-de-la-chaire-alecso-pour-l-arbitrage-commercial-international",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:03+00:00",
+      "sha256": "e5377fa99c4bf9fd3d341591745f37e187c48d3720155c3ab152d8f24c89775c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33875-najet-brahmi-zouaoui-titulaire-de-la-chaire-alecso-pour-l-arbitrage-commercial-international"
+    },
+    "f2ae6af8c8be3aeeb9de": {
+      "bytes": 59036,
+      "final_url": "https://www.leaders.com.tn/article/25307-qui-est-mohamed-hedi-reguig-p-d-g-de-la-cta-marina-monastir",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:47:18+00:00",
+      "sha256": "8ced206222628b5c0f4b22bdb11d536c4ee68ff4fe5b5f17886ed2999474b70c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/25307-qui-est-mohamed-hedi-reguig-p-d-g-de-la-cta-marina-monastir"
+    },
+    "f3523ed96c96dda00b68": {
+      "bytes": 61305,
+      "final_url": "https://www.leaders.com.tn/article/37860-hammam-lif-une-ville-qui-cherche-a-retrouver-son-attractivite",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:19+00:00",
+      "sha256": "68e88a7a5b39d3d219607603ce48626ac4dbf7116298feb6c73ffce21cd5879c",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37860-hammam-lif-une-ville-qui-cherche-a-retrouver-son-attractivite"
+    },
+    "f3ae223cc509c0612763": {
+      "bytes": 59192,
+      "final_url": "https://www.leaders.com.tn/article/33970-qui-est-neila-nouira-gongi-ministre-de-l-industrie-de-l-energie-et-des-mines",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:49+00:00",
+      "sha256": "74cbc15967da9eefcf5f8f4f40500e4a201130a7f10f601f5d9d30c68824fcc1",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33970-qui-est-neila-nouira-gongi-ministre-de-l-industrie-de-l-energie-et-des-mines"
+    },
+    "f46e341e85f667d7d605": {
+      "bytes": 39147,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-ben-ahmed",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:54:44+00:00",
+      "sha256": "7918a7a8cc2b6ba01a894fabe36b0d10cb5ca63f15628994632ef71e503cab34",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ghazi-ben-ahmed"
+    },
+    "f5153f2b2521f77dfed1": {
+      "bytes": 38984,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/amin-chabchoub",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:28+00:00",
+      "sha256": "9be81f9eab811a866de8b7c9f71f96364fa8fc87262128620edf9289ba4d4abb",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/amin-chabchoub"
+    },
+    "f58a5da11ef670fe5773": {
+      "bytes": 59808,
+      "final_url": "https://www.leaders.com.tn/article/27884-anna-block-mazoyer",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:46:02+00:00",
+      "sha256": "68e62d8a1ddacb4a3af8bc6e680a82e4f11c51ddc724507ffc8ec172437dc820",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/27884-anna-block-mazoyer"
+    },
+    "f5b5ad54be5e22eb6e1e": {
+      "bytes": 38020,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bahi-ladgham",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:52:49+00:00",
+      "sha256": "f5a72962a2cdaff46b66bb5bed93fe86f25638ae933d536f3298d2f6e20e4fa5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bahi-ladgham"
+    },
+    "f6501833bfb115390426": {
+      "bytes": 54282,
+      "final_url": "https://www.leaders.com.tn/categorie/who-s-who?page=6",
+      "params": {
+        "page": 6
+      },
+      "retrieved_utc": "2026-08-26T17:39:30+00:00",
+      "sha256": "33547c6f1311a6a1be255b3bb840b37b7a631a5a9894920d36eaa2626a16fa65",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/categorie/who-s-who"
+    },
+    "f70ce4c9e9a72121c5b9": {
+      "bytes": 38263,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-ghazi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:51:41+00:00",
+      "sha256": "41b73496d42bc63c863e4139e48d2bab340bd351fa662327b65ddaf67d750e75",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/ahmed-ben-ghazi"
+    },
+    "f836b471354f0434a9ff": {
+      "bytes": 69340,
+      "final_url": "https://www.leaders.com.tn/article/38389-dot-landing-the-dot-lance-son-programme-dedie-aux-entrepreneurs-de-la-diaspora-tunisienne",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:41:04+00:00",
+      "sha256": "e27082b57929b5189dbd54dc8e5cd138230f50b27aee63b4c3a68e6098d2dcd2",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/38389-dot-landing-the-dot-lance-son-programme-dedie-aux-entrepreneurs-de-la-diaspora-tunisienne"
+    },
+    "f83f9683c8575647c2cd": {
+      "bytes": 38284,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-abid",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:37+00:00",
+      "sha256": "0bbac91672566a60b79a2d25c35887dfe5da0cbf37e4ce06fd52e959b22ed5bf",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdellatif-abid"
+    },
+    "f85bac3f7d688baaf58a": {
+      "bytes": 39100,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hatem-moatamri",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:44+00:00",
+      "sha256": "aabeee4ffba70aa8f4e641e54f785aa3dead3f7efdf0fa337637b029c54e96a9",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hatem-moatamri"
+    },
+    "f91af04b4f2f8995370d": {
+      "bytes": 62751,
+      "final_url": "https://www.leaders.com.tn/article/30131-slim-karem",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:18+00:00",
+      "sha256": "721820bf1c6c52c78da6c351494139b0216479bd9326d2639f0e1dd2a80aae18",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30131-slim-karem"
+    },
+    "f95e1be0bea9fc94d58b": {
+      "bytes": 39190,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-zenaidi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:09+00:00",
+      "sha256": "d56db0a56a1c0fdb8103052950448b1021ce0149b57e60730d708b306853a27b",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdelaziz-zenaidi"
+    },
+    "fa1f2ff29bab556df773": {
+      "bytes": 65303,
+      "final_url": "https://www.leaders.com.tn/article/19813-aymen-boughanmi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:49:08+00:00",
+      "sha256": "0701882f899f17c7bff338190c354ec071fc0d920e75231dd7ec9d726991f330",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/19813-aymen-boughanmi"
+    },
+    "fab748cba16780940147": {
+      "bytes": 40508,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/abdeljelil-temimi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:50:26+00:00",
+      "sha256": "a855abcfc7452b9138caaf6c3215b8f9c8fa8058c44d273c3c7d9e41dd1e13c0",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/abdeljelil-temimi"
+    },
+    "fadaf71d0bbe50f24b56": {
+      "bytes": 60880,
+      "final_url": "https://www.leaders.com.tn/article/33084-le-parcours-du-professeur-ridha-bergaoui",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:30+00:00",
+      "sha256": "d81fb9da79a83d69c2a3f487251d3d691d56e9e44b3ce05bafc3bd05a66393e5",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/33084-le-parcours-du-professeur-ridha-bergaoui"
+    },
+    "fb875f9048371f0d2377": {
+      "bytes": 51632,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite?page=9",
+      "params": {
+        "page": 9
+      },
+      "retrieved_utc": "2026-08-26T17:40:00+00:00",
+      "sha256": "311ae571c3d1044eca6f26d6a61e2e18aa45e6232521fb90a7d1cf519ea37353",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite"
+    },
+    "fbab9822739e140ca9d7": {
+      "bytes": 59126,
+      "final_url": "https://www.leaders.com.tn/article/34639-qui-est-slah-zouari-directeur-general-des-ponts-et-chaussees",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:42:12+00:00",
+      "sha256": "0961e3aa0fb0db609aa4233d3e3700a0b426b1a2046f65d042b93978bb0e2d14",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/34639-qui-est-slah-zouari-directeur-general-des-ponts-et-chaussees"
+    },
+    "fbcb48ce718dd1060271": {
+      "bytes": 41355,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-djilani",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:55:54+00:00",
+      "sha256": "e0800710d3e1c2c2f6694d8fb00995e16a0ccada9f0ccd1859b753ca2bdeed0a",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/hedi-djilani"
+    },
+    "fc61b54caaf08adc1276": {
+      "bytes": 60562,
+      "final_url": "https://www.leaders.com.tn/article/37607-qui-est-siwar-chaabani-conservatrice-du-musee-romain-et-paleochretien-de-dermech-carthage",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:40:22+00:00",
+      "sha256": "9e4839ba8ae2576b115e329b51c197fb4a474ce8e4d3e25cf84802ced4154722",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/37607-qui-est-siwar-chaabani-conservatrice-du-musee-romain-et-paleochretien-de-dermech-carthage"
+    },
+    "fc73abf19a619910aa45": {
+      "bytes": 73070,
+      "final_url": "https://www.leaders.com.tn/article/30477-kamel-deguiche",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:44:14+00:00",
+      "sha256": "5c28aba9a7c5aa62728104c825bf72c7da367cb02c22a6282f61cb30b05bae34",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/30477-kamel-deguiche"
+    },
+    "fca6d51ba616295eea66": {
+      "bytes": 38047,
+      "final_url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-trabelsi",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:53:06+00:00",
+      "sha256": "17e5f02f54019295371aaf0e4f42fdeb957a17b67962cd1cbd1ff405be74e900",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/annuaire-personnalite/bechir-trabelsi"
+    },
+    "fef7c0bdf92c7a7f80e7": {
+      "bytes": 59681,
+      "final_url": "https://www.leaders.com.tn/article/31921-mondher-lakhal-directeur-general-de-la-bna-depuis-mars-2021",
+      "params": {},
+      "retrieved_utc": "2026-08-26T17:43:47+00:00",
+      "sha256": "c22c54febc0fdb72e34d9cdffc84055824bf0e26e0b7ac5317d3cdeafd45276f",
+      "status": 200,
+      "url": "https://www.leaders.com.tn/article/31921-mondher-lakhal-directeur-general-de-la-bna-depuis-mars-2021"
+    }
+  },
+  "source": "leaders",
+  "updated_utc": "2026-09-13T00:15:21+00:00"
+}

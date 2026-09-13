@@ -1,0 +1,5 @@
+layer,nodes,ties,directed,mean_degree
+Bipartite person → cabinet,914,1942,False,4.2
+Co-membership served together,832,38287,False,92.0
+Succession same portfolio,827,1976,True,4.8
+Homophily shared attribute,481,12613,False,52.4

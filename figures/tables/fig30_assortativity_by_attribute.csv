@@ -1,0 +1,7 @@
+attribute,key,people,ties,assortativity
+Born on the coast,birth_coastal,456,11982,-0.011
+Ever held a sovereign post,ever_sovereign_portfolio,882,38287,-0.001
+Region of birth,birth_region_type,456,11982,0.004
+Ever head of government,ever_head_of_government,882,38287,0.0129
+Born in the Sahel,birth_sahel,456,11982,0.0159
+Gender,gender,573,16765,0.0462

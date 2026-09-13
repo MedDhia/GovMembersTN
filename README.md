@@ -27,8 +27,15 @@ git clone --depth 1 https://github.com/MedDhia/GovMembersTN.git
 cd GovMembersTN
 ```
 
-Prefer a download? Grab the ZIP from GitHub, or build a 1.8 MB data-only
-archive with `make bundle` — the analysis scripts below run from either.
+Prefer a download? Grab the ZIP from GitHub, or build a 12 MB archive with
+`make bundle` — the analysis scripts below run from either. It carries the
+tables, the docs, the example scripts and the figures. Almost all of the 12 MB
+is the figures: the tables compress to about a megabyte, the PNGs and PDFs
+barely compress at all. For the data alone:
+
+```bash
+unzip GovMembersTN-data.zip -x 'GovMembersTN/figures/*'   # 38 MB unpacked
+```
 
 **R** — base R, no packages to install:
 
@@ -74,6 +81,38 @@ numbers, so a result from one can be checked in the other. `02` is a genuine
 reproduction test rather than a re-display: it recomputes the index and fails
 loudly if its answer disagrees with `data/processed/indices/`.
 
+### Figures
+
+Forty-eight publication figures are committed under `figures/`, as PNG for
+screen and PDF for `\includegraphics`, each with a CSV of the exact numbers
+plotted.
+
+| | Figures | |
+|---:|---|---|
+| 1 | Source coverage | Attribute coverage by decade — the caveat as a picture. |
+| 6 | Composition over time | Government size, turnover and renewal, seniority, women, age at entry, cabinets served. |
+| 6 | Territorial inequality | The representation Gini and its Lorenz curves, parity by governorate and era, coast against interior. |
+| 5 | Careers and survival | Tenure in a post and in government, by regime and by region of birth; seat switching. |
+| 1 | Global shocks | Ministerial exit against five shocks — descriptive, and the figure says why. |
+| 23 | The network | Degree, tie weights and the four layers compared; communities, assortativity, brokerage and homophily; and the layer itself drawn six ways. |
+| 6 | Pathways into office | Who got recruited and through which door: entry rank, schooling, the party ticket, prior careers, the renewal rate, and the apprenticeship before the premiership. |
+
+![Territorial inequality in ministerial recruitment, by era](figures/fig03_representation_gini.png)
+
+![The co-membership layer, ministers ordered by when they arrived](figures/fig37_cohort_chords.png)
+
+`make figures` rebuilds them; you never need to, since they are tracked. Two of
+them recompute the index from the raw tables and fail if their answer disagrees
+with the published file, on the same principle as `02` above. Every duration
+figure filters on `date_basis`, because a roster row that inherited its
+cabinet's span carries an upper bound rather than a tenure. The network
+figures read the centralities precomputed in the published GEXF rather than
+re-deriving them, so they cannot disagree with what
+[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md) tells a Gephi user to
+partition on.
+**[figures/README.md](figures/README.md)** explains what each one shows and how
+to read it — start with fig. 1, which is the coverage caveat as a picture.
+
 ---
 
 ## What's in it
@@ -86,7 +125,7 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 |---:|---|
 | **882** | people who held a post in a Tunisian government |
 | **3,136** | appointments — one row per person × cabinet × portfolio |
-| **57** | cabinets, 1943–2026, across 23 government spells |
+| **56** | cabinets, 1943–2026, across 23 government spells |
 | **38,287** | co-membership ties, weighted by days of overlapping service |
 | **1,976** | succession ties, directed, within portfolio |
 | **12,613** | homophily ties — shared university, party or birth governorate |
@@ -214,6 +253,10 @@ src/govtn/
 analysis/
   R/             load_govtn.R + 01-03 example scripts (base R, no packages)
   python/        load_govtn.py + the same three examples (pandas)
+figures/         forty-eight publication figures, PNG + PDF
+  make_figures.py  regenerates them from data/processed/ (needs matplotlib)
+  tables/          the exact numbers behind each figure, one CSV per figure
+  README.md        what each figure shows, and how to read it
 data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
 data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
@@ -221,7 +264,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           257 tests, incl. fixtures reproducing real source markup
+tests/           205 test functions, 389 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
@@ -243,13 +286,15 @@ Working on the data rather than the harvest:
 
 ```bash
 make offline     # rebuild from the cached payloads, no network
+make harvest     # Wikidata, Wikipedia and Leaders only (needs network)
 make build       # re-assemble tables from what has been harvested
 make networks    # rebuild edge lists and graph files
 make validate    # regenerate VALIDATION.md
 make inequality  # territorial representation index
 make codebook    # regenerate the machine-readable codebook
 make analysis    # run the example analyses in Python and R
-make bundle      # zip the data + docs + scripts, without the pipeline
+make figures     # rebuild the publication figures
+make bundle      # zip the data, docs, scripts and figures, without the pipeline
 make test        # run the test suite
 make queries     # print the SPARQL for manual execution
 ```

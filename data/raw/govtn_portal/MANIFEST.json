@@ -1,0 +1,307 @@
+{
+  "entries": {
+    "004931651c5a48b25e12": {
+      "bytes": 21533,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/155/38-%D8%AC%D9%81%D9%91%D8%A7%D9%84.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:34+00:00",
+      "sha256": "888bc7e517e85ef8cf60ccfd5c4b4fc8b68fce12636ee319713941568a5d223e",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/155/38-جفّال.htm"
+    },
+    "0ebfc6e63f6ae858c4f2": {
+      "bytes": 41326,
+      "final_url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:27+00:00",
+      "sha256": "d2beb773186df24444d06ca8e384b2ea1a0160284c301696c3421e71df1202a1",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm"
+    },
+    "14f86ad33326220f51fd": {
+      "bytes": 20334,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/161/38-%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:52+00:00",
+      "sha256": "c6dbe7099893565439286553df3ea49f99d6545508b0b6ecacd73abb661544f4",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/161/38-الزواري.htm"
+    },
+    "1beafdaef3b87970a26b": {
+      "bytes": 21423,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/164/38-%D8%A7%D9%84%D9%85%D9%88%D8%B1%D8%A7%D9%84%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:08+00:00",
+      "sha256": "c5235e8d635092372250fc8549afb494b036e6b67d1a4c1c0058de91d568c570",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/164/38-المورالي.htm"
+    },
+    "1dae965277ee4f430f75": {
+      "bytes": 19864,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/248/38-%D8%A8%D9%86-%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:40+00:00",
+      "sha256": "4f58bd13d01707f83b7a8dff634e5473185e8137c702b7b9c88ede3aca7bc5f9",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/248/38-بن-الصادق.htm"
+    },
+    "24201c336e69b56eac62": {
+      "bytes": 20224,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/168/38-%D8%B9%D8%A8%D9%8A%D8%AF.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:58+00:00",
+      "sha256": "137897fef1403ab87238fdea158a9b5b3dd82c1f7bc4f6b2117e136e95279693",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/168/38-عبيد.htm"
+    },
+    "263c96cf368c1cf23c07": {
+      "bytes": 21517,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/237/38-%D8%A7%D9%84%D9%87%D8%B0%D9%8A%D9%84%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:16+00:00",
+      "sha256": "e4b6c7635db8e9788534305c719599190bfa191ebac6059cbe46748437c19870",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/237/38-الهذيلي.htm"
+    },
+    "2aabf793fd1861e715d9": {
+      "bytes": 19975,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/234/38-%D8%B9%D8%A8%D9%8A%D8%AF.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:18+00:00",
+      "sha256": "ab1992ceea102fd0330cf1da51ff57736d6dd1d217673b50ce7d20f6322764ab",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/234/38-عبيد.htm"
+    },
+    "2bf468fc4cf9996612ea": {
+      "bytes": 24422,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/182/38-%D8%A7%D9%84%D9%86%D9%81%D8%B7%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:42+00:00",
+      "sha256": "027b6e12cced7f4586058cbbc566e37d035f6f82cb89136aa6ab25f95401cc52",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/182/38-النفطي.htm"
+    },
+    "395b6e01d74fc6e53e3a": {
+      "bytes": 20420,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/159/38-%D8%B3%D9%84%D8%A7%D9%85%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%84%D8%AF%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:46+00:00",
+      "sha256": "82b893ee161c7b7f96c48b0c3f185cbd72f67642ec2cf20e3d309aa4586d1eac",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/159/38-سلامة-الخالدي.htm"
+    },
+    "3afa429415b6d6bee1bf": {
+      "bytes": 21518,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/158/38-%D8%A7%D9%84%D9%86%D9%88%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:38+00:00",
+      "sha256": "942dab92d0f1f5cdff8f3a8d87534d3e93621c4f4e7b104f4d2c0f046f144244",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/158/38-النوري.htm"
+    },
+    "3e1953befc16a88b7079": {
+      "bytes": 19872,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/243/38-%D8%B4%D9%88%D8%B4%D8%A7%D9%86.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:54+00:00",
+      "sha256": "96d8fd74b1544ee92204f8ca678f3e0ebcec65e00a54f1eea01123b516c2ca28",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/243/38-شوشان.htm"
+    },
+    "43e4ee1768897600e6e1": {
+      "bytes": 25329,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/44/38-%D8%A7%D9%84%D8%A8%D9%88%D9%87%D8%A7%D9%84%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:22+00:00",
+      "sha256": "e9304769ba3b1252859186607f5303a61f511d5515f6e874236563233b51d26d",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/44/38-البوهالي.htm"
+    },
+    "576cc4464ee9a1346ee7": {
+      "bytes": 24410,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/156/38-%D8%A7%D9%84%D8%B3%D9%87%D9%8A%D9%84%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:36+00:00",
+      "sha256": "515807c4706dfe47f3ce8be9ac7f9049d235fb84fda45f3c41c36e8b12dfcfa2",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/156/38-السهيلي.htm"
+    },
+    "688a508c6465b1e33666": {
+      "bytes": 19925,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/175/38-%D8%A8%D9%86-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:00+00:00",
+      "sha256": "90334dea30ece2217fc87dcc98e0e656d9ec93439f6ed2c1fa2723218f7ea8c9",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/175/38-بن-الشيخ.htm"
+    },
+    "86585e81bde7fae991ed": {
+      "bytes": 19977,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/240/38-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%AD%D9%81%D9%8A%D8%B8.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:50+00:00",
+      "sha256": "9eafd31588c259d9049a61aa0aaa5025a4ba7c7da8573bbf0de88bc11b870766",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/240/38-عبد-الحفيظ.htm"
+    },
+    "8c8207808b2355c57de5": {
+      "bytes": 22202,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/165/38-%D8%AC%D8%A7%D8%A8%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:24+00:00",
+      "sha256": "7939cad4f94155b9c6fa9e98d4277dc717f117f66aa7dd7e2a0738fbce8ad0bf",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/165/38-جابري.htm"
+    },
+    "9824d433517f4451b9f0": {
+      "bytes": 20012,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/180/38-%D8%B4%D9%8E%D9%88%D9%90%D8%AF.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:28+00:00",
+      "sha256": "f30b82d2e97f5cfa15de1532511a36e881bd9a7737e7985a702b23db8e8c9884",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/180/38-شَوِد.htm"
+    },
+    "9f23e7ba41cefd9e8e21": {
+      "bytes": 20236,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/176/38-%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:14+00:00",
+      "sha256": "34223a46c4139edb6dc1c396ad6a85f85fbdf0a72e656e549a4c64b3ecbdb708",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/176/38-الزواري.htm"
+    },
+    "ac5a27a905219b231ec9": {
+      "bytes": 24375,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/178/38-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:56+00:00",
+      "sha256": "4aec3e0728858d47c33515d5b45e1a033c560117615d5a7eb6c7ba1b40d5ed7f",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/178/38-الأحمر.htm"
+    },
+    "bc2722bb5efe1d064e18": {
+      "bytes": 20194,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/166/38-%D8%AA%D9%82%D9%8A%D8%A9.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:20+00:00",
+      "sha256": "4794c68b3ee6ef7bd65d67b459be6f50e7060722ff95d5609f48889e53a126b4",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/166/38-تقية.htm"
+    },
+    "be4f95db69f71f023efe": {
+      "bytes": 20555,
+      "final_url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm?ip=3",
+      "params": {
+        "ip": 3
+      },
+      "retrieved_utc": "2026-08-26T20:19:30+00:00",
+      "sha256": "cc44a5b4b238627511cc8da28384a5e4bbdaab507c85cb2f7c5079a76138d88d",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm"
+    },
+    "c09df7b6ef96ab3c1e87": {
+      "bytes": 22478,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/232/38-%D8%A7%D9%84%D8%B5%D8%B1%D8%A7%D8%B1%D9%81%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:26+00:00",
+      "sha256": "1024867b5ba35ccbd6898d5fda6310b5914dea3e1a748e22294ea08ba79b4d0a",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/232/38-الصرارفي.htm"
+    },
+    "c3d504ff595d872e8243": {
+      "bytes": 19919,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/227/38-%D8%A8%D9%86-%D8%B9%D9%8A%D8%A7%D8%AF.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:44+00:00",
+      "sha256": "83c0b560e08c2eb299e5c2eebaaff52dd9c92c3d0ed5392d1090911df4f55fea",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/227/38-بن-عياد.htm"
+    },
+    "c568554c0eb99166692b": {
+      "bytes": 19947,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/174/38-%D8%A7%D9%84%D8%AD%D8%A8%D9%8A%D9%91%D8%A8.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:02+00:00",
+      "sha256": "5e06336ea9970d6a0ac40786cce6004fc756238441357f5c4470851e550b7c93",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/174/38-الحبيّب.htm"
+    },
+    "c88a82bedff50531aa4c": {
+      "bytes": 20266,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/173/38-%D8%A7%D9%84%D9%87%D9%85%D9%8A%D8%B3%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:10+00:00",
+      "sha256": "4e86610bc988c8a5df96b0ad526bec3afc31083981969cccd138b0e5963187a3",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/173/38-الهميسي.htm"
+    },
+    "ccaa6f371a06ebece600": {
+      "bytes": 19799,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/238/38-%D8%A7%D9%84%D9%81%D8%B1%D8%AC%D8%A7%D9%86%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:48+00:00",
+      "sha256": "a5f7c631fa018586b5073e401f154c8e1d783a4fcd411154d75336ba863cb7aa",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/238/38-الفرجاني.htm"
+    },
+    "cdf962d495bbce4fa349": {
+      "bytes": 23428,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/215/38-%D8%B9%D8%A7%D9%85%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:12+00:00",
+      "sha256": "f6783e586500cb9786c621b810a8244f17bf39ca007659602d866f5e443d9c59",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/215/38-عامري.htm"
+    },
+    "cec42722cdd594ff37d5": {
+      "bytes": 19949,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/150/38-%D8%A7%D9%84%D8%B2%D8%B9%D9%81%D8%B1%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B2%D9%86%D8%B2%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:19:32+00:00",
+      "sha256": "9759d6b1e22aa30f7d7f10287a387169f9f48d736b898c1ae4b802ecbf7ffb26",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/150/38-الزعفراني-الزنزري.htm"
+    },
+    "daeda7476ac4781be957": {
+      "bytes": 19916,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/247/38-%D8%AC%D9%8A%D8%A8-%D8%A7%D9%84%D9%84%D9%87.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:30+00:00",
+      "sha256": "3b3753cd26a026985071ecbf76bdbe6d65a61a14bb9c36a255b0f8b9ddee24a1",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/247/38-جيب-الله.htm"
+    },
+    "dc4432f3f6706438c145": {
+      "bytes": 20239,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/171/38-%D8%A8%D9%84%D8%B9%D9%8A%D8%AF.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:06+00:00",
+      "sha256": "b073b1ea3d3c9bdb73c76e7f27692436982b1c598de5b2e853b6a3d39a33f6f8",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/171/38-بلعيد.htm"
+    },
+    "e4c5d737afbc3090d1ef": {
+      "bytes": 39246,
+      "final_url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm?ip=2",
+      "params": {
+        "ip": 2
+      },
+      "retrieved_utc": "2026-08-26T20:19:28+00:00",
+      "sha256": "29097c54c7d2dfc59671fa2674f135429a3b39dc24dd3ccd5fda8e06f7ba7449",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/38-%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9.htm"
+    },
+    "f09f85730a55ef486da3": {
+      "bytes": 20098,
+      "final_url": "https://www.tunisie.gov.tn/membre-de-gouvernement/169/38-%D8%A7%D9%84%D9%86%D9%88%D8%B1%D9%8A.htm",
+      "params": {},
+      "retrieved_utc": "2026-08-26T20:20:04+00:00",
+      "sha256": "e829f58765ccb2da1a1bd5fceaa810ed4fa62a497681dd48bdad098c73248b3d",
+      "status": 200,
+      "url": "https://www.tunisie.gov.tn/membre-de-gouvernement/169/38-النوري.htm"
+    }
+  },
+  "source": "govtn_portal",
+  "updated_utc": "2026-09-13T00:15:22+00:00"
+}

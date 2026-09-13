@@ -1,0 +1,8 @@
+quantile,overlap_days
+min,30
+p10,366
+p25,855
+median,2435
+p75,4063
+p90,4120
+max,29075

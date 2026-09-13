@@ -206,14 +206,14 @@ def test_birthplace_governorates_come_from_the_qid_not_the_label(tables):
         assert spine.place_attributes(place)["birth_governorate"] == governorate
 
 
-def test_every_recorded_birthplace_is_coded_somehow(tables):
+def test_every_recorded_birthplace_is_coded_somehow(harvested):
     """No birthplace should be silently uninterpretable.
 
     Each one must resolve to a governorate, to a foreign country, or to
     Tunisia-without-a-governorate. Anything else is a person who quietly
     vanishes from regional analysis.
     """
-    persons = tables["persons"]
+    persons = harvested["persons"]
     known = persons[persons["birth_place"].notna()]
     assert len(known) > 400
     uncoded = known[known["birth_governorate"].isna() & known["birth_country"].isna()]

@@ -1,0 +1,28 @@
+era,units,ministers,coded,coverage,gini_representation,ci_low,ci_high,gini_recomputed,basis
+beylical,governorate,6,1,0.167,,,,0.949266670057865,withheld: only 1 coded ministers
+protectorate,governorate,61,29,0.475,0.8546,0.8147,0.8845,0.8546191127335291,reported
+protectorate_end,governorate,23,14,0.609,,,,0.8367597204578624,withheld: only 14 coded ministers
+monarchy,governorate,24,16,0.667,,,,0.7851367408863004,withheld: only 16 coded ministers
+bourguiba,governorate,147,92,0.626,0.5591,0.4603,0.591,0.5590613012925881,reported
+ben_ali,governorate,351,175,0.499,0.4519,0.3634,0.485,0.45189421613696634,reported
+transition,governorate,137,113,0.825,0.4681,0.3477,0.4989,0.4681044853985572,reported
+second_republic,governorate,246,154,0.626,0.4181,0.3033,0.444,0.418089033401973,reported
+saied_exception,governorate,74,30,0.405,,,,0.5562910056927307,withheld: newcomers 4% covered; sample is almost all holdovers
+beylical,greater_tunis_merged,6,1,0.167,,,,0.949266670057865,withheld: only 1 coded ministers
+protectorate,greater_tunis_merged,61,29,0.475,0.6859,0.6328,0.7146,0.6858744182675556,reported
+protectorate_end,greater_tunis_merged,23,14,0.609,,,,0.6508036442089746,withheld: only 14 coded ministers
+monarchy,greater_tunis_merged,24,16,0.667,,,,0.5795148940847727,withheld: only 16 coded ministers
+bourguiba,greater_tunis_merged,147,92,0.626,0.4007,0.2652,0.4384,0.4006947379013124,reported
+ben_ali,greater_tunis_merged,351,175,0.499,0.2573,0.1474,0.2762,0.25730331213524105,reported
+transition,greater_tunis_merged,137,113,0.825,0.2864,0.1563,0.3033,0.2864185172966831,reported
+second_republic,greater_tunis_merged,246,154,0.626,0.2484,0.1287,0.2622,0.24839511363569788,reported
+saied_exception,greater_tunis_merged,74,30,0.405,,,,0.428189277982962,withheld: newcomers 4% covered; sample is almost all holdovers
+beylical,region,6,1,0.167,,,,0.8603740892732136,withheld: only 1 coded ministers
+protectorate,region,61,29,0.475,0.6289,0.5318,0.723,0.6288624662864291,reported
+protectorate_end,region,23,14,0.609,,,,0.5438698105342721,withheld: only 14 coded ministers
+monarchy,region,24,16,0.667,,,,0.45292839689282705,withheld: only 16 coded ministers
+bourguiba,region,147,92,0.626,0.3076,0.1921,0.3927,0.30759033449922923,reported
+ben_ali,region,351,175,0.499,0.1555,0.0612,0.1976,0.15549747657015445,reported
+transition,region,137,113,0.825,0.1839,0.0714,0.2416,0.18394984766058808,reported
+second_republic,region,246,154,0.626,0.1721,0.0687,0.2233,0.1721105982409009,reported
+saied_exception,region,74,30,0.405,,,,0.2917069830871917,withheld: newcomers 4% covered; sample is almost all holdovers

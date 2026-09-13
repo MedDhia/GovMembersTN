@@ -1,0 +1,8 @@
+region,centre_east,centre_west,greater_tunis,northeast,northwest,southeast,southwest
+centre_east,1.024,1.069,0.981,0.965,1.021,0.946,0.994
+centre_west,1.069,0.877,0.974,0.944,1.008,0.986,1.056
+greater_tunis,0.981,0.974,1.031,0.965,1.009,1.022,0.996
+northeast,0.965,0.944,0.965,1.044,1.123,1.113,1.018
+northwest,1.021,1.008,1.009,1.123,0.9,0.946,0.862
+southeast,0.946,0.986,1.022,1.113,0.946,0.981,1.103
+southwest,0.994,1.056,0.996,1.018,0.862,1.103,0.918

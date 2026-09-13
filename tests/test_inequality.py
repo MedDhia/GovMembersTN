@@ -99,13 +99,14 @@ def test_thin_eras_are_withheld_with_a_stated_reason(tables):
     assert (reported["coded"] >= MIN_MINISTERS).all()
 
 
-def test_saied_era_is_withheld_for_unrepresentative_coverage(tables):
+def test_saied_era_is_withheld_for_unrepresentative_coverage(harvested):
     """It clears the count threshold but its coded sample is the wrong people.
 
     Excluding it must not depend on how many ministers happen to be coded, so
     this asserts the reason, not the count.
     """
-    table = representation_table(tables["persons"], tables["appointments"], draws=50)
+    table = representation_table(harvested["persons"],
+                                 harvested["appointments"], draws=50)
     row = table[table["era"] == "saied_exception"]
     assert not row.empty
     assert row.iloc[0]["coded"] >= MIN_MINISTERS, "would pass a count-only rule"
@@ -113,13 +114,14 @@ def test_saied_era_is_withheld_for_unrepresentative_coverage(tables):
     assert UNREPRESENTATIVE["saied_exception"] in row.iloc[0]["basis"]
 
 
-def test_confidence_interval_brackets_the_estimate(tables):
+def test_confidence_interval_brackets_the_estimate(harvested):
     """The pivotal interval must contain the point estimate.
 
     Resampling inflates the Gini, so a naive percentile interval sits above the
     estimate and can exclude it outright. This is the regression guard for that.
     """
-    table = representation_table(tables["persons"], tables["appointments"], draws=400)
+    table = representation_table(harvested["persons"],
+                                 harvested["appointments"], draws=400)
     reported = table[table["gini_representation"].notna()]
     assert len(reported) >= 3
     for _, row in reported.iterrows():
@@ -141,7 +143,7 @@ def test_unknown_partition_is_rejected(tables):
                              units="prefecture", draws=10)
 
 
-def test_partition_changes_the_level_but_not_the_shape(tables):
+def test_partition_changes_the_level_but_not_the_shape(harvested):
     """The headline guard on this whole measure.
 
     Splitting Greater Tunis four ways inflates the level - Ariana holds 5.6% of
@@ -152,7 +154,7 @@ def test_partition_changes_the_level_but_not_the_shape(tables):
     """
     series = {}
     for units in UNITS:
-        table = representation_table(tables["persons"], tables["appointments"],
+        table = representation_table(harvested["persons"], harvested["appointments"],
                                      units=units, draws=50)
         reported = table[table["gini_representation"].notna()]
         series[units] = list(reported["gini_representation"])
@@ -170,23 +172,24 @@ def test_partition_changes_the_level_but_not_the_shape(tables):
         assert values[0] > max(values[1:]) + 0.2, units
 
 
-def test_era_differences_are_tested_on_the_difference(tables):
+def test_era_differences_are_tested_on_the_difference(harvested):
     """Overlapping per-era intervals are not a test of the change."""
-    changes = era_comparisons(tables["persons"], tables["appointments"], draws=300)
+    changes = era_comparisons(harvested["persons"],
+                              harvested["appointments"], draws=300)
     assert not changes.empty
     for _, row in changes.iterrows():
         assert row["ci_low"] <= row["delta"] <= row["ci_high"], (row["from"], row["to"])
         assert row["significant"] == bool(row["ci_low"] > 0 or row["ci_high"] < 0)
 
 
-def test_independence_is_the_only_large_equalisation(tables):
+def test_independence_is_the_only_large_equalisation(harvested):
     """A substantive regression guard, checked under every partition.
 
     The protectorate-to-Bourguiba fall should be large and significant in all
     three; the post-1987 changes should not be significant in any.
     """
     for units in UNITS:
-        changes = era_comparisons(tables["persons"], tables["appointments"],
+        changes = era_comparisons(harvested["persons"], harvested["appointments"],
                                   units=units, draws=600).set_index(["from", "to"])
         independence = changes.loc[("protectorate", "bourguiba")]
         assert independence["delta"] < -0.2, units

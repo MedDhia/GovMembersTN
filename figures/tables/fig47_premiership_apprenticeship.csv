@@ -1,0 +1,23 @@
+person_id,name,took_office,prior_years,prior_portfolios,era
+Q643348,Habib Bourguiba,1956-04-11,0.0,0,protectorate_end
+Q800238,Bahi Ladgham,1969-11-07,13.56,3,bourguiba
+Q1642894,Hédi Nouira,1970-11-02,15.15,4,bourguiba
+Q377921,Mohamed Mzali,1980-04-23,12.03,4,bourguiba
+Q653162,Rachid Sfar,1986-07-08,8.53,5,bourguiba
+Q204487,Zine El Abidine Ben Ali,1987-10-02,2.92,2,bourguiba
+Q1363916,Hédi Baccouche,1987-11-07,3.65,2,ben_ali
+Q1381809,Hamed Karoui,1989-09-27,3.47,2,ben_ali
+Q431515,Mohamed Ghannouchi,1999-11-17,10.14,3,ben_ali
+Q313539,Béji Caïd Essebsi,2011-02-27,45.65,4,transition
+Q57699,Hamadi Jebali,2011-12-24,0.0,0,transition
+Q281184,Ali Larayedh,2013-03-13,1.22,1,transition
+Q15304780,Mehdi Jomaa,2014-01-29,0.88,1,transition
+Q3125311,Habib Essid,2015-02-06,14.04,2,second_republic
+Q25391268,Youssef Chahed,2016-08-27,0.62,1,second_republic
+Q3051875,Elyès Fakhfakh,2020-02-27,8.18,2,second_republic
+Q88485687,Hichem Mechichi,2020-09-02,0.51,1,second_republic
+Q108741355,Najla Bouden,2021-10-11,0.0,0,saied_exception
+Q121088468,Ahmed Hachani,2023-08-01,0.0,0,saied_exception
+Q128723414,Kamel Maddouri,2024-08-07,0.2,1,saied_exception
+Q108892374,Sara Zaafarani,2025-03-21,3.44,1,saied_exception
+Q139820983,Imed Derbali,2025-04-19,0.0,0,saied_exception

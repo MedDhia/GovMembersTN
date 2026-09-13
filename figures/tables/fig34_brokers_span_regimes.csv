@@ -1,0 +1,16 @@
+person_id,name,betweenness,n_eras,eras_served
+Q2821127,Abdelkrim Zbidi,0.08035716335414543,3,ben_ali|transition|second_republic
+Q29577458,Mohamed Ennaceur Jbira,0.061905491280399155,3,bourguiba|ben_ali|transition
+Q12270270,Othman Jerandi,0.053012506237127874,3,transition|second_republic|saied_exception
+Q3318419,Mohamed Ben Salem (1953),0.05173448824032037,4,protectorate|bourguiba|ben_ali|transition
+Q91669922,Mohamed Fadhel Kraiem,0.047968055886950106,2,bourguiba|second_republic
+Q3431740,Ridha Chalghoum,0.04663923406873605,2,ben_ali|second_republic
+Q3125288,Habib Ammar,0.043435624091374594,3,bourguiba|ben_ali|second_republic
+Q2827482,Ahmed Adhoum,0.03973153143144463,3,ben_ali|transition|second_republic
+Q377921,Mohamed Mzali,0.03864616620042422,2,protectorate|bourguiba
+Q3431735,Ridha Ben Mosbah,0.03302066193103226,2,ben_ali|second_republic
+Q30104283,Mohamed Fadhel Khelil,0.02968034913363043,2,ben_ali|second_republic
+Q3318530,Mohamed Ennaceur,0.02729571053530652,3,bourguiba|ben_ali|transition
+Q1642894,Hédi Nouira,0.02681189046321454,4,protectorate|protectorate_end|monarchy|bourguiba
+Q3320655,Mongi Marzouk,0.026551675990881124,3,ben_ali|transition|second_republic
+Q313539,Béji Caïd Essebsi,0.02645003126890724,3,bourguiba|ben_ali|transition

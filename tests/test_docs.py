@@ -164,9 +164,17 @@ def test_readme_headline_figures_match_the_data():
     def rows(name):
         return len(pd.read_csv(table_path(name)))
 
+    appointments = pd.read_csv(table_path("appointments"), low_memory=False)
+
     actual = {
         "people who held a post in a tunisian government": rows("persons"),
         "appointments  one row per person  cabinet  portfolio": rows("appointments"),
+        # These two rows sat unguarded while the five around them were checked,
+        # and the cabinet count duly drifted to 57 against an actual 56. Every
+        # bolded row in the table is covered now.
+        "cabinets  across  government spells": rows("cabinets"),
+        "appointments carrying a journal officiel citation":
+            int(appointments["jort_citation"].notna().sum()),
         "comembership ties weighted by days of overlapping service":
             rows("edges_co_membership"),
         "succession ties directed within portfolio": rows("edges_succession"),
@@ -178,3 +186,89 @@ def test_readme_headline_figures_match_the_data():
         assert claimed[label] == expected, (
             f"README says {claimed[label]} for {label!r}, data has {expected}"
         )
+
+    # Nothing bolded is left out: a new row added without a check here is a
+    # row free to drift, which is the failure this test exists to prevent.
+    assert set(claimed) == set(actual), (
+        f"headline rows with no check: {sorted(set(claimed) - set(actual))}")
+
+
+def test_readme_inline_counts_match_the_data():
+    """The numbers written into the prose of the headline table, not just the
+    bolded ones.
+
+    The cabinet row carries two counts - the bolded cabinet total and the spell
+    count inside the label - and only the first is in the bold-cell regex above.
+    The year range is the same kind of claim: cheap to state, easy to leave
+    behind when the spine gains a government.
+    """
+    import re
+    import pandas as pd
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    cabinets = pd.read_csv(table_path("cabinets"))
+    spells = len(pd.read_csv(table_path("spells")))
+
+    assert f"across {spells} government spells" in readme, \
+        f"README spell count is stale; data has {spells}"
+
+    first = pd.to_datetime(cabinets["start_date"], errors="coerce").dt.year.min()
+    last = pd.to_datetime(cabinets["end_date"], errors="coerce").dt.year.max()
+    assert f"{int(first)}–{int(last)}" in readme, \
+        f"README cabinet year range is stale; data spans {int(first)}–{int(last)}"
+
+
+def test_readme_test_count_matches_the_suite():
+    """The layout block advertises the size of the suite, and it had gone stale.
+
+    It read 250 when the suite had grown well past it. Counting `def test_`
+    statically is exact and cheap; the parametrised case count is checked
+    loosely, since a new `parametrize` legitimately moves it.
+    """
+    import re
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    functions = sum(
+        len(re.findall(r"^def test_", path.read_text(encoding="utf-8"), re.M))
+        for path in sorted((ROOT / "tests").glob("test_*.py")))
+
+    match = re.search(r"(\d+) test functions, (\d+) cases", readme)
+    assert match, "README no longer states the suite size in its layout block"
+    claimed_functions, claimed_cases = int(match.group(1)), int(match.group(2))
+    assert claimed_functions == functions, (
+        f"README says {claimed_functions} test functions, tests/ defines "
+        f"{functions}")
+    assert claimed_cases >= claimed_functions, (
+        "cases cannot be fewer than the functions that generate them")
+
+
+def test_gitignore_tracks_manifests_and_ignores_payloads():
+    """The `.gitignore` comment makes a claim; this is that claim under test.
+
+    `data/raw/**` excludes `data/raw/<source>/` itself, and git will not
+    re-include a file whose parent directory is excluded - so the
+    `!data/raw/**/MANIFEST.json` negation matched nothing at all, and the
+    manifests the comment said were tracked were silently absent from every
+    clone. The `!data/raw/**/` line that re-includes the directories is what
+    makes the negation reachable, and nothing about the file's appearance says
+    so. Asking git directly is the only honest check.
+    """
+    import shutil
+    import subprocess
+
+    if shutil.which("git") is None or not (ROOT / ".git").exists():
+        pytest.skip("not a git checkout")
+
+    def ignored(path: str) -> bool:
+        # -q: exit 0 when the path is ignored, 1 when it is not. Works on
+        # paths that do not exist, since this is pattern matching, not I/O.
+        return subprocess.run(["git", "check-ignore", "-q", path],
+                              cwd=ROOT).returncode == 0
+
+    # A harvest writes data/raw/<source>/MANIFEST.json beside its payloads.
+    assert not ignored("data/raw/wikidata/MANIFEST.json"), (
+        "manifests are ignored again - the `!data/raw/**/` re-include is gone")
+    assert ignored("data/raw/wikidata/0123456789abcdef.json"), (
+        "raw payloads are tracked, which is what the size exclusion prevents")
+    assert not ignored("data/raw/.gitkeep")
+    assert ignored("data/interim/reconciliation_audit.json")

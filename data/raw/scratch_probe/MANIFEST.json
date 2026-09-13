@@ -1,0 +1,1103 @@
+{
+  "entries": {
+    "005977a3db2d886d818e": {
+      "bytes": 1212,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%AD%D9%83%D9%88%D9%85%D8%A9+%D9%83%D9%85%D8%A7%D9%84+%D8%A7%D9%84%D9%85%D8%AF%D9%88%D8%B1%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "حكومة كمال المدوري"
+      },
+      "retrieved_utc": "2026-08-27T10:03:04+00:00",
+      "sha256": "e54a24c52d24a43b66742c9d4f2381a146a81031a423eff0cb83ce05cc63a100",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "0af0e33930c968ef1fa7": {
+      "bytes": 156,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%A7%D8%AD%D9%84%D8%A7%D9%85+%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%8A+%D8%A7%D9%84%D8%B3%D8%A7%D9%8A%D8%A8&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "احلام الباجي السايب",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:01+00:00",
+      "sha256": "7f433f0662402f91acf394ae02720ee6249d82b6c2e80faefe6ad92c4244476b",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "0b9b4bde7c4de92992fd": {
+      "bytes": 1618,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D8%B5%D8%A7%D9%85+++%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "عصام   الأحمر"
+      },
+      "retrieved_utc": "2026-08-27T10:01:05+00:00",
+      "sha256": "6b7560e25a00e2171c21198f30bde2ce43ba8cc009fc9cef2a146e339095b458",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "0ccd9466acd7e6d0c26e": {
+      "bytes": 1699,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B1%D8%B6%D8%A7+%D9%82%D8%A8%D9%88%D8%AC&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "رضا قبوج"
+      },
+      "retrieved_utc": "2026-08-27T10:00:06+00:00",
+      "sha256": "0f7be74b65e907c91800bd8d46768fbf3ddf0fee3f78ec468512cf354ae0aeb2",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "0e0667cec88943c7102e": {
+      "bytes": 150,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%85%D8%AD%D9%85%D8%AF+%D8%B9%D9%84%D9%8A+%D8%A7%D9%84%D8%A8%D9%88%D8%BA%D8%AF%D9%8A%D8%B1%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "محمد علي البوغديري",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:02+00:00",
+      "sha256": "23a376e593de06d6418666ec362eba8f03508537adfa1baac903ef3870a2644c",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "160883f85119528f2b26": {
+      "bytes": 518,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Khaled+Yahyaoui&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Khaled Yahyaoui",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:35+00:00",
+      "sha256": "a1c83771087ee08b18d8c9efdc6a465d310a17e921510344eff87ef22a1ed86d",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "17bf4e36f2b5c982d599": {
+      "bytes": 492,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Amel+Adouani&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Amel Adouani",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:36+00:00",
+      "sha256": "5e9935318c2c065b5229365f53093e3ad013679514362219a6545e43d667a826",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "1a3cfb14d38a11dbcbd1": {
+      "bytes": 139,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B9%D8%B2+%D8%A7%D9%84%D8%AF%D9%8A%D9%86+%D8%A8%D9%86+%D8%A7%D9%84%D8%B4%D9%8A%D8%AE&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "عز الدين بن الشيخ",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:06+00:00",
+      "sha256": "9a2df38a9f44da1ac9a5e15897628e8a252505ab06863dd12afa1aa04d880c8e",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "1c9168753d7d5afc6d67": {
+      "bytes": 1613,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%85%D9%86%D8%B0%D8%B1+%D8%A8%D9%84%D8%B9%D9%8A%D8%AF&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "منذر بلعيد"
+      },
+      "retrieved_utc": "2026-08-27T10:01:10+00:00",
+      "sha256": "07f4018cd3d9f080b5a165a9bee84ea6c2b5af5949a630e76a08502c0bc3e8ff",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "218d7831e4b446d5f328": {
+      "bytes": 1768,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%AD%D8%B3%D9%86%D8%A9+++%D8%AC%D9%8A%D8%A8+%D8%A7%D9%84%D9%84%D9%87&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "حسنة   جيب الله"
+      },
+      "retrieved_utc": "2026-08-27T10:01:01+00:00",
+      "sha256": "ca42c594a3d9ad0f1e8ec5e0136859051272fd30cd3155d9a5dd34bd22009420",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "25aba103df1fac7af946": {
+      "bytes": 143,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Amel+Adouani&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Amel Adouani"
+      },
+      "retrieved_utc": "2026-08-27T09:58:37+00:00",
+      "sha256": "b499e33d39368f6789541546c9786d6197384e8b2525578ce27068d02c58cc16",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "325d856dea4939c2d06a": {
+      "bytes": 1667,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B3%D9%81%D9%8A%D8%A7%D9%86+%D8%A7%D9%84%D9%87%D9%85%D9%8A%D8%B3%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "سفيان الهميسي"
+      },
+      "retrieved_utc": "2026-08-27T09:59:03+00:00",
+      "sha256": "10991b8a49f775d3bac705167f69370e0feb1710c1b29170ad4fe922fba1b01d",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "3a122774dd7aee358b58": {
+      "bytes": 102,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%AD%D8%A8%D9%8A%D8%A8++%D8%B9%D8%A8%D9%8A%D8%AF&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "حبيب  عبيد",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:06+00:00",
+      "sha256": "9424c9e0bd5edf051d874f8bfd126805655d0efe5838debf98179d07fe9a208b",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "3e6c9f93fa8c7eae848b": {
+      "bytes": 1694,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D8%A8%D8%AF+%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1+%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%84%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "عبد القادر الجمالي"
+      },
+      "retrieved_utc": "2026-08-27T10:00:04+00:00",
+      "sha256": "2ed3276a6b9735d0c945cbb792daf7bad80ef455fa8860e9dd96359bbaaa3d96",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "3e9331795f71543a2ff1": {
+      "bytes": 101,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B3%D9%85%D9%8A%D8%B1+%D8%B9%D8%A8%D9%8A%D8%AF&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "سمير عبيد",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:05+00:00",
+      "sha256": "a6116d15d4eb068f0fe2fcbf9eb8653a5f3618ece91464e252f69de2a509e8b6",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "4420fae71d7e8e1534fb": {
+      "bytes": 1601,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%88%D8%AC%D8%AF%D9%8A++%D8%A7%D9%84%D9%87%D8%B0%D9%8A%D9%84%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "وجدي  الهذيلي"
+      },
+      "retrieved_utc": "2026-08-27T09:59:06+00:00",
+      "sha256": "39a574e609b8bc8d64d2abc6210027f8cf09703f2ee913ba20155201186a15b2",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "466df1137647b711f94b": {
+      "bytes": 1733,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B1%D9%8A%D8%A7%D8%B6++++%D8%B4%D9%8E%D9%88%D9%90%D8%AF&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "رياض    شَوِد"
+      },
+      "retrieved_utc": "2026-08-27T10:00:00+00:00",
+      "sha256": "58e5f97da6b43cf0f36bdfddd36cc12a70097468dad14aed527dc3ae34e9e013",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "51b63f047585d7edb92f": {
+      "bytes": 1589,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%AD%D8%A8%D9%8A%D8%A8++%D8%B9%D8%A8%D9%8A%D8%AF&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "حبيب  عبيد"
+      },
+      "retrieved_utc": "2026-08-27T09:59:07+00:00",
+      "sha256": "601141792229f607dd2e3c5e6c450fa033ccfb4e0009526f1d3670daf62a7a72",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "53ac0005fe27ab403f40": {
+      "bytes": 546,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Kamel+Feki&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Kamel Feki"
+      },
+      "retrieved_utc": "2026-08-27T09:58:38+00:00",
+      "sha256": "de0860675c44d50595c4670c3d23288775125fea3f7b12f8482d5f7bab5a07a7",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "53b546098f492987284f": {
+      "bytes": 1577,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82+%D8%A7%D9%84%D9%85%D9%88%D8%B1%D8%A7%D9%84%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "الصادق المورالي"
+      },
+      "retrieved_utc": "2026-08-27T10:01:11+00:00",
+      "sha256": "7b8b370f7662e2ed548ce0e7baed67e58d240caf19766484d59eee0c2c96b5bc",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "547b88d2acf966015f06": {
+      "bytes": 122,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%AD%D8%B3%D9%86%D8%A9+++%D8%AC%D9%8A%D8%A8+%D8%A7%D9%84%D9%84%D9%87&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "حسنة   جيب الله",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:00+00:00",
+      "sha256": "af0884ca6e0156c3ad1c6a63edc877e0ca420082b47068e93b22a216061f4a44",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "5a0cf359880bdd035531": {
+      "bytes": 108,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%88%D8%A7%D8%A6%D9%84++%D8%B4%D9%88%D8%B4%D8%A7%D9%86&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "وائل  شوشان",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:03+00:00",
+      "sha256": "11b4754499db15e97952ff312d6399dd3d534a08c6120d13f3cc87e4c31ce68a",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "5efeeb3fabcf5dd1f5c6": {
+      "bytes": 107,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%85%D9%86%D8%B0%D8%B1+%D8%A8%D9%84%D8%B9%D9%8A%D8%AF&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "منذر بلعيد",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:09+00:00",
+      "sha256": "5238513283ad5993be973706dbd57a2e6f0a2c80c94cc94d9a61ccf37ca632ae",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "605e569542e721a71b90": {
+      "bytes": 150,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B9%D8%A8%D8%AF+%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1+%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%84%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "عبد القادر الجمالي",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:03+00:00",
+      "sha256": "f503aa005004d97d2151041ee3557a260eec25ee519a00fe67929339eada6c71",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "69c79b51ab00ca3fdcd4": {
+      "bytes": 125,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B3%D9%81%D9%8A%D8%A7%D9%86+%D8%A7%D9%84%D9%87%D9%85%D9%8A%D8%B3%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "سفيان الهميسي",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:03+00:00",
+      "sha256": "e12a345cea72430fe07bf5a225f000785ffe2e9ec79df70c212e613683559732",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "6de787f5b4dac5421f5e": {
+      "bytes": 759,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%85%D8%AD%D9%85%D8%AF+%D8%A8%D9%86+%D8%B9%D9%8A%D8%A7%D8%AF&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "محمد بن عياد",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:02+00:00",
+      "sha256": "b1243361535e5a291739fb35015f0d5fee089ad30dc2c76dcead2db98ae92225",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "7211af3d1d7874f9c0eb": {
+      "bytes": 613,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Ali+Hafsi+Jeddi&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Ali Hafsi Jeddi"
+      },
+      "retrieved_utc": "2026-08-27T09:59:01+00:00",
+      "sha256": "e5dca81412dc6649138bbe3f3555e7c87400b2b1730b18df167479ef13e1c0f6",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "748ee9b7249fc35a0372": {
+      "bytes": 1959,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%B9%D9%84%D9%8A+%D8%A7%D9%84%D8%AD%D9%81%D8%B5%D9%8A+%D8%A7%D9%84%D8%AC%D8%AF%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "علي الحفصي الجدي"
+      },
+      "retrieved_utc": "2026-08-27T10:02:01+00:00",
+      "sha256": "b51e211a850afb441670a7175e5748ea7b84a63a460a0785d51ac0362d605ad1",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "74e91e253580f378d477": {
+      "bytes": 550,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Saloua+Abassi&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Saloua Abassi"
+      },
+      "retrieved_utc": "2026-08-27T09:58:39+00:00",
+      "sha256": "8dcfa03f6840e5b70f3f2948a39870f6e5b8fe86b520769e89e6b8916ec13615",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "7657c5dbc1d8a1bb431e": {
+      "bytes": 9839,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fitem+%3FitemLabel+%3FinstanceLabel+%3FcountryLabel+%3Fbirth+%3FposLabel+%3FoccLabel+%3FbpLabel+WHERE+%7B%0A++VALUES+%3Fitem+%7B+wd%3AQ107707866+wd%3AQ108750786+wd%3AQ109544937+wd%3AQ110014103+wd%3AQ117209481+wd%3AQ125330973+wd%3AQ139820983+wd%3AQ92448533+wd%3AQ99693099+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP31+%3Finstance+.+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP27+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP569+%3Fbirth+.+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP39+%3Fpos+.+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP106+%3Focc+.+%7D%0A++OPTIONAL+%7B+%3Fitem+wdt%3AP19+%3Fbp+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22ar%2Cfr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?item ?itemLabel ?instanceLabel ?countryLabel ?birth ?posLabel ?occLabel ?bpLabel WHERE {\n  VALUES ?item { wd:Q107707866 wd:Q108750786 wd:Q109544937 wd:Q110014103 wd:Q117209481 wd:Q125330973 wd:Q139820983 wd:Q92448533 wd:Q99693099 }\n  OPTIONAL { ?item wdt:P31 ?instance . }\n  OPTIONAL { ?item wdt:P27 ?country . }\n  OPTIONAL { ?item wdt:P569 ?birth . }\n  OPTIONAL { ?item wdt:P39 ?pos . }\n  OPTIONAL { ?item wdt:P106 ?occ . }\n  OPTIONAL { ?item wdt:P19 ?bp . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"ar,fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T10:01:38+00:00",
+      "sha256": "a16cfd67b07e7bf4b8d95c3b987380765cd48f2b7e917c122454c8f4f5e47528",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "775b9d63fd23ddc90b9e": {
+      "bytes": 108,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B1%D8%B4%D9%8A%D8%AF++%D8%B9%D8%A7%D9%85%D8%B1%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "رشيد  عامري",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:04+00:00",
+      "sha256": "ad8a3ee6986ce012c5cb32821aecc63e447d8b17adbd9fd9ddc5f9158d4d2696",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "7938948271fabe96d120": {
+      "bytes": 1750,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%A7%D8%AD%D9%84%D8%A7%D9%85+%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%8A+%D8%A7%D9%84%D8%B3%D8%A7%D9%8A%D8%A8&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "احلام الباجي السايب"
+      },
+      "retrieved_utc": "2026-08-27T10:00:02+00:00",
+      "sha256": "bbe1bb6c3a7034f24a241e99edf1a6a2c3f9669987b2f514dadb829dd41700b0",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "7a0bcf26fe3d71c928e3": {
+      "bytes": 155,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Ridha+Gharsalloui&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Ridha Gharsalloui"
+      },
+      "retrieved_utc": "2026-08-27T09:58:35+00:00",
+      "sha256": "b977e4f6fafac9c57fd95f0e8843355b71f1ce30aa63439d5aaa07c313eaf1b1",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "7dfd1b15d45f87e4e74d": {
+      "bytes": 1603,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%AD%D9%85%D8%A7%D8%AF%D9%8A++%D8%A7%D9%84%D8%AD%D8%A8%D9%8A%D9%91%D8%A8&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "حمادي  الحبيّب"
+      },
+      "retrieved_utc": "2026-08-27T10:01:08+00:00",
+      "sha256": "f17166c7a7b4ea389f74965a08083644f1fd1f35c8853177e9e2c9285a25c887",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "800d5837071d3bcd1b3d": {
+      "bytes": 1592,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%85%D8%AD%D9%85%D8%AF+%D8%B9%D9%84%D9%8A+%D8%A7%D9%84%D8%A8%D9%88%D8%BA%D8%AF%D9%8A%D8%B1%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "محمد علي البوغديري"
+      },
+      "retrieved_utc": "2026-08-27T10:00:03+00:00",
+      "sha256": "296d8826adb5a22bccb6dbd290a3604ceb87495f7d8aa3df4bbd4c128548e874",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "82d13b3ddeaab999b641": {
+      "bytes": 1683,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%AD%D9%83%D9%88%D9%85%D8%A9+%D8%A3%D8%AD%D9%85%D8%AF+%D8%A7%D9%84%D8%AD%D8%B4%D8%A7%D9%86%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "حكومة أحمد الحشاني"
+      },
+      "retrieved_utc": "2026-08-27T10:03:01+00:00",
+      "sha256": "a90d8584aa14276d9e3e4c94f546bbca99ac32dbd03842aa18aae34407f1fd1e",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "872cd94b039b2b404fc6": {
+      "bytes": 115,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B9%D8%B5%D8%A7%D9%85+++%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "عصام   الأحمر",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:04+00:00",
+      "sha256": "f7deffd21bac776e831222e6dd0116e8b4e56c6295881948d64521ebd39dbbed",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "8a693534e297e0ea72f5": {
+      "bytes": 137,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82+%D8%A7%D9%84%D9%85%D9%88%D8%B1%D8%A7%D9%84%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "الصادق المورالي",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:10+00:00",
+      "sha256": "25819b84cad8f34c86def6b472d102e70a5a25e624362bd1aa00453f0eec8ca8",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "8f8f0732f6af36aaa555": {
+      "bytes": 496,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Saloua+Abassi&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Saloua Abassi",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:39+00:00",
+      "sha256": "2b0ef09ab7b9663106aee66d056deb5c008105f90dcaafe135689a7097a08b8d",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "8f9a5371ab89b7c9df22": {
+      "bytes": 484,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Kamel+Feki&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Kamel Feki",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:38+00:00",
+      "sha256": "b5a26029dd2b4dd45a4e46679cf04e1eade1e6d7065c5ddb9eeb588a359a103e",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "90f1062588ccf454ae7c": {
+      "bytes": 101,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%84%D8%B7%D9%81%D9%8A+%D8%B0%D9%8A%D8%A7%D8%A8&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "لطفي ذياب",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:07+00:00",
+      "sha256": "b11d9203d2c1c68b13320a624bb7321121fb90166ac86a91b068fb7e853bda65",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "93b53666958c43fe0b12": {
+      "bytes": 1531,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%88%D8%A7%D8%A6%D9%84++%D8%B4%D9%88%D8%B4%D8%A7%D9%86&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "وائل  شوشان"
+      },
+      "retrieved_utc": "2026-08-27T10:01:04+00:00",
+      "sha256": "698d99d27e7ca41021775146fe9db95906e1234191a731deddb7da7f55aa32ac",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "96c89f93bb79591eefae": {
+      "bytes": 1770,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%85%D8%AD%D9%85%D8%AF+%D8%A8%D9%86+%D8%B9%D9%8A%D8%A7%D8%AF&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "محمد بن عياد"
+      },
+      "retrieved_utc": "2026-08-27T10:01:02+00:00",
+      "sha256": "fdbc50aaa8039cfd600c4412382019c609bda74c97e7b73c733e4a6b5c4bcc53",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "9caebbb25852214a4b26": {
+      "bytes": 1598,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%85%D9%86%D9%8A%D8%B1+%D8%A8%D9%86+%D8%B1%D8%AC%D9%8A%D8%A8%D8%A9&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "منير بن رجيبة"
+      },
+      "retrieved_utc": "2026-08-27T10:00:05+00:00",
+      "sha256": "a30c8aed049494fe11037f099407a6b9d3e0e9d4a9b04d90d8be5807525012f8",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "a1dc219a26833e9a1b25": {
+      "bytes": 95,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B1%D8%B6%D8%A7+%D9%82%D8%A8%D9%88%D8%AC&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "رضا قبوج",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:06+00:00",
+      "sha256": "338df77f08f2952d9b9221c2c9605ddeb55fbd0a397e60dbf21a3312bb71d4f3",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "a9f140099e995bc2e217": {
+      "bytes": 120,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%88%D8%AC%D8%AF%D9%8A++%D8%A7%D9%84%D9%87%D8%B0%D9%8A%D9%84%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "وجدي  الهذيلي",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:05+00:00",
+      "sha256": "4e7de266399422df82c181b4420bf75bdbdd3c9047ed3ad281c21bffbb19f489",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "afcac634bda4adf0b183": {
+      "bytes": 1659,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%B9%D8%A7%D8%A6%D8%AF%D8%A9+%D8%AD%D9%85%D8%AF%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "عائدة حمدي"
+      },
+      "retrieved_utc": "2026-08-27T10:02:03+00:00",
+      "sha256": "cc579c051250f55cc9921b3aa2110241e5b476ee085f1e05f1406d109e1ae9dd",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "b18e31d640a329439068": {
+      "bytes": 714,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B9%D8%A7%D8%A6%D8%AF%D8%A9+%D8%AD%D9%85%D8%AF%D9%8A&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "عائدة حمدي",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:08+00:00",
+      "sha256": "1fd58e19701dc86cb013bd091200261d0b717fa9df24b9d60db29cf9fdabb978",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "b202687cf2100b64818c": {
+      "bytes": 126,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%AD%D9%85%D8%A7%D8%AF%D9%8A++%D8%A7%D9%84%D8%AD%D8%A8%D9%8A%D9%91%D8%A8&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "حمادي  الحبيّب",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:01:08+00:00",
+      "sha256": "8fbf6bce89a982a0e4bbde0d45f5bf382daf97ce393b4495ea23998c9d07c71c",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "b6ec96d85fade7c3d2c7": {
+      "bytes": 110,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B1%D9%8A%D8%A7%D8%B6++++%D8%B4%D9%8E%D9%88%D9%90%D8%AF&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "رياض    شَوِد",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:07+00:00",
+      "sha256": "26e82867dbd85adb73e1081cf3880f121439dab9c97ca271068a2262262f4f2b",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "bafaae4729967527e479": {
+      "bytes": 499,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ali+Hafsi+Jeddi&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Ali Hafsi Jeddi",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:59:00+00:00",
+      "sha256": "62f2f0558dd4d2d4b926d2411601813d0ccee0e690d1a46e4b7ff13326b5e226",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "bbe977f1ca2b3b71bf44": {
+      "bytes": 1537,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B3%D9%85%D9%8A%D8%B1+%D8%B9%D8%A8%D9%8A%D8%AF&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "سمير عبيد"
+      },
+      "retrieved_utc": "2026-08-27T10:01:06+00:00",
+      "sha256": "b3c3d1691e76416702b1b9e2f60763031a12460f68b8e33f9683358af9c44c13",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "c74bdb716f33b5eaac1f": {
+      "bytes": 2113,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%A7%D9%84%D8%AD%D8%A8%D9%8A%D8%A8+%D8%B9%D8%A8%D9%8A%D8%AF&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "الحبيب عبيد"
+      },
+      "retrieved_utc": "2026-08-27T10:02:04+00:00",
+      "sha256": "e4cf7c9c39c5872f9a2a76743eabc1f97bafe5f2c379e491dcf541dfc207d5db",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "c752ca425e6905a2e94e": {
+      "bytes": 1581,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B1%D8%B4%D9%8A%D8%AF++%D8%B9%D8%A7%D9%85%D8%B1%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "رشيد  عامري"
+      },
+      "retrieved_utc": "2026-08-27T09:59:05+00:00",
+      "sha256": "17b41a3605e6ac3f5ea3e72bcaf7140b187ee41f67d2a7b6b57f7c76e963a899",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "d5882fa51c68c6d19a7a": {
+      "bytes": 2236,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B3%D9%81%D9%8A%D8%A7%D9%86++%D8%A8%D9%86+%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "سفيان  بن الصادق"
+      },
+      "retrieved_utc": "2026-08-27T09:59:02+00:00",
+      "sha256": "ec99748d8b9c9e99780c248c216adf17e622b2176dd791c50894f1e3e42e7840",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "d76bfe35436f73e021d2": {
+      "bytes": 73,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Khaled+Yahyaoui&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Khaled Yahyaoui"
+      },
+      "retrieved_utc": "2026-08-27T09:58:36+00:00",
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "d964ffee2e67a2f6e50e": {
+      "bytes": 1533,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D8%A7%D8%A6%D8%AF%D8%A9+%D8%AD%D9%85%D8%AF%D9%8A&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "عائدة حمدي"
+      },
+      "retrieved_utc": "2026-08-27T10:00:42+00:00",
+      "sha256": "07a642456736d70171d13c9e104660d6c719211cf9cac888f4a10b2bf8b9e278",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "dcb258442912bf13329b": {
+      "bytes": 143,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=Imed+Derbali&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "Imed Derbali"
+      },
+      "retrieved_utc": "2026-08-27T09:59:00+00:00",
+      "sha256": "6f1a8da74995205c25904679ff1a2b731f5a98fc9a75ab799c9c82251abeec67",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "dcfb856a1a8dbdc292d5": {
+      "bytes": 1117,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%AD%D9%83%D9%88%D9%85%D8%A9+%D8%B3%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D8%B2%D8%B9%D9%81%D8%B1%D8%A7%D9%86%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "حكومة سارة الزعفراني"
+      },
+      "retrieved_utc": "2026-08-27T10:03:02+00:00",
+      "sha256": "a8cf2d1a3ec838260529f5e1cfd5f2396cae1705fbadd6a7f55b791b97107f31",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "ddf60d706b68c2bacc38": {
+      "bytes": 1814,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D8%B2+%D8%A7%D9%84%D8%AF%D9%8A%D9%86+%D8%A8%D9%86+%D8%A7%D9%84%D8%B4%D9%8A%D8%AE&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "عز الدين بن الشيخ"
+      },
+      "retrieved_utc": "2026-08-27T10:01:07+00:00",
+      "sha256": "320d6c09a64ef7ead4eabaf61211c442c338b2e10e7e1156c877b994f1f75037",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "e8e521d389c27d84281b": {
+      "bytes": 492,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Imed+Derbali&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Imed Derbali",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:40+00:00",
+      "sha256": "10a0b6dcb030d0dc947486ad3b5ee01a95e4f2de5a14f94241c675a11fe696e6",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "ed2c988380b783fabcfc": {
+      "bytes": 120,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D9%85%D9%86%D9%8A%D8%B1+%D8%A8%D9%86+%D8%B1%D8%AC%D9%8A%D8%A8%D8%A9&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "منير بن رجيبة",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T10:00:04+00:00",
+      "sha256": "655b5c30f4494c6ed3d521f13334167feda9d31d087cbea2d716a135e409ac94",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "f109ddc945e390cca39e": {
+      "bytes": 1012,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%B9%D8%A8%D8%AF+%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1+%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%84&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "عبد القادر الجمال"
+      },
+      "retrieved_utc": "2026-08-27T10:03:00+00:00",
+      "sha256": "d62e5f44dda587150d3f6f2bd07d60a535f1ade1c463aca601feded9c7d970fa",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "f1327045f41291f4ef60": {
+      "bytes": 133,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=%D8%B3%D9%81%D9%8A%D8%A7%D9%86++%D8%A8%D9%86+%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82&language=ar&uselang=ar&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "ar",
+        "limit": "5",
+        "search": "سفيان  بن الصادق",
+        "type": "item",
+        "uselang": "ar"
+      },
+      "retrieved_utc": "2026-08-27T09:59:01+00:00",
+      "sha256": "05d366fbf3b747ecf381d16c959633a793c00c32404d596f2285574d6a1c993d",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    },
+    "f2d541a44da4a4b5c2a1": {
+      "bytes": 1490,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D9%84%D8%B7%D9%81%D9%8A+%D8%B0%D9%8A%D8%A7%D8%A8&srlimit=3&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "format": "json",
+        "formatversion": "2",
+        "list": "search",
+        "srlimit": "3",
+        "srsearch": "لطفي ذياب"
+      },
+      "retrieved_utc": "2026-08-27T10:00:07+00:00",
+      "sha256": "7fab658314bbac119622fc8324e6c2bd7a50de573f49659330fd701ff7ed763f",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "f9122bec564110de9d91": {
+      "bytes": 1824,
+      "final_url": "https://ar.wikipedia.org/w/api.php?action=query&prop=categories&titles=%D8%B3%D9%84%D9%88%D9%89+%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A&cllimit=60&format=json&formatversion=2",
+      "params": {
+        "action": "query",
+        "cllimit": "60",
+        "format": "json",
+        "formatversion": "2",
+        "prop": "categories",
+        "titles": "سلوى العباسي"
+      },
+      "retrieved_utc": "2026-08-27T10:02:00+00:00",
+      "sha256": "7b3aba823e732ac2ca2042936976af2fb62682c8c7fa248dec49246d1b679167",
+      "status": 200,
+      "url": "https://ar.wikipedia.org/w/api.php"
+    },
+    "ff0b56bb7e5d095d0e71": {
+      "bytes": 556,
+      "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Ridha+Gharsalloui&language=en&uselang=en&type=item&limit=5&format=json",
+      "params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Ridha Gharsalloui",
+        "type": "item",
+        "uselang": "en"
+      },
+      "retrieved_utc": "2026-08-27T09:58:34+00:00",
+      "sha256": "8831f06721b5bb41836de274f94c3ece7b3e793b6c605d9b8887134d48dd8bbb",
+      "status": 200,
+      "url": "https://www.wikidata.org/w/api.php"
+    }
+  },
+  "source": "scratch_probe",
+  "updated_utc": "2026-08-27T10:03:04+00:00"
+}
