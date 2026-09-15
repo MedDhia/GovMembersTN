@@ -209,3 +209,65 @@ def test_citation_file_is_present_and_parses():
     assert meta["cff-version"]
     assert meta["authors"]
     assert meta["title"]
+
+
+def test_citation_abstract_matches_the_data():
+    """The counts in CITATION.cff are the ones a reader pastes into a bibliography.
+
+    `test_readme_headline_figures_match_the_data` has guarded the README's
+    table for a while; nothing guarded this file, and it duly drifted to "884
+    people and 3,151 ministerial appointments across 57 cabinets" against an
+    actual 882 / 3,136 / 56. A stale README is embarrassing; a stale abstract
+    is copied into other people's papers.
+    """
+    import re
+    import yaml
+
+    with (REPO / "CITATION.cff").open(encoding="utf-8") as fh:
+        abstract = yaml.safe_load(fh)["abstract"]
+    # The YAML folds at 80 columns, so a claim can straddle a line break.
+    abstract = " ".join(abstract.split())
+
+    actual = {
+        "people": len(pd.read_csv(PROCESSED / "persons.csv", low_memory=False)),
+        "ministerial appointments":
+            len(pd.read_csv(PROCESSED / "appointments.csv", low_memory=False)),
+        "cabinets": len(pd.read_csv(PROCESSED / "cabinets.csv")),
+        "government spells": len(pd.read_csv(PROCESSED / "spells.csv")),
+    }
+    for noun, expected in actual.items():
+        match = re.search(rf"([\d,]+) {noun}\b", abstract)
+        assert match, f"CITATION.cff no longer states a count of {noun}"
+        claimed = int(match.group(1).replace(",", ""))
+        assert claimed == expected, (
+            f"CITATION.cff says {claimed:,} {noun}, data has {expected:,}")
+
+
+def test_citation_credits_only_sources_the_repository_has():
+    """It credited rulers.org, which contributed nothing and exists nowhere here.
+
+    Not in `config/sources.yml`, not under `src/govtn/sources/`, and not as a
+    value of `appointments.source` or `persons.sources`. Miscrediting a source
+    is a provenance claim that cannot be checked by reading the data, which is
+    exactly why it survived - so it is checked here instead.
+    """
+    import yaml
+
+    with (REPO / "CITATION.cff").open(encoding="utf-8") as fh:
+        abstract = " ".join(yaml.safe_load(fh)["abstract"].split()).lower()
+
+    persons = pd.read_csv(PROCESSED / "persons.csv", low_memory=False)
+    contributors = {s for value in persons["sources"].dropna()
+                    for s in value.split("|")}
+    # `spine` is the curated backbone in config/, not an outside source.
+    contributors.discard("spine")
+    named = {"wikidata": "wikidata", "wikipedia": "wikipedia",
+             "leaders": "leaders.com.tn", "govtn_portal": "tunisie.gov.tn"}
+    for key, phrase in named.items():
+        if key in contributors:
+            assert phrase in abstract, (
+                f"{key} contributed to persons.csv but CITATION.cff does not "
+                f"credit it")
+    assert "rulers.org" not in abstract, (
+        "CITATION.cff credits rulers.org, which contributes no rows and "
+        "appears nowhere in the repository")

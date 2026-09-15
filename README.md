@@ -228,6 +228,7 @@ Recipes: **[docs/NETWORK_ANALYSIS.md](docs/NETWORK_ANALYSIS.md)**.
 
 ```
 README.md  LICENSE  CITATION.cff  Makefile  requirements.txt
+pyproject.toml            pytest configuration; the package is not installable
 GovMembersTN.Rproj        opens the repository as an RStudio project
 config/
   cabinets.yml            curated spine: 23 government spells, eras, heads of state
@@ -264,7 +265,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           198 test functions, 382 cases; fixtures reproduce real markup
+tests/           200 test functions, 384 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
@@ -295,7 +296,7 @@ make codebook    # regenerate the machine-readable codebook
 make analysis    # run the example analyses in Python and R
 make figures     # rebuild the publication figures
 make bundle      # zip the data, docs, scripts and figures, without the pipeline
-make test        # run the test suite
+make test        # run the test suite (or just `pytest`)
 make queries     # print the SPARQL for manual execution
 ```
 

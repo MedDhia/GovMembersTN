@@ -1,4 +1,4 @@
-"""govtn - a reproducible dataset of Tunisian government members, 1956-present.
+"""govtn - a reproducible dataset of Tunisian government members, 1861-2026.
 
 The package is organised as a linear pipeline:
 
