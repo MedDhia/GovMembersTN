@@ -258,14 +258,15 @@ figures/         forty-eight publication figures, PNG + PDF
   make_figures.py  regenerates them from data/processed/ (needs matplotlib)
   tables/          the exact numbers behind each figure, one CSV per figure
   README.md        what each figure shows, and how to read it
-data/raw/        cached source payloads + MANIFEST.json per source (not tracked)
+data/raw/        cached source payloads (not tracked) + a tracked
+                 MANIFEST.json per source, recording what was fetched
 data/interim/    harvested JSON, reconciliation audit, unmatched titles (not tracked)
 data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   networks/      edge lists and graph exports
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           208 test functions, 392 cases; fixtures reproduce real markup
+tests/           209 test functions, 393 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
@@ -303,8 +304,9 @@ make queries     # print the SPARQL for manual execution
 Re-running after a parser change costs zero requests: every payload is cached
 under `data/raw/`, and the caching is also the politeness mechanism.
 
-**A clone ships `data/processed/` but not `data/raw/` or `data/interim/`** —
-the payloads are too large to track. So `make offline` works only after you
+**A clone ships `data/processed/`, and of `data/raw/` only the per-source
+manifests** — the payloads themselves are too large to track, and
+`data/interim/` is not tracked at all. So `make offline` works only after you
 have harvested at least once, and `make build` on a fresh clone would rebuild
 from the curated spine alone. It refuses to do so rather than replacing the
 published dataset with a 23-row one; pass `--force` if that is genuinely what

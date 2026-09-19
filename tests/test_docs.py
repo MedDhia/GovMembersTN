@@ -272,3 +272,64 @@ def test_gitignore_tracks_manifests_and_ignores_payloads():
         "raw payloads are tracked, which is what the size exclusion prevents")
     assert not ignored("data/raw/.gitkeep")
     assert ignored("data/interim/reconciliation_audit.json")
+
+
+def fetcher_source_names() -> set[str]:
+    """Every cache directory name the pipeline fetches under.
+
+    Read out of the source modules rather than listed here, so adding a source
+    does not also require editing this file. `config/sources.yml` is not the
+    answer: it carries only the three hosts with crawl policy, while `jort` and
+    `govtn_portal` build their fetchers directly.
+    """
+    import ast
+
+    names: set[str] = set()
+    for path in sorted((ROOT / "src" / "govtn" / "sources").glob("*.py")):
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+            func = node.func
+            label = getattr(func, "id", None) or getattr(func, "attr", None)
+            if label != "Fetcher":
+                continue
+            for keyword in node.keywords:
+                if keyword.arg == "source" and isinstance(keyword.value, ast.Constant):
+                    names.add(keyword.value.value)
+    return names
+
+
+def test_every_tracked_manifest_belongs_to_a_real_source():
+    """A committed manifest is a provenance claim, and it must be a true one.
+
+    `data/raw/<source>/MANIFEST.json` records what was fetched, from where and
+    when. Once the re-include in `.gitignore` started working, the next harvest
+    committed nine of them - but four were ad-hoc: `charset-test` from a test
+    that built a Fetcher against the real config root, and three `scratch_*`
+    directories from hand-run SPARQL and API probing. Provenance for a source
+    that does not exist is the same kind of false claim as crediting a source
+    the project never used, and just as invisible to a reader.
+
+    Checks tracked files only: a local scratch directory is someone's working
+    state and none of this test's business until it is committed.
+    """
+    import shutil
+    import subprocess
+
+    if shutil.which("git") is None or not (ROOT / ".git").exists():
+        pytest.skip("not a git checkout")
+
+    listed = subprocess.run(
+        ["git", "ls-files", "data/raw/"], cwd=ROOT,
+        capture_output=True, text=True, check=True).stdout.split()
+    tracked = {pathlib.Path(p).parent.name
+               for p in listed if pathlib.Path(p).name == "MANIFEST.json"}
+    assert tracked, "no manifests are tracked - is the .gitignore re-include gone?"
+
+    known = fetcher_source_names()
+    assert known, "no Fetcher source names found under src/govtn/sources/"
+    stray = sorted(tracked - known)
+    assert not stray, (
+        f"tracked manifests for sources the pipeline never fetches: {stray}. "
+        f"The pipeline's sources are {sorted(known)}.")
