@@ -1,0 +1,8 @@
+era,era_label,appointments,names_predecessor,names_successor,share_predecessor,share_successor
+protectorate,Protectorate,99,17,17,0.1717,0.1717
+monarchy,Monarchy,46,3,5,0.0652,0.1087
+bourguiba,Bourguiba,602,104,108,0.1728,0.1794
+ben_ali,Ben Ali,1078,77,79,0.0714,0.0733
+transition,Transition,314,42,42,0.1338,0.1338
+second_republic,2nd Republic,661,72,69,0.1089,0.1044
+saied_exception,Post-2021,239,38,16,0.159,0.0669

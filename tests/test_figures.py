@@ -65,6 +65,12 @@ STEMS = [
     "fig46_renewal_rate_by_era",
     "fig47_premiership_apprenticeship",
     "fig48_prior_careers_of_entrants",
+    "fig49_gazette_coverage_by_decade",
+    "fig50_gazette_coverage_by_portfolio",
+    "fig51_gazette_evidence_tiers",
+    "fig52_gazette_date_gap",
+    "fig53_recorded_handovers",
+    "fig54_women_per_cabinet",
 ]
 
 
@@ -574,3 +580,123 @@ def test_prior_careers_shift_from_diplomacy_to_credentials():
             > table.loc["bourguiba", "Academic"] + 0.25)
     # Shares are per-flag, not a partition: a person can be both.
     assert (table[["Diplomat", "Academic", "Engineer", "Lawyer"]] <= 1.0).all().all()
+
+
+# ------------------------------------------- the gazette, and what it backs ---
+# Figs. 49-52 are the first figures drawn from the `jort_*` columns. Every one
+# of them is a provenance claim about the dataset itself, so each is checked
+# against `data/processed/` rather than trusted.
+
+
+def _appointments():
+    return pd.read_csv(PROCESSED / "appointments.csv", low_memory=False)
+
+
+def test_gazette_coverage_matches_the_appointments_table():
+    """Fig. 49's denominators and citation counts, decade by decade."""
+    app = _appointments()
+    app["year"] = pd.to_numeric(app["start_year"], errors="coerce")
+    app = app[app["year"].between(1956, 2026)]
+    table = pd.read_csv(FIGURES / "tables" / "fig49_gazette_coverage_by_decade.csv")
+    for _, row in table.iterrows():
+        block = app[(app["year"] // 10 * 10) == row["decade"]]
+        assert len(block) == row["appointments"], (
+            f"{int(row['decade'])}s: figure drawn with {row['appointments']} "
+            f"appointments, data now has {len(block)}")
+        cited = int(block["jort_citation"].notna().sum())
+        assert cited == row["cited"], f"{int(row['decade'])}s: citations moved"
+
+    # The caption names the peak decade and the thinning after it, computed
+    # from this table - a first draft claimed the 1970s against an actual 2000s.
+    peak = table.loc[table["share_cited"].idxmax(), "decade"]
+    assert peak == 2000, f"the peak decade is now {int(peak)}; fig. 49 says 2000s"
+    assert table.loc[table["decade"] == 1950, "cited"].iloc[0] == 0, (
+        "the gazette match starts in 1968; nothing in the 1950s should be cited")
+
+
+def test_gazette_reaches_sovereign_posts_first():
+    """Fig. 50 exists to warn that the cited subset is not a random sample."""
+    table = pd.read_csv(FIGURES / "tables" / "fig50_gazette_coverage_by_portfolio.csv")
+    assert (table["appointments"] >= 40).all(), (
+        "fig. 50 claims a 40-appointment floor per portfolio")
+    assert table["share_cited"].is_monotonic_decreasing, "fig. 50 is drawn ranked"
+    assert table.iloc[0]["portfolio_label"] == "Head of government"
+    assert table.iloc[0]["share_cited"] > 0.5, (
+        "the head of government is no longer cited in most of its appointments")
+    # The spread is the point: a flat distribution would make the caption wrong.
+    assert table.iloc[0]["share_cited"] > 10 * table.iloc[-1]["share_cited"]
+
+
+def test_evidence_tiers_partition_every_citation():
+    """Fig. 51 splits the citations four ways; the four must be all of them."""
+    app = _appointments()
+    total = int(app["jort_citation"].notna().sum())
+    table = pd.read_csv(FIGURES / "tables" / "fig51_gazette_evidence_tiers.csv")
+    assert table["citations"].sum() == total, (
+        f"the tiers sum to {table['citations'].sum()}, data has {total} citations")
+    assert abs(table["share"].sum() - 1.0) < 1e-3
+
+    cited = app[app["jort_citation"].notna()]
+    for _, row in table.iterrows():
+        n = int(((cited["jort_match_basis"] == row["match_basis"])
+                 & (cited["jort_date_kind"] == row["date_kind"])).sum())
+        assert n == row["citations"], f"{row['tier']}: count moved"
+
+    # The ladder only reads as a ladder because the off-diagonal is empty.
+    assert cited[(cited["jort_match_basis"] == "date_window")
+                 & (cited["jort_date_kind"] == "year_only")].empty, (
+        "a date-window match now carries a year-only decree date, so "
+        "fig. 51's four tiers no longer cover the cross-tab")
+
+
+def test_gazette_date_gap_is_never_negative():
+    """Fig. 52's caption says no matched decree predates the date we hold."""
+    app = _appointments()
+    delta = pd.to_numeric(app["jort_date_delta"], errors="coerce").dropna()
+    assert (delta >= 0).all(), (
+        "a decree now predates its appointment's start date; fig. 52 says none does")
+
+    table = pd.read_csv(FIGURES / "tables" / "fig52_gazette_date_gap.csv")
+    assert table["citations"].sum() == len(delta), (
+        f"the bins hold {table['citations'].sum()} of {len(delta)} dated citations")
+    beyond = int(table.loc[table["beyond_30_days"], "citations"].sum())
+    assert beyond == int((delta >= 30).sum()), "the 30-day split moved"
+    assert 0 < beyond < len(delta), "fig. 52 draws two colours; it needs both"
+
+
+def test_recorded_handovers_match_the_roster_columns():
+    """Fig. 53 counts `replaces` / `replaced_by`, which no other figure uses."""
+    app = _appointments()
+    table = pd.read_csv(FIGURES / "tables" / "fig53_recorded_handovers.csv")
+    for _, row in table.iterrows():
+        block = app[app["era"] == row["era"]]
+        assert len(block) == row["appointments"], f"{row['era']}: cohort moved"
+        assert int(block["replaces"].notna().sum()) == row["names_predecessor"]
+        assert int(block["replaced_by"].notna().sum()) == row["names_successor"]
+    # Sparse everywhere is the finding; a column that filled up would change it.
+    assert table["share_predecessor"].max() < 0.5
+
+
+def test_women_per_cabinet_is_one_mark_per_roster_not_per_government():
+    """Fig. 54's central caveat, which its caption spends three lines on.
+
+    The `cabinets` table holds several rosters for the same government - the
+    2021 government appears three times at three different shares - so the
+    figure is per roster and the vertical spread within a year is the sources
+    disagreeing. If that ever stopped being true the caption would be wrong.
+    """
+    cab = pd.read_csv(PROCESSED / "cabinets.csv")
+    cab["year"] = pd.to_datetime(cab["start_date"], errors="coerce").dt.year
+    table = pd.read_csv(FIGURES / "tables" / "fig54_women_per_cabinet.csv")
+
+    usable = cab.dropna(subset=["year", "share_women", "n_members"])
+    usable = usable[usable["n_members"] > 0]
+    assert len(table) == len(usable), "fig. 54 lost or gained a roster"
+    assert table["year"].nunique() < len(table), (
+        "every roster now has its own start year, so fig. 54's caveat about "
+        "several rosters per government no longer holds")
+
+    in_2021 = table[table["year"] == 2021]
+    assert len(in_2021) >= 3, "the 2021 government's duplicate rosters are gone"
+    assert in_2021["share_women"].nunique() > 1, (
+        "the duplicate 2021 rosters now agree; the caption says they do not")

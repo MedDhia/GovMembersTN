@@ -1,6 +1,6 @@
 # Figures
 
-Forty-eight publication figures built from `data/processed/` alone.
+Fifty-four publication figures built from `data/processed/` alone.
 
 ```bash
 make figures          # or: python figures/make_figures.py
@@ -66,6 +66,12 @@ deterministic: every stochastic step — the force layouts in figs. 6, 40 and
 | `fig46_renewal_rate_by_era` | Strip + summary dot | How often each regime recruited someone who had never served. |
 | `fig47_premiership_apprenticeship` | Lollipop, 22 rows | Years in government before the top job, one row per head of government. |
 | `fig48_prior_careers_of_entrants` | Small multiples | Diplomat, academic, engineer, lawyer — what entrants had been before. |
+| `fig49_gazette_coverage_by_decade` | Column, single hue | How much of the record the *Journal Officiel* backs, decade by decade. |
+| `fig50_gazette_coverage_by_portfolio` | Ranked bar | Which offices the gazette record reaches: head of government 64%, employment 1%. |
+| `fig51_gazette_evidence_tiers` | Ranked bar, ordinal | How firmly each of the 295 citations is attached to its appointment. |
+| `fig52_gazette_date_gap` | Histogram | Days between the date we record and the decree's publication. |
+| `fig53_recorded_handovers` | Paired columns | How often a roster names the handover outright, in `replaces` / `replaced_by`. |
+| `fig54_women_per_cabinet` | Scatter, sized | Every recorded cabinet roster's share of women, against its size. |
 
 ## Reading them
 
@@ -242,6 +248,59 @@ nothing else, so a prior parliamentary seat, a governorship or a party post is
 invisible to it. `parties` and `career_flags` are proxies for the recruitment
 channel, not measurements of it: fig. 45 shows that the Destour card stopped
 being the ticket, not what replaced it as a career path.
+
+## The gazette (figs. 49–52)
+
+These four are the first figures drawn from the `jort_*` columns, and all of
+them are about the dataset rather than about Tunisian politics. The *Journal
+Officiel* is where a ministerial appointment legally takes effect;
+`jort_citation` records the decree the pipeline managed to match to a row.
+
+**Fig. 49 measures the harvest, not the law.** Every ministerial appointment is
+gazetted. What the series shows is how much of the gazette the harvest could
+find and match in the public index at jort.tn — it peaks in the 2000s at 20% of
+180 appointments and thins to 4% in the 2010s, on the largest denominator in
+the series. Read it the way you read fig. 1. Nothing before 1968 carries a
+citation at all, so every rate in this group is computed from 1968 onwards.
+
+**Fig. 50 is the reason not to filter on `jort_citation` casually.** The cited
+subset is not a random sample of the cabinet: the head of government is cited
+in 64% of its appointments and employment and vocational training in 1%. Any
+comparison of cited against uncited rows is largely a comparison of sovereign
+posts against the rest.
+
+**Fig. 51 treats a citation as a matter of degree.** `jort_match_basis` records
+what the match was made on and `jort_date_kind` whether the decree carried a
+real date. They are one ladder rather than two dimensions — a date-window match
+is always against a dated decree and a year-only match never is — so the four
+drawn tiers cover the cross-tab and the off-diagonal is empty. A quarter of the
+citations sit in the strongest tier and a sixth in the weakest.
+
+**Fig. 52 is the codebook's instruction as a picture.** `jort_date_delta` is
+documented as "a finding worth inspecting, not an error that has been corrected
+away". Most citations sit within a fortnight of the recorded start; 53 of the
+163 comparable ones are a month or more away, and 31 of those are beyond half a
+year. The gap is never negative — no matched decree predates the start date we
+hold — which is itself under test.
+
+## Two figures about how the sources were written
+
+**Fig. 53** counts `replaces` and `replaced_by`, the only columns in
+`appointments` that state a handover outright. They are sparse in every era,
+peaking near a fifth. This is a fact about how richly each era's rosters were
+written up, not about how governments changed hands: the succession network in
+figs. 36 and 38 is *derived*, by ordering holders of the same portfolio, and
+does not depend on these columns at all.
+
+**Fig. 54 is one mark per roster, not one per government.** The `cabinets`
+table records several rosters for the same government where the sources chunk
+them differently: the 2021 government appears three times, at 44% of 23
+members, 35% of 26 and 26% of 57. Fifty-six rows span twenty-five distinct
+start years. Vertical spread within a year is therefore the sources
+disagreeing, not the cabinet changing, and the figure draws all of them rather
+than inventing a precision the table does not have. Fig. 2 is the era-level
+view and is computed from coded gender per person, which is why the two need
+not agree.
 
 ## Two of them are reproduction tests
 
