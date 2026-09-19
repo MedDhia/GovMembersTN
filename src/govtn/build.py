@@ -915,6 +915,16 @@ def build_appointments(mapping: dict[str, str], raw: list[dict], spine: Spine) -
     return frame
 
 
+# Name similarity required before a gazette decree is considered to be about a
+# given person. The gazette prints a name and nothing else identifying, so this
+# is the only identity test available, and it is applied twice: once to decide
+# whether a decree COULD be about someone, and again to count how many
+# different people it could be about. Kept at 0.75 rather than loosened: an
+# appointment wrongly citing the gazette is worse than one citing nothing,
+# because the citation is what a reader would trust without checking.
+JORT_NAME_THRESHOLD = 0.75
+
+
 def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
     """Attach Journal Officiel citations to the appointments they record.
 
@@ -935,15 +945,30 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
     # A decree's EFFECTIVE date ("à compter du 23 avril 1980") is the legal
     # date of the appointment itself; the publication date merely trails it.
     # Prefer the former wherever the decree states it.
+    #
+    # Where neither is known the CITATION YEAR still is, and that is worth
+    # keeping: the gazette stopped printing a publication date on its issue
+    # metadata before about 1980, which is why every pre-1980 decree - the
+    # prime-ministerial appointments of Nouira, Mzali, Sfar and Baccouche
+    # among them - had no date at all and could never be matched. Such a
+    # decree is dated to its year and matched only within that calendar year,
+    # never by day proximity, so the looser date buys a looser rule rather
+    # than a false precision.
     for decree in decrees:
-        decree["best_date"] = decree.get("effective") or decree.get("published")
-        decree["date_kind"] = "effective" if decree.get("effective") else "published"
+        exact = decree.get("effective") or decree.get("published")
+        decree["best_date"] = exact or (
+            f"{decree['year']}-01-01" if decree.get("year") else None)
+        decree["date_kind"] = (
+            "effective" if decree.get("effective")
+            else "published" if decree.get("published")
+            else "year_only")
     usable = [d for d in decrees if d.get("holder") and d.get("best_date")]
     if not usable or appointments.empty:
         return appointments
 
     for column in ("jort_citation", "jort_date", "jort_url", "jort_kind",
-                   "jort_office", "jort_date_kind"):
+                   "jort_office", "jort_date_kind", "jort_match_basis",
+                   "jort_holder"):
         appointments[column] = pd.NA
     appointments["jort_date_delta"] = pd.NA
 
@@ -955,7 +980,29 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
         for token in name_tokens_strong(decree["holder"]):
             index.setdefault(token, []).append(decree)
 
+    # WHICH PEOPLE COULD EACH DECREE BE ABOUT?
+    #
+    # The gazette names a holder; the dataset holds 882 people, and Tunisian
+    # ministerial names repeat. Before attaching anything, work out for each
+    # decree the set of DISTINCT people whose name matches it. A decree that
+    # could be about two different ministers is evidence about neither unless
+    # something else - the office it names - picks one of them out. Without
+    # this the tie was broken by date proximity alone, which is arbitrary
+    # between two namesakes and silently assigns one man's appointment to
+    # another.
+    claimants: dict[int, set[str]] = {}
+    for position, row in appointments.iterrows():
+        name = row.get("person_name")
+        person = row.get("person_id")
+        if not isinstance(name, str) or not name or not isinstance(person, str):
+            continue
+        for token in name_tokens_strong(name):
+            for decree in index.get(token, []):
+                if name_similarity(name, decree["holder"]) >= JORT_NAME_THRESHOLD:
+                    claimants.setdefault(id(decree), set()).add(person)
+
     matched = 0
+    ambiguous_skipped = 0
     for position, row in appointments.iterrows():
         name = row.get("person_name")
         if not isinstance(name, str) or not name:
@@ -969,45 +1016,84 @@ def attach_jort_citations(appointments: pd.DataFrame) -> pd.DataFrame:
         portfolio = row.get("portfolio")
         best, best_key = None, None
         for decree in candidates.values():
-            if name_similarity(name, decree["holder"]) < 0.75:
+            if name_similarity(name, decree["holder"]) < JORT_NAME_THRESHOLD:
                 continue
             published = _as_date_safe(decree["best_date"])
             if published is None:
                 continue
-            gap = abs((published - start).days) if start else 10**6
-            # A decree more than a year from the recorded start is describing
-            # some other episode in the person's career.
-            if gap > 365:
-                continue
-            # A decree that names the office is far stronger evidence than one
-            # that merely lands near the right date: many people hold several
-            # posts within a year, and date proximity alone picks between them
-            # arbitrarily. Rank agreeing portfolios ahead of everything else.
+
             office = decree.get("office") or decree.get("portfolio_hint") or ""
             decree_portfolio = parse_title(office).portfolio if office else None
             agrees = bool(
                 portfolio and decree_portfolio and decree_portfolio == portfolio
             )
-            key = (0 if agrees else 1, gap)
+
+            # A decree several people could claim is attached only to the one
+            # whose portfolio it names. Date proximity cannot separate
+            # namesakes: they are different people, not different guesses.
+            if len(claimants.get(id(decree), set())) > 1 and not agrees:
+                ambiguous_skipped += 1
+                continue
+
+            if decree.get("date_kind") == "year_only":
+                # Dated to the year, so only the year may be compared. A day
+                # gap computed against a 1 January placeholder would be noise
+                # ranked as if it were evidence.
+                if start is None or start.year != published.year:
+                    continue
+                gap = 183           # mid-year, ranked below any dated decree
+            else:
+                gap = abs((published - start).days) if start else 10**6
+                # A decree more than a year from the recorded start is
+                # describing some other episode in the person's career.
+                if gap > 365:
+                    continue
+            # A decree that names the office is far stronger evidence than one
+            # that merely lands near the right date: many people hold several
+            # posts within a year, and date proximity alone picks between them
+            # arbitrarily. Rank agreeing portfolios ahead of everything else,
+            # and exactly dated decrees ahead of year-only ones.
+            key = (0 if agrees else 1,
+                   1 if decree.get("date_kind") == "year_only" else 0,
+                   gap)
             if best_key is None or key < best_key:
                 best, best_key = decree, key
-        best_gap = best_key[1] if best_key else None
+        best_gap = best_key[-1] if best_key else None
         if best is not None:
             appointments.at[position, "jort_office"] = best.get("office")
         if best is None:
             continue
+        # The name AS THE GAZETTE PRINTS IT, kept beside ours. A citation
+        # matched on a name should be checkable without re-running the match:
+        # this is what lets a reader see that "Kalthoum Ben Rejeb" was matched
+        # to "Kalthoum Ben Rejab épouse Guez" and judge it for themselves.
+        appointments.at[position, "jort_holder"] = best["holder"]
         appointments.at[position, "jort_citation"] = best["citation"]
         appointments.at[position, "jort_date"] = best["best_date"]
         appointments.at[position, "jort_date_kind"] = best["date_kind"]
         appointments.at[position, "jort_url"] = best["url"]
         appointments.at[position, "jort_kind"] = best["kind"]
-        appointments.at[position, "jort_date_delta"] = best_gap if start else pd.NA
+        appointments.at[position, "jort_date_delta"] = (
+            pd.NA if (start is None or best.get("date_kind") == "year_only")
+            else best_gap)
+        # How the decree was tied to this appointment, so a reader can weigh
+        # it: a named office is an assertion, a date window is an inference.
+        appointments.at[position, "jort_match_basis"] = (
+            "office_and_date" if best_key[0] == 0
+            else "year_only" if best.get("date_kind") == "year_only"
+            else "date_window")
         matched += 1
 
     if matched:
         log.info(
             "matched %d appointments to a Journal Officiel decree "
             "(%d usable decrees harvested)", matched, len(usable),
+        )
+    if ambiguous_skipped:
+        log.info(
+            "declined %d decree matches where the name fitted more than one "
+            "person and the decree named no office to separate them",
+            ambiguous_skipped,
         )
     return appointments
 

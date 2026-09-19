@@ -71,6 +71,11 @@ _NOT_CABINET = re.compile(
     re.IGNORECASE,
 )
 
+# "182 résultats". The lookbehind keeps the run from starting inside the
+# "VEPA1" example the page prints immediately before it.
+_RESULT_TOTAL = re.compile(
+    r"(?<!\w)(\d[\d\u202f\u00a0 ]*?)\s*r[ée]sultats", re.IGNORECASE)
+
 _RESULT_META = re.compile(
     r"(?P<collection>Journal Officiel|Annonces L[ée]gales)\s*·\s*"
     r"(?P<year>\d{4})\s*/\s*N°(?P<issue>\d+)\s*·\s*page\s*(?P<page>\d+)\s*·\s*"
@@ -130,10 +135,23 @@ class JortClient:
 
     @staticmethod
     def _parse_total(html: str) -> int | None:
-        match = re.search(r"([\d\s\u202f\u00a0]+)\s*r[ée]sultats", html)
-        if not match:
-            text = re.sub(r"\s+", " ", BeautifulSoup(html, "lxml").get_text(" ", strip=True))
-            match = re.search(r"([\d\s\u202f\u00a0]+)\s*r[ée]sultats", text)
+        """How many results the site says it has, for the truncation check.
+
+        Two traps, both of which made this return None or a wrong number, and
+        so silenced the "coverage is partial" warning entirely:
+
+        The count sits inside its own element - `<span> 182 </span> résultats`
+        - so a pattern run over raw HTML matches the whitespace before the
+          word, captures no digits, and being truthy stops the caller from
+          falling through to the text. Tags are stripped first.
+
+        And the page prints a search example, "VEPA1", just before the count.
+        A digit run that may start mid-word reads "VEPA1 182" as 1182, turning
+        a complete harvest into an apparently truncated one. The count must
+        therefore begin at a word boundary.
+        """
+        text = re.sub(r"\s+", " ", BeautifulSoup(html, "lxml").get_text(" ", strip=True))
+        match = _RESULT_TOTAL.search(text)
         if not match:
             return None
         digits = re.sub(r"[^\d]", "", match.group(1))
@@ -202,6 +220,18 @@ class JortClient:
 # snippet. It is also two orders of magnitude cheaper: a dozen queries rather
 # than one per person.
 
+# DELIBERATELY ABSENT: the generic Arabic naming phrases "يسمى السيد",
+# "عين السيد" and "أسندت إلى السيد" ("Mr X is named"). They matched, and
+# returned 59 decrees of which ONE mentioned a ministerial office - and in that
+# one the head of government was the appointing authority, not the appointee.
+# The rest appoint chief engineers, directors general and committee members.
+#
+# The temptation is to teach `extract_holder` Arabic so those 59 stop coming
+# back empty. That would make things worse, not better: it would put 59
+# civil servants' names into the pool of decrees that minister names are
+# matched against, which is precisely how a namesake acquires someone else's
+# appointment. The Arabic phrases kept below name a ministerial office
+# explicitly, so anything they return is about a minister.
 DECREE_PHRASES: list[tuple[str, str]] = [
     # Head of government. The feminine form is a separate phrase, and omitting
     # it would lose both women who have held the office.
@@ -213,14 +243,12 @@ DECREE_PHRASES: list[tuple[str, str]] = [
     # Whole-cabinet decrees.
     ('"sont nommés membres du gouvernement"', ""),
     ('"تسمية أعضاء الحكومة"', ""),
-    ('"يسمى السيد"', ""),
-    ('"يسمى السيدة"', ""),
-    ('"عين السيد"', ""),
-    ('"أسندت إلى السيد"', ""),
     ('"وزيرا لدى رئيس الحكومة"', ""),
     # Individual ministers and secretaries of state.
     ('"est nommé ministre"', ""),
     ('"est nommée ministre"', ""),
+    ('"est nommé ministre d\'Etat"', ""),
+    ('"est chargé des fonctions de ministre"', ""),
     ('"est nommé secrétaire d\'Etat"', ""),
     ('"est nommée secrétaire d\'Etat"', ""),
     # Cessations date the END of a tenure as precisely as a nomination dates
@@ -374,6 +402,14 @@ def harvest_decrees(
                 "office": extract_office(hit.snippet),
                 "effective": extract_effective_date(hit.snippet),
                 "published": client.issue_date(hit),
+                # The issue metadata page states a publication date only from
+                # about 1980 on; before that it carries the issue number and
+                # nothing else, and the snippet is cut too narrow to reach the
+                # decree's own date ("...est nommé Premier Ministre à compter
+                # du 23 avr..."). The citation's YEAR is still known, and a
+                # year is enough to place a decree against an appointment
+                # without pretending to a precision the source does not have.
+                "year_only": client.issue_date(hit) is None,
                 "snippet": hit.snippet,
                 "query": query,
                 "url": f"{BASE}/view/journal-officiel/{hit.lang}/{hit.year}/{hit.issue}",
@@ -395,9 +431,11 @@ def harvest(*, offline: bool = False, max_pages: int = 10) -> list[dict[str, Any
     decrees, truncated = harvest_decrees(client, max_pages=max_pages)
     named = [d for d in decrees if d["holder"]]
     dated = [d for d in decrees if d["published"]]
+    year_only = [d for d in decrees if d["holder"] and not d["published"]]
     log.info(
-        "%d decrees; %d with an identifiable holder, %d with a publication date",
-        len(decrees), len(named), len(dated),
+        "%d decrees; %d with an identifiable holder, %d with a publication "
+        "date, %d dated to the year only",
+        len(decrees), len(named), len(dated), len(year_only),
     )
 
     if truncated:

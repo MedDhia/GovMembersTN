@@ -182,3 +182,65 @@ def test_office_is_extracted_and_maps_to_a_portfolio(snippet, portfolio):
     office = extract_office(snippet)
     assert office
     assert parse_title(office).portfolio == portfolio
+
+
+# --- namesake safety --------------------------------------------------------
+
+def test_generic_arabic_naming_phrases_are_not_queried():
+    """They return civil servants, not ministers.
+
+    "يسمى السيد" ("Mr X is named") matched 59 decrees, of which one mentioned a
+    ministerial office - and there the head of government was the appointing
+    authority, not the appointee. The rest appoint chief engineers and
+    directors general. Querying them puts 59 civil servants' names into the
+    pool that minister names are matched against, which is how a namesake
+    acquires someone else's appointment.
+    """
+    from govtn.sources.jort import DECREE_PHRASES
+
+    queries = [q for q, _ in DECREE_PHRASES]
+    for generic in ('"يسمى السيد"', '"عين السيد"', '"أسندت إلى السيد"',
+                    '"يسمى السيدة"'):
+        assert generic not in queries, f"{generic} returns non-ministerial decrees"
+    # Every Arabic phrase kept must name a ministerial office explicitly.
+    for query in queries:
+        if any("؀" <= ch <= "ۿ" for ch in query):
+            # Stems, not exact words: "الحكومة" and "للحكومة" are the same
+            # noun with different prefixes, and only the stem matches both.
+            assert any(stem in query for stem in ("وزير", "حكوم")), query
+
+
+def test_holder_extraction_is_french_only_by_design():
+    """Teaching it Arabic would manufacture the namesake risk, not reduce it.
+
+    The Arabic decrees reachable through the public index are civil-service
+    appointments. Returning None for them is correct: an unusable decree is
+    harmless, a decree naming the wrong sort of person is not.
+    """
+    from govtn.sources.jort import extract_holder
+
+    arabic = ("مؤرخ في 19 أفريل 2023. يسمى السيد عبد القادر الهوش، "
+              "مهندس رئيس، مديرا عاما")
+    assert extract_holder(arabic) is None
+    assert extract_holder(
+        "Article premier - Monsieur Ahmed Hachani est nommé Chef du Gouvern"
+    ) == "Ahmed Hachani"
+
+
+def test_result_total_survives_markup_and_the_page_example():
+    """The truncation warning depends on this, and it was silently dead.
+
+    The count sits in its own element (`<span> 182 </span> résultats`), so a
+    pattern run over raw HTML matched the whitespace, captured no digits, and
+    being truthy blocked the fallback - so every harvest reported an unknown
+    total and no query was ever flagged as capped. The page also prints the
+    search example "VEPA1" right before the count, which a digit run allowed
+    to start mid-word reads as 1182.
+    """
+    from govtn.sources.jort import JortClient
+
+    assert JortClient._parse_total("<span> 182 </span>  résultats pour") == 182
+    assert JortClient._parse_total(
+        'Exemples: "Yahia Chaker" , VEPA1 182 résultats pour') == 182
+    assert JortClient._parse_total("<span> 1 182 </span> résultats") == 1182
+    assert JortClient._parse_total("rien du tout") is None

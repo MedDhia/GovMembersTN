@@ -145,12 +145,42 @@ One row per person × cabinet × portfolio. This is the table to reshape from;
 | `jort_date` | date | **Normally the date the decree was PUBLISHED in the gazette — not the date of appointment**, unless `jort_date_kind` is `effective`. The decree follows the appointment by a few days (median 8 in this data), so this is an upper bound on the start date, and an authoritative one. Do not substitute it for `start_date` without deciding which quantity you want. |
 | `jort_url` | url | The gazette issue on jort.tn. The full document requires a login there; the citation, date and summary are public. |
 | `jort_kind` | string | `nomination` or `cessation` — whether the decree appoints or ends the appointment. |
+| `jort_holder` | string | The officeholder's name **as the gazette prints it**, kept beside ours. A citation matched on a name should be checkable without re-running the match: this is what shows that "Kalthoum Ben Rejeb" was matched to "Kalthoum Ben Rejab épouse Guez", and lets you judge it. |
+| `jort_match_basis` | string | How the decree was tied to this appointment. `office_and_date` — the decree names a portfolio agreeing with this row, the strongest evidence. `date_window` — the name matches and the decree falls within a year of the recorded start. `year_only` — the decree is dated to its year alone (see `jort_date_kind`) and matched inside that calendar year. Weight a citation by this, not by its mere presence. |
 | `jort_date_delta` | int | Days between `start_date` and `jort_date`. A large value means the harvested date and the official record disagree, which is **a finding worth inspecting**, not an error that has been corrected away. Matching is capped at 365 days. |
 | `source` | string | `spine`, `wikidata`, `wikipedia:fr`, `wikipedia:ar`, `govtn_portal`, `leaders`. `govtn_portal` is the government's own listing — authoritative on membership, but a dated snapshot with no appointment dates, so those rows carry `date_basis = cabinet`. |
 | `source_ref` | url/string | The specific URL, Wikidata statement or config file the row came from. |
 | `confidence` | string | `high` / `medium` / `low`. `low` marks a Wikidata statement with no tenure qualifiers, i.e. an office known to have been held but not when. |
 
 ---
+
+
+### What the gazette can and cannot settle
+
+295 of 3,136 appointments (9.4%), covering 111 of 882 people, carry a citation.
+The limit is the gazette's own public search index, not the harvest: with the
+result-total check working, every query is confirmed exhausted — `"est nommé
+ministre"` returns 182 results and all 182 are fetched.
+
+**Matching is by name, because a decree offers nothing else.** The gazette
+prints "Monsieur X est nommé ministre de Y" with no identifier, so name
+similarity is the only identity test available, and it is applied at 0.75.
+Every accepted match in the published table sits at 0.9 or above, and the 0.9
+cases are real variants: a married name ("Najla Bouden" / "Najla Bouden
+Romdhane", "Kalthoum Ben Rejab épouse Guez"), or a dropped first name
+("Hédi Khefacha" / "Mohamed Hédi Khefacha").
+
+**A decree two people could claim is attached to neither**, unless it names an
+office that separates them. Containment scoring puts "Mohamed Mzali" and
+"Mohamed Salah Mzali" — two different men, prime ministers a quarter-century
+apart — at 0.9 of each other. Date proximity cannot choose between namesakes,
+because they are two people rather than two guesses. This costs four matches
+and is reported in the build log.
+
+Note that one citation may be shared by two appointments legitimately: a
+citation names a **page**, and a single gazette page often carries several
+decrees. `JORT 1984, N°063, p. 2` is cited by both Ridha Ben Ali and Zine El
+Abidine Ben Ali, from two different decrees printed together.
 
 ## `cabinets.csv` — observed cabinets
 

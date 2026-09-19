@@ -12,7 +12,7 @@ of them before 1900. Treat the pre-1956 rows as a usable but sparse tail, not
 as a comparable series.
 
 Every extracted value is traceable to a source URL and a retrieval timestamp,
-and 163 appointments carry a citation to the *Journal Officiel*, the gazette
+and 295 appointments carry a citation to the *Journal Officiel*, the gazette
 in which a Tunisian ministerial appointment legally takes effect.
 
 ---
@@ -129,7 +129,7 @@ portal `tunisie.gov.tn`; and the *Journal Officiel* at `jort.tn`:
 | **38,287** | co-membership ties, weighted by days of overlapping service |
 | **1,976** | succession ties, directed, within portfolio |
 | **12,613** | homophily ties — shared university, party or birth governorate |
-| **163** | appointments carrying a *Journal Officiel* citation |
+| **295** | appointments carrying a *Journal Officiel* citation |
 
 Person-level attribute coverage: Wikidata QID 65%, occupation 64%, gender 65%,
 Arabic name 64%, birth date 61%, birthplace 54%, education 35%, party 37%,
@@ -265,7 +265,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           200 test functions, 384 cases; fixtures reproduce real markup
+tests/           207 test functions, 391 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the

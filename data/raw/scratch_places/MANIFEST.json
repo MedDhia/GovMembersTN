@@ -1,0 +1,138 @@
+{
+  "entries": {
+    "1dfb930c161fda6b1b72": {
+      "bytes": 28033,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FcountryLabel+%3Fadmin+%3FadminLabel+WHERE+%7B%0A++VALUES+%3Fplace+%7B+wd%3AQ230+wd%3AQ2317502+wd%3AQ23482+wd%3AQ2358652+wd%3AQ245546+wd%3AQ2478232+wd%3AQ2499386+wd%3AQ253325+wd%3AQ2555642+wd%3AQ2705004+wd%3AQ2705113+wd%3AQ27159+wd%3AQ2723645+wd%3AQ2734713+wd%3AQ2737310+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP17+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131%2B+%3Fadmin+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?countryLabel ?admin ?adminLabel WHERE {\n  VALUES ?place { wd:Q230 wd:Q2317502 wd:Q23482 wd:Q2358652 wd:Q245546 wd:Q2478232 wd:Q2499386 wd:Q253325 wd:Q2555642 wd:Q2705004 wd:Q2705113 wd:Q27159 wd:Q2723645 wd:Q2734713 wd:Q2737310 }\n  OPTIONAL { ?place wdt:P17 ?country . }\n  OPTIONAL { ?place wdt:P131+ ?admin . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:51+00:00",
+      "sha256": "703ded02eba771666baf618a3cc8dd5ebcbf3c47d7bbd64b9b6e52e78d6d2ba6",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "2400b97004464f4c52bf": {
+      "bytes": 7479,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22Akouda%22%40fr+%22Bekalta%22%40fr+%22Beni+Khedache%22%40fr+%22Bou+Arada%22%40fr+%22Bou+Salem%22%40fr+%22Bouhjar%22%40fr+%22B%C3%A9ni+Khalled%22%40fr+%22B%C3%A9ni+Khiar%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"Akouda\"@fr \"Bekalta\"@fr \"Beni Khedache\"@fr \"Bou Arada\"@fr \"Bou Salem\"@fr \"Bouhjar\"@fr \"Béni Khalled\"@fr \"Béni Khiar\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:10:55+00:00",
+      "sha256": "751250598975020441c8e54fce170f1430bab454542504510809d2485e608b28",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "509fc564d3ef1bc85729": {
+      "bytes": 11677,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22El+Mey%22%40fr+%22El+Mida%22%40fr+%22Ezzahra%22%40fr+%22Foussana%22%40fr+%22Hajeb+El+Ayoun%22%40fr+%22Hassi+Amor%22%40fr+%22Ha%C3%AFdra%22%40fr+%22Jebiniana%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"El Mey\"@fr \"El Mida\"@fr \"Ezzahra\"@fr \"Foussana\"@fr \"Hajeb El Ayoun\"@fr \"Hassi Amor\"@fr \"Haïdra\"@fr \"Jebiniana\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:10:57+00:00",
+      "sha256": "79ca0f1a615f913daae3e0c47fc31cccadbf1e3fb92d43c5d0e5be95527423fe",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "5bc4dda8aaafc4553f33": {
+      "bytes": 1894,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FcountryLabel+%3Fadmin+%3FadminLabel+WHERE+%7B%0A++VALUES+%3Fplace+%7B+wd%3AQ967840+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP17+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131%2B+%3Fadmin+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?countryLabel ?admin ?adminLabel WHERE {\n  VALUES ?place { wd:Q967840 }\n  OPTIONAL { ?place wdt:P17 ?country . }\n  OPTIONAL { ?place wdt:P131+ ?admin . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:55+00:00",
+      "sha256": "452fab67d583179ae8e324da0ad4fac6683f1f55fbd368b017105e58814cbd46",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "5cb16e4c09d1ca3ddf77": {
+      "bytes": 9390,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22Kal%C3%A2a+Seghira%22%40fr+%22Khniss%22%40fr+%22Ksibet+el-M%C3%A9diouni%22%40fr+%22La+Manouba%22%40fr+%22M%27saken%22%40fr+%22Mahboubine%22%40fr+%22Medjez+el-Bab%22%40fr+%22Menzel+Hayet%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"Kalâa Seghira\"@fr \"Khniss\"@fr \"Ksibet el-Médiouni\"@fr \"La Manouba\"@fr \"M'saken\"@fr \"Mahboubine\"@fr \"Medjez el-Bab\"@fr \"Menzel Hayet\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:10:59+00:00",
+      "sha256": "bf227919b3341e7ab680edb33c95da3d430d35e38be41f977838b626256ebf1b",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "9693fc7d97a46ef1433b": {
+      "bytes": 2584,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22Tazarka%22%40fr+%22T%C3%A9boursouk%22%40fr+%22Zriba%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"Tazarka\"@fr \"Téboursouk\"@fr \"Zriba\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:01+00:00",
+      "sha256": "2258e4238f3426a254d457e6f5be7166ec772a456753b64edbff701450f08b5b",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "a76d003f636d0b35fad9": {
+      "bytes": 26540,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FcountryLabel+%3Fadmin+%3FadminLabel+WHERE+%7B%0A++VALUES+%3Fplace+%7B+wd%3AQ1014928+wd%3AQ1076553+wd%3AQ1153895+wd%3AQ1203138+wd%3AQ131301+wd%3AQ131818+wd%3AQ1324239+wd%3AQ138648+wd%3AQ1408764+wd%3AQ187027+wd%3AQ18869+wd%3AQ1890362+wd%3AQ199605+wd%3AQ216799+wd%3AQ217+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP17+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131%2B+%3Fadmin+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?countryLabel ?admin ?adminLabel WHERE {\n  VALUES ?place { wd:Q1014928 wd:Q1076553 wd:Q1153895 wd:Q1203138 wd:Q131301 wd:Q131818 wd:Q1324239 wd:Q138648 wd:Q1408764 wd:Q187027 wd:Q18869 wd:Q1890362 wd:Q199605 wd:Q216799 wd:Q217 }\n  OPTIONAL { ?place wdt:P17 ?country . }\n  OPTIONAL { ?place wdt:P131+ ?admin . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:50+00:00",
+      "sha256": "ee48f2ef59e1ad3cb73414b92f74e679936cee6707e4f73188d187ae9660c536",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "b75f252073a628c6a0e7": {
+      "bytes": 11110,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22Chenini%22%40fr+%22Dar+Cha%C3%A2bane%22%40fr+%22Degache%22%40fr+%22Djedeida%22%40fr+%22El+Guettar%22%40fr+%22El+Hamma%22%40fr+%22El+Ksar%22%40fr+%22El+Ksour%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"Chenini\"@fr \"Dar Chaâbane\"@fr \"Degache\"@fr \"Djedeida\"@fr \"El Guettar\"@fr \"El Hamma\"@fr \"El Ksar\"@fr \"El Ksour\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:10:56+00:00",
+      "sha256": "b5370cabf9ba0dd846eb9a9b3a5add5e2a34087588c280236cfb55ee4ed0c8cf",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "be000d3f4a365db3d37f": {
+      "bytes": 7557,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FtypeLabel+%3FadminLabel+%3Fpop+WHERE+%7B%0A++VALUES+%3Fname+%7B+%22Metline%22%40fr+%22Mezzouna%22%40fr+%22M%C3%A9grine%22%40fr+%22M%C3%A9touia%22%40fr+%22Nasrallah%22%40fr+%22Nebeur%22%40fr+%22Rejiche%22%40fr+%22Tajerouine%22%40fr+%7D%0A++%3Fplace+rdfs%3Alabel+%3Fname+.%0A++%3Fplace+wdt%3AP17+wd%3AQ948+.%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP31+%3Ftype+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131+%3Fadmin+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP1082+%3Fpop+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?typeLabel ?adminLabel ?pop WHERE {\n  VALUES ?name { \"Metline\"@fr \"Mezzouna\"@fr \"Mégrine\"@fr \"Métouia\"@fr \"Nasrallah\"@fr \"Nebeur\"@fr \"Rejiche\"@fr \"Tajerouine\"@fr }\n  ?place rdfs:label ?name .\n  ?place wdt:P17 wd:Q948 .\n  OPTIONAL { ?place wdt:P31 ?type . }\n  OPTIONAL { ?place wdt:P131 ?admin . }\n  OPTIONAL { ?place wdt:P1082 ?pop . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:00+00:00",
+      "sha256": "1394f63b8d682763989e4de7875637d47cef4117eac68623ea4d407fd93bb7f9",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "ed4a5f9127ac7f629dde": {
+      "bytes": 28938,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FcountryLabel+%3Fadmin+%3FadminLabel+WHERE+%7B%0A++VALUES+%3Fplace+%7B+wd%3AQ3142546+wd%3AQ3142622+wd%3AQ3174515+wd%3AQ3175058+wd%3AQ3175916+wd%3AQ3176336+wd%3AQ3178365+wd%3AQ3277667+wd%3AQ3307409+wd%3AQ34266+wd%3AQ3516520+wd%3AQ403446+wd%3AQ845564+wd%3AQ90+wd%3AQ948+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP17+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131%2B+%3Fadmin+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?countryLabel ?admin ?adminLabel WHERE {\n  VALUES ?place { wd:Q3142546 wd:Q3142622 wd:Q3174515 wd:Q3175058 wd:Q3175916 wd:Q3176336 wd:Q3178365 wd:Q3277667 wd:Q3307409 wd:Q34266 wd:Q3516520 wd:Q403446 wd:Q845564 wd:Q90 wd:Q948 }\n  OPTIONAL { ?place wdt:P17 ?country . }\n  OPTIONAL { ?place wdt:P131+ ?admin . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:54+00:00",
+      "sha256": "08bcae3ec7d372d278456add8483ddb61e4c983cd488f6d7fde9c90d77eee04e",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    },
+    "fff12da4ccb38c8505b0": {
+      "bytes": 25829,
+      "final_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fplace+%3FplaceLabel+%3FcountryLabel+%3Fadmin+%3FadminLabel+WHERE+%7B%0A++VALUES+%3Fplace+%7B+wd%3AQ2737321+wd%3AQ2742387+wd%3AQ2743148+wd%3AQ2911912+wd%3AQ301798+wd%3AQ3032873+wd%3AQ3050082+wd%3AQ3050560+wd%3AQ3062876+wd%3AQ3108259+wd%3AQ3108263+wd%3AQ3117290+wd%3AQ3127824+wd%3AQ3128216+wd%3AQ3141427+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP17+%3Fcountry+.+%7D%0A++OPTIONAL+%7B+%3Fplace+wdt%3AP131%2B+%3Fadmin+.+%7D%0A++SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22fr%2Cen%22.+%7D%0A%7D%0A&format=json",
+      "params": {
+        "format": "json",
+        "query": "\nSELECT ?place ?placeLabel ?countryLabel ?admin ?adminLabel WHERE {\n  VALUES ?place { wd:Q2737321 wd:Q2742387 wd:Q2743148 wd:Q2911912 wd:Q301798 wd:Q3032873 wd:Q3050082 wd:Q3050560 wd:Q3062876 wd:Q3108259 wd:Q3108263 wd:Q3117290 wd:Q3127824 wd:Q3128216 wd:Q3141427 }\n  OPTIONAL { ?place wdt:P17 ?country . }\n  OPTIONAL { ?place wdt:P131+ ?admin . }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"fr,en\". }\n}\n"
+      },
+      "retrieved_utc": "2026-08-27T02:11:52+00:00",
+      "sha256": "06cf0d43c359d522f166638d1164028ae1cf7adfcc10d090b3d7d6a88f36c9d1",
+      "status": 200,
+      "url": "https://query.wikidata.org/sparql"
+    }
+  },
+  "source": "scratch_places",
+  "updated_utc": "2026-08-27T02:11:55+00:00"
+}

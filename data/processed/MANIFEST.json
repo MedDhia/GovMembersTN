@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-27T10:21:12+00:00",
+  "generated_utc": "2026-09-13T00:15:53+00:00",
   "snapshot_date": "2026-08-26",
   "sources_present": {
     "wikidata_persons": true,
@@ -117,6 +117,8 @@
         "jort_kind",
         "jort_office",
         "jort_date_kind",
+        "jort_match_basis",
+        "jort_holder",
         "jort_date_delta"
       ]
     },
