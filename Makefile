@@ -2,7 +2,7 @@
 PY ?= python3
 export PYTHONPATH := src
 
-.PHONY: help install test preflight harvest build networks validate inequality codebook analysis figures bundle all clean queries
+.PHONY: help install test preflight harvest build networks validate inequality codebook analysis figures bundle all offline clean queries
 
 help:
 	@grep -E '^[a-z-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -67,6 +67,9 @@ queries:  ## Print the SPARQL to run by hand at query.wikidata.org
 	$(PY) -m govtn.sources.wikidata --print-queries
 
 clean:  ## Remove generated tables (keeps the raw payload cache)
-	rm -f data/processed/*.csv data/processed/*.gexf data/processed/*.graphml \
-	      data/processed/MANIFEST.json data/processed/VALIDATION.md
+	rm -f data/processed/*.csv data/processed/MANIFEST.json \
+	      data/processed/VALIDATION.md
+	rm -f data/processed/indices/*.csv
+	rm -f data/processed/networks/*.csv data/processed/networks/*.gexf \
+	      data/processed/networks/*.graphml
 	rm -f data/interim/*.json data/interim/*.csv
