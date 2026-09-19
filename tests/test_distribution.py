@@ -271,3 +271,50 @@ def test_citation_credits_only_sources_the_repository_has():
     assert "rulers.org" not in abstract, (
         "CITATION.cff credits rulers.org, which contributes no rows and "
         "appears nowhere in the repository")
+
+
+def test_citation_version_and_release_date_track_their_sources():
+    """`version` and `date-released` must not become two more hand-kept numbers.
+
+    Each is pinned to something the pipeline already owns, so neither can be
+    updated by hand and then forgotten:
+
+    * `version` is `govtn.__version__`, the one version string in the
+      repository. A second, independent one would just be a thing to forget.
+    * `date-released` is `snapshot_date` from `data/processed/MANIFEST.json` -
+      the censoring date for open tenures, and the date the README tells
+      people to cite because it is what makes a tenure length reproducible.
+      Deliberately not `generated_utc`, which moves on every rebuild and would
+      leave CITATION.cff dirty after any `make build`.
+
+    The README states that date inline as well ("currently `2026-08-26`"), so
+    the same check covers it - it was the last unguarded copy.
+    """
+    import json
+
+    import yaml
+
+    import govtn
+
+    with (REPO / "CITATION.cff").open(encoding="utf-8") as fh:
+        meta = yaml.safe_load(fh)
+
+    assert "version" in meta, "CITATION.cff no longer states a version"
+    assert meta["version"] == govtn.__version__, (
+        f"CITATION.cff says version {meta['version']}, "
+        f"govtn.__version__ is {govtn.__version__}")
+
+    with (PROCESSED / "MANIFEST.json").open(encoding="utf-8") as fh:
+        snapshot = json.load(fh)["snapshot_date"]
+
+    assert "date-released" in meta, "CITATION.cff no longer states date-released"
+    # YAML gives a datetime.date for an unquoted date, a str for a quoted one.
+    released = meta["date-released"]
+    released = released.isoformat() if hasattr(released, "isoformat") else str(released)
+    assert released == snapshot, (
+        f"CITATION.cff says date-released {released}, the dataset snapshot is "
+        f"{snapshot}")
+
+    readme = (REPO / "README.md").read_text(encoding="utf-8")
+    assert f"currently `{snapshot}`" in readme, (
+        f"the README's inline snapshot date is stale; the manifest says {snapshot}")

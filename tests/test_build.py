@@ -420,9 +420,15 @@ def test_a_year_only_decree_matches_within_its_year_and_not_by_day(monkeypatch):
     assert pd.isna(out.loc["OUT", "jort_citation"])
 
 
-def test_the_gazette_name_is_published_beside_ours(tables):
-    """A citation matched on a name must be checkable without re-running it."""
-    appointments = tables["appointments"]
+def test_the_gazette_name_is_published_beside_ours(harvested):
+    """A citation matched on a name must be checkable without re-running it.
+
+    Takes `harvested`, not `tables`: a clone with no payloads under
+    `data/interim/` falls back to the 23-row curated spine, which carries no
+    `jort_*` columns at all, so this raised KeyError on `jort_citation` rather
+    than reporting anything about citation quality.
+    """
+    appointments = harvested["appointments"]
     cited = appointments[appointments["jort_citation"].notna()]
     assert not cited.empty
     assert cited["jort_holder"].notna().all()

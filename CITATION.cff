@@ -6,6 +6,8 @@ authors:
   - family-names: Hammami
     given-names: Mohamed Dhia
 repository-code: "https://github.com/MedDhia/GovMembersTN"
+version: "0.1.0"
+date-released: 2026-08-26
 abstract: >-
   An individual-level dataset of members of Tunisian governments from the
   beylical period to the present, covering 882 people and 3,136 ministerial
