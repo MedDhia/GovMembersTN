@@ -167,11 +167,12 @@ lets an R user reproduce a regional or era-level result without a rewrite.
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
 **Are these families old?** `make elite-persistence` exports the 882 ministers
-as surnames and prices them against the 2024 electoral register. Thirteen rare
-surnames that the Tunisian genealogies attest as notable families before 1881
-are **38.5 times** more common in this dataset than in the register, and the
-series falls through every change of regime — 183× under the protectorate, 67×
-under Bourguiba, 10× under Ben Ali. See
+as surnames and prices them against the 2024 electoral register. 250 rare
+surnames that the Tunisian genealogies record are **9.1 times** more common in
+this dataset than in the register, and the series falls monotonically through
+every change of regime — 18.9× under the protectorate, 15.0× under Bourguiba,
+8.1× under Ben Ali, 5.3× across the transition, 4.6× now: a half-life of forty
+years. See
 [docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md), and the comparison
 itself in [EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN).
 
