@@ -1,0 +1,5 @@
+tier,match_basis,date_kind,citations,share
+"Office and date, published decree",office_and_date,published,72,0.2441
+"Date window, published decree",date_window,published,91,0.3085
+"Office matched, decree dated by year",office_and_date,year_only,79,0.2678
+Year only on both sides,year_only,year_only,53,0.1797

@@ -1,6 +1,6 @@
 """Publication figures for GovMembersTN.
 
-Forty-eight figures, built offline from `data/processed/` alone. Like the example
+Fifty-four figures, built offline from `data/processed/` alone. Like the example
 scripts in `analysis/`, this reads only the published tables - it never imports
 `govtn` and never touches `config/`, so it runs against a `make bundle` archive
 with nothing installed but pandas and matplotlib.
@@ -3517,6 +3517,361 @@ def fig_prior_careers(d):
     fig.tight_layout(rect=(0, 0.13, 1, 0.95))
     return fig, table
 
+# ------------------------------------------------------ gazette helpers ---
+# The Journal Officiel is where a Tunisian ministerial appointment legally
+# takes effect, and `jort_*` records the decree the pipeline matched to each
+# row. Matching starts in 1968: no appointment before that carries a citation,
+# so every rate here is computed over 1968 onwards and says so.
+JORT_FIRST_YEAR = 1968
+
+# The four ways a citation was established, strongest evidence first. This is
+# `jort_match_basis` crossed with `jort_date_kind`, which together form one
+# ladder rather than two dimensions: `date_window` matches are always against a
+# published decree date, and `year_only` matches never are, so the cross-tab is
+# mostly structural zeros. Collapsing it is the honest presentation.
+EVIDENCE_TIERS = [
+    ("Office and date, published decree", "office_and_date", "published"),
+    ("Date window, published decree", "date_window", "published"),
+    ("Office matched, decree dated by year", "office_and_date", "year_only"),
+    ("Year only on both sides", "year_only", "year_only"),
+]
+
+
+def cited(appointments: pd.DataFrame) -> pd.DataFrame:
+    """Appointments carrying a Journal Officiel citation."""
+    return appointments[appointments["jort_citation"].notna()].copy()
+
+
+def fig_gazette_coverage(d):
+    """How much of the record the gazette backs, decade by decade.
+
+    Coverage of the *legal* record is not what this measures. Every ministerial
+    appointment is gazetted; what varies is how much of the gazette the harvest
+    could find and match in jort.tn's public index. Read it as a property of
+    the source, exactly like fig. 1.
+    """
+    app = d["appointments"].copy()
+    app["year"] = pd.to_numeric(app["start_year"], errors="coerce")
+    app = app[app["year"].between(1956, 2026)]
+    app["decade"] = (app["year"] // 10 * 10).astype(int)
+
+    rows = []
+    for decade in sorted(app["decade"].unique()):
+        block = app[app["decade"] == decade]
+        n = int(block["jort_citation"].notna().sum())
+        rows.append({"decade": decade, "appointments": len(block), "cited": n,
+                     "share_cited": round(n / len(block), 4)})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.9))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(table) - 0.3)
+    ax.set_ylim(0, max(table["share_cited"]) * 1.35)
+    for i, r in table.iterrows():
+        rounded_bar(ax, i - 0.28, 0, 0.56, r["share_cited"], CAT[0])
+        ax.text(i, r["share_cited"] + max(table["share_cited"]) * 0.04,
+                f"{r['share_cited']:.0%}", ha="center", fontsize=8, color=INK_2)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{int(r.decade)}s\nn={r.appointments}"
+                        for r in table.itertuples()])
+    ax.set_yticks([0, .05, .10, .15, .20])
+    ax.set_yticklabels(["0%", "5%", "10%", "15%", "20%"])
+    ax.set_ylabel("Share of appointments with a decree citation")
+    ax.set_title("How much of the record the Journal Officiel backs")
+    peak = table.loc[table["share_cited"].idxmax()]
+    ax.text(0, -0.30,
+            "Not a measure of whether a decree exists — every ministerial "
+            "appointment is gazetted. It is how much of the gazette the harvest "
+            "could find and\nmatch in the public index at jort.tn. It peaks in "
+            f"the {int(peak['decade'])}s at {peak['share_cited']:.0%} of "
+            f"{int(peak['appointments'])} appointments, and thins to "
+            f"{table['share_cited'].iloc[-2]:.0%} in the 2010s on the largest "
+            f"denominator of all.\nNo appointment before {JORT_FIRST_YEAR} "
+            "carries a citation. Treat it as a property of the source, like "
+            "fig. 1 — not as evidence about how governments were appointed.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_gazette_by_portfolio(d):
+    """Which offices the gazette record reaches.
+
+    Matters for anyone filtering on `jort_citation`: the cited subset is not a
+    random sample of the cabinet. It leans hard towards the top of it.
+    """
+    app = d["appointments"].copy()
+    app["year"] = pd.to_numeric(app["start_year"], errors="coerce")
+    app = app[app["year"] >= JORT_FIRST_YEAR]
+
+    grouped = app.groupby("portfolio_label").agg(
+        appointments=("jort_citation", "size"),
+        cited=("jort_citation", lambda s: int(s.notna().sum())))
+    grouped = grouped[grouped["appointments"] >= 40]
+    grouped["share_cited"] = (grouped["cited"] / grouped["appointments"]).round(4)
+    table = grouped.sort_values("share_cited", ascending=False).reset_index()
+
+    fig, ax = plt.subplots(figsize=(7.4, 0.26 * len(table) + 1.9))
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_xlim(0, max(table["share_cited"]) * 1.12)
+    ax.set_ylim(len(table) - 0.4, -0.6)
+    for i, r in table.iterrows():
+        rounded_bar(ax, 0, i - 0.3, r["share_cited"], 0.6, CAT[0],
+                    horizontal=True)
+        ax.annotate(f"{r['share_cited']:.0%}", xy=(r["share_cited"], i),
+                    xytext=(7, 0), textcoords="offset points", va="center",
+                    fontsize=7.5, color=INK_2)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels([f"{r.portfolio_label}  ({r.appointments})"
+                        for r in table.itertuples()], fontsize=8)
+    ax.set_xticks([0, .2, .4, .6])
+    ax.set_xticklabels(["0%", "20%", "40%", "60%"])
+    ax.set_xlabel("Share of that portfolio's appointments with a decree citation")
+    ax.set_title("The gazette record reaches the top of the cabinet first")
+    top, bottom = table.iloc[0], table.iloc[-1]
+    fig.text(0.01, 0.012,
+             f"Appointments from {JORT_FIRST_YEAR} onwards, portfolios with at "
+             "least 40 of them; the bracketed count is that denominator. The "
+             f"head of government is cited at {top['share_cited']:.0%} against "
+             f"{bottom['share_cited']:.0%} for {bottom['portfolio_label'].lower()}"
+             ".\nA subset filtered on `jort_citation` is therefore not a random "
+             "sample of the cabinet: comparing cited rows to uncited ones "
+             "largely compares sovereign posts to the rest.",
+             fontsize=7.5, color=MUTED, va="bottom")
+    fig.tight_layout(rect=(0, 0.055, 1, 1))
+    return fig, table
+
+
+def fig_gazette_evidence(d):
+    """How firmly each of the 295 citations is attached to its appointment.
+
+    A citation is not a yes/no fact. `jort_match_basis` records what the match
+    was made on and `jort_date_kind` whether the decree carried a real date,
+    and together they are one ladder: the strongest tier matched office and
+    date against a dated decree, the weakest agreed only on a year.
+
+    Drawn as one labelled row per tier rather than a single stacked bar. A
+    stack needs a four-item legend, and under a one-row bar the only place for
+    it collides with the tick labels; rows name themselves on the axis.
+    """
+    block = cited(d["appointments"])
+    rows = []
+    for label, basis, kind in EVIDENCE_TIERS:
+        n = int(((block["jort_match_basis"] == basis)
+                 & (block["jort_date_kind"] == kind)).sum())
+        rows.append({"tier": label, "match_basis": basis, "date_kind": kind,
+                     "citations": n,
+                     "share": round(n / len(block), 4) if len(block) else 0.0})
+    table = pd.DataFrame(rows)
+    assert table["citations"].sum() == len(block), (
+        "the evidence tiers do not partition the citations")
+
+    colors = ["#86b6ef", "#5598e7", "#1c5cab", "#104281"]
+    fig, ax = plt.subplots(figsize=(7.6, 3.1))
+    ax.set_axisbelow(True); ax.xaxis.grid(True); ax.yaxis.grid(False)
+    ax.set_xlim(0, table["citations"].max() * 1.18)
+    ax.set_ylim(len(table) - 0.4, -0.6)
+    for i, (r, color) in enumerate(zip(table.itertuples(), colors)):
+        rounded_bar(ax, 0, i - 0.28, r.citations, 0.56, color, horizontal=True)
+        ax.annotate(f"{r.citations}   {r.share:.0%}", xy=(r.citations, i),
+                    xytext=(8, 0), textcoords="offset points", va="center",
+                    fontsize=8, color=INK_2)
+    ax.set_yticks(range(len(table)))
+    ax.set_yticklabels(table["tier"], fontsize=8.5)
+    ax.set_xlabel(f"Citations (of {len(block)})")
+    ax.set_title("How firmly each decree citation is attached")
+    fig.text(0.01, 0.012,
+             "Strongest tier at the top. Only the first was matched on both "
+             "office and a published decree date; the last agreed on a year and "
+             "nothing else, and the\ntwo in between are each strong on one axis "
+             "and weak on the other. `jort_match_basis` and `jort_date_kind` "
+             "form one ladder rather than two dimensions —\na date-window match "
+             "is always against a dated decree and a year-only match never is — "
+             "so crossing them yields mostly structural zeros.",
+             fontsize=7.5, color=MUTED, va="bottom")
+    fig.tight_layout(rect=(0, 0.17, 1, 1))
+    return fig, table
+
+
+def fig_gazette_date_gap(d):
+    """Days between the date we record and the date the decree was published.
+
+    The codebook calls a large gap "a finding worth inspecting, not an error
+    that has been corrected away". This is that instruction as a picture: most
+    citations sit within a week of the recorded start, and a long tail does not.
+    """
+    block = cited(d["appointments"])
+    delta = pd.to_numeric(block["jort_date_delta"], errors="coerce").dropna()
+
+    edges = [0, 3, 7, 14, 30, 60, 90, 180, 366]
+    labels = ["0–2", "3–6", "7–13", "14–29", "30–59", "60–89", "90–179", "180+"]
+    counts, _ = np.histogram(delta, bins=edges)
+    table = pd.DataFrame({"days": labels, "citations": counts.astype(int)})
+    table["beyond_30_days"] = [edges[i] >= 30 for i in range(len(labels))]
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.8))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(table) - 0.3); ax.set_ylim(0, counts.max() * 1.25)
+    for i, r in table.iterrows():
+        color = CAT[1] if r["beyond_30_days"] else CAT[0]
+        rounded_bar(ax, i - 0.3, 0, 0.6, r["citations"], color)
+        ax.text(i, r["citations"] + counts.max() * 0.04, str(r["citations"]),
+                ha="center", fontsize=8, color=INK_2)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels(table["days"])
+    ax.set_xlabel("Days between the recorded start date and the decree's publication")
+    ax.set_ylabel("Citations")
+    ax.set_title("Where the harvested date and the decree disagree")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], lw=7, label="under 30 days"),
+        Line2D([], [], color=CAT[1], lw=7, label="30 days or more — worth inspecting")],
+        loc="upper right")
+    within = int((delta <= 29).sum())
+    ax.text(0, -0.26,
+            f"The {len(delta)} citations whose decree carries a published date; "
+            "the other "
+            f"{len(block) - len(delta)} are dated by year only and cannot be "
+            f"compared. {within} sit within a month\nof the date we record and "
+            f"{len(delta) - within} do not, with a median gap of "
+            f"{int(delta.median())} days. The gap is never negative: no decree "
+            "in the matched set predates the start date\nwe hold. A large value "
+            "is a disagreement between sources to look at, not an error the "
+            "pipeline has quietly corrected.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_recorded_handovers(d):
+    """How often the roster names the person replaced, rather than leaving it
+    to be inferred.
+
+    Figs. 36 and 38 draw succession the pipeline *derives*, by ordering holders
+    of the same portfolio. A minority of rows state the handover outright, in
+    `replaces` and `replaced_by`. This is how large that minority is, which is
+    a fact about how richly each era was written up rather than about politics.
+    """
+    app = d["appointments"]
+    rows = []
+    for era in ERA_ORDER:
+        block = app[app["era"] == era]
+        if len(block) < 40:
+            continue
+        named = int(block["replaces"].notna().sum())
+        succ = int(block["replaced_by"].notna().sum())
+        rows.append({"era": era, "era_label": ERA_SHORT[era],
+                     "appointments": len(block), "names_predecessor": named,
+                     "names_successor": succ,
+                     "share_predecessor": round(named / len(block), 4),
+                     "share_successor": round(succ / len(block), 4)})
+    table = pd.DataFrame(rows)
+
+    fig, ax = plt.subplots(figsize=(8.0, 3.9))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(-0.7, len(table) - 0.3)
+    top = max(table["share_predecessor"].max(), table["share_successor"].max())
+    ax.set_ylim(0, top * 1.3)
+    for i, r in table.iterrows():
+        rounded_bar(ax, i - 0.32, 0, 0.30, r["share_predecessor"], CAT[0])
+        rounded_bar(ax, i + 0.02, 0, 0.30, r["share_successor"], CAT[1])
+        ax.text(i - 0.17, r["share_predecessor"] + top * 0.045,
+                f"{r['share_predecessor']:.0%}", ha="right", fontsize=7.5,
+                color=INK_2)
+        ax.text(i + 0.17, r["share_successor"] + top * 0.045,
+                f"{r['share_successor']:.0%}", ha="left", fontsize=7.5,
+                color=INK_2)
+    ax.set_xticks(range(len(table)))
+    ax.set_xticklabels([f"{r.era_label}\nn={r.appointments}"
+                        for r in table.itertuples()])
+    ax.set_yticks([0, .05, .10, .15, .20])
+    ax.set_yticklabels(["0%", "5%", "10%", "15%", "20%"])
+    ax.set_ylabel("Share of that era's appointments")
+    ax.set_title("How often the roster names the handover outright")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], lw=7, label="names the person replaced"),
+        Line2D([], [], color=CAT[1], lw=7, label="names the replacement")],
+        loc="upper right")
+    ax.text(0, -0.30,
+            "A property of how richly each era's rosters were written, not of "
+            "how governments changed hands: a reshuffle is no more explicit "
+            "under one regime\nthan another, but its Wikipedia table may be. "
+            "Both columns are sparse everywhere — the succession network in "
+            "figs. 36 and 38 is derived by ordering\nholders of the same "
+            "portfolio, and does not depend on these columns.",
+            transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+    fig.tight_layout()
+    return fig, table
+
+
+def fig_women_per_cabinet(d):
+    """Every recorded cabinet roster's share of women, against its size.
+
+    One mark per row of `cabinets`, which is NOT one mark per government. The
+    sources chunk rosters differently, so the Bouden government appears three
+    times - as `TN-19` with 23 members, as the Arabic article's roster with 26,
+    and inside a composite article covering four premierships with 57 - at
+    three different shares. Fifty-six rows span twenty-five distinct start
+    years. Drawing them all is the honest option: the spread within a year is
+    the sources disagreeing, and hiding it would invent a precision the table
+    does not have.
+
+    Fig. 2 is the era-level view and is computed from coded gender per person,
+    not from this table's counts, which is why the two do not have to agree.
+    """
+    cab = d["cabinets"].copy()
+    cab["year"] = pd.to_datetime(cab["start_date"], errors="coerce").dt.year
+    cab = cab.dropna(subset=["year", "share_women", "n_members"])
+    cab = cab[cab["n_members"] > 0].sort_values("year")
+    table = cab[["cabinet_id", "year", "n_members", "n_women",
+                 "share_women"]].reset_index(drop=True)
+    table["year"] = table["year"].astype(int)
+
+    fig, ax = plt.subplots(figsize=(7.4, 4.0))
+    ax.set_axisbelow(True); ax.yaxis.grid(True); ax.xaxis.grid(False)
+    ax.set_xlim(1940, 2032); ax.set_ylim(-0.03, max(table["share_women"]) * 1.32)
+    sizes = 24 + 190 * (table["n_members"] / table["n_members"].max()) ** 0.5
+    ax.scatter(table["year"], table["share_women"], s=sizes, color=CAT[0],
+               edgecolor=SURFACE, linewidth=2, zorder=5)
+    # Labelled by year and roster size, never by `cabinet_id`: half of the
+    # recent ids are Arabic, and an RTL id beside a LTR percentage renders as
+    # a scrambled bidirectional run.
+    for slot, (_, r) in enumerate(table.nlargest(3, "share_women").iterrows()):
+        ax.annotate(f"{int(r['year'])}: {r['share_women']:.0%} of "
+                    f"{int(r['n_members'])}",
+                    xy=(r["year"], r["share_women"]),
+                    xytext=(-6, 12 + 12 * slot), textcoords="offset points",
+                    ha="right", fontsize=7, color=INK_2)
+    ax.set_yticks([0, .1, .2, .3, .4, .5])
+    ax.set_yticklabels(["0%", "10%", "20%", "30%", "40%", "50%"])
+    ax.set_ylabel("Share of that roster's members who are women")
+    ax.set_title("Women in each recorded cabinet roster, 1943–2025")
+    ax.legend(handles=[
+        Line2D([], [], color=CAT[0], marker="o", markersize=5, lw=0,
+               label="small roster"),
+        Line2D([], [], color=CAT[0], marker="o", markersize=11, lw=0,
+               label="large roster")], loc="upper left", labelspacing=0.9)
+
+    zero = table[table["n_women"] == 0]
+    years = table["year"].nunique()
+    fig.text(0.01, 0.012,
+             f"One mark per roster in `cabinets`, sized by its membership — not "
+             f"one per government. The {len(table)} rows span {years} distinct "
+             "start years, because the\nsources chunk rosters differently: the "
+             "2021 government appears three times, at "
+             + ", ".join(f"{r.share_women:.0%} of {int(r.n_members)}"
+                         for r in table[table["year"] == 2021]
+                         .sort_values("share_women", ascending=False)
+                         .itertuples())
+             + ". Vertical spread\nwithin a year is the sources disagreeing, "
+             f"not the cabinet changing. {len(zero)} rosters record no women at "
+             f"all, the last of them in {int(zero['year'].max())}. Fig. 2 is "
+             "the era-level view,\ncomputed from coded gender per person "
+             "rather than from this table.",
+             fontsize=7.5, color=MUTED, va="bottom")
+    fig.tight_layout(rect=(0, 0.15, 1, 1))
+    return fig, table
+
+
 FIGURES = [
     ("fig01_coverage_by_decade", fig_coverage),
     ("fig02_women_share_by_era", fig_women),
@@ -3566,6 +3921,12 @@ FIGURES = [
     ("fig46_renewal_rate_by_era", fig_renewal_by_era),
     ("fig47_premiership_apprenticeship", fig_premiership_apprenticeship),
     ("fig48_prior_careers_of_entrants", fig_prior_careers),
+    ("fig49_gazette_coverage_by_decade", fig_gazette_coverage),
+    ("fig50_gazette_coverage_by_portfolio", fig_gazette_by_portfolio),
+    ("fig51_gazette_evidence_tiers", fig_gazette_evidence),
+    ("fig52_gazette_date_gap", fig_gazette_date_gap),
+    ("fig53_recorded_handovers", fig_recorded_handovers),
+    ("fig54_women_per_cabinet", fig_women_per_cabinet),
 ]
 
 
