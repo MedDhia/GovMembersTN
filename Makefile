@@ -73,3 +73,7 @@ clean:  ## Remove generated tables (keeps the raw payload cache)
 	rm -f data/processed/networks/*.csv data/processed/networks/*.gexf \
 	      data/processed/networks/*.graphml
 	rm -f data/interim/*.json data/interim/*.csv
+
+.PHONY: elite-persistence
+elite-persistence:  ## export the ministers as surnames, for the EliteNetworksTN comparison
+	PYTHONPATH=src $(PY) -m govtn.elite_persistence
