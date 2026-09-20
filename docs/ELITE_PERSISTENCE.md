@@ -88,17 +88,29 @@ does not hold the register.
 ## What the comparison found
 
 The cabinet is the strongest and the longest-running result in the whole
-comparison. 196 surnames the genealogies place in Tunisia before independence
-are **10.2 times** more common among these 882 people than in the 2024
-electoral register (66 holders, 95% CI 8.1–12.8).
+comparison. **196 surnames the genealogies place in Tunisia before
+independence** — under the Husaynid beylik to 1881 or under the colonial
+administration from 1881 to 1956, merged into one treatment — are **10.2
+times** more common among these 882 people than in the 2024 electoral register
+(66 holders, 95% CI 8.1–12.8).
 
-Because this dataset reaches back to the protectorate, it is also the only one
-that can carry the estimator the surname-mobility literature uses. Converting
-the ratio into the group's implied mean status — in standard deviations, by
-inverting through the normal tail — gives a series that falls monotonically
-across five periods and three changes of regime:
+### In the contemporary window
 
-| | protectorate | Bourguiba | Ben Ali | transition | Saied |
+Restricted to **2011–2023**, with each person counted once, the cabinet of 396
+carries 19 of them. A bearer of such a surname is **6.8 times more likely**
+(95% CI 4.3–10.7) to be a minister in that window than someone who is not —
+26.6 per 100,000 bearers against 3.9 per 100,000 of everyone else. Converted
+into the group's implied mean status that is **+0.48 SD**, against +0.20 SD
+for a member of parliament and +0.55 for a co-shareholder of a listed company.
+
+### Over the whole span this dataset covers
+
+Because this dataset reaches back to the 1940s, it is the only one that can
+carry the estimator the surname-mobility literature uses over a real number of
+generations. The implied status gap falls monotonically across five periods
+and three changes of regime:
+
+| | to 1956 | Bourguiba | Ben Ali | transition | Saied |
 |---|---:|---:|---:|---:|---:|
 | ratio | 20.9× | 15.4× | 9.3× | 6.3× | 5.5× |
 | implied status gap | **0.83 SD** | 0.74 SD | 0.59 SD | 0.47 SD | **0.39 SD** |
@@ -108,16 +120,25 @@ That is an intergenerational correlation of **b = 0.79 (0.73–0.86)** per
 Parliament, over a comparable span, comes out at 0.50: appointed office
 transmits, elected office does not.
 
-Split by the era a family is first attested in, the cabinet result sharpens.
-The **beylical** families (before 1881) open at **1.07 SD** above the
-population; the **protectorate** families at 0.28 — a fourfold difference in
-the quantity the model is about. Surnames the genealogies first record after
-1956 never clear parity in enough periods of the cabinet to fit a decay at all,
-which is what a placebo should do.
+The two eras are merged, but the split is still estimable at the headline's
+rarity cut, and in this roster it is large: the **beylical** surnames run
+**17.0×** and the colonial-era ones **5.1×**. The households that staffed the
+beylical ministries kept staffing the republic's.
+
+### The caveats that matter most for these rows
+
+**The placebo cannot be tested here.** Surnames the genealogies first record
+after 1956 are 16 surnames over 0.047% of the register, so a cabinet of 396
+predicts **0.19** of them. Observing none is the expected outcome under every
+hypothesis; it is not evidence that the placebo is null. In the three rosters
+elsewhere in the build that *are* large enough to test, the placebo fails. The
+ministerial result therefore rests on the monotone eighty-year decline above,
+not on a placebo.
+
+**The baseline is a 2024 register**, so the pre-independence ratio is an order
+of magnitude rather than a measurement — though the shape of the decline is
+corroborated by the gazette's 45,515 appointees, which move 5.2× → 2.5× over
+the same span with intervals of ±0.3.
 
 Full results, figures and limitations: `docs/FINDINGS-persistence.md` in
-EliteNetworksTN. The caveat that matters most for this repository's rows is
-that the baseline is a **2024** register, so the pre-independence ratio is an
-order of magnitude rather than a measurement — though the shape of the decline
-is corroborated by the gazette's 45,515 appointees, which move 5.2× → 2.5×
-over the same span with intervals of ±0.3.
+EliteNetworksTN.

@@ -170,10 +170,12 @@ Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 as surnames and prices them against the 2024 electoral register. 196 surnames
 the Tunisian genealogies place in the country before independence are **10.2
 times** more common in this dataset than in the register, and the series falls
-monotonically through every change of regime — 20.9× under the protectorate,
-15.4× under Bourguiba, 9.3× under Ben Ali, 6.3× across the transition, 5.5×
-now: a half-life of forty-three years, or an intergenerational correlation of
-**b = 0.79** in the surname-mobility literature's own parameter. See
+monotonically through every change of regime — 20.9× to 1956, 15.4× under
+Bourguiba, 9.3× under Ben Ali, 6.3× across the transition, 5.5× now: a
+half-life of forty-three years, or an intergenerational correlation of
+**b = 0.79** in the surname-mobility literature's own parameter. In the
+2011–2023 window alone, a bearer of such a surname is **6.8 times more likely**
+than anyone else to be a minister (95% CI 4.3–10.7). See
 [docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md), and the comparison
 itself in [EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN).
 
