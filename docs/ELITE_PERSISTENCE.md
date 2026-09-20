@@ -87,14 +87,37 @@ does not hold the register.
 
 ## What the comparison found
 
-Ministers are the strongest result in the whole build. Thirteen rare
-pre-protectorate notable surnames are **38.5 times** more common among the 882
-people in this dataset than in the electoral register (95% CI 24.7–59.7), and
-the series declines through every change of regime: 183× under the protectorate
-and its last governments, 67× under Bourguiba, 10× under Ben Ali, 9.8× across
-the transition.
+The cabinet is the strongest and the longest-running result in the whole
+comparison. 196 surnames the genealogies place in Tunisia before independence
+are **10.2 times** more common among these 882 people than in the 2024
+electoral register (66 holders, 95% CI 8.1–12.8).
+
+Because this dataset reaches back to the protectorate, it is also the only one
+that can carry the estimator the surname-mobility literature uses. Converting
+the ratio into the group's implied mean status — in standard deviations, by
+inverting through the normal tail — gives a series that falls monotonically
+across five periods and three changes of regime:
+
+| | protectorate | Bourguiba | Ben Ali | transition | Saied |
+|---|---:|---:|---:|---:|---:|
+| ratio | 20.9× | 15.4× | 9.3× | 6.3× | 5.5× |
+| implied status gap | **0.83 SD** | 0.74 SD | 0.59 SD | 0.47 SD | **0.39 SD** |
+
+That is an intergenerational correlation of **b = 0.79 (0.73–0.86)** per
+30-year generation — the rate Clark finds in almost every society he measures.
+Parliament, over a comparable span, comes out at 0.50: appointed office
+transmits, elected office does not.
+
+Split by the era a family is first attested in, the cabinet result sharpens.
+The **beylical** families (before 1881) open at **1.07 SD** above the
+population; the **protectorate** families at 0.28 — a fourfold difference in
+the quantity the model is about. Surnames the genealogies first record after
+1956 never clear parity in enough periods of the cabinet to fit a decay at all,
+which is what a placebo should do.
 
 Full results, figures and limitations: `docs/FINDINGS-persistence.md` in
-EliteNetworksTN. The most important caveat for this repository's rows is that
-the baseline is a **2024** register, so the pre-independence ratio is an order
-of magnitude rather than a measurement.
+EliteNetworksTN. The caveat that matters most for this repository's rows is
+that the baseline is a **2024** register, so the pre-independence ratio is an
+order of magnitude rather than a measurement — though the shape of the decline
+is corroborated by the gazette's 45,515 appointees, which move 5.2× → 2.5×
+over the same span with intervals of ±0.3.
