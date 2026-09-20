@@ -127,13 +127,24 @@ beylical ministries kept staffing the republic's.
 
 ### The caveats that matter most for these rows
 
-**The placebo cannot be tested here.** Surnames the genealogies first record
-after 1956 are 16 surnames over 0.047% of the register, so a cabinet of 396
-predicts **0.19** of them. Observing none is the expected outcome under every
-hypothesis; it is not evidence that the placebo is null. In the three rosters
-elsewhere in the build that *are* large enough to test, the placebo fails. The
-ministerial result therefore rests on the monotone eighty-year decline above,
-not on a placebo.
+**The control is where this result is tested, and it passes.** The comparison
+that matters holds rarity and the surname matching fixed and varies only
+whether the genealogies know the family: 11,456 surnames under the same
+1,000-voter ceiling, read through the same matcher, that Rodovid never
+recorded. They hold 5.10% of the register and turn up in **37 of the 882
+ministers, a ratio of 0.8× [0.6–1.1]** — at parity, or just under it. Against
+that null the cabinet's 10.2× is a factor of twelve, and it is not something
+rarity buys.
+
+**The placebo cannot be tested here**, and is a different question anyway.
+Surnames the genealogies first record after 1956 are 16 surnames over 0.047%
+of the register, so a cabinet of 396 predicts **0.19** of them; observing none
+is the expected outcome under every hypothesis. It also would not settle much
+if it could be run: those sixteen surnames are themselves in Rodovid, so the
+placebo asks whether old documented notability beats *recent* documented
+notability, not whether documented notability beats the rest of the country.
+That second question is the control's, above. The ministerial result rests on
+it and on the monotone eighty-year decline.
 
 **The baseline is a 2024 register**, so the pre-independence ratio is an order
 of magnitude rather than a measurement — though the shape of the decline is
