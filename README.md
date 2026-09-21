@@ -166,6 +166,19 @@ lets an R user reproduce a regional or era-level result without a rewrite.
 
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
+**Are these families old?** `make elite-persistence` exports the 882 ministers
+as surnames and prices them against the 2024 electoral register. 196 surnames
+the Tunisian genealogies place in the country before independence are **10.2
+times** more common in this dataset than in the register, and the series falls
+monotonically through every change of regime — 20.9× to 1956, 15.4× under
+Bourguiba, 9.3× under Ben Ali, 6.3× across the transition, 5.5× now: a
+half-life of forty-three years, or an intergenerational correlation of
+**b = 0.79** in the surname-mobility literature's own parameter. In the
+2011–2023 window alone, a bearer of such a surname is **6.8 times more likely**
+than anyone else to be a minister (95% CI 4.3–10.7). See
+[docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md), and the comparison
+itself in [EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN).
+
 ## The four network layers
 
 "The network of Tunisian ministers" is not one object, and the choice between
@@ -266,7 +279,8 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   networks/      edge lists and graph exports
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
-docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
+docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md,
+                 ELITE_PERSISTENCE.md
 tests/           215 test functions, 411 cases; fixtures reproduce real markup
 ```
 

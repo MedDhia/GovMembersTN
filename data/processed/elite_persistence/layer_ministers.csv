@@ -1,0 +1,1090 @@
+layer,person_id,name_raw,script,surname_candidates,spine_candidates,period,subgroup,name_ar,spine_candidates_ar,first_year,max_rank_level,ever_head_of_government,birth_governorate
+ministers,Q100261455,Walid Zidi,lat,ZIDI,ZD,second_republic,Le Kef,وليد الزيدي,ZD,2020,3,False,Le Kef
+ministers,Q1043040,Kamel Morjane,lat,MORJANE,MRJN,ben_ali,Sousse,كمال مرجان,MRJN,1999,3,False,Sousse
+ministers,Q1043040,Kamel Morjane,lat,MORJANE,MRJN,second_republic,Sousse,كمال مرجان,MRJN,1999,3,False,Sousse
+ministers,Q104602558,Samir Bechouel,lat,BECHOUEL,BSL,second_republic,Bizerte,سمير بشوال,BSL,2016,5,False,Bizerte
+ministers,Q104821906,Habib Ammar,lat,AMMAR,MR,second_republic,Tunis,الحبيب عمار,MR,2020,3,False,Tunis
+ministers,Q104828106,Hasna Ben Slimane,lat,BEN SLIMANE|SLIMANE,BNSLMN|SLMN,second_republic,Tunis,حسناء بن سليمان,BNSLMN|SLMN,2020,3,False,Tunis
+ministers,Q104873425,Abdellatif Missaoui,lat,MISSAOUI,MS,second_republic,Kasserine,عبد اللطيف الميساوي,MS,2020,3,False,Kasserine
+ministers,Q10514449,Mehdi Ben Gharbia,lat,BEN GHARBIA|GHARBIA,BNVRB|VRB,second_republic,Bizerte,المهدي بن غربية,BNVRB|VRB,2016,3,False,Bizerte
+ministers,Q10591389,Iyed Dahmani,lat,DAHMANI,DHMN,second_republic,Siliana,إياد الدهماني,DHMN,2016,3,False,Siliana
+ministers,Q107707866,Ridha Gharsalloui,lat,GHARSALLOUI,VRSL,saied_exception,,رضا غرسلاوي,VRSL,2021,3,False,
+ministers,Q108159069,Sihem Boughdiri,lat,BOUGHDIRI,BVDR,second_republic,,سهام البوغديري نمصية,MS,2021,3,False,
+ministers,Q108159069,Sihem Boughdiri,lat,BOUGHDIRI,BVDR,saied_exception,,سهام البوغديري نمصية,MS,2021,3,False,
+ministers,Q108163613,Nizar Ben Néji,lat,BEN NEJI|NEJI,BNJ|NJ,second_republic,Manouba,نزار بن ناجي,BNJ|NJ,2021,3,False,Manouba
+ministers,Q108163613,Nizar Ben Néji,lat,BEN NEJI|NEJI,BNJ|NJ,saied_exception,Manouba,نزار بن ناجي,BNJ|NJ,2021,3,False,Manouba
+ministers,Q108462555,Mohammed Badra,lat,BADRA,BDR,protectorate_end,,محمد بدرة,BDR,1954,3,False,
+ministers,Q108741355,Najla Bouden,lat,BOUDEN,BDN,second_republic,Kairouan,نجلاء بودن,BDN,2021,0,True,Kairouan
+ministers,Q108741355,Najla Bouden,lat,BOUDEN,BDN,saied_exception,Kairouan,نجلاء بودن,BDN,2021,0,True,Kairouan
+ministers,Q108750786,Khaled Yahyaoui,lat,YAHYAOUI,H,saied_exception,,خالد اليحياوي,H,2021,3,False,
+ministers,Q108865358,Samir Saïed,lat,SAIED,SD,second_republic,,سمير سعيد (وزير),SD,2021,3,False,
+ministers,Q108865358,Samir Saïed,lat,SAIED,SD,saied_exception,,سمير سعيد (وزير),SD,2021,3,False,
+ministers,Q108883556,Imed Memmich,lat,MEMMICH,MS,second_republic,Tunis,عماد مميش,MS,2021,3,False,Tunis
+ministers,Q108883556,Imed Memmich,lat,MEMMICH,MS,saied_exception,Tunis,عماد مميش,MS,2021,3,False,Tunis
+ministers,Q108892344,Mahmoud Elyes Hamza,lat,HAMZA,HMZ,second_republic,Mahdia,محمود إلياس حمزة,HMZ,2021,3,False,Mahdia
+ministers,Q108892344,Mahmoud Elyes Hamza,lat,HAMZA,HMZ,saied_exception,Mahdia,محمود إلياس حمزة,HMZ,2021,3,False,Mahdia
+ministers,Q108892347,Malek Ezzahi,lat,EZZAHI,ZH,second_republic,Gafsa,مالك الزاهي,ZH,2021,3,False,Gafsa
+ministers,Q108892347,Malek Ezzahi,lat,EZZAHI,ZH,saied_exception,Gafsa,مالك الزاهي,ZH,2021,3,False,Gafsa
+ministers,Q108892351,Rabie Majidi,lat,MAJIDI,MJD,second_republic,,ربيع المجيدي,MJD,2021,3,False,
+ministers,Q108892351,Rabie Majidi,lat,MAJIDI,MJD,saied_exception,,ربيع المجيدي,MJD,2021,3,False,
+ministers,Q108892355,Ibrahim Chaibi,lat,CHAIBI,SB,second_republic,Gabès,إبراهيم الشائبي,SB,2021,3,False,Gabès
+ministers,Q108892355,Ibrahim Chaibi,lat,CHAIBI,SB,saied_exception,Gabès,إبراهيم الشائبي,SB,2021,3,False,Gabès
+ministers,Q108892359,Fadhila Rebhi,lat,REBHI,RBH,second_republic,,فضيلة الرابحي,RBH,2021,3,False,
+ministers,Q108892359,Fadhila Rebhi,lat,REBHI,RBH,saied_exception,,فضيلة الرابحي,RBH,2021,3,False,
+ministers,Q108892363,Neila Gonji,lat,GONJI,KNJ,second_republic,Tunis,نايلة نويرة القنجي,KNJ,2021,3,False,Tunis
+ministers,Q108892363,Neila Gonji,lat,GONJI,KNJ,saied_exception,Tunis,نايلة نويرة القنجي,KNJ,2021,3,False,Tunis
+ministers,Q108892366,Mohamed Moez Belhassine,lat,BELHASSINE,BLHSN,second_republic,Tunis,محمد المعز بلحسين,BLHSN,2021,3,False,Tunis
+ministers,Q108892366,Mohamed Moez Belhassine,lat,BELHASSINE,BLHSN,saied_exception,Tunis,محمد المعز بلحسين,BLHSN,2021,3,False,Tunis
+ministers,Q108892374,Sara Zaafarani,lat,ZAAFARANI,ZFRN,second_republic,Tunis,سارة الزعفراني,ZFRN,2021,0,True,Tunis
+ministers,Q108892374,Sara Zaafarani,lat,ZAAFARANI,ZFRN,saied_exception,Tunis,سارة الزعفراني,ZFRN,2021,0,True,Tunis
+ministers,Q108892375,Nasreddine Nsibi,lat,NSIBI,NSB,second_republic,,نصر الدين النصيبي,NSB,2021,3,False,
+ministers,Q108892375,Nasreddine Nsibi,lat,NSIBI,NSB,saied_exception,,نصر الدين النصيبي,NSB,2021,3,False,
+ministers,Q108892377,Moncef Boukthir,lat,BOUKTHIR,BKTR,second_republic,Gafsa,منصف بوكثير,BKTR,2021,3,False,Gafsa
+ministers,Q108892377,Moncef Boukthir,lat,BOUKTHIR,BKTR,saied_exception,Gafsa,منصف بوكثير,BKTR,2021,3,False,Gafsa
+ministers,Q108892383,Leila Chikhaoui,lat,CHIKHAOUI,SX,second_republic,,ليلى الشيخاوي,SX,2021,3,False,
+ministers,Q108892383,Leila Chikhaoui,lat,CHIKHAOUI,SX,saied_exception,,ليلى الشيخاوي,SX,2021,3,False,
+ministers,Q108892387,Hayet Guettat,lat,GUETTAT,KT,second_republic,Médenine,حياة قطاط القرمازي,KRMZ,2021,3,False,Médenine
+ministers,Q108892387,Hayet Guettat,lat,GUETTAT,KT,saied_exception,Médenine,حياة قطاط القرمازي,KRMZ,2021,3,False,Médenine
+ministers,Q109041047,Kamel Doukh,lat,DOUKH,DX,second_republic,,كمال الدوخ,DX,2020,3,False,
+ministers,Q109045280,Mohamed Ali Nafti,lat,NAFTI,NFT,second_republic,Bizerte,محمد علي النفطي,NFT,2020,3,False,Bizerte
+ministers,Q109045280,Mohamed Ali Nafti,lat,NAFTI,NFT,saied_exception,Bizerte,محمد علي النفطي,NFT,2020,3,False,Bizerte
+ministers,Q109045290,Mohamed Bousaïd,lat,BOUSAID,BSD,second_republic,,محمد بوسعيد,BSD,2020,3,False,
+ministers,Q109544397,Mohamed Rekik,lat,REKIK,RK,second_republic,Sfax,محمد الرقيق,RK,2021,3,False,Sfax
+ministers,Q109544397,Mohamed Rekik,lat,REKIK,RK,saied_exception,Sfax,محمد الرقيق,RK,2021,3,False,Sfax
+ministers,Q110014103,Amel Adouani,lat,ADOUANI,DN,saied_exception,,آمال العدواني,DN,2021,3,False,
+ministers,Q111701635,Souad Lamine-Jomni,lat,JOMNI,JMN,ben_ali,Kairouan,,,1988,5,False,Kairouan
+ministers,Q115868368,Béchir Ennaji,lat,ENNAJI,NJ,monarchy,,,,1956,5,False,
+ministers,Q116206588,Kalthoum Ben Rejeb,lat,BEN REJEB|REJEB,BNRJB|RJB,second_republic,,كلثوم بن رجب,BNRJB|RJB,2021,3,False,
+ministers,Q116206588,Kalthoum Ben Rejeb,lat,BEN REJEB|REJEB,BNRJB|RJB,saied_exception,,كلثوم بن رجب,BNRJB|RJB,2021,3,False,
+ministers,Q116730514,Nabil Ammar,lat,AMMAR,MR,saied_exception,Tunis,نبيل عمار,MR,2023,3,False,Tunis
+ministers,Q117209481,Kamel Feki,lat,FEKI,FK,saied_exception,,كمال الفقي,FK,2023,3,False,
+ministers,Q11775942,Salem Labiadh,lat,LABIADH,LBD,transition,Médenine,سالم الأبيض,BD,2013,3,False,Médenine
+ministers,Q118382993,Mustapha Ferjani,lat,FERJANI,FRJN,second_republic,Tunis,مصطفى الفرجاني,FRJN,2021,3,False,Tunis
+ministers,Q118382993,Mustapha Ferjani,lat,FERJANI,FRJN,saied_exception,Tunis,مصطفى الفرجاني,FRJN,2021,3,False,Tunis
+ministers,Q121088468,Ahmed Hachani,lat,HACHANI,HSN,second_republic,Tunis,أحمد الحشاني,HSN,2021,0,True,Tunis
+ministers,Q121088468,Ahmed Hachani,lat,HACHANI,HSN,saied_exception,Tunis,أحمد الحشاني,HSN,2021,0,True,Tunis
+ministers,Q121356281,Ahmed Bennour,lat,BENNOUR,BNR,bourguiba,Tunis,أحمد بنور,BNR,1974,5,False,Tunis
+ministers,Q121360095,Abderrazak Kéfi,lat,KEFI,KF,bourguiba,Kairouan,عبد الرزاق كافي,KF,1983,3,False,Kairouan
+ministers,Q121360095,Abderrazak Kéfi,lat,KEFI,KF,ben_ali,Kairouan,عبد الرزاق كافي,KF,1983,3,False,Kairouan
+ministers,Q12184481,Béchir Ben Slama,lat,BEN SLAMA|SLAMA,BNSLM|SLM,bourguiba,Tunis,البشير بن سلامة,BNSLM|SLM,1981,3,False,Tunis
+ministers,Q12194585,Hédi Mabrouk,lat,MABROUK,MBRK,bourguiba,Monastir,الهادي المبروك,MBRK,1986,3,False,Monastir
+ministers,Q12213166,Rejeb Khaznadar,lat,KHAZNADAR,XZNDR,beylical,,رجب خزندار,XZNDR,1759,0,True,
+ministers,Q12214730,Zouheir M'dhaffer,lat,M'DHAFFER,MDFR,ben_ali,Sfax,زهير المظفر,MZFR,1999,3,False,Sfax
+ministers,Q12217102,Sihem Ayadi,lat,AYADI,D,second_republic,,سهام العيادي,D,2020,3,False,
+ministers,Q12220165,Slaheddine Baly,lat,BALY,BL,bourguiba,Tunis,صلاح الدين بالي,BL,1973,2,False,Tunis
+ministers,Q12220165,Slaheddine Baly,lat,BALY,BL,ben_ali,Tunis,صلاح الدين بالي,BL,1973,2,False,Tunis
+ministers,Q12228423,Amor Ben Mahmoud,lat,BEN MAHMOUD|MAHMOUD,BMHMD|MHMD,ben_ali,Kairouan,عمر بن محمود,BMHMD|MHMD,1999,5,False,Kairouan
+ministers,Q12230326,Fethia Mzali,lat,MZALI,MZL,bourguiba,Tunis,فتحية مزالي,MZL,1983,3,False,Tunis
+ministers,Q12237240,Lotfi Zitoun,lat,ZITOUN,ZTN,second_republic,Tunis,لطفي زيتون,ZTN,2020,3,False,Tunis
+ministers,Q12239668,Mohamed Hamdi,lat,HAMDI,HMD,second_republic,Médenine,محمد بن مبروك الحامدي,HMD,2020,3,False,Médenine
+ministers,Q12239709,Mohamed Daouas,lat,DAOUAS,DS,ben_ali,,محمد الدواس,DS,2001,3,False,
+ministers,Q12239765,Mohamed Snoussi,lat,SNOUSSI,SNS,bourguiba,Tunis,محمد السنوسي,SNS,1969,3,False,Tunis
+ministers,Q12239816,Mohamed Sayah,lat,SAYAH,SH,bourguiba,Monastir,محمد الصياح,SH,1969,2,False,Monastir
+ministers,Q12240251,Mohamed Bellalouna,lat,BELLALOUNA,BLN,bourguiba,Sousse,محمد بن للونة,BNLN|LN,1971,3,False,Sousse
+ministers,Q12240636,Mohamed Salah Ayari,lat,AYARI,R,bourguiba,Siliana,محمد صالح العياري,R,1986,3,False,Siliana
+ministers,Q12246948,Mohamed Chaker,lat,CHAKER,SKR,bourguiba,Sfax,محمد شاكر,SKR,1979,3,False,Sfax
+ministers,Q12248493,Naceur Ben Saïd,lat,BEN SAID|SAID,BNSD|SD,protectorate_end,Kébili,نصر بن سعيد,BNSD|SD,1954,3,False,Kébili
+ministers,Q12270270,Othman Jerandi,lat,JERANDI,JRND,transition,Ben Arous,عثمان الجرندي,JRND,2013,3,False,Ben Arous
+ministers,Q12270270,Othman Jerandi,lat,JERANDI,JRND,second_republic,Ben Arous,عثمان الجرندي,JRND,2013,3,False,Ben Arous
+ministers,Q12270270,Othman Jerandi,lat,JERANDI,JRND,saied_exception,Ben Arous,عثمان الجرندي,JRND,2013,3,False,Ben Arous
+ministers,Q12352837,Nadhir Ben Ammou,lat,BEN AMMOU|AMMOU,BM|M,transition,Nabeul,نذير بن عمو,BM|M,2013,3,False,Nabeul
+ministers,Q124353858,Feryel Ouerghi,lat,OUERGHI,RV,second_republic,,فريال الورغي,RV,2021,3,False,
+ministers,Q124353858,Feryel Ouerghi,lat,OUERGHI,RV,saied_exception,,فريال الورغي,RV,2021,3,False,
+ministers,Q125330973,Saloua Abassi,lat,ABASSI,BS,saied_exception,,سلوى العباسي,BS,2024,3,False,
+ministers,Q125337883,Fatma Thabet,lat,THABET,TBT,second_republic,Tunis,فاطمة ثابت,TBT,2021,3,False,Tunis
+ministers,Q125337883,Fatma Thabet,lat,THABET,TBT,saied_exception,Tunis,فاطمة ثابت,TBT,2021,3,False,Tunis
+ministers,Q128723414,Kamel Maddouri,lat,MADDOURI,MDR,second_republic,Béja,كمال المدوري,MDR,2021,0,True,Béja
+ministers,Q128723414,Kamel Maddouri,lat,MADDOURI,MDR,saied_exception,Béja,كمال المدوري,MDR,2021,0,True,Béja
+ministers,Q129810051,Khaled Sehili,lat,SEHILI,SHL,second_republic,Tunis,خالد_السهيلي,SHL,2021,3,False,Tunis
+ministers,Q129810051,Khaled Sehili,lat,SEHILI,SHL,saied_exception,Tunis,خالد_السهيلي,SHL,2021,3,False,Tunis
+ministers,Q130344076,Khaled Nouri,lat,NOURI,NR,second_republic,Sousse,خالد النوري,NR,2021,3,False,Sousse
+ministers,Q130344076,Khaled Nouri,lat,NOURI,NR,saied_exception,Sousse,خالد النوري,NR,2021,3,False,Sousse
+ministers,Q130530616,Philippe Dakpa Légré,lat,LEGRE,LKR,second_republic,,,,2020,3,False,
+ministers,Q132560656,Mechket Slama,lat,SLAMA,SLM,second_republic,,مشكاة سلامة الخالدي,XLD,2021,3,False,
+ministers,Q132560656,Mechket Slama,lat,SLAMA,SLM,saied_exception,,مشكاة سلامة الخالدي,XLD,2021,3,False,
+ministers,Q132560774,Asma Jebri,lat,JEBRI,JBR,second_republic,Siliana,أسماء جابري,JBR,2021,3,False,Siliana
+ministers,Q132560774,Asma Jebri,lat,JEBRI,JBR,saied_exception,Siliana,أسماء جابري,JBR,2021,3,False,Siliana
+ministers,Q132633117,Ahmed Bouhali,lat,BOUHALI,BHL,second_republic,,أحمد البوهالي,BHL,2021,3,False,
+ministers,Q132633117,Ahmed Bouhali,lat,BOUHALI,BHL,saied_exception,,أحمد البوهالي,BHL,2021,3,False,
+ministers,Q132633142,Habib Abid,lat,ABID,BD,second_republic,Sfax,الحبيب عبيد,BD,2021,3,False,Sfax
+ministers,Q132633142,Habib Abid,lat,ABID,BD,saied_exception,Sfax,الحبيب عبيد,BD,2021,3,False,Sfax
+ministers,Q134414603,Soufiane Tekaya,lat,TEKAYA,TK,second_republic,Bizerte,سفيان تقية,TK,2021,3,False,Bizerte
+ministers,Q134414603,Soufiane Tekaya,lat,TEKAYA,TK,saied_exception,Bizerte,سفيان تقية,TK,2021,3,False,Bizerte
+ministers,Q136257453,Samir Abdelhafidh,lat,ABDELHAFIDH,BDHFD,second_republic,Médenine,سمير عبد الحفيظ,BDHFZ|HFZ,2021,3,False,Médenine
+ministers,Q136257453,Samir Abdelhafidh,lat,ABDELHAFIDH,BDHFD,saied_exception,Médenine,سمير عبد الحفيظ,BDHFZ|HFZ,2021,3,False,Médenine
+ministers,Q1363916,Hédi Baccouche,lat,BACCOUCHE,BKS,bourguiba,Sousse,الهادي البكوش,BKS,1984,0,True,Sousse
+ministers,Q1363916,Hédi Baccouche,lat,BACCOUCHE,BKS,ben_ali,Sousse,الهادي البكوش,BKS,1984,0,True,Sousse
+ministers,Q136456985,Slah Zouari,lat,ZOUARI,ZR,second_republic,Sfax,صلاح الزواري,ZR,2021,3,False,Sfax
+ministers,Q136456985,Slah Zouari,lat,ZOUARI,ZR,saied_exception,Sfax,صلاح الزواري,ZR,2021,3,False,Sfax
+ministers,Q1366613,Kheireddine Pacha,lat,PACHA,BS,beylical,,خير الدين التونسي,TNS,1873,0,True,
+ministers,Q136769587,Saïda Rached,lat,RACHED,RSD,transition,,سعيدة راشد,RSD,2013,3,False,
+ministers,Q1380979,Slim Amamou,lat,AMAMOU,M,transition,Tunis,سليم عمامو,M,2011,5,False,Tunis
+ministers,Q1381809,Hamed Karoui,lat,KAROUI,KR,bourguiba,Sousse,حامد القروي,KR,1980,0,True,Sousse
+ministers,Q1381809,Hamed Karoui,lat,KAROUI,KR,ben_ali,Sousse,حامد القروي,KR,1980,0,True,Sousse
+ministers,Q1384598,Mustapha Khaznadar,lat,KHAZNADAR,XZNDR,beylical,,مصطفى خزندار,XZNDR,1855,0,True,
+ministers,Q138863507,Noureddine Nouri,lat,NOURI,NR,second_republic,Sidi Bouzid,نور الدين النوري,NR,2021,3,False,Sidi Bouzid
+ministers,Q138863507,Noureddine Nouri,lat,NOURI,NR,saied_exception,Sidi Bouzid,نور الدين النوري,NR,2021,3,False,Sidi Bouzid
+ministers,Q138913276,Fethi Zouhair Nouri,lat,NOURI,NR,saied_exception,Tunis,,,2024,3,False,Tunis
+ministers,Q139583145,Mohamed El Béji Hamda,lat,HAMDA,HMD,ben_ali,Bizerte,,,1990,3,False,Bizerte
+ministers,Q139820983,Imed Derbali,lat,DERBALI,DRBL,saied_exception,,عماد الدربالي,DRBL,2025,0,False,
+ministers,Q140077197,Abdelmonem Belati,lat,BELATI,BLT,second_republic,,عبد المنعم بلعاتي,BLT,2021,3,False,
+ministers,Q140077197,Abdelmonem Belati,lat,BELATI,BLT,saied_exception,,عبد المنعم بلعاتي,BLT,2021,3,False,
+ministers,Q14182276,Touhami Abdouli,lat,ABDOULI,BDL,transition,Sousse,التوهامي عبدولي,BDL,2011,3,False,Sousse
+ministers,Q14182276,Touhami Abdouli,lat,ABDOULI,BDL,second_republic,Sousse,التوهامي عبدولي,BDL,2011,3,False,Sousse
+ministers,Q15055101,Mustapha Bouaziz,lat,BOUAZIZ,BZ,ben_ali,,مصطفى بوعزيز,BZ,1989,3,False,
+ministers,Q152369,Fouad Mebazaa,lat,MEBAZAA,MBZ,bourguiba,Sidi Bouzid,فؤاد المبزع,MBZ,1973,3,False,Sidi Bouzid
+ministers,Q15304780,Mehdi Jomaa,lat,JOMAA,JM,transition,Mahdia,مهدي جمعة,JM,2013,0,True,Mahdia
+ministers,Q1530765,Habib Chatti,lat,CHATTI,ST,bourguiba,Sousse,الحبيب الشطي,ST,1974,3,False,Sousse
+ministers,Q15703367,Amel Karboul,lat,KARBOUL,KRBL,transition,Tunis,آمال كربول,KRBL,2014,3,False,Tunis
+ministers,Q15829893,Mongi Hamdi,lat,HAMDI,HMD,transition,Sidi Bouzid,منجي حامدي,HMD,2014,3,False,Sidi Bouzid
+ministers,Q16027758,Leïla Bahria,lat,BAHRIA,BHR,transition,,ليلى بحرية,BHR,2013,5,False,
+ministers,Q16027761,Ridha Ben Ali,lat,BEN ALI|ALI,BNL|L,bourguiba,,رضا بن علي,BNL|L,1984,3,False,
+ministers,Q16027763,Hafedh Ben Salah,lat,BEN SALAH|SALAH,BNSLH|SLH,transition,Monastir,حافظ بن صالح,BNSLH|SLH,2014,3,False,Monastir
+ministers,Q16027804,Saïd Mechichi,lat,MECHICHI,MS,transition,Jendouba,سعيد المشيشي,MS,2011,5,False,Jendouba
+ministers,Q16027809,Mohamed Raouf Najar,lat,NAJAR,NJR,ben_ali,Gabès,محمد رؤوف النجار,NJR,1989,3,False,Gabès
+ministers,Q16117997,Abderrazak Rassâa,lat,RASSAA,RS,monarchy,Tunis,عبد الرزاق الرصاع,RS,1956,3,False,Tunis
+ministers,Q16117997,Abderrazak Rassâa,lat,RASSAA,RS,bourguiba,Tunis,عبد الرزاق الرصاع,RS,1956,3,False,Tunis
+ministers,Q16120212,Mohamed Salah Ben Ammar,lat,BEN AMMAR|AMMAR,BMR|MR,transition,Tunis,محمد الصالح بن عمار,BMR|MR,2014,3,False,Tunis
+ministers,Q16123702,Kamel Ben Naceur,lat,BEN NACEUR|NACEUR,BNSR|NSR,transition,Gafsa,كمال بالناصر,BLNSR,2014,3,False,Gafsa
+ministers,Q16127215,Zakaria Ben Mustapha,lat,BEN MUSTAPHA|MUSTAPHA,BMSTF|MSTF,bourguiba,,زكريا بن مصطفى,BMSTF|MSTF,1986,3,False,
+ministers,Q16167736,Mongi Chouchane,lat,CHOUCHANE,SN,ben_ali,Nabeul,منجي شوشان,SN,1999,5,False,Nabeul
+ministers,Q16171996,Lamine Doghri,lat,DOGHRI,DVR,transition,Tunis,لمين الدغري,DVR,2013,3,False,Tunis
+ministers,Q16178347,Abdelhafidh Harguem,lat,HARGUEM,HRKM,ben_ali,Kairouan,عبد الحفيظ الهرقام,HRKM,2008,5,False,Kairouan
+ministers,Q16180211,Habib Jemli,lat,JEMLI,JML,transition,Kairouan,الحبيب الجملي,JML,2011,3,False,Kairouan
+ministers,Q16180628,Abdallah Kaâbi,lat,KAABI,KB,ben_ali,Kairouan,عبد الله الكعبي,KB,1999,3,False,Kairouan
+ministers,Q16221270,Tahar Kheireddine,lat,KHEIREDDINE,XRDN,,,الطاهر خير الدين,XRDN,,3,False,
+ministers,Q16222569,Salem Snadly,lat,SNADLY,SNDL,,,سالم الصنادلي,SNDL,,3,False,
+ministers,Q16262803,Dhaoui Hannablia,lat,HANNABLIA,HNMBL,bourguiba,Le Kef,الضاوي حنابلية,HMBL,1971,3,False,Le Kef
+ministers,Q16262805,Mohamed Jeddi,lat,JEDDI,JD,monarchy,Le Kef,محمد الجدي,JD,1956,3,False,Le Kef
+ministers,Q16262805,Mohamed Jeddi,lat,JEDDI,JD,bourguiba,Le Kef,محمد الجدي,JD,1956,3,False,Le Kef
+ministers,Q16263000,Brahim Khouaja,lat,KHOUAJA,XJ,bourguiba,Mahdia,إبراهيم خواجة,XJ,1979,3,False,Mahdia
+ministers,Q16263000,Brahim Khouaja,lat,KHOUAJA,XJ,ben_ali,Mahdia,إبراهيم خواجة,XJ,1979,3,False,Mahdia
+ministers,Q16267511,Faïza Kefi,lat,KEFI,KF,ben_ali,Tunis,فائزة الكافي,KF,1999,3,False,Tunis
+ministers,Q16267906,Jalloul Ayed,lat,AYED,D,ben_ali,Monastir,جلول عياد,D,2011,3,False,Monastir
+ministers,Q16267906,Jalloul Ayed,lat,AYED,D,transition,Monastir,جلول عياد,D,2011,3,False,Monastir
+ministers,Q16268984,El Hadj Gley,lat,EL GLEY|GLEY,KL|KL,ben_ali,Gafsa,الحاج قلاعي,KL,1999,3,False,Gafsa
+ministers,Q16269532,Aleya Bettaïb,lat,BETTAIB,BTB,transition,Nabeul,علية بالطيب,BLTB,2011,3,False,Nabeul
+ministers,Q16269694,Jamel Gamra,lat,GAMRA,KMR,transition,Monastir,جمال قمرة,KMR,2013,3,False,Monastir
+ministers,Q16321385,Mounir Jaïdane,lat,JAIDANE,JDN,ben_ali,Sousse,منير جعيدان,JDN,1999,3,False,Sousse
+ministers,Q16325226,Boubaker El Akhzouri,lat,EL AKHZOURI|AKHZOURI,XZR|XZR,ben_ali,Médenine,بوبكر الأخزوري,XZR,1999,3,False,Médenine
+ministers,Q16325262,Ezzeddine Abassi,lat,ABASSI,BS,protectorate,Tunis,عز الدين العباسي,BS,1954,3,False,Tunis
+ministers,Q16325262,Ezzeddine Abassi,lat,ABASSI,BS,protectorate_end,Tunis,عز الدين العباسي,BS,1954,3,False,Tunis
+ministers,Q16325262,Ezzeddine Abassi,lat,ABASSI,BS,monarchy,Tunis,عز الدين العباسي,BS,1954,3,False,Tunis
+ministers,Q16325262,Ezzeddine Abassi,lat,ABASSI,BS,bourguiba,Tunis,عز الدين العباسي,BS,1954,3,False,Tunis
+ministers,Q1642894,Hédi Nouira,lat,NOUIRA,NR,protectorate,Monastir,الهادي نويرة,NR,1954,0,True,Monastir
+ministers,Q1642894,Hédi Nouira,lat,NOUIRA,NR,protectorate_end,Monastir,الهادي نويرة,NR,1954,0,True,Monastir
+ministers,Q1642894,Hédi Nouira,lat,NOUIRA,NR,monarchy,Monastir,الهادي نويرة,NR,1954,0,True,Monastir
+ministers,Q1642894,Hédi Nouira,lat,NOUIRA,NR,bourguiba,Monastir,الهادي نويرة,NR,1954,0,True,Monastir
+ministers,Q16588807,Mohamed Fraj Chedly,lat,CHEDLY,SDL,bourguiba,Kairouan,محمد فرج الشاذلي,SDL,1980,3,False,Kairouan
+ministers,Q16639035,Ghazi Jeribi,lat,JERIBI,JRB,transition,Tunis,غازي الجريبي,JRB,2014,3,False,Tunis
+ministers,Q16639035,Ghazi Jeribi,lat,JERIBI,JRB,second_republic,Tunis,غازي الجريبي,JRB,2014,3,False,Tunis
+ministers,Q16642407,Houcine Jaziri,lat,JAZIRI,JZR,transition,Médenine,حسين الجزيري,JZR,2011,3,False,Médenine
+ministers,Q16664915,Mohamed Ben Rejeb,lat,BEN REJEB|REJEB,BNRJB|RJB,ben_ali,Nabeul,محمد بن رجب,BNRJB|RJB,1989,3,False,Nabeul
+ministers,Q16664925,Mohamed Jeri,lat,JERI,JR,ben_ali,Médenine,محمد الجريء,JR,1988,3,False,Médenine
+ministers,Q16665400,Mounir Tlili,lat,TLILI,TL,transition,Médenine,منير التليلي,TL,2014,3,False,Médenine
+ministers,Q16666126,Naoufel Jammali,lat,JAMMALI,JML,transition,Tunis,نوفل الجمالي,JML,2013,3,False,Tunis
+ministers,Q16666273,Nejla Moalla Harrouch,lat,HARROUCH,HRS,transition,Tunis,نجلاء حروش,HRS,2014,3,False,Tunis
+ministers,Q16666543,Nidhal Ouerfelli,lat,OUERFELLI,RFL,transition,Tunis,نضال الورفلي,RFL,2013,3,False,Tunis
+ministers,Q16666835,Noureddine Kaâbi,lat,KAABI,KB,transition,Tunis,نور الدين الكعبي,KB,2013,5,False,Tunis
+ministers,Q16666837,Nouri Zorgati,lat,ZORGATI,ZRKT,bourguiba,Sousse,النوري الزرقاطي,ZRKT,1987,3,False,Sousse
+ministers,Q16666837,Nouri Zorgati,lat,ZORGATI,ZRKT,ben_ali,Sousse,النوري الزرقاطي,ZRKT,1987,3,False,Sousse
+ministers,Q16679067,Tawfik Jelassi,lat,JELASSI,JLS,transition,Monastir,توفيق الجلاصي,JLS,2014,3,False,Monastir
+ministers,Q16802173,Ahmed Ammar Younbaii,lat,YOUNBAII,MB,transition,Tozeur,أحمد عمار الينباعي,MB,2014,3,False,Tozeur
+ministers,Q16802173,Ahmed Ammar Younbaii,lat,YOUNBAII,MB,second_republic,Tozeur,أحمد عمار الينباعي,MB,2014,3,False,Tozeur
+ministers,Q16855080,Chiheb Ben Ahmed,lat,BEN AHMED|AHMED,BNHMD|HMD,transition,Sfax,شهاب بن أحمد,BNHMD|HMD,2014,3,False,Sfax
+ministers,Q16855080,Chiheb Ben Ahmed,lat,BEN AHMED|AHMED,BNHMD|HMD,second_republic,Sfax,شهاب بن أحمد,BNHMD|HMD,2014,3,False,Sfax
+ministers,Q16855104,Saber Bouatay,lat,BOUATAY,BT,transition,Tunis,صابر بوعطي,BT,2014,3,False,Tunis
+ministers,Q16855223,Fathi Jarray,lat,JARRAY,JR,transition,Médenine,فتحي الجراي,JR,2014,3,False,Médenine
+ministers,Q16855250,Hafedh Laamouri,lat,LAAMOURI,LMR,transition,Sfax,حافظ العموري,MR,2014,3,False,Sfax
+ministers,Q16855252,Lassaad Lachaal,lat,LACHAAL,LSL,transition,Tunis,لسعد لشعل,LSL,2014,3,False,Tunis
+ministers,Q16855255,Hédi Larbi,lat,LARBI,LRB,transition,,الهادي بالعربي,BLRB,2014,3,False,
+ministers,Q16889653,Mourad Sakli,lat,SAKLI,SKL,transition,Tunis,مراد الصقلي,SKL,2014,3,False,Tunis
+ministers,Q17154190,Ridha Sfar,lat,SFAR,SFR,transition,Mahdia,رضا صفر,SFR,2014,3,False,Mahdia
+ministers,Q17425841,Slaheddine Ben Mbarek,lat,BEN MBAREK|MBAREK,BMBRK|MBRK,bourguiba,Béja,صلاح الدين بن مبارك,BMBRK|MBRK,1977,3,False,Béja
+ministers,Q17425841,Slaheddine Ben Mbarek,lat,BEN MBAREK|MBAREK,BMBRK|MBRK,ben_ali,Béja,صلاح الدين بن مبارك,BMBRK|MBRK,1977,3,False,Béja
+ministers,Q17580016,Mabrouk Bahri,lat,BAHRI,BHR,ben_ali,,مبروك البحري,BHR,1989,3,False,
+ministers,Q18384881,Abderrazak Ben Khelifa,lat,BEN KHELIFA|KHELIFA,BNXLF|XLF,transition,Sfax,عبد الرزاق بن خليفة,BNXLF|XLF,2014,3,False,Sfax
+ministers,Q18398343,Mohamed Karim El Jamoussi,lat,EL JAMOUSSI|JAMOUSSI,JMS|JMS,transition,Tunis,محمد كريم الجموسي,JMS,2014,3,False,Tunis
+ministers,Q18398343,Mohamed Karim El Jamoussi,lat,EL JAMOUSSI|JAMOUSSI,JMS|JMS,second_republic,Tunis,محمد كريم الجموسي,JMS,2014,3,False,Tunis
+ministers,Q18399544,Hamouda Ben Slama,lat,BEN SLAMA|SLAMA,BNSLM|SLM,ben_ali,,حمودة بن سلامة,BNSLM|SLM,1988,3,False,
+ministers,Q18610841,Anouar Ben Khelifa,lat,BEN KHELIFA|KHELIFA,BNXLF|XLF,transition,Ben Arous,أنور بن خليفة,BNXLF|XLF,2014,3,False,Ben Arous
+ministers,Q18610883,Hédi Bouricha,lat,BOURICHA,BRS,bourguiba,Sfax,الهادي بوريشة,BRS,1980,3,False,Sfax
+ministers,Q18880483,Mohamed Najem Gharsalli,lat,GHARSALLI,VRSL,second_republic,Kasserine,محمد الناجم الغرسلي,VRSL,2015,3,False,Kasserine
+ministers,Q1890995,Mustapha Ben Jaafar,lat,BEN JAAFAR|JAAFAR,BNJFR|JFR,ben_ali,Tunis,مصطفى بن جعفر,BNJFR|JFR,2011,3,False,Tunis
+ministers,Q1890995,Mustapha Ben Jaafar,lat,BEN JAAFAR|JAAFAR,BNJFR|JFR,transition,Tunis,مصطفى بن جعفر,BNJFR|JFR,2011,3,False,Tunis
+ministers,Q19060284,Houcine Chouk,lat,CHOUK,SK,ben_ali,Tozeur,حسين الشوك,SK,1989,3,False,Tozeur
+ministers,Q19060286,Moncef Ben Abdallah,lat,BEN ABDALLAH|ABDALLAH,BMBDLH|BDLH,ben_ali,Tunis,المنصف بن عبد الله,BMBDL|BDL,1997,3,False,Tunis
+ministers,Q19060293,Slaheddine Belaïd,lat,BELAID,BLD,ben_ali,Monastir,صلاح الدين بلعيد,BLD,1997,3,False,Monastir
+ministers,Q19060301,Ridha Ferchiou,lat,FERCHIOU,FRS,ben_ali,Tunis,رضا فرشيو,FRS,1997,3,False,Tunis
+ministers,Q19060319,Slaheddine Cherif,lat,CHERIF,SRF,ben_ali,Tunis,صلاح الدين الشريف,SRF,1989,5,False,Tunis
+ministers,Q19060320,Fethi Merdassi,lat,MERDASSI,MRDS,ben_ali,Jendouba,فتحي المرداسي,MRDS,1989,3,False,Jendouba
+ministers,Q19060337,Samira Khayach Belhaj,lat,BELHAJ,BLHJ,ben_ali,Tunis,سميرة خياش,XS,1999,3,False,Tunis
+ministers,Q19060346,Chedly Laroussi,lat,LAROUSSI,LRS,ben_ali,Médenine,الشاذلي العروسي,RS,1989,3,False,Médenine
+ministers,Q19248970,Farhat Horchani,lat,HORCHANI,HRSN,second_republic,Tunis,فرحات الحرشاني,HRSN,2015,3,False,Tunis
+ministers,Q19345818,Selma Elloumi,lat,ELLOUMI,LM,second_republic,Tunis,سلمى اللومي الرقيق,RK,2015,3,False,Tunis
+ministers,Q1951854,Mohamed Masmoudi,lat,MASMOUDI,MSMD,protectorate,Mahdia,محمد المصمودي,MSMD,1954,2,False,Mahdia
+ministers,Q1951854,Mohamed Masmoudi,lat,MASMOUDI,MSMD,protectorate_end,Mahdia,محمد المصمودي,MSMD,1954,2,False,Mahdia
+ministers,Q1951854,Mohamed Masmoudi,lat,MASMOUDI,MSMD,monarchy,Mahdia,محمد المصمودي,MSMD,1954,2,False,Mahdia
+ministers,Q1951854,Mohamed Masmoudi,lat,MASMOUDI,MSMD,bourguiba,Mahdia,محمد المصمودي,MSMD,1954,2,False,Mahdia
+ministers,Q19543880,Amel Azzouz,lat,AZZOUZ,Z,second_republic,Gabès,آمال عزوز,Z,2015,3,False,Gabès
+ministers,Q19544121,Majdouline Cherni,lat,CHERNI,SRN,second_republic,Bizerte,ماجدولين الشارني,SRN,2015,3,False,Bizerte
+ministers,Q19544690,Fayçal Gouiaa,lat,GOUIAA,K,transition,,فيصل قويعة,K,2014,3,False,
+ministers,Q19544932,Zied Ladhari,lat,LADHARI,LDR,second_republic,Sousse,زياد العذاري,DR,2015,3,False,Sousse
+ministers,Q19606694,Mohamed Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,protectorate,Tunis,,,1950,3,False,Tunis
+ministers,Q19629356,Sadok Rabah,lat,RABAH,RBH,ben_ali,Gabès,الصادق رابح,RBH,1988,3,False,Gabès
+ministers,Q19631455,Bochra Belhaj Hmida,lat,HMIDA,HMD,ben_ali,Zaghouan,بشرى بلحاج حميدة,BLHJHMD|HMD,1995,3,False,Zaghouan
+ministers,Q19848008,Moez Chakchouk,lat,CHAKCHOUK,SKSK,second_republic,Mahdia,معز شقشوق,SKSK,2020,3,False,Mahdia
+ministers,Q19951841,Maher Ben Dhia,lat,BEN DHIA|DHIA,BND|D,second_republic,Sfax,ماهر بن ضياء,BND|D,2015,3,False,Sfax
+ministers,Q19955807,Noomane Fehri,lat,FEHRI,FHR,second_republic,Nabeul,نعمان الفهري,FHR,2015,3,False,Nabeul
+ministers,Q19956120,Zakaria Hamad,lat,HAMAD,HMD,second_republic,Le Kef,زكرياء حمد,HMD,2015,3,False,Le Kef
+ministers,Q19956225,Néji Jalloul,lat,JALLOUL,JL,second_republic,Monastir,ناجي جلول,JL,2015,3,False,Monastir
+ministers,Q19956346,Sadok Korbi,lat,KORBI,KRB,ben_ali,Monastir,الصادق القربي,KRB,1999,3,False,Monastir
+ministers,Q19956395,Latifa Lakhdar,lat,LAKHDAR,LXDR,second_republic,Médenine,لطيفة لخضر,LXDR,2015,3,False,Médenine
+ministers,Q20047058,Ahmed Chtourou,lat,CHTOUROU,STR,bourguiba,Sfax,أحمد شطورو,STR,1971,3,False,Sfax
+ministers,Q20391000,حاتم العشي,ar,العشي,S,second_republic,Jendouba,حاتم العشي,S,2015,3,False,Jendouba
+ministers,Q20412385,Ridha Lahouel,lat,LAHOUEL,LHL,second_republic,Monastir,رضا لحول,LHL,2015,3,False,Monastir
+ministers,Q20417790,René Trabelsi,lat,TRABELSI,TRBLS,second_republic,Médenine,روني الطرابلسي,TRBLS,2016,3,False,Médenine
+ministers,Q20423358,Mahmoud Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,BNRMDN|RMDN,second_republic,Tunis,محمود بن رمضان,BNRMDN|RMDN,2015,3,False,Tunis
+ministers,Q204487,Zine El Abidine Ben Ali,lat,BEN ALI|ALI,BNL|L,bourguiba,Sousse,زين العابدين بن علي,BNL|L,1984,0,True,Sousse
+ministers,Q20643083,Mohamed Yalaoui,lat,YALAOUI,L,bourguiba,Jendouba,محمد اليعلاوي,L,1978,3,False,Jendouba
+ministers,Q20991574,Chiheb Bouden,lat,BOUDEN,BDN,second_republic,Kairouan,شهاب بودن,BDN,2015,3,False,Kairouan
+ministers,Q21084499,Boutheina Ben Yaghlane,lat,BEN YAGHLANE|YAGHLANE,BNVLN|VLN,second_republic,Tunis,بثينة بن يغلان,BNVLN|VLN,2015,3,False,Tunis
+ministers,Q21091553,Mohamed Fadhel Mahfoudh,lat,MAHFOUDH,MHFD,second_republic,Gafsa,محمد الفاضل محفوظ,MHFZ,2016,3,False,Gafsa
+ministers,Q21511555,Ghazi Chaouachi,lat,CHAOUACHI,S,second_republic,Tunis,غازي الشواشي,S,2020,3,False,Tunis
+ministers,Q21996842,Hédi Majdoub,lat,MAJDOUB,MJDB,second_republic,Nabeul,الهادي المجدوب,MJDB,2015,3,False,Nabeul
+ministers,Q22210502,Nejib Derouiche,lat,DEROUICHE,DRS,second_republic,Bizerte,نجيب درويش,DRS,2015,3,False,Bizerte
+ministers,Q22211169,Anis Ghedira,lat,GHEDIRA,VDR,second_republic,Monastir,أنيس غديرة,VDR,2015,3,False,Monastir
+ministers,Q22282799,Hela Cheikhrouhou,lat,CHEIKHROUHOU,SXRH,second_republic,Tunis,هالة شيخ روحو,SXRH|RH,2016,3,False,Tunis
+ministers,Q22344522,Ahlem Belhadj,lat,BELHADJ,BLHJ,ben_ali,Nabeul,أحلام بالحاج,BLHJ,2004,3,False,Nabeul
+ministers,Q22344522,Ahlem Belhadj,lat,BELHADJ,BLHJ,transition,Nabeul,أحلام بالحاج,BLHJ,2004,3,False,Nabeul
+ministers,Q2268624,Chedli Klibi,lat,KLIBI,KLB,bourguiba,Tunis,الشاذلي القليبي,KLB,1961,3,False,Tunis
+ministers,Q22928978,Lassaad Ben Osman,lat,BEN OSMAN|OSMAN,BNSMN|SMN,bourguiba,Tunis,الأسعد بن عصمان,BNSMN|SMN,1967,3,False,Tunis
+ministers,Q23017371,Mohamed Salah Arfaoui,lat,ARFAOUI,RF,second_republic,Bizerte,محمد صالح العرفاوي,RF,2015,3,False,Bizerte
+ministers,Q2374730,Tahar Belkhodja,lat,BELKHODJA,BLXJ,bourguiba,Mahdia,الطاهر بلخوجة,BLXJ,1970,3,False,Mahdia
+ministers,Q2388455,Taïeb Baccouche,lat,BACCOUCHE,BKS,ben_ali,Kairouan,الطيب البكوش,BKS,2011,3,False,Kairouan
+ministers,Q2388455,Taïeb Baccouche,lat,BACCOUCHE,BKS,transition,Kairouan,الطيب البكوش,BKS,2011,3,False,Kairouan
+ministers,Q2388455,Taïeb Baccouche,lat,BACCOUCHE,BKS,second_republic,Kairouan,الطيب البكوش,BKS,2011,3,False,Kairouan
+ministers,Q24690603,Jalloul Jeribi,lat,JERIBI,JRB,ben_ali,Sfax,جلول الجريبي,JRB,1999,3,False,Sfax
+ministers,Q24690887,Omar Mansour,lat,MANSOUR,MNSR,second_republic,Tunis,عمر منصور,MNSR,2015,3,False,Tunis
+ministers,Q24752632,Mohamed Khalil,lat,KHALIL,XL,second_republic,,محمد خليل,XL,2015,3,False,
+ministers,Q24951001,Hatem El Euchi,lat,EL EUCHI|EUCHI,S|S,second_republic,Tunis,,,2015,3,False,Tunis
+ministers,Q25391268,Youssef Chahed,lat,CHAHED,SHD,second_republic,Tunis,يوسف الشاهد,SHD,2015,0,True,Tunis
+ministers,Q25391292,Saâd Seddik,lat,SEDDIK,SDK,second_republic,,سعد الصديق,SDK,2015,3,False,
+ministers,Q25451027,Taoufik Bouderbala,lat,BOUDERBALA,BDRBL,ben_ali,,توفيق بودربالة,BDRBL,1999,3,False,
+ministers,Q25453450,Sayida Ounissi,lat,OUNISSI,NS,second_republic,Tunis,سيدة الونيسي,NS,2016,3,False,Tunis
+ministers,Q25453793,محمد شقرون,ar,شقرون,SKRN,monarchy,,محمد شقرون,SKRN,1956,3,False,
+ministers,Q26505382,Chokri Terzi,lat,TERZI,TRZ,second_republic,Siliana,شكري التارزي,TRZ,2015,3,False,Siliana
+ministers,Q26505513,Mohsen Hassan,lat,HASSAN,HSN,second_republic,Mahdia,محسن حسن,HSN,2015,3,False,Mahdia
+ministers,Q2655671,Mohamed Ghenima,lat,GHENIMA,VM,bourguiba,Sousse,محمد غنيمة,VM,1972,3,False,Sousse
+ministers,Q26710667,Abdeljalil Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,second_republic,Gabès,عبد الجليل بن سالم,BNSLM|SLM,2016,3,False,Gabès
+ministers,Q26831315,Nejmeddine Hamrouni,lat,HAMROUNI,HMRN,second_republic,Tunis,نجم الدين الحمروني,HMRN,2015,3,False,Tunis
+ministers,Q26834002,Anouar Maârouf,lat,MAAROUF,MRF,second_republic,Monastir,أنور معروف,MRF,2016,2,False,Monastir
+ministers,Q2688070,Saïd Ben Moustapha,lat,BEN MOUSTAPHA|MOUSTAPHA,BMSTF|MSTF,ben_ali,Tunis,سعيد بن مصطفى,BMSTF|MSTF,1989,3,False,Tunis
+ministers,Q26905827,Néziha Labidi,lat,LABIDI,LBD,second_republic,,نزيهة العبيدي,BD,2016,3,False,
+ministers,Q27179077,Farhat Dachraoui,lat,DACHRAOUI,DSR,bourguiba,Le Kef,فرحات الدشراوي,DSR,1971,3,False,Le Kef
+ministers,Q27665914,Fadhel Abdelkefi,lat,ABDELKEFI,BDKF,second_republic,Tunis,فاضل عبد الكافي,BDKF|KF,2016,3,False,Tunis
+ministers,Q27666209,Imed Hammami,lat,HAMMAMI,HM,second_republic,Nabeul,عماد الحمامي,HM,2016,3,False,Nabeul
+ministers,Q27756614,Kamel Ayadi,lat,AYADI,D,ben_ali,,كمال العيادي,D,1999,3,False,
+ministers,Q27756614,Kamel Ayadi,lat,AYADI,D,second_republic,,كمال العيادي,D,1999,3,False,
+ministers,Q27756642,Abid Briki,lat,BRIKI,BRK,second_republic,Médenine,عبيد البريكي,BRK,2016,3,False,Médenine
+ministers,Q27756741,Slaheddine Maaoui,lat,MAAOUI,M,ben_ali,Kairouan,صلاح الدين معاوي,M,1989,3,False,Kairouan
+ministers,Q27758476,Khaled Chouket,lat,CHOUKET,SKT,second_republic,Sfax,خالد شوكات,SKT,2015,3,False,Sfax
+ministers,Q28018980,Sana Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,Tunis,سناء بن عاشور,BNSR|SR,2008,3,False,Tunis
+ministers,Q28105062,Mohamed Trabelsi,lat,TRABELSI,TRBLS,second_republic,,محمد الطرابلسي,TRBLS,2016,3,False,
+ministers,Q281184,Ali Larayedh,lat,LARAYEDH,LRD,ben_ali,Médenine,علي العريض,RD,2011,0,True,Médenine
+ministers,Q281184,Ali Larayedh,lat,LARAYEDH,LRD,transition,Médenine,علي العريض,RD,2011,0,True,Médenine
+ministers,Q282026,Abdelaziz Ben Dhia,lat,BEN DHIA|DHIA,BND|D,bourguiba,Monastir,عبد العزيز بن ضياء,BND|D,1978,3,False,Monastir
+ministers,Q282026,Abdelaziz Ben Dhia,lat,BEN DHIA|DHIA,BND|D,ben_ali,Monastir,عبد العزيز بن ضياء,BND|D,1978,3,False,Monastir
+ministers,Q2820925,Abdallah Farhat,lat,FARHAT,FRHT,bourguiba,,عبد الله فرحات,FRHT,1964,3,False,
+ministers,Q2820930,Abdallah Triki,lat,TRIKI,TRK,transition,,عبدالله التريكي,TRK,2011,5,False,
+ministers,Q2820931,Abdallah Kallel,lat,KALLEL,KL,bourguiba,Sfax,عبد الله القلال,KL,1987,2,False,Sfax
+ministers,Q2820931,Abdallah Kallel,lat,KALLEL,KL,ben_ali,Sfax,عبد الله القلال,KL,1987,2,False,Sfax
+ministers,Q2820991,Abdelaziz Lasram,lat,LASRAM,LSRM,bourguiba,Tunis,عبد العزيز الأصرم,SRM,1974,3,False,Tunis
+ministers,Q2820994,Abdelaziz Mathari,lat,MATHARI,MTR,bourguiba,,عبد العزيز المطهري,MTHR,1977,3,False,
+ministers,Q2820997,Abdelaziz Mougou,lat,MOUGOU,MK,ben_ali,Sousse,,,2010,5,False,Sousse
+ministers,Q2820999,Abdelaziz Rassâa,lat,RASSAA,RS,ben_ali,Tunis,عبد العزيز الرصاع,RS,1999,3,False,Tunis
+ministers,Q2820999,Abdelaziz Rassâa,lat,RASSAA,RS,transition,Tunis,عبد العزيز الرصاع,RS,1999,3,False,Tunis
+ministers,Q2821010,Abdelbaki Hermassi,lat,HERMASSI,HRMS,ben_ali,Kasserine,عبد الباقي الهرماسي,HRMS,1989,3,False,Kasserine
+ministers,Q2821012,Abdelfattah Amor,lat,AMOR,MR,ben_ali,Monastir,عبد الفتاح عمر,MR,1999,3,False,Monastir
+ministers,Q2821037,Abdelhakim Bouraoui,lat,BOURAOUI,BR,ben_ali,Sousse,عبد الحكيم بوراوي,BR,1999,5,False,Sousse
+ministers,Q2821055,Abdelhamid Slama,lat,SLAMA,SLM,ben_ali,Monastir,عبد الحميد سلامة,SLM,1999,3,False,Monastir
+ministers,Q2821057,Abdelhamid Triki,lat,TRIKI,TRK,ben_ali,Sfax,عبد الحميد التريكي,TRK,1999,3,False,Sfax
+ministers,Q2821057,Abdelhamid Triki,lat,TRIKI,TRK,transition,Sfax,عبد الحميد التريكي,TRK,1999,3,False,Sfax
+ministers,Q2821119,Abdelkrim Harouni,lat,HAROUNI,HRN,ben_ali,Tunis,عبد الكريم الهاروني,HRN,2011,3,False,Tunis
+ministers,Q2821119,Abdelkrim Harouni,lat,HAROUNI,HRN,transition,Tunis,عبد الكريم الهاروني,HRN,2011,3,False,Tunis
+ministers,Q2821127,Abdelkrim Zbidi,lat,ZBIDI,ZBD,ben_ali,Mahdia,عبد الكريم الزبيدي,ZBD,1999,3,False,Mahdia
+ministers,Q2821127,Abdelkrim Zbidi,lat,ZBIDI,ZBD,transition,Mahdia,عبد الكريم الزبيدي,ZBD,1999,3,False,Mahdia
+ministers,Q2821127,Abdelkrim Zbidi,lat,ZBIDI,ZBD,second_republic,Mahdia,عبد الكريم الزبيدي,ZBD,1999,3,False,Mahdia
+ministers,Q2821146,Abdellatif Abid,lat,ABID,BD,ben_ali,Nabeul,عبد اللطيف عبيد,BD,2011,3,False,Nabeul
+ministers,Q2821146,Abdellatif Abid,lat,ABID,BD,transition,Nabeul,عبد اللطيف عبيد,BD,2011,3,False,Nabeul
+ministers,Q2821154,Abdellatif Mekki,lat,MEKKI,MK,ben_ali,Le Kef,عبد اللطيف المكي,MK,2011,3,False,Le Kef
+ministers,Q2821154,Abdellatif Mekki,lat,MEKKI,MK,transition,Le Kef,عبد اللطيف المكي,MK,2011,3,False,Le Kef
+ministers,Q2821154,Abdellatif Mekki,lat,MEKKI,MK,second_republic,Le Kef,عبد اللطيف المكي,MK,2011,3,False,Le Kef
+ministers,Q2821210,Abdelwaheb Jemal,lat,JEMAL,JML,ben_ali,Sfax,عبد الوهاب جمال,JML,1999,5,False,Sfax
+ministers,Q2821212,Abdelwahab Maatar,lat,MAATAR,MTR,ben_ali,Sfax,عبد الوهاب معطر,MTR,2011,3,False,Sfax
+ministers,Q2821212,Abdelwahab Maatar,lat,MAATAR,MTR,transition,Sfax,عبد الوهاب معطر,MTR,2011,3,False,Sfax
+ministers,Q2821241,Abderrahim Zouari,lat,ZOUARI,ZR,ben_ali,Le Kef,عبد الرحيم الزواري,ZR,1987,3,False,Le Kef
+ministers,Q2821259,Abderrahmane Ladgham,lat,LADGHAM,LDVM,transition,Tunis,عبد الرحمن الأدغم,DVM,2011,3,False,Tunis
+ministers,Q2821273,Mohamed Abderraouf El Basti,lat,EL BASTI|BASTI,BST|BST,ben_ali,Tunis,عبد الرؤوف الباسطي,BST,1999,3,False,Tunis
+ministers,Q2821280,Abderrazak Zouari,lat,ZOUARI,ZR,ben_ali,Sfax,عبد الرزاق الزواري,ZR,2011,3,False,Sfax
+ministers,Q2821280,Abderrazak Zouari,lat,ZOUARI,ZR,transition,Sfax,عبد الرزاق الزواري,ZR,2011,3,False,Sfax
+ministers,Q2821297,Abdessalem Mansour,lat,MANSOUR,MNSR,ben_ali,Sousse,عبد السلام منصور,MNSR,1999,3,False,Sousse
+ministers,Q2821308,Abdesselem Knani,lat,KNANI,KN,bourguiba,Sousse,عبد السلام الكناني,KN,1958,3,False,Sousse
+ministers,Q2824176,Adel Gaâloul,lat,GAALOUL,KL,transition,Médenine,عادل قعلول,KL,2011,5,False,Médenine
+ministers,Q2826117,Afif Chelbi,lat,CHELBI,SLB,ben_ali,Tunis,محمد عفيف شلبي,SLB,1999,3,False,Tunis
+ministers,Q2826117,Afif Chelbi,lat,CHELBI,SLB,transition,Tunis,محمد عفيف شلبي,SLB,1999,3,False,Tunis
+ministers,Q2827482,Ahmed Adhoum,lat,ADHOUM,DM,ben_ali,Kairouan,أحمد عظوم,ZM,2011,3,False,Kairouan
+ministers,Q2827482,Ahmed Adhoum,lat,ADHOUM,DM,transition,Kairouan,أحمد عظوم,ZM,2011,3,False,Kairouan
+ministers,Q2827482,Ahmed Adhoum,lat,ADHOUM,DM,second_republic,Kairouan,أحمد عظوم,ZM,2011,3,False,Kairouan
+ministers,Q2827512,Ahmed Ben Salah,lat,BEN SALAH|SALAH,BNSLH|SLH,bourguiba,Monastir,أحمد بن صالح,BNSLH|SLH,1957,3,False,Monastir
+ministers,Q2827529,Ahmed Brahim,lat,BRAHIM,BRHM,ben_ali,Médenine,أحمد إبراهيم,BRHM,2011,3,False,Médenine
+ministers,Q2827529,Ahmed Brahim,lat,BRAHIM,BRHM,transition,Médenine,أحمد إبراهيم,BRHM,2011,3,False,Médenine
+ministers,Q2827554,Ahmed Friaâ,lat,FRIAA,FR,ben_ali,Médenine,أحمد فريعة,FR,1989,3,False,Médenine
+ministers,Q2827587,Ahmed Iyadh Ouederni,lat,OUEDERNI,DRN,ben_ali,Médenine,أحمد عياض الودرني,DRN,1999,3,False,Médenine
+ministers,Q2827624,Ahmed Mestiri,lat,MESTIRI,MSTR,monarchy,Tunis,أحمد المستيري,MSTR,1956,3,False,Tunis
+ministers,Q2827624,Ahmed Mestiri,lat,MESTIRI,MSTR,bourguiba,Tunis,أحمد المستيري,MSTR,1956,3,False,Tunis
+ministers,Q2827627,Ahmed Noureddine,lat,NOUREDDINE,NRDN,bourguiba,Sousse,أحمد نور الدين,NRDN,1958,3,False,Sousse
+ministers,Q2827633,Ahmed Néjib Chebbi,lat,CHEBBI,SB,ben_ali,Tunis,أحمد نجيب الشابي,SB,2011,3,False,Tunis
+ministers,Q2827633,Ahmed Néjib Chebbi,lat,CHEBBI,SB,transition,Tunis,أحمد نجيب الشابي,SB,2011,3,False,Tunis
+ministers,Q2827664,Ahmed Smaoui,lat,SMAOUI,SM,ben_ali,,أحمد السماوي,SM,1988,3,False,
+ministers,Q2830956,Albert Bessis,lat,BESSIS,BS,protectorate_end,Tunis,ألبير بسيس,BS,1954,3,False,Tunis
+ministers,Q2836165,Ali Bouhageb,lat,BOUHAGEB,BHJB,protectorate,Tunis,علي بوحاجب,BHJB,1947,3,False,Tunis
+ministers,Q2836180,Ali Chaouch,lat,CHAOUCH,S,ben_ali,Siliana,علي الشاوش,S,1989,3,False,Siliana
+ministers,Q2836334,Ali Sakkat,lat,SAKKAT,SKT,,Tunis,علي السقاط,SKT,,3,False,Tunis
+ministers,Q2836376,Ali Zouaoui,lat,ZOUAOUI,Z,bourguiba,,علي الزواوي,Z,1970,3,False,
+ministers,Q28465669,Ahmed Zarrouk,lat,ZARROUK,ZRK,second_republic,Sousse,أحمد زروق,ZRK,2015,3,False,Sousse
+ministers,Q28502176,Mohamed Zine El Abidine,lat,EL ABIDINE|ABIDINE,BDN|BDN,second_republic,Sousse,محمد زين العابدين,BDN,2016,3,False,Sousse
+ministers,Q2855981,Ferjani Bel Haj Ammar,lat,BEL AMMAR|AMMAR,BLMR|MR,monarchy,Tunis,الفرجاني بالحاج عمار,MR,1956,3,False,Tunis
+ministers,Q28653580,Riadh Mouakher,lat,MOUAKHER,MXR,second_republic,Sfax,رياض المؤخر,MXR,2016,3,False,Sfax
+ministers,Q28654181,Slim Khalbous,lat,KHALBOUS,XLBS,second_republic,Nabeul,سليم خلبوس,XLBS,2016,3,False,Nabeul
+ministers,Q28714939,Khalil Amiri,lat,AMIRI,MR,second_republic,Tunis,خليل العميري,MR,2016,5,False,Tunis
+ministers,Q2875109,Azedine Beschaouch,lat,BESCHAOUCH,BS,ben_ali,Tunis,عز الدين باش شاوش,BS|S,2011,3,False,Tunis
+ministers,Q2875109,Azedine Beschaouch,lat,BESCHAOUCH,BS,transition,Tunis,عز الدين باش شاوش,BS|S,2011,3,False,Tunis
+ministers,Q2875153,Aziz Djellouli,lat,DJELLOULI,JL,protectorate,Tunis,العزيز الجلولي,JL,1943,2,False,Tunis
+ministers,Q2875153,Aziz Djellouli,lat,DJELLOULI,JL,protectorate_end,Tunis,العزيز الجلولي,JL,1943,2,False,Tunis
+ministers,Q28869633,Lamia Zribi,lat,ZRIBI,ZRB,second_republic,Béja,لمياء الزريبي,ZRB,2015,3,False,Béja
+ministers,Q2893398,Bebia Chihi,lat,CHIHI,SH,ben_ali,Tunis,بابية الشيحي,SH,1999,3,False,Tunis
+ministers,Q2912277,Hédi M'henni,lat,M'HENNI,MHN,ben_ali,Monastir,الهادي مهني,MHN,1989,3,False,Monastir
+ministers,Q2929679,Béchir Ben Yahmed,lat,BEN YAHMED|YAHMED,BNHMD|HMD,monarchy,Médenine,البشير بن يحمد,BNHMD|HMD,1956,5,False,Médenine
+ministers,Q2929686,Béchir M'hedhbi,lat,M'HEDHBI,MHDB,bourguiba,Kairouan,بشير المهذبي,MHDB,1971,3,False,Kairouan
+ministers,Q2929698,Béchir Zaâfouri,lat,ZAAFOURI,ZFR,transition,Sidi Bouzid,بشير الزعفوري,ZFR,2012,3,False,Sidi Bouzid
+ministers,Q2929705,Béchir Tekkari,lat,TEKKARI,TKR,ben_ali,Monastir,البشير التكاري,TKR,1999,3,False,Monastir
+ministers,Q29440996,Ezzeddine Chelbi,lat,CHELBI,SLB,bourguiba,Nabeul,عز الدين الشلبي,SLB,1983,3,False,Nabeul
+ministers,Q2947600,Chahida Ben Fraj Bouraoui,lat,BOURAOUI,BR,transition,Monastir,شهيدة بن فرج بوراوي,BR,2011,3,False,Monastir
+ministers,Q2947746,Chakir Saheb Ettabaâ,lat,ETTABAA,TB,,,شاكير صاحب الطابع,TB,,0,True,
+ministers,Q29577458,Mohamed Ennaceur Jbira,lat,JBIRA,JBR,bourguiba,Kairouan,محمد الناصر جبيرة,JBR,1974,3,False,Kairouan
+ministers,Q29577458,Mohamed Ennaceur Jbira,lat,JBIRA,JBR,ben_ali,Kairouan,محمد الناصر جبيرة,JBR,1974,3,False,Kairouan
+ministers,Q29577458,Mohamed Ennaceur Jbira,lat,JBIRA,JBR,transition,Kairouan,محمد الناصر جبيرة,JBR,1974,3,False,Kairouan
+ministers,Q29577510,Basma Jebali,lat,JEBALI,JBL,second_republic,Médenine,بسمة الجبالي,JBL,2016,3,False,Médenine
+ministers,Q29577522,Abderraouf Cherif,lat,CHERIF,SRF,second_republic,Tozeur,عبد الرؤوف الشريف,SRF,2016,3,False,Tozeur
+ministers,Q29580351,Mohamed Ben Youssef El Hamdi,lat,EL HAMDI|HAMDI,HMD|HMD,second_republic,Sidi Bouzid,محمد الحامدي,HMD,2020,3,False,Sidi Bouzid
+ministers,Q29580435,Hatem Ferjani,lat,FERJANI,FRJN,second_republic,Ben Arous,حاتم الفرجاني,FRJN,2016,5,False,Ben Arous
+ministers,Q29580475,Mondher Belhaj Ali,lat,ALI,L,protectorate_end,,المنذر بلحاج علي,BLHJL|L,1954,3,False,
+ministers,Q29580479,Mohamed Jalel Ghedira,lat,GHEDIRA,VDR,bourguiba,Monastir,محمد جلال غديرة,VDR,1970,3,False,Monastir
+ministers,Q2961945,Chedly Ayari,lat,AYARI,R,bourguiba,Tunis,الشاذلي العياري,R,1969,3,False,Tunis
+ministers,Q2961945,Chedly Ayari,lat,AYARI,R,transition,Tunis,الشاذلي العياري,R,1969,3,False,Tunis
+ministers,Q2972023,Chédli Neffati,lat,NEFFATI,NFT,ben_ali,Gabès,الشاذلي النفاتي,NFT,1988,3,False,Gabès
+ministers,Q29816892,Hatem Ben Othman,lat,BEN OTHMAN|OTHMAN,BNTMN|TMN,ben_ali,Tunis,حاتم بن عثمان,BNTMN|TMN,1989,3,False,Tunis
+ministers,Q30104283,Mohamed Fadhel Khelil,lat,KHELIL,XL,ben_ali,Gafsa,محمد الفاضل خليل,XL,1987,3,False,Gafsa
+ministers,Q30104283,Mohamed Fadhel Khelil,lat,KHELIL,XL,second_republic,Gafsa,محمد الفاضل خليل,XL,1987,3,False,Gafsa
+ministers,Q30118294,Chokri Belhassen,lat,BELHASSEN,BLHSN,second_republic,Sousse,شكري بن حسن,BNHSN|HSN,2016,3,False,Sousse
+ministers,Q3012366,Dali Jazi,lat,JAZI,JZ,ben_ali,Nabeul,الدالي الجازي,JZ,1989,3,False,Nabeul
+ministers,Q30217461,Habib Debbabi,lat,DEBBABI,DB,second_republic,Médenine,حبيب الدبابي,DB,2016,5,False,Médenine
+ministers,Q30224903,Akissa Bahri,lat,BAHRI,BHR,second_republic,,عاقصة البحري,BHR,2020,3,False,
+ministers,Q3039490,Driss Guiga,lat,GUIGA,K,bourguiba,Béja,إدريس قيقة,K,1969,3,False,Béja
+ministers,Q3051875,Elyès Fakhfakh,lat,FAKHFAKH,FXFX,ben_ali,Tunis,إلياس الفخفاخ,FXFX,2011,0,True,Tunis
+ministers,Q3051875,Elyès Fakhfakh,lat,FAKHFAKH,FXFX,transition,Tunis,إلياس الفخفاخ,FXFX,2011,0,True,Tunis
+ministers,Q3051875,Elyès Fakhfakh,lat,FAKHFAKH,FXFX,second_republic,Tunis,إلياس الفخفاخ,FXFX,2011,0,True,Tunis
+ministers,Q3066858,Farhat Rajhi,lat,RAJHI,RJH,ben_ali,Tunis,فرحات الراجحي,RJH,2011,3,False,Tunis
+ministers,Q3066858,Farhat Rajhi,lat,RAJHI,RJH,transition,Tunis,فرحات الراجحي,RJH,2011,3,False,Tunis
+ministers,Q3067195,Fathi Zouhir,lat,ZOUHIR,ZHR,protectorate,Tunis,فتحي زهير,ZHR,1954,3,False,Tunis
+ministers,Q3067195,Fathi Zouhir,lat,ZOUHIR,ZHR,protectorate_end,Tunis,فتحي زهير,ZHR,1954,3,False,Tunis
+ministers,Q3067195,Fathi Zouhir,lat,ZOUHIR,ZHR,bourguiba,Tunis,فتحي زهير,ZHR,1954,3,False,Tunis
+ministers,Q30728289,Ali Chebbi,lat,CHEBBI,SB,ben_ali,Tozeur,علي الشابي,SB,1989,3,False,Tozeur
+ministers,Q30728498,Radhouane Ayara,lat,AYARA,R,second_republic,Béja,رضوان عيارة,R,2016,3,False,Béja
+ministers,Q30729046,Sabri Bachtobji,lat,BACHTOBJI,BSTBJ,second_republic,Nabeul,صبري باشطبجي,BSTBJ,2016,3,False,Nabeul
+ministers,Q30729047,Mabrouk Korchid,lat,KORCHID,KRSD,second_republic,Médenine,مبروك كرشيد,KRSD,2016,3,False,Médenine
+ministers,Q30729066,Abdallah Rabhi,lat,RABHI,RBH,second_republic,,عبد الله الرابحي,RBH,2016,5,False,
+ministers,Q30729169,Hichem Ben Ahmed,lat,BEN AHMED|AHMED,BNHMD|HMD,second_republic,Bizerte,هشام بن أحمد,BNHMD|HMD,2016,3,False,Bizerte
+ministers,Q3079840,Foued Daghfous,lat,DAGHFOUS,DVFS,ben_ali,Nabeul,فؤاد دغفوس,DVFS,1999,3,False,Nabeul
+ministers,Q308017,Abdelwahab Abdallah,lat,ABDALLAH,BDLH,bourguiba,Monastir,عبد الوهاب عبد الله,BDL,1987,3,False,Monastir
+ministers,Q308017,Abdelwahab Abdallah,lat,ABDALLAH,BDLH,ben_ali,Monastir,عبد الوهاب عبد الله,BDL,1987,3,False,Monastir
+ministers,Q3123068,Général Rustum,lat,RUSTUM,RSTM,,,الجنرال رستم,RSTM,,3,False,
+ministers,Q3125288,Habib Ammar,lat,AMMAR,MR,bourguiba,Sousse,الحبيب عمار,MR,1987,2,False,Sousse
+ministers,Q3125288,Habib Ammar,lat,AMMAR,MR,ben_ali,Sousse,الحبيب عمار,MR,1987,2,False,Sousse
+ministers,Q3125288,Habib Ammar,lat,AMMAR,MR,second_republic,Sousse,الحبيب عمار,MR,1987,2,False,Sousse
+ministers,Q3125297,Habib Djellouli,lat,DJELLOULI,JL,protectorate,Tunis,الحبيب الجلولي,JL,1943,3,False,Tunis
+ministers,Q3125297,Habib Djellouli,lat,DJELLOULI,JL,ben_ali,Tunis,الحبيب الجلولي,JL,1943,3,False,Tunis
+ministers,Q3125299,Habib Ben Yahia,lat,BEN YAHIA|YAHIA,BNH|H,ben_ali,Tunis,الحبيب بن يحيى,BNH|H,1988,3,False,Tunis
+ministers,Q3125307,Habib M'barek,lat,M'BAREK,MBRK,ben_ali,Gafsa,الحبيب مبارك,MBRK,1999,3,False,Gafsa
+ministers,Q3125307,Habib M'barek,lat,M'BAREK,MBRK,transition,Gafsa,الحبيب مبارك,MBRK,1999,3,False,Gafsa
+ministers,Q3125311,Habib Essid,lat,ESSID,SD,ben_ali,Sousse,الحبيب الصيد,SD,1999,0,True,Sousse
+ministers,Q3125311,Habib Essid,lat,ESSID,SD,transition,Sousse,الحبيب الصيد,SD,1999,0,True,Sousse
+ministers,Q3125311,Habib Essid,lat,ESSID,SD,second_republic,Sousse,الحبيب الصيد,SD,1999,0,True,Sousse
+ministers,Q3125336,Habiba Zéhi Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,BNRMDN|RMDN,ben_ali,Gafsa,حبيبة الزاهي بن رمضان,BNRMDN|RMDN,2011,3,False,Gafsa
+ministers,Q3125336,Habiba Zéhi Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,BNRMDN|RMDN,transition,Gafsa,حبيبة الزاهي بن رمضان,BNRMDN|RMDN,2011,3,False,Gafsa
+ministers,Q3125835,Hakim Ben Hammouda,lat,BEN HAMMOUDA|HAMMOUDA,BNHMD|HMD,transition,Monastir,حكيم بن حمودة,BNHMD|HMD,2014,3,False,Monastir
+ministers,Q3126302,Hamadi Khouini,lat,KHOUINI,XN,ben_ali,,حمادي الخويني,XN,1989,5,False,
+ministers,Q3128148,Hassan Hosni Abdelwaheb,lat,ABDELWAHEB,BDHB,ben_ali,Tunis,حسن حسني عبد الوهاب,BDHB|HB,1987,3,False,Tunis
+ministers,Q3128202,Hassen Belkhodja,lat,BELKHODJA,BLXJ,bourguiba,Bizerte,حسان بلخوجة,BLXJ,1969,3,False,Bizerte
+ministers,Q3128235,Hassib Ben Ammar,lat,BEN AMMAR|AMMAR,BMR|MR,bourguiba,Tunis,حسيب بن عمار,BMR|MR,1970,3,False,Tunis
+ministers,Q3128291,Hatem Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,ben_ali,Tunis,حاتم بن سالم,BNSLM|SLM,1999,3,False,Tunis
+ministers,Q3128291,Hatem Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,second_republic,Tunis,حاتم بن سالم,BNSLM|SLM,1999,3,False,Tunis
+ministers,Q313539,Béji Caïd Essebsi,lat,ESSEBSI,SBS,bourguiba,Tunis,الباجي قائد السبسي,SBS,1965,0,True,Tunis
+ministers,Q313539,Béji Caïd Essebsi,lat,ESSEBSI,SBS,ben_ali,Tunis,الباجي قائد السبسي,SBS,1965,0,True,Tunis
+ministers,Q313539,Béji Caïd Essebsi,lat,ESSEBSI,SBS,transition,Tunis,الباجي قائد السبسي,SBS,1965,0,True,Tunis
+ministers,Q3141381,Houssine Dimassi,lat,DIMASSI,DMS,ben_ali,Monastir,حسين الديماسي,DMS,2011,3,False,Monastir
+ministers,Q3141381,Houssine Dimassi,lat,DIMASSI,DMS,transition,Monastir,حسين الديماسي,DMS,2011,3,False,Monastir
+ministers,Q3143494,Hussein Khodja,lat,KHODJA,XJ,,,حسين خوجة,XJ,,0,True,
+ministers,Q3144577,Hédi Ben Abbès,lat,BEN ABBES|ABBES,BMBS|BS,transition,Béja,الهادي بن عباس,BMBS|BS,2011,5,False,Béja
+ministers,Q3144591,Hédi Khefacha,lat,KHEFACHA,XFS,bourguiba,Monastir,الهادي خفشة,XFS,1958,3,False,Monastir
+ministers,Q3144594,Hédi Lakhoua,lat,LAKHOUA,LX,protectorate,Tunis,الهادي الأخوة,X,1932,0,True,Tunis
+ministers,Q3160736,Jallouli Farès,lat,FARES,FRS,protectorate,Gabès,الجلولي فارس,FRS,1954,3,False,Gabès
+ministers,Q3160736,Jallouli Farès,lat,FARES,FRS,protectorate_end,Gabès,الجلولي فارس,FRS,1954,3,False,Gabès
+ministers,Q3160876,Jameleddine Gharbi,lat,GHARBI,VRB,ben_ali,Jendouba,جمال الدين الغربي,VRB,2011,3,False,Jendouba
+ministers,Q3160876,Jameleddine Gharbi,lat,GHARBI,VRB,transition,Jendouba,جمال الدين الغربي,VRB,2011,3,False,Jendouba
+ministers,Q3192369,Kamel Jendoubi,lat,JENDOUBI,JNDB,second_republic,Tunis,كمال الجندوبي,JNDB,2015,3,False,Tunis
+ministers,Q3192376,Kamel Omrane,lat,OMRANE,MRN,ben_ali,Tunis,كمال عمران,MRN,1999,3,False,Tunis
+ministers,Q3196042,Khalil Zaouia,lat,ZAOUIA,Z,ben_ali,Tunis,خليل الزاوية,Z,2011,3,False,Tunis
+ministers,Q3196042,Khalil Zaouia,lat,ZAOUIA,Z,transition,Tunis,خليل الزاوية,Z,2011,3,False,Tunis
+ministers,Q3196139,Khelil Bouhageb,lat,BOUHAGEB,BHJB,protectorate,Tunis,خليل بوحاجب,BHJB,1926,0,True,Tunis
+ministers,Q3196140,Khemaies Jhinaoui,lat,JHINAOUI,JHN,second_republic,Kairouan,خميس الجهيناوي,JHN,2015,3,False,Kairouan
+ministers,Q3216753,Lamine Chebbi,lat,CHEBBI,SB,monarchy,Gabès,محمد الأمين الشابي,SB,1956,3,False,Gabès
+ministers,Q3216753,Lamine Chebbi,lat,CHEBBI,SB,bourguiba,Gabès,محمد الأمين الشابي,SB,1956,3,False,Gabès
+ministers,Q3216760,Lamine Moulahi,lat,MOULAHI,MLH,transition,Kasserine,الأمين المولاهي,MLH,2011,5,False,Kasserine
+ministers,Q3217980,Laroussi Mizouri,lat,MIZOURI,MZR,ben_ali,Nabeul,العروسي الميزوري,MZR,2011,3,False,Nabeul
+ministers,Q3217980,Laroussi Mizouri,lat,MIZOURI,MZR,transition,Nabeul,العروسي الميزوري,MZR,2011,3,False,Nabeul
+ministers,Q3220051,Lazhar Akremi,lat,AKREMI,KRM,ben_ali,Gafsa,لزهر العكرمي,KRM,2011,3,False,Gafsa
+ministers,Q3220051,Lazhar Akremi,lat,AKREMI,KRM,second_republic,Gafsa,لزهر العكرمي,KRM,2011,3,False,Gafsa
+ministers,Q3220052,Lazhar Bououni,lat,BOUOUNI,BN,ben_ali,Gafsa,الأزهر بوعوني,BN,1999,3,False,Gafsa
+ministers,Q3240795,Lilia Labidi,lat,LABIDI,LBD,ben_ali,Ben Arous,ليليا العبيدي,BD,2011,3,False,Ben Arous
+ministers,Q3240795,Lilia Labidi,lat,LABIDI,LBD,transition,Ben Arous,ليليا العبيدي,BD,2011,3,False,Ben Arous
+ministers,Q3257623,Lobna Jribi,lat,JRIBI,JRB,second_republic,Tunis,لبنى الجريبي,JRB,2020,3,False,Tunis
+ministers,Q327007,Mohamed Ben Ahmed Abdelghani,lat,ABDELGHANI,BDVN,ben_ali,,محمد بن أحمد عبد الغني,BDVN|VN,1989,5,False,
+ministers,Q3272346,M'hammed Djellouli,lat,DJELLOULI,JL,protectorate,Tunis,محمد الجلولي,JL,1907,0,True,Tunis
+ministers,Q3277799,Mahmoud El Materi,lat,EL MATERI|MATERI,MTR|MTR,protectorate,Tunis,محمود الماطري,MTR,1943,3,False,Tunis
+ministers,Q3277799,Mahmoud El Materi,lat,EL MATERI|MATERI,MTR|MTR,monarchy,Tunis,محمود الماطري,MTR,1943,3,False,Tunis
+ministers,Q3277819,Mahmoud Mestiri,lat,MESTIRI,MSTR,bourguiba,Tunis,محمود المستيري,MSTR,1981,3,False,Tunis
+ministers,Q3277819,Mahmoud Mestiri,lat,MESTIRI,MSTR,ben_ali,Tunis,محمود المستيري,MSTR,1981,3,False,Tunis
+ministers,Q3286574,Mansour Skhiri,lat,SKHIRI,SXR,bourguiba,Monastir,منصور السخيري,SXR,1986,3,False,Monastir
+ministers,Q3304500,Mehdi Houas,lat,HOUAS,HS,ben_ali,,مهدي حواص,HS,2011,3,False,
+ministers,Q3304500,Mehdi Houas,lat,HOUAS,HS,transition,,مهدي حواص,HS,2011,3,False,
+ministers,Q3304511,Mehdi Mabrouk,lat,MABROUK,MBRK,ben_ali,Mahdia,مهدي مبروك,MBRK,2011,3,False,Mahdia
+ministers,Q3304511,Mehdi Mabrouk,lat,MABROUK,MBRK,transition,Mahdia,مهدي مبروك,MBRK,2011,3,False,Mahdia
+ministers,Q3318290,Mohamed Abdelaziz Djaït,lat,DJAIT,JT,protectorate,Tunis,محمد عبد العزيز جعيط,JT,1947,3,False,Tunis
+ministers,Q3318297,Mohamed Abbou,lat,ABBOU,B,transition,Tunis,محمد عبو,B,2011,2,False,Tunis
+ministers,Q3318297,Mohamed Abbou,lat,ABBOU,B,second_republic,Tunis,محمد عبو,B,2011,2,False,Tunis
+ministers,Q3318311,Mohamed Agrebi,lat,AGREBI,KRB,ben_ali,Nabeul,محمد العقربي,KRB,1999,3,False,Nabeul
+ministers,Q3318336,Mohamed Ali Ganzoui,lat,GANZOUI,KNZ,ben_ali,Kasserine,محمد علي القنزوعي,KNZ,1989,5,False,Kasserine
+ministers,Q3318356,Mohamed Aloulou,lat,ALOULOU,L,ben_ali,Gabès,محمد علولو,L,2011,3,False,Gabès
+ministers,Q3318356,Mohamed Aloulou,lat,ALOULOU,L,transition,Gabès,محمد علولو,L,2011,3,False,Gabès
+ministers,Q3318362,Mohamed Ammour,lat,AMMOUR,MR,ben_ali,,محمد عمور,MR,1999,5,False,
+ministers,Q3318375,Mohamed Baccouche,lat,BACCOUCHE,BKS,,Nabeul,محمد بكوش,BKS,,3,False,Nabeul
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,BNSLM|SLM,protectorate,Zaghouan,محمد بن سالم,BNSLM|SLM,1950,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,BNSLM|SLM,bourguiba,Zaghouan,محمد بن سالم,BNSLM|SLM,1950,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,BNSLM|SLM,ben_ali,Zaghouan,محمد بن سالم,BNSLM|SLM,1950,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,BNSLM|SLM,transition,Zaghouan,محمد بن سالم,BNSLM|SLM,1950,3,False,Zaghouan
+ministers,Q3318465,Mohamed Béji Ben Mami,lat,BEN MAMI|MAMI,BM|M,ben_ali,Tunis,محمد الباجي بن مامي,BM|M,2011,3,False,Tunis
+ministers,Q3318475,Mohamed Charfi,lat,CHARFI,SRF,ben_ali,Sfax,محمد الشرفي,SRF,1989,3,False,Sfax
+ministers,Q3318509,Mohamed El Aziz Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,Tunis,محمد العزيز بن عاشور,BNSR|SR,1999,3,False,Tunis
+ministers,Q3318530,Mohamed Ennaceur,lat,ENNACEUR,NSR,bourguiba,Mahdia,محمد الناصر,NSR,1974,3,False,Mahdia
+ministers,Q3318530,Mohamed Ennaceur,lat,ENNACEUR,NSR,ben_ali,Mahdia,محمد الناصر,NSR,1974,3,False,Mahdia
+ministers,Q3318530,Mohamed Ennaceur,lat,ENNACEUR,NSR,transition,Mahdia,محمد الناصر,NSR,1974,3,False,Mahdia
+ministers,Q3318545,Mohamed Fitouri,lat,FITOURI,FTR,bourguiba,Kairouan,محمد الفيتوري,FTR,1970,3,False,Kairouan
+ministers,Q3318622,Mohamed Jegham,lat,JEGHAM,JVM,ben_ali,Sousse,محمد جغام,JVM,1988,3,False,Sousse
+ministers,Q3318622,Mohamed Jegham,lat,JEGHAM,JVM,transition,Sousse,محمد جغام,JVM,1988,3,False,Sousse
+ministers,Q3318652,Mohamed Lamine Chakhari,lat,CHAKHARI,SXR,ben_ali,Kasserine,محمد الأمين الشخاري,SXR,2011,3,False,Kasserine
+ministers,Q3318652,Mohamed Lamine Chakhari,lat,CHAKHARI,SXR,transition,Kasserine,محمد الأمين الشخاري,SXR,2011,3,False,Kasserine
+ministers,Q3318702,Mohamed Mehdi Mlika,lat,MLIKA,MLK,ben_ali,Monastir,محمد مهدي مليكة,MLK,1989,3,False,Monastir
+ministers,Q3318731,Mohamed Naceur,lat,NACEUR,NSR,ben_ali,Nabeul,محمد ناصر عمار,MR,2010,3,False,Nabeul
+ministers,Q3318757,Mohamed Nouri Jouini,lat,JOUINI,JN,ben_ali,Tunis,محمد النوري الجويني,JN,1999,3,False,Tunis
+ministers,Q3318774,Mohamed Ridha Farès,lat,FARES,FRS,ben_ali,Nabeul,محمد رضا فارس,FRS,2011,3,False,Nabeul
+ministers,Q3318774,Mohamed Ridha Farès,lat,FARES,FRS,transition,Nabeul,محمد رضا فارس,FRS,2011,3,False,Nabeul
+ministers,Q3318781,Mohamed Salah Ben Aïssa,lat,BEN AISSA|AISSA,BNS|S,second_republic,Tunis,محمد صالح بن عيسى,BNS|S,2015,3,False,Tunis
+ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,MZL,protectorate,Monastir,محمد الصالح مزالي,MZL,1953,0,True,Monastir
+ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,MZL,bourguiba,Monastir,محمد الصالح مزالي,MZL,1953,0,True,Monastir
+ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,MZL,ben_ali,Monastir,محمد الصالح مزالي,MZL,1953,0,True,Monastir
+ministers,Q3318800,Mohamed Salmane,lat,SALMANE,SLMN,ben_ali,Nabeul,محمد سلمان,SLMN,2011,3,False,Nabeul
+ministers,Q3318800,Mohamed Salmane,lat,SALMANE,SLMN,transition,Nabeul,محمد سلمان,SLMN,2011,3,False,Nabeul
+ministers,Q3319007,Mohammed Aziz Bouattour,lat,BOUATTOUR,BTR,protectorate,Tunis,محمد العزيز بوعتور,BTR,1882,0,True,Tunis
+ministers,Q3319036,Mohammed Khaznadar,lat,KHAZNADAR,XZNDR,beylical,,محمد خزندار,XZNDR,1877,0,True,
+ministers,Q3319036,Mohammed Khaznadar,lat,KHAZNADAR,XZNDR,protectorate,,محمد خزندار,XZNDR,1877,0,True,
+ministers,Q3319366,Mokhtar Jallali,lat,JALLALI,JL,ben_ali,,مختار الجلالي,JL,2011,3,False,
+ministers,Q3319366,Mokhtar Jallali,lat,JALLALI,JL,transition,,مختار الجلالي,JL,2011,3,False,
+ministers,Q3320424,Moncef Bel Hadj Amor,lat,BEL AMOR|AMOR,BLMR|MR,bourguiba,Nabeul,منصف بلحاج عمر,BLHJMR|MR,1980,3,False,Nabeul
+ministers,Q3320430,Moncef Belkhodja,lat,BELKHODJA,BLXJ,bourguiba,,منصف بلخوجة,BLXJ,1980,3,False,
+ministers,Q3320435,Moncef Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,ben_ali,Sfax,المنصف بن سالم,BNSLM|SLM,2011,3,False,Sfax
+ministers,Q3320435,Moncef Ben Salem,lat,BEN SALEM|SALEM,BNSLM|SLM,transition,Sfax,المنصف بن سالم,BNSLM|SLM,2011,3,False,Sfax
+ministers,Q3320454,Moncer Rouissi,lat,ROUISSI,RS,ben_ali,Tozeur,منصر الرويسي,RS,1989,3,False,Tozeur
+ministers,Q3320454,Moncer Rouissi,lat,ROUISSI,RS,transition,Tozeur,منصر الرويسي,RS,1989,3,False,Tozeur
+ministers,Q3320538,Mondher Ben Ammar,lat,BEN AMMAR|AMMAR,BMR|MR,bourguiba,Tunis,المنذر بن عمار,BMR|MR,1961,3,False,Tunis
+ministers,Q3320544,Mondher Zenaidi,lat,ZENAIDI,ZND,bourguiba,Tunis,المنذر الزنايدي,ZND,1987,3,False,Tunis
+ministers,Q3320544,Mondher Zenaidi,lat,ZENAIDI,ZND,ben_ali,Tunis,المنذر الزنايدي,ZND,1987,3,False,Tunis
+ministers,Q3320644,Mongi Ben Hamida,lat,BEN HAMIDA|HAMIDA,BNHMD|HMD,bourguiba,Nabeul,المنجي بن حميدة,BNHMD|HMD,1977,3,False,Nabeul
+ministers,Q3320646,Mongi Bousnina,lat,BOUSNINA,BSN,ben_ali,,المنجي بوسنينة,BSN,1989,3,False,
+ministers,Q3320650,Mongi Kooli,lat,KOOLI,KL,bourguiba,Monastir,منجي الكعلي,KL,1974,3,False,Monastir
+ministers,Q3320655,Mongi Marzouk,lat,MARZOUK,MRZK,ben_ali,Gabès,منجي مرزوق,MRZK,2011,3,False,Gabès
+ministers,Q3320655,Mongi Marzouk,lat,MARZOUK,MRZK,transition,Gabès,منجي مرزوق,MRZK,2011,3,False,Gabès
+ministers,Q3320655,Mongi Marzouk,lat,MARZOUK,MRZK,second_republic,Gabès,منجي مرزوق,MRZK,2011,3,False,Gabès
+ministers,Q3326203,Moussa El Kadhem Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,protectorate,Tunis,موسى الكاظم بن عاشور,BNSR|SR,1954,3,False,Tunis
+ministers,Q3326203,Moussa El Kadhem Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,protectorate_end,Tunis,موسى الكاظم بن عاشور,BNSR|SR,1954,3,False,Tunis
+ministers,Q3326348,Moustapha Khodja,lat,KHODJA,XJ,,,مصطفى خوجة,XJ,,0,True,
+ministers,Q3328917,Mustapha Ben Ismaïl,lat,BEN ISMAIL|ISMAIL,BNSML|SML,beylical,Bizerte,مصطفى بن إسماعيل,BNSML|SML,1878,0,True,Bizerte
+ministers,Q3328933,Mustapha Dinguizli,lat,DINGUIZLI,DNKZL,protectorate,Tunis,مصطفى الدنقزلي,DNKZL,1922,0,True,Tunis
+ministers,Q3328946,Mustapha Filali,lat,FILALI,FL,monarchy,Kairouan,مصطفى الفيلالي,FL,1956,3,False,Kairouan
+ministers,Q3328946,Mustapha Filali,lat,FILALI,FL,bourguiba,Kairouan,مصطفى الفيلالي,FL,1956,3,False,Kairouan
+ministers,Q3328947,Mustapha Kaak,lat,KAAK,K,protectorate,Tunis,مصطفى الكعاك,K,1947,0,True,Tunis
+ministers,Q3328959,Mustapha Kamel Nabli,lat,NABLI,MBL,ben_ali,Monastir,مصطفى كمال النابلي,MBL,1989,3,False,Monastir
+ministers,Q3328959,Mustapha Kamel Nabli,lat,NABLI,MBL,transition,Monastir,مصطفى كمال النابلي,MBL,1989,3,False,Monastir
+ministers,Q3328983,Mustapha Saheb Ettabaâ,lat,ETTABAA,TB,beylical,,مصطفى صاحب الطابع,TB,1835,0,True,
+ministers,Q3331012,Abdelmajid Chaker,lat,CHAKER,SKR,bourguiba,Sfax,عبد المجيد شاكر,SKR,1962,3,False,Sfax
+ministers,Q3331032,Amor Chadli,lat,CHADLI,SDL,bourguiba,Monastir,عمر الشاذلي,SDL,1986,3,False,Monastir
+ministers,Q3333020,Mémia El Benna,lat,EL BENNA|BENNA,BN|BN,transition,Tunis,مامية البنا,BN,2011,3,False,Tunis
+ministers,Q3334747,Naceur El Gharbi,lat,EL GHARBI|GHARBI,VRB|VRB,ben_ali,Kairouan,الناصر الغربي,VRB,1999,3,False,Kairouan
+ministers,Q3334747,Naceur El Gharbi,lat,EL GHARBI|GHARBI,VRB|VRB,transition,Kairouan,الناصر الغربي,VRB,1999,3,False,Kairouan
+ministers,Q3334855,Nadhir Hamada,lat,HAMADA,HMD,ben_ali,,نذير حمادة,HMD,1999,3,False,
+ministers,Q3337614,Nebiha Gueddana,lat,GUEDDANA,KDN,ben_ali,Tunis,نبيهة قدانة,KDN,1989,3,False,Tunis
+ministers,Q3344886,Noureddine Hached,lat,HACHED,HSD,bourguiba,Sfax,نور الدين حشاد,HSD,1985,3,False,Sfax
+ministers,Q3344889,Noureddine El Khademi,lat,EL KHADEMI|KHADEMI,XDM|XDM,ben_ali,Kasserine,نور الدين الخادمي,XDM,2011,3,False,Kasserine
+ministers,Q3344889,Noureddine El Khademi,lat,EL KHADEMI|KHADEMI,XDM|XDM,transition,Kasserine,نور الدين الخادمي,XDM,2011,3,False,Kasserine
+ministers,Q3347261,Néziha Zarrouk,lat,ZARROUK,ZRK,ben_ali,Monastir,نزيهة زروق,ZRK,1989,3,False,Monastir
+ministers,Q3357601,Othman Kechrid,lat,KECHRID,KSRD,bourguiba,Kairouan,عثمان كشريد,KSRD,1977,3,False,Kairouan
+ministers,Q3358533,Oussama Romdhani,lat,ROMDHANI,RMDN,ben_ali,Gabès,أسامة الرمضاني,RMDN,1999,3,False,Gabès
+ministers,Q3417300,Rafaâ Dekhil,lat,DEKHIL,DXL,ben_ali,Bizerte,رافع دخيل,DXL,1999,3,False,Bizerte
+ministers,Q3417419,Rafik Belhaj Kacem,lat,KACEM,KSM,ben_ali,Béja,رفيق بالحاج قاسم,KSM,1989,3,False,Béja
+ministers,Q3417420,Rafik Abdessalem,lat,ABDESSALEM,BDSLM,ben_ali,Gabès,رفيق عبد السلام,BDSLM|SLM,2011,3,False,Gabès
+ministers,Q3417420,Rafik Abdessalem,lat,ABDESSALEM,BDSLM,transition,Gabès,رفيق عبد السلام,BDSLM|SLM,2011,3,False,Gabès
+ministers,Q3417449,Rafâa Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,Tunis,رافع بن عاشور,BNSR|SR,1999,3,False,Tunis
+ministers,Q3417449,Rafâa Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,transition,Tunis,رافع بن عاشور,BNSR|SR,1999,3,False,Tunis
+ministers,Q3423310,Refâat Chaâbouni,lat,CHAABOUNI,SBN,ben_ali,Ben Arous,رفعت الشعبوني,SBN,1999,3,False,Ben Arous
+ministers,Q3423310,Refâat Chaâbouni,lat,CHAABOUNI,SBN,transition,Ben Arous,رفعت الشعبوني,SBN,1999,3,False,Ben Arous
+ministers,Q3430010,Riadh Bettaieb,lat,BETTAIEB,BTB,transition,Médenine,رياض بالطيب,BLTB,2011,3,False,Médenine
+ministers,Q3431734,Ridha Belhaj,lat,BELHAJ,BLHJ,transition,Tunis,رضا بالحاج,BLHJ,2011,6,False,Tunis
+ministers,Q3431735,Ridha Ben Mosbah,lat,BEN MOSBAH|MOSBAH,BMSBH|MSBH,ben_ali,Monastir,رضا بن مصباح,BMSBH|MSBH,1999,3,False,Monastir
+ministers,Q3431735,Ridha Ben Mosbah,lat,BEN MOSBAH|MOSBAH,BMSBH|MSBH,second_republic,Monastir,رضا بن مصباح,BMSBH|MSBH,1999,3,False,Monastir
+ministers,Q3431740,Ridha Chalghoum,lat,CHALGHOUM,SLVM,ben_ali,Gafsa,رضا شلغوم,SLVM,1999,3,False,Gafsa
+ministers,Q3431740,Ridha Chalghoum,lat,CHALGHOUM,SLVM,second_republic,Gafsa,رضا شلغوم,SLVM,1999,3,False,Gafsa
+ministers,Q3431743,Ridha Grira,lat,GRIRA,KR,ben_ali,Sousse,رضا قريرة,KR,1989,3,False,Sousse
+ministers,Q3431745,Ridha Touiti,lat,TOUITI,T,ben_ali,Gabès,رضا التويتي,T,1999,3,False,Gabès
+ministers,Q3431747,Ridha Saïdi,lat,SAIDI,SD,transition,Bizerte,رضا السعيدي,SD,2011,3,False,Bizerte
+ministers,Q3461164,Sadok Ben Jemâa,lat,BEN JEMAA|JEMAA,BNJM|JM,bourguiba,Médenine,الصادق بن جمعة,BNJM|JM,1969,3,False,Médenine
+ministers,Q3461164,Sadok Ben Jemâa,lat,BEN JEMAA|JEMAA,BNJM|JM,ben_ali,Médenine,الصادق بن جمعة,BNJM|JM,1969,3,False,Médenine
+ministers,Q3461169,Sadok Chaâbane,lat,CHAABANE,SBN,ben_ali,Sfax,الصادق شعبان,SBN,1989,3,False,Sfax
+ministers,Q3461176,Sadok Mokaddem,lat,MOKADDEM,MKDM,protectorate,Tunis,الصادق المقدم,MKDM,1954,3,False,Tunis
+ministers,Q3461176,Sadok Mokaddem,lat,MOKADDEM,MKDM,protectorate_end,Tunis,الصادق المقدم,MKDM,1954,3,False,Tunis
+ministers,Q3461176,Sadok Mokaddem,lat,MOKADDEM,MKDM,bourguiba,Tunis,الصادق المقدم,MKDM,1954,3,False,Tunis
+ministers,Q3469530,Salah Farhat,lat,FARHAT,FRHT,protectorate,Manouba,صالح فرحات,FRHT,1943,3,False,Manouba
+ministers,Q3469690,Salem Miladi,lat,MILADI,MLD,ben_ali,Sfax,سالم الميلادي,MLD,2011,3,False,Sfax
+ministers,Q3469690,Salem Miladi,lat,MILADI,MLD,transition,Sfax,سالم الميلادي,MLD,2011,3,False,Sfax
+ministers,Q3469772,Salim Ben Hamidane,lat,BEN HAMIDANE|HAMIDANE,BNHMDN|HMDN,ben_ali,Médenine,سليم بن حميدان,BNHMDN|HMDN,2011,3,False,Médenine
+ministers,Q3469772,Salim Ben Hamidane,lat,BEN HAMIDANE|HAMIDANE,BNHMDN|HMDN,transition,Médenine,سليم بن حميدان,BNHMDN|HMDN,2011,3,False,Médenine
+ministers,Q3470003,Salma Hédia Mabrouk,lat,MABROUK,MBRK,bourguiba,Tunis,سلمى مبروك,MBRK,1987,3,False,Tunis
+ministers,Q3470837,Samir Dilou,lat,DILOU,DL,ben_ali,Tunis,سمير ديلو,DL,2011,3,False,Tunis
+ministers,Q3470837,Samir Dilou,lat,DILOU,DL,transition,Tunis,سمير ديلو,DL,2011,3,False,Tunis
+ministers,Q3470845,Samir Lâabidi,lat,LAABIDI,LBD,ben_ali,Gafsa,سمير العبيدي,BD,1999,3,False,Gafsa
+ministers,Q3470847,Samir Taïeb,lat,TAIEB,TB,second_republic,Tunis,سمير الطيب,TB,2016,3,False,Tunis
+ministers,Q3470859,Samira Merai,lat,MERAI,MR,second_republic,Médenine,سميرة مرعي,MR,2015,3,False,Médenine
+ministers,Q3473691,Sarra Kanoun Jarraya,lat,JARRAYA,JR,ben_ali,Sfax,سارة كانون الجراية,JR,1999,3,False,Sfax
+ministers,Q3474776,Saïd Aïdi,lat,AIDI,D,ben_ali,,سعيد العايدي,D,2011,3,False,
+ministers,Q3474776,Saïd Aïdi,lat,AIDI,D,transition,,سعيد العايدي,D,2011,3,False,
+ministers,Q3474776,Saïd Aïdi,lat,AIDI,D,second_republic,,سعيد العايدي,D,2011,3,False,
+ministers,Q3483754,Sihem Badi,lat,BADI,BD,ben_ali,Tozeur,سهام بادي,BD,2011,3,False,Tozeur
+ministers,Q3483754,Sihem Badi,lat,BADI,BD,transition,Tozeur,سهام بادي,BD,2011,3,False,Tozeur
+ministers,Q3486507,Slaheddine Bouguerra,lat,BOUGUERRA,BKR,ben_ali,Kairouan,صلاح الدين بوقرة,BKR,1989,3,False,Kairouan
+ministers,Q3486509,Slaheddine Baccouche,lat,BACCOUCHE,BKS,protectorate,Tunis,صلاح الدين البكوش,BKS,1943,0,True,Tunis
+ministers,Q3486509,Slaheddine Baccouche,lat,BACCOUCHE,BKS,ben_ali,Tunis,صلاح الدين البكوش,BKS,1943,0,True,Tunis
+ministers,Q3486512,Slaheddine Sellami,lat,SELLAMI,SLM,ben_ali,Sfax,صلاح الدين السلامي,SLM,2011,3,False,Sfax
+ministers,Q3486512,Slaheddine Sellami,lat,SELLAMI,SLM,transition,Sfax,صلاح الدين السلامي,SLM,2011,3,False,Sfax
+ministers,Q3486513,Slaheddine Malouche,lat,MALOUCHE,MLS,ben_ali,Kairouan,صلاح الدين مالوش,MLS,1999,3,False,Kairouan
+ministers,Q3486513,Slaheddine Malouche,lat,MALOUCHE,MLS,transition,Kairouan,صلاح الدين مالوش,MLS,1999,3,False,Kairouan
+ministers,Q3486675,Slim Besbes,lat,BESBES,BSBS,transition,Tunis,سليم بسباس,BSBS,2011,3,False,Tunis
+ministers,Q3486677,Slim Chaker,lat,CHAKER,SKR,ben_ali,Sfax,سليم شاكر,SKR,2011,3,False,Sfax
+ministers,Q3486677,Slim Chaker,lat,CHAKER,SKR,transition,Sfax,سليم شاكر,SKR,2011,3,False,Sfax
+ministers,Q3486677,Slim Chaker,lat,CHAKER,SKR,second_republic,Sfax,سليم شاكر,SKR,2011,3,False,Sfax
+ministers,Q3486689,Slim Tlatli,lat,TLATLI,TLTL,ben_ali,,سليم تلاتلي,TLTL,1999,3,False,
+ministers,Q3486705,Slimane Ourak,lat,OURAK,RK,ben_ali,Tunis,سليمان ورق,RK,1999,3,False,Tunis
+ministers,Q3490439,Sonia M'Barek,lat,M'BAREK,MBRK,second_republic,Sfax,سنية مبارك,MBRK,2015,3,False,Sfax
+ministers,Q3513893,Tahar Zaouche,lat,ZAOUCHE,ZS,protectorate,Tunis,طاهر الزاوش,ZS,1954,3,False,Tunis
+ministers,Q3513893,Tahar Zaouche,lat,ZAOUCHE,ZS,protectorate_end,Tunis,طاهر الزاوش,ZS,1954,3,False,Tunis
+ministers,Q3515404,Taoufik Baccar,lat,BACCAR,BKR,ben_ali,Tataouine,توفيق بكار,BKR,1999,3,False,Tataouine
+ministers,Q3516539,Taïeb Hadhri,lat,HADHRI,HDR,ben_ali,Monastir,الطيب الحضري,HDR,1999,3,False,Monastir
+ministers,Q3516540,Taïeb Djellouli,lat,DJELLOULI,JL,protectorate,,محمد الطيب الجلولي,JL,1915,0,True,
+ministers,Q3516543,Taïeb Mehiri,lat,MEHIRI,MHR,monarchy,Tunis,الطيب المهيري,MHR,1956,3,False,Tunis
+ministers,Q3516543,Taïeb Mehiri,lat,MEHIRI,MHR,bourguiba,Tunis,الطيب المهيري,MHR,1956,3,False,Tunis
+ministers,Q3571283,Yadh Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,Tunis,عياض بن عاشور,BNSR|SR,1999,3,False,Tunis
+ministers,Q3571955,Yassine Brahim,lat,BRAHIM,BRHM,ben_ali,Mahdia,ياسين إبراهيم,BRHM,2011,3,False,Mahdia
+ministers,Q3571955,Yassine Brahim,lat,BRAHIM,BRHM,transition,Mahdia,ياسين إبراهيم,BRHM,2011,3,False,Mahdia
+ministers,Q3571955,Yassine Brahim,lat,BRAHIM,BRHM,second_republic,Mahdia,ياسين إبراهيم,BRHM,2011,3,False,Mahdia
+ministers,Q3572935,Youssef Djaït,lat,DJAIT,JT,protectorate,Tunis,يوسف جعيط,JT,1908,0,True,Tunis
+ministers,Q3572957,Youssef Saheb Ettabaâ,lat,ETTABAA,TB,,,يوسف صاحب الطابع,TB,,0,True,
+ministers,Q377921,Mohamed Mzali,lat,MZALI,MZL,protectorate,Monastir,محمد مزالي,MZL,1943,0,True,Monastir
+ministers,Q377921,Mohamed Mzali,lat,MZALI,MZL,bourguiba,Monastir,محمد مزالي,MZL,1943,0,True,Monastir
+ministers,Q379778,Amina Srarfi,lat,SRARFI,SRF,second_republic,Tunis,أمينة الصرارفي,SRF,2021,3,False,Tunis
+ministers,Q379778,Amina Srarfi,lat,SRARFI,SRF,saied_exception,Tunis,أمينة الصرارفي,SRF,2021,3,False,Tunis
+ministers,Q38213221,Saloua Ayachi Labben,lat,LABBEN,LBN,ben_ali,,سلوى العياشي اللبان,LBN,1999,3,False,
+ministers,Q38259407,Néziha Ben Yedder,lat,BEN YEDDER|YEDDER,BNDR|DR,ben_ali,,نزيهة بن يدر,BNDR|DR,1999,3,False,
+ministers,Q38346104,Néziha Mezhoud,lat,MEZHOUD,MZHD,ben_ali,,نزيهة مزهود,MZHD,1989,3,False,
+ministers,Q3951110,Ismaïl Khelil,lat,KHELIL,XL,bourguiba,Gafsa,إسماعيل خليل,XL,1983,3,False,Gafsa
+ministers,Q3951110,Ismaïl Khelil,lat,KHELIL,XL,ben_ali,Gafsa,إسماعيل خليل,XL,1983,3,False,Gafsa
+ministers,Q401426,Ahmed Ounaies,lat,OUNAIES,NS,transition,Tunis,أحمد ونيس,NS,2011,3,False,Tunis
+ministers,Q4167838,Abdelhamid Escheikh,lat,ESCHEIKH,SX,ben_ali,Tunis,عبد الحميد الشيخ,SX,1988,3,False,Tunis
+ministers,Q42311056,Sonia Ben Cheikh,lat,BEN CHEIKH|CHEIKH,BNSX|SX,second_republic,Sfax,سنية بالشيخ,BLSX,2016,3,False,Sfax
+ministers,Q431515,Mohamed Ghannouchi,lat,GHANNOUCHI,VNS,bourguiba,Sousse,محمد الغنوشي,VNS,1987,0,True,Sousse
+ministers,Q431515,Mohamed Ghannouchi,lat,GHANNOUCHI,VNS,ben_ali,Sousse,محمد الغنوشي,VNS,1987,0,True,Sousse
+ministers,Q431848,Moufida Tlatli,lat,TLATLI,TLTL,ben_ali,Tunis,مفيدة التلاتلي,TLTL,2011,3,False,Tunis
+ministers,Q431848,Moufida Tlatli,lat,TLATLI,TLTL,transition,Tunis,مفيدة التلاتلي,TLTL,2011,3,False,Tunis
+ministers,Q43304124,Slim Feriani,lat,FERIANI,FRN,second_republic,,سليم الفرياني,FRN,2016,3,False,
+ministers,Q43654658,Mustapha Masmoudi,lat,MASMOUDI,MSMD,bourguiba,Sfax,مصطفى المصمودي,MSMD,1974,3,False,Sfax
+ministers,Q44403762,Monia Ben Jemia,lat,BEN JEMIA|JEMIA,BNJM|JM,second_republic,,مونية بن جميع,BNJM|JM,2016,3,False,
+ministers,Q473394,Othman Battikh,lat,BATTIKH,BTX,second_republic,Tunis,عثمان بطيخ,BTX,2015,3,False,Tunis
+ministers,Q4845531,Saâdeddine Zmerli,lat,ZMERLI,ZMRL,ben_ali,Tunis,سعد الدين الزمرلي,ZMRL,1988,3,False,Tunis
+ministers,Q48757077,Amor Rourou,lat,ROUROU,R,bourguiba,Monastir,عمر رورو,R,1979,3,False,Monastir
+ministers,Q495676,Tahar Ben Ammar,lat,BEN AMMAR|AMMAR,BMR|MR,protectorate,Tunis,الطاهر بن عمار,BMR|MR,1954,0,True,Tunis
+ministers,Q495676,Tahar Ben Ammar,lat,BEN AMMAR|AMMAR,BMR|MR,protectorate_end,Tunis,الطاهر بن عمار,BMR|MR,1954,0,True,Tunis
+ministers,Q495681,M'hamed Chenik,lat,CHENIK,SNK,protectorate,Tunis,محمد شنيق,SNK,1943,0,True,Tunis
+ministers,Q496042,Salah Ben Youssef,lat,BEN YOUSSEF|YOUSSEF,BNSF|SF,,Médenine,صالح بن يوسف,BNSF|SF,,3,False,Médenine
+ministers,Q496165,Mahmoud Messadi,lat,MESSADI,MSD,bourguiba,Nabeul,محمود المسعدي,MSD,1958,2,False,Nabeul
+ministers,Q49691191,Abdelkoddous Saâdaoui,lat,SAADAOUI,SD,second_republic,Kasserine,عبد القدوس السعداوي,SD,2016,5,False,Kasserine
+ministers,Q50099224,Lotfi Brahem,lat,BRAHEM,BRHM,second_republic,Sousse,لطفي براهم,BRHM,2016,3,False,Sousse
+ministers,Q50285534,Souad Lyagoubi,lat,LYAGOUBI,LKB,bourguiba,Sousse,سعاد اليعقوبي,KB,1983,3,False,Sousse
+ministers,Q507856,Habib Boularès,lat,BOULARES,BLRS,bourguiba,Tunis,الحبيب بولعراس,BLRS,1970,3,False,Tunis
+ministers,Q507856,Habib Boularès,lat,BOULARES,BLRS,ben_ali,Tunis,الحبيب بولعراس,BLRS,1970,3,False,Tunis
+ministers,Q51173119,Sarra Rejeb,lat,REJEB,RJB,second_republic,Tunis,سارة رجب,RJB,2016,3,False,Tunis
+ministers,Q51460814,Khaled Kaddour,lat,KADDOUR,KDR,second_republic,Gafsa,خالد قدور,KDR,2016,3,False,Gafsa
+ministers,Q517946,Lazhar Karoui Chebbi,lat,CHEBBI,SB,ben_ali,Tozeur,الأزهر القروي الشابي,SB,2011,3,False,Tozeur
+ministers,Q517946,Lazhar Karoui Chebbi,lat,CHEBBI,SB,transition,Tozeur,الأزهر القروي الشابي,SB,2011,3,False,Tozeur
+ministers,Q52450891,Amel Moussa Belhaj,lat,BELHAJ,BLHJ,second_republic,,آمال بلحاج موسى,BLHJMS|MS,2021,3,False,
+ministers,Q52450891,Amel Moussa Belhaj,lat,BELHAJ,BLHJ,saied_exception,,آمال بلحاج موسى,BLHJMS|MS,2021,3,False,
+ministers,Q53015850,Marouane Abassi,lat,ABASSI,BS,second_republic,Tunis,مروان العباسي,BS,2018,3,False,Tunis
+ministers,Q53025434,Yosra Frawes,lat,FRAWES,FRS,second_republic,Manouba,يسرى فراويس,FRS,2018,3,False,Manouba
+ministers,Q54875067,Faouzi Abderrahmane,lat,ABDERRAHMANE,BDRHMN,second_republic,Médenine,فوزي عبد الرحمان,BDRHMN,2016,3,False,Médenine
+ministers,Q54875068,Taoufik Cheikhrouhou,lat,CHEIKHROUHOU,SXRH,bourguiba,,توفيق شيخ روحه,SXRH|RH,1987,3,False,
+ministers,Q54875068,Taoufik Cheikhrouhou,lat,CHEIKHROUHOU,SXRH,ben_ali,,توفيق شيخ روحه,SXRH|RH,1987,3,False,
+ministers,Q54875069,Tahar Azaiez,lat,AZAIEZ,Z,ben_ali,Gabès,الطاهر عزيز,Z,1988,3,False,Gabès
+ministers,Q54875074,Tijani Chelli,lat,CHELLI,SL,bourguiba,Nabeul,التيجاني الشلي,SL,1969,3,False,Nabeul
+ministers,Q54875075,محمد رشيد كشيش,ar,كشيش,KS,ben_ali,,محمد رشيد كشيش,KS,1999,3,False,
+ministers,Q54875084,Salah Ben M'Barka,lat,BEN M'BARKA|M'BARKA,BMBRK|MBRK,bourguiba,Sousse,صالح بن مباركة,BMBRK|MBRK,1983,3,False,Sousse
+ministers,Q54875085,محمود الخياري,ar,الخياري,XR,monarchy,,محمود الخياري,XR,1956,3,False,
+ministers,Q54875086,Habib Haddad,lat,HADDAD,HD,ben_ali,,الحبيب حداد,HD,1999,3,False,
+ministers,Q54875087,محمد النابلي,ar,النابلي,MBL,ben_ali,,محمد النابلي,MBL,1999,3,False,
+ministers,Q54875092,صالح الجبالي,ar,الجبالي,JBL,bourguiba,,صالح الجبالي,JBL,1987,3,False,
+ministers,Q54875092,صالح الجبالي,ar,الجبالي,JBL,ben_ali,,صالح الجبالي,JBL,1987,3,False,
+ministers,Q54875133,محمد رضا كشريد,ar,كشريد,KSRD,ben_ali,,محمد رضا كشريد,KSRD,1999,3,False,
+ministers,Q54875134,Habib Touhami,lat,TOUHAMI,THM,bourguiba,Kébili,الحبيب التوهامي,THM,1983,3,False,Kébili
+ministers,Q54875178,Khadija Chérif,lat,CHERIF,SRF,ben_ali,Tunis,خديجة الشريف,SRF,2006,3,False,Tunis
+ministers,Q55167831,Azzouz Rebaï,lat,REBAI,RB,monarchy,Tunis,عزوز الرباعي,RB,1956,5,False,Tunis
+ministers,Q55196894,Abdelmalek Laârif,lat,LAARIF,LRF,ben_ali,,عبد الملك العريف,RF,1988,3,False,
+ministers,Q55381692,Omar Béhi,lat,BEHI,BH,second_republic,Tunis,عمر الباهي,BH,2016,3,False,Tunis
+ministers,Q55381738,Adel Jarboui,lat,JARBOUI,JRB,second_republic,Sfax,عادل الجربوعي,JRB,2016,5,False,Sfax
+ministers,Q55391329,المولدي الزواوي,ar,الزواوي,Z,ben_ali,,المولدي الزواوي,Z,1989,3,False,
+ministers,Q55392087,Salah Baccari,lat,BACCARI,BKR,ben_ali,Sidi Bouzid,صالح البكاري,BKR,1989,3,False,Sidi Bouzid
+ministers,Q55392091,Hédi Zeghal,lat,ZEGHAL,ZVL,bourguiba,,الهادي الزغل,ZVL,1980,3,False,
+ministers,Q55392098,محمد كريم,ar,كريم,KRM,bourguiba,,محمد كريم,KRM,1986,3,False,
+ministers,Q55392103,محمد سعد,ar,سعد,SD,ben_ali,,محمد سعد,SD,1989,3,False,
+ministers,Q55392107,المنصف بلعيد,ar,بلعيد,BLD,ben_ali,,المنصف بلعيد,BLD,1989,3,False,
+ministers,Q55999324,Taoufik Rajhi,lat,RAJHI,RJH,second_republic,Tunis,توفيق الراجحي,RJH,2016,3,False,Tunis
+ministers,Q56309568,Hichem Fourati,lat,FOURATI,FRT,second_republic,Tunis,هشام الفراتي,FRT,2016,3,False,Tunis
+ministers,Q563204,Mongi Slim,lat,SLIM,SLM,protectorate,Tunis,المنجي سليم,SLM,1954,2,False,Tunis
+ministers,Q563204,Mongi Slim,lat,SLIM,SLM,protectorate_end,Tunis,المنجي سليم,SLM,1954,2,False,Tunis
+ministers,Q563204,Mongi Slim,lat,SLIM,SLM,monarchy,Tunis,المنجي سليم,SLM,1954,2,False,Tunis
+ministers,Q563204,Mongi Slim,lat,SLIM,SLM,bourguiba,Tunis,المنجي سليم,SLM,1954,2,False,Tunis
+ministers,Q57699,Hamadi Jebali,lat,JEBALI,JBL,ben_ali,Sousse,حمادي الجبالي,JBL,2011,0,True,Sousse
+ministers,Q57699,Hamadi Jebali,lat,JEBALI,JBL,transition,Sousse,حمادي الجبالي,JBL,2011,0,True,Sousse
+ministers,Q584073,Abderrazak Kilani,lat,KILANI,KLN,transition,Tunis,عبد الرزاق الكيلاني,KLN,2011,3,False,Tunis
+ministers,Q586623,Habib Bourguiba Jr.,lat,JR,JR,bourguiba,,الحبيب بورقيبة الابن,BN,1964,3,False,
+ministers,Q60428357,Selim Azzabi,lat,AZZABI,ZB,second_republic,Tunis,سليم العزابي,ZB,2020,3,False,Tunis
+ministers,Q60455265,فيصل الحفيان,ar,الحفيان,HFN,second_republic,,فيصل الحفيان,HFN,2016,5,False,
+ministers,Q60572709,Tahar Sioud,lat,SIOUD,SD,ben_ali,Mahdia,الطاهر صيود,SD,1989,3,False,Mahdia
+ministers,Q60573008,Moncef Mouelhi,lat,MOUELHI,MLH,ben_ali,Tunis,منصف المولهي,MLH,1988,3,False,Tunis
+ministers,Q60573013,Mohamed Charfeddine Gallouz,lat,GALLOUZ,KLZ,ben_ali,Bizerte,محمد شرف الدين قلوز,KLZ,1989,3,False,Bizerte
+ministers,Q60573369,عبد الرزاق الكافي,ar,الكافي,KF,bourguiba,,عبد الرزاق الكافي,KF,1987,3,False,
+ministers,Q60573379,فوزي بالكاهية,ar,بالكاهية,BLKH,ben_ali,,فوزي بالكاهية,BLKH,1991,3,False,
+ministers,Q60573385,الطاهر الحاج علي,ar,علي,L,ben_ali,,الطاهر الحاج علي,L,1989,3,False,
+ministers,Q60573413,Khalil Laâjimi,lat,LAAJIMI,LJM,ben_ali,Tunis,خليل العجيمي,JM,1999,3,False,Tunis
+ministers,Q60573416,الحبيب بن الشيخ,ar,بن الشيخ|الشيخ,BNSX|SX,bourguiba,,الحبيب بن الشيخ,BNSX|SX,1970,5,False,
+ministers,Q60573426,الحبيب الأزرق,ar,الأزرق,ZRK,ben_ali,,الحبيب الأزرق,ZRK,1989,3,False,
+ministers,Q60573535,Afif Hendaoui,lat,HENDAOUI,HND,ben_ali,Tunis,عفيف الهنداوي,HND,1999,4,False,Tunis
+ministers,Q60573536,Fethi Houidi,lat,HOUIDI,HD,ben_ali,Tunis,فتحي الهويدي,HD,1989,4,False,Tunis
+ministers,Q60576591,Ahmed Khaled,lat,KHALED,XLD,ben_ali,Sousse,أحمد خالد,XLD,1989,3,False,Sousse
+ministers,Q61588042,Mokhtar Hammami,lat,HAMMAMI,HM,second_republic,,مختار الهمامي,HM,2016,3,False,
+ministers,Q61598250,Noureddine Selmi,lat,SELMI,SLM,second_republic,Médenine,نور الدين السالمي (سياسي),SLM,2016,3,False,Médenine
+ministers,Q62601798,Hédi Mekni,lat,MEKNI,MKN,second_republic,Béja,الهادي الماكني,MKN,2016,3,False,Béja
+ministers,Q643348,Habib Bourguiba,lat,BOURGUIBA,BRKB,protectorate_end,Monastir,الحبيب بورقيبة,BRKB,1956,0,True,Monastir
+ministers,Q643348,Habib Bourguiba,lat,BOURGUIBA,BRKB,monarchy,Monastir,الحبيب بورقيبة,BRKB,1956,0,True,Monastir
+ministers,Q643348,Habib Bourguiba,lat,BOURGUIBA,BRKB,bourguiba,Monastir,الحبيب بورقيبة,BRKB,1956,0,True,Monastir
+ministers,Q65130650,Abdellatif Hmam,lat,HMAM,HM,second_republic,Nabeul,عبد اللطيف همام,HM,2016,5,False,Nabeul
+ministers,Q653162,Rachid Sfar,lat,SFAR,SFR,bourguiba,Mahdia,رشيد صفر,SFR,1977,0,True,Mahdia
+ministers,Q666665,Mohamed Arbi Zarrouk Khaznadar,lat,KHAZNADAR,XZNDR,,Tunis,محمد العربي زروق خزندار,XZNDR,,0,True,Tunis
+ministers,Q668526,Noureddine Bhiri,lat,BHIRI,BHR,ben_ali,Sfax,نور الدين البحيري,BHR,2011,3,False,Sfax
+ministers,Q668526,Noureddine Bhiri,lat,BHIRI,BHR,transition,Sfax,نور الدين البحيري,BHR,2011,3,False,Sfax
+ministers,Q6932968,Muhammed Saadulah,lat,SAADULAH,SDLH,bourguiba,,محمد سعد الله,SDL,1980,2,False,
+ministers,Q744499,Mansour Moalla,lat,MOALLA,ML,bourguiba,Sfax,منصور معلى,ML,1969,3,False,Sfax
+ministers,Q7480522,Lotfi Ben Jeddou,lat,BEN JEDDOU|JEDDOU,BNJD|JD,transition,Kasserine,لطفي بن جدو,BNJD|JD,2013,3,False,Kasserine
+ministers,Q800238,Bahi Ladgham,lat,LADGHAM,LDVM,monarchy,Tunis,الباهي الأدغم,DVM,1956,0,True,Tunis
+ministers,Q800238,Bahi Ladgham,lat,LADGHAM,LDVM,bourguiba,Tunis,الباهي الأدغم,DVM,1956,0,True,Tunis
+ministers,Q85822499,Thouraya Jeribi Khémiri,lat,KHEMIRI,XMR,second_republic,Tunis,ثريا الجريبي,JRB,2020,3,False,Tunis
+ministers,Q86329266,Ali Mrabet,lat,MRABET,MRBT,second_republic,,علي مرابط,MRBT,2021,3,False,
+ministers,Q86329266,Ali Mrabet,lat,MRABET,MRBT,saied_exception,,علي مرابط,MRBT,2021,3,False,
+ministers,Q86734094,Moncef Sliti,lat,SLITI,SLT,second_republic,Siliana,المنصف السليتي,SLT,2020,3,False,Siliana
+ministers,Q88467296,Chiraz Latiri,lat,LATIRI,LTR,second_republic,Sousse,شيراز العتيري,TR,2020,3,False,Sousse
+ministers,Q88485687,Hichem Mechichi,lat,MECHICHI,MS,second_republic,Jendouba,هشام المشيشي,MS,2020,0,True,Jendouba
+ministers,Q89844681,Imed Hazgui,lat,HAZGUI,HZK,second_republic,Tunis,عماد الحزقي,HZK,2020,3,False,Tunis
+ministers,Q89996191,Asma Shiri,lat,SHIRI,SR,second_republic,Siliana,أسماء السحيري,SHR,2020,3,False,Siliana
+ministers,Q90570383,Nizar Yaïche,lat,YAICHE,S,second_republic,,نزار يعيش,S,2020,3,False,
+ministers,Q90946576,Salah Ben Youssef,lat,BEN YOUSSEF|YOUSSEF,BNSF|SF,protectorate,,صالح بن يوسف,BNSF|SF,1950,3,False,
+ministers,Q90946576,Salah Ben Youssef,lat,BEN YOUSSEF|YOUSSEF,BNSF|SF,second_republic,,صالح بن يوسف,BNSF|SF,1950,3,False,
+ministers,Q91626084,Noureddine Erray,lat,ERRAY,R,second_republic,Tunis,نور الدين الري,R,2020,3,False,Tunis
+ministers,Q91645255,Habib Kchaou,lat,KCHAOU,KS,second_republic,,الحبيب كشو,KS,2020,3,False,
+ministers,Q91649459,Oussama Kheriji,lat,KHERIJI,XRJ,second_republic,,أسامة الخريجي,XRJ,2020,3,False,
+ministers,Q91669922,Mohamed Fadhel Kraiem,lat,KRAIEM,KRM,bourguiba,Tunis,محمد الفاضل كريّم,KRM,1980,3,False,Tunis
+ministers,Q91669922,Mohamed Fadhel Kraiem,lat,KRAIEM,KRM,second_republic,Tunis,محمد الفاضل كريّم,KRM,1980,3,False,Tunis
+ministers,Q92199953,Mohamed Msilini,lat,MSILINI,MSLN,second_republic,Gabès,محمد مسيليني,MSLN,2020,3,False,Gabès
+ministers,Q92224371,Ayachi Hammami,lat,HAMMAMI,HM,second_republic,,العياشي الهمامي,HM,2020,3,False,
+ministers,Q92316785,Slim Choura,lat,CHOURA,SR,second_republic,Sfax,سليم شورى,SR,2020,3,False,Sfax
+ministers,Q92332624,Ahmed Gaâloul,lat,GAALOUL,KL,second_republic,Nabeul,أحمد قعلول,KL,2016,3,False,Nabeul
+ministers,Q92353813,Selma Ennaifer,lat,ENNAIFER,NFR,second_republic,,سلمى النيفر,NFR,2020,3,False,
+ministers,Q92354033,Mohamed Ali Toumi,lat,TOUMI,TM,second_republic,Sfax,محمد علي التومي,TM,2020,3,False,Sfax
+ministers,Q9344006,Rachid Sabbagh,lat,SABBAGH,SBV,transition,,رشيد الصباغ,SBV,2013,3,False,
+ministers,Q958968,Tarak Dhiab,lat,DHIAB,DB,ben_ali,Tunis,طارق ذياب,DB,2011,3,False,Tunis
+ministers,Q958968,Tarak Dhiab,lat,DHIAB,DB,transition,Tunis,طارق ذياب,DB,2011,3,False,Tunis
+ministers,Q96473313,Fethi Belhaj,lat,BELHAJ,BLHJ,second_republic,,فتحي بالحاج,BLHJ,2020,3,False,
+ministers,Q97961043,Mohamed Ali Bouleymane,lat,BOULEYMANE,BLMN,ben_ali,,محمد علي بوليمان,BLMN,1988,3,False,
+ministers,Q980071,Mouldi Kefi,lat,KEFI,KF,ben_ali,Le Kef,المولدي الكافي,KF,2011,3,False,Le Kef
+ministers,Q980071,Mouldi Kefi,lat,KEFI,KF,transition,Le Kef,المولدي الكافي,KF,2011,3,False,Le Kef
+ministers,Q98828346,Brahim Bartagi,lat,BARTAGI,BRTJ,second_republic,Monastir,إبراهيم البرتاجي,BRTJ,2020,3,False,Monastir
+ministers,Q98828355,Taoufik Charfeddine,lat,CHARFEDDINE,SRFDN,second_republic,,توفيق شرف الدين,SRFDN,2020,3,False,
+ministers,Q98828355,Taoufik Charfeddine,lat,CHARFEDDINE,SRFDN,saied_exception,,توفيق شرف الدين,SRFDN,2020,3,False,
+ministers,Q98828362,Ali Kooli,lat,KOOLI,KL,second_republic,Tunis,علي الكعلي,KL,2020,3,False,Tunis
+ministers,Q98828537,Olfa Benouda,lat,BENOUDA,BND,second_republic,,ألفة بن عودة,BND|D,2020,3,False,
+ministers,Q98828560,Kamel Deguiche,lat,DEGUICHE,DKS,second_republic,,كمال دقيش,DKS,2020,3,False,
+ministers,Q98828560,Kamel Deguiche,lat,DEGUICHE,DKS,saied_exception,,كمال دقيش,DKS,2020,3,False,
+ministers,Q98828570,Leïla Jaffel,lat,JAFFEL,JFL,second_republic,Ben Arous,ليلى جفال,JFL,2020,3,False,Ben Arous
+ministers,Q98828570,Leïla Jaffel,lat,JAFFEL,JFL,saied_exception,Ben Arous,ليلى جفال,JFL,2020,3,False,Ben Arous
+ministers,Q98828591,Mustapha Aroui,lat,AROUI,R,second_republic,Ben Arous,مصطفى العروي,R,2020,3,False,Ben Arous
+ministers,Q98828599,Fethi Sellaouti,lat,SELLAOUTI,SLT,second_republic,,فتحي السلاوتي,SLT,2020,3,False,
+ministers,Q98828599,Fethi Sellaouti,lat,SELLAOUTI,SLT,saied_exception,,فتحي السلاوتي,SLT,2020,3,False,
+ministers,Q98844443,Imen Houimel,lat,HOUIMEL,HML,second_republic,,إيمان هويمل,HML,2020,3,False,
+ministers,Q99528084,Mohamed Rachid Kechiche,lat,KECHICHE,KS,ben_ali,,,,1999,3,False,
+ministers,Q99539200,Faouzi Mehdi,lat,MEHDI,MHD,second_republic,Sfax,فوزي مهدي,MHD,2020,3,False,Sfax
+ministers,Q99541044,Mohamed Ridha Kechrid,lat,KECHRID,KSRD,ben_ali,,,,2004,3,False,
+ministers,Q99542892,Salwa Sghayer,lat,SGHAYER,SVR,second_republic,Ben Arous,,,2020,3,False,Ben Arous
+ministers,Q99543891,Moncef Belaïd,lat,BELAID,BLD,ben_ali,,,,1988,3,False,
+ministers,Q99574115,Mohamed Bousseta,lat,BOUSSETA,BST,second_republic,,محمد بوستة,BST,2020,3,False,
+ministers,TN-abdelaziz-beltaief,Abdelaziz Beltaïef,lat,BELTAIEF,BLTF,bourguiba,,,,1970,5,False,
+ministers,TN-abdelaziz-hamzaoui,Abdelaziz Hamzaoui,lat,HAMZAOUI,HMZ,bourguiba,,,,1973,5,False,
+ministers,TN-abdelaziz-menchari,Abdelaziz Menchari,lat,MENCHARI,MNSR,protectorate,,,,1952,3,False,
+ministers,TN-abdelhamid-sassi,Abdelhamid Sassi et Larbi Mallakh,lat,MALLAKH,MLX,bourguiba,,,,1971,3,False,
+ministers,TN-abdelkader-belkhodja,Abdelkader Belkhodja,lat,BELKHODJA,BLXJ,protectorate,,,,1947,3,False,
+ministers,TN-abdellatif-saddam,Abdellatif Saddem,lat,SADDEM,SDM,ben_ali,,,,1999,3,False,
+ministers,TN-abderrahman-ben-messaoud,Abderrahman Ben Messaoud,lat,BEN MESSAOUD|MESSAOUD,BMSD|MSD,bourguiba,,,,1971,5,False,
+ministers,TN-abderrazak-daaloul,Abderrazak Daaloul,lat,DAALOUL,DL,ben_ali,,,,2005,5,False,
+ministers,TN-abdessalem-mseddi,Abdessalem Mseddi,lat,MSEDDI,MSD,ben_ali,,,,1987,3,False,
+ministers,TN-ahmed-ben-arfa,Ahmed Ben Arfa,lat,BEN ARFA|ARFA,BNRF|RF,bourguiba,,,,1983,5,False,
+ministers,TN-ahmed-dhouib,Ahmed Dhouib,lat,DHOUIB,DB,ben_ali,,,,2007,5,False,
+ministers,TN-ahmed-khaled,Ahmed Khaled,lat,KHALED,XLD,ben_ali,,,,1989,3,False,
+ministers,TN-ahmed-mahjoub,Ahmed Mahjoub,lat,MAHJOUB,MHJB,ben_ali,,,,2001,5,False,
+ministers,TN-albert-bessis,Albert Bessis,lat,BESSIS,BS,protectorate,,,,1954,3,False,
+ministers,TN-ali-hafsi-jeddi,Ali Hafsi Jeddi,lat,JEDDI,JD,saied_exception,,,,2021,3,False,
+ministers,TN-ali-ladhari,Ali Ladhari,lat,LADHARI,LDR,protectorate,,,,1947,3,False,
+ministers,TN-amel-nafti,Amel Nafti,lat,NAFTI,NFT,second_republic,,,,2015,5,False,
+ministers,TN-ameur-ghedira,Ameur Ghedira,lat,GHEDIRA,VDR,bourguiba,,,,1984,5,False,
+ministers,TN-ameur-horchani,Ameur Horchani,lat,HORCHANI,HRSN,ben_ali,,,,1988,5,False,
+ministers,TN-amor-bejaoui,Amor Bejaoui,lat,BEJAOUI,BJ,ben_ali,,,,1988,5,False,
+ministers,TN-amor-ben-romdhan,Amor Ben Romdhan,lat,BEN ROMDHAN|ROMDHAN,BNRMDN|RMDN,ben_ali,,,,1988,5,False,
+ministers,TN-andre-barouch,André Barouch,lat,BAROUCH,BRS,monarchy,,,,1956,3,False,
+ministers,TN-andre-blanchard,Jean Dèze puis André Blanchard à partir du,lat,DU,D,protectorate,,,,1950,3,False,
+ministers,TN-azzouz-rebai,Azzouz Rebaï,lat,REBAI,RB,protectorate_end,,,,1956,5,False,
+ministers,TN-baccar-touzani,Baccar Touzani,lat,TOUZANI,TZN,bourguiba,,,,1970,5,False,
+ministers,TN-bechir-ben-yahmed,Béchir Ben Yahmed,lat,BEN YAHMED|YAHMED,BNHMD|HMD,protectorate_end,,,,1956,5,False,
+ministers,TN-bechir-ennaji,Béchir Ennaji,lat,ENNAJI,NJ,monarchy,,,,1957,5,False,
+ministers,TN-bechir-louzir,Béchir Louzir,lat,LOUZIR,LZR,ben_ali,,,,2008,5,False,
+ministers,TN-bechir-mejdoub,Béchir Mejdoub,lat,MEJDOUB,MJDB,ben_ali,,,,2001,5,False,
+ministers,TN-belgacem-sabri,Belgacem Sabri,lat,SABRI,SBR,second_republic,,,,2015,5,False,
+ministers,TN-brahim-baccari,Brahim Baccari,lat,BACCARI,BKR,ben_ali,,,,2001,5,False,
+ministers,TN-brahim-turki,Brahim Turki,lat,TURKI,TRK,bourguiba,,,,1976,5,False,
+ministers,TN-chedly-ben-romdhane,Chedly Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,BNRMDN|RMDN,protectorate,,,,1954,3,False,
+ministers,TN-chedly-rehaiem,Chedly Rehaïem,lat,REHAIEM,RHM,protectorate,,,,1954,3,False,
+ministers,TN-chokri-ayachi,Chokri Ayachi,lat,AYACHI,S,ben_ali,,,,2001,5,False,
+ministers,TN-chokri-mamoghli,Chokri Mamoghli,lat,MAMOGHLI,MVL,ben_ali,,,,2007,5,False,
+ministers,TN-chokri-terzi,Chokri Terzi,lat,TERZI,TRZ,second_republic,,,,2015,5,False,
+ministers,TN-ezzeddine-ben-cheikh,Ezzeddine Ben Cheikh,lat,BEN CHEIKH|CHEIKH,BNSX|SX,second_republic,,,,2021,3,False,
+ministers,TN-fakhreddine-el-messai,Fakhreddine El Messaï,lat,EL MESSAI|MESSAI,MS|MS,ben_ali,,,,2003,5,False,
+ministers,TN-faouzi-belkahia,Faouzi Belkahia,lat,BELKAHIA,BLKH,ben_ali,,,,1991,3,False,
+ministers,TN-farhat-medini,Farhat Medini,lat,MEDINI,MDN,ben_ali,,,,2001,5,False,
+ministers,TN-faten-kallel,Faten Kallel,lat,KALLEL,KL,second_republic,,,,2016,5,False,
+ministers,TN-faycal-hafiane,Fayçal Hafiane,lat,HAFIANE,HFN,second_republic,,,,2016,5,False,
+ministers,TN-fethi-houidi,Mohamed Fethi Houidi,lat,HOUIDI,HD,ben_ali,,,,1991,4,False,
+ministers,TN-fredj-jabbes,Fredj Jabbes,lat,JABBES,JBS,bourguiba,,,,1971,5,False,
+ministers,TN-georges-gaston-puis-lucien-paye-a-partir,Georges Gaston puis Lucien Paye à partir du,lat,DU,D,protectorate,,,,1947,3,False,
+ministers,TN-habib-ben-cheikh,Habib Ben Cheikh,lat,BEN CHEIKH|CHEIKH,BNSX|SX,bourguiba,,,,1970,3,False,
+ministers,TN-habib-debbabi,Habib Debbabi,lat,DEBBABI,DB,second_republic,,,,2016,5,False,
+ministers,TN-habib-haddad,Habib Haddad,lat,HADDAD,HD,ben_ali,,,,2002,3,False,
+ministers,TN-habib-lazreg,Habib Lazreg,lat,LAZREG,LZRK,ben_ali,,,,1989,3,False,
+ministers,TN-hachem-hmidi,Hachem Hmidi,lat,HMIDI,HMD,second_republic,,,,2016,5,False,
+ministers,TN-hamadi-badra,Hamadi Badra,lat,BADRA,BDR,protectorate,,,,1950,3,False,
+ministers,TN-hamed-zeghal,Hamed Zeghal,lat,ZEGHAL,ZVL,bourguiba,,,,1971,5,False,
+ministers,TN-hammouda-hamdi,Hammouda Hamdi,lat,HAMDI,HMD,ben_ali,,,,2001,5,False,
+ministers,TN-hassan-hosni-abdelwaheb,Hassan Hosni Abdelwaheb,lat,ABDELWAHEB,BDHB,protectorate,,,,1943,3,False,
+ministers,TN-hechmi-kooli,Héchmi Kooli,lat,KOOLI,KL,bourguiba,,,,1974,5,False,
+ministers,TN-hedi-ben-rais,Hédi Ben Raïs,lat,BEN RAIS|RAIS,BNRS|RS,protectorate,,,,1952,3,False,
+ministers,TN-hedi-grioui,Hédi Grioui,lat,GRIOUI,KR,ben_ali,,,,1990,5,False,
+ministers,TN-hedi-khairi,Hédi Khairi,lat,KHAIRI,XR,second_republic,,,,2020,3,False,
+ministers,TN-hedi-zeghal,Hédi Zeghal,lat,ZEGHAL,ZVL,bourguiba,,,,1974,3,False,
+ministers,TN-henri-culmann-puis-jean-gaston-fraisse-a,Henri Culmann puis Jean-Gaston Fraissé à partir du,lat,DU,D,protectorate,,,,1947,3,False,
+ministers,TN-houcine-cherif,Houcine Cherif,lat,CHERIF,SRF,bourguiba,,,,1987,4,False,
+ministers,TN-houcine-cherif,Houcine Cherif,lat,CHERIF,SRF,ben_ali,,,,1987,4,False,
+ministers,TN-imed-jabri,Imed Jabri,lat,JABRI,JBR,second_republic,,,,2016,5,False,
+ministers,TN-issam-lahmar,Issam Lahmar,lat,LAHMAR,LHMR,second_republic,,,,2021,3,False,
+ministers,TN-jacques-vimont-puis-raymond-pons-a-parti,Jacques Vimont puis Raymond Pons à partir du,lat,DU,D,protectorate,,,,1950,6,False,
+ministers,TN-jean-louis-bonnenfant,Jean-Louis Bonnenfant,lat,BONNENFANT,BNFNT,protectorate,,,,1947,3,False,
+ministers,TN-jean-mathieu,Jean Mathieu,lat,MATHIEU,MT,protectorate,,,,1950,3,False,
+ministers,TN-kacem-bousnina,Kacem Bousnina,lat,BOUSNINA,BSN,ben_ali,,,,1988,5,False,
+ministers,TN-kamel-ayadi,Kamel Ayadi,lat,AYADI,D,ben_ali,,,,2004,3,False,
+ministers,TN-kamel-ayadi,Kamel Ayadi,lat,AYADI,D,second_republic,,,,2004,3,False,
+ministers,TN-kamel-feki,Kamel Feki,lat,FEKI,FK,second_republic,,,,2021,3,False,
+ministers,TN-kamel-haj-sassi,Kamel Haj Sassi,lat,SASSI,S,ben_ali,,,,1993,5,False,
+ministers,TN-kamel-jendoubi,Kamel Jendoubi,lat,JENDOUBI,JNDB,second_republic,,,,2015,3,False,
+ministers,TN-khadija-ghariani,Khadija Ghariani,lat,GHARIANI,VRN,ben_ali,,,,2004,5,False,
+ministers,TN-khalil-amiri,Khalil Amiri,lat,AMIRI,MR,second_republic,,,,2016,5,False,
+ministers,TN-lamia-chafei-seghaier,Lamia Chafei Seghaier,lat,SEGHAIER,SVR,ben_ali,,,,2008,5,False,
+ministers,TN-lotfi-dhiab,Lotfi Dhiab,lat,DHIAB,DB,second_republic,,,,2021,3,False,
+ministers,TN-louis-cartry,Louis Cartry,lat,CARTRY,KRTR,protectorate,,,,1950,6,False,
+ministers,TN-m-hamed-ezzine-chelaifa,M'hamed Ezzine Chelaifa,lat,CHELAIFA,SLF,second_republic,,,,2015,5,False,
+ministers,TN-m-hamed-gachem,M'hamed Gachem,lat,GACHEM,KSM,protectorate,,,,1952,3,False,
+ministers,TN-mahmoud-khiairi,Mahmoud Khiairi,lat,KHIAIRI,XR,monarchy,,,,1956,3,False,
+ministers,TN-mahmoud-maamouri,Mahmoud Maamouri,lat,MAAMOURI,MR,bourguiba,,,,1974,5,False,
+ministers,TN-mekki-zidi,Mekki Zidi,lat,ZIDI,ZD,bourguiba,,,,1971,5,False,
+ministers,TN-mezri-chekir,Mezri Chekir,lat,CHEKIR,SKR,bourguiba,,,,1980,4,False,
+ministers,TN-mohamed-ali-boughdiri,Mohamed Ali Boughdiri,lat,BOUGHDIRI,BVDR,second_republic,,,,2021,3,False,
+ministers,TN-mohamed-ali-ganzoui,Mohamed Ali Ganzoui,lat,GANZOUI,KNZ,ben_ali,,,,1995,5,False,
+ministers,TN-mohamed-ali-nafti,Mohamed Ali Nafti,lat,NAFTI,NFT,second_republic,,,,2021,3,False,
+ministers,TN-mohamed-ali-souissi,Mohamed Ali Souissi,lat,SOUISSI,S,bourguiba,,,,1979,3,False,
+ministers,TN-mohamed-amamou,Mohamed Amamou,lat,AMAMOU,M,ben_ali,,,,1989,5,False,
+ministers,TN-mohamed-amor,Mohamed Amor,lat,AMOR,MR,ben_ali,,,,2001,5,False,
+ministers,TN-mohamed-badra,Mohamed Badra,lat,BADRA,BDR,protectorate,,,,1954,3,False,
+ministers,TN-mohamed-ben-ahmed,Mohamed Ben Ahmed,lat,BEN AHMED|AHMED,BNHMD|HMD,ben_ali,,,,1998,5,False,
+ministers,TN-mohamed-chakroun,Mohamed Chakroun,lat,CHAKROUN,SKRN,monarchy,,,,1956,3,False,
+ministers,TN-mohamed-dinguizli,Mohamed Dinguizli,lat,DINGUIZLI,DNKZL,protectorate,,,,1952,3,False,
+ministers,TN-mohamed-fadhel-mahfoudh,Mohamed Fadhel Mahfoudh,lat,MAHFOUDH,MHFD,second_republic,,,,2016,3,False,
+ministers,TN-mohamed-habib-hadj-said,Mohamed Habib Hadj Saïd,lat,SAID,SD,ben_ali,,,,1990,5,False,
+ministers,TN-mohamed-hadjouj,Mohamed Hadjouj,lat,HADJOUJ,HJ,protectorate,,,,1954,3,False,
+ministers,TN-mohamed-jomaa,Mohamed Jomâa,lat,JOMAA,JM,bourguiba,,,,1977,3,False,
+ministers,TN-mohamed-karboul,Mohamed Karboul,lat,KARBOUL,KRBL,ben_ali,,,,1987,5,False,
+ministers,TN-mohamed-larbi-mahjoubi,Mohamed Larbi Mahjoubi,lat,MAHJOUBI,MHJB,ben_ali,,,,1990,5,False,
+ministers,TN-mohamed-nabli,Mohamed Nabli,lat,NABLI,MBL,ben_ali,,,,2001,3,False,
+ministers,TN-mohamed-nejib-berriche,Mohamed Nejib Berriche,lat,BERRICHE,BRS,ben_ali,,,,2006,5,False,
+ministers,TN-mohamed-nouri-jouini,Mohamed Nouri Jouini / démissionnaire,lat,DEMISSIONNAIRE,DMSNR,ben_ali,,,,2001,3,False,
+ministers,TN-mohamed-nouri-jouini,Mohamed Nouri Jouini / démissionnaire,lat,DEMISSIONNAIRE,DMSNR,transition,,,,2001,3,False,
+ministers,TN-mohamed-saad,Mohamed Saâd,lat,SAAD,SD,ben_ali,,,,1990,3,False,
+ministers,TN-mohamed-saadallah,Mohamed Saadallah,lat,SAADALLAH,SDLH,protectorate,,,,1950,2,False,
+ministers,TN-mohsen-boujbal,Mohsen Boujbal,lat,BOUJBAL,BJBL,ben_ali,,,,1988,5,False,
+ministers,TN-mohsen-laroui,Mohsen Laroui,lat,LAROUI,LR,ben_ali,,,,2002,5,False,
+ministers,TN-moncef-bel-hadj-amor,Moncef Bel Hadj Amor,lat,BEL AMOR|AMOR,BLMR|MR,bourguiba,,,,1976,3,False,
+ministers,TN-moncef-ben-said,Moncef Ben Saïd,lat,BEN SAID|SAID,BNSD|SD,ben_ali,,,,2001,5,False,
+ministers,TN-moncef-bouden,Moncef Bouden,lat,BOUDEN,BDN,ben_ali,,,,2001,5,False,
+ministers,TN-moncef-hergli,Moncef Hergli,lat,HERGLI,HRKL,ben_ali,,,,2002,5,False,
+ministers,TN-moncef-zaafrane,Moncef Zaafrane,lat,ZAAFRANE,ZFRN,bourguiba,,,,1979,6,False,
+ministers,TN-mondher-belaid,Mondher Belaid,lat,BELAID,BLD,second_republic,,,,2021,3,False,
+ministers,TN-mongi-bedoui,Mongi Bedoui,lat,BEDOUI,BD,ben_ali,,,,2008,5,False,
+ministers,TN-mongi-chouchane,Mongi Chouchane,lat,CHOUCHANE,SN,ben_ali,,,,2001,5,False,
+ministers,TN-mongi-safra,Mongi Safra,lat,SAFRA,SFR,ben_ali,,,,1991,5,False,
+ministers,TN-montasser-ouaili,Montasser Ouaïli,lat,OUAILI,L,ben_ali,,,,1999,3,False,
+ministers,TN-mouldi-zouaoui,Mouldi Zouaoui,lat,ZOUAOUI,Z,ben_ali,,,,1989,3,False,
+ministers,TN-mustapha-zaanouni,Mustapha Zaanouni,lat,ZAANOUNI,ZN,bourguiba,,,,1971,4,False,
+ministers,TN-nabil-ammar,Nabil Ammar,lat,AMMAR,MR,second_republic,,,,2021,3,False,
+ministers,TN-najeh-belkhiria-karoui,Najeh Belkhiria Karoui,lat,KAROUI,KR,ben_ali,,,,2011,5,False,
+ministers,TN-najoua-miladi,Najoua Miladi,lat,MILADI,MLD,ben_ali,,,,2007,5,False,
+ministers,TN-nebiha-gueddana,Nebiha Gueddana,lat,GUEDDANA,KDN,ben_ali,,,,1989,5,False,
+ministers,TN-nejmeddine-hamrouni,Nejmeddine Hamrouni,lat,HAMROUNI,HMRN,second_republic,,,,2015,5,False,
+ministers,TN-neziha-escheikh,Néziha Escheikh,lat,ESCHEIKH,SX,ben_ali,,,,1999,5,False,
+ministers,TN-noureddine-ktari,Noureddine Ktari,lat,KTARI,KTR,bourguiba,,,,1977,5,False,
+ministers,TN-noureddine-mejdoub,Noureddine Mejdoub,lat,MEJDOUB,MJDB,ben_ali,,,,1991,5,False,
+ministers,TN-noureddine-zaouche,Noureddine Zaouche,lat,ZAOUCHE,ZS,protectorate,,,,1954,3,False,
+ministers,TN-omar-ben-mahmoud,Omar Ben Mahmoud,lat,BEN MAHMOUD|MAHMOUD,BMHMD|MHMD,ben_ali,,,,2004,5,False,
+ministers,TN-omar-el-abed,Omar El Abed,lat,EL ABED|ABED,BD|BD,ben_ali,,,,2003,5,False,
+ministers,TN-oussama-romdhani,Oussama Romdhani,lat,ROMDHANI,RMDN,ben_ali,,,,2009,3,False,
+ministers,TN-premier-ministre,Premier ministre,lat,MINISTRE,MNSTR,ben_ali,,,,2011,3,False,
+ministers,TN-rachid-amri,Rachid Amri,lat,AMRI,MR,second_republic,,,,2021,3,False,
+ministers,TN-rafaa-ben-achour,Rafâa Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,,,,2001,4,False,
+ministers,TN-rafaa-dekhil,Rafaâ Dekhil,lat,DEKHIL,DXL,ben_ali,,,,2001,3,False,
+ministers,TN-rafik-chelly,Rafik Chelly,lat,CHELLY,SL,second_republic,,,,2015,5,False,
+ministers,TN-raymond-duval-puis-eugene-molle-a-partir,Raymond Duval puis Eugène Molle à partir du,lat,DU,D,protectorate,,,,1947,3,False,
+ministers,TN-raymond-pons-puis-georges-dupoizat-a-par,Raymond Pons puis Georges Dupoizat à partir du,lat,DU,D,protectorate,,,,1952,6,False,
+ministers,TN-rene-brouillet,René Brouillet,lat,BROUILLET,BRLT,protectorate,,,,1947,6,False,
+ministers,TN-rene-rodiere,René Rodière,lat,RODIERE,RDR,protectorate,,,,1947,6,False,
+ministers,TN-riadh-bettaieb,Riadh Bettaieb,lat,BETTAIEB,BTB,ben_ali,,,,2011,3,False,
+ministers,TN-riadh-chaouad,Riadh Chaouad,lat,CHAOUAD,SD,second_republic,,,,2021,3,False,
+ministers,TN-ridha-belhaj,Ridha Belhaj,lat,BELHAJ,BLHJ,ben_ali,,,,2011,4,False,
+ministers,TN-ridha-hamza,Ridha Hamza,lat,HAMZA,HMZ,bourguiba,,,,1985,3,False,
+ministers,TN-sadok-djaziri,Sadok Djaziri,lat,DJAZIRI,JZR,protectorate,,,,1952,3,False,
+ministers,TN-sadok-fayala,Sadok Fayala,lat,FAYALA,FL,ben_ali,,,,1991,5,False,
+ministers,TN-sadok-mourali,Sadok Mourali,lat,MOURALI,MRL,second_republic,,,,2021,3,False,
+ministers,TN-saida-chtioui,Saïda Chtioui,lat,CHTIOUI,ST,ben_ali,,,,2002,5,False,
+ministers,TN-salah-brik-hannachi,Salah Brik Hannachi,lat,HANNACHI,HNS,ben_ali,,,,1992,5,False,
+ministers,TN-salah-el-hamdi,Salah El Hamdi,lat,EL HAMDI|HAMDI,HMD|HMD,ben_ali,,,,1992,5,False,
+ministers,TN-salah-jebali,Salah Jebali,lat,JEBALI,JBL,ben_ali,,,,1987,3,False,
+ministers,TN-saloua-tarzi-ben-attia,Saloua Tarzi Ben Attia,lat,BEN ATTIA|ATTIA,BNT|T,ben_ali,,,,2007,5,False,
+ministers,TN-samir-abid,Samir Abid,lat,ABID,BD,second_republic,,,,2021,3,False,
+ministers,TN-samir-bechouel,Samir Bechouel,lat,BECHOUEL,BSL,second_republic,,,,2016,5,False,
+ministers,TN-sarra-rejeb,Sarra Rejeb,lat,REJEB,RJB,second_republic,,,,2016,5,False,
+ministers,TN-slaheddine-abdallah,Slaheddine Abdallah,lat,ABDALLAH,BDLH,bourguiba,,,,1973,5,False,
+ministers,TN-slaheddine-cherif,Slaheddine Cherif,lat,CHERIF,SRF,ben_ali,,,,1991,5,False,
+ministers,TN-slaheddine-jemmali,Slaheddine Jemmali,lat,JEMMALI,JML,ben_ali,,,,2004,5,False,
+ministers,TN-slaheddine-makhlouf,Slaheddine Makhlouf,lat,MAKHLOUF,MXLF,ben_ali,,,,2003,5,False,
+ministers,TN-sofiane-ben-tounes,Sofiane Ben Tounes,lat,BEN TOUNES|TOUNES,BNTNS|TNS,second_republic,,,,2020,3,False,
+ministers,TN-sofiene-hemissi,Sofiène Hemissi,lat,HEMISSI,HMS,second_republic,,,,2021,3,False,
+ministers,TN-tahar-hadj-ali,Tahar Hadj Ali,lat,ALI,L,ben_ali,,,,1992,3,False,
+ministers,TN-tahar-lakhdar,Tahar Lakhdar,lat,LAKHDAR,LXDR,protectorate,,,,1954,3,False,
+ministers,TN-taieb-belkhiria,Taïeb Belkhiria,lat,BELKHIRIA,BLXR,protectorate,,,,1952,2,False,
+ministers,TN-taieb-hadhri,Taïeb Hadhri,lat,HADHRI,HDR,ben_ali,,,,2005,3,False,
+ministers,TN-taieb-slim,Taïeb Slim,lat,SLIM,SLM,bourguiba,,,,1971,2,False,
+ministers,TN-taoufik-bouderbala,Taoufik Bouderbala,lat,BOUDERBALA,BDRBL,ben_ali,,,,2011,3,False,
+ministers,TN-tijani-haddad,Tijani Haddad,lat,HADDAD,HD,ben_ali,,,,2004,3,False,
+ministers,TN-unknown,سفيان  بن الصادق,ar,بن الصادق|الصادق,BNSDK|SDK,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-10,سفيان الهميسي,ar,الهميسي,HMS,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-100,محمد العربي المحجوبي,ar,المحجوبي,MHJB,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-101,محمد الحبيب الحاج سعيد,ar,سعيد,SD,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-102,الهادي القريوي,ar,القريوي,KR,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-103,نور الدين المجدوب,ar,المجدوب,MJDB,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-104,منجي صفرة,ar,صفرة,SFR,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-105,صالح بريك الحناشي,ar,الحناشي,HNS,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-106,صالح الحمدي,ar,الحمدي,HMD,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-108,بكار التوزاني,ar,التوزاني,TZN,bourguiba,,,,1970,5,False,
+ministers,TN-unknown-109,عبد العزيز بالطيف,ar,بالطيف,BLTF,bourguiba,,,,1970,5,False,
+ministers,TN-unknown-11,رشيد  عامري,ar,عامري,MR,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-110,الشاذلي العابد,ar,العابد,BD,transition,,,,2013,5,False,
+ministers,TN-unknown-111,فتحي التوزري,ar,التوزري,TZR,transition,,,,2013,5,False,
+ministers,TN-unknown-112,الصادق العمري,ar,العمري,MR,transition,,,,2013,5,False,
+ministers,TN-unknown-113,سلوى الصغير,ar,الصغير,SVR,second_republic,,,,2020,3,False,
+ministers,TN-unknown-114,خليل شطورو,ar,شطورو,STR,second_republic,,,,2020,5,False,
+ministers,TN-unknown-115,محمد حجوج,ar,حجوج,HJ,bourguiba,,,,1980,3,False,
+ministers,TN-unknown-116,الطاهر لخضر,ar,لخضر,LXDR,bourguiba,,,,1980,3,False,
+ministers,TN-unknown-117,الشاذلي بن رمضان,ar,بن رمضان|رمضان,BNRMDN|RMDN,bourguiba,,,,1980,3,False,
+ministers,TN-unknown-118,نور الدين الزاوش,ar,الزاوش,ZS,bourguiba,,,,1980,3,False,
+ministers,TN-unknown-119,المكي الزيدي,ar,الزيدي,ZD,bourguiba,,,,1970,5,False,
+ministers,TN-unknown-12,وجدي  الهذيلي,ar,الهذيلي,HDL,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-120,مصطفى الزعنوني,ar,الزعنوني,ZN,bourguiba,,,,1970,5,False,
+ministers,TN-unknown-121,فرج الجباس,ar,الجباس,JBS,bourguiba,,,,1970,5,False,
+ministers,TN-unknown-122,الطيب بلخيرية,ar,بلخيرية,BLXR,ben_ali,,,,1987,2,False,
+ministers,TN-unknown-123,محمد الغشام,ar,الغشام,VSM,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-124,الهادي بن الرايس,ar,بن الرايس|الرايس,BNRS|RS,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-125,محمد الدنقزلي,ar,الدنقزلي,DNKZL,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-126,الصادق الجزيري,ar,الجزيري,JZR,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-127,ريمون بونس (حتى 19 مارس 1953),ar,بونس,BNS,ben_ali,,,,1987,6,False,
+ministers,TN-unknown-128,احلام الباجي السايب,ar,السايب,SB,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-129,محمد علي البوغديري,ar,البوغديري,BVDR,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-13,رياض    شَوِد,ar,شود,SD,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-130,عبد القادر الجمالي,ar,الجمالي,JML,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-131,منير بن رجيبة,ar,بن رجيبة|رجيبة,BNRJB|RJB,saied_exception,,,,2023,5,False,
+ministers,TN-unknown-132,رضا قبوج,ar,قبوج,KBJ,saied_exception,,,,2023,5,False,
+ministers,TN-unknown-133,لطفي ذياب,ar,ذياب,DB,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-134,عائدة حمدي,ar,حمدي,HMD,saied_exception,,,,2021,3,False,
+ministers,TN-unknown-14,حسنة   جيب الله,ar,جيب الله,JBL,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-15,محجوب بن علي,ar,بن علي|علي,BNL|L,bourguiba,,,,1987,3,False,
+ministers,TN-unknown-16,الشاذلي رحيم,ar,رحيم,RHM,protectorate_end,,,,1954,3,False,
+ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,FRS,protectorate_end,,,,1954,3,False,
+ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,FRS,bourguiba,,,,1954,3,False,
+ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,FRS,ben_ali,,,,1954,3,False,
+ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,MT,protectorate_end,,,,1954,3,False,
+ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,MT,bourguiba,,,,1954,3,False,
+ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,MT,ben_ali,,,,1954,3,False,
+ministers,TN-unknown-19,لوسيان بي,ar,بي,B,protectorate_end,,,,1954,3,False,
+ministers,TN-unknown-19,لوسيان بي,ar,بي,B,bourguiba,,,,1954,3,False,
+ministers,TN-unknown-19,لوسيان بي,ar,بي,B,ben_ali,,,,1954,3,False,
+ministers,TN-unknown-2,محمد بن عياد,ar,بن عياد|عياد,BND|D,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-20,أندريه بلانشار,ar,بلانشار,BLNSR,protectorate_end,,,,1954,3,False,
+ministers,TN-unknown-20,أندريه بلانشار,ar,بلانشار,BLNSR,bourguiba,,,,1954,3,False,
+ministers,TN-unknown-21,أندريه باروش,ar,باروش,BRS,monarchy,,,,1956,3,False,
+ministers,TN-unknown-22,عبد الرزاق الزواوي,ar,الزواوي,Z,transition,,,,2011,3,False,
+ministers,TN-unknown-23,رضوان نويصر,ar,نويصر,NSR,transition,,,,2011,5,False,
+ministers,TN-unknown-24,نجيب قرافي,ar,قرافي,KRF,transition,,,,2011,5,False,
+ministers,TN-unknown-25,سالم حمدي,ar,حمدي,HMD,transition,,,,2011,5,False,
+ministers,TN-unknown-26,حسن العنابي,ar,العنابي,MB,transition,,,,2011,5,False,
+ministers,TN-unknown-27,هاشم الحميدي,ar,الحميدي,HMD,second_republic,,,,2016,5,False,
+ministers,TN-unknown-28,فاتن القلال,ar,القلال,KL,second_republic,,,,2016,3,False,
+ministers,TN-unknown-29,عماد جبري,ar,جبري,JBR,second_republic,,,,2016,5,False,
+ministers,TN-unknown-3,وائل  شوشان,ar,شوشان,SN,saied_exception,,,,2023,3,False,
+ministers,TN-unknown-30,خليل الغرياني (رفض المنصب وحذفت الوزارة),ar,الغرياني,VRN,second_republic,,,,2016,3,False,
+ministers,TN-unknown-31,عبد القدوس السعداوي,ar,السعداوي,SD,second_republic,,,,2016,5,False,
+ministers,TN-unknown-32,حمادي بدرة,ar,بدرة,BDR,,,,,,3,False,
+ministers,TN-unknown-33,جاك فيمون (حتى 19 مارس 1951),ar,فيمون,FMN,,,,,,6,False,
+ministers,TN-unknown-34,لويس كارتري,ar,كارتري,KRTR,ben_ali,,,,1987,6,False,
+ministers,TN-unknown-35,جيرار بلاشير,ar,بلاشير,BLSR,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-36,جان داز (حتى 19 مارس 1953),ar,داز,DZ,ben_ali,,,,1987,3,False,
+ministers,TN-unknown-37,رفيق الشلي,ar,الشلي,SL,second_republic,,,,2015,3,False,
+ministers,TN-unknown-38,محمد الزين شلايفة,ar,شلايفة,SLF,second_republic,,,,2015,5,False,
+ministers,TN-unknown-39,بلقاسم الصابري,ar,الصابري,SBR,second_republic,,,,2015,3,False,
+ministers,TN-unknown-4,عصام   الأحمر,ar,الأحمر,HMR,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-40,أمال النفطي,ar,النفطي,NFT,second_republic,,,,2015,3,False,
+ministers,TN-unknown-41,علي الحفصي جدي,ar,جدي,JD,second_republic,,,,2020,3,False,
+ministers,TN-unknown-42,عبد اللطيف صدام,ar,صدام,SDM,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-43,الصادق فيالة,ar,فيالة,FL,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-44,بشير المجدوب,ar,المجدوب,MJDB,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-45,إبراهيم البكاري,ar,البكاري,BKR,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-46,يوسف المقدم,ar,المقدم,MKDM,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-47,شكري العياشي,ar,العياشي,S,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-48,أحمد محجوب,ar,محجوب,MHJB,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-49,حمودة الحامدي,ar,الحامدي,HMD,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-5,سمير عبيد,ar,عبيد,BD,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-50,المنصف بودن,ar,بودن,BDN,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-51,فرحات المديني,ar,المديني,MDN,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-52,منصف بن سعيد,ar,بن سعيد|سعيد,BNSD|SD,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-53,منتصر الوعيلي,ar,الوعيلي,L,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-54,كمال الحاج ساسي,ar,ساسي,S,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-55,منصف الهرقلي,ar,الهرقلي,HRKL,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-56,سعيدة الشتيوي,ar,الشتيوي,ST,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-57,محسن العروي,ar,العروي,R,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-58,عمر العابد,ar,العابد,BD,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-59,فخر الدين المسعي,ar,المسعي,MS,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-6,عز الدين بن الشيخ,ar,بن الشيخ|الشيخ,BNSX|SX,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-60,صلاح الدين مخلوف,ar,مخلوف,MXLF,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-61,تيجاني الحداد,ar,الحداد,HD,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-62,صلاح الدين الجمالي,ar,الجمالي,JML,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-63,خديجة الغرياني,ar,الغرياني,VRN,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-64,رضا بن محسن,ar,بن محسن|محسن,BMHSN|MHSN,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-65,عبد الرزاق دعلول,ar,دعلول,DL,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-66,محمد نجيب بالريش,ar,بالريش,BLRS,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-67,عبد الحكيم بوراوي,ar,بوراوي,BR,ben_ali,,,,1999,6,False,
+ministers,TN-unknown-68,نجوى ميلادي,ar,ميلادي,MLD,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-69,أحمد ذويب,ar,ذويب,DB,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-7,حمادي  الحبيّب,ar,الحبيب,HB,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-70,سلوى تارزي بن عطية,ar,بن عطية|عطية,BNT|T,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-71,شكري ماموغلي,ar,ماموغلي,MVL,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-72,لمياء الشافعي الصغير,ar,الصغير,SVR,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-73,بشير الوزير,ar,الوزير,ZR,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-74,عبد الحفيظ هرقام,ar,هرقام,HRKM,ben_ali,,,,1999,3,False,
+ministers,TN-unknown-75,منجي البدوي,ar,البدوي,BD,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-76,محسن لروي,ar,لروي,LR,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-77,عبد العزيز موقو,ar,موقو,MK,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-78,عبد الحليم سلامة,ar,سلامة,SLM,ben_ali,,,,2011,3,False,
+ministers,TN-unknown-79,عبد الكريم بوراوي,ar,بوراوي,BR,ben_ali,,,,1999,6,False,
+ministers,TN-unknown-8,منذر بلعيد,ar,بلعيد,BLD,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-80,نجاح بالخيرية القروي,ar,القروي,KR,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-81,عبد الحفيظ هرقال,ar,هرقال,HRKL,ben_ali,,,,1999,5,False,
+ministers,TN-unknown-82,بشير الزفوري,ar,الزفوري,ZFR,transition,,,,2011,3,False,
+ministers,TN-unknown-83,الامين الدغري,ar,الدغري,DVR,transition,,,,2011,3,False,
+ministers,TN-unknown-84,هشام بن جامع,ar,بن جامع|جامع,BNJM|JM,transition,,,,2011,5,False,
+ministers,TN-unknown-85,نايلة شعبان,ar,شعبان,SBN,transition,,,,2014,3,False,
+ministers,TN-unknown-86,نورالدين زكري,ar,زكري,ZKR,transition,,,,2014,3,False,
+ministers,TN-unknown-87,منير مجدوب,ar,مجدوب,MJDB,transition,,,,2014,3,False,
+ministers,TN-unknown-88,علي العذاري,ar,العذاري,DR,,,,,,3,False,
+ministers,TN-unknown-89,عبد القادر بلخوجة,ar,بلخوجة,BLXJ,bourguiba,,,,1980,3,False,
+ministers,TN-unknown-9,الصادق المورالي,ar,المورالي,MRL,saied_exception,,,,2024,3,False,
+ministers,TN-unknown-90,رونيه بروييه,ar,بروييه,BR,,,,,,6,False,
+ministers,TN-unknown-91,رونية روديار,ar,روديار,RDR,,,,,,6,False,
+ministers,TN-unknown-92,ريمون دوفال,ar,دوفال,DFL,,,,,,3,False,
+ministers,TN-unknown-93,هنري كولمان (حتى 25 نوفمبر 1947),ar,كولمان,KLMN,,,,,,3,False,
+ministers,TN-unknown-94,جان لوي بونينفان,ar,بونينفان,BNFN,,,,,,3,False,
+ministers,TN-unknown-95,جورج غاستون (حتى 16 أكتوبر 1948),ar,غاستون,VSTN,,,,,,3,False,
+ministers,TN-unknown-96,قاسم بوسنينة,ar,بوسنينة,BSN,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-97,محمد عمامو,ar,عمامو,M,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-98,محسن بوجبل,ar,بوجبل,BJBL,ben_ali,,,,1989,5,False,
+ministers,TN-unknown-99,عامر الحرشاني,ar,الحرشاني,HRSN,ben_ali,,,,1989,5,False,
+ministers,TN-wajdi-hdhili,Wajdi Hdhili,lat,HDHILI,HDL,second_republic,,,,2021,3,False,
+ministers,TN-walid-dhahbi,Walid Dhahbi,lat,DHAHBI,DHB,second_republic,,,,2020,3,False,
+ministers,TN-yadh-ben-achour,Yadh Ben Achour,lat,BEN ACHOUR|ACHOUR,BNSR|SR,ben_ali,,,,2011,3,False,
+ministers,TN-youssef-ben-brahim,Youssef Ben Brahim,lat,BEN BRAHIM|BRAHIM,BMBRHM|BRHM,second_republic,,,,2020,3,False,
+ministers,TN-youssef-fennira,Youssef Fennira,lat,FENNIRA,FNR,second_republic,,,,2020,3,False,
+ministers,TN-youssef-mokaddem,Youssef Mokaddem,lat,MOKADDEM,MKDM,ben_ali,,,,2001,5,False,
+ministers,TN-youssef-zouaghi,Youssef Zouaghi,lat,ZOUAGHI,ZV,second_republic,,,,2020,3,False,
+ministers,TN-zakaria-belkhodja,Zakaria Belkhodja,lat,BELKHODJA,BLXJ,second_republic,,,,2020,3,False,
