@@ -88,18 +88,19 @@ does not hold the register.
 ## What the comparison found
 
 The cabinet is the strongest and the longest-running result in the whole
-comparison. The 196 surnames the genealogies place in Tunisia before
-independence in 1956 are 10.2 times more common among these 882 people than
-in the 2024 electoral register (66 holders, 95% CI 8.1–12.8).
+comparison. The 218 surnames the genealogies place in Tunisia before
+independence in 1956 are 9.5 times more common among these 882 people than
+in the 2024 electoral register (68 holders, 95% CI 7.5–11.9). A Ben family
+counts as its own surname: the Ben Achour are not the Achour.
 
 ### In the contemporary window
 
 Restricted to 2011–2023, with each person counted once, the cabinet of 396
-carries 19 of them. A bearer of such a surname is 6.8 times more likely
-(95% CI 4.3–10.7) to be a minister in that window than someone who is not —
-26.6 per 100,000 bearers against 3.9 per 100,000 of everyone else. Converted
-into the group's implied mean status that is +0.48 SD, against +0.20 SD
-for a member of parliament and +0.55 for a co-shareholder of a listed company.
+carries 20 of them. A bearer of such a surname is 6.5 times more likely
+(95% CI 4.2–10.1) to be a minister in that window than someone who is not —
+25.3 per 100,000 bearers against 3.9 per 100,000 of everyone else. Converted
+into the group's implied mean status that is +0.47 SD, against +0.23 SD
+for a member of parliament and +0.52 for a co-shareholder of a listed company.
 
 ### Over the whole span this dataset covers
 
@@ -110,12 +111,12 @@ and three changes of regime:
 
 | | to 1956 | Bourguiba | Ben Ali | transition | Saied |
 |---|---:|---:|---:|---:|---:|
-| ratio | 20.9× | 15.4× | 9.3× | 6.3× | 5.5× |
-| implied status gap | 0.83 SD | 0.74 SD | 0.59 SD | 0.47 SD | 0.39 SD |
+| ratio | 18.9× | 14.7× | 8.4× | 6.0× | 5.0× |
+| implied status gap | 0.80 SD | 0.73 SD | 0.56 SD | 0.46 SD | 0.37 SD |
 
-That is an intergenerational correlation of b = 0.79 (0.73–0.86) per
+That is an intergenerational correlation of b = 0.77 (0.66–0.90) per
 30-year generation — the rate Clark finds in almost every society he measures.
-Parliament, over a comparable span, comes out at 0.50: appointed office
+Parliament, over a comparable span, comes out at 0.44: appointed office
 transmits, elected office does not.
 
 An earlier version of this file cut the treatment at 1881 and reported the
@@ -131,18 +132,18 @@ because the split never fed the treatment.
 
 The control is where this result is tested, and it passes. The comparison
 that matters holds rarity and the surname matching fixed and varies only
-whether the genealogies know the family: 11,456 surnames under the same
+whether the genealogies know the family: 11,395 surnames under the same
 1,000-voter ceiling, read through the same matcher, that Rodovid never
-recorded. They hold 5.10% of the register and turn up in 37 of the 882
-ministers, a ratio of 0.8× [0.6–1.1] — at parity, or just under it. Against
-that null the cabinet's 10.2× is a factor of twelve, and it is not something
+recorded. They hold 4.91% of the register and turn up in 33 of the 882
+ministers, a ratio of 0.8× [0.5–1.1] — at parity, or just under it. Against
+that null the cabinet's 9.5× is a factor of twelve, and it is not something
 rarity buys.
 
 The placebo cannot be tested here, and is a different question anyway.
-Surnames the genealogies first record after 1956 are 16 surnames over 0.047%
+Surnames the genealogies first record after 1956 are 18 surnames over 0.048%
 of the register, so a cabinet of 396 predicts 0.19 of them; observing none
 is the expected outcome under every hypothesis. It also would not settle much
-if it could be run: those sixteen surnames are themselves in Rodovid, so the
+if it could be run: those eighteen surnames are themselves in Rodovid, so the
 placebo asks whether old documented notability beats *recent* documented
 notability, not whether documented notability beats the rest of the country.
 That second question is the control's, above. The ministerial result rests on
