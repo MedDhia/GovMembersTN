@@ -84,6 +84,7 @@ does not hold the register.
 | `subgroup` | birth governorate, where known |
 | `name_ar`, `spine_candidates_ar` | the Arabic name, for the check above |
 | `first_year`, `max_rank_level`, `ever_head_of_government`, `birth_governorate` | carried through for cutting |
+| `years_in_office` | the calendar years the person held an appointment, pipe-separated: every year from an appointment's start to its end, and only the start year where no end is recorded |
 
 ## What the comparison found
 

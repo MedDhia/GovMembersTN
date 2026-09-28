@@ -64,8 +64,8 @@ LAYER = "ministers"
 LAYER_FIELDS = [
     "layer", "person_id", "name_raw", "script",
     "surname_candidates", "spine_candidates", "period", "subgroup",
-    "name_ar", "spine_candidates_ar", "first_year", "max_rank_level",
-    "ever_head_of_government", "birth_governorate",
+    "name_ar", "spine_candidates_ar", "first_year", "years_in_office",
+    "max_rank_level", "ever_head_of_government", "birth_governorate",
 ]
 
 # The era vocabulary is this repository's own (`data/processed/eras.csv`) and is
@@ -94,10 +94,33 @@ def eras_by_person(appointments: list[dict]) -> dict[str, list[str]]:
     return seen
 
 
+def years_by_person(appointments: list[dict]) -> dict[str, list[int]]:
+    """The calendar years each person held office in, by the recorded dates.
+
+    An appointment counts in every year from the one it began in to the one it
+    ended in. An appointment with no recorded end -- the government in office
+    when the sources were read, or an end the build could not trust, 393 of
+    3,136 -- counts in the year it began and in no other, so a gap in the
+    record shortens a tenure rather than lengthening it. An appointment with no
+    usable start counts nowhere, as it has no era.
+    """
+    years: dict[str, set[int]] = collections.defaultdict(set)
+    for r in appointments:
+        start = (r["start_date"] or "")[:4]
+        if not start.isdigit():
+            continue
+        end = (r["end_date"] or "")[:4]
+        first = int(start)
+        last = int(end) if end.isdigit() else first
+        years[r["person_id"]].update(range(first, max(first, last) + 1))
+    return {pid: sorted(ys) for pid, ys in years.items()}
+
+
 def build() -> list[dict]:
     persons = {r["person_id"]: r for r in _read(PERSONS)}
     appointments = _read(APPOINTMENTS)
     eras = eras_by_person(appointments)
+    years = years_by_person(appointments)
 
     rows = []
     for pid, p in sorted(persons.items()):
@@ -124,6 +147,7 @@ def build() -> list[dict]:
                 "name_ar": name_ar,
                 "spine_candidates_ar": "|".join(ar_keys),
                 "first_year": (p["first_appointment"] or "")[:4],
+                "years_in_office": "|".join(str(y) for y in years.get(pid, [])),
                 "max_rank_level": p["max_rank_level"],
                 "ever_head_of_government": p["ever_head_of_government"],
                 "birth_governorate": p["birth_governorate"],
