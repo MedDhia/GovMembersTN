@@ -45,26 +45,18 @@ way round.
 ## Which name is read, and the check that comes free
 
 `persons.csv` names all 882 in Latin and 562 in Arabic. The Latin column is the
-only one that covers the roster, so it is what the surname is read from — and
-`surname_spine.py` reduces it to consonants, which is what makes it comparable
-with an Arabic register.
+only one that covers the roster, so it is what the surname is read from.
+EliteNetworksTN reads it as a registered Arabic surname through its
+Arabic-Latin surname crosswalk (`docs/SURNAME-CROSSWALK.md` there), which is
+what makes it comparable with an Arabic register.
 
-The 562 named in both scripts are not redundancy. They are a held-out check
-on that reduction, on ministers rather than on the literary notables it was
-originally validated against, and the build prints it on every run:
-
-| reading | the French name reduces to the Arabic one for |
-|---|---:|
-| plain | 92.3% |
-| allowing the licensed variants | 96.6% |
-
-The 19 that still disagree were read one by one and none is a failure of the
-reduction: seven are women whose two sources pick different surnames from a
-compound (سهام البوغديري نمصية against *Sihem Boughdiri*), four are sources
-disagreeing on a particle (بالطيب against *Bettaieb*), and the rest are
-different names for the same person (خير الدين التونسي against *Kheireddine
-Pacha*). The figure is quoted in EliteNetworksTN's
-`docs/VALIDATION-persistence.md`.
+The 545 named in both scripts are not redundancy. They are among the names the
+crosswalk learns Tunisian spelling from, and among the people it is tested on.
+Held out of the build five folds at a time, 92.6% of these ministers have their
+Latin surname read as the Arabic surname their own Arabic name carries, and
+95.9% of those read at a posterior of 0.9 or more. This file used to run a
+check of its own on the consonant reduction the analysis used before. The
+check now lives with the crosswalk, where it is cross-validated.
 
 ## Schema
 
@@ -79,29 +71,29 @@ does not hold the register.
 | `layer` | always `ministers` |
 | `person_id` | joins `data/processed/persons.csv` |
 | `name_raw`, `script` | the name read, and which script it is in |
-| `surname_candidates`, `spine_candidates` | pipe-separated, longest first |
+| `surname_candidates` | pipe-separated, longest first |
 | `period` | this repository's era label |
 | `subgroup` | birth governorate, where known |
-| `name_ar`, `spine_candidates_ar` | the Arabic name, for the check above |
+| `name_ar` | the Arabic name, which the crosswalk trains on |
 | `first_year`, `max_rank_level`, `ever_head_of_government`, `birth_governorate` | carried through for cutting |
 | `years_in_office` | the calendar years the person held an appointment, pipe-separated: every year from an appointment's start to its end, and only the start year where no end is recorded |
 
 ## What the comparison found
 
 The cabinet is the strongest and the longest-running result in the whole
-comparison. The 218 surnames the genealogies place in Tunisia before
-independence in 1956 are 9.5 times more common among these 882 people than
-in the 2024 electoral register (68 holders, 95% CI 7.5–11.9). A Ben family
+comparison. The 469 surnames the genealogies place in Tunisia before
+independence in 1956 are 8.7 times more common among these 882 people than
+in the 2024 electoral register (118 holders, 95% CI 7.3–10.2). A Ben family
 counts as its own surname: the Ben Achour are not the Achour.
 
 ### In the contemporary window
 
 Restricted to 2011–2023, with each person counted once, the cabinet of 396
-carries 20 of them. A bearer of such a surname is 6.5 times more likely
-(95% CI 4.2–10.1) to be a minister in that window than someone who is not —
-25.3 per 100,000 bearers against 3.9 per 100,000 of everyone else. Converted
-into the group's implied mean status that is +0.47 SD, against +0.23 SD
-for a member of parliament and +0.52 for a co-shareholder of a listed company.
+carries 35 of them. A bearer of such a surname is 6.2 times more likely
+(95% CI 4.4–8.7) to be a minister in that window than someone who is not —
+23.2 per 100,000 bearers against 3.8 per 100,000 of everyone else. Converted
+into the group's implied mean status that is +0.44 SD, against +0.21 SD
+for a member of parliament and +0.42 for a co-shareholder of a listed company.
 
 ### Over the whole span this dataset covers
 
@@ -112,12 +104,12 @@ and three changes of regime:
 
 | | to 1956 | Bourguiba | Ben Ali | transition | Saied |
 |---|---:|---:|---:|---:|---:|
-| ratio | 18.9× | 14.7× | 8.4× | 6.0× | 5.0× |
-| implied status gap | 0.80 SD | 0.73 SD | 0.56 SD | 0.46 SD | 0.37 SD |
+| ratio | 19.9× | 12.2× | 7.0× | 6.0× | 5.2× |
+| implied status gap | 0.81 SD | 0.67 SD | 0.51 SD | 0.46 SD | 0.38 SD |
 
-That is an intergenerational correlation of b = 0.77 (0.66–0.90) per
+That is an intergenerational correlation of b = 0.77 (0.71–0.84) per
 30-year generation — the rate Clark finds in almost every society he measures.
-Parliament, over a comparable span, comes out at 0.44: appointed office
+Parliament, over a comparable span, comes out at 0.53: appointed office
 transmits, elected office does not.
 
 An earlier version of this file cut the treatment at 1881 and reported the
@@ -133,31 +125,29 @@ because the split never fed the treatment.
 
 The control is where this result is tested, and it passes. The comparison
 that matters holds rarity and the surname matching fixed and varies only
-whether the genealogies know the family: 11,395 surnames under the same
-1,000-voter ceiling, read through the same matcher, that Rodovid never
-recorded. They hold 4.91% of the register and turn up in 33 of the 882
-ministers, a ratio of 0.8× [0.5–1.1] — at parity, or just under it. Against
-that null the cabinet's 9.5× is a factor of twelve, and it is not something
-rarity buys.
+whether the genealogies know the family: 45,679 registered surnames under
+the same 1,000-voter ceiling, read through the same crosswalk, that Rodovid
+never recorded. They hold 19.1% of the register and turn up in 83 of the 882
+ministers, a ratio of 0.49× [0.40–0.60] — below parity. Against that null the
+cabinet's 8.7× is a factor of eighteen, and it is not something rarity buys.
 
 The placebo cannot be tested here, and is a different question anyway.
-Surnames the genealogies first record after 1956 are 18 surnames over 0.048%
-of the register, so a cabinet of 396 predicts 0.19 of them; observing none
-is the expected outcome under every hypothesis. It also would not settle much
-if it could be run: those eighteen surnames are themselves in Rodovid, so the
+Surnames the genealogies first record after 1956 are 38 surnames over 0.13%
+of the register, so a cabinet of 396 predicts 0.52 of them; observing one is
+what every hypothesis predicts. It also would not settle much if it could be
+run: those thirty-eight surnames are themselves in Rodovid, so the
 placebo asks whether old documented notability beats *recent* documented
 notability, not whether documented notability beats the rest of the country.
 That second question is the control's, above. The ministerial result rests on
 it and on the monotone eighty-year decline.
 
 The baseline is a 2024 register, so the pre-independence ratio is an order of
-magnitude rather than a measurement. This file used to add that the shape of
-the decline was corroborated by the gazette's 45,515 appointees. That support
-is withdrawn: the gazette layer is now the 3,091 directors-general and
-ministerial advisers rather than every grade the state appoints, it runs
-3.8× → 2.5× over four periods of 710 to 1,893 people, and a slope of −0.04 per
-decade has an interval of −0.18 to +0.11. The cabinet's own monotone series
-now carries that weight alone.
+magnitude rather than a measurement. The gazette's senior appointments
+corroborate the direction of the decline and not its rate. The gazette layer
+is the 3,091 directors-general and ministerial advisers, and it runs 4.4× →
+2.8× over four periods of 710 to 1,893 people, a slope of −0.08 per decade
+(−0.15 to −0.01) against the cabinet's −0.16. The cabinet's own monotone
+series carries the rate.
 
 Full results, figures and limitations: `docs/FINDINGS-persistence.md` in
 EliteNetworksTN.

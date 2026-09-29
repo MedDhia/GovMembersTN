@@ -19,11 +19,12 @@ for a headcount.
 Why the Latin name and not the Arabic one
 -----------------------------------------
 `persons.csv` names all 882 people in Latin and 562 of them in Arabic, so the
-Latin column is the only one that covers the roster. Reducing it to consonants
-is what makes it comparable with an Arabic register; see `surname_spine.py`.
-The 562 with both are written out with both spines, which is not redundancy:
-the analysis uses them as a held-out check on the bridge, on ministers rather
-than on the literary notables the bridge was validated against.
+Latin column is the only one that covers the roster. EliteNetworksTN reads it
+against the Arabic register through its Arabic-Latin surname crosswalk
+(`src/surname_crosswalk`), which says which registered Arabic surname each
+Latin spelling renders. The 562 with both names are written with both, which
+is not redundancy: the crosswalk learns from them how Tunisian surnames are
+spelled in Latin letters, and is tested on them.
 
 What is written
 ---------------
@@ -47,10 +48,10 @@ import sys
 from pathlib import Path
 
 try:
-    from .surname_spine import is_arabic, family_candidates, spine, spine_variants
+    from .surname_spine import is_arabic, family_candidates
 except ImportError:                                      # run as a bare script
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from surname_spine import is_arabic, family_candidates, spine, spine_variants
+    from surname_spine import is_arabic, family_candidates
 
 ROOT = Path(__file__).resolve().parents[2]
 PROCESSED = ROOT / "data" / "processed"
@@ -63,8 +64,8 @@ LAYER = "ministers"
 
 LAYER_FIELDS = [
     "layer", "person_id", "name_raw", "script",
-    "surname_candidates", "spine_candidates", "period", "subgroup",
-    "name_ar", "spine_candidates_ar", "first_year", "years_in_office",
+    "surname_candidates", "period", "subgroup",
+    "name_ar", "first_year", "years_in_office",
     "max_rank_level", "ever_head_of_government", "birth_governorate",
 ]
 
@@ -128,9 +129,7 @@ def build() -> list[dict]:
         if not name:
             continue
         cands = family_candidates(name)
-        keys = [spine(c) for c in cands]
         name_ar = (p["name_ar"] or "").strip()
-        ar_keys = [spine(c) for c in family_candidates(name_ar)] if name_ar else []
         # A person with no dated appointment still belongs to the roster; they
         # are written once, under the empty period, so the headcount is whole
         # and the period series does not quietly gain them.
@@ -141,11 +140,9 @@ def build() -> list[dict]:
                 "name_raw": name,
                 "script": "ar" if is_arabic(name) else "lat",
                 "surname_candidates": "|".join(cands),
-                "spine_candidates": "|".join(keys),
                 "period": era,
                 "subgroup": p["birth_governorate"] or "",
                 "name_ar": name_ar,
-                "spine_candidates_ar": "|".join(ar_keys),
                 "first_year": (p["first_appointment"] or "")[:4],
                 "years_in_office": "|".join(str(y) for y in years.get(pid, [])),
                 "max_rank_level": p["max_rank_level"],
@@ -165,26 +162,12 @@ def main() -> int:
         w.writerows(rows)
 
     people = {r["person_id"] for r in rows}
-    # The bridge check the Arabic column exists for: where a minister is named
-    # in both scripts, does reducing the French name reach the Arabic one? This
-    # is the figure quoted in EliteNetworksTN's VALIDATION-persistence.md, and
-    # it is a harder test than the A'lam gate, which compares whole names.
-    checkable = {r["person_id"]: r for r in rows if r["spine_candidates_ar"]}
-    plain = agree = 0
-    for r in checkable.values():
-        ar = set(r["spine_candidates_ar"].split("|"))
-        cands = r["surname_candidates"].split("|")
-        plain += bool(set(r["spine_candidates"].split("|")) & ar)
-        variants = set().union(*[spine_variants(c) for c in cands]) if cands else set()
-        agree += bool(variants & ar)
+    both = {r["person_id"] for r in rows if r["name_ar"]}
     by_era = collections.Counter(r["period"] for r in rows)
 
     print(f"wrote {path.relative_to(ROOT)}")
     print(f"  {len(rows):,} person-era rows over {len(people):,} ministers")
-    print(f"  {len(checkable):,} named in Arabic as well as Latin; of those the "
-          f"French name reduces to the Arabic one for")
-    print(f"    {plain / len(checkable):>6.1%} on the plain reading, "
-          f"{agree / len(checkable):.1%} allowing the licensed variants")
+    print(f"  {len(both):,} named in Arabic as well as Latin, for the crosswalk")
     print("  by era:")
     for era, n in by_era.most_common():
         print(f"    {era or '(undated)':<20} {n:>4}")
