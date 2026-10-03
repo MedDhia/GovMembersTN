@@ -1,0 +1,1202 @@
+person_id,government,government_head,government_start,head_of_executive,coalition,era,first_date,date_basis,rank_level,party,first_since_independence,served_before_independence
+Q115868368,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,5,,True,False
+Q16117997,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,5,PSD,True,False
+Q16262805,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,5,PSD,True,False
+Q16325262,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,True
+Q1642894,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,True
+Q1951854,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,2,Neo-Destour,True,True
+Q25453793,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,,True,False
+Q2827624,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+Q2855981,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+Q2929679,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,5,,True,False
+Q3216753,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+Q3277799,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,True
+Q3328946,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+Q3516543,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+Q54875085,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,,True,False
+Q55167831,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,5,,True,False
+Q563204,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,2,Neo-Destour,True,True
+Q643348,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,,True,True
+Q800238,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+TN-andre-barouch,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+TN-azzouz-rebai,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,protectorate_end,,government,5,Neo-Destour,True,False
+TN-bechir-ben-yahmed,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,protectorate_end,,government,5,Neo-Destour,True,False
+TN-bechir-ennaji,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,,government,5,PSD,True,False
+TN-mahmoud-khiairi,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+TN-mohamed-chakroun,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,Neo-Destour,True,False
+TN-unknown-21,TN-01,Habib Bourguiba,1956-04-15,Habib Bourguiba,Neo-Destour,monarchy,1956-04-15,date,3,,True,False
+Q12239765,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-09-06,date,3,PSD,True,False
+Q16117997,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1968-09-24,date,3,PSD,False,False
+Q16262805,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1964-11-12,date,3,,False,False
+Q16325262,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,,False,True
+Q1642894,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,True
+Q1951854,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1960-12-31,date,3,,False,True
+Q2268624,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1961-10-07,date,3,PSD,True,False
+Q22928978,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1967-07-26,date,3,,True,False
+Q2820925,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1964-11-12,date,3,PSD,True,False
+Q2821308,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1958-12-30,date,3,,True,False
+Q2827512,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,PSD,True,False
+Q2827624,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,False
+Q2827627,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1958-12-30,date,3,PSD,True,False
+Q3039490,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-09-08,date,3,PSD,True,False
+Q3067195,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1964-11-11,date,3,PSD,True,True
+Q3128202,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-09-08,date,3,,True,False
+Q313539,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1965-07-05,date,3,,True,False
+Q3144591,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1958-12-30,date,3,PSD,True,False
+Q3216753,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,False
+Q3320538,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1961-01-03,date,3,PSD,True,False
+Q3328946,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,False
+Q3331012,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1962-04-03,date,3,PSD,True,False
+Q3461176,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,True,True
+Q3516543,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,False
+Q377921,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1968-04-12,date,3,PSD,True,True
+Q496165,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1958-05-06,date,3,PSD,True,False
+Q563204,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1962-08-29,date,3,,False,True
+Q586623,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1964-11-12,date,3,,True,False
+Q643348,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1964-11-12,date,5,PSD,False,True
+Q744499,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-09-08,date,3,PSD,True,False
+Q800238,TN-02,Habib Bourguiba,1957-07-29,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1957-07-29,date,3,Neo-Destour,False,False
+Q12239765,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q12239816,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,5,,True,False
+Q16117997,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q1642894,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-12,date,2,,False,True
+Q1951854,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-12,date,3,,False,True
+Q2268624,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q22928978,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,5,,False,False
+Q2374730,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+Q2820925,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q2827624,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-12,date,3,,False,False
+Q2827627,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q2961945,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,,True,False
+Q3039490,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q3128202,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q3128235,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-12,date,3,,True,False
+Q313539,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q3144591,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q3320538,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+Q3461164,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,,True,False
+Q377921,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,True
+Q496165,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,2,PSD,False,False
+Q507856,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-12,date,3,,True,False
+Q54875074,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,True,False
+Q586623,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,,False,False
+Q60573416,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+Q643348,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,True
+Q744499,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1969-11-07,date,3,PSD,False,False
+TN-abdelaziz-beltaief,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+TN-baccar-touzani,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+TN-habib-ben-cheikh,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+TN-unknown-108,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+TN-unknown-109,TN-03,Bahi Ladgham,1969-11-07,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-06-17,date,5,,True,False
+Q121356281,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-01-14,date,5,,True,False
+Q12220165,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1973-06-05,date,3,,True,False
+Q12239816,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,False,False
+Q12240251,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,True,False
+Q12246948,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1979-11-07,date,5,,True,False
+Q152369,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1973-11-28,date,3,,True,False
+Q1530765,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-01-14,date,3,,True,False
+Q16117997,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q16262803,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,True,False
+Q16263000,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1979-11-07,date,5,,True,False
+Q1642894,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-09-04,date,3,,False,True
+Q17425841,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-26,date,3,,True,False
+Q1951854,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,True
+Q20047058,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,True,False
+Q20643083,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1978-09-20,date,3,,True,False
+Q2268624,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-06-24,date,3,,False,False
+Q22928978,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q2374730,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q2655671,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1972-03-04,date,3,,True,False
+Q27179077,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,True,False
+Q282026,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1978-09-20,date,3,,True,False
+Q2820925,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q2820991,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-09-25,date,3,,True,False
+Q2820994,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-26,date,3,,True,False
+Q2827624,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q2836376,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-10,date,3,,True,False
+Q2929686,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-23,date,3,,True,False
+Q29577458,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-01-14,date,3,,True,False
+Q29580479,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,5,,True,False
+Q2961945,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q3039490,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q3128202,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-09-25,date,3,,False,False
+Q3128235,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q3144591,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,False,False
+Q3318530,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-01-14,date,3,,True,False
+Q3318545,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,True,False
+Q3320644,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-26,date,3,,True,False
+Q3320650,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-11-05,date,3,,True,False
+Q3357601,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-27,date,3,,True,False
+Q3461164,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,3,,False,False
+Q377921,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,False,True
+Q43654658,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-09-25,date,3,,True,False
+Q48757077,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1979-11-07,date,3,,True,False
+Q496165,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1973-11-28,date,3,,False,False
+Q507856,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q54875074,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+Q60573416,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,5,,False,False
+Q653162,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-26,date,3,,True,False
+Q744499,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-06,date,3,PSD,False,False
+TN-abdelaziz-hamzaoui,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1973-11-05,date,5,,True,False
+TN-abdelhamid-sassi,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,True,False
+TN-abderrahman-ben-messaoud,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,5,,True,False
+TN-baccar-touzani,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,6,,False,False
+TN-brahim-turki,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1976-07-21,date,5,,True,False
+TN-fredj-jabbes,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,5,,True,False
+TN-habib-ben-cheikh,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,3,,False,False
+TN-hamed-zeghal,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,5,,True,False
+TN-hechmi-kooli,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-09-25,date,5,,True,False
+TN-hedi-zeghal,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-11-05,date,3,,True,False
+TN-mahmoud-maamouri,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1974-03-07,date,5,,True,False
+TN-mekki-zidi,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,5,,True,False
+TN-mohamed-ali-souissi,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1979-11-07,date,3,,True,False
+TN-mohamed-jomaa,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-27,date,3,,True,False
+TN-moncef-bel-hadj-amor,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1976-05-31,date,3,,True,False
+TN-moncef-zaafrane,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1979-11-07,date,6,,True,False
+TN-mustapha-zaanouni,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,4,,True,False
+TN-noureddine-ktari,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1977-12-27,date,5,,True,False
+TN-slaheddine-abdallah,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1973-09-04,date,5,,True,False
+TN-taieb-slim,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1971-10-29,date,2,,True,False
+TN-unknown-108,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,6,,False,False
+TN-unknown-119,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,5,,True,False
+TN-unknown-120,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,5,,True,False
+TN-unknown-121,TN-04,Hédi Nouira,1970-11-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1970-11-02,date,5,,True,False
+Q121356281,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-03-17,date,5,,False,False
+Q121360095,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-06-18,date,3,,True,False
+Q12184481,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1981-01-02,date,3,,True,False
+Q12220165,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q12230326,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-11-01,date,3,,True,False
+Q12239816,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q12240636,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-02-12,date,3,,True,False
+Q12246948,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q1363916,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1984-03-14,date,4,,True,False
+Q1381809,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,,True,False
+Q152369,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q16027761,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1984-10-29,date,3,,True,False
+Q16127215,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-05-12,date,3,,True,False
+Q16263000,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q16588807,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,True,False
+Q17425841,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-04-28,date,3,,False,False
+Q18610883,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,,True,False
+Q204487,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1984-10-29,date,3,,True,False
+Q22928978,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q2374730,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-12-03,date,3,,False,False
+Q282026,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q2820991,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q2820994,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-05-08,date,3,,False,False
+Q29440996,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-06-18,date,3,,True,False
+Q29577458,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q3039490,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q3128202,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q313539,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-12-03,date,3,,False,False
+Q3277819,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1981-08-10,date,5,,True,False
+Q3318419,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+Q3320424,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,,True,False
+Q3320430,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-07-12,date,3,,True,False
+Q3320650,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,,False,False
+Q3331032,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-05-06,date,3,,True,False
+Q3344886,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1985-10-23,date,3,,True,False
+Q3461164,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q377921,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1984-01-07,date,3,,False,True
+Q3951110,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-06-18,date,3,,True,False
+Q50285534,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-11-01,date,3,,True,False
+Q54875084,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-06-18,date,3,,True,False
+Q54875134,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-10-14,date,3,,True,False
+Q55392091,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,,True,False
+Q653162,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q744499,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+Q91669922,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-09-04,date,3,,True,False
+TN-abdelkader-belkhodja,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+TN-ahmed-ben-arfa,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1983-03-17,date,5,,True,False
+TN-ameur-ghedira,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1984-01-07,date,5,,True,False
+TN-andre-blanchard,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+TN-chedly-ben-romdhane,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,False
+TN-georges-gaston-puis-lucien-paye-a-partir,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+TN-hedi-zeghal,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-04-23,date,3,PSD,False,False
+TN-henri-culmann-puis-jean-gaston-fraisse-a,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+TN-jean-mathieu,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,True
+TN-mezri-chekir,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-12-03,date,4,,True,False
+TN-mohamed-hadjouj,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,False
+TN-mohamed-saadallah,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,2,,True,True
+TN-moncef-bel-hadj-amor,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1980-12-03,date,3,,False,False
+TN-noureddine-zaouche,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,False
+TN-ridha-hamza,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1985-10-23,date,3,,True,False
+TN-tahar-lakhdar,TN-05,Mohamed Mzali,1980-04-23,Habib Bourguiba,Neo-Destour/PSD,protectorate,,government,3,,True,False
+Q12194585,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-09-15,date,3,,True,False
+Q12220165,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q12239816,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q1363916,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-04-04,date,3,,False,False
+Q1381809,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q16127215,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q204487,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q282026,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-30,date,3,,False,False
+Q313539,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q3286574,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,True,False
+Q3331032,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q3951110,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q50285534,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q55392098,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,,True,False
+Q91669922,TN-06,Rachid Sfar,1986-07-08,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1986-07-08,date,3,PSD,False,False
+Q121360095,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q12194585,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,,False,False
+Q12220165,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q12239816,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,2,PSD,False,False
+Q12240636,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q1381809,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q152369,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-27,date,3,PSD,False,False
+Q16127215,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q16666837,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-27,date,3,,True,False
+Q17425841,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q2820931,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,5,,True,False
+Q3320544,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,5,,True,False
+Q3470003,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,3,PSD,True,False
+Q3951110,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-27,date,3,,False,False
+Q431515,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,3,,True,False
+Q50285534,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,PSD,False,False
+Q54875092,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,5,,True,False
+Q60573369,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,1987-10-02,date,3,,True,False
+TN-unknown-15,TN-07,Zine El Abidine Ben Ali,1987-10-02,Habib Bourguiba,Neo-Destour/PSD,bourguiba,,government,3,,True,False
+Q111701635,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,5,Independent,True,False
+Q121360095,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-07,date,3,PSD,False,False
+Q12220165,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1988-04-12,date,2,PSD,False,False
+Q12240636,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,Independent,False,False
+Q1381809,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1988-07-27,date,3,RCD,False,False
+Q152369,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q16127215,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q16263000,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q16664925,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,RCD,True,False
+Q16666837,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1989-04-11,date,3,RCD,False,False
+Q17425841,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1988-07-27,date,3,PSD,False,False
+Q18399544,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,3,Independent,True,False
+Q19629356,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,3,RCD,True,False
+Q22928978,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q2820931,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-11,date,3,RCD,False,False
+Q2821241,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,5,PSD,True,False
+Q2827554,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1989-04-11,date,3,RCD,True,False
+Q2827664,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,3,RCD,True,False
+Q29580479,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q2972023,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-01-04,date,3,RCD,True,False
+Q30104283,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,3,PSD,True,False
+Q3012366,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1989-04-11,date,3,RCD,True,False
+Q308017,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,True,False
+Q3125288,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-07,date,2,PSD,True,False
+Q3125297,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,True
+Q3125299,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,5,RCD,True,False
+Q3277819,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-07,date,3,PSD,False,False
+Q3318475,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1989-04-11,date,3,Independent,True,False
+Q3318622,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,3,RCD,True,False
+Q3320454,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,RCD,True,False
+Q3320544,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,5,PSD,False,False
+Q3461164,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-07,date,3,PSD,False,False
+Q3461169,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,RCD,True,False
+Q377921,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,False,True
+Q3951110,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,RCD,False,False
+Q4167838,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,3,RCD,True,False
+Q431515,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,RCD,False,False
+Q4845531,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-26,date,3,Independent,True,False
+Q50285534,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q507856,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,3,RCD,False,False
+Q54875068,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-07,date,3,PSD,True,False
+Q54875069,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,5,RCD,True,False
+Q54875074,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,,government,3,PSD,False,False
+Q55196894,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,3,RCD,True,False
+Q60573008,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-07,date,3,Independent,True,False
+Q97961043,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,5,RCD,True,False
+Q99543891,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,3,Independent,True,False
+TN-abdelaziz-menchari,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-abdessalem-mseddi,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,3,PSD,True,False
+TN-ahmed-khaled,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,RCD,True,False
+TN-ameur-horchani,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-12,date,5,Independent,True,False
+TN-amor-bejaoui,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-04-27,date,5,RCD,True,False
+TN-amor-ben-romdhan,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-01-04,date,5,,True,False
+TN-andre-blanchard,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,False,True
+TN-georges-gaston-puis-lucien-paye-a-partir,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,False,True
+TN-habib-lazreg,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,Independent,True,False
+TN-hassan-hosni-abdelwaheb,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-hedi-ben-rais,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-henri-culmann-puis-jean-gaston-fraisse-a,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,False,True
+TN-houcine-cherif,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,bourguiba,1987-11-27,date,4,Independent,True,False
+TN-jean-mathieu,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,False,True
+TN-kacem-bousnina,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-11-08,date,5,RCD,True,False
+TN-louis-cartry,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,6,,True,True
+TN-m-hamed-gachem,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-mohamed-amamou,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,Independent,True,False
+TN-mohamed-dinguizli,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-mohamed-karboul,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,5,PSD,True,False
+TN-mohsen-boujbal,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1988-07-27,date,5,RCD,True,False
+TN-mouldi-zouaoui,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,RCD,True,False
+TN-nebiha-gueddana,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,,government,5,RCD,True,False
+TN-raymond-pons-puis-georges-dupoizat-a-par,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,6,,True,False
+TN-sadok-djaziri,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,3,,True,False
+TN-salah-jebali,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,ben_ali,1987-11-07,date,5,PSD,True,False
+TN-taieb-belkhiria,TN-08,Hédi Baccouche,1987-11-07,Zine El Abidine Ben Ali,RCD,protectorate,,government,2,,True,False
+Q139583145,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1990-03-03,date,3,,True,False
+Q15055101,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,True,False
+Q16027809,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q16267511,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1999-04-22,date,3,,True,False
+Q16664915,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q16664925,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q16666837,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q17425841,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q17580016,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q18399544,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q19060284,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q19060286,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1997-10-11,date,3,,True,False
+Q19060293,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1997-10-09,date,3,,True,False
+Q19060301,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1997-10-09,date,3,,True,False
+Q19060319,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q19060320,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q19060346,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q19629356,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q19631455,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1995-01-01,date,3,,True,False
+Q2688070,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q27756741,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q282026,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q2820931,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,2,RCD,False,False
+Q2821010,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q2821037,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1999-05-04,date,5,,True,False
+Q2821241,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q2827554,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q2827664,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q2836180,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q2912277,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q2972023,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q29816892,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q30104283,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q3012366,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q30728289,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3125288,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q3125299,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q3126302,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q327007,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q3318336,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q3318475,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,Independent,False,False
+Q3318622,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q3318702,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3320454,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q3320544,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q3320646,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3328959,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3337614,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3347261,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3417419,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q3431743,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3461169,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q3486507,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3515404,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1999-04-22,date,3,,True,False
+Q38346104,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q3951110,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q4167838,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q431515,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q507856,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q54875068,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q54875069,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q54875092,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+Q55391329,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q55392087,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q55392103,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q55392107,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q60572709,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q60573013,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q60573379,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-02-20,date,3,,True,False
+Q60573385,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q60573426,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q60573536,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q60576591,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,True,False
+Q97961043,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+Q99543891,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+TN-abdellatif-saddam,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1999-04-23,date,3,,True,False
+TN-ahmed-khaled,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+TN-ameur-horchani,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,False,False
+TN-faouzi-belkahia,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-02-20,date,3,,True,False
+TN-fethi-houidi,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-08-28,date,5,,True,False
+TN-habib-lazreg,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,,False,False
+TN-hedi-grioui,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1990-03-03,date,5,,True,False
+TN-kacem-bousnina,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,RCD,False,False
+TN-kamel-haj-sassi,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1993-08-06,date,5,,True,False
+TN-mohamed-ali-ganzoui,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1995-01-25,date,5,,True,False
+TN-mohamed-amamou,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,False,False
+TN-mohamed-ben-ahmed,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1998-12-18,date,5,,True,False
+TN-mohamed-habib-hadj-said,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1990-03-03,date,5,,True,False
+TN-mohamed-larbi-mahjoubi,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1990-03-03,date,5,,True,False
+TN-mohamed-saad,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1990-03-03,date,3,,True,False
+TN-mohsen-boujbal,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,RCD,False,False
+TN-mongi-safra,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-10-11,date,5,,True,False
+TN-mouldi-zouaoui,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,3,RCD,False,False
+TN-nebiha-gueddana,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,RCD,False,False
+TN-noureddine-mejdoub,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-02-20,date,5,,True,False
+TN-sadok-fayala,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-10-11,date,5,,True,False
+TN-salah-brik-hannachi,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1992-06-09,date,5,,True,False
+TN-salah-el-hamdi,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1992-08-03,date,5,,True,False
+TN-salah-jebali,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-10-11,date,3,,False,False
+TN-slaheddine-cherif,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1991-10-11,date,5,,True,False
+TN-tahar-hadj-ali,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1992-06-09,date,3,,True,False
+TN-unknown-100,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-101,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-102,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-103,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-104,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-105,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-106,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-43,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-54,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-96,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-97,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-98,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+TN-unknown-99,TN-09,Hamed Karoui,1989-09-27,Zine El Abidine Ben Ali,RCD,ben_ali,1989-09-27,date,5,,True,False
+Q1043040,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q12214730,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q12228423,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q12239709,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,3,,True,False
+Q16027809,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q16167736,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q16178347,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2008-09-15,date,5,,True,False
+Q16180628,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q16267511,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q16268984,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q16321385,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q16325226,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q1890995,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Ettakatol,True,False
+Q19060284,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19060286,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19060293,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19060320,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19060337,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q19060346,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19629356,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q19956346,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q22344522,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-01-01,date,3,,True,False
+Q2388455,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q24690603,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q25451027,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q27756614,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q27756741,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q28018980,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2008-11-01,date,3,,True,False
+Q2820931,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q2820997,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2010-10-12,date,5,,True,False
+Q2820999,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q2821010,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q2821012,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2821037,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+Q2821055,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2821057,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2821127,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,Independent,True,False
+Q2821210,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q2821241,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q2821273,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2821297,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2826117,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,Independent,True,False
+Q2827529,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Other,True,False
+Q2827554,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q2827587,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q2827633,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Other,True,False
+Q2836180,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q2893398,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q2912277,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q2929705,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q29577458,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2010-01-14,date,3,,False,False
+Q2972023,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3012366,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3079840,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q308017,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q3125299,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3125307,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q3125311,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q3128291,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3141381,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Other,True,False
+Q3192376,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3217980,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q3220052,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3240795,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q3318311,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3318336,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+Q3318356,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q3318362,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q3318509,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3318530,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q3318622,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3318731,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2010-01-14,date,3,,True,False
+Q3318757,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3320454,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3320544,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3328959,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q3334747,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3334855,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3347261,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3358533,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3417300,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3417419,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q3417449,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q3423310,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+Q3431735,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3431740,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q3431743,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3431745,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3461169,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3470845,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3473691,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3486513,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q3486689,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3486705,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3515404,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+Q3516539,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q3571283,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q38213221,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q38259407,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q431848,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q517946,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Independent,True,False
+Q54875075,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q54875086,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q54875087,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q54875133,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q54875178,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2006-01-01,date,3,,True,False
+Q60572709,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,False,False
+Q60573413,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+Q60573535,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,4,,True,False
+Q60573536,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,4,,False,False
+Q99528084,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+Q99541044,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-11-10,date,3,,True,False
+TN-abdellatif-saddam,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,False,False
+TN-abderrazak-daaloul,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2005-08-17,date,5,,True,False
+TN-ahmed-dhouib,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2007-09-04,date,5,,True,False
+TN-ahmed-mahjoub,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-ameur-horchani,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+TN-bechir-louzir,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2008-08-29,date,5,,True,False
+TN-bechir-mejdoub,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-brahim-baccari,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-chokri-ayachi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-chokri-mamoghli,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2007-12-16,date,5,,True,False
+TN-fakhreddine-el-messai,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2003-11-29,date,5,,True,False
+TN-farhat-medini,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-fethi-houidi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2002-05-14,date,4,,False,False
+TN-habib-haddad,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2002-09-05,date,3,,True,False
+TN-hammouda-hamdi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-kamel-ayadi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-11-11,date,5,,True,False
+TN-kamel-haj-sassi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,RCD,False,False
+TN-khadija-ghariani,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-11-11,date,5,,True,False
+TN-lamia-chafei-seghaier,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2008-01-02,date,5,,True,False
+TN-mohamed-ali-ganzoui,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+TN-mohamed-amor,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-mohamed-nabli,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,3,,True,False
+TN-mohamed-nejib-berriche,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2006-03-13,date,5,,True,False
+TN-mohamed-nouri-jouini,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,3,Independent,True,False
+TN-mohsen-laroui,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2002-09-05,date,5,,True,False
+TN-moncef-ben-said,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-moncef-bouden,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-moncef-hergli,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2002-09-05,date,5,,True,False
+TN-mongi-bedoui,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2008-12-12,date,5,,True,False
+TN-mongi-chouchane,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-montasser-ouaili,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,RCD,True,False
+TN-najeh-belkhiria-karoui,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2011-01-04,date,5,,True,False
+TN-najoua-miladi,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2007-09-04,date,5,,True,False
+TN-neziha-escheikh,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,RCD,True,False
+TN-omar-ben-mahmoud,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-02-13,date,5,,True,False
+TN-omar-el-abed,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2003-09-01,date,5,,True,False
+TN-oussama-romdhani,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2009-10-10,date,3,,True,False
+TN-premier-ministre,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,Other,True,False
+TN-rafaa-ben-achour,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+TN-rafaa-dekhil,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,3,,True,False
+TN-sadok-fayala,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,False,False
+TN-saida-chtioui,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2002-09-05,date,5,,True,False
+TN-saloua-tarzi-ben-attia,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2007-10-03,date,5,,True,False
+TN-slaheddine-jemmali,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-11-11,date,5,,True,False
+TN-slaheddine-makhlouf,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2003-11-29,date,5,,True,False
+TN-taieb-hadhri,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2005-08-17,date,3,,True,False
+TN-taoufik-bouderbala,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,,True,False
+TN-tijani-haddad,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2004-11-11,date,3,,True,False
+TN-unknown-42,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-43,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+TN-unknown-44,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-45,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-46,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-47,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-48,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-49,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-50,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-51,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-52,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-53,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-54,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,False,False
+TN-unknown-55,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-56,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-57,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-58,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-59,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-60,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-61,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-62,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-63,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-64,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-65,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-66,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-67,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,6,,True,False
+TN-unknown-68,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-69,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-70,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-71,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-72,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-73,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-74,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,3,,True,False
+TN-unknown-75,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-76,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-77,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-78,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2011-01-04,date,3,,True,False
+TN-unknown-79,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,6,,True,False
+TN-unknown-80,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-unknown-81,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,1999-11-17,date,5,,True,False
+TN-yadh-ben-achour,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,,government,3,,True,False
+TN-youssef-mokaddem,TN-10,Mohamed Ghannouchi,1999-11-17,Zine El Abidine Ben Ali,RCD,ben_ali,2001-01-23,date,5,,True,False
+Q16267906,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q1890995,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q2388455,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q2821127,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,False,False
+Q2826117,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,False,False
+Q2827482,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,,True,False
+Q2827529,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,Other,False,False
+Q2827633,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,Other,False,False
+Q2875109,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q29577458,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,False,False
+Q3066858,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q3125307,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3125336,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q3141381,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3217980,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3240795,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3304500,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q3318356,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3318530,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,,False,False
+Q3318622,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3319366,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q3320454,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3328959,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q3334747,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-14,date,3,,False,False
+Q3474776,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q3486513,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-14,date,3,,False,False
+Q3571955,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q401426,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,True,False
+Q431848,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q517946,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-17,date,3,,False,False
+Q980071,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-02-21,date,3,,True,False
+TN-mohamed-nouri-jouini,TN-10b,Mohamed Ghannouchi,2011-01-14,Mohamed Ghannouchi,"Interim, 2011",transition,2011-01-27,date,3,Independent,False,False
+Q1380979,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Other,True,False
+Q16267906,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2388455,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2820999,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2821057,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2821127,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2821280,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-03-07,date,3,Independent,True,False
+Q2824176,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+Q2827482,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q2875109,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q29577458,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,,government,3,Independent,False,False
+Q3066858,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3125311,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-03-28,date,3,Independent,False,False
+Q3125336,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3216760,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+Q3217980,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3220051,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,,government,4,Independent,True,False
+Q3240795,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3304500,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3318356,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3318530,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,3,Independent,False,False
+Q3318774,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-07-01,date,3,Independent,True,False
+Q3319366,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3417420,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-12-23,date,3,,True,False
+Q3417449,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,3,Independent,False,False
+Q3423310,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3431734,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,6,Independent,True,False
+Q3469690,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-07-01,date,3,Independent,True,False
+Q3474776,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q3486512,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-07-01,date,3,Independent,True,False
+Q3486677,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,True,False
+Q3571955,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q517946,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+Q980071,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,2011-02-27,date,3,Independent,False,False
+TN-rafaa-ben-achour,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,,government,4,Independent,False,False
+TN-ridha-belhaj,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",ben_ali,,government,4,Independent,True,False
+TN-unknown-22,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,3,Independent,True,False
+TN-unknown-23,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+TN-unknown-24,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+TN-unknown-25,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+TN-unknown-26,TN-11,Béji Caïd Essebsi,2011-02-27,Beji Caid Essebsi,"Interim, 2011",transition,2011-02-27,date,5,Independent,True,False
+Q14182276,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,5,Ettakatol,True,False
+Q16027804,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,5,Ettakatol,True,False
+Q16180211,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q16269532,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q16642407,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Ennahda,True,False
+Q22344522,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2012-01-01,date,3,,False,False
+Q281184,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q2820930,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,5,Independent,True,False
+Q2821119,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q2821127,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Independent,False,False
+Q2821146,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ettakatol,True,False
+Q2821154,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q2821212,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,CPR,True,False
+Q2821259,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Ettakatol,True,False
+Q2929698,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2012-02-16,date,3,,True,False
+Q2947600,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q2961945,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2012-07-24,date,3,,False,False
+Q3051875,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ettakatol,True,False
+Q3141381,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Independent,False,False
+Q3144577,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,5,CPR,True,False
+Q3160876,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3196042,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ettakatol,True,False
+Q3304511,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Independent,True,False
+Q3318297,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,CPR,True,False
+Q3318419,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,False,True
+Q3318465,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,,government,3,Independent,True,False
+Q3318652,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3318800,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3320435,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3320655,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3333020,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q3344889,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Independent,True,False
+Q3417420,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,False,False
+Q3430010,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Ennahda,True,False
+Q3431747,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Ennahda,True,False
+Q3469772,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,CPR,True,False
+Q3470837,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q3483754,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,CPR,True,False
+Q3486675,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q584073,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+Q668526,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Ennahda,True,False
+Q958968,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,2011-12-24,date,3,Independent,True,False
+TN-riadh-bettaieb,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,ben_ali,,government,3,Ennahda,True,False
+TN-unknown-82,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+TN-unknown-83,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,3,Independent,True,False
+TN-unknown-84,TN-12,Hamadi Jebali,2011-12-24,Hamadi Jebali,Troika,transition,2011-12-24,date,5,CPR,True,False
+Q11775942,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q12270270,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q12352837,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q136769587,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-11-01,date,3,,True,False
+Q15304780,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q15829893,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2014-01-28,date,3,,True,False
+Q16027758,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+Q16027804,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Ettakatol,False,False
+Q16171996,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q16180211,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,False,False
+Q16269694,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q16642407,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Ennahda,False,False
+Q16666126,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q16666543,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+Q16666835,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+Q2821119,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q2821154,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q2821212,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,CPR,False,False
+Q2821259,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ettakatol,False,False
+Q2947600,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,False,False
+Q3051875,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ettakatol,False,False
+Q3196042,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ettakatol,False,False
+Q3304511,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,False,False
+Q3318419,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,True
+Q3318800,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q3320435,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q3320655,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q3344889,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,False,False
+Q3431747,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q3469772,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,CPR,False,False
+Q3470837,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q3483754,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,CPR,False,False
+Q668526,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Ennahda,False,False
+Q7480522,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q9344006,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,True,False
+Q958968,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,3,Independent,False,False
+TN-unknown-110,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+TN-unknown-111,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+TN-unknown-112,TN-13,Ali Larayedh,2013-03-13,Ali Larayedh,Troika,transition,2013-03-13,date,5,Independent,True,False
+Q15703367,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q15829893,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,False,False
+Q16027763,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16120212,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16123702,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16639035,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16665400,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16666273,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16666543,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,False,False
+Q16679067,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16802173,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855080,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855104,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855223,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855250,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855252,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16855255,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q16889653,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q17154190,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q18384881,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q18398343,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q18610841,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q19544690,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q2388455,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,second_republic,2015-02-05,date,3,,False,False
+Q3125835,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q7480522,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,False,False
+TN-unknown-85,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+TN-unknown-86,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+TN-unknown-87,TN-14,Mehdi Jomaa,2014-01-29,Mehdi Jomaa,Technocrats,transition,2014-01-29,date,3,Independent,True,False
+Q14182276,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Other,False,False
+Q16802173,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,False,False
+Q18880483,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q19248970,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q19345818,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q19543880,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Ennahda,True,False
+Q19544121,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q19544932,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Ennahda,True,False
+Q19951841,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,UPL,True,False
+Q19955807,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Afek Tounes,True,False
+Q19956120,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q19956225,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q19956395,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q20391000,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,UPL,True,False
+Q20412385,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q20423358,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q20991574,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q21084499,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Ennahda,True,False
+Q21996842,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q22210502,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,UPL,True,False
+Q22211169,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q23017371,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q2388455,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,False,False
+Q24690887,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q24752632,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q24951001,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,UPL,True,False
+Q25391268,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q25391292,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q26505382,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q26505513,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,UPL,True,False
+Q26831315,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Ennahda,True,False
+Q27756614,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,False,False
+Q27758476,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q28465669,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,True,False
+Q28869633,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q30104283,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,3,Independent,False,False
+Q3192369,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q3196140,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q3220051,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,False,False
+Q3318781,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q3320655,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,False,False
+Q3470859,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Afek Tounes,True,False
+Q3474776,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,False,False
+Q3486677,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Nidaa Tounes,False,False
+Q3490439,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q3571955,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Afek Tounes,False,False
+Q44403762,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2016-01-01,date,3,,True,False
+Q473394,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+TN-amel-nafti,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-belgacem-sabri,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-chokri-terzi,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-kamel-ayadi,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,3,Independent,False,False
+TN-kamel-jendoubi,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,3,Independent,True,False
+TN-m-hamed-ezzine-chelaifa,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-nejmeddine-hamrouni,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Ennahda,True,False
+TN-rafik-chelly,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-unknown-37,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+TN-unknown-38,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,5,Independent,True,False
+TN-unknown-39,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+TN-unknown-40,TN-15,Habib Essid,2015-02-06,Habib Essid,Nidaa-Ennahda,second_republic,2015-02-06,date,3,Independent,True,False
+Q1043040,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Other,False,False
+Q104602558,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,,True,False
+Q10514449,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Other,True,False
+Q10591389,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Other,True,False
+Q16639035,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q18398343,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q19248970,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q19345818,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q19544121,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q19544932,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Ennahda,False,False
+Q19956225,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q20417790,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q21091553,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,,True,False
+Q21996842,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q22211169,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q22282799,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q23017371,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q25453450,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Ennahda,True,False
+Q26710667,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q26834002,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Ennahda,True,False
+Q26905827,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Other,True,False
+Q27665914,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q27666209,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Ennahda,True,False
+Q27756642,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q28105062,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q2821127,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q2827482,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q28502176,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q28653580,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Afek Tounes,True,False
+Q28654181,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q28714939,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Ennahda,True,False
+Q28869633,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q29577510,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Ennahda,True,False
+Q29577522,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Machrouu Tounes,True,False
+Q29580435,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Nidaa Tounes,True,False
+Q30118294,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,True,False
+Q30217461,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Ennahda,True,False
+Q30728498,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,True,False
+Q30729046,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q30729047,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q30729066,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Independent,True,False
+Q30729169,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Afek Tounes,True,False
+Q3128291,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q3196140,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q3431740,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,False,False
+Q3470847,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Other,True,False
+Q3470859,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Afek Tounes,False,False
+Q3486677,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,False,False
+Q42311056,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q43304124,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q49691191,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Afek Tounes,True,False
+Q50099224,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q51173119,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,,True,False
+Q51460814,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q53015850,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2018-02-16,date,3,,True,False
+Q53025434,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2018-04-01,date,3,,True,False
+Q54875067,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Afek Tounes,True,False
+Q55381692,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q55381738,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Nidaa Tounes,True,False
+Q55999324,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q56309568,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q60455265,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Nidaa Tounes,True,False
+Q61588042,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q61598250,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Independent,True,False
+Q62601798,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Nidaa Tounes,True,False
+Q65130650,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,,True,False
+Q92332624,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Ennahda,True,False
+TN-faten-kallel,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Afek Tounes,True,False
+TN-faycal-hafiane,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Nidaa Tounes,True,False
+TN-habib-debbabi,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Ennahda,True,False
+TN-hachem-hmidi,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Nidaa Tounes,True,False
+TN-imed-jabri,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Nidaa Tounes,True,False
+TN-khalil-amiri,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Ennahda,True,False
+TN-mohamed-fadhel-mahfoudh,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,3,Machrouu Tounes,True,False
+TN-samir-bechouel,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Machrouu Tounes,True,False
+TN-sarra-rejeb,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,,government,5,Independent,True,False
+TN-unknown-27,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Independent,True,False
+TN-unknown-28,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,Afek Tounes,True,False
+TN-unknown-29,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Nidaa Tounes,True,False
+TN-unknown-30,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,3,,True,False
+TN-unknown-31,TN-16,Youssef Chahed,2016-08-27,Youssef Chahed,Nidaa-Ennahda,second_republic,2016-08-27,date,5,Afek Tounes,True,False
+Q12237240,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Ennahda,True,False
+Q12239668,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Courant democrate,True,False
+Q130530616,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-08-06,date,3,,True,False
+Q21511555,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Courant democrate,True,False
+Q26834002,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,2,Ennahda,False,False
+Q2821154,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Ennahda,False,False
+Q2827482,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,False,False
+Q29580351,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,,government,3,Courant democrate,True,False
+Q30118294,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Tahya Tounes,False,False
+Q30224903,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q3257623,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q3318297,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,2,Courant democrate,False,False
+Q3320655,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,False,False
+Q60428357,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Tahya Tounes,True,False
+Q85822499,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q86734094,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Ennahda,True,False
+Q88467296,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q88485687,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q89844681,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q89996191,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q90570383,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q90946576,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,True
+Q91626084,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q91645255,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q91649459,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q91669922,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,False,False
+Q92199953,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Mouvement du peuple,True,False
+Q92224371,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q92316785,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Ennahda,True,False
+Q92332624,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Ennahda,False,False
+Q92353813,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Independent,True,False
+Q92354033,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Other,True,False
+Q96473313,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Mouvement du peuple,True,False
+TN-unknown-41,TN-17,Elyès Fakhfakh,2020-02-27,Elyes Fakhfakh,Ennahda-backed,second_republic,2020-02-27,date,3,Nidaa Tounes,True,False
+Q100261455,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q104821906,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,True,False
+Q104828106,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,True,False
+Q104873425,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+Q109041047,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q109045280,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,5,,True,False
+Q109045290,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q12217102,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,True,False
+Q12270270,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q16855080,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,False,False
+Q19848008,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q28105062,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q2827482,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q30224903,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q3125288,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q3431735,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,False,False
+Q3431740,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2021-04-06,date,3,,False,False
+Q85822499,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,False,False
+Q88485687,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2021-01-05,date,3,,False,False
+Q91649459,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,False,False
+Q91669922,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,False,False
+Q98828346,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828355,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828362,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828537,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828560,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828570,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828591,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98828599,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q98844443,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q99539200,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q99542892,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+Q99574115,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,Independent,True,False
+TN-hedi-khairi,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-sofiane-ben-tounes,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-unknown-113,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,True,False
+TN-unknown-114,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,5,,True,False
+TN-unknown-41,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,2020-09-02,date,3,,False,False
+TN-walid-dhahbi,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-youssef-ben-brahim,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-youssef-fennira,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-youssef-zouaghi,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+TN-zakaria-belkhodja,TN-18,Hichem Mechichi,2020-09-02,Hichem Mechichi,Ennahda-backed,second_republic,,government,3,Independent,True,False
+Q107707866,TN-18b,,2021-07-25,Kais Saied,Presidential,saied_exception,2021-07-29,date,3,,True,False
+Q108159069,TN-18b,,2021-07-25,Kais Saied,Presidential,saied_exception,2021-08-02,date,3,,True,False
+Q108163613,TN-18b,,2021-07-25,Kais Saied,Presidential,saied_exception,2021-08-02,date,3,,True,False
+Q108750786,TN-18b,,2021-07-25,Kais Saied,Presidential,saied_exception,2021-07-26,date,3,,True,False
+Q86329266,TN-18b,,2021-07-25,Kais Saied,Presidential,saied_exception,2021-08-06,date,3,,True,False
+Q107707866,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q108159069,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q108163613,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q108865358,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108883556,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892344,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892347,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892351,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892355,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892359,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892363,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892366,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892374,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892375,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892377,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892383,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q108892387,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q109544397,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q110014103,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-11-08,date,3,,True,False
+Q116206588,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2023-01-12,date,3,,True,False
+Q12270270,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q140077197,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2023-01-30,date,3,,True,False
+Q52450891,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+Q86329266,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q98828355,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q98828560,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q98828570,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,False,False
+Q98828599,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+TN-ali-hafsi-jeddi,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,2021-10-11,date,3,Independent,True,False
+TN-unknown-134,TN-19,Najla Bouden,2021-10-11,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+Q108159069,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2023-10-17,date,3,Independent,False,False
+Q108163613,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108865358,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108883556,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892347,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892351,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892355,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892366,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892374,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892377,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892383,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892387,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q109544397,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q116206588,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q116730514,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+Q117209481,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+Q124353858,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-01-24,date,3,Independent,True,False
+Q125330973,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-04-01,date,3,,True,False
+Q125337883,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-01-24,date,3,Independent,True,False
+Q128723414,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-05-25,date,3,,True,False
+Q130344076,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-05-25,date,3,,True,False
+Q136257453,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+Q138913276,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,2024-02-15,date,3,,True,False
+Q140077197,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Military,False,False
+Q52450891,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q86329266,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Military,False,False
+Q98828560,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q98828570,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+TN-unknown-128,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-129,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Other,True,False
+TN-unknown-13,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-130,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-131,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-132,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-133,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-3,TN-20,Ahmed Hachani,2023-08-01,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+Q108159069,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108163613,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108883556,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892366,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892374,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892377,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q108892383,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q109045280,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q109544397,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q116206588,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q116730514,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q118382993,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Military,True,False
+Q124353858,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q125330973,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q125337883,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q128723414,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q129810051,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q130344076,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q132560656,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2025-02-05,date,3,Independent,True,False
+Q132560774,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q132633117,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q132633142,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q134414603,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+Q136257453,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,False,False
+Q136456985,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2025-03-20,date,3,,True,False
+Q138863507,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q140077197,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Military,False,False
+Q379778,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,2024-08-25,date,3,Independent,True,False
+Q52450891,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q86329266,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Military,False,False
+Q98828560,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q98828570,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+TN-unknown,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-10,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-11,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-12,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-13,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+TN-unknown-131,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,False,False
+TN-unknown-132,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,False,False
+TN-unknown-133,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+TN-unknown-14,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-2,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-3,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,False,False
+TN-unknown-4,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-5,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-6,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-7,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,5,Independent,True,False
+TN-unknown-8,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+TN-unknown-9,TN-21,Kamel Maddouri,2024-08-07,Kais Saied,Presidential,saied_exception,,government,3,Independent,True,False
+Q109045280,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q118382993,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Military,False,False
+Q125337883,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,,government,3,Independent,False,False
+Q129810051,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q130344076,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q132560656,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q132560774,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q132633117,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q132633142,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q134414603,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q136257453,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q136456985,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q138863507,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q379778,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+Q98828570,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-10,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-11,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-12,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-13,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-14,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-2,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-3,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-4,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-5,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-6,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-7,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-8,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False
+TN-unknown-9,TN-22,Sara Zaafarani,2025-03-21,Kais Saied,Presidential,saied_exception,2025-03-21,date,3,Independent,False,False

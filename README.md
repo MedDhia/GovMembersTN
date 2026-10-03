@@ -166,6 +166,15 @@ lets an R user reproduce a regional or era-level result without a rewrite.
 
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
+**Are these families old?** `make elite-persistence` exports the 871 ministers
+as surnames, and every person's governments from independence on with the head
+of the executive who appointed them and the ruling coalition behind them, for a
+comparison against the 2024 electoral register made in
+[EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN). The export also
+drops the misdated second copies of three pre-independence cabinets that the
+build files under the governments of 1980 and 1987. See
+[docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md).
+
 ## The four network layers
 
 "The network of Tunisian ministers" is not one object, and the choice between
@@ -266,8 +275,9 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
   networks/      edge lists and graph exports
   indices/       derived measures computed from the tables
 output/          where the example scripts write (not tracked)
-docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md
-tests/           215 test functions, 411 cases; fixtures reproduce real markup
+docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md,
+                 ELITE_PERSISTENCE.md
+tests/           220 test functions, 416 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
