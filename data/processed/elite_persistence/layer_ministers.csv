@@ -413,8 +413,7 @@ ministers,Q3123068,Général Rustum,lat,RUSTUM,,,الجنرال رستم,,,3,Fal
 ministers,Q3125288,Habib Ammar,lat,AMMAR,bourguiba,Sousse,الحبيب عمار,1987,1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2020|2021,2,False,Sousse
 ministers,Q3125288,Habib Ammar,lat,AMMAR,ben_ali,Sousse,الحبيب عمار,1987,1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2020|2021,2,False,Sousse
 ministers,Q3125288,Habib Ammar,lat,AMMAR,second_republic,Sousse,الحبيب عمار,1987,1987|1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2020|2021,2,False,Sousse
-ministers,Q3125297,Habib Djellouli,lat,DJELLOULI,protectorate,Tunis,الحبيب الجلولي,1943,1943|1944|1945|1946|1947|1987|1988|1989,3,False,Tunis
-ministers,Q3125297,Habib Djellouli,lat,DJELLOULI,ben_ali,Tunis,الحبيب الجلولي,1943,1943|1944|1945|1946|1947|1987|1988|1989,3,False,Tunis
+ministers,Q3125297,Habib Djellouli,lat,DJELLOULI,protectorate,Tunis,الحبيب الجلولي,1943,1943|1944|1945|1946|1947,3,False,Tunis
 ministers,Q3125299,Habib Ben Yahia,lat,BEN YAHIA|YAHIA,ben_ali,Tunis,الحبيب بن يحيى,1988,1988|1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,3,False,Tunis
 ministers,Q3125307,Habib M'barek,lat,M'BAREK,ben_ali,Gafsa,الحبيب مبارك,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,3,False,Gafsa
 ministers,Q3125307,Habib M'barek,lat,M'BAREK,transition,Gafsa,الحبيب مبارك,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,3,False,Gafsa
@@ -425,7 +424,6 @@ ministers,Q3125336,Habiba Zéhi Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,ben_ali,G
 ministers,Q3125336,Habiba Zéhi Ben Romdhane,lat,BEN ROMDHANE|ROMDHANE,transition,Gafsa,حبيبة الزاهي بن رمضان,2011,2011,3,False,Gafsa
 ministers,Q3125835,Hakim Ben Hammouda,lat,BEN HAMMOUDA|HAMMOUDA,transition,Monastir,حكيم بن حمودة,2014,2014|2015,3,False,Monastir
 ministers,Q3126302,Hamadi Khouini,lat,KHOUINI,ben_ali,,حمادي الخويني,1989,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999,5,False,
-ministers,Q3128148,Hassan Hosni Abdelwaheb,lat,ABDELWAHEB,ben_ali,Tunis,حسن حسني عبد الوهاب,1987,1987|1988|1989,3,False,Tunis
 ministers,Q3128202,Hassen Belkhodja,lat,BELKHODJA,bourguiba,Bizerte,حسان بلخوجة,1969,1969|1970|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986,3,False,Bizerte
 ministers,Q3128235,Hassib Ben Ammar,lat,BEN AMMAR|AMMAR,bourguiba,Tunis,حسيب بن عمار,1970,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980,3,False,Tunis
 ministers,Q3128291,Hatem Ben Salem,lat,BEN SALEM|SALEM,ben_ali,Tunis,حاتم بن سالم,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2016|2017|2018|2019|2020,3,False,Tunis
@@ -480,10 +478,9 @@ ministers,Q3318356,Mohamed Aloulou,lat,ALOULOU,ben_ali,Gabès,محمد علول�
 ministers,Q3318356,Mohamed Aloulou,lat,ALOULOU,transition,Gabès,محمد علولو,2011,2011,3,False,Gabès
 ministers,Q3318362,Mohamed Ammour,lat,AMMOUR,ben_ali,,محمد عمور,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,5,False,
 ministers,Q3318375,Mohamed Baccouche,lat,BACCOUCHE,,Nabeul,محمد بكوش,,,3,False,Nabeul
-ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,protectorate,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|1980|1981|1982|1983|1984|1985|1986|2011|2012|2013|2014,3,False,Zaghouan
-ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,bourguiba,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|1980|1981|1982|1983|1984|1985|1986|2011|2012|2013|2014,3,False,Zaghouan
-ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,ben_ali,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|1980|1981|1982|1983|1984|1985|1986|2011|2012|2013|2014,3,False,Zaghouan
-ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,transition,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|1980|1981|1982|1983|1984|1985|1986|2011|2012|2013|2014,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,protectorate,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|2011|2012|2013|2014,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,ben_ali,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|2011|2012|2013|2014,3,False,Zaghouan
+ministers,Q3318419,Mohamed Ben Salem (1953),lat,BEN SALEM|SALEM,transition,Zaghouan,محمد بن سالم,1950,1950|1951|1952|1954|2011|2012|2013|2014,3,False,Zaghouan
 ministers,Q3318465,Mohamed Béji Ben Mami,lat,BEN MAMI|MAMI,ben_ali,Tunis,محمد الباجي بن مامي,2011,2011|2012|2013,3,False,Tunis
 ministers,Q3318475,Mohamed Charfi,lat,CHARFI,ben_ali,Sfax,محمد الشرفي,1989,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999,3,False,Sfax
 ministers,Q3318509,Mohamed El Aziz Ben Achour,lat,BEN ACHOUR|ACHOUR,ben_ali,Tunis,محمد العزيز بن عاشور,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,3,False,Tunis
@@ -501,9 +498,7 @@ ministers,Q3318757,Mohamed Nouri Jouini,lat,JOUINI,ben_ali,Tunis,محمد الن
 ministers,Q3318774,Mohamed Ridha Farès,lat,FARES,ben_ali,Nabeul,محمد رضا فارس,2011,2011,3,False,Nabeul
 ministers,Q3318774,Mohamed Ridha Farès,lat,FARES,transition,Nabeul,محمد رضا فارس,2011,2011,3,False,Nabeul
 ministers,Q3318781,Mohamed Salah Ben Aïssa,lat,BEN AISSA|AISSA,second_republic,Tunis,محمد صالح بن عيسى,2015,2015|2016,3,False,Tunis
-ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,protectorate,Monastir,محمد الصالح مزالي,1953,1953|1954|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,0,True,Monastir
-ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,bourguiba,Monastir,محمد الصالح مزالي,1953,1953|1954|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,0,True,Monastir
-ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,ben_ali,Monastir,محمد الصالح مزالي,1953,1953|1954|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,0,True,Monastir
+ministers,Q3318797,Mohamed Salah Mzali,lat,MZALI,protectorate,Monastir,محمد الصالح مزالي,1953,1953|1954,0,True,Monastir
 ministers,Q3318800,Mohamed Salmane,lat,SALMANE,ben_ali,Nabeul,محمد سلمان,2011,2011|2012|2013|2014,3,False,Nabeul
 ministers,Q3318800,Mohamed Salmane,lat,SALMANE,transition,Nabeul,محمد سلمان,2011,2011|2012|2013|2014,3,False,Nabeul
 ministers,Q3319007,Mohammed Aziz Bouattour,lat,BOUATTOUR,protectorate,Tunis,محمد العزيز بوعتور,1882,1882|1883|1884|1885|1886|1887|1888|1889|1890|1891|1892|1893|1894|1895|1896|1897|1898|1899|1900|1901|1902|1903|1904|1905|1906|1907,0,True,Tunis
@@ -591,8 +586,7 @@ ministers,Q3474776,Saïd Aïdi,lat,AIDI,second_republic,,سعيد العايدي
 ministers,Q3483754,Sihem Badi,lat,BADI,ben_ali,Tozeur,سهام بادي,2011,2011|2012|2013|2014,3,False,Tozeur
 ministers,Q3483754,Sihem Badi,lat,BADI,transition,Tozeur,سهام بادي,2011,2011|2012|2013|2014,3,False,Tozeur
 ministers,Q3486507,Slaheddine Bouguerra,lat,BOUGUERRA,ben_ali,Kairouan,صلاح الدين بوقرة,1989,1989|1990|1991|1992|1993|1994|1995|1996|1997|1998|1999,3,False,Kairouan
-ministers,Q3486509,Slaheddine Baccouche,lat,BACCOUCHE,protectorate,Tunis,صلاح الدين البكوش,1943,1943|1944|1945|1946|1947|1952|1953|1954|1987|1988|1989,0,True,Tunis
-ministers,Q3486509,Slaheddine Baccouche,lat,BACCOUCHE,ben_ali,Tunis,صلاح الدين البكوش,1943,1943|1944|1945|1946|1947|1952|1953|1954|1987|1988|1989,0,True,Tunis
+ministers,Q3486509,Slaheddine Baccouche,lat,BACCOUCHE,protectorate,Tunis,صلاح الدين البكوش,1943,1943|1944|1945|1946|1947|1952|1953|1954,0,True,Tunis
 ministers,Q3486512,Slaheddine Sellami,lat,SELLAMI,ben_ali,Sfax,صلاح الدين السلامي,2011,2011,3,False,Sfax
 ministers,Q3486512,Slaheddine Sellami,lat,SELLAMI,transition,Sfax,صلاح الدين السلامي,2011,2011,3,False,Sfax
 ministers,Q3486513,Slaheddine Malouche,lat,MALOUCHE,ben_ali,Kairouan,صلاح الدين مالوش,1999,1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011,3,False,Kairouan
@@ -717,7 +711,7 @@ ministers,Q653162,Rachid Sfar,lat,SFAR,bourguiba,Mahdia,رشيد صفر,1977,197
 ministers,Q666665,Mohamed Arbi Zarrouk Khaznadar,lat,KHAZNADAR,,Tunis,محمد العربي زروق خزندار,,,0,True,Tunis
 ministers,Q668526,Noureddine Bhiri,lat,BHIRI,ben_ali,Sfax,نور الدين البحيري,2011,2011|2012|2013|2014,3,False,Sfax
 ministers,Q668526,Noureddine Bhiri,lat,BHIRI,transition,Sfax,نور الدين البحيري,2011,2011|2012|2013|2014,3,False,Sfax
-ministers,Q6932968,Muhammed Saadulah,lat,SAADULAH,bourguiba,,محمد سعد الله,1980,1980|1981|1982|1983|1984|1985|1986,2,False,
+ministers,Q6932968,Muhammed Saadulah,lat,SAADULAH,,,محمد سعد الله,1980,,2,False,
 ministers,Q744499,Mansour Moalla,lat,MOALLA,bourguiba,Sfax,منصور معلى,1969,1969|1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980|1981|1982|1983|1984|1985|1986,3,False,Sfax
 ministers,Q7480522,Lotfi Ben Jeddou,lat,BEN JEDDOU|JEDDOU,transition,Kasserine,لطفي بن جدو,2013,2013|2014|2015,3,False,Kasserine
 ministers,Q800238,Bahi Ladgham,lat,LADGHAM,monarchy,Tunis,الباهي الأدغم,1956,1956|1957|1958|1959|1960|1961|1962|1963|1964|1965|1966|1967|1968|1969|1970,0,True,Tunis
@@ -957,20 +951,10 @@ ministers,TN-unknown-111,فتحي التوزري,ar,التوزري,transition,,,
 ministers,TN-unknown-112,الصادق العمري,ar,العمري,transition,,,2013,2013|2014,5,False,
 ministers,TN-unknown-113,سلوى الصغير,ar,الصغير,second_republic,,,2020,2020|2021,3,False,
 ministers,TN-unknown-114,خليل شطورو,ar,شطورو,second_republic,,,2020,2020|2021,5,False,
-ministers,TN-unknown-115,محمد حجوج,ar,حجوج,bourguiba,,,1980,1980|1981|1982|1983|1984|1985|1986,3,False,
-ministers,TN-unknown-116,الطاهر لخضر,ar,لخضر,bourguiba,,,1980,1980|1981|1982|1983|1984|1985|1986,3,False,
-ministers,TN-unknown-117,الشاذلي بن رمضان,ar,بن رمضان|رمضان,bourguiba,,,1980,1980|1981|1982|1983|1984|1985|1986,3,False,
-ministers,TN-unknown-118,نور الدين الزاوش,ar,الزاوش,bourguiba,,,1980,1980|1981|1982|1983|1984|1985|1986,3,False,
 ministers,TN-unknown-119,المكي الزيدي,ar,الزيدي,bourguiba,,,1970,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980,5,False,
 ministers,TN-unknown-12,وجدي  الهذيلي,ar,الهذيلي,saied_exception,,,2024,2024|2025,3,False,
 ministers,TN-unknown-120,مصطفى الزعنوني,ar,الزعنوني,bourguiba,,,1970,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980,5,False,
 ministers,TN-unknown-121,فرج الجباس,ar,الجباس,bourguiba,,,1970,1970|1971|1972|1973|1974|1975|1976|1977|1978|1979|1980,5,False,
-ministers,TN-unknown-122,الطيب بلخيرية,ar,بلخيرية,ben_ali,,,1987,1987|1988|1989,2,False,
-ministers,TN-unknown-123,محمد الغشام,ar,الغشام,ben_ali,,,1987,1987|1988|1989,3,False,
-ministers,TN-unknown-124,الهادي بن الرايس,ar,بن الرايس|الرايس,ben_ali,,,1987,1987|1988|1989,3,False,
-ministers,TN-unknown-125,محمد الدنقزلي,ar,الدنقزلي,ben_ali,,,1987,1987|1988|1989,3,False,
-ministers,TN-unknown-126,الصادق الجزيري,ar,الجزيري,ben_ali,,,1987,1987|1988|1989,3,False,
-ministers,TN-unknown-127,ريمون بونس (حتى 19 مارس 1953),ar,بونس,ben_ali,,,1987,1987|1988|1989,6,False,
 ministers,TN-unknown-128,احلام الباجي السايب,ar,السايب,saied_exception,,,2023,2023,3,False,
 ministers,TN-unknown-129,محمد علي البوغديري,ar,البوغديري,saied_exception,,,2023,2023,3,False,
 ministers,TN-unknown-13,رياض    شَوِد,ar,شود,saied_exception,,,2023,2023|2024|2025,3,False,
@@ -982,18 +966,11 @@ ministers,TN-unknown-134,عائدة حمدي,ar,حمدي,saied_exception,,,2021,
 ministers,TN-unknown-14,حسنة   جيب الله,ar,جيب الله,saied_exception,,,2024,2024|2025,3,False,
 ministers,TN-unknown-15,محجوب بن علي,ar,بن علي|علي,bourguiba,,,1987,1987,3,False,
 ministers,TN-unknown-16,الشاذلي رحيم,ar,رحيم,protectorate_end,,,1954,1954|1955|1956,3,False,
-ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,protectorate_end,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,bourguiba,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,ben_ali,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,protectorate_end,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,bourguiba,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,ben_ali,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-19,لوسيان بي,ar,بي,protectorate_end,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-19,لوسيان بي,ar,بي,bourguiba,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
-ministers,TN-unknown-19,لوسيان بي,ar,بي,ben_ali,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986|1987|1988|1989,3,False,
+ministers,TN-unknown-17,جان غاستون فريسيه,ar,فريسيه,protectorate_end,,,1954,1954|1955|1956,3,False,
+ministers,TN-unknown-18,جان ماتيو,ar,ماتيو,protectorate_end,,,1954,1954|1955|1956,3,False,
+ministers,TN-unknown-19,لوسيان بي,ar,بي,protectorate_end,,,1954,1954|1955|1956,3,False,
 ministers,TN-unknown-2,محمد بن عياد,ar,بن عياد|عياد,saied_exception,,,2024,2024|2025,3,False,
-ministers,TN-unknown-20,أندريه بلانشار,ar,بلانشار,protectorate_end,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986,3,False,
-ministers,TN-unknown-20,أندريه بلانشار,ar,بلانشار,bourguiba,,,1954,1954|1955|1956|1980|1981|1982|1983|1984|1985|1986,3,False,
+ministers,TN-unknown-20,أندريه بلانشار,ar,بلانشار,protectorate_end,,,1954,1954|1955|1956,3,False,
 ministers,TN-unknown-21,أندريه باروش,ar,باروش,monarchy,,,1956,1956|1957,3,False,
 ministers,TN-unknown-22,عبد الرزاق الزواوي,ar,الزواوي,transition,,,2011,2011,3,False,
 ministers,TN-unknown-23,رضوان نويصر,ar,نويصر,transition,,,2011,2011,5,False,
@@ -1008,9 +985,9 @@ ministers,TN-unknown-30,خليل الغرياني (رفض المنصب وحذف�
 ministers,TN-unknown-31,عبد القدوس السعداوي,ar,السعداوي,second_republic,,,2016,2016|2017|2018|2019|2020,5,False,
 ministers,TN-unknown-32,حمادي بدرة,ar,بدرة,,,,,,3,False,
 ministers,TN-unknown-33,جاك فيمون (حتى 19 مارس 1951),ar,فيمون,,,,,,6,False,
-ministers,TN-unknown-34,لويس كارتري,ar,كارتري,ben_ali,,,1987,1987|1988|1989,6,False,
-ministers,TN-unknown-35,جيرار بلاشير,ar,بلاشير,ben_ali,,,1987,1987|1988|1989,3,False,
-ministers,TN-unknown-36,جان داز (حتى 19 مارس 1953),ar,داز,ben_ali,,,1987,1987|1988|1989,3,False,
+ministers,TN-unknown-34,لويس كارتري,ar,كارتري,,,,1987,,6,False,
+ministers,TN-unknown-35,جيرار بلاشير,ar,بلاشير,,,,1987,,3,False,
+ministers,TN-unknown-36,جان داز (حتى 19 مارس 1953),ar,داز,,,,1987,,3,False,
 ministers,TN-unknown-37,رفيق الشلي,ar,الشلي,second_republic,,,2015,2015|2016,3,False,
 ministers,TN-unknown-38,محمد الزين شلايفة,ar,شلايفة,second_republic,,,2015,2015|2016,5,False,
 ministers,TN-unknown-39,بلقاسم الصابري,ar,الصابري,second_republic,,,2015,2015|2016,3,False,
@@ -1068,7 +1045,7 @@ ministers,TN-unknown-85,نايلة شعبان,ar,شعبان,transition,,,2014,20
 ministers,TN-unknown-86,نورالدين زكري,ar,زكري,transition,,,2014,2014|2015,3,False,
 ministers,TN-unknown-87,منير مجدوب,ar,مجدوب,transition,,,2014,2014|2015,3,False,
 ministers,TN-unknown-88,علي العذاري,ar,العذاري,,,,,,3,False,
-ministers,TN-unknown-89,عبد القادر بلخوجة,ar,بلخوجة,bourguiba,,,1980,1980|1981|1982|1983|1984|1985|1986,3,False,
+ministers,TN-unknown-89,عبد القادر بلخوجة,ar,بلخوجة,,,,1980,,3,False,
 ministers,TN-unknown-9,الصادق المورالي,ar,المورالي,saied_exception,,,2024,2024|2025,3,False,
 ministers,TN-unknown-90,رونيه بروييه,ar,بروييه,,,,,,6,False,
 ministers,TN-unknown-91,رونية روديار,ar,روديار,,,,,,6,False,

@@ -11,8 +11,31 @@ built in [ElectionsTN](https://github.com/MedDhia/ElectionsTN).
 make elite-persistence      # about a second
 ```
 
-Writes `data/processed/elite_persistence/layer_ministers.csv`: 1,089
-person-era rows over 882 ministers.
+Writes two files to `data/processed/elite_persistence/`:
+
+- `layer_ministers.csv`: 1,066 person-era rows over 871 ministers;
+- `layer_minister_appointments.csv`: 1,201 rows, one per person and
+  government from independence on, over 783 people, with the head of the
+  executive who appointed each government and the ruling coalition behind it.
+
+## Three pre-independence cabinets, filed twice
+
+`appointments.csv` files the cabinets of Slaheddine Baccouche (1943 and 1952)
+and of Mohamed Salah Mzali (1954) under the government spells of Hédi
+Baccouche (1987) and of Mohamed Mzali (1980). The build matches a cabinet
+article to a spell by the head's surname, and the Arabic articles, which carry
+no date of their own, then take the later spell's start. Every member appears
+twice, once at the cabinet's date and once in 1987 or 1980. The later copies,
+29 rows over 24 people, counted ministers of the 1940s and 1950s among
+Bourguiba's and Ben Ali's: Habib Djellouli and Mohamed Salah Mzali among them.
+
+Both files drop those copies (`MISDATED` in the module). Eleven of the 24 exist
+only there, as the Arabic articles' names that reconciliation never joined to
+the French ones (محمد حجوج is Mohamed Hadjouj, الطاهر لخضر is Tahar Lakhdar),
+so they leave the roster with their copies: it counts 871 people where it
+counted 882. The fix belongs in `build.py`'s `spell_for_article`, which should
+not match on a surname alone. It is made in the export because the build reads
+harvested files this checkout does not hold.
 
 ## One row per person per era
 
@@ -26,15 +49,15 @@ for a headcount.
 
 | era | person-era rows |
 |---|---:|
-| ben_ali | 351 |
+| ben_ali | 335 |
 | second_republic | 246 |
-| bourguiba | 147 |
 | transition | 137 |
+| bourguiba | 135 |
 | saied_exception | 74 |
 | protectorate | 61 |
+| (undated) | 25 |
 | monarchy | 24 |
 | protectorate_end | 23 |
-| (undated) | 20 |
 | beylical | 6 |
 
 The era vocabulary is this repository's own (`data/processed/eras.csv`) and is
@@ -44,7 +67,7 @@ way round.
 
 ## Which name is read, and the check that comes free
 
-`persons.csv` names all 882 in Latin and 562 in Arabic. The Latin column is the
+`persons.csv` names all 871 in Latin and 561 in Arabic. The Latin column is the
 only one that covers the roster, so it is what the surname is read from.
 EliteNetworksTN reads it as a registered Arabic surname through its
 Arabic-Latin surname crosswalk (`docs/SURNAME-CROSSWALK.md` there), which is
@@ -78,76 +101,42 @@ does not hold the register.
 | `first_year`, `max_rank_level`, `ever_head_of_government`, `birth_governorate` | carried through for cutting |
 | `years_in_office` | the calendar years the person held an appointment, pipe-separated: every year from an appointment's start to its end, and only the start year where no end is recorded |
 
-## What the comparison found
+## The governments: who appointed, and with which coalition
 
-The cabinet is the strongest and the longest-running result in the whole
-comparison. The 469 surnames the genealogies place in Tunisia before
-independence in 1956 are 8.7 times more common among these 882 people than
-in the 2024 electoral register (118 holders, 95% CI 7.3–10.2). A Ben family
-counts as its own surname: the Ben Achour are not the Achour.
+`layer_minister_appointments.csv` writes each person once per government they
+served in, at their first appointment in it, with the highest rank they held
+there. Heads of government are left out: they appoint, and the question is who
+they, or the president, chose.
 
-### In the contemporary window
+A row's government is read from its start date where the date is a day, and
+otherwise from the spell the build filed it under. A cabinet-level date of 1
+January is how the build writes a year it could not place, so it is not a day.
+The four Saïed-era governments the French article lumps into one, all dated 1
+January 2021, are left out, because the Arabic articles list the same
+governments one by one with usable dates.
 
-Restricted to 2011–2023, with each person counted once, the cabinet of 396
-carries 35 of them. A bearer of such a surname is 6.2 times more likely
-(95% CI 4.4–8.7) to be a minister in that window than someone who is not —
-23.2 per 100,000 bearers against 3.8 per 100,000 of everyone else. Converted
-into the group's implied mean status that is +0.44 SD, against +0.21 SD
-for a member of parliament and +0.42 for a co-shareholder of a listed company.
+| column | what |
+|---|---|
+| `person_id` | joins `persons.csv` and `layer_ministers.csv` |
+| `government` | the spell id; `TN-10b` is Ghannouchi's two interim governments after 14 January 2011, `TN-18b` the weeks from 25 July 2021 in which Saïed governed without a head of government |
+| `government_head`, `government_start` | the head of government and the date the government began |
+| `head_of_executive` | who appointed the ministers: the president under Bourguiba, Ben Ali and, from 25 July 2021, Saïed; the head of government from 2011 to 2021 |
+| `coalition` | Neo-Destour, Neo-Destour/PSD, RCD, Interim 2011 (Ghannouchi, Essebsi), Troika (Jebali, Larayedh), Technocrats (Jomaa), Nidaa-Ennahda (Essid, Chahed), Ennahda-backed (Fakhfakh, Mechichi), Presidential (Saïed's governments) |
+| `era` | this repository's era of the first appointment in the government |
+| `first_date`, `date_basis` | the first appointment's date where it is a day (`date`), or blank where the government stands in for it (`government`) |
+| `rank_level` | the highest rank held in the government (0 head of government … 6 state secretary-general) |
+| `party` | the party the sources give, French and Arabic written as one name; the first where a value records a change |
+| `first_since_independence` | whether this is the person's first government from 15 April 1956 |
+| `served_before_independence` | whether the person held an appointment before then |
 
-### Over the whole span this dataset covers
+The coalition coding follows the governments' composition in the sources and
+is checked against the ministers' own `party`: Ennahda, CPR and Ettakatol
+ministers sit in the Troika governments, Nidaa Tounes, Ennahda, Afek Tounes and
+UPL ministers in Essid's and Chahed's.
 
-Because this dataset reaches back to the 1940s, it is the only one that can
-carry the estimator the surname-mobility literature uses over a real number of
-generations. The implied status gap falls monotonically across five periods
-and three changes of regime:
+## Results
 
-| | to 1956 | Bourguiba | Ben Ali | transition | Saied |
-|---|---:|---:|---:|---:|---:|
-| ratio | 19.9× | 12.2× | 7.0× | 6.0× | 5.2× |
-| implied status gap | 0.81 SD | 0.67 SD | 0.51 SD | 0.46 SD | 0.38 SD |
-
-That is an intergenerational correlation of b = 0.77 (0.71–0.84) per
-30-year generation — the rate Clark finds in almost every society he measures.
-Parliament, over a comparable span, comes out at 0.53: appointed office
-transmits, elected office does not.
-
-An earlier version of this file cut the treatment at 1881 and reported the
-halves separately, 17.0× for the surnames it called beylical against 5.1× for
-the ones it called colonial. That split is withdrawn. The Husaynid beylik ran
-from 1705 to 1957 and was not ended by the French occupation of 1881; it
-continued under it, staffed by the same households, so both halves are
-beylical and what the 1881 boundary separates is families the genealogies
-recorded early from families they recorded late. The headline is unaffected,
-because the split never fed the treatment.
-
-### The caveats that matter most for these rows
-
-The control is where this result is tested, and it passes. The comparison
-that matters holds rarity and the surname matching fixed and varies only
-whether the genealogies know the family: 45,679 registered surnames under
-the same 1,000-voter ceiling, read through the same crosswalk, that Rodovid
-never recorded. They hold 19.1% of the register and turn up in 83 of the 882
-ministers, a ratio of 0.49× [0.40–0.60] — below parity. Against that null the
-cabinet's 8.7× is a factor of eighteen, and it is not something rarity buys.
-
-The placebo cannot be tested here, and is a different question anyway.
-Surnames the genealogies first record after 1956 are 38 surnames over 0.13%
-of the register, so a cabinet of 396 predicts 0.52 of them; observing one is
-what every hypothesis predicts. It also would not settle much if it could be
-run: those thirty-eight surnames are themselves in Rodovid, so the
-placebo asks whether old documented notability beats *recent* documented
-notability, not whether documented notability beats the rest of the country.
-That second question is the control's, above. The ministerial result rests on
-it and on the monotone eighty-year decline.
-
-The baseline is a 2024 register, so the pre-independence ratio is an order of
-magnitude rather than a measurement. The gazette's senior appointments
-corroborate the direction of the decline and not its rate. The gazette layer
-is the 3,091 directors-general and ministerial advisers, and it runs 4.4× →
-2.8× over four periods of 710 to 1,893 people, a slope of −0.08 per decade
-(−0.15 to −0.01) against the cabinet's −0.16. The cabinet's own monotone
-series carries the rate.
-
-Full results, figures and limitations: `docs/FINDINGS-persistence.md` in
-EliteNetworksTN.
+The comparisons these files feed are made, and kept current, in EliteNetworksTN
+(`docs/PAPER-elite-persistence.md` and `docs/FINDINGS-persistence.md`). This
+file no longer carries their numbers, which an earlier version quoted from a
+notable set the analysis has since redrawn.

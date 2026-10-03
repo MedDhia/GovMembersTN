@@ -166,18 +166,14 @@ lets an R user reproduce a regional or era-level result without a rewrite.
 
 Full column-by-column documentation: **[docs/CODEBOOK.md](docs/CODEBOOK.md)**.
 
-**Are these families old?** `make elite-persistence` exports the 882 ministers
-as surnames and prices them against the 2024 electoral register. 469 surnames
-the Tunisian genealogies place in the country before independence are **8.7
-times** more common in this dataset than in the register, and the series falls
-monotonically through every change of regime — 19.9× to 1956, 12.2× under
-Bourguiba, 7.0× under Ben Ali, 6.0× across the transition, 5.2× now: a
-half-life of forty-three years, or an intergenerational correlation of
-**b = 0.77** in the surname-mobility literature's own parameter. In the
-2011–2023 window alone, a bearer of such a surname is **6.2 times more likely**
-than anyone else to be a minister (95% CI 4.4–8.7). See
-[docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md), and the comparison
-itself in [EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN).
+**Are these families old?** `make elite-persistence` exports the 871 ministers
+as surnames, and every person's governments from independence on with the head
+of the executive who appointed them and the ruling coalition behind them, for a
+comparison against the 2024 electoral register made in
+[EliteNetworksTN](https://github.com/MedDhia/EliteNetworksTN). The export also
+drops the misdated second copies of three pre-independence cabinets that the
+build files under the governments of 1980 and 1987. See
+[docs/ELITE_PERSISTENCE.md](docs/ELITE_PERSISTENCE.md).
 
 ## The four network layers
 
@@ -281,7 +277,7 @@ data/processed/  THE DATASET - tracked, so a clone needs no pipeline run
 output/          where the example scripts write (not tracked)
 docs/            CODEBOOK.md, SOURCES.md, NETWORK_ANALYSIS.md,
                  ELITE_PERSISTENCE.md
-tests/           215 test functions, 411 cases; fixtures reproduce real markup
+tests/           220 test functions, 416 cases; fixtures reproduce real markup
 ```
 
 `data/processed/` is the deliverable and is committed. `src/govtn/` is the
